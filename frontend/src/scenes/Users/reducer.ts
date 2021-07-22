@@ -23,8 +23,7 @@ export const usersReducer = createReducer<UsersState>(initialState, {
   [fetchUsersAction.TRIGGER](state) {
     return {
       ...state,
-      loading: true,
-      p: ''
+      loading: true
     };
   },
   [fetchUsersAction.SUCCESS](state, action: FetchUsersSuccessActionType) {
