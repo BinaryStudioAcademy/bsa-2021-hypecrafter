@@ -6,11 +6,11 @@ import classes from './styles.module.scss';
 
 const Users = () => {
   const dispatch = useDispatch();
-  const store = useTypedSelector(({ users: { items, loading } }) => ({
+  const store = useTypedSelector(({ users: { items, isLoading } }) => ({
     users: items,
-    loading
+    isLoading
   }));
-  const { users, loading } = store;
+  const { users, isLoading } = store;
 
   const loadItems = () => dispatch(fetchUsersAction());
   const removeItem = (id: number) => dispatch(removeUserByIdAction(id));
@@ -21,8 +21,8 @@ const Users = () => {
         <h1>Users</h1>
       </header>
       <div>
-        {loading && <p>Loading...</p>}
-        {!loading && (
+        {isLoading && <p>Loading...</p>}
+        {!isLoading && (
           <ul>
             {users.map(it => (
               <li key={it.id}>

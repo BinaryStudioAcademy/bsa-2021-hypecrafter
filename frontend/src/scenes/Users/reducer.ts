@@ -8,13 +8,13 @@ import type {
 } from './actions';
 
 export interface UsersState {
-  loading: boolean;
+  isLoading: boolean;
   items: User[];
   error: string;
 }
 
 export const initialState: UsersState = {
-  loading: false,
+  isLoading: false,
   items: [],
   error: ''
 };
@@ -23,20 +23,20 @@ export const usersReducer = createReducer<UsersState>(initialState, {
   [fetchUsersAction.TRIGGER](state) {
     return {
       ...state,
-      loading: true
+      isLoading: true
     };
   },
   [fetchUsersAction.SUCCESS](state, action: FetchUsersSuccessActionType) {
     return {
       ...state,
-      loading: false,
+      isLoading: false,
       items: action.payload
     };
   },
   [fetchUsersAction.FAILURE](state, action: FetchUsersFailureActionType) {
     return {
       ...state,
-      loading: false,
+      isLoading: false,
       error: action.payload
     };
   },
