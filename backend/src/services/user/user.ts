@@ -11,7 +11,7 @@ export default class UserService {
     return this.#userRepository.getAll();
   }
 
-  public getById(id: number) {
+  public getById(id: string) {
     return this.#userRepository.getById(id);
   }
 }

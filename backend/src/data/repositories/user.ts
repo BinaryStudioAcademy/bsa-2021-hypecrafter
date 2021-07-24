@@ -27,8 +27,8 @@ export class UserRepository {
     return Promise.resolve(this.#users);
   }
 
-  public getById(id: number) {
-    return Promise.resolve(this.#users.find(it => it.id === id));
+  public getById(id: string) {
+    return Promise.resolve(this.#users.find(it => it.id === Number(id)));
   }
 }
 

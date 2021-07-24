@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
-  "private": true,
+  "private": "false",
   "dependencies": {
     "dotenv": "^8.2.0",
     "react": "^17.0.2",

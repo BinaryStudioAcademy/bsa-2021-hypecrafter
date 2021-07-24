@@ -8,7 +8,7 @@ const init = ({ userService }: Services) => {
 
   router
     .get('/', wrap(() => userService.getAll()))
-    .get('/:id', wrap<Empty, User, { id: number }, Empty>((req) => userService.getById(req.body.id)));
+    .get('/:id', wrap<Empty, User, { id: string }, Empty>((req) => userService.getById(req.params.id)));
 
   return router;
 };
