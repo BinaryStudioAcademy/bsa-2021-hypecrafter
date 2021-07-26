@@ -1,26 +1,15 @@
-/* eslint-disable  @typescript-eslint/no-explicit-any */
 import MicroMq from 'micromq';
-import userService from './services/user';
+import { Project } from 'hypecrafter-shared';
+import initRoutes from './api/routes';
+import { env } from './env';
+
+const { rabbit } = env.app;
 
 const app = new MicroMq({
-  name: 'backend',
-  rabbit: {
-    url: process.env.RABBIT_URL || 'amqp://localhost',
-  },
+  name: Project,
+  rabbit
 });
 
-app.get('/api/users', async (_:any, res:any) => {
-  const users = await userService.getAll();
-  res.json(users);
-});
-
-app.get('/api/users/error', async (_:any, res:any) => {
-  res.json({ message: 'ERROR!!!!'});
-});
-
-app.get('/api/users/:id', async (req:any, res:any) => {
-  const user = await userService.getById(req.params.id);
-  res.json(user);
-});
+initRoutes(app);
 
 app.start();

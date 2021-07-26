@@ -1,9 +1,10 @@
 import { Router } from 'express';
+import { Project } from 'hypecrafter-shared';
 
 const init = () => {
   const router = Router();
 
-  return router.get(['/', '/:id', '/error'], (_, res) => res.delegate('backend'));
+  return router.get(['/', '/:id'], (_, res) => res.delegate(Project.BACKEND));
 };
 
 export default init;

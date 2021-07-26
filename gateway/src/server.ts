@@ -1,18 +1,17 @@
 import cors from 'cors';
 import express, { json } from 'express';
+import Gateway from 'micromq/gateway';
+import { Project } from 'hypecrafter-shared';
 import { log } from './helpers';
 import { handleError, logger } from './api/middlewares';
 import initRoutes from './api/routes';
 import { env } from './env';
-import Gateway from 'micromq/gateway';
 
-const { port, environment } = env.app;
+const { port, environment, rabbit } = env.app;
 
 const gateway = new Gateway({
-  microservices: ['backend', 'payment'],
-  rabbit: {
-    url: process.env.RABBIT_URL || 'amqp://localhost',
-  },
+  microservices: [Project.BACKEND, Project.PAYMENT],
+  rabbit
 });
 
 const app = express();
@@ -23,7 +22,6 @@ app.use(json());
 app.use(express.urlencoded({ extended: true }));
 app.use(gateway.middleware());
 app.use(initRoutes());
-
 app.use(handleError);
 
 app.listen(port, () => {

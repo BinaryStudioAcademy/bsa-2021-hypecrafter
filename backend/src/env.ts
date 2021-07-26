@@ -5,7 +5,10 @@ dotenv.config();
 
 export const env = {
   app: {
-    port: getEnv('PORT') || 3002,
-    environment: getEnv('NODE_ENV')
+    port: getEnv('PORT') || 3001,
+    environment: getEnv('NODE_ENV'),
+    rabbit: {
+      url: getEnv('RABBIT_URL') || 'amqp://localhost'
+    }
   }
 };
