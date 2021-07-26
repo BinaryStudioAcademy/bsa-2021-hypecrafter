@@ -1,14 +1,20 @@
 {
     "scripts": {
+        "lint:gateway": "cd gateway && npm run lint:write",
         "lint:backend": "cd backend && npm run lint:write",
         "lint:frontend": "cd frontend && npm run lint:write",
-        "lint": "npm run lint:backend && npm run lint:frontend",
+        "lint": "npm run lint:gateway && npm run lint:backend && npm run lint:frontend",
+        "install:gateway": "cd gateway && npm install",
         "install:backend": "cd backend && npm install",
         "install:frontend": "cd frontend && npm install",
-        "install:all": "npm install &&  npm run install:backend && npm run install:frontend",
-        "start": "concurrently -k -p \"{name}: {time}\" -n \"FRONTEND,BACKEND\" \"npm:start:frontend\" \"npm:start:backend\""
+        "install:all": "npm install && npm run install:gateway && npm run install:backend && npm run install:frontend",
+        "start:gateway": "cd gateway && npm run start",
+        "start:backend": "cd backend && npm run start",
+        "start:frontend": "cd frontend && npm run start",
+        "start": "concurrently -k -p \"{name}: {time}\" -n \"FRONTEND,GATEWAY,BACKEND\" \"npm:start:frontend\" \"npm:start:gateway\" \"npm:start:backend\""
     },
     "devDependencies": {
+        "concurrently": "^6.2.0",
         "husky": "^4.3.8",
         "lint-staged": "^11.1.1"
     },
