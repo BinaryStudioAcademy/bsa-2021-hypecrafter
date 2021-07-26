@@ -6,3 +6,7 @@ Also, feel free to help with those projects that would make this world a better 
 
 ## Code quality
 Static analyzers are used for both frontend and backend projects to ensure basic code quality. Additionally, [quality criteria](https://github.com/BinaryStudioAcademy/quality-criteria/blob/production/source/javascript.md) rules are enforced during code review and audit.
+
+## Installation
+npm run install:all
+npm start

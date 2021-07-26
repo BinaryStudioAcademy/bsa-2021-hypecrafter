@@ -6,10 +6,8 @@ import { env } from './env';
 const { rabbit } = env.app;
 
 const app = new MicroMq({
-  name: Project,
+  name: Project.BACKEND,
   rabbit
 });
 
-initRoutes(app);
-
-app.start();
+initRoutes(app).start();

@@ -2,7 +2,15 @@ declare module 'micromq' {
     class MicroMq {
       constructor(any);
 
-        use: any;
+        get: any;
+
+        post: any;
+
+        put: any;
+
+        patch: any;
+
+        delete: any;
 
         start(): void;
     }

@@ -3,10 +3,6 @@ import { Path } from '../../common/enums';
 import userRouter from './user';
 import services from '../../services';
 
-const initRoutes = (app: MicroMq) => {
-  app.use(Path.User, userRouter(services));
-
-  return app;
-};
+const initRoutes = (app: MicroMq) => userRouter(services, Path.User, app);
 
 export default initRoutes;
