@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
-import { HttpStatusCode } from '../../common/enums';
+import { HttpStatusCode } from 'hypecrafter-shared/http-status-code';
 import { log } from '../../helpers';
 
 export const handleError = (error: Error, _req: Request, res: Response, _next: NextFunction) => {

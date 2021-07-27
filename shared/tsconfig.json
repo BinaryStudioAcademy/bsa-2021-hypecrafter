@@ -1,0 +1,13 @@
+{
+    "include": ["src"],
+    "exclude": ["node_modules"],
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+        "~/*": ["src/*"]
+      },
+      "outDir": "build",
+      "declaration": true,
+      "module": "commonjs"
+    }
+  }
