@@ -1,25 +1,28 @@
+/* eslint-disable */
 declare module 'micromq' {
-    class MicroMq {
-      constructor(any);
+  import { IRouterMatcher } from 'express';
 
-        get: any;
+  class MicroMq {
+    constructor(options: {
+      name?: string;
+      rabbit?: { url: string };
+      microservices?: string[];
+    });
 
-        post: any;
-
-        put: any;
-
-        patch: any;
-
-        delete: any;
-
-        start(): void;
-    }
-    export default MicroMq;
+    get: IRouterMatcher<any>;
+    post: IRouterMatcher<any>;
+    put: IRouterMatcher<any>;
+    patch: IRouterMatcher<any>;
+    delete: IRouterMatcher<any>;
+    start(): void;
+  }
+  export default MicroMq;
 }
+
 declare module 'micromq/gateway';
 
 declare namespace Express {
-    export interface Response {
-        delegate: any;
-    }
+  export interface Response {
+    delegate(name: string): any;
+  }
 }
