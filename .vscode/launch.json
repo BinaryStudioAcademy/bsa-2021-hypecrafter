@@ -10,8 +10,7 @@
             "name": "Launch Gateway",
             "cwd": "${workspaceFolder}/gateway",
             "runtimeExecutable": "npm",
-            "runtimeArgs": ["start"],
-            "environment": [ {"name":"NODE_ENV", "value":"dev"}, {"name":"DEBUG", "value":"*"} ]
+            "runtimeArgs": ["start"]
         },
         {
             "type": "pwa-node",
@@ -19,8 +18,7 @@
             "name": "Launch Backend",
             "cwd": "${workspaceFolder}/backend",
             "runtimeExecutable": "npm",
-            "runtimeArgs": ["start"],
-            "environment": [ {"name":"NODE_ENV", "value":"dev"}, {"name":"DEBUG", "value":"*"} ]
+            "runtimeArgs": ["start"]
         }
     ]
 }
