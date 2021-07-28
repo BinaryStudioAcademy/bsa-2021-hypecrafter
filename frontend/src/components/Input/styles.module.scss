@@ -1,0 +1,18 @@
+.inputLabel {
+  font-weight: 500;
+}
+
+.formControl {
+  border: 1px solid #3a3a3a;
+  border-radius: 1px;
+}
+
+.errorMessageContainer {
+  height: 1.5rem;
+  line-height: 1rem;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 0.8rem;
+}
