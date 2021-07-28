@@ -5,9 +5,12 @@
   "dependencies": {
     "bootstrap": "^5.0.2",
     "dotenv": "^8.2.0",
+    "i18next": "^20.3.5",
+    "i18next-browser-languagedetector": "^6.1.2",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.0-beta.4",
     "react-dom": "^17.0.2",
+    "react-i18next": "^11.11.4",
     "react-redux": "^7.2.4",
     "react-scripts": "4.0.3",
     "redux": "^4.1.0",
