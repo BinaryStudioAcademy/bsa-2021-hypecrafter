@@ -6,16 +6,37 @@ import { log } from './helpers';
 import { handleError, logger } from './api/middlewares';
 import initRoutes from './api/routes';
 import { env } from './env';
-
+import swaggerUI from 'swagger-ui-express'
+import swaggerJsdoc from 'swagger-jsdoc'
 const { port, environment, rabbit } = env.app;
 
 const gateway = new Gateway({
   microservices: [Project.BACKEND, Project.PAYMENT],
   rabbit
 });
+console.log("---------",port)
+const swaggerOptions = {
+  definition:{
+    openapi: '3.0.0',
+    info:{
+      title: 'Library API',
+      version: '1.0.0'
+    },
+    servers:[
+      {
+        url: 'http://localhost:'+port
+      }
+    ]
+  },
+  apis:["../../backend/src/api/routes/user.ts"]
+}
+const specs = swaggerJsdoc(swaggerOptions)
 
+
+console.log(environment)
 const app = express();
 
+app.use('/api-docs',swaggerUI.serve,swaggerUI.setup(specs));
 app.use(cors());
 app.use(logger);
 app.use(json());
