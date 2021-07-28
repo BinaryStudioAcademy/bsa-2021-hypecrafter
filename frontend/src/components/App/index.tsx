@@ -1,13 +1,13 @@
+import { Route, Switch } from 'react-router-dom';
+import { Routes } from '../../common/enums';
 import AppProvider from '../../providers';
-import Users from '../../scenes/Users';
-import BootstrapExample from '../BootstrapExample';
-import TranslateExample from '../TranslateExample';
+import Main from '../Main';
 
 const App = () => (
   <AppProvider>
-    <Users />
-    <TranslateExample />
-    <BootstrapExample />
+    <Switch>
+      <Route path={Routes.HOME} exact component={Main} />
+    </Switch>
   </AppProvider>
 );
 
