@@ -1,3 +1,4 @@
+import { createConnection } from 'typeorm';
 import cors from 'cors';
 import express, { json } from 'express';
 import Gateway from 'micromq/gateway';
@@ -24,9 +25,10 @@ app.use(gateway.middleware());
 app.use(initRoutes());
 app.use(handleError);
 
-app.listen(port, () => {
+app.listen(port, async () => {
   try {
     log(`Server is running at port: ${port}. Environment: "${environment}"`);
+    await createConnection();
   } catch (e) {
     log('App started with error', e);
   }

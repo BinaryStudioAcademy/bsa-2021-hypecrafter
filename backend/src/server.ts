@@ -1,3 +1,4 @@
+import { createConnection } from 'typeorm';
 import MicroMq from 'micromq';
 import { Project } from 'hypecrafter-shared';
 import initRoutes from './api/routes';
@@ -11,3 +12,4 @@ const app = new MicroMq({
 });
 
 initRoutes(app).start();
+createConnection().catch(e => console.log(e));
