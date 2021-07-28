@@ -1,5 +1,7 @@
 import { Button, Container } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { Languages } from '../../common/enums';
 
 const TranslateExample = () => {
@@ -10,7 +12,7 @@ const TranslateExample = () => {
         onClick={() => i18n.changeLanguage(i18n.language === Languages.UA
           ? Languages.EN : Languages.UA)}
       >
-        {t('Press on me')}
+        <FontAwesomeIcon icon={faSearch} /> {t('Press on me')}
       </Button>
     </Container>
   );
