@@ -24,7 +24,7 @@ const getInitHeaders = (
     headers.set(HttpHeader.CONTENT_TYPE, contentType);
   }
 
-  const token = localStorage.getItem('ACCESS_TOCKEN');
+  const token = localStorage.getItem('ACCESS_TOKEN');
   if (token) {
     headers.set(HttpHeader.AUTHORIZATION, `Bearer ${token}`);
   }
@@ -49,17 +49,19 @@ const getUrlWithQuery = (url: string, query?: Record<string, string>)
   : string => `${url}${query ? `?${queryString.stringify(query)}` : ''}`;
 
 const getUrl = (method: HttpMethod, { url, params, config }: RequestArgs): string => {
-  let fullUrl: string = url;
-
   if (config?.external) {
-    fullUrl = `${getEnv('REACT_APP_SERVER_URL')}/${url}`;
+    if (params && method === HttpMethod.GET) {
+      return getUrlWithQuery(`${getEnv('REACT_APP_SERVER_URL')}/${url}`, params);
+    }
+
+    return `${getEnv('REACT_APP_SERVER_URL')}/${url}`;
   }
 
   if (params && method === HttpMethod.GET) {
-    fullUrl = getUrlWithQuery(fullUrl, params);
+    return getUrlWithQuery(url, params);
   }
 
-  return fullUrl;
+  return url;
 };
 
 const makeRequest = (method: HttpMethod) => async <T>(args: RequestArgs) => {
