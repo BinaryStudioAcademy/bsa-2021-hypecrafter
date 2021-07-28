@@ -1,0 +1,1533 @@
+[
+  {
+      "id": 1220846125,
+      "photo": {
+          "key": "assets/034/175/380/b4be264d0aee3418606d9f73359d5480_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/034/175/380/b4be264d0aee3418606d9f73359d5480_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626042884&auto=format&frame=1&q=92&s=ac9e6422b9d5c8fdf27e29d1f53f19f5",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/175/380/b4be264d0aee3418606d9f73359d5480_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1626042884&auto=format&frame=1&q=92&s=02ee8b4455efb840381aa51a1e18d003",
+          "med": "https://ksr-ugc.imgix.net/assets/034/175/380/b4be264d0aee3418606d9f73359d5480_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1626042884&auto=format&frame=1&q=92&s=bd37b40f1a2931e028d010c8e6652074",
+          "little": "https://ksr-ugc.imgix.net/assets/034/175/380/b4be264d0aee3418606d9f73359d5480_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1626042884&auto=format&frame=1&q=92&s=a3d47dc1bc1572b58c721c3aa0fa9590",
+          "small": "https://ksr-ugc.imgix.net/assets/034/175/380/b4be264d0aee3418606d9f73359d5480_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1626042884&auto=format&frame=1&q=92&s=85500b25ebbfdcd83ecd098e3c83a5ea",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/175/380/b4be264d0aee3418606d9f73359d5480_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1626042884&auto=format&frame=1&q=92&s=968e07cbaaed125c6afa29a1cb9bf7e7",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/175/380/b4be264d0aee3418606d9f73359d5480_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1626042884&auto=format&frame=1&q=92&s=5d3709d818d67cdd779109c7e1d9c2a5",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/175/380/b4be264d0aee3418606d9f73359d5480_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626042884&auto=format&frame=1&q=92&s=f5aeb5db07d38eab10eb3d7a051aa885"
+      },
+      "name": "How to Craft Sustainably: A Creative Crafts Book for All",
+      "blurb": "A project by Gifts at Berkeley, a group of college students who are passionate about art, environment, and giving back to the community",
+      "goal": 1000,
+      "pledged": 240,
+      "state": "live",
+      "slug": "how-to-craft-sustainably-a-creative-crafts-book-for-all",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1629083328,
+      "state_changed_at": 1626491329,
+      "created_at": 1610340551,
+      "launched_at": 1626491328,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 12,
+      "static_usd_rate": 1,
+      "usd_pledged": "240.0",
+      "converted_pledged_amount": 240,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1367835371,
+          "name": "Gifts at Berkeley",
+          "slug": "giftsatberkeley",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/033/548/614/12bfad533de63c157ab2fa71c6c8d519_original.png?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1621295824&auto=format&frame=1&q=92&s=6a5510a442950382862a5581cfff28e2",
+              "small": "https://ksr-ugc.imgix.net/assets/033/548/614/12bfad533de63c157ab2fa71c6c8d519_original.png?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1621295824&auto=format&frame=1&q=92&s=8a5aa088b057892d1df34d1625a86909",
+              "medium": "https://ksr-ugc.imgix.net/assets/033/548/614/12bfad533de63c157ab2fa71c6c8d519_original.png?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1621295824&auto=format&frame=1&q=92&s=bbc920914c755cb3465ac5f3342b10d5"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/giftsatberkeley"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1367835371?signature=1627581732.e7e4ef7524addfe266087da316809eb30f184d1f"
+              }
+          }
+      },
+      "location": {
+          "id": 2362930,
+          "name": "Berkeley",
+          "slug": "berkeley-ca-us",
+          "short_name": "Berkeley, CA",
+          "displayable_name": "Berkeley, CA",
+          "localized_name": "Berkeley",
+          "country": "US",
+          "state": "CA",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/berkeley-ca-us",
+                  "location": "https://www.kickstarter.com/locations/berkeley-ca-us"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627550386.057ac69ae3a4c908c0977599701ee9fd106e574f&woe_id=2362930"
+              }
+          }
+      },
+      "category": {
+          "id": 345,
+          "name": "DIY",
+          "analytics_name": "DIY",
+          "slug": "crafts/diy",
+          "position": 3,
+          "parent_id": 26,
+          "parent_name": "Crafts",
+          "color": 16744876,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/crafts/diy"
+              }
+          }
+      },
+      "profile": {
+          "id": 4141131,
+          "project_id": 4141131,
+          "state": "inactive",
+          "state_changed_at": 1610340552,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/175/380/b4be264d0aee3418606d9f73359d5480_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626042884&auto=format&frame=1&q=92&s=f5aeb5db07d38eab10eb3d7a051aa885",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/175/380/b4be264d0aee3418606d9f73359d5480_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626042884&auto=format&frame=1&q=92&s=ac9e6422b9d5c8fdf27e29d1f53f19f5"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/giftsatberkeley/how-to-craft-sustainably-a-creative-crafts-book-for-all?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/giftsatberkeley/how-to-craft-sustainably-a-creative-crafts-book-for-all/rewards"
+          }
+      }
+  },
+  {
+      "id": 1927345447,
+      "photo": {
+          "key": "assets/033/876/963/4453ad11e26d7591f07d0c5338a01888_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/033/876/963/4453ad11e26d7591f07d0c5338a01888_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1623628318&auto=format&frame=1&q=92&s=e8bff2189dce3ce9d376fe74c5baad89",
+          "ed": "https://ksr-ugc.imgix.net/assets/033/876/963/4453ad11e26d7591f07d0c5338a01888_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1623628318&auto=format&frame=1&q=92&s=87919f1ea29b157b9b0130c7315f56c4",
+          "med": "https://ksr-ugc.imgix.net/assets/033/876/963/4453ad11e26d7591f07d0c5338a01888_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1623628318&auto=format&frame=1&q=92&s=3d686f682edf1152fbac4f494824dfee",
+          "little": "https://ksr-ugc.imgix.net/assets/033/876/963/4453ad11e26d7591f07d0c5338a01888_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1623628318&auto=format&frame=1&q=92&s=6dcee6ed2533bd80e7a65d60e1af97ea",
+          "small": "https://ksr-ugc.imgix.net/assets/033/876/963/4453ad11e26d7591f07d0c5338a01888_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1623628318&auto=format&frame=1&q=92&s=d37f4452222a8e1de7f407ac9eebc5a5",
+          "thumb": "https://ksr-ugc.imgix.net/assets/033/876/963/4453ad11e26d7591f07d0c5338a01888_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1623628318&auto=format&frame=1&q=92&s=aee1add6974a172d7615381c97478b16",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/033/876/963/4453ad11e26d7591f07d0c5338a01888_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1623628318&auto=format&frame=1&q=92&s=d61ec98d4aa7983994e610aed8b334cd",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/033/876/963/4453ad11e26d7591f07d0c5338a01888_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1623628318&auto=format&frame=1&q=92&s=acab8f3d3a6fd0647ba13391b37c1a65"
+      },
+      "name": "Strawberry Salmon Plush!",
+      "blurb": "A soft and squishy headless fish plush!",
+      "goal": 8900,
+      "pledged": 1783,
+      "state": "live",
+      "slug": "strawberry-salmon-plush",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1627671600,
+      "state_changed_at": 1624391002,
+      "created_at": 1622062378,
+      "launched_at": 1624391000,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 28,
+      "static_usd_rate": 1,
+      "usd_pledged": "1783.0",
+      "converted_pledged_amount": 1783,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1872562382,
+          "name": "Aleksander Savidge",
+          "slug": "cfstudios",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/033/943/419/d8de85e9ba8107f050d26a59546a5147_original.png?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1624120585&auto=format&frame=1&q=92&s=f03ed968fee53e64e8c3f574fbbae723",
+              "small": "https://ksr-ugc.imgix.net/assets/033/943/419/d8de85e9ba8107f050d26a59546a5147_original.png?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1624120585&auto=format&frame=1&q=92&s=4ba70c9f8da539bdf872be9875ceaa0a",
+              "medium": "https://ksr-ugc.imgix.net/assets/033/943/419/d8de85e9ba8107f050d26a59546a5147_original.png?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1624120585&auto=format&frame=1&q=92&s=0f5febc87947e5a5f271ed3cd509ab78"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/cfstudios"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1872562382?signature=1627581732.99d458701dfe263f7d9981a42ba8791ad23c0c8b"
+              }
+          }
+      },
+      "location": {
+          "id": 2486340,
+          "name": "Sacramento",
+          "slug": "sacramento-ca",
+          "short_name": "Sacramento, CA",
+          "displayable_name": "Sacramento, CA",
+          "localized_name": "Sacramento",
+          "country": "US",
+          "state": "CA",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/sacramento-ca",
+                  "location": "https://www.kickstarter.com/locations/sacramento-ca"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549453.db5bab50f54c2275c660abf2b699b1d47e52efc4&woe_id=2486340"
+              }
+          }
+      },
+      "category": {
+          "id": 26,
+          "name": "Crafts",
+          "analytics_name": "Crafts",
+          "slug": "crafts",
+          "position": 3,
+          "color": 16744876,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/crafts"
+              }
+          }
+      },
+      "profile": {
+          "id": 4223405,
+          "project_id": 4223405,
+          "state": "inactive",
+          "state_changed_at": 1622062378,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/033/876/963/4453ad11e26d7591f07d0c5338a01888_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1623628318&auto=format&frame=1&q=92&s=acab8f3d3a6fd0647ba13391b37c1a65",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/033/876/963/4453ad11e26d7591f07d0c5338a01888_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1623628318&auto=format&frame=1&q=92&s=e8bff2189dce3ce9d376fe74c5baad89"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/cfstudios/strawberry-salmon-plush?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/cfstudios/strawberry-salmon-plush/rewards"
+          }
+      }
+  },
+  {
+      "id": 703954443,
+      "photo": {
+          "key": "assets/034/322/698/bb72c60a73712a43ba5a14d17e73545d_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/034/322/698/bb72c60a73712a43ba5a14d17e73545d_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1627318762&auto=format&frame=1&q=92&s=73b00923986d16f59815b06f0f668e56",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/322/698/bb72c60a73712a43ba5a14d17e73545d_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1627318762&auto=format&frame=1&q=92&s=20100fa5f4abc80be9fbff62f30db157",
+          "med": "https://ksr-ugc.imgix.net/assets/034/322/698/bb72c60a73712a43ba5a14d17e73545d_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1627318762&auto=format&frame=1&q=92&s=915dd10ec4ea29c120c45560605f2b7f",
+          "little": "https://ksr-ugc.imgix.net/assets/034/322/698/bb72c60a73712a43ba5a14d17e73545d_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1627318762&auto=format&frame=1&q=92&s=c559a917934261dad58e99f62fd64fca",
+          "small": "https://ksr-ugc.imgix.net/assets/034/322/698/bb72c60a73712a43ba5a14d17e73545d_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1627318762&auto=format&frame=1&q=92&s=e9e3d7e41400e622e090cfa9db6541f7",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/322/698/bb72c60a73712a43ba5a14d17e73545d_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1627318762&auto=format&frame=1&q=92&s=8206ee16ded677e923a0eeda5afe3944",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/322/698/bb72c60a73712a43ba5a14d17e73545d_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1627318762&auto=format&frame=1&q=92&s=a0829e5cf9354d0c5d143f3277819edf",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/322/698/bb72c60a73712a43ba5a14d17e73545d_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1627318762&auto=format&frame=1&q=92&s=cc8e9fc2df9294d8bba3e5df9de1f847"
+      },
+      "name": "Felix Mentula",
+      "blurb": "Inspired by the amulets worn by ancient romans, Felix Mentula will be your collectible handmade designer art figurines.",
+      "goal": 1000,
+      "pledged": 634,
+      "state": "live",
+      "slug": "felix-mentula",
+      "disable_communication": false,
+      "country": "IT",
+      "country_displayable_name": "Italy",
+      "currency": "EUR",
+      "currency_symbol": "€",
+      "currency_trailing_code": false,
+      "deadline": 1627847001,
+      "state_changed_at": 1625255003,
+      "created_at": 1624985404,
+      "launched_at": 1625255001,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 13,
+      "static_usd_rate": 1.1850644,
+      "usd_pledged": "751.3308296",
+      "converted_pledged_amount": 749,
+      "fx_rate": 1.18212951,
+      "usd_exchange_rate": 1.18212951,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 689532006,
+          "name": "Sabrina - Terrific Fandom Shops",
+          "slug": "terrificfandomshops",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/030/798/528/c6415ea583db974b45cdac689a2b5b65_original.png?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1601394994&auto=format&frame=1&q=92&s=610d058866c7d0bd11b48416226c4932",
+              "small": "https://ksr-ugc.imgix.net/assets/030/798/528/c6415ea583db974b45cdac689a2b5b65_original.png?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1601394994&auto=format&frame=1&q=92&s=9af087d0e6f96581c56112c087a57e84",
+              "medium": "https://ksr-ugc.imgix.net/assets/030/798/528/c6415ea583db974b45cdac689a2b5b65_original.png?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1601394994&auto=format&frame=1&q=92&s=3615f1612ec40e42c19e8fa979696059"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/terrificfandomshops"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/689532006?signature=1627581732.9f7415dd24a2216cd6067c6d838c7baf6f1f83aa"
+              }
+          }
+      },
+      "location": {
+          "id": 721943,
+          "name": "Rome",
+          "slug": "rome-rome-lazio",
+          "short_name": "Rome, Italy",
+          "displayable_name": "Rome, Italy",
+          "localized_name": "Rome",
+          "country": "IT",
+          "state": "Lazio",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "Italy",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/rome-rome-lazio",
+                  "location": "https://www.kickstarter.com/locations/rome-rome-lazio"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549402.4a73591993464cf62ae7337c5ac399c24af43b39&woe_id=721943"
+              }
+          }
+      },
+      "category": {
+          "id": 26,
+          "name": "Crafts",
+          "analytics_name": "Crafts",
+          "slug": "crafts",
+          "position": 3,
+          "color": 16744876,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/crafts"
+              }
+          }
+      },
+      "profile": {
+          "id": 4240996,
+          "project_id": 4240996,
+          "state": "inactive",
+          "state_changed_at": 1624985404,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/322/698/bb72c60a73712a43ba5a14d17e73545d_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1627318762&auto=format&frame=1&q=92&s=cc8e9fc2df9294d8bba3e5df9de1f847",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/322/698/bb72c60a73712a43ba5a14d17e73545d_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1627318762&auto=format&frame=1&q=92&s=73b00923986d16f59815b06f0f668e56"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/terrificfandomshops/felix-mentula?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/terrificfandomshops/felix-mentula/rewards"
+          }
+      }
+  },
+  {
+      "id": 157544447,
+      "photo": {
+          "key": "assets/034/064/983/0adb0f10aaff33a2766330305d18aa8a_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/064/983/0adb0f10aaff33a2766330305d18aa8a_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625092129&auto=format&frame=1&q=92&s=28e3d6ae3eb152a6dfd0fb06ef6b6964",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/064/983/0adb0f10aaff33a2766330305d18aa8a_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1625092129&auto=format&frame=1&q=92&s=e0e0069f4746fd455a728feb29166338",
+          "med": "https://ksr-ugc.imgix.net/assets/034/064/983/0adb0f10aaff33a2766330305d18aa8a_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1625092129&auto=format&frame=1&q=92&s=29da87210cdfa1ae2f53f208fe413095",
+          "little": "https://ksr-ugc.imgix.net/assets/034/064/983/0adb0f10aaff33a2766330305d18aa8a_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1625092129&auto=format&frame=1&q=92&s=8a2437dd687cd70caf4d612e50293f88",
+          "small": "https://ksr-ugc.imgix.net/assets/034/064/983/0adb0f10aaff33a2766330305d18aa8a_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1625092129&auto=format&frame=1&q=92&s=c4e1c9facf6a86b9c6b0e0867aa37df1",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/064/983/0adb0f10aaff33a2766330305d18aa8a_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1625092129&auto=format&frame=1&q=92&s=d09d417e2a8416d8676997b28b8afb2b",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/064/983/0adb0f10aaff33a2766330305d18aa8a_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1625092129&auto=format&frame=1&q=92&s=11d13e7ebf670d16a9365749b689a827",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/064/983/0adb0f10aaff33a2766330305d18aa8a_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625092129&auto=format&frame=1&q=92&s=2cba0c75a18d9ea933f364175f02d58c"
+      },
+      "name": "Pterygotus Sea Scorpion Plushie - a new Paleozoic Pal",
+      "blurb": "Pterygotus - a new 16\" Silurian plush eurypterid in PRI's Paleozoic Pals collection.",
+      "goal": 7500,
+      "pledged": 25215,
+      "state": "live",
+      "slug": "pterygotus-sea-scorpion-plushie-a-new-paleozoic-pal",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1628697872,
+      "state_changed_at": 1626105875,
+      "created_at": 1625091634,
+      "launched_at": 1626105872,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 526,
+      "static_usd_rate": 1,
+      "usd_pledged": "25215.0",
+      "converted_pledged_amount": 25215,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1591542039,
+          "name": "Paleontological Research Institution",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/009/818/675/991ed20a9b0393a14b3a210315cd7709_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1461636756&auto=format&frame=1&q=92&s=178c9b48ceec98535bb80d52d07ed126",
+              "small": "https://ksr-ugc.imgix.net/assets/009/818/675/991ed20a9b0393a14b3a210315cd7709_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1461636756&auto=format&frame=1&q=92&s=d7dd9e51a6d1a712ed038917374e2fd4",
+              "medium": "https://ksr-ugc.imgix.net/assets/009/818/675/991ed20a9b0393a14b3a210315cd7709_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1461636756&auto=format&frame=1&q=92&s=3b8e40fcaa18791a5f3f655bd9238306"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/1591542039"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1591542039?signature=1627581732.4b2c6f3b3645a35791992ff9e63dd1edd1ab1d08"
+              }
+          }
+      },
+      "location": {
+          "id": 2427936,
+          "name": "Ithaca",
+          "slug": "ithaca-ny",
+          "short_name": "Ithaca, NY",
+          "displayable_name": "Ithaca, NY",
+          "localized_name": "Ithaca",
+          "country": "US",
+          "state": "NY",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/ithaca-ny",
+                  "location": "https://www.kickstarter.com/locations/ithaca-ny"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627552974.d9d73356eb22877ce8d3563587483abb435cdac2&woe_id=2427936"
+              }
+          }
+      },
+      "category": {
+          "id": 26,
+          "name": "Crafts",
+          "analytics_name": "Crafts",
+          "slug": "crafts",
+          "position": 3,
+          "color": 16744876,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/crafts"
+              }
+          }
+      },
+      "profile": {
+          "id": 4241709,
+          "project_id": 4241709,
+          "state": "inactive",
+          "state_changed_at": 1625091634,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/064/983/0adb0f10aaff33a2766330305d18aa8a_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625092129&auto=format&frame=1&q=92&s=2cba0c75a18d9ea933f364175f02d58c",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/064/983/0adb0f10aaff33a2766330305d18aa8a_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625092129&auto=format&frame=1&q=92&s=28e3d6ae3eb152a6dfd0fb06ef6b6964"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/1591542039/pterygotus-sea-scorpion-plushie-a-new-paleozoic-pal?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/1591542039/pterygotus-sea-scorpion-plushie-a-new-paleozoic-pal/rewards"
+          }
+      }
+  },
+  {
+      "id": 1585484430,
+      "photo": {
+          "key": "assets/033/733/223/68d2f7fe2ef8e8c90ef31d9a1fe69227_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/033/733/223/68d2f7fe2ef8e8c90ef31d9a1fe69227_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1622563638&auto=format&frame=1&q=92&s=4ce2ad5d884239bf0c5d20845d2d8719",
+          "ed": "https://ksr-ugc.imgix.net/assets/033/733/223/68d2f7fe2ef8e8c90ef31d9a1fe69227_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1622563638&auto=format&frame=1&q=92&s=d36842a90890dc98617d9038eaa966cb",
+          "med": "https://ksr-ugc.imgix.net/assets/033/733/223/68d2f7fe2ef8e8c90ef31d9a1fe69227_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1622563638&auto=format&frame=1&q=92&s=76b2fae0bc7d338314854763b0f314c4",
+          "little": "https://ksr-ugc.imgix.net/assets/033/733/223/68d2f7fe2ef8e8c90ef31d9a1fe69227_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1622563638&auto=format&frame=1&q=92&s=f9aafbbc27fe5b79e3d7f4ab9ffff6ee",
+          "small": "https://ksr-ugc.imgix.net/assets/033/733/223/68d2f7fe2ef8e8c90ef31d9a1fe69227_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1622563638&auto=format&frame=1&q=92&s=e640feb84eb84fcfe9c3931614735594",
+          "thumb": "https://ksr-ugc.imgix.net/assets/033/733/223/68d2f7fe2ef8e8c90ef31d9a1fe69227_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1622563638&auto=format&frame=1&q=92&s=343bfb9758294a0be6d70a032c81acce",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/033/733/223/68d2f7fe2ef8e8c90ef31d9a1fe69227_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1622563638&auto=format&frame=1&q=92&s=0643c37ef9d19b7d27427dfb7c8b98d2",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/033/733/223/68d2f7fe2ef8e8c90ef31d9a1fe69227_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1622563638&auto=format&frame=1&q=92&s=3c186a9d2a03ac128931df76299341bb"
+      },
+      "name": "Fantasy Colouring Book",
+      "blurb": "Creative colouring book for all colouring fans and fantasy art lovers. Suitable for all ages and all skill levels.",
+      "goal": 300,
+      "pledged": 674,
+      "state": "live",
+      "slug": "fantasy-colouring-book",
+      "disable_communication": false,
+      "country": "GB",
+      "country_displayable_name": "the United Kingdom",
+      "currency": "GBP",
+      "currency_symbol": "£",
+      "currency_trailing_code": false,
+      "deadline": 1628784269,
+      "state_changed_at": 1626192270,
+      "created_at": 1622563255,
+      "launched_at": 1626192269,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 33,
+      "static_usd_rate": 1.38967444,
+      "usd_pledged": "936.64057256",
+      "converted_pledged_amount": 935,
+      "fx_rate": 1.38747444,
+      "usd_exchange_rate": 1.38747444,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 652666560,
+          "name": "Undiscovered Gems",
+          "slug": "undiscoveredgems",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/032/292/060/3238b28c4456ff3618de9942b0d98c72_original.png?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1612791130&auto=format&frame=1&q=92&s=54b510ffd22bad739e73b3c894a0a5e0",
+              "small": "https://ksr-ugc.imgix.net/assets/032/292/060/3238b28c4456ff3618de9942b0d98c72_original.png?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1612791130&auto=format&frame=1&q=92&s=6e60dbc456aa7946e795cf714b4729bc",
+              "medium": "https://ksr-ugc.imgix.net/assets/032/292/060/3238b28c4456ff3618de9942b0d98c72_original.png?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1612791130&auto=format&frame=1&q=92&s=d847a73ad62aa2207fdae0398c1e6acc"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/undiscoveredgems"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/652666560?signature=1627581732.72f5a7b0e68261d510806cea14785ef929ff0a1f"
+              }
+          }
+      },
+      "location": {
+          "id": 12602140,
+          "name": "Cambridgeshire",
+          "slug": "cambridgeshire-gb",
+          "short_name": "Cambridgeshire, UK",
+          "displayable_name": "Cambridgeshire, UK",
+          "localized_name": "Cambridgeshire",
+          "country": "GB",
+          "state": "England",
+          "type": "County",
+          "is_root": false,
+          "expanded_country": "United Kingdom",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/cambridgeshire-gb",
+                  "location": "https://www.kickstarter.com/locations/cambridgeshire-gb"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627566889.0e9c09e726f7875029c1496502bc7e8444a6bcd2&woe_id=12602140"
+              }
+          }
+      },
+      "category": {
+          "id": 353,
+          "name": "Stationery",
+          "analytics_name": "Stationery",
+          "slug": "crafts/stationery",
+          "position": 11,
+          "parent_id": 26,
+          "parent_name": "Crafts",
+          "color": 16744876,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/crafts/stationery"
+              }
+          }
+      },
+      "profile": {
+          "id": 4226399,
+          "project_id": 4226399,
+          "state": "inactive",
+          "state_changed_at": 1622563255,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/033/733/223/68d2f7fe2ef8e8c90ef31d9a1fe69227_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1622563638&auto=format&frame=1&q=92&s=3c186a9d2a03ac128931df76299341bb",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/033/733/223/68d2f7fe2ef8e8c90ef31d9a1fe69227_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1622563638&auto=format&frame=1&q=92&s=4ce2ad5d884239bf0c5d20845d2d8719"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/undiscoveredgems/fantasy-colouring-book?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/undiscoveredgems/fantasy-colouring-book/rewards"
+          }
+      }
+  },
+  {
+      "id": 1251293936,
+      "photo": {
+          "key": "assets/034/199/857/b088472762bb90ea8d44ef8dc4e9238b_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/034/199/857/b088472762bb90ea8d44ef8dc4e9238b_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626222678&auto=format&frame=1&q=92&s=b20e2df127cd680dfadaa39003841f21",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/199/857/b088472762bb90ea8d44ef8dc4e9238b_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1626222678&auto=format&frame=1&q=92&s=2fcf46c0ef91cef5d4f189567dfc8d05",
+          "med": "https://ksr-ugc.imgix.net/assets/034/199/857/b088472762bb90ea8d44ef8dc4e9238b_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1626222678&auto=format&frame=1&q=92&s=e9f94eb3757d0119d3ab3851035eb0af",
+          "little": "https://ksr-ugc.imgix.net/assets/034/199/857/b088472762bb90ea8d44ef8dc4e9238b_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1626222678&auto=format&frame=1&q=92&s=bec03bb6e24f2b438c0f5a2ad5fbc91b",
+          "small": "https://ksr-ugc.imgix.net/assets/034/199/857/b088472762bb90ea8d44ef8dc4e9238b_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1626222678&auto=format&frame=1&q=92&s=0a7121b614d16b97b7c6b6e9f790a67c",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/199/857/b088472762bb90ea8d44ef8dc4e9238b_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1626222678&auto=format&frame=1&q=92&s=5466dd4b58fbc9d8ef878242e7d5df58",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/199/857/b088472762bb90ea8d44ef8dc4e9238b_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1626222678&auto=format&frame=1&q=92&s=c83559daf7c1e1529f5fd14f3d43de69",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/199/857/b088472762bb90ea8d44ef8dc4e9238b_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626222678&auto=format&frame=1&q=92&s=893cf2931bc31d1ad24946b75d5c4ea4"
+      },
+      "name": "BLOOM: Lush Yarns For Slow Fashion.",
+      "blurb": "Bloom creates lush yarn from wool grown, spun and dyed within our regional Fibershed.",
+      "goal": 6400,
+      "pledged": 6469,
+      "state": "live",
+      "slug": "bloom-woolen-yarns",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1627852652,
+      "state_changed_at": 1625260653,
+      "created_at": 1620654429,
+      "launched_at": 1625260652,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 84,
+      "static_usd_rate": 1,
+      "usd_pledged": "6469.0",
+      "converted_pledged_amount": 6469,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1645511318,
+          "name": "Lisa Fortin",
+          "slug": "bloomwoolenyarns",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/033/457/651/a8d620d0678398072da3c6b51b482482_original.JPG?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1620653760&auto=format&frame=1&q=92&s=73f6de84badd9d9d20a6173d58bf9b21",
+              "small": "https://ksr-ugc.imgix.net/assets/033/457/651/a8d620d0678398072da3c6b51b482482_original.JPG?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1620653760&auto=format&frame=1&q=92&s=32187fafe440e20f1e8e371aafd2eccf",
+              "medium": "https://ksr-ugc.imgix.net/assets/033/457/651/a8d620d0678398072da3c6b51b482482_original.JPG?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1620653760&auto=format&frame=1&q=92&s=e71aeebe1c6ead9dffa8687dee8d8eac"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/bloomwoolenyarns"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1645511318?signature=1627581732.23e975ee54a2a6813e86323c48be9fea1200c1d3"
+              }
+          }
+      },
+      "location": {
+          "id": 2461848,
+          "name": "Northampton",
+          "slug": "northampton-ma",
+          "short_name": "Northampton, MA",
+          "displayable_name": "Northampton, MA",
+          "localized_name": "Northampton",
+          "country": "US",
+          "state": "MA",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/northampton-ma",
+                  "location": "https://www.kickstarter.com/locations/northampton-ma"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627556046.72e1a4cb4dc490a61239ec78aa2daa5a5e29b3f0&woe_id=2461848"
+              }
+          }
+      },
+      "category": {
+          "id": 348,
+          "name": "Knitting",
+          "analytics_name": "Knitting",
+          "slug": "crafts/knitting",
+          "position": 6,
+          "parent_id": 26,
+          "parent_name": "Crafts",
+          "color": 16744876,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/crafts/knitting"
+              }
+          }
+      },
+      "profile": {
+          "id": 4214189,
+          "project_id": 4214189,
+          "state": "inactive",
+          "state_changed_at": 1620654429,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/199/857/b088472762bb90ea8d44ef8dc4e9238b_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626222678&auto=format&frame=1&q=92&s=893cf2931bc31d1ad24946b75d5c4ea4",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/199/857/b088472762bb90ea8d44ef8dc4e9238b_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626222678&auto=format&frame=1&q=92&s=b20e2df127cd680dfadaa39003841f21"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/bloomwoolenyarns/bloom-woolen-yarns?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/bloomwoolenyarns/bloom-woolen-yarns/rewards"
+          }
+      }
+  },
+  {
+      "id": 628547047,
+      "photo": {
+          "key": "assets/034/128/035/c571f329aa985b30c89de5428d1e5bcd_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/034/128/035/c571f329aa985b30c89de5428d1e5bcd_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625625652&auto=format&frame=1&q=92&s=db582f1cb27990af2df41d9e19b346ea",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/128/035/c571f329aa985b30c89de5428d1e5bcd_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1625625652&auto=format&frame=1&q=92&s=6475ca870ab66fb0b6b6cc49c6dcb429",
+          "med": "https://ksr-ugc.imgix.net/assets/034/128/035/c571f329aa985b30c89de5428d1e5bcd_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1625625652&auto=format&frame=1&q=92&s=c038a3cdbbfcf319cc49b03c8dc48d5e",
+          "little": "https://ksr-ugc.imgix.net/assets/034/128/035/c571f329aa985b30c89de5428d1e5bcd_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1625625652&auto=format&frame=1&q=92&s=916fb36d30ce37cdee05e359e67bf4ea",
+          "small": "https://ksr-ugc.imgix.net/assets/034/128/035/c571f329aa985b30c89de5428d1e5bcd_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1625625652&auto=format&frame=1&q=92&s=47e7895613e6b056fdda2c5cfba3f131",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/128/035/c571f329aa985b30c89de5428d1e5bcd_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1625625652&auto=format&frame=1&q=92&s=96b93e00ca58edfe1de54b811c6699ee",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/128/035/c571f329aa985b30c89de5428d1e5bcd_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1625625652&auto=format&frame=1&q=92&s=fd184b5217b8285e37266d95d9c9fe3c",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/128/035/c571f329aa985b30c89de5428d1e5bcd_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625625652&auto=format&frame=1&q=92&s=0d06d76ffc8da9fc7f28c0dc6f6c239d"
+      },
+      "name": "Alchemical Skincare by REÅLEA",
+      "blurb": "Therapeutic Alchemy : Pure & Potent Magic for your Body. Handcrafted with 100% fantastic ingredients to nourish & heal your skin.",
+      "goal": 25000,
+      "pledged": 28124,
+      "state": "live",
+      "slug": "rare-earth-alchemy",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1628330340,
+      "state_changed_at": 1625580045,
+      "created_at": 1623979474,
+      "launched_at": 1625580042,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 133,
+      "static_usd_rate": 1,
+      "usd_pledged": "28124.0",
+      "converted_pledged_amount": 28124,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1627627511,
+          "name": "Rare Earth Alchemy, Inc.",
+          "slug": "realea",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/033/936/423/3f999d470427496d53bc891de242f09a_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1624045126&auto=format&frame=1&q=92&s=ba7f0cb1e9486b9365864b817b258d7d",
+              "small": "https://ksr-ugc.imgix.net/assets/033/936/423/3f999d470427496d53bc891de242f09a_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1624045126&auto=format&frame=1&q=92&s=5686639c1678fa95d298da5529d6596f",
+              "medium": "https://ksr-ugc.imgix.net/assets/033/936/423/3f999d470427496d53bc891de242f09a_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1624045126&auto=format&frame=1&q=92&s=483c5e445bc82df41ffbf39ed42e1e86"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/realea"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1627627511?signature=1627581732.d10b441fcef5cc2f4a68be5ea12f7a5149a4edb3"
+              }
+          }
+      },
+      "location": {
+          "id": 2470874,
+          "name": "Petaluma",
+          "slug": "petaluma-ca",
+          "short_name": "Petaluma, CA",
+          "displayable_name": "Petaluma, CA",
+          "localized_name": "Petaluma",
+          "country": "US",
+          "state": "CA",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/petaluma-ca",
+                  "location": "https://www.kickstarter.com/locations/petaluma-ca"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627559322.828b50f5b81af156bffd18867ae0bcd352f023ab&woe_id=2470874"
+              }
+          }
+      },
+      "category": {
+          "id": 26,
+          "name": "Crafts",
+          "analytics_name": "Crafts",
+          "slug": "crafts",
+          "position": 3,
+          "color": 16744876,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/crafts"
+              }
+          }
+      },
+      "profile": {
+          "id": 4235411,
+          "project_id": 4235411,
+          "state": "inactive",
+          "state_changed_at": 1623979474,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/128/035/c571f329aa985b30c89de5428d1e5bcd_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625625652&auto=format&frame=1&q=92&s=0d06d76ffc8da9fc7f28c0dc6f6c239d",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/128/035/c571f329aa985b30c89de5428d1e5bcd_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625625652&auto=format&frame=1&q=92&s=db582f1cb27990af2df41d9e19b346ea"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/realea/rare-earth-alchemy?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/realea/rare-earth-alchemy/rewards"
+          }
+      }
+  },
+  {
+      "id": 879980595,
+      "photo": {
+          "key": "assets/033/988/421/911f3545bd26cf70e5c7c177731a756a_original.jpeg",
+          "full": "https://ksr-ugc.imgix.net/assets/033/988/421/911f3545bd26cf70e5c7c177731a756a_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624473714&auto=format&frame=1&q=92&s=fae43a81ccbb1a7214c9134d440d6590",
+          "ed": "https://ksr-ugc.imgix.net/assets/033/988/421/911f3545bd26cf70e5c7c177731a756a_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1624473714&auto=format&frame=1&q=92&s=b59a2dc6335dc187b8af879e9a2e0ab8",
+          "med": "https://ksr-ugc.imgix.net/assets/033/988/421/911f3545bd26cf70e5c7c177731a756a_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1624473714&auto=format&frame=1&q=92&s=cca7ad8558e304cbef2fb011dea78123",
+          "little": "https://ksr-ugc.imgix.net/assets/033/988/421/911f3545bd26cf70e5c7c177731a756a_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1624473714&auto=format&frame=1&q=92&s=497f3b76190c928853eab318978d424a",
+          "small": "https://ksr-ugc.imgix.net/assets/033/988/421/911f3545bd26cf70e5c7c177731a756a_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1624473714&auto=format&frame=1&q=92&s=756fe34c1bb663f234b5c97bd69d7c68",
+          "thumb": "https://ksr-ugc.imgix.net/assets/033/988/421/911f3545bd26cf70e5c7c177731a756a_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1624473714&auto=format&frame=1&q=92&s=ea75bfb6b51447586c29181389ca06b7",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/033/988/421/911f3545bd26cf70e5c7c177731a756a_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1624473714&auto=format&frame=1&q=92&s=6943428ba24fcbedb853c5a9f4de63c6",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/033/988/421/911f3545bd26cf70e5c7c177731a756a_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624473714&auto=format&frame=1&q=92&s=3f1b57d49a79114d38c766b9ca66689c"
+      },
+      "name": "Planet Larkin",
+      "blurb": "An amigurumi shop specializing in the weird and unusual.",
+      "goal": 100,
+      "pledged": 142,
+      "state": "live",
+      "slug": "planet-larkin",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1629863940,
+      "state_changed_at": 1624726768,
+      "created_at": 1624472976,
+      "launched_at": 1624726767,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 13,
+      "static_usd_rate": 1,
+      "usd_pledged": "142.0",
+      "converted_pledged_amount": 142,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 296065601,
+          "name": "Larkin Nicole",
+          "slug": "planetlarkin",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/033/988/310/117bd9670f43e34b4dc9de39b68b52c9_original.jpeg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1624473016&auto=format&frame=1&q=92&s=f04531a83be7ad46a742eb741aa0f354",
+              "small": "https://ksr-ugc.imgix.net/assets/033/988/310/117bd9670f43e34b4dc9de39b68b52c9_original.jpeg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1624473016&auto=format&frame=1&q=92&s=f88931cfcc1a67d6f180c794019984e0",
+              "medium": "https://ksr-ugc.imgix.net/assets/033/988/310/117bd9670f43e34b4dc9de39b68b52c9_original.jpeg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1624473016&auto=format&frame=1&q=92&s=99bddf214e31eef9ed3d88cc0e0ca74e"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/planetlarkin"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/296065601?signature=1627581732.00db25d3769f6468504c628c40e9cdb7c9f5958e"
+              }
+          }
+      },
+      "location": {
+          "id": 2520897,
+          "name": "Williamsport",
+          "slug": "williamsport-pa",
+          "short_name": "Williamsport, PA",
+          "displayable_name": "Williamsport, PA",
+          "localized_name": "Williamsport",
+          "country": "US",
+          "state": "PA",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/williamsport-pa",
+                  "location": "https://www.kickstarter.com/locations/williamsport-pa"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627575939.53cdea2c3c04001184042e2d7e7209fef8d68c21&woe_id=2520897"
+              }
+          }
+      },
+      "category": {
+          "id": 344,
+          "name": "Crochet",
+          "analytics_name": "Crochet",
+          "slug": "crafts/crochet",
+          "position": 2,
+          "parent_id": 26,
+          "parent_name": "Crafts",
+          "color": 16744876,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/crafts/crochet"
+              }
+          }
+      },
+      "profile": {
+          "id": 4238219,
+          "project_id": 4238219,
+          "state": "inactive",
+          "state_changed_at": 1624472976,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/033/988/421/911f3545bd26cf70e5c7c177731a756a_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624473714&auto=format&frame=1&q=92&s=3f1b57d49a79114d38c766b9ca66689c",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/033/988/421/911f3545bd26cf70e5c7c177731a756a_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624473714&auto=format&frame=1&q=92&s=fae43a81ccbb1a7214c9134d440d6590"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/planetlarkin/planet-larkin?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/planetlarkin/planet-larkin/rewards"
+          }
+      }
+  },
+  {
+      "id": 1683753620,
+      "photo": {
+          "key": "assets/034/044/535/baba95f9c7af750df04e1b2aaba54ac3_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/034/044/535/baba95f9c7af750df04e1b2aaba54ac3_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624965059&auto=format&frame=1&q=92&s=f248e69f6d625c1fe18ce1f47195f637",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/044/535/baba95f9c7af750df04e1b2aaba54ac3_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1624965059&auto=format&frame=1&q=92&s=cfcf1dedd2d7d8fb94d11260057071e4",
+          "med": "https://ksr-ugc.imgix.net/assets/034/044/535/baba95f9c7af750df04e1b2aaba54ac3_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1624965059&auto=format&frame=1&q=92&s=f4c784d80128bed7c787a49aad754e54",
+          "little": "https://ksr-ugc.imgix.net/assets/034/044/535/baba95f9c7af750df04e1b2aaba54ac3_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1624965059&auto=format&frame=1&q=92&s=41b5726ad80659c46177ed9884d2d328",
+          "small": "https://ksr-ugc.imgix.net/assets/034/044/535/baba95f9c7af750df04e1b2aaba54ac3_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1624965059&auto=format&frame=1&q=92&s=7f5c3922fab812ce171c459b16155cf5",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/044/535/baba95f9c7af750df04e1b2aaba54ac3_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1624965059&auto=format&frame=1&q=92&s=0f7d0e46f9a3a72313b2210fea939de6",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/044/535/baba95f9c7af750df04e1b2aaba54ac3_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1624965059&auto=format&frame=1&q=92&s=482dae695ec196ac06221d1b93781bb8",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/044/535/baba95f9c7af750df04e1b2aaba54ac3_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624965059&auto=format&frame=1&q=92&s=fb23106f5bdf60467b9274575910b178"
+      },
+      "name": "Self Love Pins",
+      "blurb": "Body Positive/Self Love Enamel Pins Set",
+      "goal": 950,
+      "pledged": 386.32,
+      "state": "live",
+      "slug": "self-love-pins",
+      "disable_communication": false,
+      "country": "AU",
+      "country_displayable_name": "Australia",
+      "currency": "AUD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1630987838,
+      "state_changed_at": 1627099839,
+      "created_at": 1623213435,
+      "launched_at": 1627099838,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 11,
+      "static_usd_rate": 0.73764264,
+      "usd_pledged": "284.9661046848",
+      "converted_pledged_amount": 284,
+      "fx_rate": 0.73595485,
+      "usd_exchange_rate": 0.73595485,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1186432187,
+          "name": "Danielle",
+          "slug": "curvecreation",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/034/044/286/6002b3defce6401eb663dcfb334815dc_original.JPG?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1624962973&auto=format&frame=1&q=92&s=45b44bd53949fdb11ed1e990456abd49",
+              "small": "https://ksr-ugc.imgix.net/assets/034/044/286/6002b3defce6401eb663dcfb334815dc_original.JPG?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1624962973&auto=format&frame=1&q=92&s=a5d39e31e371a9a8c3de44c05a991ad1",
+              "medium": "https://ksr-ugc.imgix.net/assets/034/044/286/6002b3defce6401eb663dcfb334815dc_original.JPG?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1624962973&auto=format&frame=1&q=92&s=f119200ea804e79ae812d88f418795b4"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/curvecreation"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1186432187?signature=1627581732.c9215fccf9680b96877b31c3c93224b40448e52c"
+              }
+          }
+      },
+      "location": {
+          "id": 1105779,
+          "name": "Sydney",
+          "slug": "sydney-au",
+          "short_name": "Sydney, AU",
+          "displayable_name": "Sydney, AU",
+          "localized_name": "Sydney",
+          "country": "AU",
+          "state": "NSW",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "Australia",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/sydney-au",
+                  "location": "https://www.kickstarter.com/locations/sydney-au"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549066.14a62c24d6f2b69029b62533edb2127b555c8e2a&woe_id=1105779"
+              }
+          }
+      },
+      "category": {
+          "id": 26,
+          "name": "Crafts",
+          "analytics_name": "Crafts",
+          "slug": "crafts",
+          "position": 3,
+          "color": 16744876,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/crafts"
+              }
+          }
+      },
+      "profile": {
+          "id": 4230521,
+          "project_id": 4230521,
+          "state": "inactive",
+          "state_changed_at": 1623213435,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/044/535/baba95f9c7af750df04e1b2aaba54ac3_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624965059&auto=format&frame=1&q=92&s=fb23106f5bdf60467b9274575910b178",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/044/535/baba95f9c7af750df04e1b2aaba54ac3_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624965059&auto=format&frame=1&q=92&s=f248e69f6d625c1fe18ce1f47195f637"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/curvecreation/self-love-pins?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/curvecreation/self-love-pins/rewards"
+          }
+      }
+  },
+  {
+      "id": 1339339424,
+      "photo": {
+          "key": "assets/034/145/058/d7c1ff1b4433ffa4af919ccba7b60017_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/145/058/d7c1ff1b4433ffa4af919ccba7b60017_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625754811&auto=format&frame=1&q=92&s=8a6dbbe7652c3d281015efa858e399c1",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/145/058/d7c1ff1b4433ffa4af919ccba7b60017_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1625754811&auto=format&frame=1&q=92&s=81e6cb300d4285cd3f21ad025635fc53",
+          "med": "https://ksr-ugc.imgix.net/assets/034/145/058/d7c1ff1b4433ffa4af919ccba7b60017_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1625754811&auto=format&frame=1&q=92&s=a32f7a2cb59e663a3aed730e34205ddb",
+          "little": "https://ksr-ugc.imgix.net/assets/034/145/058/d7c1ff1b4433ffa4af919ccba7b60017_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1625754811&auto=format&frame=1&q=92&s=e009d5a1399a0e8f51d20525787d5bb2",
+          "small": "https://ksr-ugc.imgix.net/assets/034/145/058/d7c1ff1b4433ffa4af919ccba7b60017_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1625754811&auto=format&frame=1&q=92&s=e21cbd2ce0042d617d50db6d5993877d",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/145/058/d7c1ff1b4433ffa4af919ccba7b60017_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1625754811&auto=format&frame=1&q=92&s=91c726e3314a4aac60c23565c9474030",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/145/058/d7c1ff1b4433ffa4af919ccba7b60017_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1625754811&auto=format&frame=1&q=92&s=96b4ae0ed63df6ff1056addf22250c2c",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/145/058/d7c1ff1b4433ffa4af919ccba7b60017_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625754811&auto=format&frame=1&q=92&s=60f9c04a916ac513a3009ff619777834"
+      },
+      "name": "Keep Leather: Cardholder & Belt",
+      "blurb": "Keep Leather realizza pochette portatessere e Cinture artigianali, personalizzabili in pelle dal Design di alta qualità Made in Italy.",
+      "goal": 50000,
+      "pledged": 17,
+      "state": "live",
+      "slug": "keep-leather-cardholder-and-belt",
+      "disable_communication": false,
+      "country": "IT",
+      "country_displayable_name": "Italy",
+      "currency": "EUR",
+      "currency_symbol": "€",
+      "currency_trailing_code": false,
+      "deadline": 1630940916,
+      "state_changed_at": 1625756917,
+      "created_at": 1625752578,
+      "launched_at": 1625756916,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 2,
+      "static_usd_rate": 1.18249995,
+      "usd_pledged": "20.10249915",
+      "converted_pledged_amount": 20,
+      "fx_rate": 1.18212951,
+      "usd_exchange_rate": 1.18212951,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 263986285,
+          "name": "Alessandro Valenti",
+          "slug": "keepleather",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/034/145/269/ca74682f896a17f303ca1acbda731298_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1625756073&auto=format&frame=1&q=92&s=38d532bf604a0ed97e4882271dd6b17f",
+              "small": "https://ksr-ugc.imgix.net/assets/034/145/269/ca74682f896a17f303ca1acbda731298_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1625756073&auto=format&frame=1&q=92&s=d3c51f9cd96abb032a68639a10849754",
+              "medium": "https://ksr-ugc.imgix.net/assets/034/145/269/ca74682f896a17f303ca1acbda731298_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1625756073&auto=format&frame=1&q=92&s=62c65e026bb063c4936c0f5a4170bf21"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/keepleather"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/263986285?signature=1627581732.6f6aa888cc36e9cee5acb0b759de7bda635b9e63"
+              }
+          }
+      },
+      "location": {
+          "id": 715504,
+          "name": "Fiuggi",
+          "slug": "fiuggi-fiuggi-it",
+          "short_name": "Fiuggi, Italy",
+          "displayable_name": "Fiuggi, Italy",
+          "localized_name": "Fiuggi",
+          "country": "IT",
+          "state": "Lazio",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "Italy",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/fiuggi-fiuggi-it",
+                  "location": "https://www.kickstarter.com/locations/fiuggi-fiuggi-it"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627574293.c148c72e4272befe2a6df05c9a79c45e6fce0027&woe_id=715504"
+              }
+          }
+      },
+      "category": {
+          "id": 26,
+          "name": "Crafts",
+          "analytics_name": "Crafts",
+          "slug": "crafts",
+          "position": 3,
+          "color": 16744876,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/crafts"
+              }
+          }
+      },
+      "profile": {
+          "id": 4245500,
+          "project_id": 4245500,
+          "state": "inactive",
+          "state_changed_at": 1625752578,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/145/058/d7c1ff1b4433ffa4af919ccba7b60017_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625754811&auto=format&frame=1&q=92&s=60f9c04a916ac513a3009ff619777834",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/145/058/d7c1ff1b4433ffa4af919ccba7b60017_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625754811&auto=format&frame=1&q=92&s=8a6dbbe7652c3d281015efa858e399c1"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/keepleather/keep-leather-cardholder-and-belt?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/keepleather/keep-leather-cardholder-and-belt/rewards"
+          }
+      }
+  },
+  {
+      "id": 2015056736,
+      "photo": {
+          "key": "assets/033/423/825/efd5b9bdd2562a762261b7298f91bf92_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/033/423/825/efd5b9bdd2562a762261b7298f91bf92_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1620370221&auto=format&frame=1&q=92&s=f340f8ccfc33df2112f1f7ffa29031d4",
+          "ed": "https://ksr-ugc.imgix.net/assets/033/423/825/efd5b9bdd2562a762261b7298f91bf92_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1620370221&auto=format&frame=1&q=92&s=048789fb1442e0697ea4992e2dff0fc5",
+          "med": "https://ksr-ugc.imgix.net/assets/033/423/825/efd5b9bdd2562a762261b7298f91bf92_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1620370221&auto=format&frame=1&q=92&s=86a611b6e341f25c1fcf30b95e9a2ffe",
+          "little": "https://ksr-ugc.imgix.net/assets/033/423/825/efd5b9bdd2562a762261b7298f91bf92_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1620370221&auto=format&frame=1&q=92&s=ad99a27f92dbd43e7fb9dbfc855b1d45",
+          "small": "https://ksr-ugc.imgix.net/assets/033/423/825/efd5b9bdd2562a762261b7298f91bf92_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1620370221&auto=format&frame=1&q=92&s=fe0e156614e840d7ec561da040928885",
+          "thumb": "https://ksr-ugc.imgix.net/assets/033/423/825/efd5b9bdd2562a762261b7298f91bf92_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1620370221&auto=format&frame=1&q=92&s=9bca247b92bcc2be68f5e8127f5fafec",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/033/423/825/efd5b9bdd2562a762261b7298f91bf92_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1620370221&auto=format&frame=1&q=92&s=55e13f79016674d37a651535c71f05c6",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/033/423/825/efd5b9bdd2562a762261b7298f91bf92_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1620370221&auto=format&frame=1&q=92&s=97b845ac3e782c51ce9d9ebf56f148a4"
+      },
+      "name": "The Looksee Board",
+      "blurb": "Felt board displays for all occasions",
+      "goal": 5000,
+      "pledged": 5411,
+      "state": "live",
+      "slug": "the-looksee-board",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1628277493,
+      "state_changed_at": 1625685496,
+      "created_at": 1620369982,
+      "launched_at": 1625685493,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 54,
+      "static_usd_rate": 1,
+      "usd_pledged": "5411.0",
+      "converted_pledged_amount": 5411,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 318805266,
+          "name": "Julia Warren",
+          "slug": "lookseestudio",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/033/433/865/e5887bb9771e1841dacca1626d051664_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1620427751&auto=format&frame=1&q=92&s=8de6ba7b72b2d1da3f55d13f823509fe",
+              "small": "https://ksr-ugc.imgix.net/assets/033/433/865/e5887bb9771e1841dacca1626d051664_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1620427751&auto=format&frame=1&q=92&s=3f6ac93c534b042058324fbb6115bda6",
+              "medium": "https://ksr-ugc.imgix.net/assets/033/433/865/e5887bb9771e1841dacca1626d051664_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1620427751&auto=format&frame=1&q=92&s=e85c2fb8a9fa6aa70aadca5ff94ab971"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/lookseestudio"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/318805266?signature=1627581732.995ee1ba8d0a8857ec975daed276c4742bbcdcda"
+              }
+          }
+      },
+      "location": {
+          "id": 2487889,
+          "name": "San Diego",
+          "slug": "san-diego-ca",
+          "short_name": "San Diego, CA",
+          "displayable_name": "San Diego, CA",
+          "localized_name": "San Diego",
+          "country": "US",
+          "state": "CA",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/san-diego-ca",
+                  "location": "https://www.kickstarter.com/locations/san-diego-ca"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549001.be8e3d42cc5fac20f135b97f85a6b33e2a73e868&woe_id=2487889"
+              }
+          }
+      },
+      "category": {
+          "id": 26,
+          "name": "Crafts",
+          "analytics_name": "Crafts",
+          "slug": "crafts",
+          "position": 3,
+          "color": 16744876,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/crafts"
+              }
+          }
+      },
+      "profile": {
+          "id": 4212586,
+          "project_id": 4212586,
+          "state": "inactive",
+          "state_changed_at": 1620369982,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/033/423/825/efd5b9bdd2562a762261b7298f91bf92_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1620370221&auto=format&frame=1&q=92&s=97b845ac3e782c51ce9d9ebf56f148a4",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/033/423/825/efd5b9bdd2562a762261b7298f91bf92_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1620370221&auto=format&frame=1&q=92&s=f340f8ccfc33df2112f1f7ffa29031d4"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/lookseestudio/the-looksee-board?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/lookseestudio/the-looksee-board/rewards"
+          }
+      }
+  },
+  {
+      "id": 1352749271,
+      "photo": {
+          "key": "assets/034/298/971/dc5b0a33c3694cce5086be4befa02079_original.JPG",
+          "full": "https://ksr-ugc.imgix.net/assets/034/298/971/dc5b0a33c3694cce5086be4befa02079_original.JPG?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1627052000&auto=format&frame=1&q=92&s=edf8c1bb3918f498527ebf061736f7ad",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/298/971/dc5b0a33c3694cce5086be4befa02079_original.JPG?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1627052000&auto=format&frame=1&q=92&s=6268d6105d28ce056a19a37acac5ffbe",
+          "med": "https://ksr-ugc.imgix.net/assets/034/298/971/dc5b0a33c3694cce5086be4befa02079_original.JPG?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1627052000&auto=format&frame=1&q=92&s=4e280f36edd0fd34c0013f07d0530905",
+          "little": "https://ksr-ugc.imgix.net/assets/034/298/971/dc5b0a33c3694cce5086be4befa02079_original.JPG?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1627052000&auto=format&frame=1&q=92&s=d3cb10e34b8ad37ec295ec2f1da269f2",
+          "small": "https://ksr-ugc.imgix.net/assets/034/298/971/dc5b0a33c3694cce5086be4befa02079_original.JPG?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1627052000&auto=format&frame=1&q=92&s=b833fc33acb67a0cb70d354b859b77b7",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/298/971/dc5b0a33c3694cce5086be4befa02079_original.JPG?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1627052000&auto=format&frame=1&q=92&s=7713567baf38b3f8624ece250614c22c",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/298/971/dc5b0a33c3694cce5086be4befa02079_original.JPG?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1627052000&auto=format&frame=1&q=92&s=c3c11e1003ceef3d2ae1fce11f99e702",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/298/971/dc5b0a33c3694cce5086be4befa02079_original.JPG?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1627052000&auto=format&frame=1&q=92&s=d7550b9c00aa847f80b07fbedfd582dd"
+      },
+      "name": "Black Joy Autism Picture Exchange Communication System cards",
+      "blurb": "While searching for PECS cards for my little black boy with autism, I realized the lack of representation of him on cards available.",
+      "goal": 3000,
+      "pledged": 51,
+      "state": "live",
+      "slug": "black-joy-autism-picture-exchange-communication-system-cards",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1629653270,
+      "state_changed_at": 1627061271,
+      "created_at": 1627051629,
+      "launched_at": 1627061270,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 2,
+      "static_usd_rate": 1,
+      "usd_pledged": "51.0",
+      "converted_pledged_amount": 51,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1369099314,
+          "name": "Andria",
+          "slug": "blackjoyautism",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/034/300/040/7059e0ca614efc23db29db3b985da20d_original.JPG?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1627059588&auto=format&frame=1&q=92&s=5cdc6e553796c8cdd62171a85fae602e",
+              "small": "https://ksr-ugc.imgix.net/assets/034/300/040/7059e0ca614efc23db29db3b985da20d_original.JPG?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1627059588&auto=format&frame=1&q=92&s=6aebc4b9e1fcbf4bceba5c21b4f2f9f6",
+              "medium": "https://ksr-ugc.imgix.net/assets/034/300/040/7059e0ca614efc23db29db3b985da20d_original.JPG?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1627059588&auto=format&frame=1&q=92&s=0ff8bbf72b62ba1239c0ab52e62dc922"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/blackjoyautism"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1369099314?signature=1627581732.842a375ca3ac7bb96cf7608d51409ce3e0215cb4"
+              }
+          }
+      },
+      "location": {
+          "id": 2357024,
+          "name": "Atlanta",
+          "slug": "atlanta-ga",
+          "short_name": "Atlanta, GA",
+          "displayable_name": "Atlanta, GA",
+          "localized_name": "Atlanta",
+          "country": "US",
+          "state": "GA",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/atlanta-ga",
+                  "location": "https://www.kickstarter.com/locations/atlanta-ga"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549048.11a2874f206d58d7d04dcf49379defb634fe98c4&woe_id=2357024"
+              }
+          }
+      },
+      "category": {
+          "id": 26,
+          "name": "Crafts",
+          "analytics_name": "Crafts",
+          "slug": "crafts",
+          "position": 3,
+          "color": 16744876,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/crafts"
+              }
+          }
+      },
+      "profile": {
+          "id": 4253008,
+          "project_id": 4253008,
+          "state": "inactive",
+          "state_changed_at": 1627051629,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/298/971/dc5b0a33c3694cce5086be4befa02079_original.JPG?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1627052000&auto=format&frame=1&q=92&s=d7550b9c00aa847f80b07fbedfd582dd",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/298/971/dc5b0a33c3694cce5086be4befa02079_original.JPG?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1627052000&auto=format&frame=1&q=92&s=edf8c1bb3918f498527ebf061736f7ad"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/blackjoyautism/black-joy-autism-picture-exchange-communication-system-cards?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/blackjoyautism/black-joy-autism-picture-exchange-communication-system-cards/rewards"
+          }
+      }
+  }
+]
