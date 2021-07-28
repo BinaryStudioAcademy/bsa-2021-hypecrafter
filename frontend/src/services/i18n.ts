@@ -1,6 +1,7 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
+import dictionaries from '../dictionaries';
 
 i18n
   .use(LanguageDetector)
@@ -11,19 +12,7 @@ i18n
     interpolation: {
       escapeValue: false
     },
-    resources: {
-      en: {
-        translation: {
-          'Press on me': 'Press on me'
-        }
-      },
-      ua: {
-        translation: {
-          'Press on me': 'Натисни на мене'
-        }
-      }
-
-    }
+    resources: dictionaries
   });
 
 export default i18n;
