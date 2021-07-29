@@ -1,5 +1,5 @@
 import queryString from 'query-string';
-import { HttpMethod, HttpHeader, HttpStatusCode } from '../common/enums';
+import { HttpMethod, HttpHeader, HttpStatusCode, StorageKeys } from '../common/enums';
 import { RequestArgs } from '../common/types';
 import { getEnv } from './env';
 
@@ -24,7 +24,7 @@ const getInitHeaders = (
     headers.set(HttpHeader.CONTENT_TYPE, contentType);
   }
 
-  const token = localStorage.getItem('ACCESS_TOKEN');
+  const token = localStorage.getItem(StorageKeys.ACCESS_TOKEN);
   if (token) {
     headers.set(HttpHeader.AUTHORIZATION, `Bearer ${token}`);
   }
@@ -49,19 +49,21 @@ const getUrlWithQuery = (url: string, query?: Record<string, string>)
   : string => `${url}${query ? `?${queryString.stringify(query)}` : ''}`;
 
 const getUrl = (method: HttpMethod, { url, params, config }: RequestArgs): string => {
-  if (config?.external) {
+  if (config?.isExternal) {
     if (params && method === HttpMethod.GET) {
-      return getUrlWithQuery(`${getEnv('REACT_APP_SERVER_URL')}/${url}`, params);
+      return getUrlWithQuery(url, params);
     }
 
-    return `${getEnv('REACT_APP_SERVER_URL')}/${url}`;
+    return url;
   }
+
+  const fullUrl = `${getEnv('REACT_APP_SERVER_URL')}/${url}`;
 
   if (params && method === HttpMethod.GET) {
-    return getUrlWithQuery(url, params);
+    return getUrlWithQuery(fullUrl, params);
   }
 
-  return url;
+  return fullUrl;
 };
 
 const makeRequest = (method: HttpMethod) => async <T>(args: RequestArgs) => {
