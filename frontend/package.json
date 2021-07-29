@@ -6,6 +6,8 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
+    "@sentry/react": "^6.10.0",
+    "@sentry/tracing": "^6.10.0",
     "bootstrap": "^5.0.2",
     "classnames": "^2.3.1",
     "dotenv": "^8.2.0",
