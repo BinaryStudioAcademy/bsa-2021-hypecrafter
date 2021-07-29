@@ -4,10 +4,12 @@ import BootstrapExample from '../BootstrapExample';
 import TranslateExample from '../TranslateExample';
 import ButtonExample from '../ButtonExample';
 import InputExample from '../InputExample';
+import Chart from '../Chart/Chart';
 
 function Main() {
   return (
     <Container>
+      <Chart />
       <Users />
       <TranslateExample />
       <BootstrapExample />
