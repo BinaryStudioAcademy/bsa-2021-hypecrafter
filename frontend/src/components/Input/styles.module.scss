@@ -1,0 +1,36 @@
+.input-container {
+  flex-direction: column;
+  width: 100%;
+}
+
+.input-label {
+  font-weight: 500;
+}
+
+.input-field-container {
+  display: flex;
+  position: relative;
+}
+
+.input-field {
+  border: 1px solid #3a3a3a;
+  border-radius: 1px;
+}
+
+.input-password-eye {
+  position: absolute;
+  border: none;
+  background: none;
+  bottom: 30px;
+  right: 5px;
+}
+
+.error-message-container {
+  height: 1.5rem;
+  line-height: 1rem;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.8rem;
+}

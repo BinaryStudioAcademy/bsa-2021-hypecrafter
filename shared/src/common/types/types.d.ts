@@ -26,3 +26,5 @@ declare namespace Express {
     delegate(name: string): any;
   }
 }
+
+declare type Empty = Record<string, never>

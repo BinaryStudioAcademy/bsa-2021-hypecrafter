@@ -1,8 +1,12 @@
+@import 'vars';
+@import 'fonts.scss';
+
 body {
+  background: $color-root-background;
+  color: $color-root-text;
+  font-size: $font-size-text;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: $font-roboto400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
