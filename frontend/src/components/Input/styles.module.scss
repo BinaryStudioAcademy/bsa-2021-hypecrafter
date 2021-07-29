@@ -1,18 +1,33 @@
-.inputLabel {
+.input-container {
+  flex-direction: column;
+  width: 100%;
+}
+
+.input-label {
   font-weight: 500;
 }
 
-.formControl {
+.input-field-container {
+  display: flex;
+}
+
+.input-field {
   border: 1px solid #3a3a3a;
   border-radius: 1px;
 }
 
-.errorMessageContainer {
+.input-password-eye {
+  position: absolute;
+  top: 42%;
+  left: 92%;
+}
+
+.error-message-container {
   height: 1.5rem;
   line-height: 1rem;
 }
 
-.errorMessage {
+.error-message {
   color: red;
   font-size: 0.8rem;
 }

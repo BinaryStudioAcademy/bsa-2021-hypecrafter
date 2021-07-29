@@ -1,8 +1,8 @@
 import { useState, ChangeEvent, FunctionComponent } from 'react';
-import { FormControlProps, FormControl, InputGroup, Button } from 'react-bootstrap';
+import { InputGroup, FormControlProps, FormControl, FormLabel } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
-import classes from './styles.module.scss'; // add base styles (border)
+import classes from './styles.module.scss';
 
 interface Props extends Omit<FormControlProps, 'onChange'> {
   value: string;
@@ -26,28 +26,34 @@ const Input: FunctionComponent<Props> = ({
   const changeHandler = (e: ChangeEvent<HTMLInputElement>) => onChange(e.target.value);
 
   return (
-    <>
-      { label ? <div className={classes.inputLabel}> {label} </div> : null }
-      <InputGroup>
+    <InputGroup className={classes['input-container']}>
+      { label && <FormLabel htmlFor="input" className={classes['input-label']}> {label} </FormLabel> }
+      <div className="input-field-container">
         <FormControl
           type={showPassword ? 'text' : type}
           placeholder={placeholder}
           value={value}
           onChange={changeHandler}
-          className={classes.formControl}
+          id="input"
+          className={classes['input-field']}
         />
         {type === 'password'
-          ? (
-            <Button variant="outline-secondary" onClick={() => setShowPassword(!showPassword)}>
+          && (
+            // eslint-disable-next-line jsx-a11y/interactive-supports-focus
+            <span
+              onClick={() => setShowPassword(!showPassword)}
+              onKeyDown={() => setShowPassword(!showPassword)}
+              role="button"
+              className={classes['input-password-eye']}
+            >
               <FontAwesomeIcon icon={showPassword ? faEye : faEyeSlash} />
-            </Button>
-          )
-          : null}
-      </InputGroup>
-      <div className={classes.errorMessageContainer}>
-        { errorMessage ? <span className={classes.errorMessage}> {errorMessage} </span> : null }
+            </span>
+          ) }
       </div>
-    </>
+      <div className={classes['error-message-container']}>
+        { errorMessage && <span className={classes['error-message']}> {errorMessage} </span> }
+      </div>
+    </InputGroup>
   );
 };
 

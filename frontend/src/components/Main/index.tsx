@@ -22,15 +22,15 @@ const Main = () => {
             type="email"
             value={email}
             placeholder="Enter your email"
-            label="Email:"
+            label="Email"
             onChange={setEmail}
-            errorMessage="Error expample."
+            errorMessage="Error example."
           />
           <Input
             type="password"
             value={password}
             placeholder="Enter your password"
-            label="Password:"
+            label="Password"
             onChange={setPassword}
           />
         </Col>
