@@ -1,0 +1,1547 @@
+[
+  {
+      "id": 1130672901,
+      "photo": {
+          "key": "assets/034/040/495/136e9d499341d7660cfc8b0a5a00602f_original.JPG",
+          "full": "https://ksr-ugc.imgix.net/assets/034/040/495/136e9d499341d7660cfc8b0a5a00602f_original.JPG?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624930825&auto=format&frame=1&q=92&s=8a9718dd0053de25c5fb222f3aba2675",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/040/495/136e9d499341d7660cfc8b0a5a00602f_original.JPG?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1624930825&auto=format&frame=1&q=92&s=2b670904ee061eb5e97288667033dc53",
+          "med": "https://ksr-ugc.imgix.net/assets/034/040/495/136e9d499341d7660cfc8b0a5a00602f_original.JPG?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1624930825&auto=format&frame=1&q=92&s=73a4d775057348a7003e30fc71763c07",
+          "little": "https://ksr-ugc.imgix.net/assets/034/040/495/136e9d499341d7660cfc8b0a5a00602f_original.JPG?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1624930825&auto=format&frame=1&q=92&s=33b621800bc6f6c8b4ae898c514f4c4b",
+          "small": "https://ksr-ugc.imgix.net/assets/034/040/495/136e9d499341d7660cfc8b0a5a00602f_original.JPG?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1624930825&auto=format&frame=1&q=92&s=53dfd6ad8c8d8233d29d501f54b8b8c7",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/040/495/136e9d499341d7660cfc8b0a5a00602f_original.JPG?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1624930825&auto=format&frame=1&q=92&s=526a40e5c670a4b62734facd84aa8d6c",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/040/495/136e9d499341d7660cfc8b0a5a00602f_original.JPG?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1624930825&auto=format&frame=1&q=92&s=4f4ddc60f5f284342f1402fe240a9556",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/040/495/136e9d499341d7660cfc8b0a5a00602f_original.JPG?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624930825&auto=format&frame=1&q=92&s=4d0c71a65e689d8ffdef1bbe03529d63"
+      },
+      "name": "Nightlife Noir issues 1&2",
+      "blurb": "Nightlife Noir is a an anthology of six short stories from six different artists, centered around New York City's sceney underbelly.",
+      "goal": 2000,
+      "pledged": 10531,
+      "state": "live",
+      "slug": "nightlife-noir-issues-1and2",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1628387069,
+      "state_changed_at": 1624931071,
+      "created_at": 1624894946,
+      "launched_at": 1624931069,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 154,
+      "static_usd_rate": 1,
+      "usd_pledged": "10531.0",
+      "converted_pledged_amount": 10531,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1279203814,
+          "name": "Jack Mulqueen",
+          "slug": "jackmulqueen",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/034/034/910/741a9e1769046f64f40177afe807a5b2_original.JPG?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1624894730&auto=format&frame=1&q=92&s=ce4d69b888281643d17b0af284489de8",
+              "small": "https://ksr-ugc.imgix.net/assets/034/034/910/741a9e1769046f64f40177afe807a5b2_original.JPG?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1624894730&auto=format&frame=1&q=92&s=028565de7e98a25f15d4853b44faad65",
+              "medium": "https://ksr-ugc.imgix.net/assets/034/034/910/741a9e1769046f64f40177afe807a5b2_original.JPG?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1624894730&auto=format&frame=1&q=92&s=aa51f2df528a0e69436f32c70c8f33f0"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/jackmulqueen"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1279203814?signature=1627581668.0e28053469b0e2873c0c98d97d09ea66a4700846"
+              }
+          }
+      },
+      "location": {
+          "id": 2459115,
+          "name": "New York",
+          "slug": "new-york-ny",
+          "short_name": "New York, NY",
+          "displayable_name": "New York, NY",
+          "localized_name": "New York",
+          "country": "US",
+          "state": "NY",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/new-york-ny",
+                  "location": "https://www.kickstarter.com/locations/new-york-ny"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627548935.798cbc8d8b02f51761ab484df47a3960ccd2e384&woe_id=2459115"
+              }
+          }
+      },
+      "category": {
+          "id": 250,
+          "name": "Comic Books",
+          "analytics_name": "Comic Books",
+          "slug": "comics/comic books",
+          "position": 2,
+          "parent_id": 3,
+          "parent_name": "Comics",
+          "color": 16776056,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/comics/comic%20books"
+              }
+          }
+      },
+      "profile": {
+          "id": 4240402,
+          "project_id": 4240402,
+          "state": "inactive",
+          "state_changed_at": 1624894946,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/040/495/136e9d499341d7660cfc8b0a5a00602f_original.JPG?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624930825&auto=format&frame=1&q=92&s=4d0c71a65e689d8ffdef1bbe03529d63",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/040/495/136e9d499341d7660cfc8b0a5a00602f_original.JPG?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624930825&auto=format&frame=1&q=92&s=8a9718dd0053de25c5fb222f3aba2675"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/jackmulqueen/nightlife-noir-issues-1and2?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/jackmulqueen/nightlife-noir-issues-1and2/rewards"
+          }
+      }
+  },
+  {
+      "id": 2005465289,
+      "photo": {
+          "key": "assets/034/293/500/ca920eb790407ba2b48eddad42ef1738_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/293/500/ca920eb790407ba2b48eddad42ef1738_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1627001661&auto=format&frame=1&q=92&s=3c3d0dca8577bd5dfba4d231eb089f42",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/293/500/ca920eb790407ba2b48eddad42ef1738_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1627001661&auto=format&frame=1&q=92&s=7e4bbf42bfadf41c46450f8425fce969",
+          "med": "https://ksr-ugc.imgix.net/assets/034/293/500/ca920eb790407ba2b48eddad42ef1738_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1627001661&auto=format&frame=1&q=92&s=d03e6c2fbe1bd8818f90e11154019af7",
+          "little": "https://ksr-ugc.imgix.net/assets/034/293/500/ca920eb790407ba2b48eddad42ef1738_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1627001661&auto=format&frame=1&q=92&s=15b026e0513555be83fde86aee7c48ad",
+          "small": "https://ksr-ugc.imgix.net/assets/034/293/500/ca920eb790407ba2b48eddad42ef1738_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1627001661&auto=format&frame=1&q=92&s=528ba71636e3f2f538bbf5cab468e4dd",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/293/500/ca920eb790407ba2b48eddad42ef1738_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1627001661&auto=format&frame=1&q=92&s=7f3b995c5b2223f821a6d516fb979cf1",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/293/500/ca920eb790407ba2b48eddad42ef1738_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1627001661&auto=format&frame=1&q=92&s=eed4f9ddfe85145eff5744b3e1aa3f54",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/293/500/ca920eb790407ba2b48eddad42ef1738_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1627001661&auto=format&frame=1&q=92&s=8b85846c0245806fe55ceea0543b6dcf"
+      },
+      "name": "Supercats Mewow!",
+      "blurb": "A wonderfully whimsical way to introduce children to reading and comics with lovable superhero cats! A Kickstarter Exclusive Book!!",
+      "goal": 2500,
+      "pledged": 2341,
+      "state": "live",
+      "slug": "supercats-mewow",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1628128800,
+      "state_changed_at": 1626126953,
+      "created_at": 1614951936,
+      "launched_at": 1626126952,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 68,
+      "static_usd_rate": 1,
+      "usd_pledged": "2341.0",
+      "converted_pledged_amount": 2341,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 48239604,
+          "name": "Caleb Thusat",
+          "slug": "calebthusat",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/006/820/361/e9c774398910a620c23de81ef03ae9ed_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1613928438&auto=format&frame=1&q=92&s=431c9e6ca8dfdcfb88ecdfb0085f7764",
+              "small": "https://ksr-ugc.imgix.net/assets/006/820/361/e9c774398910a620c23de81ef03ae9ed_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1613928438&auto=format&frame=1&q=92&s=a880a210428c813913e102469c26fe68",
+              "medium": "https://ksr-ugc.imgix.net/assets/006/820/361/e9c774398910a620c23de81ef03ae9ed_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1613928438&auto=format&frame=1&q=92&s=581a90a5ed12ecf8e6fdd759f5ca926d"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/calebthusat"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/48239604?signature=1627581668.219d201b9a6ed4366d3a985724c4244d860f7429"
+              }
+          }
+      },
+      "location": {
+          "id": 2425271,
+          "name": "Hudson",
+          "slug": "hudson-oh",
+          "short_name": "Hudson, OH",
+          "displayable_name": "Hudson, OH",
+          "localized_name": "Hudson",
+          "country": "US",
+          "state": "OH",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/hudson-oh",
+                  "location": "https://www.kickstarter.com/locations/hudson-oh"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627562886.71a8494f75655f17d28960e30a01c55d8a9df80b&woe_id=2425271"
+              }
+          }
+      },
+      "category": {
+          "id": 250,
+          "name": "Comic Books",
+          "analytics_name": "Comic Books",
+          "slug": "comics/comic books",
+          "position": 2,
+          "parent_id": 3,
+          "parent_name": "Comics",
+          "color": 16776056,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/comics/comic%20books"
+              }
+          }
+      },
+      "profile": {
+          "id": 4176017,
+          "project_id": 4176017,
+          "state": "inactive",
+          "state_changed_at": 1614951936,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/293/500/ca920eb790407ba2b48eddad42ef1738_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1627001661&auto=format&frame=1&q=92&s=8b85846c0245806fe55ceea0543b6dcf",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/293/500/ca920eb790407ba2b48eddad42ef1738_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1627001661&auto=format&frame=1&q=92&s=3c3d0dca8577bd5dfba4d231eb089f42"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/calebthusat/supercats-mewow?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/calebthusat/supercats-mewow/rewards"
+          }
+      }
+  },
+  {
+      "id": 893731065,
+      "photo": {
+          "key": "assets/034/281/586/d4217134365890951ca052f82ff46e32_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/281/586/d4217134365890951ca052f82ff46e32_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626902323&auto=format&frame=1&q=92&s=8909e53b5fba983edb1b505ae2dbc9b2",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/281/586/d4217134365890951ca052f82ff46e32_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1626902323&auto=format&frame=1&q=92&s=36b663d12c3cbf3b5f81c4ae3f85cadd",
+          "med": "https://ksr-ugc.imgix.net/assets/034/281/586/d4217134365890951ca052f82ff46e32_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1626902323&auto=format&frame=1&q=92&s=8172708b63e58490c90f2a4c507fabe7",
+          "little": "https://ksr-ugc.imgix.net/assets/034/281/586/d4217134365890951ca052f82ff46e32_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1626902323&auto=format&frame=1&q=92&s=d28921c3b4a12a6b78c3f9c28621f762",
+          "small": "https://ksr-ugc.imgix.net/assets/034/281/586/d4217134365890951ca052f82ff46e32_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1626902323&auto=format&frame=1&q=92&s=5b59cc99493853d4f9ecd6ae30fe0fdc",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/281/586/d4217134365890951ca052f82ff46e32_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1626902323&auto=format&frame=1&q=92&s=8262e12b39dbc5df07272db31e672383",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/281/586/d4217134365890951ca052f82ff46e32_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1626902323&auto=format&frame=1&q=92&s=2c59543b254aa3a3d4e5e2e10b5dddf5",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/281/586/d4217134365890951ca052f82ff46e32_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626902323&auto=format&frame=1&q=92&s=2a38ff9928eaedc20a8d3aa1d4634adf"
+      },
+      "name": "The Book of Barb",
+      "blurb": "A completely cool collection of barbarian webcomic adventures.",
+      "goal": 3000,
+      "pledged": 4079,
+      "state": "live",
+      "slug": "the-book-of-barb",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1629385230,
+      "state_changed_at": 1626793231,
+      "created_at": 1626300572,
+      "launched_at": 1626793230,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 91,
+      "static_usd_rate": 1,
+      "usd_pledged": "4079.0",
+      "converted_pledged_amount": 4079,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1202714844,
+          "name": "jonathan.d.burrello@gmail.com",
+          "slug": "bookofbarb",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/033/793/402/dd6d2cc24285af002970ca071e2480a9_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1623009215&auto=format&frame=1&q=92&s=54c9e3265441c394852beefae8943809",
+              "small": "https://ksr-ugc.imgix.net/assets/033/793/402/dd6d2cc24285af002970ca071e2480a9_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1623009215&auto=format&frame=1&q=92&s=f818c00872631fcc940ba5bf0a80eb35",
+              "medium": "https://ksr-ugc.imgix.net/assets/033/793/402/dd6d2cc24285af002970ca071e2480a9_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1623009215&auto=format&frame=1&q=92&s=4a3d6ce30e4f439ea5ae39130e32d9fd"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/bookofbarb"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1202714844?signature=1627581668.95e2a401377b5d643a7b31a2ef91260737d8136c"
+              }
+          }
+      },
+      "location": {
+          "id": 3534,
+          "name": "Montreal",
+          "slug": "montreal-ca",
+          "short_name": "Montreal, Canada",
+          "displayable_name": "Montreal, Canada",
+          "localized_name": "Montreal",
+          "country": "CA",
+          "state": "QC",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "Canada",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/montreal-ca",
+                  "location": "https://www.kickstarter.com/locations/montreal-ca"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549026.6f987c3d5c46592cfad455c4585c8e23e50035b3&woe_id=3534"
+              }
+          }
+      },
+      "category": {
+          "id": 253,
+          "name": "Webcomics",
+          "analytics_name": "Webcomics",
+          "slug": "comics/webcomics",
+          "position": 5,
+          "parent_id": 3,
+          "parent_name": "Comics",
+          "color": 16776056,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/comics/webcomics"
+              }
+          }
+      },
+      "profile": {
+          "id": 4248768,
+          "project_id": 4248768,
+          "state": "inactive",
+          "state_changed_at": 1626300572,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/281/586/d4217134365890951ca052f82ff46e32_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626902323&auto=format&frame=1&q=92&s=2a38ff9928eaedc20a8d3aa1d4634adf",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/281/586/d4217134365890951ca052f82ff46e32_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626902323&auto=format&frame=1&q=92&s=8909e53b5fba983edb1b505ae2dbc9b2"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/bookofbarb/the-book-of-barb?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/bookofbarb/the-book-of-barb/rewards"
+          }
+      }
+  },
+  {
+      "id": 376956960,
+      "photo": {
+          "key": "assets/034/151/990/c385115b5fa5aff161818d310d80485f_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/151/990/c385115b5fa5aff161818d310d80485f_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625809676&auto=format&frame=1&q=92&s=8b0b544ff109381134b1882a04fd2b77",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/151/990/c385115b5fa5aff161818d310d80485f_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1625809676&auto=format&frame=1&q=92&s=c40cdea94935472b91b9b345d719e2f2",
+          "med": "https://ksr-ugc.imgix.net/assets/034/151/990/c385115b5fa5aff161818d310d80485f_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1625809676&auto=format&frame=1&q=92&s=129b6029fe912e6c48f6b9df39dcbea1",
+          "little": "https://ksr-ugc.imgix.net/assets/034/151/990/c385115b5fa5aff161818d310d80485f_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1625809676&auto=format&frame=1&q=92&s=f313670580e732a6da96fa51d111e19b",
+          "small": "https://ksr-ugc.imgix.net/assets/034/151/990/c385115b5fa5aff161818d310d80485f_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1625809676&auto=format&frame=1&q=92&s=5eb9a24774a46e15da01b3c33bf36a85",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/151/990/c385115b5fa5aff161818d310d80485f_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1625809676&auto=format&frame=1&q=92&s=6268e42c44587deef3e61a1f88bcbd59",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/151/990/c385115b5fa5aff161818d310d80485f_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1625809676&auto=format&frame=1&q=92&s=a4a96dc41873a77bad93bc732cb7c378",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/151/990/c385115b5fa5aff161818d310d80485f_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625809676&auto=format&frame=1&q=92&s=8535eaac16d19151413f8a7f91c4578f"
+      },
+      "name": "HAUNTHOLOGY: A Horror Comic Collection by Jeremy Haun",
+      "blurb": "An oversized, 160+ page, hardcover of original short horror comics.",
+      "goal": 24000,
+      "pledged": 54842,
+      "state": "live",
+      "slug": "haunthology-a-horror-comic-collection-by-jeremy-haun",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1628218020,
+      "state_changed_at": 1625587242,
+      "created_at": 1617079660,
+      "launched_at": 1625587239,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 600,
+      "static_usd_rate": 1,
+      "usd_pledged": "54842.0",
+      "converted_pledged_amount": 54842,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1663432367,
+          "name": "Jeremy Haun",
+          "slug": "jerhaun",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/006/909/973/8a9e019c850073097b12d4107e4080e5_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1622961903&auto=format&frame=1&q=92&s=f1477b64d9cb32ce78ae47796c05245a",
+              "small": "https://ksr-ugc.imgix.net/assets/006/909/973/8a9e019c850073097b12d4107e4080e5_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1622961903&auto=format&frame=1&q=92&s=d86a9d1bf1a963e0577bdd5c30365248",
+              "medium": "https://ksr-ugc.imgix.net/assets/006/909/973/8a9e019c850073097b12d4107e4080e5_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1622961903&auto=format&frame=1&q=92&s=7676061cf105d53e73469a176b944404"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/jerhaun"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1663432367?signature=1627581668.f07ce99e3f84bc5f011209a1cfe8f171bc466f9a"
+              }
+          }
+      },
+      "location": {
+          "id": 2429939,
+          "name": "Joplin",
+          "slug": "joplin-mo",
+          "short_name": "Joplin, MO",
+          "displayable_name": "Joplin, MO",
+          "localized_name": "Joplin",
+          "country": "US",
+          "state": "MO",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/joplin-mo",
+                  "location": "https://www.kickstarter.com/locations/joplin-mo"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627564217.7d91a81bd29647c59cc8ad3af228ec0ec5ad1b06&woe_id=2429939"
+              }
+          }
+      },
+      "category": {
+          "id": 250,
+          "name": "Comic Books",
+          "analytics_name": "Comic Books",
+          "slug": "comics/comic books",
+          "position": 2,
+          "parent_id": 3,
+          "parent_name": "Comics",
+          "color": 16776056,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/comics/comic%20books"
+              }
+          }
+      },
+      "profile": {
+          "id": 4190226,
+          "project_id": 4190226,
+          "state": "inactive",
+          "state_changed_at": 1617079660,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/151/990/c385115b5fa5aff161818d310d80485f_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625809676&auto=format&frame=1&q=92&s=8535eaac16d19151413f8a7f91c4578f",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/151/990/c385115b5fa5aff161818d310d80485f_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625809676&auto=format&frame=1&q=92&s=8b0b544ff109381134b1882a04fd2b77"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/jerhaun/haunthology-a-horror-comic-collection-by-jeremy-haun?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/jerhaun/haunthology-a-horror-comic-collection-by-jeremy-haun/rewards"
+          }
+      }
+  },
+  {
+      "id": 361115167,
+      "photo": {
+          "key": "assets/034/259/127/6490751dc6c0d45f9e7eca398148440f_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/259/127/6490751dc6c0d45f9e7eca398148440f_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626739300&auto=format&frame=1&q=92&s=bbd3b4f13b3bf82675d510413fb09ec1",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/259/127/6490751dc6c0d45f9e7eca398148440f_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1626739300&auto=format&frame=1&q=92&s=91ce509ba548c3b36892266b6f2a48ae",
+          "med": "https://ksr-ugc.imgix.net/assets/034/259/127/6490751dc6c0d45f9e7eca398148440f_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1626739300&auto=format&frame=1&q=92&s=797c0bfd110a764645a2b7011f39040d",
+          "little": "https://ksr-ugc.imgix.net/assets/034/259/127/6490751dc6c0d45f9e7eca398148440f_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1626739300&auto=format&frame=1&q=92&s=d87daf247a369d40ff9959bcff2b457c",
+          "small": "https://ksr-ugc.imgix.net/assets/034/259/127/6490751dc6c0d45f9e7eca398148440f_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1626739300&auto=format&frame=1&q=92&s=73a91bcf6b79ad3eec2ebe9f6129a4f4",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/259/127/6490751dc6c0d45f9e7eca398148440f_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1626739300&auto=format&frame=1&q=92&s=74f9d12ae9964a358f510d8b46d3fc2d",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/259/127/6490751dc6c0d45f9e7eca398148440f_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1626739300&auto=format&frame=1&q=92&s=98d703f509075e57146a10e6594244a2",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/259/127/6490751dc6c0d45f9e7eca398148440f_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626739300&auto=format&frame=1&q=92&s=76c19af5eac232daf6122c0ce4800d99"
+      },
+      "name": "Max Boost Omnibus- Collection of classic & BRAND NEW issues!",
+      "blurb": "Huge 275 Page collectible book contains all comics of Max Boost Volume 1, Volume 2, and BRAND NEW issues from Volume 3.1!",
+      "goal": 1320,
+      "pledged": 42580,
+      "state": "live",
+      "slug": "max-boost-comic-book-omnibus",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1628910000,
+      "state_changed_at": 1626743295,
+      "created_at": 1624419328,
+      "launched_at": 1626743293,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 464,
+      "static_usd_rate": 1,
+      "usd_pledged": "42580.0",
+      "converted_pledged_amount": 42580,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1914095986,
+          "name": "Max Boost",
+          "slug": "maxboost",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/025/128/198/c9c4880f2e17c2ee927742fc4b41cf94_original.png?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1557810188&auto=format&frame=1&q=92&s=9ae709febaf0ab75ae5d11f1bd4c0fd7",
+              "small": "https://ksr-ugc.imgix.net/assets/025/128/198/c9c4880f2e17c2ee927742fc4b41cf94_original.png?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1557810188&auto=format&frame=1&q=92&s=93ac74d293a8a3acf5ed7634d2eec24a",
+              "medium": "https://ksr-ugc.imgix.net/assets/025/128/198/c9c4880f2e17c2ee927742fc4b41cf94_original.png?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1557810188&auto=format&frame=1&q=92&s=511af0d7c78faa2aa446cb47589e2863"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/maxboost"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1914095986?signature=1627581668.c8d197e8c67e048b22f9cac007bbfc2ff9d6e656"
+              }
+          }
+      },
+      "location": {
+          "id": 2487889,
+          "name": "San Diego",
+          "slug": "san-diego-ca",
+          "short_name": "San Diego, CA",
+          "displayable_name": "San Diego, CA",
+          "localized_name": "San Diego",
+          "country": "US",
+          "state": "CA",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/san-diego-ca",
+                  "location": "https://www.kickstarter.com/locations/san-diego-ca"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549001.be8e3d42cc5fac20f135b97f85a6b33e2a73e868&woe_id=2487889"
+              }
+          }
+      },
+      "category": {
+          "id": 3,
+          "name": "Comics",
+          "analytics_name": "Comics",
+          "slug": "comics",
+          "position": 2,
+          "color": 16776056,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/comics"
+              }
+          }
+      },
+      "profile": {
+          "id": 4237883,
+          "project_id": 4237883,
+          "state": "inactive",
+          "state_changed_at": 1624419328,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/259/127/6490751dc6c0d45f9e7eca398148440f_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626739300&auto=format&frame=1&q=92&s=76c19af5eac232daf6122c0ce4800d99",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/259/127/6490751dc6c0d45f9e7eca398148440f_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626739300&auto=format&frame=1&q=92&s=bbd3b4f13b3bf82675d510413fb09ec1"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/maxboost/max-boost-comic-book-omnibus?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/maxboost/max-boost-comic-book-omnibus/rewards"
+          }
+      }
+  },
+  {
+      "id": 421365766,
+      "photo": {
+          "key": "assets/034/124/976/73a69c8eef3c3773fdb807aba346c302_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/124/976/73a69c8eef3c3773fdb807aba346c302_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625602324&auto=format&frame=1&q=92&s=41fbb63bf7c460957a85cf28315bf1a3",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/124/976/73a69c8eef3c3773fdb807aba346c302_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1625602324&auto=format&frame=1&q=92&s=ececef8e4b043ce90092b8f38a23659b",
+          "med": "https://ksr-ugc.imgix.net/assets/034/124/976/73a69c8eef3c3773fdb807aba346c302_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1625602324&auto=format&frame=1&q=92&s=3c9a35d81c1c953f72703f35efdf901c",
+          "little": "https://ksr-ugc.imgix.net/assets/034/124/976/73a69c8eef3c3773fdb807aba346c302_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1625602324&auto=format&frame=1&q=92&s=8c8be8122adc95bbb3a960e0cb815d11",
+          "small": "https://ksr-ugc.imgix.net/assets/034/124/976/73a69c8eef3c3773fdb807aba346c302_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1625602324&auto=format&frame=1&q=92&s=71d08735654a7a3b8d4ec913367f9f46",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/124/976/73a69c8eef3c3773fdb807aba346c302_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1625602324&auto=format&frame=1&q=92&s=e130b9edeb64c3a20e482e2b26a89e54",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/124/976/73a69c8eef3c3773fdb807aba346c302_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1625602324&auto=format&frame=1&q=92&s=be61b77db09e2b2eef6fc0d3775d46c3",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/124/976/73a69c8eef3c3773fdb807aba346c302_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625602324&auto=format&frame=1&q=92&s=462e7d641087a9803b45b24214ff9ce8"
+      },
+      "name": "Baby Barbarian - a fantasy comic about family for all ages.",
+      "blurb": "Accidents happen when you sit on the Player's Throne! Support Part One of our comic about magic, adventure, and inherited raging.",
+      "goal": 4500,
+      "pledged": 2977,
+      "state": "live",
+      "slug": "baby-barbarian",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1628700148,
+      "state_changed_at": 1626108150,
+      "created_at": 1594890618,
+      "launched_at": 1626108148,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 79,
+      "static_usd_rate": 1,
+      "usd_pledged": "2977.0",
+      "converted_pledged_amount": 2977,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 918812933,
+          "name": "William Gosline",
+          "slug": "owngoalbooks",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/031/744/992/eb3885b2ae7629662ff02068757cb030_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1622140370&auto=format&frame=1&q=92&s=607dce0c10723dad275519bbdfa7736c",
+              "small": "https://ksr-ugc.imgix.net/assets/031/744/992/eb3885b2ae7629662ff02068757cb030_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1622140370&auto=format&frame=1&q=92&s=cb6f09ba35a81ef8b372427362286f2c",
+              "medium": "https://ksr-ugc.imgix.net/assets/031/744/992/eb3885b2ae7629662ff02068757cb030_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1622140370&auto=format&frame=1&q=92&s=fc47dcf328689d632c5b61b1cfdfb171"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/owngoalbooks"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/918812933?signature=1627581668.3115b6572d7250c6d7193eb80862c1973b0998cc"
+              }
+          }
+      },
+      "location": {
+          "id": 2490383,
+          "name": "Seattle",
+          "slug": "seattle-wa",
+          "short_name": "Seattle, WA",
+          "displayable_name": "Seattle, WA",
+          "localized_name": "Seattle",
+          "country": "US",
+          "state": "WA",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/seattle-wa",
+                  "location": "https://www.kickstarter.com/locations/seattle-wa"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627548988.73591c703a8b6eff6426cdb859c55a709dbc3050&woe_id=2490383"
+              }
+          }
+      },
+      "category": {
+          "id": 252,
+          "name": "Graphic Novels",
+          "analytics_name": "Graphic Novels",
+          "slug": "comics/graphic novels",
+          "position": 4,
+          "parent_id": 3,
+          "parent_name": "Comics",
+          "color": 16776056,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/comics/graphic%20novels"
+              }
+          }
+      },
+      "profile": {
+          "id": 4034359,
+          "project_id": 4034359,
+          "state": "inactive",
+          "state_changed_at": 1594890618,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/124/976/73a69c8eef3c3773fdb807aba346c302_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625602324&auto=format&frame=1&q=92&s=462e7d641087a9803b45b24214ff9ce8",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/124/976/73a69c8eef3c3773fdb807aba346c302_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625602324&auto=format&frame=1&q=92&s=41fbb63bf7c460957a85cf28315bf1a3"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/owngoalbooks/baby-barbarian?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/owngoalbooks/baby-barbarian/rewards"
+          }
+      }
+  },
+  {
+      "id": 1174979084,
+      "photo": {
+          "key": "assets/034/088/739/01b54fd88e2ba89026720c6b5682013c_original.JPG",
+          "full": "https://ksr-ugc.imgix.net/assets/034/088/739/01b54fd88e2ba89026720c6b5682013c_original.JPG?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625257785&auto=format&frame=1&q=92&s=107d386559c5089121bc7cf8502cd11a",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/088/739/01b54fd88e2ba89026720c6b5682013c_original.JPG?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1625257785&auto=format&frame=1&q=92&s=54bdc4e1142accdcebc6abc9d2dab097",
+          "med": "https://ksr-ugc.imgix.net/assets/034/088/739/01b54fd88e2ba89026720c6b5682013c_original.JPG?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1625257785&auto=format&frame=1&q=92&s=97e63b01048f2de1a1ace8ec22c03821",
+          "little": "https://ksr-ugc.imgix.net/assets/034/088/739/01b54fd88e2ba89026720c6b5682013c_original.JPG?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1625257785&auto=format&frame=1&q=92&s=ee2ca8278315c764ec411765a489cb34",
+          "small": "https://ksr-ugc.imgix.net/assets/034/088/739/01b54fd88e2ba89026720c6b5682013c_original.JPG?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1625257785&auto=format&frame=1&q=92&s=d63265193ec8c16b2dd30170398f50c5",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/088/739/01b54fd88e2ba89026720c6b5682013c_original.JPG?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1625257785&auto=format&frame=1&q=92&s=63ed1f4dad1a487e826fbd1dad68c493",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/088/739/01b54fd88e2ba89026720c6b5682013c_original.JPG?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1625257785&auto=format&frame=1&q=92&s=a56e6f624319fd18591027de9435d294",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/088/739/01b54fd88e2ba89026720c6b5682013c_original.JPG?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625257785&auto=format&frame=1&q=92&s=653a587e16e95b6dad5da01b81b3420e"
+      },
+      "name": "Winona Forever: Part Two in a graphic novel series",
+      "blurb": "Four 8th grade nerds, a powerful hidden relic & a dangerous secret society. It's a Halloween like no other in normally quiet Winona, MN",
+      "goal": 1000,
+      "pledged": 2915,
+      "state": "live",
+      "slug": "winona-forever-part-two-in-a-graphic-novel-series",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1628661540,
+      "state_changed_at": 1626874734,
+      "created_at": 1621712121,
+      "launched_at": 1626874733,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 69,
+      "static_usd_rate": 1,
+      "usd_pledged": "2915.0",
+      "converted_pledged_amount": 2915,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1073959836,
+          "name": "Shawn Boyd",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/005/835/356/a295f47eae4a0700d6849569e7a79355_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1606512839&auto=format&frame=1&q=92&s=b947db43204b278a085a848b74d2feb2",
+              "small": "https://ksr-ugc.imgix.net/assets/005/835/356/a295f47eae4a0700d6849569e7a79355_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1606512839&auto=format&frame=1&q=92&s=b4c8b0726672a7a1f72c38bbe86599c8",
+              "medium": "https://ksr-ugc.imgix.net/assets/005/835/356/a295f47eae4a0700d6849569e7a79355_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1606512839&auto=format&frame=1&q=92&s=ebfdf4f9117da903bc14e64cd5358f98"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/1073959836"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1073959836?signature=1627581668.e06964616a30e9a1c468f0fc4e03f23fb7034f2c"
+              }
+          }
+      },
+      "location": {
+          "id": 2488867,
+          "name": "Santa Fe",
+          "slug": "santa-fe-nm",
+          "short_name": "Santa Fe, NM",
+          "displayable_name": "Santa Fe, NM",
+          "localized_name": "Santa Fe",
+          "country": "US",
+          "state": "NM",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/santa-fe-nm",
+                  "location": "https://www.kickstarter.com/locations/santa-fe-nm"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627551488.97f89d6203354444a3f64ed249be829968783aac&woe_id=2488867"
+              }
+          }
+      },
+      "category": {
+          "id": 252,
+          "name": "Graphic Novels",
+          "analytics_name": "Graphic Novels",
+          "slug": "comics/graphic novels",
+          "position": 4,
+          "parent_id": 3,
+          "parent_name": "Comics",
+          "color": 16776056,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/comics/graphic%20novels"
+              }
+          }
+      },
+      "profile": {
+          "id": 4221179,
+          "project_id": 4221179,
+          "state": "inactive",
+          "state_changed_at": 1621712121,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/088/739/01b54fd88e2ba89026720c6b5682013c_original.JPG?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625257785&auto=format&frame=1&q=92&s=653a587e16e95b6dad5da01b81b3420e",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/088/739/01b54fd88e2ba89026720c6b5682013c_original.JPG?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625257785&auto=format&frame=1&q=92&s=107d386559c5089121bc7cf8502cd11a"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/1073959836/winona-forever-part-two-in-a-graphic-novel-series?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/1073959836/winona-forever-part-two-in-a-graphic-novel-series/rewards"
+          }
+      }
+  },
+  {
+      "id": 1919302352,
+      "photo": {
+          "key": "assets/034/063/338/057479f9f2f87cd9d070506df5989664_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/063/338/057479f9f2f87cd9d070506df5989664_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625082599&auto=format&frame=1&q=92&s=0fbb1fdb375077ce033990b4c6a30bcf",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/063/338/057479f9f2f87cd9d070506df5989664_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1625082599&auto=format&frame=1&q=92&s=6771be926edfe460389ce70d455990a2",
+          "med": "https://ksr-ugc.imgix.net/assets/034/063/338/057479f9f2f87cd9d070506df5989664_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1625082599&auto=format&frame=1&q=92&s=b8ac18c41cf789aa13ae8b5c7c91b2c4",
+          "little": "https://ksr-ugc.imgix.net/assets/034/063/338/057479f9f2f87cd9d070506df5989664_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1625082599&auto=format&frame=1&q=92&s=cd95940517498cdb1e1b70f6274e8e55",
+          "small": "https://ksr-ugc.imgix.net/assets/034/063/338/057479f9f2f87cd9d070506df5989664_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1625082599&auto=format&frame=1&q=92&s=081e1b5108fc71c0369a34e441b37b34",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/063/338/057479f9f2f87cd9d070506df5989664_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1625082599&auto=format&frame=1&q=92&s=3a0b2a542fd6aa9b08d016c5a868cece",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/063/338/057479f9f2f87cd9d070506df5989664_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1625082599&auto=format&frame=1&q=92&s=33bfd351951f4ae830ef433f82cce087",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/063/338/057479f9f2f87cd9d070506df5989664_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625082599&auto=format&frame=1&q=92&s=2e662ae890c1222626f56b1c8469a570"
+      },
+      "name": "BLACK VANS: LGBT/queer/POC cyberpunk super-hero comic",
+      "blurb": "A Sci-Fi/Cyberpunk Super-hero comic with queer POC leads",
+      "goal": 12000,
+      "pledged": 15380,
+      "state": "live",
+      "slug": "black-vans-queer-poc-cyberpunk-super-hero-comic",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1627688383,
+      "state_changed_at": 1625096384,
+      "created_at": 1625082308,
+      "launched_at": 1625096383,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 346,
+      "static_usd_rate": 1,
+      "usd_pledged": "15380.0",
+      "converted_pledged_amount": 15380,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 624597288,
+          "name": "Alex Smith",
+          "slug": "alexoteric",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/007/722/364/f0755c87578db0729c0c5720db803156_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1625093847&auto=format&frame=1&q=92&s=995d64be9d56d72e833058a4a26c37c8",
+              "small": "https://ksr-ugc.imgix.net/assets/007/722/364/f0755c87578db0729c0c5720db803156_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1625093847&auto=format&frame=1&q=92&s=9e6c5894f653605abac96ab942b31fce",
+              "medium": "https://ksr-ugc.imgix.net/assets/007/722/364/f0755c87578db0729c0c5720db803156_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1625093847&auto=format&frame=1&q=92&s=4c79f9be3a2b23b1d2fe2ecf88b960a7"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/alexoteric"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/624597288?signature=1627581669.ace0583accac0a584c49a33d6ef7744359f7996f"
+              }
+          }
+      },
+      "location": {
+          "id": 2471217,
+          "name": "Philadelphia",
+          "slug": "philadelphia-pa",
+          "short_name": "Philadelphia, PA",
+          "displayable_name": "Philadelphia, PA",
+          "localized_name": "Philadelphia",
+          "country": "US",
+          "state": "PA",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/philadelphia-pa",
+                  "location": "https://www.kickstarter.com/locations/philadelphia-pa"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549076.0e67cfa03b59109b1d404a21cd13577866fa3475&woe_id=2471217"
+              }
+          }
+      },
+      "category": {
+          "id": 250,
+          "name": "Comic Books",
+          "analytics_name": "Comic Books",
+          "slug": "comics/comic books",
+          "position": 2,
+          "parent_id": 3,
+          "parent_name": "Comics",
+          "color": 16776056,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/comics/comic%20books"
+              }
+          }
+      },
+      "profile": {
+          "id": 4241648,
+          "project_id": 4241648,
+          "state": "inactive",
+          "state_changed_at": 1625082308,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/063/338/057479f9f2f87cd9d070506df5989664_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625082599&auto=format&frame=1&q=92&s=2e662ae890c1222626f56b1c8469a570",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/063/338/057479f9f2f87cd9d070506df5989664_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625082599&auto=format&frame=1&q=92&s=0fbb1fdb375077ce033990b4c6a30bcf"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/alexoteric/black-vans-queer-poc-cyberpunk-super-hero-comic?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/alexoteric/black-vans-queer-poc-cyberpunk-super-hero-comic/rewards"
+          }
+      }
+  },
+  {
+      "id": 532891351,
+      "photo": {
+          "key": "assets/030/793/831/b5e3095855d85f97616d181991e06f47_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/030/793/831/b5e3095855d85f97616d181991e06f47_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1601373706&auto=format&frame=1&q=92&s=3ad64465eba36ef99dac8bd2dbcb2da9",
+          "ed": "https://ksr-ugc.imgix.net/assets/030/793/831/b5e3095855d85f97616d181991e06f47_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1601373706&auto=format&frame=1&q=92&s=93f6d65ab9792c21846c4ff99063cc80",
+          "med": "https://ksr-ugc.imgix.net/assets/030/793/831/b5e3095855d85f97616d181991e06f47_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1601373706&auto=format&frame=1&q=92&s=3e1f26dac4875beb17424741c825dbb9",
+          "little": "https://ksr-ugc.imgix.net/assets/030/793/831/b5e3095855d85f97616d181991e06f47_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1601373706&auto=format&frame=1&q=92&s=2b9b53e8a0c83623f450f3da8a96eb00",
+          "small": "https://ksr-ugc.imgix.net/assets/030/793/831/b5e3095855d85f97616d181991e06f47_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1601373706&auto=format&frame=1&q=92&s=67695eae0f5951e0c20e6205cea7a3be",
+          "thumb": "https://ksr-ugc.imgix.net/assets/030/793/831/b5e3095855d85f97616d181991e06f47_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1601373706&auto=format&frame=1&q=92&s=364adcb87cb57c9200690a2848d39bea",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/030/793/831/b5e3095855d85f97616d181991e06f47_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1601373706&auto=format&frame=1&q=92&s=ac8b81528f12bd503711ec05779db98e",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/030/793/831/b5e3095855d85f97616d181991e06f47_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1601373706&auto=format&frame=1&q=92&s=82dc929be1edaa86537871a167084868"
+      },
+      "name": "Angry Squad: Viva Las Angry",
+      "blurb": "Angry Fred and his team set out to stop a deluded soldier from wreaking havoc across Las Vegas.",
+      "goal": 5500,
+      "pledged": 2179.32,
+      "state": "live",
+      "slug": "angry-squad-2",
+      "disable_communication": false,
+      "country": "AU",
+      "country_displayable_name": "Australia",
+      "currency": "AUD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1629765936,
+      "state_changed_at": 1626914738,
+      "created_at": 1599998161,
+      "launched_at": 1626914736,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 28,
+      "static_usd_rate": 0.73133576,
+      "usd_pledged": "1593.8146484832",
+      "converted_pledged_amount": 1603,
+      "fx_rate": 0.73595485,
+      "usd_exchange_rate": 0.73595485,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1476431061,
+          "name": "Lucas Scheffel",
+          "slug": "lucasscheffel",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/020/493/458/aaf4efc6003101c1511da57b7e4ed3ae_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1594894910&auto=format&frame=1&q=92&s=976fcff0c939ea6e99434583abe6dee0",
+              "small": "https://ksr-ugc.imgix.net/assets/020/493/458/aaf4efc6003101c1511da57b7e4ed3ae_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1594894910&auto=format&frame=1&q=92&s=84c100d8e745bf43f08e633b97fd5311",
+              "medium": "https://ksr-ugc.imgix.net/assets/020/493/458/aaf4efc6003101c1511da57b7e4ed3ae_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1594894910&auto=format&frame=1&q=92&s=34249c541e5eb1520b380df8040387c6"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/lucasscheffel"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1476431061?signature=1627581669.3486dffafc1607484a4e365cd99994bb163c7752"
+              }
+          }
+      },
+      "location": {
+          "id": 1100661,
+          "name": "Brisbane",
+          "slug": "brisbane-au",
+          "short_name": "Brisbane, AU",
+          "displayable_name": "Brisbane, AU",
+          "localized_name": "Brisbane",
+          "country": "AU",
+          "state": "QLD",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "Australia",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/brisbane-au",
+                  "location": "https://www.kickstarter.com/locations/brisbane-au"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549300.eec44e8b1d0d4b47ac10ee5b4162a7acd35805ca&woe_id=1100661"
+              }
+          }
+      },
+      "category": {
+          "id": 250,
+          "name": "Comic Books",
+          "analytics_name": "Comic Books",
+          "slug": "comics/comic books",
+          "position": 2,
+          "parent_id": 3,
+          "parent_name": "Comics",
+          "color": 16776056,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/comics/comic%20books"
+              }
+          }
+      },
+      "profile": {
+          "id": 4070229,
+          "project_id": 4070229,
+          "state": "inactive",
+          "state_changed_at": 1599998161,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/030/793/831/b5e3095855d85f97616d181991e06f47_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1601373706&auto=format&frame=1&q=92&s=82dc929be1edaa86537871a167084868",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/030/793/831/b5e3095855d85f97616d181991e06f47_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1601373706&auto=format&frame=1&q=92&s=3ad64465eba36ef99dac8bd2dbcb2da9"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/lucasscheffel/angry-squad-2?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/lucasscheffel/angry-squad-2/rewards"
+          }
+      }
+  },
+  {
+      "id": 2004023532,
+      "photo": {
+          "key": "assets/034/327/293/36b082e1a44256160184e5a336996086_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/034/327/293/36b082e1a44256160184e5a336996086_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1627353202&auto=format&frame=1&q=92&s=e99de786f2060c214023ff03dc002fae",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/327/293/36b082e1a44256160184e5a336996086_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1627353202&auto=format&frame=1&q=92&s=b7fd7b5f3ab0e77e083fb8c82b88bd40",
+          "med": "https://ksr-ugc.imgix.net/assets/034/327/293/36b082e1a44256160184e5a336996086_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1627353202&auto=format&frame=1&q=92&s=16b2ba01f46ea02cce868bf71f49c9bf",
+          "little": "https://ksr-ugc.imgix.net/assets/034/327/293/36b082e1a44256160184e5a336996086_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1627353202&auto=format&frame=1&q=92&s=0f702147b7fc63a798be63879945fd8d",
+          "small": "https://ksr-ugc.imgix.net/assets/034/327/293/36b082e1a44256160184e5a336996086_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1627353202&auto=format&frame=1&q=92&s=aa144ac2c65359557f6a18b007054f78",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/327/293/36b082e1a44256160184e5a336996086_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1627353202&auto=format&frame=1&q=92&s=7c3f88a5b231d0db3688df83b2c2d19e",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/327/293/36b082e1a44256160184e5a336996086_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1627353202&auto=format&frame=1&q=92&s=53321f8c8022c177c9bc4313bddb7e5b",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/327/293/36b082e1a44256160184e5a336996086_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1627353202&auto=format&frame=1&q=92&s=efadf2c6d6380c499b1048b20d9ef9d5"
+      },
+      "name": "NINJA BEAR #1-3: The Master's Journey",
+      "blurb": "A new comic adventure plus NINJA BEAR Action-Plush 2.0 (now with more action and more plush!)",
+      "goal": 5000,
+      "pledged": 5436,
+      "state": "live",
+      "slug": "ninja-bear-1-3-the-masters-journey",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1627567203,
+      "state_changed_at": 1624975205,
+      "created_at": 1618257716,
+      "launched_at": 1624975203,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 109,
+      "static_usd_rate": 1,
+      "usd_pledged": "5436.0",
+      "converted_pledged_amount": 5436,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 238150584,
+          "name": "Enrica Jang",
+          "slug": "RedStyloMedia",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/005/789/412/06206036bb66a3aa00ea5086c66f665e_original.jpeg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1461085581&auto=format&frame=1&q=92&s=df65fc4d9bc697d13095f5891da482b5",
+              "small": "https://ksr-ugc.imgix.net/assets/005/789/412/06206036bb66a3aa00ea5086c66f665e_original.jpeg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1461085581&auto=format&frame=1&q=92&s=9f3e7f661a17abe2cf4714d72b217f5a",
+              "medium": "https://ksr-ugc.imgix.net/assets/005/789/412/06206036bb66a3aa00ea5086c66f665e_original.jpeg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1461085581&auto=format&frame=1&q=92&s=1601db85fd9ef743d02df4d5aee59833"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/RedStyloMedia"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/238150584?signature=1627581669.f840f8f1e1308ca01d484b3afe7a41b174049204"
+              }
+          }
+      },
+      "location": {
+          "id": 2367105,
+          "name": "Boston",
+          "slug": "boston-ma",
+          "short_name": "Boston, MA",
+          "displayable_name": "Boston, MA",
+          "localized_name": "Boston",
+          "country": "US",
+          "state": "MA",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/boston-ma",
+                  "location": "https://www.kickstarter.com/locations/boston-ma"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549037.456b795dff26e382e921a660c45b2b26575d2f49&woe_id=2367105"
+              }
+          }
+      },
+      "category": {
+          "id": 250,
+          "name": "Comic Books",
+          "analytics_name": "Comic Books",
+          "slug": "comics/comic books",
+          "position": 2,
+          "parent_id": 3,
+          "parent_name": "Comics",
+          "color": 16776056,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/comics/comic%20books"
+              }
+          }
+      },
+      "profile": {
+          "id": 4197700,
+          "project_id": 4197700,
+          "state": "inactive",
+          "state_changed_at": 1618257716,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/327/293/36b082e1a44256160184e5a336996086_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1627353202&auto=format&frame=1&q=92&s=efadf2c6d6380c499b1048b20d9ef9d5",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/327/293/36b082e1a44256160184e5a336996086_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1627353202&auto=format&frame=1&q=92&s=e99de786f2060c214023ff03dc002fae"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/RedStyloMedia/ninja-bear-1-3-the-masters-journey?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/RedStyloMedia/ninja-bear-1-3-the-masters-journey/rewards"
+          }
+      }
+  },
+  {
+      "id": 225954285,
+      "photo": {
+          "key": "assets/034/281/910/c119246c4a6d449dc1a2d817aa939d11_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/281/910/c119246c4a6d449dc1a2d817aa939d11_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626904904&auto=format&frame=1&q=92&s=b2c596ae212e269dc1c9b880458505fc",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/281/910/c119246c4a6d449dc1a2d817aa939d11_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1626904904&auto=format&frame=1&q=92&s=52632974f6bf6e50e8ae7d98c2f359e7",
+          "med": "https://ksr-ugc.imgix.net/assets/034/281/910/c119246c4a6d449dc1a2d817aa939d11_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1626904904&auto=format&frame=1&q=92&s=4b1da6bf0d2b394c9b0d6ab192387269",
+          "little": "https://ksr-ugc.imgix.net/assets/034/281/910/c119246c4a6d449dc1a2d817aa939d11_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1626904904&auto=format&frame=1&q=92&s=b08f0904bad591d575beb606dafca8eb",
+          "small": "https://ksr-ugc.imgix.net/assets/034/281/910/c119246c4a6d449dc1a2d817aa939d11_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1626904904&auto=format&frame=1&q=92&s=524c699c5af0bf9d1a8df390902d9441",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/281/910/c119246c4a6d449dc1a2d817aa939d11_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1626904904&auto=format&frame=1&q=92&s=70e3b327f7247b1e7ed6669d6f01677e",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/281/910/c119246c4a6d449dc1a2d817aa939d11_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1626904904&auto=format&frame=1&q=92&s=9228afcbfad5c921509077d0252546d9",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/281/910/c119246c4a6d449dc1a2d817aa939d11_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626904904&auto=format&frame=1&q=92&s=ae35c9175c83c4d4548472383c8097f1"
+      },
+      "name": "Eule's Vision Issue 4",
+      "blurb": "Join us for the 4th installment of Eule's Vision! A comic brought to you by Jacob Stem, Chad Heinrich and Monica Castillo.",
+      "goal": 5000,
+      "pledged": 24359,
+      "state": "live",
+      "slug": "eules-vision-issue-4",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1628902801,
+      "state_changed_at": 1626310803,
+      "created_at": 1620685602,
+      "launched_at": 1626310801,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 334,
+      "static_usd_rate": 1,
+      "usd_pledged": "24359.0",
+      "converted_pledged_amount": 24359,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 837519571,
+          "name": "Chad Heinrich",
+          "slug": "heinrichart",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/033/805/021/012e9a18063b340259987b2647f7d7b9_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1623093401&auto=format&frame=1&q=92&s=bb159218d3484a6c47647e70d94c46e5",
+              "small": "https://ksr-ugc.imgix.net/assets/033/805/021/012e9a18063b340259987b2647f7d7b9_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1623093401&auto=format&frame=1&q=92&s=c32236e70015258e0896ad529bc0b059",
+              "medium": "https://ksr-ugc.imgix.net/assets/033/805/021/012e9a18063b340259987b2647f7d7b9_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1623093401&auto=format&frame=1&q=92&s=3a243d38037104c614d2c929d7cbfa91"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/heinrichart"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/837519571?signature=1627581669.b92fd8cd1b535d1a76ed68420302bcab74b22289"
+              }
+          }
+      },
+      "location": {
+          "id": 2352323,
+          "name": "Ahwatukee Foothills",
+          "slug": "ahwatukee-foothills-phoenix-az",
+          "short_name": "Ahwatukee Foothills, AZ",
+          "displayable_name": "Ahwatukee Foothills, Phoenix, AZ",
+          "localized_name": "Ahwatukee Foothills",
+          "country": "US",
+          "state": "AZ",
+          "type": "Suburb",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/ahwatukee-foothills-phoenix-az",
+                  "location": "https://www.kickstarter.com/locations/ahwatukee-foothills-phoenix-az"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627561861.6fc56c20dfee43f9b3f645dae154b0c0e3f38364&woe_id=2352323"
+              }
+          }
+      },
+      "category": {
+          "id": 250,
+          "name": "Comic Books",
+          "analytics_name": "Comic Books",
+          "slug": "comics/comic books",
+          "position": 2,
+          "parent_id": 3,
+          "parent_name": "Comics",
+          "color": 16776056,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/comics/comic%20books"
+              }
+          }
+      },
+      "profile": {
+          "id": 4214500,
+          "project_id": 4214500,
+          "state": "inactive",
+          "state_changed_at": 1620685602,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/281/910/c119246c4a6d449dc1a2d817aa939d11_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626904904&auto=format&frame=1&q=92&s=ae35c9175c83c4d4548472383c8097f1",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/281/910/c119246c4a6d449dc1a2d817aa939d11_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626904904&auto=format&frame=1&q=92&s=b2c596ae212e269dc1c9b880458505fc"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/heinrichart/eules-vision-issue-4?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/heinrichart/eules-vision-issue-4/rewards"
+          }
+      }
+  },
+  {
+      "id": 1322894618,
+      "photo": {
+          "key": "assets/034/259/371/721f04555777c930a4a3f8ed381b6b54_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/034/259/371/721f04555777c930a4a3f8ed381b6b54_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626742307&auto=format&frame=1&q=92&s=81ebe9ff208e906c264b9a0b9012aebd",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/259/371/721f04555777c930a4a3f8ed381b6b54_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1626742307&auto=format&frame=1&q=92&s=3a225b2a1a400ca66c27161013751903",
+          "med": "https://ksr-ugc.imgix.net/assets/034/259/371/721f04555777c930a4a3f8ed381b6b54_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1626742307&auto=format&frame=1&q=92&s=685f70e73f59bf2fed5149fc2c45f294",
+          "little": "https://ksr-ugc.imgix.net/assets/034/259/371/721f04555777c930a4a3f8ed381b6b54_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1626742307&auto=format&frame=1&q=92&s=cdddff1e4503297ba78e8db772250d15",
+          "small": "https://ksr-ugc.imgix.net/assets/034/259/371/721f04555777c930a4a3f8ed381b6b54_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1626742307&auto=format&frame=1&q=92&s=f65f57c458ef682cd15fac3efddf97ec",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/259/371/721f04555777c930a4a3f8ed381b6b54_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1626742307&auto=format&frame=1&q=92&s=93aaf31e84f9c443079c0198a61d4fbe",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/259/371/721f04555777c930a4a3f8ed381b6b54_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1626742307&auto=format&frame=1&q=92&s=03700390fb92d2b1bb83207f9515446e",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/259/371/721f04555777c930a4a3f8ed381b6b54_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626742307&auto=format&frame=1&q=92&s=781b42bf621c6038552430fec1971bf3"
+      },
+      "name": "Midnight Highway #1-2: an 80's-inspired sci-fi/horror comic",
+      "blurb": "The second issue in the \"Alice in Wonderland meets Twilight Zone\" trip through the supernatural takes place in a haunted arcade.",
+      "goal": 6000,
+      "pledged": 7344,
+      "state": "live",
+      "slug": "midnight-highway-1-2-an-80s-inspired-sci-fi-horror-comic",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1628776800,
+      "state_changed_at": 1626235219,
+      "created_at": 1616465557,
+      "launched_at": 1626235217,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 201,
+      "static_usd_rate": 1,
+      "usd_pledged": "7344.0",
+      "converted_pledged_amount": 7344,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1609763940,
+          "name": "William Tener",
+          "slug": "williamtener",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/007/972/808/d93d708277e9a798d104ef003387ef27_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1549593709&auto=format&frame=1&q=92&s=0a03d962207ca3296f417b28ef01a59e",
+              "small": "https://ksr-ugc.imgix.net/assets/007/972/808/d93d708277e9a798d104ef003387ef27_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1549593709&auto=format&frame=1&q=92&s=dba976c6cd697c5d00bc45520339521a",
+              "medium": "https://ksr-ugc.imgix.net/assets/007/972/808/d93d708277e9a798d104ef003387ef27_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1549593709&auto=format&frame=1&q=92&s=28642be51ec8a00ef86437e422cab04f"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/williamtener"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1609763940?signature=1627581669.45a3b8eb0f25c1bd5690ded2b310f1551ba8ebd2"
+              }
+          }
+      },
+      "location": {
+          "id": 2361121,
+          "name": "Beckley",
+          "slug": "beckley-wv",
+          "short_name": "Beckley, WV",
+          "displayable_name": "Beckley, WV",
+          "localized_name": "Beckley",
+          "country": "US",
+          "state": "WV",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/beckley-wv",
+                  "location": "https://www.kickstarter.com/locations/beckley-wv"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627563678.04f7e417c07893017299b03bcd7cc070bae7d37e&woe_id=2361121"
+              }
+          }
+      },
+      "category": {
+          "id": 250,
+          "name": "Comic Books",
+          "analytics_name": "Comic Books",
+          "slug": "comics/comic books",
+          "position": 2,
+          "parent_id": 3,
+          "parent_name": "Comics",
+          "color": 16776056,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/comics/comic%20books"
+              }
+          }
+      },
+      "profile": {
+          "id": 4186244,
+          "project_id": 4186244,
+          "state": "inactive",
+          "state_changed_at": 1616465557,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/259/371/721f04555777c930a4a3f8ed381b6b54_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626742307&auto=format&frame=1&q=92&s=781b42bf621c6038552430fec1971bf3",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/259/371/721f04555777c930a4a3f8ed381b6b54_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626742307&auto=format&frame=1&q=92&s=81ebe9ff208e906c264b9a0b9012aebd"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/williamtener/midnight-highway-1-2-an-80s-inspired-sci-fi-horror-comic?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/williamtener/midnight-highway-1-2-an-80s-inspired-sci-fi-horror-comic/rewards"
+          }
+      }
+  }
+]

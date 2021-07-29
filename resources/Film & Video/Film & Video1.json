@@ -1,0 +1,1549 @@
+[
+  {
+      "id": 2044450171,
+      "photo": {
+          "key": "assets/034/019/921/94d01a375635cefcfc2f19c55ec7d500_original.jpeg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/019/921/94d01a375635cefcfc2f19c55ec7d500_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624740300&auto=format&frame=1&q=92&s=19d4a28727eba0debd15ea6b3a9f6938",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/019/921/94d01a375635cefcfc2f19c55ec7d500_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1624740300&auto=format&frame=1&q=92&s=d7d1c21afdfee89982e67941691bd8ad",
+          "med": "https://ksr-ugc.imgix.net/assets/034/019/921/94d01a375635cefcfc2f19c55ec7d500_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1624740300&auto=format&frame=1&q=92&s=ab9a2bda7046c6190df04774ce1605ab",
+          "little": "https://ksr-ugc.imgix.net/assets/034/019/921/94d01a375635cefcfc2f19c55ec7d500_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1624740300&auto=format&frame=1&q=92&s=5e61b8f4d9e4d9779dc419470c7deaf0",
+          "small": "https://ksr-ugc.imgix.net/assets/034/019/921/94d01a375635cefcfc2f19c55ec7d500_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1624740300&auto=format&frame=1&q=92&s=d9f845eb00730b30e2067c43fd560654",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/019/921/94d01a375635cefcfc2f19c55ec7d500_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1624740300&auto=format&frame=1&q=92&s=916d1381aa565bc221a2a9d0058ef6b4",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/019/921/94d01a375635cefcfc2f19c55ec7d500_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1624740300&auto=format&frame=1&q=92&s=c283cbc99dc30337fa10c85fbadd21d5",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/019/921/94d01a375635cefcfc2f19c55ec7d500_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624740300&auto=format&frame=1&q=92&s=2b37d582657e4baa76c79604b29864f8"
+      },
+      "name": "Ceres (a short film)",
+      "blurb": "Ceres is a film about mothers, daughters, regrowth, and the complexities of abuse.",
+      "goal": 15000,
+      "pledged": 3251,
+      "state": "live",
+      "slug": "ceres-a-short-film",
+      "disable_communication": false,
+      "country": "GB",
+      "country_displayable_name": "the United Kingdom",
+      "currency": "GBP",
+      "currency_symbol": "£",
+      "currency_trailing_code": false,
+      "deadline": 1629631604,
+      "state_changed_at": 1627039605,
+      "created_at": 1624723585,
+      "launched_at": 1627039604,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 39,
+      "static_usd_rate": 1.37089964,
+      "usd_pledged": "4456.79472964",
+      "converted_pledged_amount": 4510,
+      "fx_rate": 1.38747444,
+      "usd_exchange_rate": 1.38747444,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 2032048867,
+          "name": "Hannah Morrish",
+          "slug": "hannahmorrish",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/034/019/559/9efa5f2581d2d770d5f377b68b6766f8_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1624736626&auto=format&frame=1&q=92&s=4a7f387fbc76b8e213af2e9c1bf0a1ea",
+              "small": "https://ksr-ugc.imgix.net/assets/034/019/559/9efa5f2581d2d770d5f377b68b6766f8_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1624736626&auto=format&frame=1&q=92&s=4da307705f1c6bc2d93b4a844e417ec5",
+              "medium": "https://ksr-ugc.imgix.net/assets/034/019/559/9efa5f2581d2d770d5f377b68b6766f8_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1624736626&auto=format&frame=1&q=92&s=d08d43c883230fbc20880ec7f44a329c"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/hannahmorrish"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/2032048867?signature=1627582235.18384859a649643d9845edb3ef12a2f690beb039"
+              }
+          }
+      },
+      "location": {
+          "id": 12602141,
+          "name": "Norfolk",
+          "slug": "norfolk-gb",
+          "short_name": "Norfolk, UK",
+          "displayable_name": "Norfolk, UK",
+          "localized_name": "Norfolk",
+          "country": "GB",
+          "state": "England",
+          "type": "County",
+          "is_root": false,
+          "expanded_country": "United Kingdom",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/norfolk-gb",
+                  "location": "https://www.kickstarter.com/locations/norfolk-gb"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627553596.60e8ab2cafee3c7f519b2aac6251f2e39dd9cc4c&woe_id=12602141"
+              }
+          }
+      },
+      "category": {
+          "id": 293,
+          "name": "Drama",
+          "analytics_name": "Drama",
+          "slug": "film & video/drama",
+          "position": 5,
+          "parent_id": 11,
+          "parent_name": "Film & Video",
+          "color": 16734574,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/film%20&%20video/drama"
+              }
+          }
+      },
+      "profile": {
+          "id": 4239569,
+          "project_id": 4239569,
+          "state": "inactive",
+          "state_changed_at": 1624723585,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/019/921/94d01a375635cefcfc2f19c55ec7d500_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624740300&auto=format&frame=1&q=92&s=2b37d582657e4baa76c79604b29864f8",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/019/921/94d01a375635cefcfc2f19c55ec7d500_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624740300&auto=format&frame=1&q=92&s=19d4a28727eba0debd15ea6b3a9f6938"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/hannahmorrish/ceres-a-short-film?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/hannahmorrish/ceres-a-short-film/rewards"
+          }
+      }
+  },
+  {
+      "id": 1012055280,
+      "photo": {
+          "key": "assets/034/208/689/da81937060799ece045904619956bd68_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/034/208/689/da81937060799ece045904619956bd68_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626287154&auto=format&frame=1&q=92&s=eaaf2c9b0e0ed830a642efa683e97013",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/208/689/da81937060799ece045904619956bd68_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1626287154&auto=format&frame=1&q=92&s=b0ec1a5277a2b96fcf919b0e29f6bd02",
+          "med": "https://ksr-ugc.imgix.net/assets/034/208/689/da81937060799ece045904619956bd68_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1626287154&auto=format&frame=1&q=92&s=845057a67b1db108f31b5fe768a3621e",
+          "little": "https://ksr-ugc.imgix.net/assets/034/208/689/da81937060799ece045904619956bd68_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1626287154&auto=format&frame=1&q=92&s=f0d5f41df73e3df355a9bb923e8cbe01",
+          "small": "https://ksr-ugc.imgix.net/assets/034/208/689/da81937060799ece045904619956bd68_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1626287154&auto=format&frame=1&q=92&s=087413bb3598aae159227d67d95d4f11",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/208/689/da81937060799ece045904619956bd68_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1626287154&auto=format&frame=1&q=92&s=489d878c17171d00594c89415380d635",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/208/689/da81937060799ece045904619956bd68_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1626287154&auto=format&frame=1&q=92&s=3aa8aa129abe5355f5875ec7d9930b8d",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/208/689/da81937060799ece045904619956bd68_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626287154&auto=format&frame=1&q=92&s=1f83278b69d8ede7d10c917ba65ef2d5"
+      },
+      "name": "Ashes - A short film",
+      "blurb": "\"Ashes\" is a short fiction exploring father-and-son relationships in the setting of Spain's abandoned villages.",
+      "goal": 1900,
+      "pledged": 2421,
+      "state": "live",
+      "slug": "ashes-a-short-film-0",
+      "disable_communication": false,
+      "country": "GB",
+      "country_displayable_name": "the United Kingdom",
+      "currency": "GBP",
+      "currency_symbol": "£",
+      "currency_trailing_code": false,
+      "deadline": 1630076713,
+      "state_changed_at": 1626620714,
+      "created_at": 1626286505,
+      "launched_at": 1626620713,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 12,
+      "static_usd_rate": 1.37650039,
+      "usd_pledged": "3332.50744419",
+      "converted_pledged_amount": 3359,
+      "fx_rate": 1.38747444,
+      "usd_exchange_rate": 1.38747444,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 537728023,
+          "name": "Oscar Rutishauser-Mills",
+          "slug": "ashesmovie",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/034/171/337/c8c5a181aead8f9b2d04e9dc46427b9e_original.JPG?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1626002947&auto=format&frame=1&q=92&s=86442c6e4b3f187c3287a8ab8c25d56c",
+              "small": "https://ksr-ugc.imgix.net/assets/034/171/337/c8c5a181aead8f9b2d04e9dc46427b9e_original.JPG?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1626002947&auto=format&frame=1&q=92&s=336b38d7290b3e469ca9c641ed870c0a",
+              "medium": "https://ksr-ugc.imgix.net/assets/034/171/337/c8c5a181aead8f9b2d04e9dc46427b9e_original.JPG?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1626002947&auto=format&frame=1&q=92&s=0b5f364828ec9edde23356a05cdbfb74"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/ashesmovie"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/537728023?signature=1627582235.d80c09c31f5661a00eb3c41a4cd5475946727384"
+              }
+          }
+      },
+      "location": {
+          "id": 779063,
+          "name": "Zaragoza",
+          "slug": "zaragoza-zaragoza-aragon",
+          "short_name": "Zaragoza, Spain",
+          "displayable_name": "Zaragoza, Spain",
+          "localized_name": "Zaragoza",
+          "country": "ES",
+          "state": "Aragon",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "Spain",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/zaragoza-zaragoza-aragon",
+                  "location": "https://www.kickstarter.com/locations/zaragoza-zaragoza-aragon"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627557570.1d9a9d5dbb27123f22440785c5a2737b61d4f006&woe_id=779063"
+              }
+          }
+      },
+      "category": {
+          "id": 32,
+          "name": "Shorts",
+          "analytics_name": "Shorts",
+          "slug": "film & video/shorts",
+          "position": 16,
+          "parent_id": 11,
+          "parent_name": "Film & Video",
+          "color": 16734574,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/film%20&%20video/shorts"
+              }
+          }
+      },
+      "profile": {
+          "id": 4248651,
+          "project_id": 4248651,
+          "state": "inactive",
+          "state_changed_at": 1626286505,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/208/689/da81937060799ece045904619956bd68_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626287154&auto=format&frame=1&q=92&s=1f83278b69d8ede7d10c917ba65ef2d5",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/208/689/da81937060799ece045904619956bd68_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626287154&auto=format&frame=1&q=92&s=eaaf2c9b0e0ed830a642efa683e97013"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/ashesmovie/ashes-a-short-film-0?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/ashesmovie/ashes-a-short-film-0/rewards"
+          }
+      }
+  },
+  {
+      "id": 115543689,
+      "photo": {
+          "key": "assets/034/300/988/f9f188c3e84a9c3355f1fea249a4bd8a_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/034/300/988/f9f188c3e84a9c3355f1fea249a4bd8a_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1627067716&auto=format&frame=1&q=92&s=5923bbf233637681a607ac1b1b862e94",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/300/988/f9f188c3e84a9c3355f1fea249a4bd8a_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1627067716&auto=format&frame=1&q=92&s=ff82e8e17b30308fbe796805a8c40cf0",
+          "med": "https://ksr-ugc.imgix.net/assets/034/300/988/f9f188c3e84a9c3355f1fea249a4bd8a_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1627067716&auto=format&frame=1&q=92&s=74e977704f2cafb8519994d1d8159172",
+          "little": "https://ksr-ugc.imgix.net/assets/034/300/988/f9f188c3e84a9c3355f1fea249a4bd8a_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1627067716&auto=format&frame=1&q=92&s=15cea069dad10ec050234bb278b44232",
+          "small": "https://ksr-ugc.imgix.net/assets/034/300/988/f9f188c3e84a9c3355f1fea249a4bd8a_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1627067716&auto=format&frame=1&q=92&s=2b732f8fcc87a5057aa80220071085b6",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/300/988/f9f188c3e84a9c3355f1fea249a4bd8a_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1627067716&auto=format&frame=1&q=92&s=a312418f03aa14abbe85543ce7c5d278",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/300/988/f9f188c3e84a9c3355f1fea249a4bd8a_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1627067716&auto=format&frame=1&q=92&s=824fb3a43ebb0fad5f1cf13d960d3d81",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/300/988/f9f188c3e84a9c3355f1fea249a4bd8a_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1627067716&auto=format&frame=1&q=92&s=b6b1b2c42988cbdca05cdfc9214e5436"
+      },
+      "name": "DITCH: TV SERIES",
+      "blurb": "A new hero, 48 years in the making.",
+      "goal": 50000,
+      "pledged": 4905,
+      "state": "live",
+      "slug": "ditch-tv-series",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1631966493,
+      "state_changed_at": 1626782494,
+      "created_at": 1488867067,
+      "launched_at": 1626782493,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 42,
+      "static_usd_rate": 1,
+      "usd_pledged": "4905.0",
+      "converted_pledged_amount": 4905,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 614419752,
+          "name": "John Fiorella",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/021/102/314/6564f61b30620d4d406ae23c4d652926_original.png?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1525470021&auto=format&frame=1&q=92&s=3f89f2e8a1b61a7c3aeeab468ad14e8d",
+              "small": "https://ksr-ugc.imgix.net/assets/021/102/314/6564f61b30620d4d406ae23c4d652926_original.png?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1525470021&auto=format&frame=1&q=92&s=01b521c8df450034b22c8fe0a4b1b517",
+              "medium": "https://ksr-ugc.imgix.net/assets/021/102/314/6564f61b30620d4d406ae23c4d652926_original.png?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1525470021&auto=format&frame=1&q=92&s=411361fac17a6c94b658b605931d88ed"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/614419752"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/614419752?signature=1627582235.42f0dfbd61074aad4624f7e810c120c83fc2bce0"
+              }
+          }
+      },
+      "location": {
+          "id": 2442047,
+          "name": "Los Angeles",
+          "slug": "los-angeles-ca",
+          "short_name": "Los Angeles, CA",
+          "displayable_name": "Los Angeles, CA",
+          "localized_name": "Los Angeles",
+          "country": "US",
+          "state": "CA",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/los-angeles-ca",
+                  "location": "https://www.kickstarter.com/locations/los-angeles-ca"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627548931.93059c39f967bfe76b10abc09360af28bb72e9d9&woe_id=2442047"
+              }
+          }
+      },
+      "category": {
+          "id": 291,
+          "name": "Action",
+          "analytics_name": "Action",
+          "slug": "film & video/action",
+          "position": 1,
+          "parent_id": 11,
+          "parent_name": "Film & Video",
+          "color": 16734574,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/film%20&%20video/action"
+              }
+          }
+      },
+      "profile": {
+          "id": 2909361,
+          "project_id": 2909361,
+          "state": "inactive",
+          "state_changed_at": 1488867067,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/300/988/f9f188c3e84a9c3355f1fea249a4bd8a_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1627067716&auto=format&frame=1&q=92&s=b6b1b2c42988cbdca05cdfc9214e5436",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/300/988/f9f188c3e84a9c3355f1fea249a4bd8a_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1627067716&auto=format&frame=1&q=92&s=5923bbf233637681a607ac1b1b862e94"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/614419752/ditch-tv-series?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/614419752/ditch-tv-series/rewards"
+          }
+      }
+  },
+  {
+      "id": 1452992751,
+      "photo": {
+          "key": "assets/033/624/535/e05980612583db7274bad71357e6ef34_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/033/624/535/e05980612583db7274bad71357e6ef34_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1621795712&auto=format&frame=1&q=92&s=5d13f01eec5a9adf15e1e0dd6cdca779",
+          "ed": "https://ksr-ugc.imgix.net/assets/033/624/535/e05980612583db7274bad71357e6ef34_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1621795712&auto=format&frame=1&q=92&s=714a07ad84d3192c3397fd69107fc4a6",
+          "med": "https://ksr-ugc.imgix.net/assets/033/624/535/e05980612583db7274bad71357e6ef34_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1621795712&auto=format&frame=1&q=92&s=a04f0eed83fda587d8872e0ef3a1f5bb",
+          "little": "https://ksr-ugc.imgix.net/assets/033/624/535/e05980612583db7274bad71357e6ef34_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1621795712&auto=format&frame=1&q=92&s=083d0ad5e277303fd8197f02259a16ed",
+          "small": "https://ksr-ugc.imgix.net/assets/033/624/535/e05980612583db7274bad71357e6ef34_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1621795712&auto=format&frame=1&q=92&s=bfae9071f62838ba5ba52c9f3dfb8144",
+          "thumb": "https://ksr-ugc.imgix.net/assets/033/624/535/e05980612583db7274bad71357e6ef34_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1621795712&auto=format&frame=1&q=92&s=9cb1b89397b605415a8cf9f6d8400628",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/033/624/535/e05980612583db7274bad71357e6ef34_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1621795712&auto=format&frame=1&q=92&s=d846c5fd6bae798149ec638528187a4f",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/033/624/535/e05980612583db7274bad71357e6ef34_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1621795712&auto=format&frame=1&q=92&s=015b26d169e3d0fc27a834e030aa501b"
+      },
+      "name": "The Forgotten North",
+      "blurb": "A tale of the liberty to love and the love for liberty.",
+      "goal": 16250,
+      "pledged": 1.32,
+      "state": "live",
+      "slug": "the-forgotten-north",
+      "disable_communication": false,
+      "country": "AU",
+      "country_displayable_name": "Australia",
+      "currency": "AUD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1629586971,
+      "state_changed_at": 1626994973,
+      "created_at": 1621003390,
+      "launched_at": 1626994971,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 1,
+      "static_usd_rate": 0.73133576,
+      "usd_pledged": "0.9653632032",
+      "converted_pledged_amount": 0,
+      "fx_rate": 0.73595485,
+      "usd_exchange_rate": 0.73595485,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 392245128,
+          "name": "Steven Kastrissios",
+          "slug": "theforgottennorth",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/034/209/483/384fb917b7f2b1da519c2673225a9c0d_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1626291571&auto=format&frame=1&q=92&s=1192c4118c63217c53c46ef1a6899478",
+              "small": "https://ksr-ugc.imgix.net/assets/034/209/483/384fb917b7f2b1da519c2673225a9c0d_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1626291571&auto=format&frame=1&q=92&s=36f0974f85e78465db29d2a2b1ffbff1",
+              "medium": "https://ksr-ugc.imgix.net/assets/034/209/483/384fb917b7f2b1da519c2673225a9c0d_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1626291571&auto=format&frame=1&q=92&s=34f7f55fe2374f723ae6bd7ef493c63f"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/theforgottennorth"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/392245128?signature=1627582235.956b16fea898c042b9e1686ee586ad4a34cbfb64"
+              }
+          }
+      },
+      "location": {
+          "id": 472135,
+          "name": "Tirana",
+          "slug": "tirana-al",
+          "short_name": "Tirana, Albania",
+          "displayable_name": "Tirana, Albania",
+          "localized_name": "Tirana",
+          "country": "AL",
+          "state": "Tiranë",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "Albania",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/tirana-al",
+                  "location": "https://www.kickstarter.com/locations/tirana-al"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627556838.95314681ced5b04b589d29952dc46b140bcf39ed&woe_id=472135"
+              }
+          }
+      },
+      "category": {
+          "id": 293,
+          "name": "Drama",
+          "analytics_name": "Drama",
+          "slug": "film & video/drama",
+          "position": 5,
+          "parent_id": 11,
+          "parent_name": "Film & Video",
+          "color": 16734574,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/film%20&%20video/drama"
+              }
+          }
+      },
+      "profile": {
+          "id": 4216645,
+          "project_id": 4216645,
+          "state": "inactive",
+          "state_changed_at": 1621003390,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/033/624/535/e05980612583db7274bad71357e6ef34_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1621795712&auto=format&frame=1&q=92&s=015b26d169e3d0fc27a834e030aa501b",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/033/624/535/e05980612583db7274bad71357e6ef34_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1621795712&auto=format&frame=1&q=92&s=5d13f01eec5a9adf15e1e0dd6cdca779"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/theforgottennorth/the-forgotten-north?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/theforgottennorth/the-forgotten-north/rewards"
+          }
+      }
+  },
+  {
+      "id": 1317214463,
+      "photo": {
+          "key": "assets/034/057/187/f964e913215ae69be8f83282284b48ee_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/034/057/187/f964e913215ae69be8f83282284b48ee_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625045908&auto=format&frame=1&q=92&s=984f990fbbae906aed6163c8357b4b01",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/057/187/f964e913215ae69be8f83282284b48ee_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1625045908&auto=format&frame=1&q=92&s=9709c5e09a77413e3a4c57a3d6cba0d4",
+          "med": "https://ksr-ugc.imgix.net/assets/034/057/187/f964e913215ae69be8f83282284b48ee_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1625045908&auto=format&frame=1&q=92&s=5a3d6b52a94c100b38e1b5a93f51cc4f",
+          "little": "https://ksr-ugc.imgix.net/assets/034/057/187/f964e913215ae69be8f83282284b48ee_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1625045908&auto=format&frame=1&q=92&s=d4a1619b3f28000bc88ec00d7c4fe040",
+          "small": "https://ksr-ugc.imgix.net/assets/034/057/187/f964e913215ae69be8f83282284b48ee_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1625045908&auto=format&frame=1&q=92&s=46e224578857715ab5107a202b873894",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/057/187/f964e913215ae69be8f83282284b48ee_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1625045908&auto=format&frame=1&q=92&s=267bf693a0670937c629adc1a16d605b",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/057/187/f964e913215ae69be8f83282284b48ee_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1625045908&auto=format&frame=1&q=92&s=ae562fd2ea37f62205e32c5e56679647",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/057/187/f964e913215ae69be8f83282284b48ee_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625045908&auto=format&frame=1&q=92&s=2a5910aa899bedcc8280f8024f26199d"
+      },
+      "name": "VINCENT - A mysterious coming of age feature film",
+      "blurb": "Nobody can understand being a teenager. Except maybe a monster...",
+      "goal": 25000,
+      "pledged": 12800.61,
+      "state": "live",
+      "slug": "vincent-a-mysterious-coming-of-age-feature-film",
+      "disable_communication": false,
+      "country": "DK",
+      "country_displayable_name": "Denmark",
+      "currency": "DKK",
+      "currency_symbol": "kr",
+      "currency_trailing_code": true,
+      "deadline": 1628935200,
+      "state_changed_at": 1626083491,
+      "created_at": 1625044138,
+      "launched_at": 1626083489,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 31,
+      "static_usd_rate": 0.15969887,
+      "usd_pledged": "2044.2429523107",
+      "converted_pledged_amount": 2034,
+      "fx_rate": 0.15893705,
+      "usd_exchange_rate": 0.15893705,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1287257783,
+          "name": "Invictus Film",
+          "slug": "invictusfilm",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/024/200/519/690cf07532b93041af3bda078bfc38b8_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1551081710&auto=format&frame=1&q=92&s=b6814f2768c5f05ed5eaaf79dca14a7f",
+              "small": "https://ksr-ugc.imgix.net/assets/024/200/519/690cf07532b93041af3bda078bfc38b8_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1551081710&auto=format&frame=1&q=92&s=9be32053fa8955093fbe0b864827460e",
+              "medium": "https://ksr-ugc.imgix.net/assets/024/200/519/690cf07532b93041af3bda078bfc38b8_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1551081710&auto=format&frame=1&q=92&s=e915517cd91a3716a73efb03718afbac"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/invictusfilm"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1287257783?signature=1627582235.ad7c095536aabe981c2c9e3bb8764728f4817d34"
+              }
+          }
+      },
+      "location": {
+          "id": 554890,
+          "name": "Copenhagen",
+          "slug": "copenhagen-dk",
+          "short_name": "Copenhagen, Denmark",
+          "displayable_name": "Copenhagen, Denmark",
+          "localized_name": "Copenhagen",
+          "country": "DK",
+          "state": "Hovedstaden",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "Denmark",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/copenhagen-dk",
+                  "location": "https://www.kickstarter.com/locations/copenhagen-dk"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549154.ef11a7dd72049df8d0b76d7c4bb429887de29a33&woe_id=554890"
+              }
+          }
+      },
+      "category": {
+          "id": 293,
+          "name": "Drama",
+          "analytics_name": "Drama",
+          "slug": "film & video/drama",
+          "position": 5,
+          "parent_id": 11,
+          "parent_name": "Film & Video",
+          "color": 16734574,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/film%20&%20video/drama"
+              }
+          }
+      },
+      "profile": {
+          "id": 4241360,
+          "project_id": 4241360,
+          "state": "inactive",
+          "state_changed_at": 1625044138,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/057/187/f964e913215ae69be8f83282284b48ee_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625045908&auto=format&frame=1&q=92&s=2a5910aa899bedcc8280f8024f26199d",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/057/187/f964e913215ae69be8f83282284b48ee_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625045908&auto=format&frame=1&q=92&s=984f990fbbae906aed6163c8357b4b01"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/invictusfilm/vincent-a-mysterious-coming-of-age-feature-film?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/invictusfilm/vincent-a-mysterious-coming-of-age-feature-film/rewards"
+          }
+      }
+  },
+  {
+      "id": 1619384948,
+      "photo": {
+          "key": "assets/033/987/611/ac451f1f6bde05dc4920d1bf57fb706a_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/033/987/611/ac451f1f6bde05dc4920d1bf57fb706a_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624468695&auto=format&frame=1&q=92&s=8007156e8c59c8ac54430bfca7eaff7f",
+          "ed": "https://ksr-ugc.imgix.net/assets/033/987/611/ac451f1f6bde05dc4920d1bf57fb706a_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1624468695&auto=format&frame=1&q=92&s=e6427bfcd897598f6300a0369fc79c10",
+          "med": "https://ksr-ugc.imgix.net/assets/033/987/611/ac451f1f6bde05dc4920d1bf57fb706a_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1624468695&auto=format&frame=1&q=92&s=3420d9e9d12239e9df9f037a88896ab0",
+          "little": "https://ksr-ugc.imgix.net/assets/033/987/611/ac451f1f6bde05dc4920d1bf57fb706a_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1624468695&auto=format&frame=1&q=92&s=11dce57dfba03ae55fb741e740f8286e",
+          "small": "https://ksr-ugc.imgix.net/assets/033/987/611/ac451f1f6bde05dc4920d1bf57fb706a_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1624468695&auto=format&frame=1&q=92&s=e07681ccb0aa798976001312a84161f5",
+          "thumb": "https://ksr-ugc.imgix.net/assets/033/987/611/ac451f1f6bde05dc4920d1bf57fb706a_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1624468695&auto=format&frame=1&q=92&s=2ee8bd2147a284626c5b0403684880e9",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/033/987/611/ac451f1f6bde05dc4920d1bf57fb706a_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1624468695&auto=format&frame=1&q=92&s=6365f4139876a83095c41aefc0994136",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/033/987/611/ac451f1f6bde05dc4920d1bf57fb706a_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624468695&auto=format&frame=1&q=92&s=2b44e2150b3790480364885bdd3c28a3"
+      },
+      "name": "Cucalorus 27",
+      "blurb": "The 27th annual Cucalorus Film Festival comes back in person, November 10-14, 2021 in Wilmington, NC.",
+      "goal": 27000,
+      "pledged": 29068,
+      "state": "live",
+      "slug": "cucalorus-27",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1627531140,
+      "state_changed_at": 1625658582,
+      "created_at": 1623953838,
+      "launched_at": 1625658580,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 132,
+      "static_usd_rate": 1,
+      "usd_pledged": "29068.0",
+      "converted_pledged_amount": 29068,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 357616695,
+          "name": "Cucalorus Film Festival",
+          "slug": "cucalorus",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/006/153/015/4d6a1c309b6fa0059a6294bce6005ecb_original.png?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1461369950&auto=format&frame=1&q=92&s=dfdd4df73b470d59cbda87c025a3269a",
+              "small": "https://ksr-ugc.imgix.net/assets/006/153/015/4d6a1c309b6fa0059a6294bce6005ecb_original.png?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1461369950&auto=format&frame=1&q=92&s=f5054d29755315d3879ba8fb3e4cf783",
+              "medium": "https://ksr-ugc.imgix.net/assets/006/153/015/4d6a1c309b6fa0059a6294bce6005ecb_original.png?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1461369950&auto=format&frame=1&q=92&s=00d865ef7bbe79943a23817375a5d0af"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/cucalorus"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/357616695?signature=1627582235.5e0a3c5144439389302ecab08c75df654c805437"
+              }
+          }
+      },
+      "location": {
+          "id": 2521361,
+          "name": "Wilmington",
+          "slug": "wilmington-nc",
+          "short_name": "Wilmington, NC",
+          "displayable_name": "Wilmington, NC",
+          "localized_name": "Wilmington",
+          "country": "US",
+          "state": "NC",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/wilmington-nc",
+                  "location": "https://www.kickstarter.com/locations/wilmington-nc"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627550974.3d4ca4145f4f9f34b0cb746b76ea80f7446f7948&woe_id=2521361"
+              }
+          }
+      },
+      "category": {
+          "id": 295,
+          "name": "Festivals",
+          "analytics_name": "Festivals",
+          "slug": "film & video/festivals",
+          "position": 9,
+          "parent_id": 11,
+          "parent_name": "Film & Video",
+          "color": 16734574,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/film%20&%20video/festivals"
+              }
+          }
+      },
+      "profile": {
+          "id": 4235215,
+          "project_id": 4235215,
+          "state": "inactive",
+          "state_changed_at": 1623953838,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/033/987/611/ac451f1f6bde05dc4920d1bf57fb706a_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624468695&auto=format&frame=1&q=92&s=2b44e2150b3790480364885bdd3c28a3",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/033/987/611/ac451f1f6bde05dc4920d1bf57fb706a_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624468695&auto=format&frame=1&q=92&s=8007156e8c59c8ac54430bfca7eaff7f"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/cucalorus/cucalorus-27?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/cucalorus/cucalorus-27/rewards"
+          }
+      }
+  },
+  {
+      "id": 618401267,
+      "photo": {
+          "key": "assets/034/228/975/d8ac67286b6e9c32689bc94973457d8e_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/034/228/975/d8ac67286b6e9c32689bc94973457d8e_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626441940&auto=format&frame=1&q=92&s=13dd53de32d163d5a7841dddc1ef48b8",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/228/975/d8ac67286b6e9c32689bc94973457d8e_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1626441940&auto=format&frame=1&q=92&s=2e884aad0a1fa630326e6f385bdb1085",
+          "med": "https://ksr-ugc.imgix.net/assets/034/228/975/d8ac67286b6e9c32689bc94973457d8e_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1626441940&auto=format&frame=1&q=92&s=0a9a9bf19874a7e13bcb71e03a772534",
+          "little": "https://ksr-ugc.imgix.net/assets/034/228/975/d8ac67286b6e9c32689bc94973457d8e_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1626441940&auto=format&frame=1&q=92&s=d4f19ee3e914c68c50accc847fb1491e",
+          "small": "https://ksr-ugc.imgix.net/assets/034/228/975/d8ac67286b6e9c32689bc94973457d8e_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1626441940&auto=format&frame=1&q=92&s=93e426b1fa039119d13d3972de5bae13",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/228/975/d8ac67286b6e9c32689bc94973457d8e_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1626441940&auto=format&frame=1&q=92&s=0752bfe4a9352397b3fdd60b690538ed",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/228/975/d8ac67286b6e9c32689bc94973457d8e_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1626441940&auto=format&frame=1&q=92&s=b7142d0405a1e0710be4a0cdcfc7c48f",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/228/975/d8ac67286b6e9c32689bc94973457d8e_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626441940&auto=format&frame=1&q=92&s=06a56c7ac403e6275f519028c58e3a6d"
+      },
+      "name": "Bibi - A Short Film",
+      "blurb": "In suburban London, an Afghan housewife lives cut off from society. In secret, she sets out to reconnect with the world.",
+      "goal": 4500,
+      "pledged": 3136,
+      "state": "live",
+      "slug": "bibi-a-short-film",
+      "disable_communication": false,
+      "country": "GB",
+      "country_displayable_name": "the United Kingdom",
+      "currency": "GBP",
+      "currency_symbol": "£",
+      "currency_trailing_code": false,
+      "deadline": 1628982000,
+      "state_changed_at": 1626800308,
+      "created_at": 1625327708,
+      "launched_at": 1626800307,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 37,
+      "static_usd_rate": 1.37563314,
+      "usd_pledged": "4313.98552704",
+      "converted_pledged_amount": 4351,
+      "fx_rate": 1.38747444,
+      "usd_exchange_rate": 1.38747444,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 161992392,
+          "name": "Avesta",
+          "slug": "avesta",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/034/120/688/92b37d5c1391b2609ccccc260ac39731_original.png?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1625578407&auto=format&frame=1&q=92&s=bb80380e65b032dca8fa24970b24b3a2",
+              "small": "https://ksr-ugc.imgix.net/assets/034/120/688/92b37d5c1391b2609ccccc260ac39731_original.png?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1625578407&auto=format&frame=1&q=92&s=4d5da488e79d1a9ac0ca9b6185737cd0",
+              "medium": "https://ksr-ugc.imgix.net/assets/034/120/688/92b37d5c1391b2609ccccc260ac39731_original.png?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1625578407&auto=format&frame=1&q=92&s=02780d8ff3625663c5be30a220823611"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/avesta"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/161992392?signature=1627582235.d958aca46590aea40396c4f0c92575622d3ebac7"
+              }
+          }
+      },
+      "location": {
+          "id": 44418,
+          "name": "London",
+          "slug": "london-gb",
+          "short_name": "London, UK",
+          "displayable_name": "London, UK",
+          "localized_name": "London",
+          "country": "GB",
+          "state": "England",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United Kingdom",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/london-gb",
+                  "location": "https://www.kickstarter.com/locations/london-gb"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627548932.ac1e19ecbb5a9f877a8865d239c6a00c6058b589&woe_id=44418"
+              }
+          }
+      },
+      "category": {
+          "id": 293,
+          "name": "Drama",
+          "analytics_name": "Drama",
+          "slug": "film & video/drama",
+          "position": 5,
+          "parent_id": 11,
+          "parent_name": "Film & Video",
+          "color": 16734574,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/film%20&%20video/drama"
+              }
+          }
+      },
+      "profile": {
+          "id": 4243013,
+          "project_id": 4243013,
+          "state": "inactive",
+          "state_changed_at": 1625327708,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/228/975/d8ac67286b6e9c32689bc94973457d8e_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626441940&auto=format&frame=1&q=92&s=06a56c7ac403e6275f519028c58e3a6d",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/228/975/d8ac67286b6e9c32689bc94973457d8e_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626441940&auto=format&frame=1&q=92&s=13dd53de32d163d5a7841dddc1ef48b8"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/avesta/bibi-a-short-film?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/avesta/bibi-a-short-film/rewards"
+          }
+      }
+  },
+  {
+      "id": 1736608519,
+      "photo": {
+          "key": "assets/034/028/041/385dd3dcf28ac45aed3a1787b88d0028_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/028/041/385dd3dcf28ac45aed3a1787b88d0028_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624839389&auto=format&frame=1&q=92&s=720737c7f47a44e1f8c406970f421621",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/028/041/385dd3dcf28ac45aed3a1787b88d0028_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1624839389&auto=format&frame=1&q=92&s=6cb2ebb7102b45339a902e2af9f5c5a4",
+          "med": "https://ksr-ugc.imgix.net/assets/034/028/041/385dd3dcf28ac45aed3a1787b88d0028_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1624839389&auto=format&frame=1&q=92&s=cd378e75cfb528f864622d05fefdcc1c",
+          "little": "https://ksr-ugc.imgix.net/assets/034/028/041/385dd3dcf28ac45aed3a1787b88d0028_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1624839389&auto=format&frame=1&q=92&s=dcaabdc71174694ebd3b4da82278535e",
+          "small": "https://ksr-ugc.imgix.net/assets/034/028/041/385dd3dcf28ac45aed3a1787b88d0028_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1624839389&auto=format&frame=1&q=92&s=8a5d0ce2c62dbf7e8f4beb5bdd69f69c",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/028/041/385dd3dcf28ac45aed3a1787b88d0028_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1624839389&auto=format&frame=1&q=92&s=33014836e191d1efdd14b6cb9d68c26e",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/028/041/385dd3dcf28ac45aed3a1787b88d0028_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1624839389&auto=format&frame=1&q=92&s=ac3ecb2c160136f309069717d2727fcf",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/028/041/385dd3dcf28ac45aed3a1787b88d0028_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624839389&auto=format&frame=1&q=92&s=02e886b86d02d0b3d7b6f2ff071a39b2"
+      },
+      "name": "AFK: A Hole in the World",
+      "blurb": "An AFK Miniseries",
+      "goal": 12000,
+      "pledged": 16661.42,
+      "state": "live",
+      "slug": "afk-a-hole-in-the-world",
+      "disable_communication": false,
+      "country": "NZ",
+      "country_displayable_name": "New Zealand",
+      "currency": "NZD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1629417561,
+      "state_changed_at": 1626825563,
+      "created_at": 1623626661,
+      "launched_at": 1626825561,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 307,
+      "static_usd_rate": 0.69920242,
+      "usd_pledged": "11649.7051846364",
+      "converted_pledged_amount": 11592,
+      "fx_rate": 0.69575478,
+      "usd_exchange_rate": 0.69575478,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1273937581,
+          "name": "Peter Haynes",
+          "slug": "pghaynes",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/005/763/468/5ed33b4700ea70cdbd5d194ed2a276da_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1461084045&auto=format&frame=1&q=92&s=f584a17f59ebbcf61a6b4021a7c0b90c",
+              "small": "https://ksr-ugc.imgix.net/assets/005/763/468/5ed33b4700ea70cdbd5d194ed2a276da_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1461084045&auto=format&frame=1&q=92&s=849070e2773d3daadca0a30062a8c091",
+              "medium": "https://ksr-ugc.imgix.net/assets/005/763/468/5ed33b4700ea70cdbd5d194ed2a276da_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1461084045&auto=format&frame=1&q=92&s=32fd77e0136f84df04bdab7424787b03"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/pghaynes"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1273937581?signature=1627582235.422ffcdfd7f186bb25132946ab4c24711bb9a176"
+              }
+          }
+      },
+      "location": {
+          "id": 2348079,
+          "name": "Auckland",
+          "slug": "auckland-nz",
+          "short_name": "Auckland, NZ",
+          "displayable_name": "Auckland, NZ",
+          "localized_name": "Auckland",
+          "country": "NZ",
+          "state": "Auckland Region",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "New Zealand",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/auckland-nz",
+                  "location": "https://www.kickstarter.com/locations/auckland-nz"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549556.169fc0ac9f5195aeb2ce3a6ed6fd6af8b205314c&woe_id=2348079"
+              }
+          }
+      },
+      "category": {
+          "id": 296,
+          "name": "Fantasy",
+          "analytics_name": "Fantasy",
+          "slug": "film & video/fantasy",
+          "position": 8,
+          "parent_id": 11,
+          "parent_name": "Film & Video",
+          "color": 16734574,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/film%20&%20video/fantasy"
+              }
+          }
+      },
+      "profile": {
+          "id": 4232907,
+          "project_id": 4232907,
+          "state": "inactive",
+          "state_changed_at": 1623626661,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/028/041/385dd3dcf28ac45aed3a1787b88d0028_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624839389&auto=format&frame=1&q=92&s=02e886b86d02d0b3d7b6f2ff071a39b2",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/028/041/385dd3dcf28ac45aed3a1787b88d0028_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624839389&auto=format&frame=1&q=92&s=720737c7f47a44e1f8c406970f421621"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/pghaynes/afk-a-hole-in-the-world?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/pghaynes/afk-a-hole-in-the-world/rewards"
+          }
+      }
+  },
+  {
+      "id": 1990901971,
+      "photo": {
+          "key": "assets/034/165/413/06c3b7e8f0b7b9e738695dc9b72fd3b1_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/034/165/413/06c3b7e8f0b7b9e738695dc9b72fd3b1_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625935063&auto=format&frame=1&q=92&s=96256f0933239dd2e9c86fcb604e9511",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/165/413/06c3b7e8f0b7b9e738695dc9b72fd3b1_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1625935063&auto=format&frame=1&q=92&s=4e6e5de5486bbc31d45a7aa8bdd52d23",
+          "med": "https://ksr-ugc.imgix.net/assets/034/165/413/06c3b7e8f0b7b9e738695dc9b72fd3b1_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1625935063&auto=format&frame=1&q=92&s=a8e509a324f11a1456a5e2639bc31c07",
+          "little": "https://ksr-ugc.imgix.net/assets/034/165/413/06c3b7e8f0b7b9e738695dc9b72fd3b1_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1625935063&auto=format&frame=1&q=92&s=5ad8b2982858583e03fbba9a7e2dd9bc",
+          "small": "https://ksr-ugc.imgix.net/assets/034/165/413/06c3b7e8f0b7b9e738695dc9b72fd3b1_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1625935063&auto=format&frame=1&q=92&s=ae23794d785fac055ef22676e2d9e044",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/165/413/06c3b7e8f0b7b9e738695dc9b72fd3b1_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1625935063&auto=format&frame=1&q=92&s=986f2133a12f72a3782493a102dcc270",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/165/413/06c3b7e8f0b7b9e738695dc9b72fd3b1_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1625935063&auto=format&frame=1&q=92&s=d9371933be8c6d6bd66c85f06c1d8028",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/165/413/06c3b7e8f0b7b9e738695dc9b72fd3b1_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625935063&auto=format&frame=1&q=92&s=2200841732d44be0ffcd606c38f72301"
+      },
+      "name": "Panorama",
+      "blurb": "An innovative short film that explores dreams, memories, and reality through the relationship of a mother and son.",
+      "goal": 10000,
+      "pledged": 12627,
+      "state": "live",
+      "slug": "panorama",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1628748224,
+      "state_changed_at": 1626156225,
+      "created_at": 1623892763,
+      "launched_at": 1626156224,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 35,
+      "static_usd_rate": 1,
+      "usd_pledged": "12627.0",
+      "converted_pledged_amount": 12627,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 256788954,
+          "name": "Scott Felix",
+          "slug": "panoramafilm",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/032/479/559/b6447663794502d4503e47b5672d223b_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1623954068&auto=format&frame=1&q=92&s=bc56101bc10b0e90189c3a5a4f4950d7",
+              "small": "https://ksr-ugc.imgix.net/assets/032/479/559/b6447663794502d4503e47b5672d223b_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1623954068&auto=format&frame=1&q=92&s=d4f28f0155d908eb5b82fc06348ccbf2",
+              "medium": "https://ksr-ugc.imgix.net/assets/032/479/559/b6447663794502d4503e47b5672d223b_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1623954068&auto=format&frame=1&q=92&s=98486489deff6ec592f3878fe8f2e828"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/panoramafilm"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/256788954?signature=1627582235.a537947f1eeaa404f826a1fe2886243b7c950daa"
+              }
+          }
+      },
+      "location": {
+          "id": 2442047,
+          "name": "Los Angeles",
+          "slug": "los-angeles-ca",
+          "short_name": "Los Angeles, CA",
+          "displayable_name": "Los Angeles, CA",
+          "localized_name": "Los Angeles",
+          "country": "US",
+          "state": "CA",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/los-angeles-ca",
+                  "location": "https://www.kickstarter.com/locations/los-angeles-ca"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627548931.93059c39f967bfe76b10abc09360af28bb72e9d9&woe_id=2442047"
+              }
+          }
+      },
+      "category": {
+          "id": 32,
+          "name": "Shorts",
+          "analytics_name": "Shorts",
+          "slug": "film & video/shorts",
+          "position": 16,
+          "parent_id": 11,
+          "parent_name": "Film & Video",
+          "color": 16734574,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/film%20&%20video/shorts"
+              }
+          }
+      },
+      "profile": {
+          "id": 4234772,
+          "project_id": 4234772,
+          "state": "inactive",
+          "state_changed_at": 1623892763,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/165/413/06c3b7e8f0b7b9e738695dc9b72fd3b1_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625935063&auto=format&frame=1&q=92&s=2200841732d44be0ffcd606c38f72301",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/165/413/06c3b7e8f0b7b9e738695dc9b72fd3b1_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625935063&auto=format&frame=1&q=92&s=96256f0933239dd2e9c86fcb604e9511"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/panoramafilm/panorama?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/panoramafilm/panorama/rewards"
+          }
+      }
+  },
+  {
+      "id": 1001767271,
+      "photo": {
+          "key": "assets/033/966/045/6d978fc0652620217d7237d9b1612bfd_original.jpeg",
+          "full": "https://ksr-ugc.imgix.net/assets/033/966/045/6d978fc0652620217d7237d9b1612bfd_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624326523&auto=format&frame=1&q=92&s=2be3a688666356978f2d4ab59cf36a11",
+          "ed": "https://ksr-ugc.imgix.net/assets/033/966/045/6d978fc0652620217d7237d9b1612bfd_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1624326523&auto=format&frame=1&q=92&s=a26614ad18f1aeda0747ba5280f36a91",
+          "med": "https://ksr-ugc.imgix.net/assets/033/966/045/6d978fc0652620217d7237d9b1612bfd_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1624326523&auto=format&frame=1&q=92&s=1f6a524c1d3b6c947733da15c318f05e",
+          "little": "https://ksr-ugc.imgix.net/assets/033/966/045/6d978fc0652620217d7237d9b1612bfd_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1624326523&auto=format&frame=1&q=92&s=c91131041c0c0df469e04d70f89c3c6e",
+          "small": "https://ksr-ugc.imgix.net/assets/033/966/045/6d978fc0652620217d7237d9b1612bfd_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1624326523&auto=format&frame=1&q=92&s=cfe60b7490ed582b6ad158d79d48059f",
+          "thumb": "https://ksr-ugc.imgix.net/assets/033/966/045/6d978fc0652620217d7237d9b1612bfd_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1624326523&auto=format&frame=1&q=92&s=7e134d7f85a94200e5570ee5a9ab162f",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/033/966/045/6d978fc0652620217d7237d9b1612bfd_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1624326523&auto=format&frame=1&q=92&s=131f3b9f32800bd1ee4f017f32072acc",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/033/966/045/6d978fc0652620217d7237d9b1612bfd_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624326523&auto=format&frame=1&q=92&s=0c3339961787deb96c8b10fb3414b515"
+      },
+      "name": "Terminally Chill",
+      "blurb": "A short-form web series providing a fresh, comedic take on what life looks like when you're living with a terminal illness.",
+      "goal": 22000,
+      "pledged": 9734,
+      "state": "live",
+      "slug": "terminally-chill",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1629010740,
+      "state_changed_at": 1624980775,
+      "created_at": 1624325907,
+      "launched_at": 1624980774,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 60,
+      "static_usd_rate": 1,
+      "usd_pledged": "9734.0",
+      "converted_pledged_amount": 9734,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 2075400293,
+          "name": "Matt Rosansky",
+          "slug": "mattrosansky",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/033/967/216/bc5feeeebcb99bacd57f039a7d0857bd_original.JPG?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1624337123&auto=format&frame=1&q=92&s=8dc6b260afadb8ebe03cab348a8969d7",
+              "small": "https://ksr-ugc.imgix.net/assets/033/967/216/bc5feeeebcb99bacd57f039a7d0857bd_original.JPG?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1624337123&auto=format&frame=1&q=92&s=06e10b504b3ba5be67134197e91cbcdc",
+              "medium": "https://ksr-ugc.imgix.net/assets/033/967/216/bc5feeeebcb99bacd57f039a7d0857bd_original.JPG?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1624337123&auto=format&frame=1&q=92&s=a590a0dd441e40986fa41e4531fe24ac"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/mattrosansky"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/2075400293?signature=1627582235.4f2150100f7038857cd5ef7ebabc8d93aff803db"
+              }
+          }
+      },
+      "location": {
+          "id": 2471217,
+          "name": "Philadelphia",
+          "slug": "philadelphia-pa",
+          "short_name": "Philadelphia, PA",
+          "displayable_name": "Philadelphia, PA",
+          "localized_name": "Philadelphia",
+          "country": "US",
+          "state": "PA",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/philadelphia-pa",
+                  "location": "https://www.kickstarter.com/locations/philadelphia-pa"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549076.0e67cfa03b59109b1d404a21cd13577866fa3475&woe_id=2471217"
+              }
+          }
+      },
+      "category": {
+          "id": 33,
+          "name": "Webseries",
+          "analytics_name": "Webseries",
+          "slug": "film & video/webseries",
+          "position": 19,
+          "parent_id": 11,
+          "parent_name": "Film & Video",
+          "color": 16734574,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/film%20&%20video/webseries"
+              }
+          }
+      },
+      "profile": {
+          "id": 4237247,
+          "project_id": 4237247,
+          "state": "inactive",
+          "state_changed_at": 1624325907,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/033/966/045/6d978fc0652620217d7237d9b1612bfd_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624326523&auto=format&frame=1&q=92&s=0c3339961787deb96c8b10fb3414b515",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/033/966/045/6d978fc0652620217d7237d9b1612bfd_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624326523&auto=format&frame=1&q=92&s=2be3a688666356978f2d4ab59cf36a11"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/mattrosansky/terminally-chill?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/mattrosansky/terminally-chill/rewards"
+          }
+      }
+  },
+  {
+      "id": 1278418696,
+      "photo": {
+          "key": "assets/034/279/451/6cea83b263c3210469d8f671e95f4a68_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/034/279/451/6cea83b263c3210469d8f671e95f4a68_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626888073&auto=format&frame=1&q=92&s=061ba77bc8d4d608ad63fd8e168ca98d",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/279/451/6cea83b263c3210469d8f671e95f4a68_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1626888073&auto=format&frame=1&q=92&s=de9bb8b08a191364d14319af1d0f5d2c",
+          "med": "https://ksr-ugc.imgix.net/assets/034/279/451/6cea83b263c3210469d8f671e95f4a68_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1626888073&auto=format&frame=1&q=92&s=d91178b26e542cc68ef778a4f87cd5c1",
+          "little": "https://ksr-ugc.imgix.net/assets/034/279/451/6cea83b263c3210469d8f671e95f4a68_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1626888073&auto=format&frame=1&q=92&s=cc3be0dd7e4a2fe266ec58a57d1221bd",
+          "small": "https://ksr-ugc.imgix.net/assets/034/279/451/6cea83b263c3210469d8f671e95f4a68_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1626888073&auto=format&frame=1&q=92&s=860e22161b2687b141552ae6a51ab231",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/279/451/6cea83b263c3210469d8f671e95f4a68_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1626888073&auto=format&frame=1&q=92&s=ef95cbe46b0931e45bed0c7d765feace",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/279/451/6cea83b263c3210469d8f671e95f4a68_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1626888073&auto=format&frame=1&q=92&s=abf7d04c373f217a0ec8bf49d71ab55c",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/279/451/6cea83b263c3210469d8f671e95f4a68_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626888073&auto=format&frame=1&q=92&s=ff785322c819aafc1368c6d555bae00c"
+      },
+      "name": "Pre-order ROBOT MONSTER on 3-D Blu-ray and DVD!",
+      "blurb": "Hot off the presses; a stunning new restoration from complete 35mm archival 3-D elements!",
+      "goal": 10000,
+      "pledged": 41601,
+      "state": "live",
+      "slug": "pre-order-robot-monster-on-3-d-blu-ray-and-dvd",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1629820802,
+      "state_changed_at": 1627228803,
+      "created_at": 1626887808,
+      "launched_at": 1627228802,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 708,
+      "static_usd_rate": 1,
+      "usd_pledged": "41601.0",
+      "converted_pledged_amount": 41601,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1912346019,
+          "name": "Bob Furmanek, 3-D Film Archive",
+          "slug": "3dfilmarchive",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/027/336/209/21dedb80a93381357e360d42efbe09b8_original.jpeg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1621017143&auto=format&frame=1&q=92&s=4108999f8f7b1e8c591ca0271385e7bb",
+              "small": "https://ksr-ugc.imgix.net/assets/027/336/209/21dedb80a93381357e360d42efbe09b8_original.jpeg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1621017143&auto=format&frame=1&q=92&s=bd58c6f3836e7398c13637f38a37d5dc",
+              "medium": "https://ksr-ugc.imgix.net/assets/027/336/209/21dedb80a93381357e360d42efbe09b8_original.jpeg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1621017143&auto=format&frame=1&q=92&s=71128d9f0d0cfa0c357112229a9cfaa0"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/3dfilmarchive"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1912346019?signature=1627582235.a39d1a55c7f40d583324af5730461ef8a2c47918"
+              }
+          }
+      },
+      "location": {
+          "id": 2459115,
+          "name": "New York",
+          "slug": "new-york-ny",
+          "short_name": "New York, NY",
+          "displayable_name": "New York, NY",
+          "localized_name": "New York",
+          "country": "US",
+          "state": "NY",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/new-york-ny",
+                  "location": "https://www.kickstarter.com/locations/new-york-ny"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627548935.798cbc8d8b02f51761ab484df47a3960ccd2e384&woe_id=2459115"
+              }
+          }
+      },
+      "category": {
+          "id": 301,
+          "name": "Science Fiction",
+          "analytics_name": "Science Fiction",
+          "slug": "film & video/science fiction",
+          "position": 15,
+          "parent_id": 11,
+          "parent_name": "Film & Video",
+          "color": 16734574,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/film%20&%20video/science%20fiction"
+              }
+          }
+      },
+      "profile": {
+          "id": 4252019,
+          "project_id": 4252019,
+          "state": "inactive",
+          "state_changed_at": 1626887808,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/279/451/6cea83b263c3210469d8f671e95f4a68_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626888073&auto=format&frame=1&q=92&s=ff785322c819aafc1368c6d555bae00c",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/279/451/6cea83b263c3210469d8f671e95f4a68_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626888073&auto=format&frame=1&q=92&s=061ba77bc8d4d608ad63fd8e168ca98d"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/3dfilmarchive/pre-order-robot-monster-on-3-d-blu-ray-and-dvd?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/3dfilmarchive/pre-order-robot-monster-on-3-d-blu-ray-and-dvd/rewards"
+          }
+      }
+  },
+  {
+      "id": 2107944421,
+      "photo": {
+          "key": "assets/034/266/571/e933ec99d82e486de98c2b4f291c3f3f_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/034/266/571/e933ec99d82e486de98c2b4f291c3f3f_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626796879&auto=format&frame=1&q=92&s=6ffcda76463d76f62dcbd86d168928f2",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/266/571/e933ec99d82e486de98c2b4f291c3f3f_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1626796879&auto=format&frame=1&q=92&s=bef737296566701bb2ba59cd4551326b",
+          "med": "https://ksr-ugc.imgix.net/assets/034/266/571/e933ec99d82e486de98c2b4f291c3f3f_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1626796879&auto=format&frame=1&q=92&s=a6ec9678b51a2aad0c66c21834b3d227",
+          "little": "https://ksr-ugc.imgix.net/assets/034/266/571/e933ec99d82e486de98c2b4f291c3f3f_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1626796879&auto=format&frame=1&q=92&s=6f737f68962bd7ac1b5bed536198ce6d",
+          "small": "https://ksr-ugc.imgix.net/assets/034/266/571/e933ec99d82e486de98c2b4f291c3f3f_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1626796879&auto=format&frame=1&q=92&s=227277211b8bca0b4f6d8852c302a68f",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/266/571/e933ec99d82e486de98c2b4f291c3f3f_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1626796879&auto=format&frame=1&q=92&s=f9e991a8ea58426f72145785cb207b03",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/266/571/e933ec99d82e486de98c2b4f291c3f3f_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1626796879&auto=format&frame=1&q=92&s=27ba0fb0196c9c35f4e23a406105a7f4",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/266/571/e933ec99d82e486de98c2b4f291c3f3f_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626796879&auto=format&frame=1&q=92&s=48bc55ee2bead6be79662cea8cee9889"
+      },
+      "name": "Final Summer",
+      "blurb": "A throwback indie horror slasher feature film w/ Thom Mathews (Friday the 13th Part 6: Jason Lives)",
+      "goal": 15000,
+      "pledged": 4616,
+      "state": "live",
+      "slug": "final-summer",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1628344505,
+      "state_changed_at": 1626789306,
+      "created_at": 1625963413,
+      "launched_at": 1626789305,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 49,
+      "static_usd_rate": 1,
+      "usd_pledged": "4616.0",
+      "converted_pledged_amount": 4616,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 27895995,
+          "name": "John Isberg",
+          "slug": "finalsummermovie",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/034/168/925/6cacc15d003b13288aa94b0c4c068e56_original.png?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1625966551&auto=format&frame=1&q=92&s=8c39ca7d2b361d767c95d287ea8dbc03",
+              "small": "https://ksr-ugc.imgix.net/assets/034/168/925/6cacc15d003b13288aa94b0c4c068e56_original.png?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1625966551&auto=format&frame=1&q=92&s=90bde6777165cfa63e4aeebd19f178c4",
+              "medium": "https://ksr-ugc.imgix.net/assets/034/168/925/6cacc15d003b13288aa94b0c4c068e56_original.png?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1625966551&auto=format&frame=1&q=92&s=f3399547f682c975d06d938c17825d6e"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/finalsummermovie"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/27895995?signature=1627582235.ce7a4dca5bf863a80d0f1b2b634f1f37fa691920"
+              }
+          }
+      },
+      "location": {
+          "id": 2377942,
+          "name": "Champaign",
+          "slug": "champaign-il",
+          "short_name": "Champaign, IL",
+          "displayable_name": "Champaign, IL",
+          "localized_name": "Champaign",
+          "country": "US",
+          "state": "IL",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/champaign-il",
+                  "location": "https://www.kickstarter.com/locations/champaign-il"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627552653.f4935f7b1095317f892b6f7bf7f9a71584236297&woe_id=2377942"
+              }
+          }
+      },
+      "category": {
+          "id": 297,
+          "name": "Horror",
+          "analytics_name": "Horror",
+          "slug": "film & video/horror",
+          "position": 10,
+          "parent_id": 11,
+          "parent_name": "Film & Video",
+          "color": 16734574,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/film%20&%20video/horror"
+              }
+          }
+      },
+      "profile": {
+          "id": 4246664,
+          "project_id": 4246664,
+          "state": "inactive",
+          "state_changed_at": 1625963413,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/266/571/e933ec99d82e486de98c2b4f291c3f3f_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626796879&auto=format&frame=1&q=92&s=48bc55ee2bead6be79662cea8cee9889",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/266/571/e933ec99d82e486de98c2b4f291c3f3f_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626796879&auto=format&frame=1&q=92&s=6ffcda76463d76f62dcbd86d168928f2"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/finalsummermovie/final-summer?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/finalsummermovie/final-summer/rewards"
+          }
+      }
+  }
+]
