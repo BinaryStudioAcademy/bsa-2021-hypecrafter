@@ -1,7 +1,7 @@
 import queryString from 'query-string';
 import { HttpMethod, HttpHeader, HttpStatusCode, StorageKeys } from '../common/enums';
 import { RequestArgs } from '../common/types';
-import { getEnv } from './env';
+import { env } from '../env';
 
 const refreshToken = async () => {
   // TODO...
@@ -57,7 +57,7 @@ const getUrl = (method: HttpMethod, { url, params, config }: RequestArgs): strin
     return url;
   }
 
-  const fullUrl = `${getEnv('REACT_APP_SERVER_URL')}/${url}`;
+  const fullUrl = `${env.server.url}/${url}`;
 
   if (params && method === HttpMethod.GET) {
     return getUrlWithQuery(fullUrl, params);
