@@ -3,16 +3,19 @@
         "lint:gateway": "cd gateway && npm run lint:write",
         "lint:backend": "cd backend && npm run lint:write",
         "lint:frontend": "cd frontend && npm run lint:write",
-        "lint": "npm run lint:gateway && npm run lint:backend && npm run lint:frontend",
+        "lint:notification": "cd notification && npm run lint:write",
+        "lint": "npm run lint:gateway && npm run lint:backend && npm run lint:frontend && npm run lint:notification",
         "install:gateway": "cd gateway && npm install",
         "install:backend": "cd backend && npm install",
         "install:frontend": "cd frontend && npm install",
-        "install:all": "npm install && npm run build:shared && npm run install:gateway && npm run install:backend && npm run install:frontend",
+        "install:notification": "cd notification && npm install",
+        "install:all": "npm install && npm run build:shared && npm run install:gateway && npm run install:backend && npm run install:frontend && npm run install:notification",
         "build:shared": "cd shared && npm install && npm run build",
         "start:gateway": "cd gateway && npm run start",
         "start:backend": "cd backend && npm run start",
         "start:frontend": "cd frontend && npm run start",
-        "start": "concurrently -k -p \"{name}: {time}\" -n \"FRONTEND,GATEWAY,BACKEND\" \"npm:start:frontend\" \"npm:start:gateway\" \"npm:start:backend\""
+        "start:notification": "cd notification && npm run start",
+        "start": "concurrently -k -p \"{name}: {time}\" -n \"FRONTEND,GATEWAY,BACKEND\" \"npm:start:frontend\" \"npm:start:gateway\" \"npm:start:backend\" \"npm:start:notification\""
     },
     "devDependencies": {
         "concurrently": "^6.2.0",
