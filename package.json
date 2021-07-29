@@ -15,7 +15,7 @@
         "start:backend": "cd backend && npm run start",
         "start:frontend": "cd frontend && npm run start",
         "start:notification": "cd notification && npm run start",
-        "start": "concurrently -k -p \"{name}: {time}\" -n \"FRONTEND,GATEWAY,BACKEND\" \"npm:start:frontend\" \"npm:start:gateway\" \"npm:start:backend\" \"npm:start:notification\""
+        "start": "concurrently -k -p \"{name}: {time}\" -n \"FRONTEND,GATEWAY,BACKEND,NOTIFICATION\" \"npm:start:frontend\" \"npm:start:gateway\" \"npm:start:backend\" \"npm:start:notification\""
     },
     "devDependencies": {
         "concurrently": "^6.2.0",
