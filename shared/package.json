@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "scripts": {
     "build:ts": "tsc && tscpaths -p tsconfig.json --src src --out build",
-    "build": "npm run build:ts && copy package.json build"
+    "build": "npm run build:ts && cp package.json build"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
