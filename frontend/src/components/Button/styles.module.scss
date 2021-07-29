@@ -1,0 +1,30 @@
+.button {
+	padding: 5px 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	* {
+		margin: 0 5px;
+	}
+}
+
+.button[href] {
+	display: inline-block;
+}
+
+.primary {
+	background: linear-gradient(90deg, #14E7E7 0%, #3BCAF9 61.98%, #25A8F1 100%);
+	border: none;
+}
+
+.secondary {
+
+}
+
+.outline {
+
+}
+
+.circle {
+	border-radius: 50%;
+}

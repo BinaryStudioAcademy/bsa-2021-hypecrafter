@@ -4,6 +4,7 @@ import Users from '../../scenes/Users';
 import BootstrapExample from '../BootstrapExample';
 import Input from '../Input';
 import TranslateExample from '../TranslateExample';
+import ButtonExample from '../ButtonExample';
 
 const Main = () => {
   const [email, setEmail] = useState('');
@@ -15,6 +16,7 @@ const Main = () => {
       <Users />
       <TranslateExample />
       <BootstrapExample />
+      <ButtonExample />
       <Container>
         <Col md="4">
           <Input type="text" value={text} placeholder="Search..." onChange={setText} />

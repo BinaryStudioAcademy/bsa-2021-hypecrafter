@@ -1,0 +1,1547 @@
+[
+  {
+      "id": 904702116,
+      "photo": {
+          "key": "assets/033/846/044/7134a6f4504bd636327de703a1d2dd1c_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/033/846/044/7134a6f4504bd636327de703a1d2dd1c_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1623348736&auto=format&frame=1&q=92&s=667873e5399e56c3ce86020c1d0f3b63",
+          "ed": "https://ksr-ugc.imgix.net/assets/033/846/044/7134a6f4504bd636327de703a1d2dd1c_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1623348736&auto=format&frame=1&q=92&s=4678b8abd0b11f2ad070dfe8eeddd950",
+          "med": "https://ksr-ugc.imgix.net/assets/033/846/044/7134a6f4504bd636327de703a1d2dd1c_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1623348736&auto=format&frame=1&q=92&s=0c6535857332ed1190c6c4594968bb18",
+          "little": "https://ksr-ugc.imgix.net/assets/033/846/044/7134a6f4504bd636327de703a1d2dd1c_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1623348736&auto=format&frame=1&q=92&s=04b501f03393cfdf6f9f81c0f2315b9f",
+          "small": "https://ksr-ugc.imgix.net/assets/033/846/044/7134a6f4504bd636327de703a1d2dd1c_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1623348736&auto=format&frame=1&q=92&s=4682cee18b0eaee6afd6421ab735a9ac",
+          "thumb": "https://ksr-ugc.imgix.net/assets/033/846/044/7134a6f4504bd636327de703a1d2dd1c_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1623348736&auto=format&frame=1&q=92&s=8bd3e9f202f68209423f9a287758d817",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/033/846/044/7134a6f4504bd636327de703a1d2dd1c_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1623348736&auto=format&frame=1&q=92&s=28a3125ac03c55c8a7cbbb64a776a55b",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/033/846/044/7134a6f4504bd636327de703a1d2dd1c_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1623348736&auto=format&frame=1&q=92&s=ce1e076564c259fd1932d98a0b4d127e"
+      },
+      "name": "The Quiet",
+      "blurb": "A photographic book about the daily life and work on board of a Russian research vessel during the MOSAiC expedition in the Arctic.",
+      "goal": 2000,
+      "pledged": 7158.6,
+      "state": "live",
+      "slug": "thequiet",
+      "disable_communication": false,
+      "country": "DE",
+      "country_displayable_name": "Germany",
+      "currency": "EUR",
+      "currency_symbol": "€",
+      "currency_trailing_code": false,
+      "deadline": 1628622000,
+      "state_changed_at": 1625118950,
+      "created_at": 1623347968,
+      "launched_at": 1625118948,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 132,
+      "static_usd_rate": 1.19026081,
+      "usd_pledged": "8520.601034466",
+      "converted_pledged_amount": 8462,
+      "fx_rate": 1.18212951,
+      "usd_exchange_rate": 1.18212951,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1532357997,
+          "name": "Thea Schneider",
+          "slug": "theaschneider",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/033/846/528/69cae8b2ccc2403e233b5715cb1f869f_original.png?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1623351187&auto=format&frame=1&q=92&s=97a7c677423d8d7899d047af60c2931c",
+              "small": "https://ksr-ugc.imgix.net/assets/033/846/528/69cae8b2ccc2403e233b5715cb1f869f_original.png?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1623351187&auto=format&frame=1&q=92&s=9cc5ab1d3ef71a058f8a2d251921e350",
+              "medium": "https://ksr-ugc.imgix.net/assets/033/846/528/69cae8b2ccc2403e233b5715cb1f869f_original.png?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1623351187&auto=format&frame=1&q=92&s=2101770b4252fc73f79fe3f137094973"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/theaschneider"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1532357997?signature=1627582747.01ae01013f6dff2abf47291b13036ac67b6eb4a9"
+              }
+          }
+      },
+      "location": {
+          "id": 676756,
+          "name": "München",
+          "slug": "munchen-gemeinde-hutthurm-de",
+          "short_name": "München, Germany",
+          "displayable_name": "München, Germany",
+          "localized_name": "München",
+          "country": "DE",
+          "state": "Bavaria",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "Germany",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/munchen-gemeinde-hutthurm-de",
+                  "location": "https://www.kickstarter.com/locations/munchen-gemeinde-hutthurm-de"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627551189.bc91492bfec5bcd50496317b0ebb9e80789440e4&woe_id=676756"
+              }
+          }
+      },
+      "category": {
+          "id": 280,
+          "name": "Photobooks",
+          "analytics_name": "Photobooks",
+          "slug": "photography/photobooks",
+          "position": 5,
+          "parent_id": 15,
+          "parent_name": "Photography",
+          "color": 58341,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/photography/photobooks"
+              }
+          }
+      },
+      "profile": {
+          "id": 4231400,
+          "project_id": 4231400,
+          "state": "inactive",
+          "state_changed_at": 1623347969,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/033/846/044/7134a6f4504bd636327de703a1d2dd1c_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1623348736&auto=format&frame=1&q=92&s=ce1e076564c259fd1932d98a0b4d127e",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/033/846/044/7134a6f4504bd636327de703a1d2dd1c_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1623348736&auto=format&frame=1&q=92&s=667873e5399e56c3ce86020c1d0f3b63"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/theaschneider/thequiet?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/theaschneider/thequiet/rewards"
+          }
+      }
+  },
+  {
+      "id": 576173518,
+      "photo": {
+          "key": "assets/034/164/023/e35ba0cf15e66686065eca6eaa432777_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/034/164/023/e35ba0cf15e66686065eca6eaa432777_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625921746&auto=format&frame=1&q=92&s=b14d59f4884dd87586cb4321aa84872b",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/164/023/e35ba0cf15e66686065eca6eaa432777_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1625921746&auto=format&frame=1&q=92&s=488444db99ec6c50f95cd483214e0144",
+          "med": "https://ksr-ugc.imgix.net/assets/034/164/023/e35ba0cf15e66686065eca6eaa432777_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1625921746&auto=format&frame=1&q=92&s=1291365cad94860e1a4283253d8ddccc",
+          "little": "https://ksr-ugc.imgix.net/assets/034/164/023/e35ba0cf15e66686065eca6eaa432777_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1625921746&auto=format&frame=1&q=92&s=7c1a18f34355321cb067baf90d5e1589",
+          "small": "https://ksr-ugc.imgix.net/assets/034/164/023/e35ba0cf15e66686065eca6eaa432777_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1625921746&auto=format&frame=1&q=92&s=3d96782f772aeb25e2946363d110859d",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/164/023/e35ba0cf15e66686065eca6eaa432777_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1625921746&auto=format&frame=1&q=92&s=6a0cba32bf28581e52e6ebb89d0e90f5",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/164/023/e35ba0cf15e66686065eca6eaa432777_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1625921746&auto=format&frame=1&q=92&s=217c7d38997101a11dd29e8e3f16fc4a",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/164/023/e35ba0cf15e66686065eca6eaa432777_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625921746&auto=format&frame=1&q=92&s=7887f331480318589e488a9451881339"
+      },
+      "name": "Coastline",
+      "blurb": "Perspectives on Kent's coastal towns.",
+      "goal": 3000,
+      "pledged": 1132,
+      "state": "live",
+      "slug": "coastline",
+      "disable_communication": false,
+      "country": "GB",
+      "country_displayable_name": "the United Kingdom",
+      "currency": "GBP",
+      "currency_symbol": "£",
+      "currency_trailing_code": false,
+      "deadline": 1629025094,
+      "state_changed_at": 1626433095,
+      "created_at": 1625920919,
+      "launched_at": 1626433094,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 31,
+      "static_usd_rate": 1.38337269,
+      "usd_pledged": "1565.97788508",
+      "converted_pledged_amount": 1570,
+      "fx_rate": 1.38747444,
+      "usd_exchange_rate": 1.38747444,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1869200627,
+          "name": "Josh Jordan",
+          "slug": "joshjordanphoto",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/009/814/614/5718375a423118db375bae53dea8ac74_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1503614575&auto=format&frame=1&q=92&s=ba9d70fe65d8a7c74817ae30bf6d51ef",
+              "small": "https://ksr-ugc.imgix.net/assets/009/814/614/5718375a423118db375bae53dea8ac74_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1503614575&auto=format&frame=1&q=92&s=e844581e5a421fcf3a70daac8e8c99d1",
+              "medium": "https://ksr-ugc.imgix.net/assets/009/814/614/5718375a423118db375bae53dea8ac74_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1503614575&auto=format&frame=1&q=92&s=48cd4a64cb870d0b9b870b2f4982e39c"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/joshjordanphoto"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1869200627?signature=1627582747.d7d93fdf1f9edc9e53eeeaab2e6869eab9ed8586"
+              }
+          }
+      },
+      "location": {
+          "id": 12602173,
+          "name": "Kent",
+          "slug": "kent-gb",
+          "short_name": "Kent, UK",
+          "displayable_name": "Kent, UK",
+          "localized_name": "Kent",
+          "country": "GB",
+          "state": "England",
+          "type": "County",
+          "is_root": false,
+          "expanded_country": "United Kingdom",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/kent-gb",
+                  "location": "https://www.kickstarter.com/locations/kent-gb"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627553343.a67d4eafe7a787f62402e1b374b4c63a8a38725a&woe_id=12602173"
+              }
+          }
+      },
+      "category": {
+          "id": 280,
+          "name": "Photobooks",
+          "analytics_name": "Photobooks",
+          "slug": "photography/photobooks",
+          "position": 5,
+          "parent_id": 15,
+          "parent_name": "Photography",
+          "color": 58341,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/photography/photobooks"
+              }
+          }
+      },
+      "profile": {
+          "id": 4246444,
+          "project_id": 4246444,
+          "state": "inactive",
+          "state_changed_at": 1625920919,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/164/023/e35ba0cf15e66686065eca6eaa432777_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625921746&auto=format&frame=1&q=92&s=7887f331480318589e488a9451881339",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/164/023/e35ba0cf15e66686065eca6eaa432777_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625921746&auto=format&frame=1&q=92&s=b14d59f4884dd87586cb4321aa84872b"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/joshjordanphoto/coastline?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/joshjordanphoto/coastline/rewards"
+          }
+      }
+  },
+  {
+      "id": 1263977473,
+      "photo": {
+          "key": "assets/028/191/348/eae2eff42648aa0e47972163af47b2e5_original.jpeg",
+          "full": "https://ksr-ugc.imgix.net/assets/028/191/348/eae2eff42648aa0e47972163af47b2e5_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1582457678&auto=format&frame=1&q=92&s=0a2a5efb258fada1211b6238b9cffd38",
+          "ed": "https://ksr-ugc.imgix.net/assets/028/191/348/eae2eff42648aa0e47972163af47b2e5_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1582457678&auto=format&frame=1&q=92&s=c017588b839172a49f2ed48a8371e307",
+          "med": "https://ksr-ugc.imgix.net/assets/028/191/348/eae2eff42648aa0e47972163af47b2e5_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1582457678&auto=format&frame=1&q=92&s=0af4b27d7b9f250e86fb7a15f5aeb1af",
+          "little": "https://ksr-ugc.imgix.net/assets/028/191/348/eae2eff42648aa0e47972163af47b2e5_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1582457678&auto=format&frame=1&q=92&s=046e56c8c9f437a0f6a204a5dbd622b5",
+          "small": "https://ksr-ugc.imgix.net/assets/028/191/348/eae2eff42648aa0e47972163af47b2e5_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1582457678&auto=format&frame=1&q=92&s=773518ab324114d52e94a5686786823f",
+          "thumb": "https://ksr-ugc.imgix.net/assets/028/191/348/eae2eff42648aa0e47972163af47b2e5_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1582457678&auto=format&frame=1&q=92&s=ca77ec5ba8a3de580832ccda63e36367",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/028/191/348/eae2eff42648aa0e47972163af47b2e5_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1582457678&auto=format&frame=1&q=92&s=888814ea0e5803b5f077d0ec12cb146d",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/028/191/348/eae2eff42648aa0e47972163af47b2e5_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1582457678&auto=format&frame=1&q=92&s=f6e07ef455ec0d0ae633141d95aef7da"
+      },
+      "name": "Cool Cats & Red Devils",
+      "blurb": "Iain S. P.  Reid's wonderful photos of football fans in 1970s England - a limited edition, hardback book",
+      "goal": 9800,
+      "pledged": 2139,
+      "state": "live",
+      "slug": "cool-cats-and-red-devils",
+      "disable_communication": false,
+      "country": "GB",
+      "country_displayable_name": "the United Kingdom",
+      "currency": "GBP",
+      "currency_symbol": "£",
+      "currency_trailing_code": false,
+      "deadline": 1629280995,
+      "state_changed_at": 1625824997,
+      "created_at": 1553001749,
+      "launched_at": 1625824995,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 45,
+      "static_usd_rate": 1.37829516,
+      "usd_pledged": "2948.17334724",
+      "converted_pledged_amount": 2967,
+      "fx_rate": 1.38747444,
+      "usd_exchange_rate": 1.38747444,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1541184123,
+          "name": "Flashbak",
+          "slug": "flashbak",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/024/465/409/6ef4267c76d24638990d4326be0c726c_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1553004196&auto=format&frame=1&q=92&s=fb36f525408ea840ce1f36d485ef9e1f",
+              "small": "https://ksr-ugc.imgix.net/assets/024/465/409/6ef4267c76d24638990d4326be0c726c_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1553004196&auto=format&frame=1&q=92&s=6f672e8268ab4dd481855a70987bb194",
+              "medium": "https://ksr-ugc.imgix.net/assets/024/465/409/6ef4267c76d24638990d4326be0c726c_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1553004196&auto=format&frame=1&q=92&s=be3701b75172c5704848c93768817123"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/flashbak"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1541184123?signature=1627582747.bda7714b54b841f80e4dd0e7e936670ef2b1abfd"
+              }
+          }
+      },
+      "location": {
+          "id": 28218,
+          "name": "Manchester",
+          "slug": "manchester-gb",
+          "short_name": "Manchester, UK",
+          "displayable_name": "Manchester, UK",
+          "localized_name": "Manchester",
+          "country": "GB",
+          "state": "England",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United Kingdom",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/manchester-gb",
+                  "location": "https://www.kickstarter.com/locations/manchester-gb"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549172.4a39f89c0574f9f6074bd4468b784e7706c8eb53&woe_id=28218"
+              }
+          }
+      },
+      "category": {
+          "id": 280,
+          "name": "Photobooks",
+          "analytics_name": "Photobooks",
+          "slug": "photography/photobooks",
+          "position": 5,
+          "parent_id": 15,
+          "parent_name": "Photography",
+          "color": 58341,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/photography/photobooks"
+              }
+          }
+      },
+      "profile": {
+          "id": 3692528,
+          "project_id": 3692528,
+          "state": "inactive",
+          "state_changed_at": 1553001749,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/028/191/348/eae2eff42648aa0e47972163af47b2e5_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1582457678&auto=format&frame=1&q=92&s=f6e07ef455ec0d0ae633141d95aef7da",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/028/191/348/eae2eff42648aa0e47972163af47b2e5_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1582457678&auto=format&frame=1&q=92&s=0a2a5efb258fada1211b6238b9cffd38"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/flashbak/cool-cats-and-red-devils?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/flashbak/cool-cats-and-red-devils/rewards"
+          }
+      }
+  },
+  {
+      "id": 701978317,
+      "photo": {
+          "key": "assets/033/794/422/f8531358fc181401933efe892e322e60_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/033/794/422/f8531358fc181401933efe892e322e60_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1623017031&auto=format&frame=1&q=92&s=885d7f8e898dd537f970d5144ca974a9",
+          "ed": "https://ksr-ugc.imgix.net/assets/033/794/422/f8531358fc181401933efe892e322e60_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1623017031&auto=format&frame=1&q=92&s=7f1208af0ba0c3b9612c5aba5284696b",
+          "med": "https://ksr-ugc.imgix.net/assets/033/794/422/f8531358fc181401933efe892e322e60_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1623017031&auto=format&frame=1&q=92&s=2cdf57b618cfc7240103c498c4abb91c",
+          "little": "https://ksr-ugc.imgix.net/assets/033/794/422/f8531358fc181401933efe892e322e60_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1623017031&auto=format&frame=1&q=92&s=3e9210c1fd46a3118c8fe987f5debcaf",
+          "small": "https://ksr-ugc.imgix.net/assets/033/794/422/f8531358fc181401933efe892e322e60_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1623017031&auto=format&frame=1&q=92&s=c4927de1c823338d4e58b973b91146d5",
+          "thumb": "https://ksr-ugc.imgix.net/assets/033/794/422/f8531358fc181401933efe892e322e60_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1623017031&auto=format&frame=1&q=92&s=49b7466f1759f13fe15427e71e9dbf54",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/033/794/422/f8531358fc181401933efe892e322e60_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1623017031&auto=format&frame=1&q=92&s=86eb6e6d18ed4975622fae0b8203b013",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/033/794/422/f8531358fc181401933efe892e322e60_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1623017031&auto=format&frame=1&q=92&s=cec300cddfed2312962a307a127f506d"
+      },
+      "name": "Bernie Photo Book (by Jared Polin)",
+      "blurb": "Unprecedented PHOTO Access to Senator Bernie Sanders",
+      "goal": 25000,
+      "pledged": 48147,
+      "state": "live",
+      "slug": "bernie",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1628355640,
+      "state_changed_at": 1623171642,
+      "created_at": 1613774269,
+      "launched_at": 1623171640,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 425,
+      "static_usd_rate": 1,
+      "usd_pledged": "48147.0",
+      "converted_pledged_amount": 48147,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 316734912,
+          "name": "Jared Polin",
+          "slug": "jaredpolin",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/007/253/613/dd2dfa7eb4e03d9cb8a190a87785c8a9_original.png?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1615410403&auto=format&frame=1&q=92&s=ede02aa7c3f6d5e46b01d12941076dbb",
+              "small": "https://ksr-ugc.imgix.net/assets/007/253/613/dd2dfa7eb4e03d9cb8a190a87785c8a9_original.png?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1615410403&auto=format&frame=1&q=92&s=850ff400572cac3acfd68f84fe516b00",
+              "medium": "https://ksr-ugc.imgix.net/assets/007/253/613/dd2dfa7eb4e03d9cb8a190a87785c8a9_original.png?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1615410403&auto=format&frame=1&q=92&s=53a5cc185fc52d33f3fd0f4ba72ad253"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/jaredpolin"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/316734912?signature=1627582747.d3639059c8e5b2b587b11c9b3f3d7ed995cd66b1"
+              }
+          }
+      },
+      "location": {
+          "id": 2471217,
+          "name": "Philadelphia",
+          "slug": "philadelphia-pa",
+          "short_name": "Philadelphia, PA",
+          "displayable_name": "Philadelphia, PA",
+          "localized_name": "Philadelphia",
+          "country": "US",
+          "state": "PA",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/philadelphia-pa",
+                  "location": "https://www.kickstarter.com/locations/philadelphia-pa"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549076.0e67cfa03b59109b1d404a21cd13577866fa3475&woe_id=2471217"
+              }
+          }
+      },
+      "category": {
+          "id": 278,
+          "name": "People",
+          "analytics_name": "People",
+          "slug": "photography/people",
+          "position": 4,
+          "parent_id": 15,
+          "parent_name": "Photography",
+          "color": 58341,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/photography/people"
+              }
+          }
+      },
+      "profile": {
+          "id": 4167325,
+          "project_id": 4167325,
+          "state": "inactive",
+          "state_changed_at": 1613774269,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/033/794/422/f8531358fc181401933efe892e322e60_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1623017031&auto=format&frame=1&q=92&s=cec300cddfed2312962a307a127f506d",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/033/794/422/f8531358fc181401933efe892e322e60_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1623017031&auto=format&frame=1&q=92&s=885d7f8e898dd537f970d5144ca974a9"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/jaredpolin/bernie?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/jaredpolin/bernie/rewards"
+          }
+      }
+  },
+  {
+      "id": 811247804,
+      "photo": {
+          "key": "assets/033/920/722/5c4133da53b26542fef24c53aab1fa12_original.JPG",
+          "full": "https://ksr-ugc.imgix.net/assets/033/920/722/5c4133da53b26542fef24c53aab1fa12_original.JPG?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1623937756&auto=format&frame=1&q=92&s=057a532ca30c4493fa155ec536542d23",
+          "ed": "https://ksr-ugc.imgix.net/assets/033/920/722/5c4133da53b26542fef24c53aab1fa12_original.JPG?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1623937756&auto=format&frame=1&q=92&s=f6d3e665f919851e45def6aa968dd2f2",
+          "med": "https://ksr-ugc.imgix.net/assets/033/920/722/5c4133da53b26542fef24c53aab1fa12_original.JPG?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1623937756&auto=format&frame=1&q=92&s=75dab019487e51f399ec0468227bdadd",
+          "little": "https://ksr-ugc.imgix.net/assets/033/920/722/5c4133da53b26542fef24c53aab1fa12_original.JPG?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1623937756&auto=format&frame=1&q=92&s=21930ed4eadc2fa511c859da2524ce22",
+          "small": "https://ksr-ugc.imgix.net/assets/033/920/722/5c4133da53b26542fef24c53aab1fa12_original.JPG?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1623937756&auto=format&frame=1&q=92&s=99e36e2bb994b8ab720ee6d9ab1da471",
+          "thumb": "https://ksr-ugc.imgix.net/assets/033/920/722/5c4133da53b26542fef24c53aab1fa12_original.JPG?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1623937756&auto=format&frame=1&q=92&s=f205874f41ba237dabf6e3ffcdb30fa8",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/033/920/722/5c4133da53b26542fef24c53aab1fa12_original.JPG?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1623937756&auto=format&frame=1&q=92&s=02f56db59d0c811e68de79aeefc8df86",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/033/920/722/5c4133da53b26542fef24c53aab1fa12_original.JPG?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1623937756&auto=format&frame=1&q=92&s=212043980f2ce38f839a45e5ee7b0d80"
+      },
+      "name": "Rock, Paper, Scissors",
+      "blurb": "A poetic photobook about childhood and nature.",
+      "goal": 8000,
+      "pledged": 5152,
+      "state": "live",
+      "slug": "rock-paper-scissors-1",
+      "disable_communication": false,
+      "country": "GB",
+      "country_displayable_name": "the United Kingdom",
+      "currency": "GBP",
+      "currency_symbol": "£",
+      "currency_trailing_code": false,
+      "deadline": 1629024561,
+      "state_changed_at": 1626259763,
+      "created_at": 1623936989,
+      "launched_at": 1626259761,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 48,
+      "static_usd_rate": 1.38985793,
+      "usd_pledged": "7160.54805536",
+      "converted_pledged_amount": 7148,
+      "fx_rate": 1.38747444,
+      "usd_exchange_rate": 1.38747444,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1240483420,
+          "name": "Mathieu Chaze",
+          "slug": "mathieuchaze",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/033/972/984/f7da61aa7a9227c208368daeb893ec58_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1625751999&auto=format&frame=1&q=92&s=bcc7627610735c7a5e3265bc8d8634d4",
+              "small": "https://ksr-ugc.imgix.net/assets/033/972/984/f7da61aa7a9227c208368daeb893ec58_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1625751999&auto=format&frame=1&q=92&s=25a81945b56b5c74633bca0f6ab59c88",
+              "medium": "https://ksr-ugc.imgix.net/assets/033/972/984/f7da61aa7a9227c208368daeb893ec58_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1625751999&auto=format&frame=1&q=92&s=60058e7db2f8f96fe8080c60f1fc6635"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/mathieuchaze"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1240483420?signature=1627582747.6c8214df9383fe0137c7db98fa887ae124717afe"
+              }
+          }
+      },
+      "location": {
+          "id": 16462,
+          "name": "Cobham",
+          "slug": "cobham-gravesham-borough-gb",
+          "short_name": "Cobham, UK",
+          "displayable_name": "Cobham, UK",
+          "localized_name": "Cobham",
+          "country": "GB",
+          "state": "England",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United Kingdom",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/cobham-gravesham-borough-gb",
+                  "location": "https://www.kickstarter.com/locations/cobham-gravesham-borough-gb"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627565973.4ba02d7b925522a3ee05ea41ba393c16ce801d2a&woe_id=16462"
+              }
+          }
+      },
+      "category": {
+          "id": 280,
+          "name": "Photobooks",
+          "analytics_name": "Photobooks",
+          "slug": "photography/photobooks",
+          "position": 5,
+          "parent_id": 15,
+          "parent_name": "Photography",
+          "color": 58341,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/photography/photobooks"
+              }
+          }
+      },
+      "profile": {
+          "id": 4235041,
+          "project_id": 4235041,
+          "state": "inactive",
+          "state_changed_at": 1623936989,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/033/920/722/5c4133da53b26542fef24c53aab1fa12_original.JPG?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1623937756&auto=format&frame=1&q=92&s=212043980f2ce38f839a45e5ee7b0d80",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/033/920/722/5c4133da53b26542fef24c53aab1fa12_original.JPG?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1623937756&auto=format&frame=1&q=92&s=057a532ca30c4493fa155ec536542d23"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/mathieuchaze/rock-paper-scissors-1?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/mathieuchaze/rock-paper-scissors-1/rewards"
+          }
+      }
+  },
+  {
+      "id": 410341760,
+      "photo": {
+          "key": "assets/034/107/724/86a2da7358f7854f3efbc3a8f32b91c8_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/107/724/86a2da7358f7854f3efbc3a8f32b91c8_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625477403&auto=format&frame=1&q=92&s=808d7cc1f6647f98b19fc8e1d9e60960",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/107/724/86a2da7358f7854f3efbc3a8f32b91c8_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1625477403&auto=format&frame=1&q=92&s=2c262df371a0f2f6c37a91a7c6ac6b7b",
+          "med": "https://ksr-ugc.imgix.net/assets/034/107/724/86a2da7358f7854f3efbc3a8f32b91c8_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1625477403&auto=format&frame=1&q=92&s=f484e0c4e0c7c3b91c8d0e63c8283ecc",
+          "little": "https://ksr-ugc.imgix.net/assets/034/107/724/86a2da7358f7854f3efbc3a8f32b91c8_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1625477403&auto=format&frame=1&q=92&s=098e95061f7954d6edec3412d6261000",
+          "small": "https://ksr-ugc.imgix.net/assets/034/107/724/86a2da7358f7854f3efbc3a8f32b91c8_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1625477403&auto=format&frame=1&q=92&s=a3b66992f866ccb568e7102ccd2483d3",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/107/724/86a2da7358f7854f3efbc3a8f32b91c8_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1625477403&auto=format&frame=1&q=92&s=51595d0e9eb2cecb40994b5d169d9be2",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/107/724/86a2da7358f7854f3efbc3a8f32b91c8_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1625477403&auto=format&frame=1&q=92&s=468f42f10e372c6751ae72079c268958",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/107/724/86a2da7358f7854f3efbc3a8f32b91c8_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625477403&auto=format&frame=1&q=92&s=2588902110fe4791ca60c240f87595e5"
+      },
+      "name": "Oktoberfest 1984-2019 by Volker Derlath",
+      "blurb": "A photo book about the mother of all German folk festivities, documented over 35 years. Published by Slanted.",
+      "goal": 12000,
+      "pledged": 1899,
+      "state": "live",
+      "slug": "oktoberfest-19842019-by-volker-derlath",
+      "disable_communication": false,
+      "country": "DE",
+      "country_displayable_name": "Germany",
+      "currency": "EUR",
+      "currency_symbol": "€",
+      "currency_trailing_code": false,
+      "deadline": 1629876020,
+      "state_changed_at": 1626247222,
+      "created_at": 1625047363,
+      "launched_at": 1626247220,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 53,
+      "static_usd_rate": 1.18702675,
+      "usd_pledged": "2254.16379825",
+      "converted_pledged_amount": 2244,
+      "fx_rate": 1.18212951,
+      "usd_exchange_rate": 1.18212951,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1746968649,
+          "name": "Slanted Publishers",
+          "slug": "slanted",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/023/595/969/270dd98e4151f190ca3198bad0c6ffbf_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1545230639&auto=format&frame=1&q=92&s=e29ea15f06bbfaa474cefe0cacd07df5",
+              "small": "https://ksr-ugc.imgix.net/assets/023/595/969/270dd98e4151f190ca3198bad0c6ffbf_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1545230639&auto=format&frame=1&q=92&s=335d23fc8cb0737d622d42c0ec01d469",
+              "medium": "https://ksr-ugc.imgix.net/assets/023/595/969/270dd98e4151f190ca3198bad0c6ffbf_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1545230639&auto=format&frame=1&q=92&s=3895539c536b3813f44e9fc4b52b56e6"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/slanted"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1746968649?signature=1627582747.084400f5d943878dbbfb9e668f7d566e4c05176f"
+              }
+          }
+      },
+      "location": {
+          "id": 676757,
+          "name": "Munich",
+          "slug": "munich-de",
+          "short_name": "Munich, Germany",
+          "displayable_name": "Munich, Germany",
+          "localized_name": "Munich",
+          "country": "DE",
+          "state": "Bavaria",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "Germany",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/munich-de",
+                  "location": "https://www.kickstarter.com/locations/munich-de"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549259.a7c448653b86fb17f8a5a7bb6bc4561a7299f320&woe_id=676757"
+              }
+          }
+      },
+      "category": {
+          "id": 280,
+          "name": "Photobooks",
+          "analytics_name": "Photobooks",
+          "slug": "photography/photobooks",
+          "position": 5,
+          "parent_id": 15,
+          "parent_name": "Photography",
+          "color": 58341,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/photography/photobooks"
+              }
+          }
+      },
+      "profile": {
+          "id": 4241386,
+          "project_id": 4241386,
+          "state": "inactive",
+          "state_changed_at": 1625047363,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/107/724/86a2da7358f7854f3efbc3a8f32b91c8_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625477403&auto=format&frame=1&q=92&s=2588902110fe4791ca60c240f87595e5",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/107/724/86a2da7358f7854f3efbc3a8f32b91c8_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625477403&auto=format&frame=1&q=92&s=808d7cc1f6647f98b19fc8e1d9e60960"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/slanted/oktoberfest-19842019-by-volker-derlath?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/slanted/oktoberfest-19842019-by-volker-derlath/rewards"
+          }
+      }
+  },
+  {
+      "id": 1197170829,
+      "photo": {
+          "key": "assets/033/900/256/2ae0134dc8ce003b64c98247260a8e35_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/033/900/256/2ae0134dc8ce003b64c98247260a8e35_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1623786931&auto=format&frame=1&q=92&s=a3f16c80eebfb187c05c4995285c6064",
+          "ed": "https://ksr-ugc.imgix.net/assets/033/900/256/2ae0134dc8ce003b64c98247260a8e35_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1623786931&auto=format&frame=1&q=92&s=7ecc452b23487fedde268159e9f3ae62",
+          "med": "https://ksr-ugc.imgix.net/assets/033/900/256/2ae0134dc8ce003b64c98247260a8e35_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1623786931&auto=format&frame=1&q=92&s=528433e73bd334dc91555f2d07ac5cd3",
+          "little": "https://ksr-ugc.imgix.net/assets/033/900/256/2ae0134dc8ce003b64c98247260a8e35_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1623786931&auto=format&frame=1&q=92&s=0e48541be32d673a662df9a5b9037e99",
+          "small": "https://ksr-ugc.imgix.net/assets/033/900/256/2ae0134dc8ce003b64c98247260a8e35_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1623786931&auto=format&frame=1&q=92&s=b38928136c80975a3b461993ae5afaad",
+          "thumb": "https://ksr-ugc.imgix.net/assets/033/900/256/2ae0134dc8ce003b64c98247260a8e35_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1623786931&auto=format&frame=1&q=92&s=f7a961a68df5eeff305980bfbf9e8469",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/033/900/256/2ae0134dc8ce003b64c98247260a8e35_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1623786931&auto=format&frame=1&q=92&s=9b75860de49961287a8c2fe6505e6740",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/033/900/256/2ae0134dc8ce003b64c98247260a8e35_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1623786931&auto=format&frame=1&q=92&s=c5794a6209b1612c16d1ad13ffa5a521"
+      },
+      "name": "Shimoda Explore v2",
+      "blurb": "The new adventure camera bag collection for travel and landscape photographers from Shimoda",
+      "goal": 40000,
+      "pledged": 586587,
+      "state": "live",
+      "slug": "shimoda-explore-v2",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1627653601,
+      "state_changed_at": 1625061609,
+      "created_at": 1621861005,
+      "launched_at": 1625061601,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 1886,
+      "static_usd_rate": 1,
+      "usd_pledged": "586587.0",
+      "converted_pledged_amount": 586587,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1032536695,
+          "name": "Shimoda Designs",
+          "slug": "shimodadesigns",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/018/202/263/c3652d227111d47bb07b91d7f1fbf1dc_original.png?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1569849702&auto=format&frame=1&q=92&s=69aed7af5bb31bc1cb0bd12db749ec5a",
+              "small": "https://ksr-ugc.imgix.net/assets/018/202/263/c3652d227111d47bb07b91d7f1fbf1dc_original.png?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1569849702&auto=format&frame=1&q=92&s=a3b4e03b8fba9cd1223a0bdf39d9c14a",
+              "medium": "https://ksr-ugc.imgix.net/assets/018/202/263/c3652d227111d47bb07b91d7f1fbf1dc_original.png?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1569849702&auto=format&frame=1&q=92&s=63c5a98fdb7e721ee96ea63500655351"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/shimodadesigns"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1032536695?signature=1627582747.4582ce443587c357db9f35f7f3822848819d4c23"
+              }
+          }
+      },
+      "location": {
+          "id": 2519492,
+          "name": "White Plains",
+          "slug": "white-plains-ny",
+          "short_name": "White Plains, NY",
+          "displayable_name": "White Plains, NY",
+          "localized_name": "White Plains",
+          "country": "US",
+          "state": "NY",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/white-plains-ny",
+                  "location": "https://www.kickstarter.com/locations/white-plains-ny"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627562250.c2860031b4ed90db72d85e61c0fc2ae3838d2a92&woe_id=2519492"
+              }
+          }
+      },
+      "category": {
+          "id": 277,
+          "name": "Nature",
+          "analytics_name": "Nature",
+          "slug": "photography/nature",
+          "position": 3,
+          "parent_id": 15,
+          "parent_name": "Photography",
+          "color": 58341,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/photography/nature"
+              }
+          }
+      },
+      "profile": {
+          "id": 4221919,
+          "project_id": 4221919,
+          "state": "inactive",
+          "state_changed_at": 1621861005,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/033/900/256/2ae0134dc8ce003b64c98247260a8e35_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1623786931&auto=format&frame=1&q=92&s=c5794a6209b1612c16d1ad13ffa5a521",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/033/900/256/2ae0134dc8ce003b64c98247260a8e35_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1623786931&auto=format&frame=1&q=92&s=a3f16c80eebfb187c05c4995285c6064"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/shimodadesigns/shimoda-explore-v2?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/shimodadesigns/shimoda-explore-v2/rewards"
+          }
+      }
+  },
+  {
+      "id": 1245646522,
+      "photo": {
+          "key": "assets/034/112/014/3e70ac1d61cd3c4dac5be34b796557b7_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/112/014/3e70ac1d61cd3c4dac5be34b796557b7_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625507916&auto=format&frame=1&q=92&s=e2d51bde4d18b8e3c4b9125cd19c1d6b",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/112/014/3e70ac1d61cd3c4dac5be34b796557b7_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1625507916&auto=format&frame=1&q=92&s=1e899570c949d310f2af920ba082af8c",
+          "med": "https://ksr-ugc.imgix.net/assets/034/112/014/3e70ac1d61cd3c4dac5be34b796557b7_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1625507916&auto=format&frame=1&q=92&s=2e6b890679d629c25aa3abd8858765a0",
+          "little": "https://ksr-ugc.imgix.net/assets/034/112/014/3e70ac1d61cd3c4dac5be34b796557b7_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1625507916&auto=format&frame=1&q=92&s=0db5b28bf796dea0477946f541430957",
+          "small": "https://ksr-ugc.imgix.net/assets/034/112/014/3e70ac1d61cd3c4dac5be34b796557b7_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1625507916&auto=format&frame=1&q=92&s=4689f5e208e2653be750459e9c343612",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/112/014/3e70ac1d61cd3c4dac5be34b796557b7_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1625507916&auto=format&frame=1&q=92&s=85c7226eeed121c0846f99e44afd99bb",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/112/014/3e70ac1d61cd3c4dac5be34b796557b7_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1625507916&auto=format&frame=1&q=92&s=49bd2b35a1d062664768ad69488888f9",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/112/014/3e70ac1d61cd3c4dac5be34b796557b7_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625507916&auto=format&frame=1&q=92&s=1eb9b66ced80cf2c41a626010c62ed00"
+      },
+      "name": "Rabbits in Driveway",
+      "blurb": "A Different Boulder Photo Book",
+      "goal": 22500,
+      "pledged": 15528,
+      "state": "live",
+      "slug": "rabbits-in-driveway",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1628607600,
+      "state_changed_at": 1625842813,
+      "created_at": 1623975106,
+      "launched_at": 1625842812,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 247,
+      "static_usd_rate": 1,
+      "usd_pledged": "15528.0",
+      "converted_pledged_amount": 15528,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 637526808,
+          "name": "Karen Jacot",
+          "slug": "karenjacot",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/034/088/804/3391b766cc0cf667a810343975b60e3f_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1625259654&auto=format&frame=1&q=92&s=75c1c783635635f788c617c147bde5c6",
+              "small": "https://ksr-ugc.imgix.net/assets/034/088/804/3391b766cc0cf667a810343975b60e3f_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1625259654&auto=format&frame=1&q=92&s=fe6b5aabf434269e267f257cbdb07af4",
+              "medium": "https://ksr-ugc.imgix.net/assets/034/088/804/3391b766cc0cf667a810343975b60e3f_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1625259654&auto=format&frame=1&q=92&s=ac223be832cae58d44cc85e7e070e7ec"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/karenjacot"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/637526808?signature=1627582747.3dc7a86e83e1b5419ecb351b3d352cbf5b60093f"
+              }
+          }
+      },
+      "location": {
+          "id": 2367231,
+          "name": "Boulder",
+          "slug": "boulder-co",
+          "short_name": "Boulder, CO",
+          "displayable_name": "Boulder, CO",
+          "localized_name": "Boulder",
+          "country": "US",
+          "state": "CO",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/boulder-co",
+                  "location": "https://www.kickstarter.com/locations/boulder-co"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549205.eee9b080bd2aa6af3ec132ca905a2e52fed47d61&woe_id=2367231"
+              }
+          }
+      },
+      "category": {
+          "id": 280,
+          "name": "Photobooks",
+          "analytics_name": "Photobooks",
+          "slug": "photography/photobooks",
+          "position": 5,
+          "parent_id": 15,
+          "parent_name": "Photography",
+          "color": 58341,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/photography/photobooks"
+              }
+          }
+      },
+      "profile": {
+          "id": 4235393,
+          "project_id": 4235393,
+          "state": "inactive",
+          "state_changed_at": 1623975106,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/112/014/3e70ac1d61cd3c4dac5be34b796557b7_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625507916&auto=format&frame=1&q=92&s=1eb9b66ced80cf2c41a626010c62ed00",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/112/014/3e70ac1d61cd3c4dac5be34b796557b7_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625507916&auto=format&frame=1&q=92&s=e2d51bde4d18b8e3c4b9125cd19c1d6b"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/karenjacot/rabbits-in-driveway?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/karenjacot/rabbits-in-driveway/rewards"
+          }
+      }
+  },
+  {
+      "id": 489057596,
+      "photo": {
+          "key": "assets/034/237/945/46a6c770a6f206aae9c3f1d216ec0527_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/237/945/46a6c770a6f206aae9c3f1d216ec0527_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626531474&auto=format&frame=1&q=92&s=e42d2f91f41fa824cc5717b3a687593d",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/237/945/46a6c770a6f206aae9c3f1d216ec0527_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1626531474&auto=format&frame=1&q=92&s=f5f31eda2e32c222f63aacc6d200849a",
+          "med": "https://ksr-ugc.imgix.net/assets/034/237/945/46a6c770a6f206aae9c3f1d216ec0527_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1626531474&auto=format&frame=1&q=92&s=0be4c13f466228999e0a097188be50b7",
+          "little": "https://ksr-ugc.imgix.net/assets/034/237/945/46a6c770a6f206aae9c3f1d216ec0527_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1626531474&auto=format&frame=1&q=92&s=d55f1aa574e08f19312999d7aba46b67",
+          "small": "https://ksr-ugc.imgix.net/assets/034/237/945/46a6c770a6f206aae9c3f1d216ec0527_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1626531474&auto=format&frame=1&q=92&s=453a16795f65074abb96678ae4dfc47b",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/237/945/46a6c770a6f206aae9c3f1d216ec0527_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1626531474&auto=format&frame=1&q=92&s=d02dfea063d3fc56be022b0b942f18e2",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/237/945/46a6c770a6f206aae9c3f1d216ec0527_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1626531474&auto=format&frame=1&q=92&s=1f2eda8766105584f26a8a204f5c2829",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/237/945/46a6c770a6f206aae9c3f1d216ec0527_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626531474&auto=format&frame=1&q=92&s=18f6cce079e0fb4441539083e582ed3b"
+      },
+      "name": "Nude in Nature Magazine Fabienne",
+      "blurb": "Nude in Nature Magazine. Pictures shot in beautiful places.",
+      "goal": 299,
+      "pledged": 707,
+      "state": "live",
+      "slug": "nude-in-nature-magazine-fabienne",
+      "disable_communication": false,
+      "country": "DE",
+      "country_displayable_name": "Germany",
+      "currency": "EUR",
+      "currency_symbol": "€",
+      "currency_trailing_code": false,
+      "deadline": 1629288517,
+      "state_changed_at": 1626696518,
+      "created_at": 1626530579,
+      "launched_at": 1626696517,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 14,
+      "static_usd_rate": 1.18066542,
+      "usd_pledged": "834.73045194",
+      "converted_pledged_amount": 835,
+      "fx_rate": 1.18212951,
+      "usd_exchange_rate": 1.18212951,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 220695024,
+          "name": "Jack Stark",
+          "slug": "jackstarkphotography",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/030/905/764/5c0e4d656315cc21c5499d15faaad6b5_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1602074538&auto=format&frame=1&q=92&s=4a5218b8ffb556727bcb9b9f71d284da",
+              "small": "https://ksr-ugc.imgix.net/assets/030/905/764/5c0e4d656315cc21c5499d15faaad6b5_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1602074538&auto=format&frame=1&q=92&s=ebba19bddac9eb177f783aa7d9fa7989",
+              "medium": "https://ksr-ugc.imgix.net/assets/030/905/764/5c0e4d656315cc21c5499d15faaad6b5_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1602074538&auto=format&frame=1&q=92&s=cb3e620fc4be0088516833e3ac9cd75f"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/jackstarkphotography"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/220695024?signature=1627582747.3162c49d097903a41cb17b34a97247b5eb7676c8"
+              }
+          }
+      },
+      "location": {
+          "id": 638242,
+          "name": "Berlin",
+          "slug": "berlin-berlin-de",
+          "short_name": "Berlin, Germany",
+          "displayable_name": "Berlin, Germany",
+          "localized_name": "Berlin",
+          "country": "DE",
+          "state": "Berlin",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "Germany",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/berlin-berlin-de",
+                  "location": "https://www.kickstarter.com/locations/berlin-berlin-de"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549106.409a6232050bba809b09d907ef27281a88bddb8a&woe_id=638242"
+              }
+          }
+      },
+      "category": {
+          "id": 280,
+          "name": "Photobooks",
+          "analytics_name": "Photobooks",
+          "slug": "photography/photobooks",
+          "position": 5,
+          "parent_id": 15,
+          "parent_name": "Photography",
+          "color": 58341,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/photography/photobooks"
+              }
+          }
+      },
+      "profile": {
+          "id": 4249989,
+          "project_id": 4249989,
+          "state": "inactive",
+          "state_changed_at": 1626530579,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/237/945/46a6c770a6f206aae9c3f1d216ec0527_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626531474&auto=format&frame=1&q=92&s=18f6cce079e0fb4441539083e582ed3b",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/237/945/46a6c770a6f206aae9c3f1d216ec0527_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626531474&auto=format&frame=1&q=92&s=e42d2f91f41fa824cc5717b3a687593d"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/jackstarkphotography/nude-in-nature-magazine-fabienne?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/jackstarkphotography/nude-in-nature-magazine-fabienne/rewards"
+          }
+      }
+  },
+  {
+      "id": 1350477933,
+      "photo": {
+          "key": "assets/034/113/628/86cba619e798991d81ab6e7aa844a799_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/034/113/628/86cba619e798991d81ab6e7aa844a799_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625519334&auto=format&frame=1&q=92&s=a955debe04235ba97c8b3ed092de2959",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/113/628/86cba619e798991d81ab6e7aa844a799_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1625519334&auto=format&frame=1&q=92&s=29527ac61da4105eaa6650984a74da5b",
+          "med": "https://ksr-ugc.imgix.net/assets/034/113/628/86cba619e798991d81ab6e7aa844a799_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1625519334&auto=format&frame=1&q=92&s=890375379f06f5403926f0af185316fa",
+          "little": "https://ksr-ugc.imgix.net/assets/034/113/628/86cba619e798991d81ab6e7aa844a799_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1625519334&auto=format&frame=1&q=92&s=4fd82158e7b95d3f9b101582c716b469",
+          "small": "https://ksr-ugc.imgix.net/assets/034/113/628/86cba619e798991d81ab6e7aa844a799_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1625519334&auto=format&frame=1&q=92&s=3d6ea738442671dff8592c00ce775eb2",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/113/628/86cba619e798991d81ab6e7aa844a799_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1625519334&auto=format&frame=1&q=92&s=25aacaf09c3ae6a3857dbcd35e589110",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/113/628/86cba619e798991d81ab6e7aa844a799_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1625519334&auto=format&frame=1&q=92&s=10bf0a054bebd13c550dd5c6763cbd67",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/113/628/86cba619e798991d81ab6e7aa844a799_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625519334&auto=format&frame=1&q=92&s=fd59b264d59069d7b2768cd1a54e8878"
+      },
+      "name": "Wild Alaska Photography",
+      "blurb": "I will be creating a book filled with pictures of my Alaskan Marine Biology Experience",
+      "goal": 15000,
+      "pledged": 5,
+      "state": "live",
+      "slug": "wild-alaska-photography",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1630965241,
+      "state_changed_at": 1625781242,
+      "created_at": 1625518792,
+      "launched_at": 1625781241,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 3,
+      "static_usd_rate": 1,
+      "usd_pledged": "5.0",
+      "converted_pledged_amount": 5,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 908409428,
+          "name": "John Robinson",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/034/114/229/8162e2428f79a8215846dd1a4b1bf080_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1625523909&auto=format&frame=1&q=92&s=f434e4ff3db102a6efd7b364c9292c98",
+              "small": "https://ksr-ugc.imgix.net/assets/034/114/229/8162e2428f79a8215846dd1a4b1bf080_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1625523909&auto=format&frame=1&q=92&s=69a659729ec6825e054bf70363352aea",
+              "medium": "https://ksr-ugc.imgix.net/assets/034/114/229/8162e2428f79a8215846dd1a4b1bf080_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1625523909&auto=format&frame=1&q=92&s=994712f18018fadbcbdcbea9d369dab2"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/908409428"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/908409428?signature=1627582747.123bc24906a2abf2f77fb69b12e8a64e32c08a37"
+              }
+          }
+      },
+      "location": {
+          "id": 2354490,
+          "name": "Anchorage",
+          "slug": "anchorage-ak",
+          "short_name": "Anchorage, AK",
+          "displayable_name": "Anchorage, AK",
+          "localized_name": "Anchorage",
+          "country": "US",
+          "state": "AK",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/anchorage-ak",
+                  "location": "https://www.kickstarter.com/locations/anchorage-ak"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627552224.78618f0813b3c7533732e5b2a69bdee5978872c7&woe_id=2354490"
+              }
+          }
+      },
+      "category": {
+          "id": 277,
+          "name": "Nature",
+          "analytics_name": "Nature",
+          "slug": "photography/nature",
+          "position": 3,
+          "parent_id": 15,
+          "parent_name": "Photography",
+          "color": 58341,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/photography/nature"
+              }
+          }
+      },
+      "profile": {
+          "id": 4244016,
+          "project_id": 4244016,
+          "state": "inactive",
+          "state_changed_at": 1625518792,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/113/628/86cba619e798991d81ab6e7aa844a799_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625519334&auto=format&frame=1&q=92&s=fd59b264d59069d7b2768cd1a54e8878",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/113/628/86cba619e798991d81ab6e7aa844a799_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625519334&auto=format&frame=1&q=92&s=a955debe04235ba97c8b3ed092de2959"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/908409428/wild-alaska-photography?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/908409428/wild-alaska-photography/rewards"
+          }
+      }
+  },
+  {
+      "id": 1706144111,
+      "photo": {
+          "key": "assets/034/186/097/9f82184c3fb013ae42bf0655c123e0cc_original.jpeg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/186/097/9f82184c3fb013ae42bf0655c123e0cc_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626128385&auto=format&frame=1&q=92&s=59583c3e98ed8ad076fb426456306a8c",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/186/097/9f82184c3fb013ae42bf0655c123e0cc_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1626128385&auto=format&frame=1&q=92&s=76b214ff7b2b3b3ea03516ae5fc3ebdc",
+          "med": "https://ksr-ugc.imgix.net/assets/034/186/097/9f82184c3fb013ae42bf0655c123e0cc_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1626128385&auto=format&frame=1&q=92&s=dd88d22d5d6e205005412bb52e9682c9",
+          "little": "https://ksr-ugc.imgix.net/assets/034/186/097/9f82184c3fb013ae42bf0655c123e0cc_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1626128385&auto=format&frame=1&q=92&s=3108d5a24a6be65000ad80d53507da75",
+          "small": "https://ksr-ugc.imgix.net/assets/034/186/097/9f82184c3fb013ae42bf0655c123e0cc_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1626128385&auto=format&frame=1&q=92&s=ad426298faf7a0b579f62cc978a35c90",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/186/097/9f82184c3fb013ae42bf0655c123e0cc_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1626128385&auto=format&frame=1&q=92&s=90c66e47539e62b526b8d9d92ceaa299",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/186/097/9f82184c3fb013ae42bf0655c123e0cc_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1626128385&auto=format&frame=1&q=92&s=3229eeb11b79a1f257ceb7869c5db8b9",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/186/097/9f82184c3fb013ae42bf0655c123e0cc_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626128385&auto=format&frame=1&q=92&s=3ae28a63019a0485b4109f705c70a37f"
+      },
+      "name": "Toast Photography App",
+      "blurb": "Share photography concepts and download high quality wallpapers captured and produced through the creative vision of Craigapella!",
+      "goal": 2000,
+      "pledged": 16,
+      "state": "live",
+      "slug": "toast-photography-app",
+      "disable_communication": false,
+      "country": "DE",
+      "country_displayable_name": "Germany",
+      "currency": "EUR",
+      "currency_symbol": "€",
+      "currency_trailing_code": false,
+      "deadline": 1629242440,
+      "state_changed_at": 1626650441,
+      "created_at": 1626127038,
+      "launched_at": 1626650440,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 2,
+      "static_usd_rate": 1.18053998,
+      "usd_pledged": "18.88863968",
+      "converted_pledged_amount": 18,
+      "fx_rate": 1.18212951,
+      "usd_exchange_rate": 1.18212951,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1697924925,
+          "name": "Tinashe Mukombe",
+          "slug": "toastwallpapers",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/034/185/098/85cf860c02ea31c7becf27124d5d9a53_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1626121923&auto=format&frame=1&q=92&s=ef182d37d3dd37b6f6122fec1a034c95",
+              "small": "https://ksr-ugc.imgix.net/assets/034/185/098/85cf860c02ea31c7becf27124d5d9a53_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1626121923&auto=format&frame=1&q=92&s=bf1fc8a55086cd92549e773b04b22abc",
+              "medium": "https://ksr-ugc.imgix.net/assets/034/185/098/85cf860c02ea31c7becf27124d5d9a53_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1626121923&auto=format&frame=1&q=92&s=9024cfc3cb7bc3968a20eba34666667c"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/toastwallpapers"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1697924925?signature=1627582747.216d8dfaf47fda16f926503a0c63549663f2e7a0"
+              }
+          }
+      },
+      "location": {
+          "id": 667336,
+          "name": "Kleve",
+          "slug": "kleve-gemeinde-kleve-schleswig-holstein",
+          "short_name": "Kleve, Germany",
+          "displayable_name": "Kleve, Germany",
+          "localized_name": "Kleve",
+          "country": "DE",
+          "state": "Schleswig-Holstein",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "Germany",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/kleve-gemeinde-kleve-schleswig-holstein",
+                  "location": "https://www.kickstarter.com/locations/kleve-gemeinde-kleve-schleswig-holstein"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627546867.48caa08932be6503f85c015bb1b97ba54bc04f6d&woe_id=667336"
+              }
+          }
+      },
+      "category": {
+          "id": 15,
+          "name": "Photography",
+          "analytics_name": "Photography",
+          "slug": "photography",
+          "position": 12,
+          "color": 58341,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/photography"
+              }
+          }
+      },
+      "profile": {
+          "id": 4247589,
+          "project_id": 4247589,
+          "state": "inactive",
+          "state_changed_at": 1626127038,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/186/097/9f82184c3fb013ae42bf0655c123e0cc_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626128385&auto=format&frame=1&q=92&s=3ae28a63019a0485b4109f705c70a37f",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/186/097/9f82184c3fb013ae42bf0655c123e0cc_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626128385&auto=format&frame=1&q=92&s=59583c3e98ed8ad076fb426456306a8c"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/toastwallpapers/toast-photography-app?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/toastwallpapers/toast-photography-app/rewards"
+          }
+      }
+  },
+  {
+      "id": 2089279779,
+      "photo": {
+          "key": "assets/034/255/991/a455a66d4fa71a37ffd14c7c32e9bba7_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/255/991/a455a66d4fa71a37ffd14c7c32e9bba7_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626716949&auto=format&frame=1&q=92&s=b213e96d56b34d1dc8f7d6fbddfa789f",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/255/991/a455a66d4fa71a37ffd14c7c32e9bba7_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1626716949&auto=format&frame=1&q=92&s=4fc930c61e75de20b2ddbb0653a08539",
+          "med": "https://ksr-ugc.imgix.net/assets/034/255/991/a455a66d4fa71a37ffd14c7c32e9bba7_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1626716949&auto=format&frame=1&q=92&s=e7cf8569c2132e0c2e55fd7b9ded4d76",
+          "little": "https://ksr-ugc.imgix.net/assets/034/255/991/a455a66d4fa71a37ffd14c7c32e9bba7_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1626716949&auto=format&frame=1&q=92&s=c124fb10302cec552d6c837208bd8db7",
+          "small": "https://ksr-ugc.imgix.net/assets/034/255/991/a455a66d4fa71a37ffd14c7c32e9bba7_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1626716949&auto=format&frame=1&q=92&s=afe78e285458312a9f9a3905f15aa707",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/255/991/a455a66d4fa71a37ffd14c7c32e9bba7_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1626716949&auto=format&frame=1&q=92&s=ff8dd1996bc36ada331aa175e9c0e889",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/255/991/a455a66d4fa71a37ffd14c7c32e9bba7_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1626716949&auto=format&frame=1&q=92&s=ddbee81685d339b2b3dd91175da9a2f0",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/255/991/a455a66d4fa71a37ffd14c7c32e9bba7_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626716949&auto=format&frame=1&q=92&s=d6cf4b54d0543e05cf38d7ab766edb05"
+      },
+      "name": "Amy: Boobs, Brain & Tattoos - Art Nude Photobook",
+      "blurb": "Boobs, Brain & Tattoos - Art Nude Photobook. After \"Wild in nature\" and \"River Queen\" BBT is the third part of my AMY world.",
+      "goal": 299,
+      "pledged": 172,
+      "state": "live",
+      "slug": "amy-boobs-brain-and-tattoos-art-nude-photobook",
+      "disable_communication": false,
+      "country": "DE",
+      "country_displayable_name": "Germany",
+      "currency": "EUR",
+      "currency_symbol": "€",
+      "currency_trailing_code": false,
+      "deadline": 1628585040,
+      "state_changed_at": 1627012078,
+      "created_at": 1626434794,
+      "launched_at": 1627012077,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 8,
+      "static_usd_rate": 1.17749432,
+      "usd_pledged": "202.52902304",
+      "converted_pledged_amount": 203,
+      "fx_rate": 1.18212951,
+      "usd_exchange_rate": 1.18212951,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 2009885725,
+          "name": "Mr. Meyer",
+          "slug": "mrmeyer",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/028/713/098/d14fbc0f6dcf3211c975f3b9eb011405_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1586787236&auto=format&frame=1&q=92&s=d4e0ef0b518028923ae88469a570acfb",
+              "small": "https://ksr-ugc.imgix.net/assets/028/713/098/d14fbc0f6dcf3211c975f3b9eb011405_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1586787236&auto=format&frame=1&q=92&s=347286ca0422611e1e87bf672b99f142",
+              "medium": "https://ksr-ugc.imgix.net/assets/028/713/098/d14fbc0f6dcf3211c975f3b9eb011405_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1586787236&auto=format&frame=1&q=92&s=92282b9fded58994fffb6a3c0e73c70b"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/mrmeyer"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/2009885725?signature=1627582748.bc9f1835a351345cf3c5153ccfa97b76b774ff98"
+              }
+          }
+      },
+      "location": {
+          "id": 671072,
+          "name": "Leipzig",
+          "slug": "leipzig-de",
+          "short_name": "Leipzig, Germany",
+          "displayable_name": "Leipzig, Germany",
+          "localized_name": "Leipzig",
+          "country": "DE",
+          "state": "Saxony",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "Germany",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/leipzig-de",
+                  "location": "https://www.kickstarter.com/locations/leipzig-de"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627552082.a059ee3aebb5f7ec6cb0791c7f8de37923a57c53&woe_id=671072"
+              }
+          }
+      },
+      "category": {
+          "id": 280,
+          "name": "Photobooks",
+          "analytics_name": "Photobooks",
+          "slug": "photography/photobooks",
+          "position": 5,
+          "parent_id": 15,
+          "parent_name": "Photography",
+          "color": 58341,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/photography/photobooks"
+              }
+          }
+      },
+      "profile": {
+          "id": 4249531,
+          "project_id": 4249531,
+          "state": "inactive",
+          "state_changed_at": 1626434794,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/255/991/a455a66d4fa71a37ffd14c7c32e9bba7_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626716949&auto=format&frame=1&q=92&s=d6cf4b54d0543e05cf38d7ab766edb05",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/255/991/a455a66d4fa71a37ffd14c7c32e9bba7_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626716949&auto=format&frame=1&q=92&s=b213e96d56b34d1dc8f7d6fbddfa789f"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/mrmeyer/amy-boobs-brain-and-tattoos-art-nude-photobook?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/mrmeyer/amy-boobs-brain-and-tattoos-art-nude-photobook/rewards"
+          }
+      }
+  }
+]

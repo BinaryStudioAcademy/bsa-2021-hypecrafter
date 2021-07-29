@@ -1,0 +1,1549 @@
+[
+  {
+      "id": 127213128,
+      "photo": {
+          "key": "assets/034/015/126/1de63aaa0dceb677cfaac3f2c281cd46_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/015/126/1de63aaa0dceb677cfaac3f2c281cd46_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624680185&auto=format&frame=1&q=92&s=98318184e4793f162f6827de6bf1c01b",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/015/126/1de63aaa0dceb677cfaac3f2c281cd46_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1624680185&auto=format&frame=1&q=92&s=0cccca2026b0a1fcd407c824129ce014",
+          "med": "https://ksr-ugc.imgix.net/assets/034/015/126/1de63aaa0dceb677cfaac3f2c281cd46_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1624680185&auto=format&frame=1&q=92&s=d2880fb683b62453881ded2b1a35ef82",
+          "little": "https://ksr-ugc.imgix.net/assets/034/015/126/1de63aaa0dceb677cfaac3f2c281cd46_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1624680185&auto=format&frame=1&q=92&s=cd4bb7bc8b824281ceff33cd20d36cda",
+          "small": "https://ksr-ugc.imgix.net/assets/034/015/126/1de63aaa0dceb677cfaac3f2c281cd46_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1624680185&auto=format&frame=1&q=92&s=7f6f32b38f613e7ce3f1cde470d0bfba",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/015/126/1de63aaa0dceb677cfaac3f2c281cd46_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1624680185&auto=format&frame=1&q=92&s=974c357528566dcf8d2884b84f3a8e49",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/015/126/1de63aaa0dceb677cfaac3f2c281cd46_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1624680185&auto=format&frame=1&q=92&s=b4a9d02f71ba9811da814a90dc55aacd",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/015/126/1de63aaa0dceb677cfaac3f2c281cd46_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624680185&auto=format&frame=1&q=92&s=a2103d83222158ef1c4dfa450d796e80"
+      },
+      "name": "The Uniquely Eugene Podcast",
+      "blurb": "A podcast dedicated to highlighting the unique stories, ideas, and perspectives of the people in Eugene, Oregon.",
+      "goal": 2400,
+      "pledged": 2400,
+      "state": "live",
+      "slug": "the-uniquely-eugene-podcast-0",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1627758041,
+      "state_changed_at": 1625166043,
+      "created_at": 1624680133,
+      "launched_at": 1625166041,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 23,
+      "static_usd_rate": 1,
+      "usd_pledged": "2400.0",
+      "converted_pledged_amount": 2400,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1268778287,
+          "name": "Antheny Chhay",
+          "slug": "antheny",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/033/998/851/fe888ad9a6e89c9446e2caf1c63763e5_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1624555244&auto=format&frame=1&q=92&s=542e4bb892149cdb1a518cb18f0105c7",
+              "small": "https://ksr-ugc.imgix.net/assets/033/998/851/fe888ad9a6e89c9446e2caf1c63763e5_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1624555244&auto=format&frame=1&q=92&s=624d4d52b943fdeaef907644649b03d2",
+              "medium": "https://ksr-ugc.imgix.net/assets/033/998/851/fe888ad9a6e89c9446e2caf1c63763e5_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1624555244&auto=format&frame=1&q=92&s=6007aabfadc010131ebecd0f5d345ad2"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/antheny"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1268778287?signature=1627583214.813ae74ab0419ba0cab573577bf303a07e605b1e"
+              }
+          }
+      },
+      "location": {
+          "id": 2400539,
+          "name": "Eugene",
+          "slug": "eugene-or",
+          "short_name": "Eugene, OR",
+          "displayable_name": "Eugene, OR",
+          "localized_name": "Eugene",
+          "country": "US",
+          "state": "OR",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/eugene-or",
+                  "location": "https://www.kickstarter.com/locations/eugene-or"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627550834.06896ce6cadc19f30c6ecf2a8feb73f7a7837858&woe_id=2400539"
+              }
+          }
+      },
+      "category": {
+          "id": 357,
+          "name": "Audio",
+          "analytics_name": "Audio",
+          "slug": "journalism/audio",
+          "position": 1,
+          "parent_id": 13,
+          "parent_name": "Journalism",
+          "color": 1228010,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/journalism/audio"
+              }
+          }
+      },
+      "profile": {
+          "id": 4239411,
+          "project_id": 4239411,
+          "state": "inactive",
+          "state_changed_at": 1624680133,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/015/126/1de63aaa0dceb677cfaac3f2c281cd46_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624680185&auto=format&frame=1&q=92&s=a2103d83222158ef1c4dfa450d796e80",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/015/126/1de63aaa0dceb677cfaac3f2c281cd46_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624680185&auto=format&frame=1&q=92&s=98318184e4793f162f6827de6bf1c01b"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/antheny/the-uniquely-eugene-podcast-0?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/antheny/the-uniquely-eugene-podcast-0/rewards"
+          }
+      }
+  },
+  {
+      "id": 1717835210,
+      "photo": {
+          "key": "assets/034/091/132/3e3f0f064706e65a1ca8fffd2cd0ab07_original.jpeg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/091/132/3e3f0f064706e65a1ca8fffd2cd0ab07_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625276927&auto=format&frame=1&q=92&s=34c620a4a13ec054f1b67c7100011fbe",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/091/132/3e3f0f064706e65a1ca8fffd2cd0ab07_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1625276927&auto=format&frame=1&q=92&s=bb7117815d235fb5d1121a03760e1dc8",
+          "med": "https://ksr-ugc.imgix.net/assets/034/091/132/3e3f0f064706e65a1ca8fffd2cd0ab07_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1625276927&auto=format&frame=1&q=92&s=c6e4d7ce11ac540e4b66e918f83d56e4",
+          "little": "https://ksr-ugc.imgix.net/assets/034/091/132/3e3f0f064706e65a1ca8fffd2cd0ab07_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1625276927&auto=format&frame=1&q=92&s=ddf3305789fe92ec9f34b30bfd87a456",
+          "small": "https://ksr-ugc.imgix.net/assets/034/091/132/3e3f0f064706e65a1ca8fffd2cd0ab07_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1625276927&auto=format&frame=1&q=92&s=2e2598d7406989672fd742a14af83509",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/091/132/3e3f0f064706e65a1ca8fffd2cd0ab07_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1625276927&auto=format&frame=1&q=92&s=4931d6636bd398cd20752687345b95a4",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/091/132/3e3f0f064706e65a1ca8fffd2cd0ab07_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1625276927&auto=format&frame=1&q=92&s=a38c04490e13385177a4d17a1b202f94",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/091/132/3e3f0f064706e65a1ca8fffd2cd0ab07_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625276927&auto=format&frame=1&q=92&s=8a4c5c986c824eddd58935488d40e418"
+      },
+      "name": "Nubian Scientist - The Africa of Science and Innovation",
+      "blurb": "A magazine and debate space for science and innovation in Africa and its diasporas.",
+      "goal": 18699,
+      "pledged": 1556.29,
+      "state": "live",
+      "slug": "nubian-scientist",
+      "disable_communication": false,
+      "country": "CA",
+      "country_displayable_name": "Canada",
+      "currency": "CAD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1627907107,
+      "state_changed_at": 1625315108,
+      "created_at": 1624072050,
+      "launched_at": 1625315107,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 20,
+      "static_usd_rate": 0.80440686,
+      "usd_pledged": "1251.8903521494",
+      "converted_pledged_amount": 1236,
+      "fx_rate": 0.79442567,
+      "usd_exchange_rate": 0.79442567,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 2062073936,
+          "name": "Elkaïoum Moutuou M'kouboi",
+          "slug": "elka",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/033/259/686/d2369720a5c6d875fec62c44817ad552_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1619267674&auto=format&frame=1&q=92&s=400e11300d70cc6757ee523bc0a91613",
+              "small": "https://ksr-ugc.imgix.net/assets/033/259/686/d2369720a5c6d875fec62c44817ad552_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1619267674&auto=format&frame=1&q=92&s=320128600bd956b5ed52dd0e8968b083",
+              "medium": "https://ksr-ugc.imgix.net/assets/033/259/686/d2369720a5c6d875fec62c44817ad552_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1619267674&auto=format&frame=1&q=92&s=2b6ec295646ccc74aa8ed6e1b1f9c7fe"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/elka"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/2062073936?signature=1627583214.4d6e1a1b8f3304247c99f79b70b9a3074d2b076b"
+              }
+          }
+      },
+      "location": {
+          "id": 3534,
+          "name": "Montreal",
+          "slug": "montreal-ca",
+          "short_name": "Montreal, Canada",
+          "displayable_name": "Montreal, Canada",
+          "localized_name": "Montreal",
+          "country": "CA",
+          "state": "QC",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "Canada",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/montreal-ca",
+                  "location": "https://www.kickstarter.com/locations/montreal-ca"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549026.6f987c3d5c46592cfad455c4585c8e23e50035b3&woe_id=3534"
+              }
+          }
+      },
+      "category": {
+          "id": 361,
+          "name": "Web",
+          "analytics_name": "Web",
+          "slug": "journalism/web",
+          "position": 5,
+          "parent_id": 13,
+          "parent_name": "Journalism",
+          "color": 1228010,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/journalism/web"
+              }
+          }
+      },
+      "profile": {
+          "id": 4235940,
+          "project_id": 4235940,
+          "state": "inactive",
+          "state_changed_at": 1624072050,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/091/132/3e3f0f064706e65a1ca8fffd2cd0ab07_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625276927&auto=format&frame=1&q=92&s=8a4c5c986c824eddd58935488d40e418",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/091/132/3e3f0f064706e65a1ca8fffd2cd0ab07_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625276927&auto=format&frame=1&q=92&s=34c620a4a13ec054f1b67c7100011fbe"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/elka/nubian-scientist?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/elka/nubian-scientist/rewards"
+          }
+      }
+  },
+  {
+      "id": 1507053551,
+      "photo": {
+          "key": "assets/033/697/586/2dc0de8805054bc3453981b8e8c14ff3_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/033/697/586/2dc0de8805054bc3453981b8e8c14ff3_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1622296138&auto=format&frame=1&q=92&s=584610a756784c8b50e2869fca46b950",
+          "ed": "https://ksr-ugc.imgix.net/assets/033/697/586/2dc0de8805054bc3453981b8e8c14ff3_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1622296138&auto=format&frame=1&q=92&s=e7466b3582dc5e1418dc857a72639d84",
+          "med": "https://ksr-ugc.imgix.net/assets/033/697/586/2dc0de8805054bc3453981b8e8c14ff3_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1622296138&auto=format&frame=1&q=92&s=88701c19ab74cf1c416453a966c806f2",
+          "little": "https://ksr-ugc.imgix.net/assets/033/697/586/2dc0de8805054bc3453981b8e8c14ff3_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1622296138&auto=format&frame=1&q=92&s=26d7ccfc90ada53be5495a3a6dbca456",
+          "small": "https://ksr-ugc.imgix.net/assets/033/697/586/2dc0de8805054bc3453981b8e8c14ff3_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1622296138&auto=format&frame=1&q=92&s=64e585d59155ed728086da5ad3f727b3",
+          "thumb": "https://ksr-ugc.imgix.net/assets/033/697/586/2dc0de8805054bc3453981b8e8c14ff3_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1622296138&auto=format&frame=1&q=92&s=130fa1649061eeb04dd6f46ef5273e3c",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/033/697/586/2dc0de8805054bc3453981b8e8c14ff3_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1622296138&auto=format&frame=1&q=92&s=e42a3809e8d6efe11dd400f31d844a4e",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/033/697/586/2dc0de8805054bc3453981b8e8c14ff3_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1622296138&auto=format&frame=1&q=92&s=b7386aa65134d466f3188543bcd244db"
+      },
+      "name": "Sciences Inutiles : anecdotes de sciences",
+      "blurb": "Des vidéos pleines d'anecdotes scientifiques, pour YouTube, beaucoup plus qualitatives.",
+      "goal": 1200,
+      "pledged": 251,
+      "state": "live",
+      "slug": "sciences-inutiles-anecdotes-de-sciences",
+      "disable_communication": false,
+      "country": "FR",
+      "country_displayable_name": "France",
+      "currency": "EUR",
+      "currency_symbol": "€",
+      "currency_trailing_code": false,
+      "deadline": 1627674372,
+      "state_changed_at": 1622490373,
+      "created_at": 1622294536,
+      "launched_at": 1622490372,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 5,
+      "static_usd_rate": 1.2192505,
+      "usd_pledged": "306.0318755",
+      "converted_pledged_amount": 296,
+      "fx_rate": 1.18212951,
+      "usd_exchange_rate": 1.18212951,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1861439861,
+          "name": "Meskaline",
+          "slug": "meskaline",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/033/697/824/c575c75f2ba85c8e68f749878f0580c3_original.png?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1622298170&auto=format&frame=1&q=92&s=51762ad37e8b1b4c72e87c88b7b914d2",
+              "small": "https://ksr-ugc.imgix.net/assets/033/697/824/c575c75f2ba85c8e68f749878f0580c3_original.png?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1622298170&auto=format&frame=1&q=92&s=2da4e1543e440fcf1e1ddb63d189d101",
+              "medium": "https://ksr-ugc.imgix.net/assets/033/697/824/c575c75f2ba85c8e68f749878f0580c3_original.png?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1622298170&auto=format&frame=1&q=92&s=09ed5af6c18a38e9bdb1e153dbf6b3fa"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/meskaline"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1861439861?signature=1627583214.105e49e46536f7396a01059ea0f2be8f628b4ee7"
+              }
+          }
+      },
+      "location": {
+          "id": 973540,
+          "name": "Liege",
+          "slug": "liege-liege-liege",
+          "short_name": "Liege, Belgium",
+          "displayable_name": "Liege, Belgium",
+          "localized_name": "Liege",
+          "country": "BE",
+          "state": "Liege",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "Belgium",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/liege-liege-liege",
+                  "location": "https://www.kickstarter.com/locations/liege-liege-liege"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627557460.96ffce7a195ab238af43f581ce84be2fc4b348f8&woe_id=973540"
+              }
+          }
+      },
+      "category": {
+          "id": 360,
+          "name": "Video",
+          "analytics_name": "Video",
+          "slug": "journalism/video",
+          "position": 4,
+          "parent_id": 13,
+          "parent_name": "Journalism",
+          "color": 1228010,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/journalism/video"
+              }
+          }
+      },
+      "profile": {
+          "id": 4224849,
+          "project_id": 4224849,
+          "state": "inactive",
+          "state_changed_at": 1622294536,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/033/697/586/2dc0de8805054bc3453981b8e8c14ff3_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1622296138&auto=format&frame=1&q=92&s=b7386aa65134d466f3188543bcd244db",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/033/697/586/2dc0de8805054bc3453981b8e8c14ff3_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1622296138&auto=format&frame=1&q=92&s=584610a756784c8b50e2869fca46b950"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/meskaline/sciences-inutiles-anecdotes-de-sciences?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/meskaline/sciences-inutiles-anecdotes-de-sciences/rewards"
+          }
+      }
+  },
+  {
+      "id": 1114762742,
+      "photo": {
+          "key": "assets/032/165/317/97045a998d311f990fc647fdddfa3f39_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/032/165/317/97045a998d311f990fc647fdddfa3f39_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1611841017&auto=format&frame=1&q=92&s=58e51c40960345f3da71d4476c064618",
+          "ed": "https://ksr-ugc.imgix.net/assets/032/165/317/97045a998d311f990fc647fdddfa3f39_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1611841017&auto=format&frame=1&q=92&s=7851e46c77570c7db6284fcd60c9dd8a",
+          "med": "https://ksr-ugc.imgix.net/assets/032/165/317/97045a998d311f990fc647fdddfa3f39_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1611841017&auto=format&frame=1&q=92&s=94cb03aff30b944534ce70226f379c0a",
+          "little": "https://ksr-ugc.imgix.net/assets/032/165/317/97045a998d311f990fc647fdddfa3f39_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1611841017&auto=format&frame=1&q=92&s=a8222a09350cd8d308df4db1b5b8ac17",
+          "small": "https://ksr-ugc.imgix.net/assets/032/165/317/97045a998d311f990fc647fdddfa3f39_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1611841017&auto=format&frame=1&q=92&s=a2e63d80910e5289e85097834b20d05b",
+          "thumb": "https://ksr-ugc.imgix.net/assets/032/165/317/97045a998d311f990fc647fdddfa3f39_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1611841017&auto=format&frame=1&q=92&s=6b6d0d7bd5155332476e3b0bb65a8044",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/032/165/317/97045a998d311f990fc647fdddfa3f39_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1611841017&auto=format&frame=1&q=92&s=565e602cdefd3f71a44fd33a9efa4408",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/032/165/317/97045a998d311f990fc647fdddfa3f39_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1611841017&auto=format&frame=1&q=92&s=92f90da7691bf70deb0390c2cc03fc94"
+      },
+      "name": "BELLE – Die Fashionmagazin-Parodie",
+      "blurb": "Hund Couture für Trendsetter und alle anderen Rassen. Plus: jede Menge beißende Satire",
+      "goal": 5000,
+      "pledged": 236,
+      "state": "live",
+      "slug": "belle-die-fashionmagazin-parodie",
+      "disable_communication": false,
+      "country": "DE",
+      "country_displayable_name": "Germany",
+      "currency": "EUR",
+      "currency_symbol": "€",
+      "currency_trailing_code": false,
+      "deadline": 1631601039,
+      "state_changed_at": 1626417040,
+      "created_at": 1611327754,
+      "launched_at": 1626417039,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 9,
+      "static_usd_rate": 1.18320091,
+      "usd_pledged": "279.23541476",
+      "converted_pledged_amount": 278,
+      "fx_rate": 1.18212951,
+      "usd_exchange_rate": 1.18212951,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 198171733,
+          "name": "Thomas Weber",
+          "slug": "belle-magazin",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/032/097/678/65c5d735acc54d1fd168a9dfb64a9a71_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1611329095&auto=format&frame=1&q=92&s=9ab0643fe97be346cf93fe017817fa11",
+              "small": "https://ksr-ugc.imgix.net/assets/032/097/678/65c5d735acc54d1fd168a9dfb64a9a71_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1611329095&auto=format&frame=1&q=92&s=efb0b3e0e5daf18b7a1816956c5860e0",
+              "medium": "https://ksr-ugc.imgix.net/assets/032/097/678/65c5d735acc54d1fd168a9dfb64a9a71_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1611329095&auto=format&frame=1&q=92&s=6b579f476866cceea662db6bdc9b30c6"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/belle-magazin"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/198171733?signature=1627583214.36c5fa9893fab143bd8c3fff88731e8c783b19ec"
+              }
+          }
+      },
+      "location": {
+          "id": 676756,
+          "name": "München",
+          "slug": "munchen-gemeinde-hutthurm-de",
+          "short_name": "München, Germany",
+          "displayable_name": "München, Germany",
+          "localized_name": "München",
+          "country": "DE",
+          "state": "Bavaria",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "Germany",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/munchen-gemeinde-hutthurm-de",
+                  "location": "https://www.kickstarter.com/locations/munchen-gemeinde-hutthurm-de"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627551189.bc91492bfec5bcd50496317b0ebb9e80789440e4&woe_id=676756"
+              }
+          }
+      },
+      "category": {
+          "id": 359,
+          "name": "Print",
+          "analytics_name": "Print",
+          "slug": "journalism/print",
+          "position": 3,
+          "parent_id": 13,
+          "parent_name": "Journalism",
+          "color": 1228010,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/journalism/print"
+              }
+          }
+      },
+      "profile": {
+          "id": 4148686,
+          "project_id": 4148686,
+          "state": "inactive",
+          "state_changed_at": 1611327754,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/032/165/317/97045a998d311f990fc647fdddfa3f39_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1611841017&auto=format&frame=1&q=92&s=92f90da7691bf70deb0390c2cc03fc94",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/032/165/317/97045a998d311f990fc647fdddfa3f39_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1611841017&auto=format&frame=1&q=92&s=58e51c40960345f3da71d4476c064618"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/belle-magazin/belle-die-fashionmagazin-parodie?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/belle-magazin/belle-die-fashionmagazin-parodie/rewards"
+          }
+      }
+  },
+  {
+      "id": 14591964,
+      "photo": {
+          "key": "assets/034/021/954/28caa3b6d0e0494cced6532590e673ab_original.jpeg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/021/954/28caa3b6d0e0494cced6532590e673ab_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624768099&auto=format&frame=1&q=92&s=e2a30b1a0967387042eb02bd9da02410",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/021/954/28caa3b6d0e0494cced6532590e673ab_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1624768099&auto=format&frame=1&q=92&s=42fa70358dc9aa4bcf50c68a15b799cf",
+          "med": "https://ksr-ugc.imgix.net/assets/034/021/954/28caa3b6d0e0494cced6532590e673ab_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1624768099&auto=format&frame=1&q=92&s=248e823318369778d958ce6ef21784da",
+          "little": "https://ksr-ugc.imgix.net/assets/034/021/954/28caa3b6d0e0494cced6532590e673ab_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1624768099&auto=format&frame=1&q=92&s=f26a0487a93b6026ce3712aa640d1202",
+          "small": "https://ksr-ugc.imgix.net/assets/034/021/954/28caa3b6d0e0494cced6532590e673ab_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1624768099&auto=format&frame=1&q=92&s=5314d8743ce5edd8a2ac5a0f618a0252",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/021/954/28caa3b6d0e0494cced6532590e673ab_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1624768099&auto=format&frame=1&q=92&s=07e994940501447cf4257ade24daba03",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/021/954/28caa3b6d0e0494cced6532590e673ab_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1624768099&auto=format&frame=1&q=92&s=64a4ae72fb5855a314f5837f903ca35c",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/021/954/28caa3b6d0e0494cced6532590e673ab_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624768099&auto=format&frame=1&q=92&s=37226f34c8ffedb2116e475a7a7ae1d3"
+      },
+      "name": "House of Stitched Magazine",
+      "blurb": "House of Stitched: a dark art and fiction digest magazine giving creators real-life advice and interviews with experts in their field.",
+      "goal": 5000,
+      "pledged": 828,
+      "state": "live",
+      "slug": "house-of-stitched-magazine",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1629957591,
+      "state_changed_at": 1624773593,
+      "created_at": 1624768002,
+      "launched_at": 1624773591,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 17,
+      "static_usd_rate": 1,
+      "usd_pledged": "828.0",
+      "converted_pledged_amount": 828,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 461880638,
+          "name": "Lisa Vasquez",
+          "slug": "houseofstitched",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/034/022/125/5a582e6d17878993bdc009ef8f04771b_original.jpeg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1624771290&auto=format&frame=1&q=92&s=16681d16cc87ab9017d3fef6c0a7182a",
+              "small": "https://ksr-ugc.imgix.net/assets/034/022/125/5a582e6d17878993bdc009ef8f04771b_original.jpeg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1624771290&auto=format&frame=1&q=92&s=ee583b72c63b935ea6587db3eafc58af",
+              "medium": "https://ksr-ugc.imgix.net/assets/034/022/125/5a582e6d17878993bdc009ef8f04771b_original.jpeg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1624771290&auto=format&frame=1&q=92&s=d8bbf31c23f95ee95da03bc7b8e8bdfb"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/houseofstitched"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/461880638?signature=1627583214.1af9a1637e161a196e833f05d1ca0d94f7bc0300"
+              }
+          }
+      },
+      "location": {
+          "id": 2480902,
+          "name": "Richmond",
+          "slug": "richmond-tx",
+          "short_name": "Richmond, TX",
+          "displayable_name": "Richmond, TX",
+          "localized_name": "Richmond",
+          "country": "US",
+          "state": "TX",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/richmond-tx",
+                  "location": "https://www.kickstarter.com/locations/richmond-tx"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627547183.a27a5e516b9897bc065972bba99b65e9ef755356&woe_id=2480902"
+              }
+          }
+      },
+      "category": {
+          "id": 359,
+          "name": "Print",
+          "analytics_name": "Print",
+          "slug": "journalism/print",
+          "position": 3,
+          "parent_id": 13,
+          "parent_name": "Journalism",
+          "color": 1228010,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/journalism/print"
+              }
+          }
+      },
+      "profile": {
+          "id": 4239783,
+          "project_id": 4239783,
+          "state": "inactive",
+          "state_changed_at": 1624768002,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/021/954/28caa3b6d0e0494cced6532590e673ab_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624768099&auto=format&frame=1&q=92&s=37226f34c8ffedb2116e475a7a7ae1d3",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/021/954/28caa3b6d0e0494cced6532590e673ab_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624768099&auto=format&frame=1&q=92&s=e2a30b1a0967387042eb02bd9da02410"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/houseofstitched/house-of-stitched-magazine?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/houseofstitched/house-of-stitched-magazine/rewards"
+          }
+      }
+  },
+  {
+      "id": 782544566,
+      "photo": {
+          "key": "assets/034/242/183/5c7445a3978cdb6da7153ff0528ac383_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/242/183/5c7445a3978cdb6da7153ff0528ac383_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626578876&auto=format&frame=1&q=92&s=12b239b80c6495fc1e49cd1d24a9110f",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/242/183/5c7445a3978cdb6da7153ff0528ac383_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1626578876&auto=format&frame=1&q=92&s=6efb8fc1352d96a179f8b6a440d676ad",
+          "med": "https://ksr-ugc.imgix.net/assets/034/242/183/5c7445a3978cdb6da7153ff0528ac383_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1626578876&auto=format&frame=1&q=92&s=bf6fc64f88eba9e1bef7627cd04e07e0",
+          "little": "https://ksr-ugc.imgix.net/assets/034/242/183/5c7445a3978cdb6da7153ff0528ac383_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1626578876&auto=format&frame=1&q=92&s=0146d524e16ffe8d7e02b21f6d80112e",
+          "small": "https://ksr-ugc.imgix.net/assets/034/242/183/5c7445a3978cdb6da7153ff0528ac383_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1626578876&auto=format&frame=1&q=92&s=602e9fb05909e287a2ef729750cb517f",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/242/183/5c7445a3978cdb6da7153ff0528ac383_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1626578876&auto=format&frame=1&q=92&s=912a32977e07bcb22671c9ae5036d102",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/242/183/5c7445a3978cdb6da7153ff0528ac383_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1626578876&auto=format&frame=1&q=92&s=5b9d1085059330e39ff184fbbe3d8a79",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/242/183/5c7445a3978cdb6da7153ff0528ac383_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626578876&auto=format&frame=1&q=92&s=f8de25d581bb3d7578eda4c4ab42bd56"
+      },
+      "name": "Best Movie Ever: An Oral History of Josie & the Pussycats",
+      "blurb": "An audiobook and Spanish-language translation of \"Best Movie Ever: An Oral History of Kaplan & Elfont's Josie and the Pussycats\"",
+      "goal": 600,
+      "pledged": 410,
+      "state": "live",
+      "slug": "best-movie-ever-an-oral-history-of-josie-and-the-pussycats",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1629129600,
+      "state_changed_at": 1626880107,
+      "created_at": 1626578762,
+      "launched_at": 1626880106,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 10,
+      "static_usd_rate": 1,
+      "usd_pledged": "410.0",
+      "converted_pledged_amount": 410,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1753719355,
+          "name": "Russ Burlingame",
+          "slug": "russburlingame",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/005/789/708/f7d0beac937a7a0c3099169944281f8a_original.png?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1626581690&auto=format&frame=1&q=92&s=aca703cfe7dd92ca302bc8da1c354232",
+              "small": "https://ksr-ugc.imgix.net/assets/005/789/708/f7d0beac937a7a0c3099169944281f8a_original.png?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1626581690&auto=format&frame=1&q=92&s=5ad0d308ee5c9a989fa12d6988eb9067",
+              "medium": "https://ksr-ugc.imgix.net/assets/005/789/708/f7d0beac937a7a0c3099169944281f8a_original.png?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1626581690&auto=format&frame=1&q=92&s=c153f2f39f227c0809f75f0d005f74b1"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/russburlingame"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1753719355?signature=1627583214.b2bbdf2fd1ac1e766d06e237a21732ddd56678d5"
+              }
+          }
+      },
+      "location": {
+          "id": 2503418,
+          "name": "Syracuse",
+          "slug": "syracuse-ny",
+          "short_name": "Syracuse, NY",
+          "displayable_name": "Syracuse, NY",
+          "localized_name": "Syracuse",
+          "country": "US",
+          "state": "NY",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/syracuse-ny",
+                  "location": "https://www.kickstarter.com/locations/syracuse-ny"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627553421.ea87bbf8e02644f9a3ed31293fab024bf94263a8&woe_id=2503418"
+              }
+          }
+      },
+      "category": {
+          "id": 359,
+          "name": "Print",
+          "analytics_name": "Print",
+          "slug": "journalism/print",
+          "position": 3,
+          "parent_id": 13,
+          "parent_name": "Journalism",
+          "color": 1228010,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/journalism/print"
+              }
+          }
+      },
+      "profile": {
+          "id": 4250195,
+          "project_id": 4250195,
+          "state": "inactive",
+          "state_changed_at": 1626578762,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/242/183/5c7445a3978cdb6da7153ff0528ac383_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626578876&auto=format&frame=1&q=92&s=f8de25d581bb3d7578eda4c4ab42bd56",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/242/183/5c7445a3978cdb6da7153ff0528ac383_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626578876&auto=format&frame=1&q=92&s=12b239b80c6495fc1e49cd1d24a9110f"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/russburlingame/best-movie-ever-an-oral-history-of-josie-and-the-pussycats?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/russburlingame/best-movie-ever-an-oral-history-of-josie-and-the-pussycats/rewards"
+          }
+      }
+  },
+  {
+      "id": 159817587,
+      "photo": {
+          "key": "assets/034/066/065/fa6da2ca80f7c23383c44399676c6b00_original.tiff",
+          "full": "https://ksr-ugc.imgix.net/assets/034/066/065/fa6da2ca80f7c23383c44399676c6b00_original.tiff?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625100067&auto=format&frame=1&q=92&s=2331bfc6449dcfc7693d9026a236bece",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/066/065/fa6da2ca80f7c23383c44399676c6b00_original.tiff?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1625100067&auto=format&frame=1&q=92&s=148f67f7cc3582bc58063ae89f971678",
+          "med": "https://ksr-ugc.imgix.net/assets/034/066/065/fa6da2ca80f7c23383c44399676c6b00_original.tiff?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1625100067&auto=format&frame=1&q=92&s=f7a08cfb7fc92a41fb5cb0b094cb9fff",
+          "little": "https://ksr-ugc.imgix.net/assets/034/066/065/fa6da2ca80f7c23383c44399676c6b00_original.tiff?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1625100067&auto=format&frame=1&q=92&s=913c5cd53670ec116da58c52f08e5967",
+          "small": "https://ksr-ugc.imgix.net/assets/034/066/065/fa6da2ca80f7c23383c44399676c6b00_original.tiff?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1625100067&auto=format&frame=1&q=92&s=f1587ba6c0330b1e79bdbeec7aacd86d",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/066/065/fa6da2ca80f7c23383c44399676c6b00_original.tiff?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1625100067&auto=format&frame=1&q=92&s=99f2bb0ec56dfa87f3249cd3bc982f80",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/066/065/fa6da2ca80f7c23383c44399676c6b00_original.tiff?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1625100067&auto=format&frame=1&q=92&s=27a1c550dc02f1b213a4bfc7dcb20145",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/066/065/fa6da2ca80f7c23383c44399676c6b00_original.tiff?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625100067&auto=format&frame=1&q=92&s=90cfc0123764f5c8514959ee441508f9"
+      },
+      "name": "The Local Reporter: Hyperlocal Investigative Journalism",
+      "blurb": "The Local Reporter will investigate why our community is failing to provide affordable housing for its neediest citizens.",
+      "goal": 20000,
+      "pledged": 176,
+      "state": "live",
+      "slug": "the-local-reporter-hyperlocal-investigative-journalism",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1631909826,
+      "state_changed_at": 1626725828,
+      "created_at": 1623252925,
+      "launched_at": 1626725826,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 4,
+      "static_usd_rate": 1,
+      "usd_pledged": "176.0",
+      "converted_pledged_amount": 176,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 170794001,
+          "name": "RL Juliano",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/033/989/855/05fb5898ed787d52c49a62fe95891387_original.png?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1624482457&auto=format&frame=1&q=92&s=06d575ec304756358765ed25d559a222",
+              "small": "https://ksr-ugc.imgix.net/assets/033/989/855/05fb5898ed787d52c49a62fe95891387_original.png?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1624482457&auto=format&frame=1&q=92&s=2f1639e529c416ee35779eb9343419d6",
+              "medium": "https://ksr-ugc.imgix.net/assets/033/989/855/05fb5898ed787d52c49a62fe95891387_original.png?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1624482457&auto=format&frame=1&q=92&s=bf65414749522601867c03d1416d3c82"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/170794001"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/170794001?signature=1627583214.dff3806938319677e2d5104a578e05d6f2b278d0"
+              }
+          }
+      },
+      "location": {
+          "id": 2378134,
+          "name": "Chapel Hill",
+          "slug": "chapel-hill-orange-nc",
+          "short_name": "Chapel Hill, NC",
+          "displayable_name": "Chapel Hill, NC",
+          "localized_name": "Chapel Hill",
+          "country": "US",
+          "state": "NC",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/chapel-hill-orange-nc",
+                  "location": "https://www.kickstarter.com/locations/chapel-hill-orange-nc"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627552099.7617d470d2c057e0010b0b75bfd0d1d92825e13c&woe_id=2378134"
+              }
+          }
+      },
+      "category": {
+          "id": 361,
+          "name": "Web",
+          "analytics_name": "Web",
+          "slug": "journalism/web",
+          "position": 5,
+          "parent_id": 13,
+          "parent_name": "Journalism",
+          "color": 1228010,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/journalism/web"
+              }
+          }
+      },
+      "profile": {
+          "id": 4230756,
+          "project_id": 4230756,
+          "state": "inactive",
+          "state_changed_at": 1623252925,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/066/065/fa6da2ca80f7c23383c44399676c6b00_original.tiff?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625100067&auto=format&frame=1&q=92&s=90cfc0123764f5c8514959ee441508f9",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/066/065/fa6da2ca80f7c23383c44399676c6b00_original.tiff?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625100067&auto=format&frame=1&q=92&s=2331bfc6449dcfc7693d9026a236bece"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/170794001/the-local-reporter-hyperlocal-investigative-journalism?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/170794001/the-local-reporter-hyperlocal-investigative-journalism/rewards"
+          }
+      }
+  },
+  {
+      "id": 1554539607,
+      "photo": {
+          "key": "assets/034/182/373/fffd4f30e49e94382b36cdf2b4f2b489_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/182/373/fffd4f30e49e94382b36cdf2b4f2b489_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626105535&auto=format&frame=1&q=92&s=60266c4cca6e54faa6fb18bc19924564",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/182/373/fffd4f30e49e94382b36cdf2b4f2b489_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1626105535&auto=format&frame=1&q=92&s=cec46f9e6788a4c46b61edeaee3fddcb",
+          "med": "https://ksr-ugc.imgix.net/assets/034/182/373/fffd4f30e49e94382b36cdf2b4f2b489_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1626105535&auto=format&frame=1&q=92&s=73834d89741528e9caa0346356f3d2b5",
+          "little": "https://ksr-ugc.imgix.net/assets/034/182/373/fffd4f30e49e94382b36cdf2b4f2b489_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1626105535&auto=format&frame=1&q=92&s=257b8b6fcb859c200c67e86de3264348",
+          "small": "https://ksr-ugc.imgix.net/assets/034/182/373/fffd4f30e49e94382b36cdf2b4f2b489_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1626105535&auto=format&frame=1&q=92&s=87a64abf55b02344d5b112e8bbb82825",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/182/373/fffd4f30e49e94382b36cdf2b4f2b489_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1626105535&auto=format&frame=1&q=92&s=125125d3576523c958ae6097bd779527",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/182/373/fffd4f30e49e94382b36cdf2b4f2b489_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1626105535&auto=format&frame=1&q=92&s=574d235fda1a5cb6c0fd063c4e143690",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/182/373/fffd4f30e49e94382b36cdf2b4f2b489_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626105535&auto=format&frame=1&q=92&s=a246a9a563009145f75b6f7efee9b3eb"
+      },
+      "name": "Ohio Public Employees Retirement System Investigation",
+      "blurb": "An independent forensic investigation of the Ohio Public Employees Retirement System.",
+      "goal": 75000,
+      "pledged": 9356,
+      "state": "live",
+      "slug": "ohio-public-employees-retirement-system-investigation",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1631892674,
+      "state_changed_at": 1626708675,
+      "created_at": 1626105276,
+      "launched_at": 1626708674,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 119,
+      "static_usd_rate": 1,
+      "usd_pledged": "9356.0",
+      "converted_pledged_amount": 9356,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1525282896,
+          "name": "Edward Siedle",
+          "slug": "opers",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/009/369/295/46d98cb12da0e0580ac125c269cb25e2_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1626106485&auto=format&frame=1&q=92&s=33595c56dcde3df37ec8248ecd581a4b",
+              "small": "https://ksr-ugc.imgix.net/assets/009/369/295/46d98cb12da0e0580ac125c269cb25e2_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1626106485&auto=format&frame=1&q=92&s=c89a8cd6632860f699c07b65d4e81392",
+              "medium": "https://ksr-ugc.imgix.net/assets/009/369/295/46d98cb12da0e0580ac125c269cb25e2_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1626106485&auto=format&frame=1&q=92&s=61fcfa66818e5a43bf130d1e1df1d27e"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/opers"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1525282896?signature=1627583214.0d09cfb7e4d02ff031d46867d59e49c327fcaf28"
+              }
+          }
+      },
+      "location": {
+          "id": 2383660,
+          "name": "Columbus",
+          "slug": "columbus-oh",
+          "short_name": "Columbus, OH",
+          "displayable_name": "Columbus, OH",
+          "localized_name": "Columbus",
+          "country": "US",
+          "state": "OH",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/columbus-oh",
+                  "location": "https://www.kickstarter.com/locations/columbus-oh"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549213.268fcba2800347034140b35e459a74007bc7f30d&woe_id=2383660"
+              }
+          }
+      },
+      "category": {
+          "id": 359,
+          "name": "Print",
+          "analytics_name": "Print",
+          "slug": "journalism/print",
+          "position": 3,
+          "parent_id": 13,
+          "parent_name": "Journalism",
+          "color": 1228010,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/journalism/print"
+              }
+          }
+      },
+      "profile": {
+          "id": 4247393,
+          "project_id": 4247393,
+          "state": "inactive",
+          "state_changed_at": 1626105276,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/182/373/fffd4f30e49e94382b36cdf2b4f2b489_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626105535&auto=format&frame=1&q=92&s=a246a9a563009145f75b6f7efee9b3eb",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/182/373/fffd4f30e49e94382b36cdf2b4f2b489_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626105535&auto=format&frame=1&q=92&s=60266c4cca6e54faa6fb18bc19924564"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/opers/ohio-public-employees-retirement-system-investigation?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/opers/ohio-public-employees-retirement-system-investigation/rewards"
+          }
+      }
+  },
+  {
+      "id": 425492265,
+      "photo": {
+          "key": "assets/033/967/446/5f252b0abbde94cd87db1f9cc918b086_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/033/967/446/5f252b0abbde94cd87db1f9cc918b086_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624339480&auto=format&frame=1&q=92&s=ccd32ffcae885395f4ff02531d0eb722",
+          "ed": "https://ksr-ugc.imgix.net/assets/033/967/446/5f252b0abbde94cd87db1f9cc918b086_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1624339480&auto=format&frame=1&q=92&s=a14c0ee09b4a4b4e7aa0123b9f9fb59e",
+          "med": "https://ksr-ugc.imgix.net/assets/033/967/446/5f252b0abbde94cd87db1f9cc918b086_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1624339480&auto=format&frame=1&q=92&s=1292e92e11886c92d53a9de80d818fc6",
+          "little": "https://ksr-ugc.imgix.net/assets/033/967/446/5f252b0abbde94cd87db1f9cc918b086_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1624339480&auto=format&frame=1&q=92&s=e2ea99f474ab1405d37b4d3198f25bf0",
+          "small": "https://ksr-ugc.imgix.net/assets/033/967/446/5f252b0abbde94cd87db1f9cc918b086_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1624339480&auto=format&frame=1&q=92&s=49c2e58047d0bb99bc95978e42fd4655",
+          "thumb": "https://ksr-ugc.imgix.net/assets/033/967/446/5f252b0abbde94cd87db1f9cc918b086_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1624339480&auto=format&frame=1&q=92&s=7a705bec0e38ebe978d3bf527b61a1cf",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/033/967/446/5f252b0abbde94cd87db1f9cc918b086_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1624339480&auto=format&frame=1&q=92&s=34705bfa15f6183e8cc1924dec0d1f39",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/033/967/446/5f252b0abbde94cd87db1f9cc918b086_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624339480&auto=format&frame=1&q=92&s=8c7de8242d1541864e889c652cbee69a"
+      },
+      "name": "《 日不落之味 》線上誌 / A food Zine to grow Hope",
+      "blurb": "誌在慢燉一鍋亂世希望 / Keep stewing in the midst of nowhere",
+      "goal": 250000,
+      "pledged": 17720,
+      "state": "live",
+      "slug": "a-food-zine-to-grow-hope",
+      "disable_communication": false,
+      "country": "HK",
+      "country_displayable_name": "Hong Kong",
+      "currency": "HKD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1627793940,
+      "state_changed_at": 1625806861,
+      "created_at": 1621584801,
+      "launched_at": 1625806859,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 26,
+      "static_usd_rate": 0.12873774,
+      "usd_pledged": "2281.2327528",
+      "converted_pledged_amount": 2277,
+      "fx_rate": 0.12850679,
+      "usd_exchange_rate": 0.12850679,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 2052028544,
+          "name": "rìbùluò",
+          "slug": "ribuluo",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/033/620/243/1a6adf4ba81605ab314f26e1b797b58f_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1621752748&auto=format&frame=1&q=92&s=43ad936110b889153ac0428d420f3f97",
+              "small": "https://ksr-ugc.imgix.net/assets/033/620/243/1a6adf4ba81605ab314f26e1b797b58f_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1621752748&auto=format&frame=1&q=92&s=3a515ac8848ffb6b0b922600c4500e31",
+              "medium": "https://ksr-ugc.imgix.net/assets/033/620/243/1a6adf4ba81605ab314f26e1b797b58f_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1621752748&auto=format&frame=1&q=92&s=a8101d03831e70396aaa505708a14ff1"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/ribuluo"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/2052028544?signature=1627583214.4127eb5485c97081434c692d9e86d87c6078b5c8"
+              }
+          }
+      },
+      "location": {
+          "id": 2306179,
+          "name": "Taipei City",
+          "slug": "taipei-city-tw",
+          "short_name": "Taipei City, Taiwan",
+          "displayable_name": "Taipei City, Taiwan",
+          "localized_name": "Taipei City",
+          "country": "TW",
+          "state": "Taipei City",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "Taiwan",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/taipei-city-tw",
+                  "location": "https://www.kickstarter.com/locations/taipei-city-tw"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549243.a15cf554a0063a3c6fb86e3a1defc302674b1ce0&woe_id=2306179"
+              }
+          }
+      },
+      "category": {
+          "id": 361,
+          "name": "Web",
+          "analytics_name": "Web",
+          "slug": "journalism/web",
+          "position": 5,
+          "parent_id": 13,
+          "parent_name": "Journalism",
+          "color": 1228010,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/journalism/web"
+              }
+          }
+      },
+      "profile": {
+          "id": 4220471,
+          "project_id": 4220471,
+          "state": "inactive",
+          "state_changed_at": 1621584801,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/033/967/446/5f252b0abbde94cd87db1f9cc918b086_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624339480&auto=format&frame=1&q=92&s=8c7de8242d1541864e889c652cbee69a",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/033/967/446/5f252b0abbde94cd87db1f9cc918b086_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624339480&auto=format&frame=1&q=92&s=ccd32ffcae885395f4ff02531d0eb722"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/ribuluo/a-food-zine-to-grow-hope?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/ribuluo/a-food-zine-to-grow-hope/rewards"
+          }
+      }
+  },
+  {
+      "id": 517131002,
+      "photo": {
+          "key": "assets/034/263/910/67c4f29857d8e6fce287050d5eba720c_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/263/910/67c4f29857d8e6fce287050d5eba720c_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626780426&auto=format&frame=1&q=92&s=71d92ecf1c801da124692c44459e56d6",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/263/910/67c4f29857d8e6fce287050d5eba720c_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1626780426&auto=format&frame=1&q=92&s=c86588afb360b4e2b3ac27e80011a36e",
+          "med": "https://ksr-ugc.imgix.net/assets/034/263/910/67c4f29857d8e6fce287050d5eba720c_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1626780426&auto=format&frame=1&q=92&s=61172a99b7ed5ec477d2cc221afd2212",
+          "little": "https://ksr-ugc.imgix.net/assets/034/263/910/67c4f29857d8e6fce287050d5eba720c_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1626780426&auto=format&frame=1&q=92&s=eb06a8a222c3d53439f7af6e59d129af",
+          "small": "https://ksr-ugc.imgix.net/assets/034/263/910/67c4f29857d8e6fce287050d5eba720c_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1626780426&auto=format&frame=1&q=92&s=f92db301c5d798be08bc16219e9e9bae",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/263/910/67c4f29857d8e6fce287050d5eba720c_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1626780426&auto=format&frame=1&q=92&s=6a309a8fe1f9c87589b87838036f0966",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/263/910/67c4f29857d8e6fce287050d5eba720c_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1626780426&auto=format&frame=1&q=92&s=9b0755e3cb5aaa988f62aa290b87bb66",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/263/910/67c4f29857d8e6fce287050d5eba720c_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626780426&auto=format&frame=1&q=92&s=aa6e39177c5b6f10eed9f48ac067cde0"
+      },
+      "name": "Potterandmore.com",
+      "blurb": "Magazine di informazione sul mondo magico di Harry Potter e Animali fantastici.",
+      "goal": 3400,
+      "pledged": 1,
+      "state": "live",
+      "slug": "potterandmorecom",
+      "disable_communication": false,
+      "country": "IT",
+      "country_displayable_name": "Italy",
+      "currency": "EUR",
+      "currency_symbol": "€",
+      "currency_trailing_code": false,
+      "deadline": 1629531181,
+      "state_changed_at": 1626939182,
+      "created_at": 1626780273,
+      "launched_at": 1626939181,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 1,
+      "static_usd_rate": 1.17749432,
+      "usd_pledged": "1.17749432",
+      "converted_pledged_amount": 1,
+      "fx_rate": 1.18212951,
+      "usd_exchange_rate": 1.18212951,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1443529533,
+          "name": "Fausto Zocco",
+          "slug": "potterandmore",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/034/285/465/eb41c8b9692fc5bea965498e4818e626_original.png?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1626938990&auto=format&frame=1&q=92&s=0f8184d4975cdd23f42f80ce7d7c0163",
+              "small": "https://ksr-ugc.imgix.net/assets/034/285/465/eb41c8b9692fc5bea965498e4818e626_original.png?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1626938990&auto=format&frame=1&q=92&s=12d9f616b1c42e4d5f552f9ed4947f13",
+              "medium": "https://ksr-ugc.imgix.net/assets/034/285/465/eb41c8b9692fc5bea965498e4818e626_original.png?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1626938990&auto=format&frame=1&q=92&s=2ea19ec645cf616d076b5c2193f822dc"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/potterandmore"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1443529533?signature=1627583214.765bf7608b88e18810bf325c9363e58501c27b9e"
+              }
+          }
+      },
+      "location": {
+          "id": 718433,
+          "name": "Modica",
+          "slug": "modica-modica-it",
+          "short_name": "Modica, Italy",
+          "displayable_name": "Modica, Italy",
+          "localized_name": "Modica",
+          "country": "IT",
+          "state": "Sicily",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "Italy",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/modica-modica-it",
+                  "location": "https://www.kickstarter.com/locations/modica-modica-it"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627568604.367a7156b624f63a75de811f05ea6edeeaf22fcf&woe_id=718433"
+              }
+          }
+      },
+      "category": {
+          "id": 361,
+          "name": "Web",
+          "analytics_name": "Web",
+          "slug": "journalism/web",
+          "position": 5,
+          "parent_id": 13,
+          "parent_name": "Journalism",
+          "color": 1228010,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/journalism/web"
+              }
+          }
+      },
+      "profile": {
+          "id": 4251295,
+          "project_id": 4251295,
+          "state": "inactive",
+          "state_changed_at": 1626780273,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/263/910/67c4f29857d8e6fce287050d5eba720c_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626780426&auto=format&frame=1&q=92&s=aa6e39177c5b6f10eed9f48ac067cde0",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/263/910/67c4f29857d8e6fce287050d5eba720c_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626780426&auto=format&frame=1&q=92&s=71d92ecf1c801da124692c44459e56d6"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/potterandmore/potterandmorecom?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/potterandmore/potterandmorecom/rewards"
+          }
+      }
+  },
+  {
+      "id": 1344280935,
+      "photo": {
+          "key": "assets/034/110/809/f4fb81b082e642b8344550abfbf0e245_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/034/110/809/f4fb81b082e642b8344550abfbf0e245_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625500416&auto=format&frame=1&q=92&s=70eb9a436b60d2f37d791a1370ad0b1f",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/110/809/f4fb81b082e642b8344550abfbf0e245_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1625500416&auto=format&frame=1&q=92&s=cb2c5798b9614b8d0e97c7ab2a264faa",
+          "med": "https://ksr-ugc.imgix.net/assets/034/110/809/f4fb81b082e642b8344550abfbf0e245_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1625500416&auto=format&frame=1&q=92&s=f845118e892a881cfe6cf935a1b2a03c",
+          "little": "https://ksr-ugc.imgix.net/assets/034/110/809/f4fb81b082e642b8344550abfbf0e245_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1625500416&auto=format&frame=1&q=92&s=d5b72ad4222f4a200b1670ec1d383366",
+          "small": "https://ksr-ugc.imgix.net/assets/034/110/809/f4fb81b082e642b8344550abfbf0e245_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1625500416&auto=format&frame=1&q=92&s=bded79c6359aa9cc6ac71460fd46a501",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/110/809/f4fb81b082e642b8344550abfbf0e245_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1625500416&auto=format&frame=1&q=92&s=aae54721f72405f7249006caf3c92a0c",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/110/809/f4fb81b082e642b8344550abfbf0e245_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1625500416&auto=format&frame=1&q=92&s=28a3da5589e20cd511d681ebdf6abee9",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/110/809/f4fb81b082e642b8344550abfbf0e245_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625500416&auto=format&frame=1&q=92&s=168599c7c5794faf8a1eb392958bea3a"
+      },
+      "name": "Grammar Geek content booster",
+      "blurb": "Help me bring the internet's home of of GCSE, A-level language study and Oxbridge language applications to the next level!",
+      "goal": 500,
+      "pledged": 71,
+      "state": "live",
+      "slug": "grammar-geek-content-booster",
+      "disable_communication": false,
+      "country": "GB",
+      "country_displayable_name": "the United Kingdom",
+      "currency": "GBP",
+      "currency_symbol": "£",
+      "currency_trailing_code": false,
+      "deadline": 1628435617,
+      "state_changed_at": 1625843618,
+      "created_at": 1625499531,
+      "launched_at": 1625843617,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 5,
+      "static_usd_rate": 1.37829516,
+      "usd_pledged": "97.85895636",
+      "converted_pledged_amount": 98,
+      "fx_rate": 1.38747444,
+      "usd_exchange_rate": 1.38747444,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1611380597,
+          "name": "Theo Hall",
+          "slug": "grammargeek",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/034/111/305/a2685d3365d8ddff577b66a118991d4d_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1625503481&auto=format&frame=1&q=92&s=376e7f3ee816f958c4c9a2ae44903de4",
+              "small": "https://ksr-ugc.imgix.net/assets/034/111/305/a2685d3365d8ddff577b66a118991d4d_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1625503481&auto=format&frame=1&q=92&s=73bb56f88a61a6e6df98f78ced1dc716",
+              "medium": "https://ksr-ugc.imgix.net/assets/034/111/305/a2685d3365d8ddff577b66a118991d4d_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1625503481&auto=format&frame=1&q=92&s=7916b0bcb98013066070c5e011dd4377"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/grammargeek"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1611380597?signature=1627583214.307b9133b7030352a904c913670f6dd9069320b4"
+              }
+          }
+      },
+      "location": {
+          "id": 44418,
+          "name": "London",
+          "slug": "london-gb",
+          "short_name": "London, UK",
+          "displayable_name": "London, UK",
+          "localized_name": "London",
+          "country": "GB",
+          "state": "England",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United Kingdom",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/london-gb",
+                  "location": "https://www.kickstarter.com/locations/london-gb"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627548932.ac1e19ecbb5a9f877a8865d239c6a00c6058b589&woe_id=44418"
+              }
+          }
+      },
+      "category": {
+          "id": 361,
+          "name": "Web",
+          "analytics_name": "Web",
+          "slug": "journalism/web",
+          "position": 5,
+          "parent_id": 13,
+          "parent_name": "Journalism",
+          "color": 1228010,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/journalism/web"
+              }
+          }
+      },
+      "profile": {
+          "id": 4243859,
+          "project_id": 4243859,
+          "state": "inactive",
+          "state_changed_at": 1625499531,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/110/809/f4fb81b082e642b8344550abfbf0e245_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625500416&auto=format&frame=1&q=92&s=168599c7c5794faf8a1eb392958bea3a",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/110/809/f4fb81b082e642b8344550abfbf0e245_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625500416&auto=format&frame=1&q=92&s=70eb9a436b60d2f37d791a1370ad0b1f"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/grammargeek/grammar-geek-content-booster?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/grammargeek/grammar-geek-content-booster/rewards"
+          }
+      }
+  },
+  {
+      "id": 36051936,
+      "photo": {
+          "key": "assets/033/789/843/49fbe63ede413001ad5132bfe0097eec_original.jpeg",
+          "full": "https://ksr-ugc.imgix.net/assets/033/789/843/49fbe63ede413001ad5132bfe0097eec_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1622980768&auto=format&frame=1&q=92&s=33c091115412bf33b0a1f00eec0345cb",
+          "ed": "https://ksr-ugc.imgix.net/assets/033/789/843/49fbe63ede413001ad5132bfe0097eec_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1622980768&auto=format&frame=1&q=92&s=57b5254d5024796d74138f617bd41420",
+          "med": "https://ksr-ugc.imgix.net/assets/033/789/843/49fbe63ede413001ad5132bfe0097eec_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1622980768&auto=format&frame=1&q=92&s=e7bbb265fc38194f6448bfa642b8ecbd",
+          "little": "https://ksr-ugc.imgix.net/assets/033/789/843/49fbe63ede413001ad5132bfe0097eec_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1622980768&auto=format&frame=1&q=92&s=19fdd69c972df7b4f46ec0390dec8b88",
+          "small": "https://ksr-ugc.imgix.net/assets/033/789/843/49fbe63ede413001ad5132bfe0097eec_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1622980768&auto=format&frame=1&q=92&s=fe579d8783c658c565b951f06f1c0aec",
+          "thumb": "https://ksr-ugc.imgix.net/assets/033/789/843/49fbe63ede413001ad5132bfe0097eec_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1622980768&auto=format&frame=1&q=92&s=e1487cc1203af1ddab0fdbea4922896a",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/033/789/843/49fbe63ede413001ad5132bfe0097eec_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1622980768&auto=format&frame=1&q=92&s=9c9d6a5af8c45adb3028ffd796641940",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/033/789/843/49fbe63ede413001ad5132bfe0097eec_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1622980768&auto=format&frame=1&q=92&s=7c460ce31e992b8fab34a06ef1c84aab"
+      },
+      "name": "Bad Mommy",
+      "blurb": "Bad Mommy - a[n embarrassingly colossal] written collection of motherly fuckups in “90’s zine” form and my random solutions to them.",
+      "goal": 30000,
+      "pledged": 1,
+      "state": "live",
+      "slug": "bad-mommy",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1628167719,
+      "state_changed_at": 1622983720,
+      "created_at": 1622980640,
+      "launched_at": 1622983719,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 1,
+      "static_usd_rate": 1,
+      "usd_pledged": "1.0",
+      "converted_pledged_amount": 1,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1089457544,
+          "name": "Lux",
+          "slug": "badmommy",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/033/790/146/670976fca21e41aa6d70082f56baa934_original.jpeg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1622983889&auto=format&frame=1&q=92&s=0a11608adc9871da926155f75985a22a",
+              "small": "https://ksr-ugc.imgix.net/assets/033/790/146/670976fca21e41aa6d70082f56baa934_original.jpeg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1622983889&auto=format&frame=1&q=92&s=1cfb1168696219a63e3038a2b97dffa1",
+              "medium": "https://ksr-ugc.imgix.net/assets/033/790/146/670976fca21e41aa6d70082f56baa934_original.jpeg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1622983889&auto=format&frame=1&q=92&s=9b2907c67d94ac0987d9448d9c332f9c"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/badmommy"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1089457544?signature=1627583214.20b4d9e725401d72ae33a48c2b59f65093fd6f4f"
+              }
+          }
+      },
+      "location": {
+          "id": 2473224,
+          "name": "Pittsburgh",
+          "slug": "pittsburgh-pa",
+          "short_name": "Pittsburgh, PA",
+          "displayable_name": "Pittsburgh, PA",
+          "localized_name": "Pittsburgh",
+          "country": "US",
+          "state": "PA",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/pittsburgh-pa",
+                  "location": "https://www.kickstarter.com/locations/pittsburgh-pa"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549462.1796a5a7852f6db3f944ca98705f7927f951a3f3&woe_id=2473224"
+              }
+          }
+      },
+      "category": {
+          "id": 359,
+          "name": "Print",
+          "analytics_name": "Print",
+          "slug": "journalism/print",
+          "position": 3,
+          "parent_id": 13,
+          "parent_name": "Journalism",
+          "color": 1228010,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/journalism/print"
+              }
+          }
+      },
+      "profile": {
+          "id": 4228900,
+          "project_id": 4228900,
+          "state": "inactive",
+          "state_changed_at": 1622980640,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/033/789/843/49fbe63ede413001ad5132bfe0097eec_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1622980768&auto=format&frame=1&q=92&s=7c460ce31e992b8fab34a06ef1c84aab",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/033/789/843/49fbe63ede413001ad5132bfe0097eec_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1622980768&auto=format&frame=1&q=92&s=33c091115412bf33b0a1f00eec0345cb"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/badmommy/bad-mommy?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/badmommy/bad-mommy/rewards"
+          }
+      }
+  }
+]

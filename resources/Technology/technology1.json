@@ -1,0 +1,1541 @@
+[
+  {
+      "id": 1174250149,
+      "photo": {
+          "key": "assets/034/046/389/b782dafc88427d405c118c6395648b21_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/046/389/b782dafc88427d405c118c6395648b21_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624976207&auto=format&frame=1&q=92&s=31d182796669248b1558fae08de1e539",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/046/389/b782dafc88427d405c118c6395648b21_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1624976207&auto=format&frame=1&q=92&s=b1e141df5093fcc1e0fa01464b0c5488",
+          "med": "https://ksr-ugc.imgix.net/assets/034/046/389/b782dafc88427d405c118c6395648b21_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1624976207&auto=format&frame=1&q=92&s=59d39ae6f3c7db97c98cd4ad770b6e3c",
+          "little": "https://ksr-ugc.imgix.net/assets/034/046/389/b782dafc88427d405c118c6395648b21_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1624976207&auto=format&frame=1&q=92&s=671f52a6baef4256dc6bc7e09ed8fb2b",
+          "small": "https://ksr-ugc.imgix.net/assets/034/046/389/b782dafc88427d405c118c6395648b21_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1624976207&auto=format&frame=1&q=92&s=d7f1b4f124597dddc9d078e3157cfeed",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/046/389/b782dafc88427d405c118c6395648b21_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1624976207&auto=format&frame=1&q=92&s=9ba2b4a94c231670b6683fb712bbe4d6",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/046/389/b782dafc88427d405c118c6395648b21_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1624976207&auto=format&frame=1&q=92&s=1f5a2039db9598952fd909383068fc1f",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/046/389/b782dafc88427d405c118c6395648b21_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624976207&auto=format&frame=1&q=92&s=74c05b79c1c4f30f14d11e524fbb1a58"
+      },
+      "name": "MoFinderX1 GPS Tracker - Find Anything and Everything",
+      "blurb": "Real-time distance & direction丨One-click tracking丨No monthly fee丨No network connection necessary丨No SIM card necessary",
+      "goal": 5000,
+      "pledged": 56399,
+      "state": "live",
+      "slug": "mofinderx1-a-helpful-and-reliable-emergency-tracking-device",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1627646635,
+      "state_changed_at": 1624968237,
+      "created_at": 1620628555,
+      "launched_at": 1624968235,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 231,
+      "static_usd_rate": 1,
+      "usd_pledged": "56399.0",
+      "converted_pledged_amount": 56399,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 4744244,
+          "name": "MoFinderX1",
+          "slug": "mofinderx1",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/033/454/046/e076c4547667295f703d6346e3a72dad_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1623057529&auto=format&frame=1&q=92&s=e448d012468ab115aeb3df56a252c6a1",
+              "small": "https://ksr-ugc.imgix.net/assets/033/454/046/e076c4547667295f703d6346e3a72dad_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1623057529&auto=format&frame=1&q=92&s=24c88d0de90eb5e9a22a5c3f9a979ea2",
+              "medium": "https://ksr-ugc.imgix.net/assets/033/454/046/e076c4547667295f703d6346e3a72dad_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1623057529&auto=format&frame=1&q=92&s=441a0f8f03653051fbe1f649ae0248b2"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/mofinderx1"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/4744244?signature=1627584535.0a8a994309b6df427d11ef96264babdede5d0596"
+              }
+          }
+      },
+      "location": {
+          "id": 55891928,
+          "name": "America",
+          "slug": "america-tehuacan-mx",
+          "short_name": "America, Mexico",
+          "displayable_name": "America, Mexico",
+          "localized_name": "America",
+          "country": "MX",
+          "state": "Puebla",
+          "type": "Suburb",
+          "is_root": false,
+          "expanded_country": "Mexico",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/america-tehuacan-mx",
+                  "location": "https://www.kickstarter.com/locations/america-tehuacan-mx"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627578931.92610bd27e155664be51423e1c493142c5d1f623&woe_id=55891928"
+              }
+          }
+      },
+      "category": {
+          "id": 337,
+          "name": "Gadgets",
+          "analytics_name": "Gadgets",
+          "slug": "technology/gadgets",
+          "position": 7,
+          "parent_id": 16,
+          "parent_name": "Technology",
+          "color": 6526716,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/technology/gadgets"
+              }
+          }
+      },
+      "profile": {
+          "id": 4214044,
+          "project_id": 4214044,
+          "state": "inactive",
+          "state_changed_at": 1620628555,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/046/389/b782dafc88427d405c118c6395648b21_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624976207&auto=format&frame=1&q=92&s=74c05b79c1c4f30f14d11e524fbb1a58",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/046/389/b782dafc88427d405c118c6395648b21_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624976207&auto=format&frame=1&q=92&s=31d182796669248b1558fae08de1e539"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/mofinderx1/mofinderx1-a-helpful-and-reliable-emergency-tracking-device?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/mofinderx1/mofinderx1-a-helpful-and-reliable-emergency-tracking-device/rewards"
+          }
+      }
+  },
+  {
+      "id": 1235236603,
+      "photo": {
+          "key": "assets/034/340/656/f1ac12ff6e7372c48a907de2bdff58d9_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/340/656/f1ac12ff6e7372c48a907de2bdff58d9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1627452309&auto=format&frame=1&q=92&s=431b0a4d724e03b5da5ed9551c3dac1e",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/340/656/f1ac12ff6e7372c48a907de2bdff58d9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1627452309&auto=format&frame=1&q=92&s=aa0d4c83217317c23838b630cdd13609",
+          "med": "https://ksr-ugc.imgix.net/assets/034/340/656/f1ac12ff6e7372c48a907de2bdff58d9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1627452309&auto=format&frame=1&q=92&s=a6fe3e3994fb4aa9b7e3567ecd1c3c21",
+          "little": "https://ksr-ugc.imgix.net/assets/034/340/656/f1ac12ff6e7372c48a907de2bdff58d9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1627452309&auto=format&frame=1&q=92&s=cc3c22697af18c51864d3f91df7d52d6",
+          "small": "https://ksr-ugc.imgix.net/assets/034/340/656/f1ac12ff6e7372c48a907de2bdff58d9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1627452309&auto=format&frame=1&q=92&s=5f95141c4de904342dae9b3b3c847a27",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/340/656/f1ac12ff6e7372c48a907de2bdff58d9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1627452309&auto=format&frame=1&q=92&s=aaee21f4897288d87fca1c2d7a3f663f",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/340/656/f1ac12ff6e7372c48a907de2bdff58d9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1627452309&auto=format&frame=1&q=92&s=0858437008e7717671cc47911b558ae5",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/340/656/f1ac12ff6e7372c48a907de2bdff58d9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1627452309&auto=format&frame=1&q=92&s=d669fffd07da8e7688d590333d495ce7"
+      },
+      "name": "WULALA Sign Language Translation Glove",
+      "blurb": "Make sign language audible for a world free of communication barriers. The best gift for your hearing-impaired signing friends.",
+      "goal": 169900,
+      "pledged": 19,
+      "state": "live",
+      "slug": "wulala-sign-language-translation-glove",
+      "disable_communication": false,
+      "country": "FR",
+      "country_displayable_name": "France",
+      "currency": "EUR",
+      "currency_symbol": "€",
+      "currency_trailing_code": false,
+      "deadline": 1632391576,
+      "state_changed_at": 1627380377,
+      "created_at": 1625037928,
+      "launched_at": 1627380376,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 5,
+      "static_usd_rate": 1.17786046,
+      "usd_pledged": "22.37934874",
+      "converted_pledged_amount": 22,
+      "fx_rate": 1.18212951,
+      "usd_exchange_rate": 1.18212951,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 198135505,
+          "name": "WULALA",
+          "slug": "wulala",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/033/568/903/574a398061d38a39e4984f6d2261ab62_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1621396760&auto=format&frame=1&q=92&s=85132b469a0b5ff4aad96a637890fec0",
+              "small": "https://ksr-ugc.imgix.net/assets/033/568/903/574a398061d38a39e4984f6d2261ab62_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1621396760&auto=format&frame=1&q=92&s=924ea8779d231c150e37921779b4ceb3",
+              "medium": "https://ksr-ugc.imgix.net/assets/033/568/903/574a398061d38a39e4984f6d2261ab62_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1621396760&auto=format&frame=1&q=92&s=8cfb974ae9402f9e4ac456d8800e19c5"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/wulala"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/198135505?signature=1627584535.72520c747b0bc6d14e9d5ef7c26d6250b3fa11c4"
+              }
+          }
+      },
+      "location": {
+          "id": 2161838,
+          "name": "Guangzhou",
+          "slug": "guangzhou-guangzhou-guangdong",
+          "short_name": "Guangzhou, China",
+          "displayable_name": "Guangzhou, China",
+          "localized_name": "Guangzhou",
+          "country": "CN",
+          "state": "Guangdong",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "China",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/guangzhou-guangzhou-guangdong",
+                  "location": "https://www.kickstarter.com/locations/guangzhou-guangzhou-guangdong"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627573354.ac1a5315bd5c95e3ab6164bd1e85ce79447c2ad9&woe_id=2161838"
+              }
+          }
+      },
+      "category": {
+          "id": 341,
+          "name": "Wearables",
+          "analytics_name": "Wearables",
+          "slug": "technology/wearables",
+          "position": 14,
+          "parent_id": 16,
+          "parent_name": "Technology",
+          "color": 6526716,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/technology/wearables"
+              }
+          }
+      },
+      "profile": {
+          "id": 4241329,
+          "project_id": 4241329,
+          "state": "inactive",
+          "state_changed_at": 1625037928,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/340/656/f1ac12ff6e7372c48a907de2bdff58d9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1627452309&auto=format&frame=1&q=92&s=d669fffd07da8e7688d590333d495ce7",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/340/656/f1ac12ff6e7372c48a907de2bdff58d9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1627452309&auto=format&frame=1&q=92&s=431b0a4d724e03b5da5ed9551c3dac1e"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/wulala/wulala-sign-language-translation-glove?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/wulala/wulala-sign-language-translation-glove/rewards"
+          }
+      }
+  },
+  {
+      "id": 352908816,
+      "photo": {
+          "key": "assets/033/845/213/cb95f4d1f159949a2c3b41f52c84ca9e_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/033/845/213/cb95f4d1f159949a2c3b41f52c84ca9e_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1623344694&auto=format&frame=1&q=92&s=cfb096c69a6a76c4314e465edec420e8",
+          "ed": "https://ksr-ugc.imgix.net/assets/033/845/213/cb95f4d1f159949a2c3b41f52c84ca9e_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1623344694&auto=format&frame=1&q=92&s=21d14bc22a33e89d2f576a75123d7667",
+          "med": "https://ksr-ugc.imgix.net/assets/033/845/213/cb95f4d1f159949a2c3b41f52c84ca9e_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1623344694&auto=format&frame=1&q=92&s=589c0271a6bed86143c05f7def7609cd",
+          "little": "https://ksr-ugc.imgix.net/assets/033/845/213/cb95f4d1f159949a2c3b41f52c84ca9e_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1623344694&auto=format&frame=1&q=92&s=6c16facff5a9dff88bfc13792bdaa9f1",
+          "small": "https://ksr-ugc.imgix.net/assets/033/845/213/cb95f4d1f159949a2c3b41f52c84ca9e_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1623344694&auto=format&frame=1&q=92&s=a881f56823827002e75a441bb459249a",
+          "thumb": "https://ksr-ugc.imgix.net/assets/033/845/213/cb95f4d1f159949a2c3b41f52c84ca9e_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1623344694&auto=format&frame=1&q=92&s=21b631d69cc8e7829749a0a16c707f74",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/033/845/213/cb95f4d1f159949a2c3b41f52c84ca9e_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1623344694&auto=format&frame=1&q=92&s=4f93b66d04feb60a867dc794bb4cbcba",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/033/845/213/cb95f4d1f159949a2c3b41f52c84ca9e_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1623344694&auto=format&frame=1&q=92&s=f10da9493fc1941ea394cb3a3ff79e38"
+      },
+      "name": "FreeGo: Hazard Free Travel",
+      "blurb": "A downloadable platform that receives live crowdsourced updates on hazards that are occurring in their area.",
+      "goal": 18137,
+      "pledged": 57,
+      "state": "live",
+      "slug": "freego-by-artitech",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1630938531,
+      "state_changed_at": 1625754532,
+      "created_at": 1623344307,
+      "launched_at": 1625754531,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 2,
+      "static_usd_rate": 1,
+      "usd_pledged": "57.0",
+      "converted_pledged_amount": 57,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1900305706,
+          "name": "Sulaiman Bada",
+          "slug": "realsully1",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/033/845/640/3456aad0107c08ab7db7e08d98c8f28c_original.png?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1623346562&auto=format&frame=1&q=92&s=a231457e935a3684e11c9521c765d272",
+              "small": "https://ksr-ugc.imgix.net/assets/033/845/640/3456aad0107c08ab7db7e08d98c8f28c_original.png?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1623346562&auto=format&frame=1&q=92&s=28b8effcc734482e45cff80e604ad09c",
+              "medium": "https://ksr-ugc.imgix.net/assets/033/845/640/3456aad0107c08ab7db7e08d98c8f28c_original.png?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1623346562&auto=format&frame=1&q=92&s=6e8c9b98e35ddf86870aed483dab7b22"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/realsully1"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1900305706?signature=1627584535.408b503c814c3dae6ed892af880a2430413eff92"
+              }
+          }
+      },
+      "location": {
+          "id": 2522207,
+          "name": "Winona",
+          "slug": "winona-mn",
+          "short_name": "Winona, MN",
+          "displayable_name": "Winona, MN",
+          "localized_name": "Winona",
+          "country": "US",
+          "state": "MN",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/winona-mn",
+                  "location": "https://www.kickstarter.com/locations/winona-mn"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627561448.b96ac541551e11263aaa64c2d7e02053150fab5e&woe_id=2522207"
+              }
+          }
+      },
+      "category": {
+          "id": 51,
+          "name": "Software",
+          "analytics_name": "Software",
+          "slug": "technology/software",
+          "position": 11,
+          "parent_id": 16,
+          "parent_name": "Technology",
+          "color": 6526716,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/technology/software"
+              }
+          }
+      },
+      "profile": {
+          "id": 4231363,
+          "project_id": 4231363,
+          "state": "inactive",
+          "state_changed_at": 1623344307,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/033/845/213/cb95f4d1f159949a2c3b41f52c84ca9e_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1623344694&auto=format&frame=1&q=92&s=f10da9493fc1941ea394cb3a3ff79e38",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/033/845/213/cb95f4d1f159949a2c3b41f52c84ca9e_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1623344694&auto=format&frame=1&q=92&s=cfb096c69a6a76c4314e465edec420e8"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/realsully1/freego-by-artitech?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/realsully1/freego-by-artitech/rewards"
+          }
+      }
+  },
+  {
+      "id": 932704517,
+      "photo": {
+          "key": "assets/034/188/773/b3d368fe36549aa2a098e922dd8aa3f8_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/188/773/b3d368fe36549aa2a098e922dd8aa3f8_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626154772&auto=format&frame=1&q=92&s=6b423300f660c30612e865b6d072475d",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/188/773/b3d368fe36549aa2a098e922dd8aa3f8_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1626154772&auto=format&frame=1&q=92&s=6cdbe1d8304ad0a00454472850065756",
+          "med": "https://ksr-ugc.imgix.net/assets/034/188/773/b3d368fe36549aa2a098e922dd8aa3f8_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1626154772&auto=format&frame=1&q=92&s=d357061a6999743675463b22dc995b68",
+          "little": "https://ksr-ugc.imgix.net/assets/034/188/773/b3d368fe36549aa2a098e922dd8aa3f8_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1626154772&auto=format&frame=1&q=92&s=e1e8f26314154c0f38e895ac0e1540c1",
+          "small": "https://ksr-ugc.imgix.net/assets/034/188/773/b3d368fe36549aa2a098e922dd8aa3f8_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1626154772&auto=format&frame=1&q=92&s=86d7dca8581dd17660248beea765b56c",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/188/773/b3d368fe36549aa2a098e922dd8aa3f8_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1626154772&auto=format&frame=1&q=92&s=ac6a350c40e6dcf5470275e53220c1c3",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/188/773/b3d368fe36549aa2a098e922dd8aa3f8_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1626154772&auto=format&frame=1&q=92&s=96f9adf671496baf449fce192799ffdc",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/188/773/b3d368fe36549aa2a098e922dd8aa3f8_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626154772&auto=format&frame=1&q=92&s=9ba6f182f3a3eb04828b0a83ffbfb13e"
+      },
+      "name": "Unlimited Z-Furniture",
+      "blurb": "Modular 3D Printed Furniture. Print and build any furniture with a 3D printer that has an unlimited Z- Axis",
+      "goal": 1500,
+      "pledged": 22,
+      "state": "live",
+      "slug": "unlimited-z-furniture",
+      "disable_communication": false,
+      "country": "SG",
+      "country_displayable_name": "Singapore",
+      "currency": "SGD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1628914281,
+      "state_changed_at": 1626322283,
+      "created_at": 1626154646,
+      "launched_at": 1626322281,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 2,
+      "static_usd_rate": 0.73788812,
+      "usd_pledged": "16.23353864",
+      "converted_pledged_amount": 16,
+      "fx_rate": 0.73533575,
+      "usd_exchange_rate": 0.73533575,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1194035090,
+          "name": "Dominik Braun",
+          "slug": "dombraun",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/031/186/913/0ffa2cababcd1a8bb64f7025cb0fba2c_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1611031486&auto=format&frame=1&q=92&s=66be069f5b35e6c72af8c09835e45493",
+              "small": "https://ksr-ugc.imgix.net/assets/031/186/913/0ffa2cababcd1a8bb64f7025cb0fba2c_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1611031486&auto=format&frame=1&q=92&s=17d0a27a6d0cb125d1b172ed6b362cdc",
+              "medium": "https://ksr-ugc.imgix.net/assets/031/186/913/0ffa2cababcd1a8bb64f7025cb0fba2c_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1611031486&auto=format&frame=1&q=92&s=9470aa2518290ef0edd3389ac53f01fb"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/dombraun"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1194035090?signature=1627584535.67e5403f5881a5a9ce27935023865df8cac90315"
+              }
+          }
+      },
+      "location": {
+          "id": 1062617,
+          "name": "Singapore",
+          "slug": "singapore-sg",
+          "short_name": "Singapore, Singapore",
+          "displayable_name": "Singapore, Singapore",
+          "localized_name": "Singapore",
+          "country": "SG",
+          "state": "Central Singapore",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "Singapore",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/singapore-sg",
+                  "location": "https://www.kickstarter.com/locations/singapore-sg"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549046.454ee971cb6f3b7865322a331ea9cc0a5cb0916c&woe_id=1062617"
+              }
+          }
+      },
+      "category": {
+          "id": 16,
+          "name": "Technology",
+          "analytics_name": "Technology",
+          "slug": "technology",
+          "position": 14,
+          "color": 6526716,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/technology"
+              }
+          }
+      },
+      "profile": {
+          "id": 4247758,
+          "project_id": 4247758,
+          "state": "inactive",
+          "state_changed_at": 1626154646,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/188/773/b3d368fe36549aa2a098e922dd8aa3f8_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626154772&auto=format&frame=1&q=92&s=9ba6f182f3a3eb04828b0a83ffbfb13e",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/188/773/b3d368fe36549aa2a098e922dd8aa3f8_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626154772&auto=format&frame=1&q=92&s=6b423300f660c30612e865b6d072475d"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/dombraun/unlimited-z-furniture?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/dombraun/unlimited-z-furniture/rewards"
+          }
+      }
+  },
+  {
+      "id": 475407400,
+      "photo": {
+          "key": "assets/033/780/516/718792e6e4d798e44d20e55989455c73_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/033/780/516/718792e6e4d798e44d20e55989455c73_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1622875758&auto=format&frame=1&q=92&s=d8e757db5b09041768ad14cc86e39599",
+          "ed": "https://ksr-ugc.imgix.net/assets/033/780/516/718792e6e4d798e44d20e55989455c73_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1622875758&auto=format&frame=1&q=92&s=7497a80659f2f5d01f1bd1a3037ec85b",
+          "med": "https://ksr-ugc.imgix.net/assets/033/780/516/718792e6e4d798e44d20e55989455c73_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1622875758&auto=format&frame=1&q=92&s=8f458e3f21ae0ce46a95d935606bb169",
+          "little": "https://ksr-ugc.imgix.net/assets/033/780/516/718792e6e4d798e44d20e55989455c73_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1622875758&auto=format&frame=1&q=92&s=e8a06e32660f719b323f97a0a61d8323",
+          "small": "https://ksr-ugc.imgix.net/assets/033/780/516/718792e6e4d798e44d20e55989455c73_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1622875758&auto=format&frame=1&q=92&s=dd5fd5a916230d12ac473d35d55b622d",
+          "thumb": "https://ksr-ugc.imgix.net/assets/033/780/516/718792e6e4d798e44d20e55989455c73_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1622875758&auto=format&frame=1&q=92&s=83995ea5d68fbb2b774e1e738cf0b75e",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/033/780/516/718792e6e4d798e44d20e55989455c73_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1622875758&auto=format&frame=1&q=92&s=b7ef44e714e9547628656bd286e15375",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/033/780/516/718792e6e4d798e44d20e55989455c73_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1622875758&auto=format&frame=1&q=92&s=fc3e4cb0b49be842fcfbfae3d2e99d5d"
+      },
+      "name": "CROSS WORLD -The two modes 4x4 Off Road Monster Truck",
+      "blurb": "2IN1/Drift Mode Wheels/Climb Mode Wheels/1:10 Scale/Sport4X4/2.4Ghz/Max 45KMH/7.4V2500mAh/30+ Min Play",
+      "goal": 10000,
+      "pledged": 350700,
+      "state": "live",
+      "slug": "cross-world-the-two-modes-4x4-off-road-monster-truck",
+      "disable_communication": false,
+      "country": "HK",
+      "country_displayable_name": "Hong Kong",
+      "currency": "HKD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1629115095,
+      "state_changed_at": 1625054297,
+      "created_at": 1622442492,
+      "launched_at": 1625054295,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 257,
+      "static_usd_rate": 0.12882904,
+      "usd_pledged": "45180.344328",
+      "converted_pledged_amount": 45067,
+      "fx_rate": 0.12850679,
+      "usd_exchange_rate": 0.12850679,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 479692534,
+          "name": "YTMF Innovation",
+          "slug": "ytmf008",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/031/711/842/75a2cb97f8deea5fe544c2c0285b4827_original.png?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1621506413&auto=format&frame=1&q=92&s=62430a6c1219b78f4c045ce7db45a9a4",
+              "small": "https://ksr-ugc.imgix.net/assets/031/711/842/75a2cb97f8deea5fe544c2c0285b4827_original.png?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1621506413&auto=format&frame=1&q=92&s=ab442d9456eaa83d0f54fbc2524591ff",
+              "medium": "https://ksr-ugc.imgix.net/assets/031/711/842/75a2cb97f8deea5fe544c2c0285b4827_original.png?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1621506413&auto=format&frame=1&q=92&s=196083aa04a042a0e92906daecdbb292"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/ytmf008"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/479692534?signature=1627584535.4ccddbd5e904d6d87b917826444f2fbfa0a85fd3"
+              }
+          }
+      },
+      "location": {
+          "id": 2165352,
+          "name": "Hong Kong",
+          "slug": "hong-kong-hk",
+          "short_name": "Hong Kong, Hong Kong",
+          "displayable_name": "Hong Kong, Hong Kong",
+          "localized_name": "Hong Kong",
+          "country": "HK",
+          "state": "Hong Kong Island",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "Hong Kong",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/hong-kong-hk",
+                  "location": "https://www.kickstarter.com/locations/hong-kong-hk"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627548937.ccafea6d4919255e4140a4312d1e64d7a34f8be2&woe_id=2165352"
+              }
+          }
+      },
+      "category": {
+          "id": 16,
+          "name": "Technology",
+          "analytics_name": "Technology",
+          "slug": "technology",
+          "position": 14,
+          "color": 6526716,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/technology"
+              }
+          }
+      },
+      "profile": {
+          "id": 4225597,
+          "project_id": 4225597,
+          "state": "inactive",
+          "state_changed_at": 1622442492,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/033/780/516/718792e6e4d798e44d20e55989455c73_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1622875758&auto=format&frame=1&q=92&s=fc3e4cb0b49be842fcfbfae3d2e99d5d",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/033/780/516/718792e6e4d798e44d20e55989455c73_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1622875758&auto=format&frame=1&q=92&s=d8e757db5b09041768ad14cc86e39599"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/ytmf008/cross-world-the-two-modes-4x4-off-road-monster-truck?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/ytmf008/cross-world-the-two-modes-4x4-off-road-monster-truck/rewards"
+          }
+      }
+  },
+  {
+      "id": 1955128487,
+      "photo": {
+          "key": "assets/033/981/680/6ee2478ef712a6c52f96ea085f5ffc9e_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/033/981/680/6ee2478ef712a6c52f96ea085f5ffc9e_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624432077&auto=format&frame=1&q=92&s=8c633689848d164608f9608719007de0",
+          "ed": "https://ksr-ugc.imgix.net/assets/033/981/680/6ee2478ef712a6c52f96ea085f5ffc9e_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1624432077&auto=format&frame=1&q=92&s=3c117f82332d23407ddfa40b0713fa9d",
+          "med": "https://ksr-ugc.imgix.net/assets/033/981/680/6ee2478ef712a6c52f96ea085f5ffc9e_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1624432077&auto=format&frame=1&q=92&s=649b5059cf6b0a9ff309039b612e956f",
+          "little": "https://ksr-ugc.imgix.net/assets/033/981/680/6ee2478ef712a6c52f96ea085f5ffc9e_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1624432077&auto=format&frame=1&q=92&s=d0f823d90ecc9bf6469edb9f0ab4eb62",
+          "small": "https://ksr-ugc.imgix.net/assets/033/981/680/6ee2478ef712a6c52f96ea085f5ffc9e_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1624432077&auto=format&frame=1&q=92&s=9a68d9ea99c30b23a5c1f63b4b01bdbf",
+          "thumb": "https://ksr-ugc.imgix.net/assets/033/981/680/6ee2478ef712a6c52f96ea085f5ffc9e_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1624432077&auto=format&frame=1&q=92&s=b04ff69ad11700dab8d8b3d5a63ac6ab",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/033/981/680/6ee2478ef712a6c52f96ea085f5ffc9e_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1624432077&auto=format&frame=1&q=92&s=aa229edba77673f98e20d05ff2538f59",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/033/981/680/6ee2478ef712a6c52f96ea085f5ffc9e_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624432077&auto=format&frame=1&q=92&s=3ce87c84cf21712cb83ff5c86aca6ffc"
+      },
+      "name": "SHARIFF DMC2: Desktop CNC",
+      "blurb": "Machine metal on your desktop with a high power, super rigid CNC",
+      "goal": 40000,
+      "pledged": 323544.29,
+      "state": "live",
+      "slug": "shariff-dmc2-desktop-cnc",
+      "disable_communication": false,
+      "country": "CA",
+      "country_displayable_name": "Canada",
+      "currency": "CAD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1629397189,
+      "state_changed_at": 1626805192,
+      "created_at": 1623525409,
+      "launched_at": 1626805189,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 73,
+      "static_usd_rate": 0.79124378,
+      "usd_pledged": "256002.4070170162",
+      "converted_pledged_amount": 257031,
+      "fx_rate": 0.79442567,
+      "usd_exchange_rate": 0.79442567,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1227550771,
+          "name": "Shariff",
+          "slug": "shariffdmc1",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/025/623/493/b7b659a9db58a90e0c6a79ee69495cde_original.png?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1561644185&auto=format&frame=1&q=92&s=4b680ca6b6ea155d76bf78b2b7f53268",
+              "small": "https://ksr-ugc.imgix.net/assets/025/623/493/b7b659a9db58a90e0c6a79ee69495cde_original.png?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1561644185&auto=format&frame=1&q=92&s=3413fbe96c8ac82f8a0598852511039a",
+              "medium": "https://ksr-ugc.imgix.net/assets/025/623/493/b7b659a9db58a90e0c6a79ee69495cde_original.png?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1561644185&auto=format&frame=1&q=92&s=32a41279257b82a586973ed4f8e35e85"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/shariffdmc1"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1227550771?signature=1627584535.0704bf626f645a7747adcac0956e6a4810c9a6f0"
+              }
+          }
+      },
+      "location": {
+          "id": 4118,
+          "name": "Toronto",
+          "slug": "toronto-on-ca",
+          "short_name": "Toronto, Canada",
+          "displayable_name": "Toronto, Canada",
+          "localized_name": "Toronto",
+          "country": "CA",
+          "state": "ON",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "Canada",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/toronto-on-ca",
+                  "location": "https://www.kickstarter.com/locations/toronto-on-ca"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627548951.320d2eab03291c0c8792e815df1d8bba9d896858&woe_id=4118"
+              }
+          }
+      },
+      "category": {
+          "id": 16,
+          "name": "Technology",
+          "analytics_name": "Technology",
+          "slug": "technology",
+          "position": 14,
+          "color": 6526716,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/technology"
+              }
+          }
+      },
+      "profile": {
+          "id": 4232377,
+          "project_id": 4232377,
+          "state": "inactive",
+          "state_changed_at": 1623525409,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/033/981/680/6ee2478ef712a6c52f96ea085f5ffc9e_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624432077&auto=format&frame=1&q=92&s=3ce87c84cf21712cb83ff5c86aca6ffc",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/033/981/680/6ee2478ef712a6c52f96ea085f5ffc9e_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624432077&auto=format&frame=1&q=92&s=8c633689848d164608f9608719007de0"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/shariffdmc1/shariff-dmc2-desktop-cnc?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/shariffdmc1/shariff-dmc2-desktop-cnc/rewards"
+          }
+      }
+  },
+  {
+      "id": 2000436353,
+      "photo": {
+          "key": "assets/034/193/607/98c1e497b3c475a52603cf06ed30bfbe_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/193/607/98c1e497b3c475a52603cf06ed30bfbe_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626188407&auto=format&frame=1&q=92&s=31aba8ff5e3b6764de5111e8b230474c",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/193/607/98c1e497b3c475a52603cf06ed30bfbe_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1626188407&auto=format&frame=1&q=92&s=e7de5d5ea1a6058cfc8e3ddedc51c62c",
+          "med": "https://ksr-ugc.imgix.net/assets/034/193/607/98c1e497b3c475a52603cf06ed30bfbe_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1626188407&auto=format&frame=1&q=92&s=4e4f74c0eb71a46fad41a62676968b74",
+          "little": "https://ksr-ugc.imgix.net/assets/034/193/607/98c1e497b3c475a52603cf06ed30bfbe_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1626188407&auto=format&frame=1&q=92&s=ae24b3c715fb61d445bac84f454dc677",
+          "small": "https://ksr-ugc.imgix.net/assets/034/193/607/98c1e497b3c475a52603cf06ed30bfbe_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1626188407&auto=format&frame=1&q=92&s=037344ab4fcefd546164876a4ec7bd9c",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/193/607/98c1e497b3c475a52603cf06ed30bfbe_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1626188407&auto=format&frame=1&q=92&s=c65b93adcf9da2f5875a1c53cd8ace21",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/193/607/98c1e497b3c475a52603cf06ed30bfbe_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1626188407&auto=format&frame=1&q=92&s=37f11996c65d799d6493eb93cc1130aa",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/193/607/98c1e497b3c475a52603cf06ed30bfbe_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626188407&auto=format&frame=1&q=92&s=c0d7d81409e38283043f31aff11476d6"
+      },
+      "name": "Hide my DNS request",
+      "blurb": "A Secure DNS Server/Service for everybody which\nencrypts your DNS requests and you manage it via a website",
+      "goal": 78985,
+      "pledged": 1,
+      "state": "live",
+      "slug": "hide-my-dns-request",
+      "disable_communication": false,
+      "country": "AT",
+      "country_displayable_name": "Austria",
+      "currency": "EUR",
+      "currency_symbol": "€",
+      "currency_trailing_code": false,
+      "deadline": 1630703140,
+      "state_changed_at": 1626815141,
+      "created_at": 1624129937,
+      "launched_at": 1626815140,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 1,
+      "static_usd_rate": 1.18047309,
+      "usd_pledged": "1.18047309",
+      "converted_pledged_amount": 1,
+      "fx_rate": 1.18212951,
+      "usd_exchange_rate": 1.18212951,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1835675632,
+          "name": "Christopher Bichl",
+          "slug": "hideyourdnsrequest",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/034/173/880/84c6538a823f62792737544e96732c1c_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1626029501&auto=format&frame=1&q=92&s=7ccd2143d07a3ceeef76eb07e50a2b38",
+              "small": "https://ksr-ugc.imgix.net/assets/034/173/880/84c6538a823f62792737544e96732c1c_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1626029501&auto=format&frame=1&q=92&s=2e28e43a5f6f862858f4370fc8463513",
+              "medium": "https://ksr-ugc.imgix.net/assets/034/173/880/84c6538a823f62792737544e96732c1c_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1626029501&auto=format&frame=1&q=92&s=a96e3cacd856cb6fb47037f3b14faa78"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/hideyourdnsrequest"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1835675632?signature=1627584535.2d9a07d5c526ad170ad7f0ec19587fbe9d105cbc"
+              }
+          }
+      },
+      "location": {
+          "id": 542845,
+          "name": "Mödling",
+          "slug": "modling-modling-lower-austria",
+          "short_name": "Mödling, Austria",
+          "displayable_name": "Mödling, Austria",
+          "localized_name": "Mödling",
+          "country": "AT",
+          "state": "Lower Austria",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "Austria",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/modling-modling-lower-austria",
+                  "location": "https://www.kickstarter.com/locations/modling-modling-lower-austria"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627579827.1c02e86788938eec02fe5d56a692039b25509121&woe_id=542845"
+              }
+          }
+      },
+      "category": {
+          "id": 51,
+          "name": "Software",
+          "analytics_name": "Software",
+          "slug": "technology/software",
+          "position": 11,
+          "parent_id": 16,
+          "parent_name": "Technology",
+          "color": 6526716,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/technology/software"
+              }
+          }
+      },
+      "profile": {
+          "id": 4236196,
+          "project_id": 4236196,
+          "state": "inactive",
+          "state_changed_at": 1624129937,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/193/607/98c1e497b3c475a52603cf06ed30bfbe_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626188407&auto=format&frame=1&q=92&s=c0d7d81409e38283043f31aff11476d6",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/193/607/98c1e497b3c475a52603cf06ed30bfbe_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626188407&auto=format&frame=1&q=92&s=31aba8ff5e3b6764de5111e8b230474c"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/hideyourdnsrequest/hide-my-dns-request?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/hideyourdnsrequest/hide-my-dns-request/rewards"
+          }
+      }
+  },
+  {
+      "id": 1536879191,
+      "photo": {
+          "key": "assets/033/918/200/552b6955c1784188f580684fba8d09bb_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/033/918/200/552b6955c1784188f580684fba8d09bb_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1623919262&auto=format&frame=1&q=92&s=2adbdb8799e9f23cdabfff680c2b66f4",
+          "ed": "https://ksr-ugc.imgix.net/assets/033/918/200/552b6955c1784188f580684fba8d09bb_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1623919262&auto=format&frame=1&q=92&s=9990edcb3d2bad2456346cb3b547329f",
+          "med": "https://ksr-ugc.imgix.net/assets/033/918/200/552b6955c1784188f580684fba8d09bb_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1623919262&auto=format&frame=1&q=92&s=048c28d1c579aec85e1591e086e3eb2e",
+          "little": "https://ksr-ugc.imgix.net/assets/033/918/200/552b6955c1784188f580684fba8d09bb_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1623919262&auto=format&frame=1&q=92&s=4f7ffbf0a8e605de2750ae923a6eb097",
+          "small": "https://ksr-ugc.imgix.net/assets/033/918/200/552b6955c1784188f580684fba8d09bb_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1623919262&auto=format&frame=1&q=92&s=07e4533b9f18905a70a75d57a0514042",
+          "thumb": "https://ksr-ugc.imgix.net/assets/033/918/200/552b6955c1784188f580684fba8d09bb_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1623919262&auto=format&frame=1&q=92&s=19876732919fab83f0fcf2a5601ac8ce",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/033/918/200/552b6955c1784188f580684fba8d09bb_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1623919262&auto=format&frame=1&q=92&s=40a03863729fdb0db560eda644cd576c",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/033/918/200/552b6955c1784188f580684fba8d09bb_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1623919262&auto=format&frame=1&q=92&s=7e20fa5998cb1c1ef24eb002561fcf1d"
+      },
+      "name": "Gsou K20 Webcam: The 2K HD Camera with Bulit-in Bluetooth",
+      "blurb": "2K Image Quality | Bulit-in Bluetooth | Zero-frame Latency | Compatible with All Earphones & Platforms | Plug & Play | Privacy Protect",
+      "goal": 20000,
+      "pledged": 217228,
+      "state": "live",
+      "slug": "gsou-k20-webcam-the-2k-hd-camera-with-bulit-in-bluetooth",
+      "disable_communication": false,
+      "country": "HK",
+      "country_displayable_name": "Hong Kong",
+      "currency": "HKD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1630756803,
+      "state_changed_at": 1625572804,
+      "created_at": 1620973149,
+      "launched_at": 1625572803,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 405,
+      "static_usd_rate": 0.12875233,
+      "usd_pledged": "27968.61114124",
+      "converted_pledged_amount": 27915,
+      "fx_rate": 0.12850679,
+      "usd_exchange_rate": 0.12850679,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1890972801,
+          "name": "Gsou Tech",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/033/891/936/e44e584e91e25e3c98a9fb7aef5f3d5c_original.png?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1625467959&auto=format&frame=1&q=92&s=a6978780119a2c3a445e467265700403",
+              "small": "https://ksr-ugc.imgix.net/assets/033/891/936/e44e584e91e25e3c98a9fb7aef5f3d5c_original.png?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1625467959&auto=format&frame=1&q=92&s=77c8ff131d62c5390389f906f7a98656",
+              "medium": "https://ksr-ugc.imgix.net/assets/033/891/936/e44e584e91e25e3c98a9fb7aef5f3d5c_original.png?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1625467959&auto=format&frame=1&q=92&s=b055f9a81e664b42fb34186f364e6c58"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/1890972801"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1890972801?signature=1627584535.282d5a9c2f9062c349288c2509d75b34d7253e01"
+              }
+          }
+      },
+      "location": {
+          "id": 2165352,
+          "name": "Hong Kong",
+          "slug": "hong-kong-hk",
+          "short_name": "Hong Kong, Hong Kong",
+          "displayable_name": "Hong Kong, Hong Kong",
+          "localized_name": "Hong Kong",
+          "country": "HK",
+          "state": "Hong Kong Island",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "Hong Kong",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/hong-kong-hk",
+                  "location": "https://www.kickstarter.com/locations/hong-kong-hk"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627548937.ccafea6d4919255e4140a4312d1e64d7a34f8be2&woe_id=2165352"
+              }
+          }
+      },
+      "category": {
+          "id": 52,
+          "name": "Hardware",
+          "analytics_name": "Hardware",
+          "slug": "technology/hardware",
+          "position": 8,
+          "parent_id": 16,
+          "parent_name": "Technology",
+          "color": 6526716,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/technology/hardware"
+              }
+          }
+      },
+      "profile": {
+          "id": 4216478,
+          "project_id": 4216478,
+          "state": "inactive",
+          "state_changed_at": 1620973149,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/033/918/200/552b6955c1784188f580684fba8d09bb_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1623919262&auto=format&frame=1&q=92&s=7e20fa5998cb1c1ef24eb002561fcf1d",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/033/918/200/552b6955c1784188f580684fba8d09bb_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1623919262&auto=format&frame=1&q=92&s=2adbdb8799e9f23cdabfff680c2b66f4"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/1890972801/gsou-k20-webcam-the-2k-hd-camera-with-bulit-in-bluetooth?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/1890972801/gsou-k20-webcam-the-2k-hd-camera-with-bulit-in-bluetooth/rewards"
+          }
+      }
+  },
+  {
+      "id": 1381511786,
+      "photo": {
+          "key": "assets/034/281/105/f522bcf33b11fb4a9cbfabea0086b647_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/281/105/f522bcf33b11fb4a9cbfabea0086b647_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626899008&auto=format&frame=1&q=92&s=7052303c90239e608e98a681d8f722d2",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/281/105/f522bcf33b11fb4a9cbfabea0086b647_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1626899008&auto=format&frame=1&q=92&s=07c127b921b6755019b5cde7ea8654a4",
+          "med": "https://ksr-ugc.imgix.net/assets/034/281/105/f522bcf33b11fb4a9cbfabea0086b647_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1626899008&auto=format&frame=1&q=92&s=6f0a1bfa90707414f6c594a6569f1c3a",
+          "little": "https://ksr-ugc.imgix.net/assets/034/281/105/f522bcf33b11fb4a9cbfabea0086b647_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1626899008&auto=format&frame=1&q=92&s=317d2716fa51988e1b65ef5af6c012e5",
+          "small": "https://ksr-ugc.imgix.net/assets/034/281/105/f522bcf33b11fb4a9cbfabea0086b647_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1626899008&auto=format&frame=1&q=92&s=b5a740463870bfc0c780982b50bba345",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/281/105/f522bcf33b11fb4a9cbfabea0086b647_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1626899008&auto=format&frame=1&q=92&s=5e1aba1b4aed78a05e63be914827a054",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/281/105/f522bcf33b11fb4a9cbfabea0086b647_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1626899008&auto=format&frame=1&q=92&s=a41d36679b0b06c19b99f416c346633f",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/281/105/f522bcf33b11fb4a9cbfabea0086b647_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626899008&auto=format&frame=1&q=92&s=8d76c713393fd620f3a4ac24fd4931c2"
+      },
+      "name": "Jitt App of Fame",
+      "blurb": "Jitt Entertainment, LLC is the premier challenge App competition that allow a multitude of talented individuals to upload their video",
+      "goal": 1100000,
+      "pledged": 1,
+      "state": "live",
+      "slug": "jitt-app-of-fame",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1629499774,
+      "state_changed_at": 1626907775,
+      "created_at": 1626898801,
+      "launched_at": 1626907774,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 1,
+      "static_usd_rate": 1,
+      "usd_pledged": "1.0",
+      "converted_pledged_amount": 1,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 107009320,
+          "name": "Greg Moore",
+          "slug": "jittappoffame",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/034/281/997/a1d66c1fea4243cc8db76b61f6375d07_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1626905463&auto=format&frame=1&q=92&s=cf0bb0e65f9ca9c6a3a1d81b6ed49ee7",
+              "small": "https://ksr-ugc.imgix.net/assets/034/281/997/a1d66c1fea4243cc8db76b61f6375d07_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1626905463&auto=format&frame=1&q=92&s=6d646eb1155b5dd35054ead04d989868",
+              "medium": "https://ksr-ugc.imgix.net/assets/034/281/997/a1d66c1fea4243cc8db76b61f6375d07_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1626905463&auto=format&frame=1&q=92&s=81b4b45354ae108552018cb6331e6040"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/jittappoffame"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/107009320?signature=1627584535.7a32d3cae21a2b0c2605cac56df7952e2f6d15cd"
+              }
+          }
+      },
+      "location": {
+          "id": 2424766,
+          "name": "Houston",
+          "slug": "houston-tx",
+          "short_name": "Houston, TX",
+          "displayable_name": "Houston, TX",
+          "localized_name": "Houston",
+          "country": "US",
+          "state": "TX",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/houston-tx",
+                  "location": "https://www.kickstarter.com/locations/houston-tx"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549166.2170b7a5fd97dacd241ad44c42ef9d9fb4f141d6&woe_id=2424766"
+              }
+          }
+      },
+      "category": {
+          "id": 332,
+          "name": "Apps",
+          "analytics_name": "Apps",
+          "slug": "technology/apps",
+          "position": 2,
+          "parent_id": 16,
+          "parent_name": "Technology",
+          "color": 6526716,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/technology/apps"
+              }
+          }
+      },
+      "profile": {
+          "id": 4252120,
+          "project_id": 4252120,
+          "state": "inactive",
+          "state_changed_at": 1626898801,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/281/105/f522bcf33b11fb4a9cbfabea0086b647_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626899008&auto=format&frame=1&q=92&s=8d76c713393fd620f3a4ac24fd4931c2",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/281/105/f522bcf33b11fb4a9cbfabea0086b647_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626899008&auto=format&frame=1&q=92&s=7052303c90239e608e98a681d8f722d2"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/jittappoffame/jitt-app-of-fame?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/jittappoffame/jitt-app-of-fame/rewards"
+          }
+      }
+  },
+  {
+      "id": 1431983282,
+      "photo": {
+          "key": "assets/033/861/301/485dcd92e309cab0a66320d198e8e9a3_original.jpeg",
+          "full": "https://ksr-ugc.imgix.net/assets/033/861/301/485dcd92e309cab0a66320d198e8e9a3_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1623458548&auto=format&frame=1&q=92&s=d9df129ba6baeaa43f6ac10cfb17ddc4",
+          "ed": "https://ksr-ugc.imgix.net/assets/033/861/301/485dcd92e309cab0a66320d198e8e9a3_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1623458548&auto=format&frame=1&q=92&s=f2cb96cd227e64b2713ef938910685ef",
+          "med": "https://ksr-ugc.imgix.net/assets/033/861/301/485dcd92e309cab0a66320d198e8e9a3_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1623458548&auto=format&frame=1&q=92&s=9e365b7ffb1fe02fb408eab013bbebe8",
+          "little": "https://ksr-ugc.imgix.net/assets/033/861/301/485dcd92e309cab0a66320d198e8e9a3_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1623458548&auto=format&frame=1&q=92&s=5b73475b8032516c882e2e67f7a9cbc3",
+          "small": "https://ksr-ugc.imgix.net/assets/033/861/301/485dcd92e309cab0a66320d198e8e9a3_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1623458548&auto=format&frame=1&q=92&s=629fe530fc95ac89c699d0fb0afa794b",
+          "thumb": "https://ksr-ugc.imgix.net/assets/033/861/301/485dcd92e309cab0a66320d198e8e9a3_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1623458548&auto=format&frame=1&q=92&s=36260054f3f293f8421591dcc147409d",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/033/861/301/485dcd92e309cab0a66320d198e8e9a3_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1623458548&auto=format&frame=1&q=92&s=43ee96df77796868a0cfd02a716f10a6",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/033/861/301/485dcd92e309cab0a66320d198e8e9a3_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1623458548&auto=format&frame=1&q=92&s=e256b5126884c48ef0cc176bc1ba19d1"
+      },
+      "name": "F.A.C.E. | A Self-Activating Fire Suppression Device",
+      "blurb": "Defend your property from fires, even when you aren't there",
+      "goal": 5000,
+      "pledged": 15462,
+      "state": "live",
+      "slug": "face-a-self-activating-fire-suppression-device",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1627740000,
+      "state_changed_at": 1625148003,
+      "created_at": 1623351468,
+      "launched_at": 1625148000,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 59,
+      "static_usd_rate": 1,
+      "usd_pledged": "15462.0",
+      "converted_pledged_amount": 15462,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1153004829,
+          "name": "Arul Mathur",
+          "slug": "arulm",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/033/861/419/580e5f09ec0f3a8d7f21b59353e79e1b_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1625203933&auto=format&frame=1&q=92&s=a48b0f28e12290972b0a7469ccfb3584",
+              "small": "https://ksr-ugc.imgix.net/assets/033/861/419/580e5f09ec0f3a8d7f21b59353e79e1b_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1625203933&auto=format&frame=1&q=92&s=03c92f93b15978179d7ec8ee83e233b8",
+              "medium": "https://ksr-ugc.imgix.net/assets/033/861/419/580e5f09ec0f3a8d7f21b59353e79e1b_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1625203933&auto=format&frame=1&q=92&s=458a09c6551b157a041c5516ebfc1a2f"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/arulm"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1153004829?signature=1627584535.67bc114bd4b68fcadf93dc2a30b5740615563bb9"
+              }
+          }
+      },
+      "location": {
+          "id": 2487956,
+          "name": "San Francisco",
+          "slug": "san-francisco-ca",
+          "short_name": "San Francisco, CA",
+          "displayable_name": "San Francisco, CA",
+          "localized_name": "San Francisco",
+          "country": "US",
+          "state": "CA",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/san-francisco-ca",
+                  "location": "https://www.kickstarter.com/locations/san-francisco-ca"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627548944.e763589d2095f05d10f6cc0d262d46b18381bd68&woe_id=2487956"
+              }
+          }
+      },
+      "category": {
+          "id": 52,
+          "name": "Hardware",
+          "analytics_name": "Hardware",
+          "slug": "technology/hardware",
+          "position": 8,
+          "parent_id": 16,
+          "parent_name": "Technology",
+          "color": 6526716,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/technology/hardware"
+              }
+          }
+      },
+      "profile": {
+          "id": 4231437,
+          "project_id": 4231437,
+          "state": "inactive",
+          "state_changed_at": 1623351468,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/033/861/301/485dcd92e309cab0a66320d198e8e9a3_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1623458548&auto=format&frame=1&q=92&s=e256b5126884c48ef0cc176bc1ba19d1",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/033/861/301/485dcd92e309cab0a66320d198e8e9a3_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1623458548&auto=format&frame=1&q=92&s=d9df129ba6baeaa43f6ac10cfb17ddc4"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/arulm/face-a-self-activating-fire-suppression-device?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/arulm/face-a-self-activating-fire-suppression-device/rewards"
+          }
+      }
+  },
+  {
+      "id": 1574908118,
+      "photo": {
+          "key": "assets/034/244/718/e1ab8d6635e9f5e2ae068ea3d7ea4719_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/244/718/e1ab8d6635e9f5e2ae068ea3d7ea4719_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626621069&auto=format&frame=1&q=92&s=dc2c56b9c66a7ac925e300afbc1a65d3",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/244/718/e1ab8d6635e9f5e2ae068ea3d7ea4719_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1626621069&auto=format&frame=1&q=92&s=2fd158f6165a2e2a0074457770acc0a9",
+          "med": "https://ksr-ugc.imgix.net/assets/034/244/718/e1ab8d6635e9f5e2ae068ea3d7ea4719_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1626621069&auto=format&frame=1&q=92&s=15fa78cc5038341a157e8ca0595684ea",
+          "little": "https://ksr-ugc.imgix.net/assets/034/244/718/e1ab8d6635e9f5e2ae068ea3d7ea4719_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1626621069&auto=format&frame=1&q=92&s=430c45fe7f0c8f4c2e70f7c70943c787",
+          "small": "https://ksr-ugc.imgix.net/assets/034/244/718/e1ab8d6635e9f5e2ae068ea3d7ea4719_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1626621069&auto=format&frame=1&q=92&s=5e180541a18f50170f46adef3997aae1",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/244/718/e1ab8d6635e9f5e2ae068ea3d7ea4719_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1626621069&auto=format&frame=1&q=92&s=d9fa2de768512f1c3ec19930ddb7d0a1",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/244/718/e1ab8d6635e9f5e2ae068ea3d7ea4719_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1626621069&auto=format&frame=1&q=92&s=50df1cda742b90013c3fb0dbec00ace9",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/244/718/e1ab8d6635e9f5e2ae068ea3d7ea4719_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626621069&auto=format&frame=1&q=92&s=0404504e8b8787c22dd8194265494b0d"
+      },
+      "name": "Comoto",
+      "blurb": "¡¡Nueva app MOTERA!!\nHaz videos con tu INCLINACIÓN EN CURVA",
+      "goal": 3500,
+      "pledged": 22,
+      "state": "live",
+      "slug": "comoto",
+      "disable_communication": false,
+      "country": "ES",
+      "country_displayable_name": "Spain",
+      "currency": "EUR",
+      "currency_symbol": "€",
+      "currency_trailing_code": false,
+      "deadline": 1629523609,
+      "state_changed_at": 1626931610,
+      "created_at": 1626515610,
+      "launched_at": 1626931609,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 5,
+      "static_usd_rate": 1.17749432,
+      "usd_pledged": "25.90487504",
+      "converted_pledged_amount": 26,
+      "fx_rate": 1.18212951,
+      "usd_exchange_rate": 1.18212951,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1609320861,
+          "name": "Comoto",
+          "slug": "comoto",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/034/236/522/f386fbb087cd4d831c2a53726a017ced_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1626513421&auto=format&frame=1&q=92&s=c1c6bc62d13955b7d5b05e9ee3da3ee2",
+              "small": "https://ksr-ugc.imgix.net/assets/034/236/522/f386fbb087cd4d831c2a53726a017ced_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1626513421&auto=format&frame=1&q=92&s=394a4d3c844187f434c58856cf52e05c",
+              "medium": "https://ksr-ugc.imgix.net/assets/034/236/522/f386fbb087cd4d831c2a53726a017ced_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1626513421&auto=format&frame=1&q=92&s=086050b088477cdb94919273aded8f4e"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/comoto"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1609320861?signature=1627584536.097b0072e08845dd253a41d0ee6f09b85674f18d"
+              }
+          }
+      },
+      "location": {
+          "id": 29370606,
+          "name": "España",
+          "slug": "espana-es",
+          "short_name": "España, Spain",
+          "displayable_name": "España, Spain",
+          "localized_name": "España",
+          "country": "ES",
+          "state": "Madrid",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "Spain",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/espana-es",
+                  "location": "https://www.kickstarter.com/locations/espana-es"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549407.79e1b6a6afafb942249d8ceaa29f6522cfa7f1ca&woe_id=29370606"
+              }
+          }
+      },
+      "category": {
+          "id": 332,
+          "name": "Apps",
+          "analytics_name": "Apps",
+          "slug": "technology/apps",
+          "position": 2,
+          "parent_id": 16,
+          "parent_name": "Technology",
+          "color": 6526716,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/technology/apps"
+              }
+          }
+      },
+      "profile": {
+          "id": 4249935,
+          "project_id": 4249935,
+          "state": "inactive",
+          "state_changed_at": 1626515610,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/244/718/e1ab8d6635e9f5e2ae068ea3d7ea4719_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626621069&auto=format&frame=1&q=92&s=0404504e8b8787c22dd8194265494b0d",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/244/718/e1ab8d6635e9f5e2ae068ea3d7ea4719_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626621069&auto=format&frame=1&q=92&s=dc2c56b9c66a7ac925e300afbc1a65d3"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/comoto/comoto?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/comoto/comoto/rewards"
+          }
+      }
+  },
+  {
+      "id": 1464181415,
+      "photo": {
+          "key": "assets/033/660/157/b455718e9f360f3a81fad95bc82ac891_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/033/660/157/b455718e9f360f3a81fad95bc82ac891_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1622036013&auto=format&frame=1&q=92&s=1eb17f71b47771a0eba5edcf4138f5a3",
+          "ed": "https://ksr-ugc.imgix.net/assets/033/660/157/b455718e9f360f3a81fad95bc82ac891_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1622036013&auto=format&frame=1&q=92&s=c410c57ff9afcad6fc4cb617c6a53745",
+          "med": "https://ksr-ugc.imgix.net/assets/033/660/157/b455718e9f360f3a81fad95bc82ac891_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1622036013&auto=format&frame=1&q=92&s=b9e072cf52496969189e3eeb4535b2e5",
+          "little": "https://ksr-ugc.imgix.net/assets/033/660/157/b455718e9f360f3a81fad95bc82ac891_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1622036013&auto=format&frame=1&q=92&s=0221fa3f654f5f0768a2e3eb4d008781",
+          "small": "https://ksr-ugc.imgix.net/assets/033/660/157/b455718e9f360f3a81fad95bc82ac891_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1622036013&auto=format&frame=1&q=92&s=e4322fb42b55ae2d0066f47611925078",
+          "thumb": "https://ksr-ugc.imgix.net/assets/033/660/157/b455718e9f360f3a81fad95bc82ac891_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1622036013&auto=format&frame=1&q=92&s=880684c61d3f1aabd7cb9290d02c0bdf",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/033/660/157/b455718e9f360f3a81fad95bc82ac891_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1622036013&auto=format&frame=1&q=92&s=3a32838bfcf71df1860fc0b8db0e1861",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/033/660/157/b455718e9f360f3a81fad95bc82ac891_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1622036013&auto=format&frame=1&q=92&s=21d07cac356f91fda8d4c143808e67c4"
+      },
+      "name": "e-KLIP, the smart solar torch",
+      "blurb": "A powerfull smart solar torch for your garden which stays bright all night long.",
+      "goal": 50000,
+      "pledged": 1185,
+      "state": "live",
+      "slug": "e-klip-the-smart-solar-torch",
+      "disable_communication": false,
+      "country": "FR",
+      "country_displayable_name": "France",
+      "currency": "EUR",
+      "currency_symbol": "€",
+      "currency_trailing_code": false,
+      "deadline": 1628839590,
+      "state_changed_at": 1624951592,
+      "created_at": 1618493762,
+      "launched_at": 1624951590,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 7,
+      "static_usd_rate": 1.19247927,
+      "usd_pledged": "1413.08793495",
+      "converted_pledged_amount": 1400,
+      "fx_rate": 1.18212951,
+      "usd_exchange_rate": 1.18212951,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1500227454,
+          "name": "Les Jardins®",
+          "slug": "e-klip",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/033/852/591/ea53d57959b7b6d215def2b43987da7f_original.png?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1623401195&auto=format&frame=1&q=92&s=87d2f7d543123b74e1f06b5ab1b7f492",
+              "small": "https://ksr-ugc.imgix.net/assets/033/852/591/ea53d57959b7b6d215def2b43987da7f_original.png?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1623401195&auto=format&frame=1&q=92&s=087f72c60eb91905f7015af3d02d3cf7",
+              "medium": "https://ksr-ugc.imgix.net/assets/033/852/591/ea53d57959b7b6d215def2b43987da7f_original.png?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1623401195&auto=format&frame=1&q=92&s=c68557f7ac319d29542c5e4aa30ff64d"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/e-klip"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1500227454?signature=1627584536.781739f523404db229c33193b28e85f98b0fee15"
+              }
+          }
+      },
+      "location": {
+          "id": 575609,
+          "name": "Aix-en-Provence",
+          "slug": "aix-en-provence-aix-en-provence-fr",
+          "short_name": "Aix-en-Provence, France",
+          "displayable_name": "Aix-en-Provence, France",
+          "localized_name": "Aix-en-Provence",
+          "country": "FR",
+          "state": "Provence-Alpes-Cote d'Azur",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "France",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/aix-en-provence-aix-en-provence-fr",
+                  "location": "https://www.kickstarter.com/locations/aix-en-provence-aix-en-provence-fr"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627556061.f0e65b824c6818aa3ea49e151670fe2359d01982&woe_id=575609"
+              }
+          }
+      },
+      "category": {
+          "id": 16,
+          "name": "Technology",
+          "analytics_name": "Technology",
+          "slug": "technology",
+          "position": 14,
+          "color": 6526716,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/technology"
+              }
+          }
+      },
+      "profile": {
+          "id": 4199473,
+          "project_id": 4199473,
+          "state": "inactive",
+          "state_changed_at": 1618493762,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/033/660/157/b455718e9f360f3a81fad95bc82ac891_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1622036013&auto=format&frame=1&q=92&s=21d07cac356f91fda8d4c143808e67c4",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/033/660/157/b455718e9f360f3a81fad95bc82ac891_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1622036013&auto=format&frame=1&q=92&s=1eb17f71b47771a0eba5edcf4138f5a3"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/e-klip/e-klip-the-smart-solar-torch?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/e-klip/e-klip-the-smart-solar-torch/rewards"
+          }
+      }
+  }
+]
