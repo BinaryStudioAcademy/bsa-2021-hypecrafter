@@ -1,0 +1,111 @@
+.link {
+  text-decoration: none;
+  width: 100%
+}
+
+.card {
+  padding: 20px;
+  height: 200px;
+  max-height: 200px;
+  display: grid;
+  grid-template-columns: calc(45% - 10px) calc(55% - 10px);
+  grid-template-rows: calc(100%);
+  column-gap: 20px;
+  background: #2E333A;
+}
+
+.cardImage {
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.cardContent {
+  max-height:100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.category {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 14px;
+  color: #0AECEC;
+}
+
+.title {
+  margin-top: 5px;
+  max-height: 38px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #FAFBFF;
+}
+
+.description {
+  margin-top: 10px;
+  margin-bottom: auto;
+  max-height: 32px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #FAFBFF;
+}
+
+.tags {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  overflow: hidden;
+
+  .tag {
+    padding: 4px 9px;
+    background: #474A4F;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba(250, 251, 255, 0.5);
+  }
+}
+
+.progress {
+  margin-top: 10px;
+
+  .progressInfo {
+    display: flex;
+    justify-content: space-between;
+
+    .goal {
+      font-size: 12px;
+      line-height: 150%;
+      color: #FAFBFF;
+    }
+
+    .percent {
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 140%;
+      color: #0AECEC;
+    }
+  }
+
+  .progressBar {
+    height: 4px;
+
+    div {
+      background: linear-gradient(90deg, #19E3E9 0%, #28ABF2 100%);
+    }
+  }
+}
