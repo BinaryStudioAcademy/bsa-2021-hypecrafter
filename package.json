@@ -32,7 +32,8 @@
             "npm run lint"
         ]
     },
-    "dependencies": {
-        "tslib": "^1.14.1"
-    }
+  "dependencies": {
+    "pg": "^8.7.1",
+    "tslib": "^1.14.1"
+  }
 }
