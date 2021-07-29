@@ -1,0 +1,17 @@
+@import 'vars';
+@import 'fonts.scss';
+
+body {
+  background: $color-root-background;
+  color: $color-root-text;
+  font-size: $font-size-text;
+  margin: 0;
+  font-family: $font-roboto400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

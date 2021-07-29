@@ -1,0 +1,26 @@
+$font-roboto300:'Roboto300';
+$font-roboto400:'Roboto400';
+$font-roboto500:'Roboto500';
+$font-roboto700:'Roboto700';
+$font-orbitron700:'Orbitron700';
+
+@font-face {
+    font-family: 'Roboto300';
+    src: url('../fonts/Roboto/Roboto-Light.ttf');
+}
+@font-face {
+    font-family: 'Roboto400';
+    src: url('../fonts/Roboto/Roboto-Regular.ttf');
+}
+@font-face {
+    font-family: 'Roboto500';
+    src: url('../fonts/Roboto/Roboto-Medium.ttf');
+}
+@font-face {
+    font-family: 'Roboto700';
+    src: url('../fonts/Roboto/Roboto-Bold.ttf');
+}
+@font-face {
+    font-family: 'Orbitron700';
+    src: url('../fonts/Orbitron/Orbitron-Bold.ttf');
+}
