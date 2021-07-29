@@ -3,7 +3,7 @@
   "info": {
     "title": "API for Hypecrafter",
     "description": "API documentation for BSA-Project [Hypecrafter](https://github.com/BinaryStudioAcademy/bsa-2021-hypecrafter)",
-    "version": "0.1.9"
+    "version": "1.0.0"
   },
   "servers": [
     {
