@@ -1,0 +1,1548 @@
+[
+  {
+      "id": 604948146,
+      "photo": {
+          "key": "assets/034/160/663/913215e3f97249a63895b803e71183d8_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/034/160/663/913215e3f97249a63895b803e71183d8_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625878798&auto=format&frame=1&q=92&s=0b611a93584149911a9237502b10b934",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/160/663/913215e3f97249a63895b803e71183d8_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1625878798&auto=format&frame=1&q=92&s=52a7b57a750ccb3a2e2d97f93fe744dd",
+          "med": "https://ksr-ugc.imgix.net/assets/034/160/663/913215e3f97249a63895b803e71183d8_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1625878798&auto=format&frame=1&q=92&s=09be75b30e7296c44a13a03d6aeaf72e",
+          "little": "https://ksr-ugc.imgix.net/assets/034/160/663/913215e3f97249a63895b803e71183d8_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1625878798&auto=format&frame=1&q=92&s=f0e24fb9a4cf25e22a509c117af66631",
+          "small": "https://ksr-ugc.imgix.net/assets/034/160/663/913215e3f97249a63895b803e71183d8_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1625878798&auto=format&frame=1&q=92&s=95e00ed8a5b1d67689b9608ff1cbc175",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/160/663/913215e3f97249a63895b803e71183d8_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1625878798&auto=format&frame=1&q=92&s=f0a461774bf2b9a3c1eed05b2733bca8",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/160/663/913215e3f97249a63895b803e71183d8_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1625878798&auto=format&frame=1&q=92&s=9201bc7e496f1d20494f28c1d69b2cb2",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/160/663/913215e3f97249a63895b803e71183d8_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625878798&auto=format&frame=1&q=92&s=39f5541d3e92ed3665833b1933b53f5b"
+      },
+      "name": "A Wish Upon a Star",
+      "blurb": "SEX - STORMS - SECRETS come alive in this HOT new Time Travel Romance!",
+      "goal": 500,
+      "pledged": 577,
+      "state": "live",
+      "slug": "a-wish-upon-a-star",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1627596000,
+      "state_changed_at": 1624980877,
+      "created_at": 1608055148,
+      "launched_at": 1624980874,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 35,
+      "static_usd_rate": 1,
+      "usd_pledged": "577.0",
+      "converted_pledged_amount": 577,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 529770689,
+          "name": "Kathryn Kaleigh",
+          "slug": "kathrynkaleigh",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/032/045/664/8c1612b27476302cdd26f45ca268dbb9_original.jpeg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1611752415&auto=format&frame=1&q=92&s=f184e5148bb350e0c7db8536860701d6",
+              "small": "https://ksr-ugc.imgix.net/assets/032/045/664/8c1612b27476302cdd26f45ca268dbb9_original.jpeg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1611752415&auto=format&frame=1&q=92&s=068b9894bb3a3ec6ea0ca2b4f7e9f5f7",
+              "medium": "https://ksr-ugc.imgix.net/assets/032/045/664/8c1612b27476302cdd26f45ca268dbb9_original.jpeg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1611752415&auto=format&frame=1&q=92&s=1bdadea5a0fbfd4f182c205f47b13e22"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/kathrynkaleigh"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/529770689?signature=1627583740.2ac41b1c3ed5478b1635adaccb17c6edc3f71d35"
+              }
+          }
+      },
+      "location": {
+          "id": 2424766,
+          "name": "Houston",
+          "slug": "houston-tx",
+          "short_name": "Houston, TX",
+          "displayable_name": "Houston, TX",
+          "localized_name": "Houston",
+          "country": "US",
+          "state": "TX",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/houston-tx",
+                  "location": "https://www.kickstarter.com/locations/houston-tx"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549166.2170b7a5fd97dacd241ad44c42ef9d9fb4f141d6&woe_id=2424766"
+              }
+          }
+      },
+      "category": {
+          "id": 47,
+          "name": "Fiction",
+          "analytics_name": "Fiction",
+          "slug": "publishing/fiction",
+          "position": 7,
+          "parent_id": 18,
+          "parent_name": "Publishing",
+          "color": 14867664,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/publishing/fiction"
+              }
+          }
+      },
+      "profile": {
+          "id": 4126817,
+          "project_id": 4126817,
+          "state": "inactive",
+          "state_changed_at": 1608055148,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/160/663/913215e3f97249a63895b803e71183d8_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625878798&auto=format&frame=1&q=92&s=39f5541d3e92ed3665833b1933b53f5b",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/160/663/913215e3f97249a63895b803e71183d8_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625878798&auto=format&frame=1&q=92&s=0b611a93584149911a9237502b10b934"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/kathrynkaleigh/a-wish-upon-a-star?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/kathrynkaleigh/a-wish-upon-a-star/rewards"
+          }
+      }
+  },
+  {
+      "id": 1064835916,
+      "photo": {
+          "key": "assets/034/233/512/57a9292286af657607adbbf2a525e617_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/233/512/57a9292286af657607adbbf2a525e617_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626473307&auto=format&frame=1&q=92&s=33b7afe4fe1f1b670fafde93c09471e8",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/233/512/57a9292286af657607adbbf2a525e617_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1626473307&auto=format&frame=1&q=92&s=6d21ee0bd5ddf84ae9c0590b6e2b5456",
+          "med": "https://ksr-ugc.imgix.net/assets/034/233/512/57a9292286af657607adbbf2a525e617_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1626473307&auto=format&frame=1&q=92&s=176ab2ecf818f44c45ce4d9e41904a2a",
+          "little": "https://ksr-ugc.imgix.net/assets/034/233/512/57a9292286af657607adbbf2a525e617_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1626473307&auto=format&frame=1&q=92&s=e0fdae186227ffafd1ebeb14d43f8c8b",
+          "small": "https://ksr-ugc.imgix.net/assets/034/233/512/57a9292286af657607adbbf2a525e617_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1626473307&auto=format&frame=1&q=92&s=d9f7ce469ddecb2937a575d6b87aeaa8",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/233/512/57a9292286af657607adbbf2a525e617_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1626473307&auto=format&frame=1&q=92&s=3ae271c9f9882d9f6939d4fcba96bdde",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/233/512/57a9292286af657607adbbf2a525e617_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1626473307&auto=format&frame=1&q=92&s=55ef44f8b7bc1a7fb25d9652dedaa25d",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/233/512/57a9292286af657607adbbf2a525e617_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626473307&auto=format&frame=1&q=92&s=08dd8cebd0144b46273ed8047d11da1c"
+      },
+      "name": "There's a Monster Under My Bedtime Story",
+      "blurb": "A Rhyming Alphabet Book about Cryptids from around the world, illustrated in a heavily shadowed horror art style.",
+      "goal": 14300,
+      "pledged": 2062,
+      "state": "live",
+      "slug": "theres-a-monster-under-my-bedtime-story",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1628819738,
+      "state_changed_at": 1626227739,
+      "created_at": 1625681644,
+      "launched_at": 1626227738,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 44,
+      "static_usd_rate": 1,
+      "usd_pledged": "2062.0",
+      "converted_pledged_amount": 2062,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 195267806,
+          "name": "Shannon Hay",
+          "slug": "shannonsketches",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/034/136/947/a63be89b61a2ffd9e59ea6dc71003d27_original.jpeg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1625688952&auto=format&frame=1&q=92&s=967c4fa21581fcdb2a336aa6338cd40c",
+              "small": "https://ksr-ugc.imgix.net/assets/034/136/947/a63be89b61a2ffd9e59ea6dc71003d27_original.jpeg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1625688952&auto=format&frame=1&q=92&s=919bd48500f469ba3b11ceffe3ce7f33",
+              "medium": "https://ksr-ugc.imgix.net/assets/034/136/947/a63be89b61a2ffd9e59ea6dc71003d27_original.jpeg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1625688952&auto=format&frame=1&q=92&s=ccce87fa8797dde067fb25c630cdce95"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/shannonsketches"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/195267806?signature=1627583740.eca4b98106fe0cc3ddcc2fe366ca0b2a58252975"
+              }
+          }
+      },
+      "location": {
+          "id": 2442047,
+          "name": "Los Angeles",
+          "slug": "los-angeles-ca",
+          "short_name": "Los Angeles, CA",
+          "displayable_name": "Los Angeles, CA",
+          "localized_name": "Los Angeles",
+          "country": "US",
+          "state": "CA",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/los-angeles-ca",
+                  "location": "https://www.kickstarter.com/locations/los-angeles-ca"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627548931.93059c39f967bfe76b10abc09360af28bb72e9d9&woe_id=2442047"
+              }
+          }
+      },
+      "category": {
+          "id": 46,
+          "name": "Children's Books",
+          "analytics_name": "Children's Books",
+          "slug": "publishing/children's books",
+          "position": 5,
+          "parent_id": 18,
+          "parent_name": "Publishing",
+          "color": 14867664,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/publishing/children's%20books"
+              }
+          }
+      },
+      "profile": {
+          "id": 4245076,
+          "project_id": 4245076,
+          "state": "inactive",
+          "state_changed_at": 1625681644,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/233/512/57a9292286af657607adbbf2a525e617_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626473307&auto=format&frame=1&q=92&s=08dd8cebd0144b46273ed8047d11da1c",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/233/512/57a9292286af657607adbbf2a525e617_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626473307&auto=format&frame=1&q=92&s=33b7afe4fe1f1b670fafde93c09471e8"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/shannonsketches/theres-a-monster-under-my-bedtime-story?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/shannonsketches/theres-a-monster-under-my-bedtime-story/rewards"
+          }
+      }
+  },
+  {
+      "id": 513068383,
+      "photo": {
+          "key": "assets/034/295/528/656a1f2476b039944b478c92c5e3074d_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/295/528/656a1f2476b039944b478c92c5e3074d_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1627021842&auto=format&frame=1&q=92&s=d45031335e38b87e717834f3a45b9e78",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/295/528/656a1f2476b039944b478c92c5e3074d_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1627021842&auto=format&frame=1&q=92&s=343b99838568767e3b973720b1e08a1e",
+          "med": "https://ksr-ugc.imgix.net/assets/034/295/528/656a1f2476b039944b478c92c5e3074d_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1627021842&auto=format&frame=1&q=92&s=82afc4443fcdd598d74bef6c080f2530",
+          "little": "https://ksr-ugc.imgix.net/assets/034/295/528/656a1f2476b039944b478c92c5e3074d_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1627021842&auto=format&frame=1&q=92&s=c750a742b71e4e596ae4a24706e54cc7",
+          "small": "https://ksr-ugc.imgix.net/assets/034/295/528/656a1f2476b039944b478c92c5e3074d_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1627021842&auto=format&frame=1&q=92&s=0fe8f7c3addebaf939b38a43a0145d47",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/295/528/656a1f2476b039944b478c92c5e3074d_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1627021842&auto=format&frame=1&q=92&s=637ebe05c3a2434e487694b63e2e88d8",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/295/528/656a1f2476b039944b478c92c5e3074d_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1627021842&auto=format&frame=1&q=92&s=cf6684eda262ad639e7fb6e7415db441",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/295/528/656a1f2476b039944b478c92c5e3074d_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1627021842&auto=format&frame=1&q=92&s=daf6bc3805b1135ee223103c8b57f1c4"
+      },
+      "name": "Born To Stand Out: A story about finding your true colours",
+      "blurb": "Inspire children around the world to shine bright and be who they were created to be!",
+      "goal": 8000,
+      "pledged": 6168.32,
+      "state": "live",
+      "slug": "born-to-stand-out-childrens-picture-book",
+      "disable_communication": false,
+      "country": "AU",
+      "country_displayable_name": "Australia",
+      "currency": "AUD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1628973961,
+      "state_changed_at": 1626381963,
+      "created_at": 1624509089,
+      "launched_at": 1626381961,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 147,
+      "static_usd_rate": 0.74591796,
+      "usd_pledged": "4601.0606710272",
+      "converted_pledged_amount": 4539,
+      "fx_rate": 0.73595485,
+      "usd_exchange_rate": 0.73595485,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 952996178,
+          "name": "Nikki",
+          "slug": "childrensbooks",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/030/409/946/3272d27b413891a98be22c839518712d_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1598849968&auto=format&frame=1&q=92&s=daede3f7537e1fefd042fe2f2fbc9eb4",
+              "small": "https://ksr-ugc.imgix.net/assets/030/409/946/3272d27b413891a98be22c839518712d_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1598849968&auto=format&frame=1&q=92&s=327b01584360eaa8e2c2a6e451aea52b",
+              "medium": "https://ksr-ugc.imgix.net/assets/030/409/946/3272d27b413891a98be22c839518712d_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1598849968&auto=format&frame=1&q=92&s=078d085f84e526f105661c6e16f217bd"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/childrensbooks"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/952996178?signature=1627583740.8ade7ff97ff88e73122f2c44d7949649ce9085aa"
+              }
+          }
+      },
+      "location": {
+          "id": 7226269,
+          "name": "City of Gold Coast",
+          "slug": "city-of-gold-coast-au",
+          "short_name": "City of Gold Coast, AU",
+          "displayable_name": "City of Gold Coast, AU",
+          "localized_name": "City of Gold Coast",
+          "country": "AU",
+          "state": "QLD",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "Australia",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/city-of-gold-coast-au",
+                  "location": "https://www.kickstarter.com/locations/city-of-gold-coast-au"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627557440.10924eb0a1079d87cae8969852d246b77026e988&woe_id=7226269"
+              }
+          }
+      },
+      "category": {
+          "id": 46,
+          "name": "Children's Books",
+          "analytics_name": "Children's Books",
+          "slug": "publishing/children's books",
+          "position": 5,
+          "parent_id": 18,
+          "parent_name": "Publishing",
+          "color": 14867664,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/publishing/children's%20books"
+              }
+          }
+      },
+      "profile": {
+          "id": 4238453,
+          "project_id": 4238453,
+          "state": "inactive",
+          "state_changed_at": 1624509089,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/295/528/656a1f2476b039944b478c92c5e3074d_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1627021842&auto=format&frame=1&q=92&s=daf6bc3805b1135ee223103c8b57f1c4",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/295/528/656a1f2476b039944b478c92c5e3074d_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1627021842&auto=format&frame=1&q=92&s=d45031335e38b87e717834f3a45b9e78"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/childrensbooks/born-to-stand-out-childrens-picture-book?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/childrensbooks/born-to-stand-out-childrens-picture-book/rewards"
+          }
+      }
+  },
+  {
+      "id": 1147462090,
+      "photo": {
+          "key": "assets/033/914/601/dec81e3c4d9cc9577afa5e33697919b1_original.JPG",
+          "full": "https://ksr-ugc.imgix.net/assets/033/914/601/dec81e3c4d9cc9577afa5e33697919b1_original.JPG?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1623884168&auto=format&frame=1&q=92&s=0db3aee8b5c6387225d6e5f87d76189d",
+          "ed": "https://ksr-ugc.imgix.net/assets/033/914/601/dec81e3c4d9cc9577afa5e33697919b1_original.JPG?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1623884168&auto=format&frame=1&q=92&s=ba5523b2b124f28abb45b26a3f5b124c",
+          "med": "https://ksr-ugc.imgix.net/assets/033/914/601/dec81e3c4d9cc9577afa5e33697919b1_original.JPG?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1623884168&auto=format&frame=1&q=92&s=a265ece4a2bf21151f47e5570dd0f292",
+          "little": "https://ksr-ugc.imgix.net/assets/033/914/601/dec81e3c4d9cc9577afa5e33697919b1_original.JPG?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1623884168&auto=format&frame=1&q=92&s=e4b0f5dd332bcf3a48fff1a9297c177d",
+          "small": "https://ksr-ugc.imgix.net/assets/033/914/601/dec81e3c4d9cc9577afa5e33697919b1_original.JPG?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1623884168&auto=format&frame=1&q=92&s=2d14988617bc2d3efae153dd438f9da4",
+          "thumb": "https://ksr-ugc.imgix.net/assets/033/914/601/dec81e3c4d9cc9577afa5e33697919b1_original.JPG?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1623884168&auto=format&frame=1&q=92&s=fe4266e53f02cfcaab15a8b82e9e1b12",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/033/914/601/dec81e3c4d9cc9577afa5e33697919b1_original.JPG?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1623884168&auto=format&frame=1&q=92&s=ff682d2d8933a1f144dc4c3df4053c6a",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/033/914/601/dec81e3c4d9cc9577afa5e33697919b1_original.JPG?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1623884168&auto=format&frame=1&q=92&s=8f8855da673c296be10fd98806621bec"
+      },
+      "name": "The Day I Became a Raindrop",
+      "blurb": "The adventures of Noah and Timmy.  Follow the pair as they are turned into a raindrop.  What a fun way to learn about the water cycle.",
+      "goal": 15000,
+      "pledged": 7894,
+      "state": "live",
+      "slug": "the-day-i-became-a-raindrop",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1629070891,
+      "state_changed_at": 1623886892,
+      "created_at": 1623163444,
+      "launched_at": 1623886891,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 78,
+      "static_usd_rate": 1,
+      "usd_pledged": "7894.0",
+      "converted_pledged_amount": 7894,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1238530738,
+          "name": "Micah Battle",
+          "slug": "ibecamearaindrop",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/033/914/932/d5df11833a1010c4c7985680e632334e_original.JPG?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1623886745&auto=format&frame=1&q=92&s=344a2d7b02d9dcda68ee55b4ef969275",
+              "small": "https://ksr-ugc.imgix.net/assets/033/914/932/d5df11833a1010c4c7985680e632334e_original.JPG?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1623886745&auto=format&frame=1&q=92&s=2693c14d9e5ec81f27b7bf77cc365345",
+              "medium": "https://ksr-ugc.imgix.net/assets/033/914/932/d5df11833a1010c4c7985680e632334e_original.JPG?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1623886745&auto=format&frame=1&q=92&s=98f1dcef4c7cc1345b51f6333d1a6670"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/ibecamearaindrop"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1238530738?signature=1627583740.c0b8c555666f45c1844b1ef8d92027fee27e70e4"
+              }
+          }
+      },
+      "location": {
+          "id": 2455073,
+          "name": "Mount Juliet",
+          "slug": "mount-juliet-tn",
+          "short_name": "Mount Juliet, TN",
+          "displayable_name": "Mount Juliet, TN",
+          "localized_name": "Mount Juliet",
+          "country": "US",
+          "state": "TN",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/mount-juliet-tn",
+                  "location": "https://www.kickstarter.com/locations/mount-juliet-tn"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627547511.f40203f3a857fd411c860b9687e552991b64f932&woe_id=2455073"
+              }
+          }
+      },
+      "category": {
+          "id": 46,
+          "name": "Children's Books",
+          "analytics_name": "Children's Books",
+          "slug": "publishing/children's books",
+          "position": 5,
+          "parent_id": 18,
+          "parent_name": "Publishing",
+          "color": 14867664,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/publishing/children's%20books"
+              }
+          }
+      },
+      "profile": {
+          "id": 4230137,
+          "project_id": 4230137,
+          "state": "inactive",
+          "state_changed_at": 1623163444,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/033/914/601/dec81e3c4d9cc9577afa5e33697919b1_original.JPG?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1623884168&auto=format&frame=1&q=92&s=8f8855da673c296be10fd98806621bec",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/033/914/601/dec81e3c4d9cc9577afa5e33697919b1_original.JPG?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1623884168&auto=format&frame=1&q=92&s=0db3aee8b5c6387225d6e5f87d76189d"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/ibecamearaindrop/the-day-i-became-a-raindrop?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/ibecamearaindrop/the-day-i-became-a-raindrop/rewards"
+          }
+      }
+  },
+  {
+      "id": 1513299702,
+      "photo": {
+          "key": "assets/034/000/615/470379a86f147a58b6d56ff1fc33bf0b_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/034/000/615/470379a86f147a58b6d56ff1fc33bf0b_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624564108&auto=format&frame=1&q=92&s=d99e8d75ad1e10cbd69f45abda905558",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/000/615/470379a86f147a58b6d56ff1fc33bf0b_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1624564108&auto=format&frame=1&q=92&s=1dbb8c4ec3926982a098c41a32a673a2",
+          "med": "https://ksr-ugc.imgix.net/assets/034/000/615/470379a86f147a58b6d56ff1fc33bf0b_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1624564108&auto=format&frame=1&q=92&s=b37f9bd5e50c6bf7ee6505f9947024a1",
+          "little": "https://ksr-ugc.imgix.net/assets/034/000/615/470379a86f147a58b6d56ff1fc33bf0b_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1624564108&auto=format&frame=1&q=92&s=fb6e810541bc27bf919d290aee0baa15",
+          "small": "https://ksr-ugc.imgix.net/assets/034/000/615/470379a86f147a58b6d56ff1fc33bf0b_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1624564108&auto=format&frame=1&q=92&s=6cba98d61d66eb9cba57c57d295130b3",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/000/615/470379a86f147a58b6d56ff1fc33bf0b_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1624564108&auto=format&frame=1&q=92&s=3d3362776d2437b9a4d40c03b985af78",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/000/615/470379a86f147a58b6d56ff1fc33bf0b_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1624564108&auto=format&frame=1&q=92&s=afafdede2926eeee1385288e6858924d",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/000/615/470379a86f147a58b6d56ff1fc33bf0b_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624564108&auto=format&frame=1&q=92&s=feb23fd157ccb1e0176ac8879d3227f2"
+      },
+      "name": "To Catch the Sun 🌞",
+      "blurb": "A book of inspiring stories of communities coming together to harness their own solar energy, and how you can do it!",
+      "goal": 9000,
+      "pledged": 3307,
+      "state": "live",
+      "slug": "to-catch-the-sun",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1630064992,
+      "state_changed_at": 1627472994,
+      "created_at": 1614323693,
+      "launched_at": 1627472992,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 28,
+      "static_usd_rate": 1,
+      "usd_pledged": "3307.0",
+      "converted_pledged_amount": 3307,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 457441381,
+          "name": "Lonny Grafman",
+          "slug": "lonnyg",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/005/982/412/908edc5193d39f906d137951b9e849aa_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1512763959&auto=format&frame=1&q=92&s=686920521174e5051be92b9566ede566",
+              "small": "https://ksr-ugc.imgix.net/assets/005/982/412/908edc5193d39f906d137951b9e849aa_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1512763959&auto=format&frame=1&q=92&s=1d24dc1081c97b8e89303e09d7edecc1",
+              "medium": "https://ksr-ugc.imgix.net/assets/005/982/412/908edc5193d39f906d137951b9e849aa_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1512763959&auto=format&frame=1&q=92&s=e83cf96aca0aa10a9bf983731488d6e4"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/lonnyg"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/457441381?signature=1627583740.8f5242984931aebfd1fa00a94a1bd7708b873efe"
+              }
+          }
+      },
+      "location": {
+          "id": 2355561,
+          "name": "Arcata",
+          "slug": "arcata-ca",
+          "short_name": "Arcata, CA",
+          "displayable_name": "Arcata, CA",
+          "localized_name": "Arcata",
+          "country": "US",
+          "state": "CA",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/arcata-ca",
+                  "location": "https://www.kickstarter.com/locations/arcata-ca"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627544086.e04e1a70fd90353f731368530555bf6a5cc92cb6&woe_id=2355561"
+              }
+          }
+      },
+      "category": {
+          "id": 48,
+          "name": "Nonfiction",
+          "analytics_name": "Nonfiction",
+          "slug": "publishing/nonfiction",
+          "position": 10,
+          "parent_id": 18,
+          "parent_name": "Publishing",
+          "color": 14867664,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/publishing/nonfiction"
+              }
+          }
+      },
+      "profile": {
+          "id": 4171389,
+          "project_id": 4171389,
+          "state": "inactive",
+          "state_changed_at": 1614323693,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/000/615/470379a86f147a58b6d56ff1fc33bf0b_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624564108&auto=format&frame=1&q=92&s=feb23fd157ccb1e0176ac8879d3227f2",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/000/615/470379a86f147a58b6d56ff1fc33bf0b_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624564108&auto=format&frame=1&q=92&s=d99e8d75ad1e10cbd69f45abda905558"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/lonnyg/to-catch-the-sun?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/lonnyg/to-catch-the-sun/rewards"
+          }
+      }
+  },
+  {
+      "id": 1717022030,
+      "photo": {
+          "key": "assets/033/865/237/79e10c0210668ee47f1e23affbfa04aa_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/033/865/237/79e10c0210668ee47f1e23affbfa04aa_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1623504396&auto=format&frame=1&q=92&s=939fc212fa3bdafc9f51a23972514992",
+          "ed": "https://ksr-ugc.imgix.net/assets/033/865/237/79e10c0210668ee47f1e23affbfa04aa_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1623504396&auto=format&frame=1&q=92&s=802f64a10855447194e860316ad42ebb",
+          "med": "https://ksr-ugc.imgix.net/assets/033/865/237/79e10c0210668ee47f1e23affbfa04aa_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1623504396&auto=format&frame=1&q=92&s=2570e6c9ac70e048dbdf8151873dcc16",
+          "little": "https://ksr-ugc.imgix.net/assets/033/865/237/79e10c0210668ee47f1e23affbfa04aa_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1623504396&auto=format&frame=1&q=92&s=6bd84ae6bb6f2faab2aedd05e665dd8d",
+          "small": "https://ksr-ugc.imgix.net/assets/033/865/237/79e10c0210668ee47f1e23affbfa04aa_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1623504396&auto=format&frame=1&q=92&s=a971946e4b0a665d71ba215d06e78615",
+          "thumb": "https://ksr-ugc.imgix.net/assets/033/865/237/79e10c0210668ee47f1e23affbfa04aa_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1623504396&auto=format&frame=1&q=92&s=df5cbfc8a47f3db6b8ad8002e2bcb961",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/033/865/237/79e10c0210668ee47f1e23affbfa04aa_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1623504396&auto=format&frame=1&q=92&s=8d77f07393a3ae7c3439b1eb323e65c6",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/033/865/237/79e10c0210668ee47f1e23affbfa04aa_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1623504396&auto=format&frame=1&q=92&s=7d80399b4969893c18081c9ba1163b34"
+      },
+      "name": "Questions for Breakfast - Books For Children",
+      "blurb": "A bilingual (English & Spanish) 64-page, full-color children's book to be printed exclusively for donation to Reach Out & Read!",
+      "goal": 10000,
+      "pledged": 3012,
+      "state": "live",
+      "slug": "questions-for-breakfast-kids-books-for-charitable-donation",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1628250484,
+      "state_changed_at": 1625658485,
+      "created_at": 1623290447,
+      "launched_at": 1625658484,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 17,
+      "static_usd_rate": 1,
+      "usd_pledged": "3012.0",
+      "converted_pledged_amount": 3012,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1680291577,
+          "name": "Sabrina Miller",
+          "slug": "qfb",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/033/837/192/8fa0a945167ad1ac0e94cf182b205692_original.jpeg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1623950736&auto=format&frame=1&q=92&s=e6e3060e9400b0e7406104c71e7d6a16",
+              "small": "https://ksr-ugc.imgix.net/assets/033/837/192/8fa0a945167ad1ac0e94cf182b205692_original.jpeg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1623950736&auto=format&frame=1&q=92&s=496e09c0ceb6a7aac6d1baf71453c651",
+              "medium": "https://ksr-ugc.imgix.net/assets/033/837/192/8fa0a945167ad1ac0e94cf182b205692_original.jpeg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1623950736&auto=format&frame=1&q=92&s=50c0bda2ec4778c77eb0221fe4416ef9"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/qfb"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1680291577?signature=1627583740.c96a749d892a52be1cf9640a77dfda108ec93b3f"
+              }
+          }
+      },
+      "location": {
+          "id": 2459115,
+          "name": "New York",
+          "slug": "new-york-ny",
+          "short_name": "New York, NY",
+          "displayable_name": "New York, NY",
+          "localized_name": "New York",
+          "country": "US",
+          "state": "NY",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/new-york-ny",
+                  "location": "https://www.kickstarter.com/locations/new-york-ny"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627548935.798cbc8d8b02f51761ab484df47a3960ccd2e384&woe_id=2459115"
+              }
+          }
+      },
+      "category": {
+          "id": 46,
+          "name": "Children's Books",
+          "analytics_name": "Children's Books",
+          "slug": "publishing/children's books",
+          "position": 5,
+          "parent_id": 18,
+          "parent_name": "Publishing",
+          "color": 14867664,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/publishing/children's%20books"
+              }
+          }
+      },
+      "profile": {
+          "id": 4231045,
+          "project_id": 4231045,
+          "state": "inactive",
+          "state_changed_at": 1623290447,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/033/865/237/79e10c0210668ee47f1e23affbfa04aa_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1623504396&auto=format&frame=1&q=92&s=7d80399b4969893c18081c9ba1163b34",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/033/865/237/79e10c0210668ee47f1e23affbfa04aa_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1623504396&auto=format&frame=1&q=92&s=939fc212fa3bdafc9f51a23972514992"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/qfb/questions-for-breakfast-kids-books-for-charitable-donation?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/qfb/questions-for-breakfast-kids-books-for-charitable-donation/rewards"
+          }
+      }
+  },
+  {
+      "id": 950827785,
+      "photo": {
+          "key": "assets/034/103/568/b9749a8bb6b9b568a9064c8a8245fc6d_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/103/568/b9749a8bb6b9b568a9064c8a8245fc6d_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625428473&auto=format&frame=1&q=92&s=c292d36946687c1441aae414004db86f",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/103/568/b9749a8bb6b9b568a9064c8a8245fc6d_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1625428473&auto=format&frame=1&q=92&s=811641647e87b710cfe4914cb287b514",
+          "med": "https://ksr-ugc.imgix.net/assets/034/103/568/b9749a8bb6b9b568a9064c8a8245fc6d_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1625428473&auto=format&frame=1&q=92&s=5c73cbeb977b2785f4a45379532190e4",
+          "little": "https://ksr-ugc.imgix.net/assets/034/103/568/b9749a8bb6b9b568a9064c8a8245fc6d_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1625428473&auto=format&frame=1&q=92&s=59bc3865371de5d2850353345083ed97",
+          "small": "https://ksr-ugc.imgix.net/assets/034/103/568/b9749a8bb6b9b568a9064c8a8245fc6d_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1625428473&auto=format&frame=1&q=92&s=b4ab094c4c492e0e44e169af0428a877",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/103/568/b9749a8bb6b9b568a9064c8a8245fc6d_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1625428473&auto=format&frame=1&q=92&s=228166ed03f55ce93ca17db0f21f7654",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/103/568/b9749a8bb6b9b568a9064c8a8245fc6d_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1625428473&auto=format&frame=1&q=92&s=60e52eebe2e3a4f6a627e8346da7b794",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/103/568/b9749a8bb6b9b568a9064c8a8245fc6d_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625428473&auto=format&frame=1&q=92&s=970650cfb1ad8b4bc105f757a149d5d0"
+      },
+      "name": "Tales of the Echowood: A Cosmic Fairy-Tale Audio Drama",
+      "blurb": "A 10-Episode Audio Fiction Podcast from the creators of The Sheridan Tapes and Homestead on the Corner.",
+      "goal": 3000,
+      "pledged": 2296,
+      "state": "live",
+      "slug": "tales-of-the-echowood-a-cosmic-fairy-tale-audio-drama",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1628783820,
+      "state_changed_at": 1626191822,
+      "created_at": 1623087740,
+      "launched_at": 1626191820,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 54,
+      "static_usd_rate": 1,
+      "usd_pledged": "2296.0",
+      "converted_pledged_amount": 2296,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 2018009740,
+          "name": "Homestead on the Corner",
+          "slug": "tvanwinkle",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/006/347/575/cd5cc972b458b76b40231bc86acbcd55_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1623087461&auto=format&frame=1&q=92&s=51398fef7f19fbdb80f56f5168a2c1e4",
+              "small": "https://ksr-ugc.imgix.net/assets/006/347/575/cd5cc972b458b76b40231bc86acbcd55_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1623087461&auto=format&frame=1&q=92&s=012570e2973260e537f1bcba0b0500dd",
+              "medium": "https://ksr-ugc.imgix.net/assets/006/347/575/cd5cc972b458b76b40231bc86acbcd55_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1623087461&auto=format&frame=1&q=92&s=d99de519a8f6e0841eec9d098343224c"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/tvanwinkle"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/2018009740?signature=1627583740.3746954969517e1920e9a2b0816dcd93d5f45ea4"
+              }
+          }
+      },
+      "location": {
+          "id": 2448929,
+          "name": "Medford",
+          "slug": "medford-or",
+          "short_name": "Medford, OR",
+          "displayable_name": "Medford, OR",
+          "localized_name": "Medford",
+          "country": "US",
+          "state": "OR",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/medford-or",
+                  "location": "https://www.kickstarter.com/locations/medford-or"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627566158.d33c0d41dcdb698e8a980330fd5a16b0ea9319f6&woe_id=2448929"
+              }
+          }
+      },
+      "category": {
+          "id": 239,
+          "name": "Radio & Podcasts",
+          "analytics_name": "Radio & Podcasts",
+          "slug": "publishing/radio & podcasts",
+          "position": 13,
+          "parent_id": 18,
+          "parent_name": "Publishing",
+          "color": 14867664,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/publishing/radio%20&%20podcasts"
+              }
+          }
+      },
+      "profile": {
+          "id": 4229656,
+          "project_id": 4229656,
+          "state": "inactive",
+          "state_changed_at": 1623087740,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/103/568/b9749a8bb6b9b568a9064c8a8245fc6d_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625428473&auto=format&frame=1&q=92&s=970650cfb1ad8b4bc105f757a149d5d0",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/103/568/b9749a8bb6b9b568a9064c8a8245fc6d_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625428473&auto=format&frame=1&q=92&s=c292d36946687c1441aae414004db86f"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/tvanwinkle/tales-of-the-echowood-a-cosmic-fairy-tale-audio-drama?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/tvanwinkle/tales-of-the-echowood-a-cosmic-fairy-tale-audio-drama/rewards"
+          }
+      }
+  },
+  {
+      "id": 1229675334,
+      "photo": {
+          "key": "assets/033/890/303/4354a57d75b5c77cc520c5db3d594c96_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/033/890/303/4354a57d75b5c77cc520c5db3d594c96_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1623723661&auto=format&frame=1&q=92&s=8fddb05dc81181c2dc748ad394f66939",
+          "ed": "https://ksr-ugc.imgix.net/assets/033/890/303/4354a57d75b5c77cc520c5db3d594c96_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1623723661&auto=format&frame=1&q=92&s=79b08a2d6e501608eae14ee5476bb087",
+          "med": "https://ksr-ugc.imgix.net/assets/033/890/303/4354a57d75b5c77cc520c5db3d594c96_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1623723661&auto=format&frame=1&q=92&s=add24616b57946dd5ac3db19b4391558",
+          "little": "https://ksr-ugc.imgix.net/assets/033/890/303/4354a57d75b5c77cc520c5db3d594c96_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1623723661&auto=format&frame=1&q=92&s=aee56aee4ac9569a278d7e2d53995f75",
+          "small": "https://ksr-ugc.imgix.net/assets/033/890/303/4354a57d75b5c77cc520c5db3d594c96_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1623723661&auto=format&frame=1&q=92&s=de4e82a3c1240282d5983690a61d2b7b",
+          "thumb": "https://ksr-ugc.imgix.net/assets/033/890/303/4354a57d75b5c77cc520c5db3d594c96_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1623723661&auto=format&frame=1&q=92&s=2d970946000d56cc48a6bf13259165b4",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/033/890/303/4354a57d75b5c77cc520c5db3d594c96_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1623723661&auto=format&frame=1&q=92&s=55b4f1925c49c63a38c338a15c36d78c",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/033/890/303/4354a57d75b5c77cc520c5db3d594c96_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1623723661&auto=format&frame=1&q=92&s=fedcdebea9c5ffeea1ba9fccb9a9c961"
+      },
+      "name": "Cicada City: A Bug Club Hotel Story",
+      "blurb": "An inclusive children's book about three imaginative, bug-loving friends - it's part facts, part fantasy, all fun.",
+      "goal": 7500,
+      "pledged": 5585,
+      "state": "live",
+      "slug": "cicada-city-a-bug-club-hotel-story",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1628254895,
+      "state_changed_at": 1625662896,
+      "created_at": 1621692283,
+      "launched_at": 1625662895,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 114,
+      "static_usd_rate": 1,
+      "usd_pledged": "5585.0",
+      "converted_pledged_amount": 5585,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1158745017,
+          "name": "Gina Gallois",
+          "slug": "ginagallois",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/033/808/679/324b5f3d036635e9f911b8b4ac394aed_original.png?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1623117549&auto=format&frame=1&q=92&s=8079f31228e75fa231480499ed54df45",
+              "small": "https://ksr-ugc.imgix.net/assets/033/808/679/324b5f3d036635e9f911b8b4ac394aed_original.png?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1623117549&auto=format&frame=1&q=92&s=b53d51d6939d85f6d724ef0baa232c60",
+              "medium": "https://ksr-ugc.imgix.net/assets/033/808/679/324b5f3d036635e9f911b8b4ac394aed_original.png?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1623117549&auto=format&frame=1&q=92&s=47044851b95a3315226e4268941b2fa0"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/ginagallois"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1158745017?signature=1627583740.21004ec79ecadf5cabd6762f4b0e6b32f8543869"
+              }
+          }
+      },
+      "location": {
+          "id": 2357024,
+          "name": "Atlanta",
+          "slug": "atlanta-ga",
+          "short_name": "Atlanta, GA",
+          "displayable_name": "Atlanta, GA",
+          "localized_name": "Atlanta",
+          "country": "US",
+          "state": "GA",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/atlanta-ga",
+                  "location": "https://www.kickstarter.com/locations/atlanta-ga"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549048.11a2874f206d58d7d04dcf49379defb634fe98c4&woe_id=2357024"
+              }
+          }
+      },
+      "category": {
+          "id": 46,
+          "name": "Children's Books",
+          "analytics_name": "Children's Books",
+          "slug": "publishing/children's books",
+          "position": 5,
+          "parent_id": 18,
+          "parent_name": "Publishing",
+          "color": 14867664,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/publishing/children's%20books"
+              }
+          }
+      },
+      "profile": {
+          "id": 4221056,
+          "project_id": 4221056,
+          "state": "inactive",
+          "state_changed_at": 1621692283,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/033/890/303/4354a57d75b5c77cc520c5db3d594c96_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1623723661&auto=format&frame=1&q=92&s=fedcdebea9c5ffeea1ba9fccb9a9c961",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/033/890/303/4354a57d75b5c77cc520c5db3d594c96_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1623723661&auto=format&frame=1&q=92&s=8fddb05dc81181c2dc748ad394f66939"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/ginagallois/cicada-city-a-bug-club-hotel-story?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/ginagallois/cicada-city-a-bug-club-hotel-story/rewards"
+          }
+      }
+  },
+  {
+      "id": 323540128,
+      "photo": {
+          "key": "assets/034/160/581/b2ab763a25b924f8c45afdd3e13beeaf_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/160/581/b2ab763a25b924f8c45afdd3e13beeaf_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625877326&auto=format&frame=1&q=92&s=99bd061a1c80e618328d5d07bfaf6114",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/160/581/b2ab763a25b924f8c45afdd3e13beeaf_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1625877326&auto=format&frame=1&q=92&s=6f747e040b7bf956cfa693659895a1dc",
+          "med": "https://ksr-ugc.imgix.net/assets/034/160/581/b2ab763a25b924f8c45afdd3e13beeaf_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1625877326&auto=format&frame=1&q=92&s=8fc9139d88914073bbf31c0083e25a19",
+          "little": "https://ksr-ugc.imgix.net/assets/034/160/581/b2ab763a25b924f8c45afdd3e13beeaf_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1625877326&auto=format&frame=1&q=92&s=f9c9d6c1526d71d8d4c1049ea7baa6d8",
+          "small": "https://ksr-ugc.imgix.net/assets/034/160/581/b2ab763a25b924f8c45afdd3e13beeaf_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1625877326&auto=format&frame=1&q=92&s=4a5cc6033e1f26ffc8cd16feeafbb8f3",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/160/581/b2ab763a25b924f8c45afdd3e13beeaf_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1625877326&auto=format&frame=1&q=92&s=7550d4e79912e09cc3fe921cbb9a7ee6",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/160/581/b2ab763a25b924f8c45afdd3e13beeaf_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1625877326&auto=format&frame=1&q=92&s=0ee173f2848481fb3ea408df15724ed1",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/160/581/b2ab763a25b924f8c45afdd3e13beeaf_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625877326&auto=format&frame=1&q=92&s=82f158234a5735ad0326e82cea1d70ed"
+      },
+      "name": "Watch Me Grow",
+      "blurb": "A children's book about growth, patience, and plant life.",
+      "goal": 5000,
+      "pledged": 2222,
+      "state": "live",
+      "slug": "watch-me-grow",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1629901978,
+      "state_changed_at": 1627309980,
+      "created_at": 1625876943,
+      "launched_at": 1627309978,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 23,
+      "static_usd_rate": 1,
+      "usd_pledged": "2222.0",
+      "converted_pledged_amount": 2222,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1624126113,
+          "name": "Josalyn Thomas",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/034/261/968/7f248432a512db021fd53b377f11fd56_original.jpeg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1626764842&auto=format&frame=1&q=92&s=98bf010020b712bbd6eca882ba1db26c",
+              "small": "https://ksr-ugc.imgix.net/assets/034/261/968/7f248432a512db021fd53b377f11fd56_original.jpeg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1626764842&auto=format&frame=1&q=92&s=891a5ab0de83dc8e6fa42dfb1d0cfb21",
+              "medium": "https://ksr-ugc.imgix.net/assets/034/261/968/7f248432a512db021fd53b377f11fd56_original.jpeg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1626764842&auto=format&frame=1&q=92&s=6baf9c2f8923f9f27ba281d6fd856aa5"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/1624126113"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1624126113?signature=1627583740.211b86606e0c6d37b00bb4207517201f36e05961"
+              }
+          }
+      },
+      "location": {
+          "id": 2452078,
+          "name": "Minneapolis",
+          "slug": "minneapolis-mn",
+          "short_name": "Minneapolis, MN",
+          "displayable_name": "Minneapolis, MN",
+          "localized_name": "Minneapolis",
+          "country": "US",
+          "state": "MN",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/minneapolis-mn",
+                  "location": "https://www.kickstarter.com/locations/minneapolis-mn"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627566375.f11df1070c9a2281b3d39c60d31bc02ae643eebe&woe_id=2452078"
+              }
+          }
+      },
+      "category": {
+          "id": 46,
+          "name": "Children's Books",
+          "analytics_name": "Children's Books",
+          "slug": "publishing/children's books",
+          "position": 5,
+          "parent_id": 18,
+          "parent_name": "Publishing",
+          "color": 14867664,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/publishing/children's%20books"
+              }
+          }
+      },
+      "profile": {
+          "id": 4246295,
+          "project_id": 4246295,
+          "state": "inactive",
+          "state_changed_at": 1625876943,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/160/581/b2ab763a25b924f8c45afdd3e13beeaf_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625877326&auto=format&frame=1&q=92&s=82f158234a5735ad0326e82cea1d70ed",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/160/581/b2ab763a25b924f8c45afdd3e13beeaf_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625877326&auto=format&frame=1&q=92&s=99bd061a1c80e618328d5d07bfaf6114"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/1624126113/watch-me-grow?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/1624126113/watch-me-grow/rewards"
+          }
+      }
+  },
+  {
+      "id": 1474008497,
+      "photo": {
+          "key": "assets/033/809/963/184f3d1b3b8f38b3d3c0bbac333da883_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/033/809/963/184f3d1b3b8f38b3d3c0bbac333da883_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1623127265&auto=format&frame=1&q=92&s=3d1a89f582d3a355143437036b0f5302",
+          "ed": "https://ksr-ugc.imgix.net/assets/033/809/963/184f3d1b3b8f38b3d3c0bbac333da883_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1623127265&auto=format&frame=1&q=92&s=2e2ed0ef2f3c2304a3f49ed685f66a28",
+          "med": "https://ksr-ugc.imgix.net/assets/033/809/963/184f3d1b3b8f38b3d3c0bbac333da883_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1623127265&auto=format&frame=1&q=92&s=d30e2e07c71f5ffd85e1e764810a6db1",
+          "little": "https://ksr-ugc.imgix.net/assets/033/809/963/184f3d1b3b8f38b3d3c0bbac333da883_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1623127265&auto=format&frame=1&q=92&s=7b47836db1a60886aa1385fa562224a8",
+          "small": "https://ksr-ugc.imgix.net/assets/033/809/963/184f3d1b3b8f38b3d3c0bbac333da883_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1623127265&auto=format&frame=1&q=92&s=5f983741072952a07cd1f9bdebea6939",
+          "thumb": "https://ksr-ugc.imgix.net/assets/033/809/963/184f3d1b3b8f38b3d3c0bbac333da883_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1623127265&auto=format&frame=1&q=92&s=ccc454b99c8fdcfcc47357f037a8f497",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/033/809/963/184f3d1b3b8f38b3d3c0bbac333da883_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1623127265&auto=format&frame=1&q=92&s=a60a103469c58208c0623fbf7351070c",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/033/809/963/184f3d1b3b8f38b3d3c0bbac333da883_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1623127265&auto=format&frame=1&q=92&s=116ffb1d316a563cd10f8821af7cfbff"
+      },
+      "name": "On Needles and Pins",
+      "blurb": "On Needles and Pins is a comprehensive guide to the creation of poppets, spirit dolls, and other magical figures.",
+      "goal": 2000,
+      "pledged": 4089,
+      "state": "live",
+      "slug": "on-needles-and-pins",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1628091215,
+      "state_changed_at": 1625499216,
+      "created_at": 1623126147,
+      "launched_at": 1625499215,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 56,
+      "static_usd_rate": 1,
+      "usd_pledged": "4089.0",
+      "converted_pledged_amount": 4089,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 11905429,
+          "name": "Kamden S. Cornell",
+          "slug": "kamdenscornell",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/030/585/068/f44adf115328795c558f50bd9a767744_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1600030046&auto=format&frame=1&q=92&s=afff99dd57d04cf39ef4b79d9c9a94f3",
+              "small": "https://ksr-ugc.imgix.net/assets/030/585/068/f44adf115328795c558f50bd9a767744_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1600030046&auto=format&frame=1&q=92&s=84d3aa52c7447e05fe62eec4e68c0375",
+              "medium": "https://ksr-ugc.imgix.net/assets/030/585/068/f44adf115328795c558f50bd9a767744_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1600030046&auto=format&frame=1&q=92&s=0dc358bc95a6e0e60272696b0abb687a"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/kamdenscornell"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/11905429?signature=1627583740.46116fec1e3621f519dd3f4b6eba2b534b14256e"
+              }
+          }
+      },
+      "location": {
+          "id": 2352824,
+          "name": "Albuquerque",
+          "slug": "albuquerque-nm",
+          "short_name": "Albuquerque, NM",
+          "displayable_name": "Albuquerque, NM",
+          "localized_name": "Albuquerque",
+          "country": "US",
+          "state": "NM",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/albuquerque-nm",
+                  "location": "https://www.kickstarter.com/locations/albuquerque-nm"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549487.39f9ac9be39c27c3c9dd8d761587717804966f32&woe_id=2352824"
+              }
+          }
+      },
+      "category": {
+          "id": 48,
+          "name": "Nonfiction",
+          "analytics_name": "Nonfiction",
+          "slug": "publishing/nonfiction",
+          "position": 10,
+          "parent_id": 18,
+          "parent_name": "Publishing",
+          "color": 14867664,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/publishing/nonfiction"
+              }
+          }
+      },
+      "profile": {
+          "id": 4229929,
+          "project_id": 4229929,
+          "state": "inactive",
+          "state_changed_at": 1623126147,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/033/809/963/184f3d1b3b8f38b3d3c0bbac333da883_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1623127265&auto=format&frame=1&q=92&s=116ffb1d316a563cd10f8821af7cfbff",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/033/809/963/184f3d1b3b8f38b3d3c0bbac333da883_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1623127265&auto=format&frame=1&q=92&s=3d1a89f582d3a355143437036b0f5302"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/kamdenscornell/on-needles-and-pins?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/kamdenscornell/on-needles-and-pins/rewards"
+          }
+      }
+  },
+  {
+      "id": 154261679,
+      "photo": {
+          "key": "assets/034/150/376/6e4ddce492f18a09c703e030d8d4962d_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/150/376/6e4ddce492f18a09c703e030d8d4962d_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625794441&auto=format&frame=1&q=92&s=baef77535a7ab4fe4a263b88d7892468",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/150/376/6e4ddce492f18a09c703e030d8d4962d_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1625794441&auto=format&frame=1&q=92&s=b92b25382bd67ecd52e589f82110d4db",
+          "med": "https://ksr-ugc.imgix.net/assets/034/150/376/6e4ddce492f18a09c703e030d8d4962d_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1625794441&auto=format&frame=1&q=92&s=f3e871b45205f6416aca5b270f87d1e1",
+          "little": "https://ksr-ugc.imgix.net/assets/034/150/376/6e4ddce492f18a09c703e030d8d4962d_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1625794441&auto=format&frame=1&q=92&s=05c5e4d2cb1f0720b371355e35550d86",
+          "small": "https://ksr-ugc.imgix.net/assets/034/150/376/6e4ddce492f18a09c703e030d8d4962d_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1625794441&auto=format&frame=1&q=92&s=e16bb68d0538ee975961df0dbc644c43",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/150/376/6e4ddce492f18a09c703e030d8d4962d_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1625794441&auto=format&frame=1&q=92&s=51fc02d267b8d4e31f85e282646475e5",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/150/376/6e4ddce492f18a09c703e030d8d4962d_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1625794441&auto=format&frame=1&q=92&s=4ffad63b852c7f0d4c07d12eaa5b8ead",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/150/376/6e4ddce492f18a09c703e030d8d4962d_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625794441&auto=format&frame=1&q=92&s=4efd6e0bbc870cba99c0f6eb29abd792"
+      },
+      "name": "Futures & The Knot Wound Round Your Finger",
+      "blurb": "Two debut anthologies from small press publisher Bell Press",
+      "goal": 2000,
+      "pledged": 1891.29,
+      "state": "live",
+      "slug": "futures-and-the-knot-wound-round-your-finger",
+      "disable_communication": false,
+      "country": "CA",
+      "country_displayable_name": "Canada",
+      "currency": "CAD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1629470320,
+      "state_changed_at": 1626878322,
+      "created_at": 1623565109,
+      "launched_at": 1626878320,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 47,
+      "static_usd_rate": 0.78401795,
+      "usd_pledged": "1482.8053086555",
+      "converted_pledged_amount": 1502,
+      "fx_rate": 0.79442567,
+      "usd_exchange_rate": 0.79442567,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1598065710,
+          "name": "Angela Caravan",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/034/128/782/4108f7a4cb445f011d6b69dd2eb78b2c_original.jpeg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1625632378&auto=format&frame=1&q=92&s=5d8b7cdb2adcf42425d377abe22a4e52",
+              "small": "https://ksr-ugc.imgix.net/assets/034/128/782/4108f7a4cb445f011d6b69dd2eb78b2c_original.jpeg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1625632378&auto=format&frame=1&q=92&s=be4a797657dba971a558fa2955fbb2fb",
+              "medium": "https://ksr-ugc.imgix.net/assets/034/128/782/4108f7a4cb445f011d6b69dd2eb78b2c_original.jpeg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1625632378&auto=format&frame=1&q=92&s=bffc468f2e507879cf2102df6e73b2ff"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/1598065710"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1598065710?signature=1627583740.5398135352d5a26de65e07913a81499e766c09b8"
+              }
+          }
+      },
+      "location": {
+          "id": 9807,
+          "name": "Vancouver",
+          "slug": "vancouver-ca",
+          "short_name": "Vancouver, Canada",
+          "displayable_name": "Vancouver, Canada",
+          "localized_name": "Vancouver",
+          "country": "CA",
+          "state": "BC",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "Canada",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/vancouver-ca",
+                  "location": "https://www.kickstarter.com/locations/vancouver-ca"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549033.1cf980fc099954dfa279750003dc752f80007e02&woe_id=9807"
+              }
+          }
+      },
+      "category": {
+          "id": 324,
+          "name": "Anthologies",
+          "analytics_name": "Anthologies",
+          "slug": "publishing/anthologies",
+          "position": 2,
+          "parent_id": 18,
+          "parent_name": "Publishing",
+          "color": 14867664,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/publishing/anthologies"
+              }
+          }
+      },
+      "profile": {
+          "id": 4232579,
+          "project_id": 4232579,
+          "state": "inactive",
+          "state_changed_at": 1623565109,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/150/376/6e4ddce492f18a09c703e030d8d4962d_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625794441&auto=format&frame=1&q=92&s=4efd6e0bbc870cba99c0f6eb29abd792",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/150/376/6e4ddce492f18a09c703e030d8d4962d_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625794441&auto=format&frame=1&q=92&s=baef77535a7ab4fe4a263b88d7892468"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/1598065710/futures-and-the-knot-wound-round-your-finger?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/1598065710/futures-and-the-knot-wound-round-your-finger/rewards"
+          }
+      }
+  },
+  {
+      "id": 1570717937,
+      "photo": {
+          "key": "assets/033/986/578/73b38da8543a49c669cd0b36eb1ad9b4_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/033/986/578/73b38da8543a49c669cd0b36eb1ad9b4_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624463065&auto=format&frame=1&q=92&s=969d4f133910484a768b2ab94a9dae51",
+          "ed": "https://ksr-ugc.imgix.net/assets/033/986/578/73b38da8543a49c669cd0b36eb1ad9b4_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1624463065&auto=format&frame=1&q=92&s=c1bed15fdf0f1d35de6b8c048e224f2a",
+          "med": "https://ksr-ugc.imgix.net/assets/033/986/578/73b38da8543a49c669cd0b36eb1ad9b4_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1624463065&auto=format&frame=1&q=92&s=ac3101bd55946bd30205d3dd3777a876",
+          "little": "https://ksr-ugc.imgix.net/assets/033/986/578/73b38da8543a49c669cd0b36eb1ad9b4_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1624463065&auto=format&frame=1&q=92&s=9ee4d7813c94ccd2a59af11ee342836c",
+          "small": "https://ksr-ugc.imgix.net/assets/033/986/578/73b38da8543a49c669cd0b36eb1ad9b4_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1624463065&auto=format&frame=1&q=92&s=67f6e8c5a9a6dc55ab9116b615b642bb",
+          "thumb": "https://ksr-ugc.imgix.net/assets/033/986/578/73b38da8543a49c669cd0b36eb1ad9b4_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1624463065&auto=format&frame=1&q=92&s=05e163de26b3517f317fade9fde1dcbe",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/033/986/578/73b38da8543a49c669cd0b36eb1ad9b4_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1624463065&auto=format&frame=1&q=92&s=9dce3f5bd898a6b7c5d5109624fb7acf",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/033/986/578/73b38da8543a49c669cd0b36eb1ad9b4_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624463065&auto=format&frame=1&q=92&s=8ddcda8a5f00881b096a5261ec00aadf"
+      },
+      "name": "Running Mount Rainier",
+      "blurb": "An ordinary runner's journey from crippling injury to ultramarathon finish line",
+      "goal": 4800,
+      "pledged": 5210,
+      "state": "live",
+      "slug": "running-mount-rainier",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1627559673,
+      "state_changed_at": 1625745274,
+      "created_at": 1624461734,
+      "launched_at": 1625745273,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 47,
+      "static_usd_rate": 1,
+      "usd_pledged": "5210.0",
+      "converted_pledged_amount": 5210,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 860725638,
+          "name": "Mark Stone",
+          "slug": "running-mt-rainier",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/034/024/609/f98eaadd951ba70ba6737617ec392ef0_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1624807406&auto=format&frame=1&q=92&s=a5643a4a786734c29b18bb594ab2d2a9",
+              "small": "https://ksr-ugc.imgix.net/assets/034/024/609/f98eaadd951ba70ba6737617ec392ef0_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1624807406&auto=format&frame=1&q=92&s=c2ebfe09e19f5c3192124194dbf4a20f",
+              "medium": "https://ksr-ugc.imgix.net/assets/034/024/609/f98eaadd951ba70ba6737617ec392ef0_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1624807406&auto=format&frame=1&q=92&s=36db0b3875c4c3a3865a112d16c64663"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/running-mt-rainier"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/860725638?signature=1627583740.77d000abb921c7e4d6cc6909f5e77c60f4d883e0"
+              }
+          }
+      },
+      "location": {
+          "id": 2490383,
+          "name": "Seattle",
+          "slug": "seattle-wa",
+          "short_name": "Seattle, WA",
+          "displayable_name": "Seattle, WA",
+          "localized_name": "Seattle",
+          "country": "US",
+          "state": "WA",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/seattle-wa",
+                  "location": "https://www.kickstarter.com/locations/seattle-wa"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627548988.73591c703a8b6eff6426cdb859c55a709dbc3050&woe_id=2490383"
+              }
+          }
+      },
+      "category": {
+          "id": 48,
+          "name": "Nonfiction",
+          "analytics_name": "Nonfiction",
+          "slug": "publishing/nonfiction",
+          "position": 10,
+          "parent_id": 18,
+          "parent_name": "Publishing",
+          "color": 14867664,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/publishing/nonfiction"
+              }
+          }
+      },
+      "profile": {
+          "id": 4238126,
+          "project_id": 4238126,
+          "state": "inactive",
+          "state_changed_at": 1624461735,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/033/986/578/73b38da8543a49c669cd0b36eb1ad9b4_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624463065&auto=format&frame=1&q=92&s=8ddcda8a5f00881b096a5261ec00aadf",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/033/986/578/73b38da8543a49c669cd0b36eb1ad9b4_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624463065&auto=format&frame=1&q=92&s=969d4f133910484a768b2ab94a9dae51"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/running-mt-rainier/running-mount-rainier?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/running-mt-rainier/running-mount-rainier/rewards"
+          }
+      }
+  }
+]

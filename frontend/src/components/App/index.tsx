@@ -1,9 +1,9 @@
 import AppProvider from '../../providers';
-import Users from '../../scenes/Users';
+import Routing from '../Routing';
 
 const App = () => (
   <AppProvider>
-    <Users />
+    <Routing />
   </AppProvider>
 );
 

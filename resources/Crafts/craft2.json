@@ -1,0 +1,1532 @@
+[
+  {
+      "id": 295097730,
+      "photo": {
+          "key": "assets/033/758/317/7d9e81d9a6c484edd4e63c8749376383_original.jpeg",
+          "full": "https://ksr-ugc.imgix.net/assets/033/758/317/7d9e81d9a6c484edd4e63c8749376383_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1622716744&auto=format&frame=1&q=92&s=e320f1f4c537a319aaeb80fe85e591b5",
+          "ed": "https://ksr-ugc.imgix.net/assets/033/758/317/7d9e81d9a6c484edd4e63c8749376383_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1622716744&auto=format&frame=1&q=92&s=0863f1270d468428263c7c5665f8fa59",
+          "med": "https://ksr-ugc.imgix.net/assets/033/758/317/7d9e81d9a6c484edd4e63c8749376383_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1622716744&auto=format&frame=1&q=92&s=de7d34799893609c77d83ba7be18bf2a",
+          "little": "https://ksr-ugc.imgix.net/assets/033/758/317/7d9e81d9a6c484edd4e63c8749376383_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1622716744&auto=format&frame=1&q=92&s=525e70a0d66b85a7122a65b10f2df6fb",
+          "small": "https://ksr-ugc.imgix.net/assets/033/758/317/7d9e81d9a6c484edd4e63c8749376383_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1622716744&auto=format&frame=1&q=92&s=e42ce2a3649825d472ed38ad41d5149f",
+          "thumb": "https://ksr-ugc.imgix.net/assets/033/758/317/7d9e81d9a6c484edd4e63c8749376383_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1622716744&auto=format&frame=1&q=92&s=3e107e50bb609fa78cdd1fd9fda658b1",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/033/758/317/7d9e81d9a6c484edd4e63c8749376383_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1622716744&auto=format&frame=1&q=92&s=9907b2387223aba5885cbe28d396b887",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/033/758/317/7d9e81d9a6c484edd4e63c8749376383_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1622716744&auto=format&frame=1&q=92&s=c7fe85a52c96ccda48b77f6d670ca46d"
+      },
+      "name": "Sungina",
+      "blurb": "I’ll be creating organic skin care products for all skin types, such as organic sugar scrubs, organic rose oil, vaginal steams, etc.",
+      "goal": 15000,
+      "pledged": 36,
+      "state": "live",
+      "slug": "sungina",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1627924953,
+      "state_changed_at": 1622740955,
+      "created_at": 1622716619,
+      "launched_at": 1622740953,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 2,
+      "static_usd_rate": 1,
+      "usd_pledged": "36.0",
+      "converted_pledged_amount": 36,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1762924567,
+          "name": "Izairria Beard",
+          "slug": "sungina",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/033/758/615/adaaffa2bb1cfcfbac4c0be6b5416b51_original.jpeg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1622718935&auto=format&frame=1&q=92&s=65acb0d05121daff9cbedacd5776eb13",
+              "small": "https://ksr-ugc.imgix.net/assets/033/758/615/adaaffa2bb1cfcfbac4c0be6b5416b51_original.jpeg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1622718935&auto=format&frame=1&q=92&s=9f763e953670a38caac95c0435af60a2",
+              "medium": "https://ksr-ugc.imgix.net/assets/033/758/615/adaaffa2bb1cfcfbac4c0be6b5416b51_original.jpeg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1622718935&auto=format&frame=1&q=92&s=e4a9e8afbd0ed51ca8c7d9390b44b97c"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/sungina"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1762924567?signature=1627581842.804a49971a1ddcbab8cb4db21599c4467ae53d0e"
+              }
+          }
+      },
+      "location": {
+          "id": 2383661,
+          "name": "Columbus",
+          "slug": "columbus-ga",
+          "short_name": "Columbus, GA",
+          "displayable_name": "Columbus, GA",
+          "localized_name": "Columbus",
+          "country": "US",
+          "state": "GA",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/columbus-ga",
+                  "location": "https://www.kickstarter.com/locations/columbus-ga"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627566552.37d591212791e9ed775ecab7b7995d662df4662e&woe_id=2383661"
+              }
+          }
+      },
+      "category": {
+          "id": 343,
+          "name": "Candles",
+          "analytics_name": "Candles",
+          "slug": "crafts/candles",
+          "position": 1,
+          "parent_id": 26,
+          "parent_name": "Crafts",
+          "color": 16744876,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/crafts/candles"
+              }
+          }
+      },
+      "profile": {
+          "id": 4227455,
+          "project_id": 4227455,
+          "state": "inactive",
+          "state_changed_at": 1622716619,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/033/758/317/7d9e81d9a6c484edd4e63c8749376383_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1622716744&auto=format&frame=1&q=92&s=c7fe85a52c96ccda48b77f6d670ca46d",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/033/758/317/7d9e81d9a6c484edd4e63c8749376383_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1622716744&auto=format&frame=1&q=92&s=e320f1f4c537a319aaeb80fe85e591b5"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/sungina/sungina?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/sungina/sungina/rewards"
+          }
+      }
+  },
+  {
+      "id": 968115226,
+      "photo": {
+          "key": "assets/034/083/448/f5c096b651eaa034b6a492912354f665_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/083/448/f5c096b651eaa034b6a492912354f665_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625223819&auto=format&frame=1&q=92&s=e7446aec42e32271a0cfce7a62cbc13a",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/083/448/f5c096b651eaa034b6a492912354f665_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1625223819&auto=format&frame=1&q=92&s=03a299d2a560e5b345c24537fd526665",
+          "med": "https://ksr-ugc.imgix.net/assets/034/083/448/f5c096b651eaa034b6a492912354f665_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1625223819&auto=format&frame=1&q=92&s=63505ba7ce910eb6e93f2fece2943a82",
+          "little": "https://ksr-ugc.imgix.net/assets/034/083/448/f5c096b651eaa034b6a492912354f665_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1625223819&auto=format&frame=1&q=92&s=56cf2090254e0b6fdbd17563b2a142d4",
+          "small": "https://ksr-ugc.imgix.net/assets/034/083/448/f5c096b651eaa034b6a492912354f665_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1625223819&auto=format&frame=1&q=92&s=297c0b5880ef0ff78cbd092f9bae6f0c",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/083/448/f5c096b651eaa034b6a492912354f665_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1625223819&auto=format&frame=1&q=92&s=58c50ca0b29b6a4e7a2238fa21cb1485",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/083/448/f5c096b651eaa034b6a492912354f665_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1625223819&auto=format&frame=1&q=92&s=bc8f70882465d508c36bfa1c3193f241",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/083/448/f5c096b651eaa034b6a492912354f665_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625223819&auto=format&frame=1&q=92&s=b54bacf251b17cd7c95186b48c72358b"
+      },
+      "name": "Zodiac Series Pins",
+      "blurb": "Hard Enamel pins based on Kpop idols and the western zodiac",
+      "goal": 400,
+      "pledged": 104.32,
+      "state": "live",
+      "slug": "zodiac-series-pins",
+      "disable_communication": false,
+      "country": "AU",
+      "country_displayable_name": "Australia",
+      "currency": "AUD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1628755178,
+      "state_changed_at": 1626163179,
+      "created_at": 1624954175,
+      "launched_at": 1626163178,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 3,
+      "static_usd_rate": 0.74803995,
+      "usd_pledged": "78.035527584",
+      "converted_pledged_amount": 76,
+      "fx_rate": 0.73595485,
+      "usd_exchange_rate": 0.73595485,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1510706852,
+          "name": "SoondingieWorks",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/034/043/156/b157312ea7f61d7e06d56e242b2934ea_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1624954357&auto=format&frame=1&q=92&s=5a30448f754dfac719a0e3201eee89b3",
+              "small": "https://ksr-ugc.imgix.net/assets/034/043/156/b157312ea7f61d7e06d56e242b2934ea_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1624954357&auto=format&frame=1&q=92&s=f35dabb473d74d8ab5b9d711bd658f9a",
+              "medium": "https://ksr-ugc.imgix.net/assets/034/043/156/b157312ea7f61d7e06d56e242b2934ea_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1624954357&auto=format&frame=1&q=92&s=3cdf27f2746b064b9ff1e4772552b3a0"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/1510706852"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1510706852?signature=1627581842.2640bc107069c3cccd0cdc5d7b197e11ba1e95b7"
+              }
+          }
+      },
+      "location": {
+          "id": 1103898,
+          "name": "Mildura",
+          "slug": "mildura-au",
+          "short_name": "Mildura, AU",
+          "displayable_name": "Mildura, AU",
+          "localized_name": "Mildura",
+          "country": "AU",
+          "state": "VIC",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "Australia",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/mildura-au",
+                  "location": "https://www.kickstarter.com/locations/mildura-au"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627560417.6faae06dff571a78bf4e998eb6f6aea4cd9213af&woe_id=1103898"
+              }
+          }
+      },
+      "category": {
+          "id": 26,
+          "name": "Crafts",
+          "analytics_name": "Crafts",
+          "slug": "crafts",
+          "position": 3,
+          "color": 16744876,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/crafts"
+              }
+          }
+      },
+      "profile": {
+          "id": 4240802,
+          "project_id": 4240802,
+          "state": "inactive",
+          "state_changed_at": 1624954175,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/083/448/f5c096b651eaa034b6a492912354f665_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625223819&auto=format&frame=1&q=92&s=b54bacf251b17cd7c95186b48c72358b",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/083/448/f5c096b651eaa034b6a492912354f665_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625223819&auto=format&frame=1&q=92&s=e7446aec42e32271a0cfce7a62cbc13a"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/1510706852/zodiac-series-pins?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/1510706852/zodiac-series-pins/rewards"
+          }
+      }
+  },
+  {
+      "id": 1759345542,
+      "photo": {
+          "key": "assets/034/315/489/4150204786f8559d03efa63c8c45f5ed_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/034/315/489/4150204786f8559d03efa63c8c45f5ed_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1627253522&auto=format&frame=1&q=92&s=fb127884340b14597a79e49c25a22965",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/315/489/4150204786f8559d03efa63c8c45f5ed_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1627253522&auto=format&frame=1&q=92&s=65e2a96e98fa2c4491089dd8d2517ec2",
+          "med": "https://ksr-ugc.imgix.net/assets/034/315/489/4150204786f8559d03efa63c8c45f5ed_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1627253522&auto=format&frame=1&q=92&s=f566a8deb70e131584f6a7ed1a59bb6e",
+          "little": "https://ksr-ugc.imgix.net/assets/034/315/489/4150204786f8559d03efa63c8c45f5ed_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1627253522&auto=format&frame=1&q=92&s=8bae5a0972928a0a1fc4a58ddcd6ad3a",
+          "small": "https://ksr-ugc.imgix.net/assets/034/315/489/4150204786f8559d03efa63c8c45f5ed_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1627253522&auto=format&frame=1&q=92&s=9f1fc4f2b7a859462d28d39e7dbbb709",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/315/489/4150204786f8559d03efa63c8c45f5ed_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1627253522&auto=format&frame=1&q=92&s=e1fffc01ea2790793eed428cf2926598",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/315/489/4150204786f8559d03efa63c8c45f5ed_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1627253522&auto=format&frame=1&q=92&s=b15ac1d3f19904ec0fa82cad62e85c6b",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/315/489/4150204786f8559d03efa63c8c45f5ed_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1627253522&auto=format&frame=1&q=92&s=6fd3f7dffbd9bb16af4b88df371da9c9"
+      },
+      "name": "Massri Trilogy Since 1989 - candle & beauty brand",
+      "blurb": "I am new beauty Brand that has come onto the market to produce homemade candles, makeup & aroma therapeutic soap.",
+      "goal": 22000,
+      "pledged": 1,
+      "state": "live",
+      "slug": "massri-trilogy-since-1989-candle-and-beauty-brand",
+      "disable_communication": false,
+      "country": "GB",
+      "country_displayable_name": "the United Kingdom",
+      "currency": "GBP",
+      "currency_symbol": "£",
+      "currency_trailing_code": false,
+      "deadline": 1628266888,
+      "state_changed_at": 1627402889,
+      "created_at": 1627253144,
+      "launched_at": 1627402888,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 1,
+      "static_usd_rate": 1.37481612,
+      "usd_pledged": "1.37481612",
+      "converted_pledged_amount": 1,
+      "fx_rate": 1.38747444,
+      "usd_exchange_rate": 1.38747444,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 928040241,
+          "name": "benjamin harris",
+          "slug": "massritrilogy",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/034/315/671/59c2f1667623265c26a15da0f908122e_original.png?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1627256097&auto=format&frame=1&q=92&s=a8f8488fdc2e185ab90f75fd51c38b2d",
+              "small": "https://ksr-ugc.imgix.net/assets/034/315/671/59c2f1667623265c26a15da0f908122e_original.png?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1627256097&auto=format&frame=1&q=92&s=1ef1789019effda133f4124a009b85ad",
+              "medium": "https://ksr-ugc.imgix.net/assets/034/315/671/59c2f1667623265c26a15da0f908122e_original.png?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1627256097&auto=format&frame=1&q=92&s=8ccf84f5db5b1d155faf038c598e356f"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/massritrilogy"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/928040241?signature=1627581842.e6b49eec52a42f2a23c6fd760944b44627b9849e"
+              }
+          }
+      },
+      "location": {
+          "id": 28218,
+          "name": "Manchester",
+          "slug": "manchester-gb",
+          "short_name": "Manchester, UK",
+          "displayable_name": "Manchester, UK",
+          "localized_name": "Manchester",
+          "country": "GB",
+          "state": "England",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United Kingdom",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/manchester-gb",
+                  "location": "https://www.kickstarter.com/locations/manchester-gb"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549172.4a39f89c0574f9f6074bd4468b784e7706c8eb53&woe_id=28218"
+              }
+          }
+      },
+      "category": {
+          "id": 343,
+          "name": "Candles",
+          "analytics_name": "Candles",
+          "slug": "crafts/candles",
+          "position": 1,
+          "parent_id": 26,
+          "parent_name": "Crafts",
+          "color": 16744876,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/crafts/candles"
+              }
+          }
+      },
+      "profile": {
+          "id": 4254015,
+          "project_id": 4254015,
+          "state": "inactive",
+          "state_changed_at": 1627253144,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/315/489/4150204786f8559d03efa63c8c45f5ed_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1627253522&auto=format&frame=1&q=92&s=6fd3f7dffbd9bb16af4b88df371da9c9",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/315/489/4150204786f8559d03efa63c8c45f5ed_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1627253522&auto=format&frame=1&q=92&s=fb127884340b14597a79e49c25a22965"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/massritrilogy/massri-trilogy-since-1989-candle-and-beauty-brand?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/massritrilogy/massri-trilogy-since-1989-candle-and-beauty-brand/rewards"
+          }
+      }
+  },
+  {
+      "id": 254108220,
+      "photo": {
+          "key": "assets/033/684/158/2a8e4723d02c4dbef6047f81e40612a5_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/033/684/158/2a8e4723d02c4dbef6047f81e40612a5_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1622192773&auto=format&frame=1&q=92&s=756cf99ee958d770ae3ba54d2d3b371d",
+          "ed": "https://ksr-ugc.imgix.net/assets/033/684/158/2a8e4723d02c4dbef6047f81e40612a5_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1622192773&auto=format&frame=1&q=92&s=a6ad64f393f1b2f4725d30f4917449c8",
+          "med": "https://ksr-ugc.imgix.net/assets/033/684/158/2a8e4723d02c4dbef6047f81e40612a5_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1622192773&auto=format&frame=1&q=92&s=baeccff73f8427226d4dda79cdbacbb9",
+          "little": "https://ksr-ugc.imgix.net/assets/033/684/158/2a8e4723d02c4dbef6047f81e40612a5_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1622192773&auto=format&frame=1&q=92&s=1a5f36c43be0324d34c8a704e7dd4367",
+          "small": "https://ksr-ugc.imgix.net/assets/033/684/158/2a8e4723d02c4dbef6047f81e40612a5_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1622192773&auto=format&frame=1&q=92&s=8ae662a106c20c8a8b3159d4bd1444e0",
+          "thumb": "https://ksr-ugc.imgix.net/assets/033/684/158/2a8e4723d02c4dbef6047f81e40612a5_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1622192773&auto=format&frame=1&q=92&s=6783db504e6b72a4699b1c8188371123",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/033/684/158/2a8e4723d02c4dbef6047f81e40612a5_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1622192773&auto=format&frame=1&q=92&s=a8e61603c971e9161916f9ca65760cd9",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/033/684/158/2a8e4723d02c4dbef6047f81e40612a5_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1622192773&auto=format&frame=1&q=92&s=263ed3458d806bb7c605988771dc5d0e"
+      },
+      "name": "Urne cinerarie di peluche",
+      "blurb": "Urne cinerarie di peluche per animali",
+      "goal": 20000,
+      "pledged": 1,
+      "state": "live",
+      "slug": "urne-cinerarie-di-peluche",
+      "disable_communication": false,
+      "country": "IT",
+      "country_displayable_name": "Italy",
+      "currency": "EUR",
+      "currency_symbol": "€",
+      "currency_trailing_code": false,
+      "deadline": 1627716372,
+      "state_changed_at": 1622532373,
+      "created_at": 1622192632,
+      "launched_at": 1622532372,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 1,
+      "static_usd_rate": 1.21989155,
+      "usd_pledged": "1.21989155",
+      "converted_pledged_amount": 1,
+      "fx_rate": 1.18212951,
+      "usd_exchange_rate": 1.18212951,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 582146745,
+          "name": "ANNA GIOIA  MARIA PANIZZOLO",
+          "slug": "pelitralenuvole",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/033/684/346/3e303166afb42605dc4c261fc2847d12_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1622193880&auto=format&frame=1&q=92&s=b0b7f75b60d8f6f9cda4f747906277f0",
+              "small": "https://ksr-ugc.imgix.net/assets/033/684/346/3e303166afb42605dc4c261fc2847d12_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1622193880&auto=format&frame=1&q=92&s=de2a555dceb8ab5b3229e01ab6cf2466",
+              "medium": "https://ksr-ugc.imgix.net/assets/033/684/346/3e303166afb42605dc4c261fc2847d12_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1622193880&auto=format&frame=1&q=92&s=7cce63df74babc2ac3e6caddcba3350d"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/pelitralenuvole"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/582146745?signature=1627581842.3f9586e6c0d59f887ed48452118789987f8f8c4b"
+              }
+          }
+      },
+      "location": {
+          "id": 20145957,
+          "name": "Torino",
+          "slug": "torino-it",
+          "short_name": "Torino, Italy",
+          "displayable_name": "Torino, Italy",
+          "localized_name": "Torino",
+          "country": "IT",
+          "state": "Lombardy",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "Italy",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/torino-it",
+                  "location": "https://www.kickstarter.com/locations/torino-it"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627553440.1105307527d763a49fd0f6c6e7480840070ede8d&woe_id=20145957"
+              }
+          }
+      },
+      "category": {
+          "id": 348,
+          "name": "Knitting",
+          "analytics_name": "Knitting",
+          "slug": "crafts/knitting",
+          "position": 6,
+          "parent_id": 26,
+          "parent_name": "Crafts",
+          "color": 16744876,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/crafts/knitting"
+              }
+          }
+      },
+      "profile": {
+          "id": 4224270,
+          "project_id": 4224270,
+          "state": "inactive",
+          "state_changed_at": 1622192632,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/033/684/158/2a8e4723d02c4dbef6047f81e40612a5_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1622192773&auto=format&frame=1&q=92&s=263ed3458d806bb7c605988771dc5d0e",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/033/684/158/2a8e4723d02c4dbef6047f81e40612a5_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1622192773&auto=format&frame=1&q=92&s=756cf99ee958d770ae3ba54d2d3b371d"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/pelitralenuvole/urne-cinerarie-di-peluche?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/pelitralenuvole/urne-cinerarie-di-peluche/rewards"
+          }
+      }
+  },
+  {
+      "id": 1540874029,
+      "photo": {
+          "key": "assets/034/185/580/f84f38cebd929cea66defa4f9e1bb7f2_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/185/580/f84f38cebd929cea66defa4f9e1bb7f2_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626124614&auto=format&frame=1&q=92&s=8f41eadd8003a65d7d8b7f7037703823",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/185/580/f84f38cebd929cea66defa4f9e1bb7f2_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1626124614&auto=format&frame=1&q=92&s=4d60c133b50e0d275725bd54d9ea3506",
+          "med": "https://ksr-ugc.imgix.net/assets/034/185/580/f84f38cebd929cea66defa4f9e1bb7f2_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1626124614&auto=format&frame=1&q=92&s=67ce0fd5f0a9bacef0b0c9b468dd6605",
+          "little": "https://ksr-ugc.imgix.net/assets/034/185/580/f84f38cebd929cea66defa4f9e1bb7f2_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1626124614&auto=format&frame=1&q=92&s=fb575ca76609b4041524f3b16bf4df60",
+          "small": "https://ksr-ugc.imgix.net/assets/034/185/580/f84f38cebd929cea66defa4f9e1bb7f2_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1626124614&auto=format&frame=1&q=92&s=eb32e0d3e348501e6b8174b5b6eb8f7c",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/185/580/f84f38cebd929cea66defa4f9e1bb7f2_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1626124614&auto=format&frame=1&q=92&s=d141d00d7c4bfcbba5058d22580e2838",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/185/580/f84f38cebd929cea66defa4f9e1bb7f2_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1626124614&auto=format&frame=1&q=92&s=f3b919b16cdad494d2a658fa2b7f9736",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/185/580/f84f38cebd929cea66defa4f9e1bb7f2_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626124614&auto=format&frame=1&q=92&s=f0b04bd9f5867fbf750aef12c94594cd"
+      },
+      "name": "Melted Majesty hand made custom soy wax melts and jewelry",
+      "blurb": "Custom home made soy wax melts and hand crafted wire jewelry made with raw/tumbled healing crystals.",
+      "goal": 5000,
+      "pledged": 1,
+      "state": "live",
+      "slug": "melted-majesty-hand-made-custom-soy-wax-melts-and-jewelry",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1628874131,
+      "state_changed_at": 1626282132,
+      "created_at": 1626124428,
+      "launched_at": 1626282131,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 1,
+      "static_usd_rate": 1,
+      "usd_pledged": "1.0",
+      "converted_pledged_amount": 1,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 540059918,
+          "name": "Robert Wright",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/034/185/966/6f4fd267ec9808871f6e675e83337225_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1626127215&auto=format&frame=1&q=92&s=28fd7341dd354672bd2d9833924e8fc9",
+              "small": "https://ksr-ugc.imgix.net/assets/034/185/966/6f4fd267ec9808871f6e675e83337225_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1626127215&auto=format&frame=1&q=92&s=92a26d4e5c78e4ebbf9b2aa82a89d342",
+              "medium": "https://ksr-ugc.imgix.net/assets/034/185/966/6f4fd267ec9808871f6e675e83337225_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1626127215&auto=format&frame=1&q=92&s=fe6c1345a8ac474abd803a375329b983"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/540059918"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/540059918?signature=1627581842.8cd1e1ca7f631c4a1e2cc004a5d9416eb94f9877"
+              }
+          }
+      },
+      "location": {
+          "id": 2449473,
+          "name": "Mentor",
+          "slug": "mentor-oh",
+          "short_name": "Mentor, OH",
+          "displayable_name": "Mentor, OH",
+          "localized_name": "Mentor",
+          "country": "US",
+          "state": "OH",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/mentor-oh",
+                  "location": "https://www.kickstarter.com/locations/mentor-oh"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627541425.53ce018a8bf238185b04ae05177f0a8c98289d7e&woe_id=2449473"
+              }
+          }
+      },
+      "category": {
+          "id": 343,
+          "name": "Candles",
+          "analytics_name": "Candles",
+          "slug": "crafts/candles",
+          "position": 1,
+          "parent_id": 26,
+          "parent_name": "Crafts",
+          "color": 16744876,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/crafts/candles"
+              }
+          }
+      },
+      "profile": {
+          "id": 4247565,
+          "project_id": 4247565,
+          "state": "inactive",
+          "state_changed_at": 1626124428,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/185/580/f84f38cebd929cea66defa4f9e1bb7f2_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626124614&auto=format&frame=1&q=92&s=f0b04bd9f5867fbf750aef12c94594cd",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/185/580/f84f38cebd929cea66defa4f9e1bb7f2_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626124614&auto=format&frame=1&q=92&s=8f41eadd8003a65d7d8b7f7037703823"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/540059918/melted-majesty-hand-made-custom-soy-wax-melts-and-jewelry?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/540059918/melted-majesty-hand-made-custom-soy-wax-melts-and-jewelry/rewards"
+          }
+      }
+  },
+  {
+      "id": 1249676791,
+      "photo": {
+          "key": "assets/034/014/662/15bfe4cf1de08ca066b08c1abce542bd_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/014/662/15bfe4cf1de08ca066b08c1abce542bd_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624673496&auto=format&frame=1&q=92&s=537006bc1cb9992105329928d9dd4ebd",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/014/662/15bfe4cf1de08ca066b08c1abce542bd_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1624673496&auto=format&frame=1&q=92&s=f1c51e549f8d5fe477484a03c6747295",
+          "med": "https://ksr-ugc.imgix.net/assets/034/014/662/15bfe4cf1de08ca066b08c1abce542bd_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1624673496&auto=format&frame=1&q=92&s=04c39f424d4a2c520119bc540a7e0f87",
+          "little": "https://ksr-ugc.imgix.net/assets/034/014/662/15bfe4cf1de08ca066b08c1abce542bd_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1624673496&auto=format&frame=1&q=92&s=7dacec34e93db21304808afed38bbe92",
+          "small": "https://ksr-ugc.imgix.net/assets/034/014/662/15bfe4cf1de08ca066b08c1abce542bd_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1624673496&auto=format&frame=1&q=92&s=6e001cdd23377733fca50208d3e4d95e",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/014/662/15bfe4cf1de08ca066b08c1abce542bd_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1624673496&auto=format&frame=1&q=92&s=d83446f83cb3819d00d179b833e2cc0b",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/014/662/15bfe4cf1de08ca066b08c1abce542bd_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1624673496&auto=format&frame=1&q=92&s=8a646954ea9f738dc8feea521325a780",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/014/662/15bfe4cf1de08ca066b08c1abce542bd_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624673496&auto=format&frame=1&q=92&s=dc37ac969bba646c4414d7f83bf06279"
+      },
+      "name": "Craft: the story",
+      "blurb": "A story of craft coming together",
+      "goal": 150,
+      "pledged": 10,
+      "state": "live",
+      "slug": "craft-the-story",
+      "disable_communication": false,
+      "country": "NL",
+      "country_displayable_name": "the Netherlands",
+      "currency": "EUR",
+      "currency_symbol": "€",
+      "currency_trailing_code": false,
+      "deadline": 1628130835,
+      "state_changed_at": 1624674835,
+      "created_at": 1624673399,
+      "launched_at": 1624674835,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 9,
+      "static_usd_rate": 1.19215514,
+      "usd_pledged": "11.9215514",
+      "converted_pledged_amount": 11,
+      "fx_rate": 1.18212951,
+      "usd_exchange_rate": 1.18212951,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 127014140,
+          "name": "Short Story Project",
+          "slug": "storycrafters",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/034/014/757/2567f3ec72654249d6313686718915f2_original.png?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1624674589&auto=format&frame=1&q=92&s=b618612c2fce005d830ed68bf808c583",
+              "small": "https://ksr-ugc.imgix.net/assets/034/014/757/2567f3ec72654249d6313686718915f2_original.png?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1624674589&auto=format&frame=1&q=92&s=3142c7b20926ace8a625ce41b871f7bd",
+              "medium": "https://ksr-ugc.imgix.net/assets/034/014/757/2567f3ec72654249d6313686718915f2_original.png?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1624674589&auto=format&frame=1&q=92&s=85b6e1ca4fce72e6a195b6b73ccef832"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/storycrafters"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/127014140?signature=1627581842.a5966f7d9a1141cefb3a47dfc09f5974129ae4de"
+              }
+          }
+      },
+      "location": {
+          "id": 727232,
+          "name": "Amsterdam",
+          "slug": "amsterdam-nl",
+          "short_name": "Amsterdam, Netherlands",
+          "displayable_name": "Amsterdam, Netherlands",
+          "localized_name": "Amsterdam",
+          "country": "NL",
+          "state": "North Holland",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "Netherlands",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/amsterdam-nl",
+                  "location": "https://www.kickstarter.com/locations/amsterdam-nl"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549250.60591d69f8c7b398cbbfd16d5f376c81d119cbe2&woe_id=727232"
+              }
+          }
+      },
+      "category": {
+          "id": 26,
+          "name": "Crafts",
+          "analytics_name": "Crafts",
+          "slug": "crafts",
+          "position": 3,
+          "color": 16744876,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/crafts"
+              }
+          }
+      },
+      "profile": {
+          "id": 4239382,
+          "project_id": 4239382,
+          "state": "inactive",
+          "state_changed_at": 1624673399,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/014/662/15bfe4cf1de08ca066b08c1abce542bd_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624673496&auto=format&frame=1&q=92&s=dc37ac969bba646c4414d7f83bf06279",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/014/662/15bfe4cf1de08ca066b08c1abce542bd_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624673496&auto=format&frame=1&q=92&s=537006bc1cb9992105329928d9dd4ebd"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/storycrafters/craft-the-story?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/storycrafters/craft-the-story/rewards"
+          }
+      }
+  },
+  {
+      "id": 1179245935,
+      "photo": {
+          "key": "assets/034/066/863/f515150551602c3f73bb01f7b8a58580_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/066/863/f515150551602c3f73bb01f7b8a58580_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625106694&auto=format&frame=1&q=92&s=3d01ec311180076ee8ee495ef979aec4",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/066/863/f515150551602c3f73bb01f7b8a58580_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1625106694&auto=format&frame=1&q=92&s=25998f572097e2470ada3a74a117b4bf",
+          "med": "https://ksr-ugc.imgix.net/assets/034/066/863/f515150551602c3f73bb01f7b8a58580_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1625106694&auto=format&frame=1&q=92&s=d1ffccf2a058d842a1be7d0b4d4104ac",
+          "little": "https://ksr-ugc.imgix.net/assets/034/066/863/f515150551602c3f73bb01f7b8a58580_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1625106694&auto=format&frame=1&q=92&s=26b7baf0299020197192aeb31a204a82",
+          "small": "https://ksr-ugc.imgix.net/assets/034/066/863/f515150551602c3f73bb01f7b8a58580_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1625106694&auto=format&frame=1&q=92&s=fd20163837fb54b89985e3b57d7c0560",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/066/863/f515150551602c3f73bb01f7b8a58580_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1625106694&auto=format&frame=1&q=92&s=5c6f892d23124e4eab6f2525f326bc6c",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/066/863/f515150551602c3f73bb01f7b8a58580_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1625106694&auto=format&frame=1&q=92&s=9ffb3ccd4274451bd50ba43bb8abbfd2",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/066/863/f515150551602c3f73bb01f7b8a58580_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625106694&auto=format&frame=1&q=92&s=2c231c22470a025cf86941c0dbe2aed7"
+      },
+      "name": "Bringing Japanese preserved flowers to the world",
+      "blurb": "Flower with eternal life",
+      "goal": 96000,
+      "pledged": 25909,
+      "state": "live",
+      "slug": "bringing-japanese-preserved-flowers-to-the-world",
+      "disable_communication": false,
+      "country": "JP",
+      "country_displayable_name": "Japan",
+      "currency": "JPY",
+      "currency_symbol": "¥",
+      "currency_trailing_code": false,
+      "deadline": 1627698788,
+      "state_changed_at": 1625106789,
+      "created_at": 1623209282,
+      "launched_at": 1625106788,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 7,
+      "static_usd_rate": 0.00904824,
+      "usd_pledged": "234.43085016",
+      "converted_pledged_amount": 235,
+      "fx_rate": 0.00910758,
+      "usd_exchange_rate": 0.00910758,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 126165791,
+          "name": "kosuke shirae",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/033/908/253/de5bff444a93a4da98d66ee133f53dd6_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1623849325&auto=format&frame=1&q=92&s=b2b5e316c931e60de3046b0c5455661b",
+              "small": "https://ksr-ugc.imgix.net/assets/033/908/253/de5bff444a93a4da98d66ee133f53dd6_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1623849325&auto=format&frame=1&q=92&s=9b6e04eab2ce773df76a049cc5cc7e7d",
+              "medium": "https://ksr-ugc.imgix.net/assets/033/908/253/de5bff444a93a4da98d66ee133f53dd6_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1623849325&auto=format&frame=1&q=92&s=1b28ff6e980b881217f556c9af1b19d6"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/126165791"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/126165791?signature=1627581842.b08fa8ea4ff7b7b711a11f8dbf166fc7686f9e7f"
+              }
+          }
+      },
+      "location": {
+          "id": 28431278,
+          "name": "Kawaguchi",
+          "slug": "kawaguchi-fujikawaguchiko-machi-jp",
+          "short_name": "Kawaguchi, Japan",
+          "displayable_name": "Kawaguchi, Japan",
+          "localized_name": "Kawaguchi",
+          "country": "JP",
+          "state": "Yamanashi Prefecture",
+          "type": "LocalAdmin",
+          "is_root": false,
+          "expanded_country": "Japan",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/kawaguchi-fujikawaguchiko-machi-jp",
+                  "location": "https://www.kickstarter.com/locations/kawaguchi-fujikawaguchiko-machi-jp"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627569182.3eb50a6f35cad7d860445d011af450ea737647a2&woe_id=28431278"
+              }
+          }
+      },
+      "category": {
+          "id": 26,
+          "name": "Crafts",
+          "analytics_name": "Crafts",
+          "slug": "crafts",
+          "position": 3,
+          "color": 16744876,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/crafts"
+              }
+          }
+      },
+      "profile": {
+          "id": 4230492,
+          "project_id": 4230492,
+          "state": "inactive",
+          "state_changed_at": 1623209282,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/066/863/f515150551602c3f73bb01f7b8a58580_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625106694&auto=format&frame=1&q=92&s=2c231c22470a025cf86941c0dbe2aed7",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/066/863/f515150551602c3f73bb01f7b8a58580_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625106694&auto=format&frame=1&q=92&s=3d01ec311180076ee8ee495ef979aec4"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/126165791/bringing-japanese-preserved-flowers-to-the-world?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/126165791/bringing-japanese-preserved-flowers-to-the-world/rewards"
+          }
+      }
+  },
+  {
+      "id": 1850236405,
+      "photo": {
+          "key": "assets/034/192/279/46a23d3325dcf75c348fab199a0f9e1c_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/034/192/279/46a23d3325dcf75c348fab199a0f9e1c_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626181881&auto=format&frame=1&q=92&s=935fb7b5937184b86b723d62f8de5959",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/192/279/46a23d3325dcf75c348fab199a0f9e1c_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1626181881&auto=format&frame=1&q=92&s=76b3467df777c5ad47e7557b20ba67ba",
+          "med": "https://ksr-ugc.imgix.net/assets/034/192/279/46a23d3325dcf75c348fab199a0f9e1c_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1626181881&auto=format&frame=1&q=92&s=1e0a0f34b14f0698fd22b5be0c055634",
+          "little": "https://ksr-ugc.imgix.net/assets/034/192/279/46a23d3325dcf75c348fab199a0f9e1c_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1626181881&auto=format&frame=1&q=92&s=35e2d972a840fb9b15dae7ad18d068fc",
+          "small": "https://ksr-ugc.imgix.net/assets/034/192/279/46a23d3325dcf75c348fab199a0f9e1c_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1626181881&auto=format&frame=1&q=92&s=d813be943a128f2a982bab909c89e543",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/192/279/46a23d3325dcf75c348fab199a0f9e1c_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1626181881&auto=format&frame=1&q=92&s=d00b983b3fe18940a869cfa7da102102",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/192/279/46a23d3325dcf75c348fab199a0f9e1c_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1626181881&auto=format&frame=1&q=92&s=11a3f2eace0c47cc6f7fa1e043607d6c",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/192/279/46a23d3325dcf75c348fab199a0f9e1c_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626181881&auto=format&frame=1&q=92&s=ad47fd5ecd7e7e02ec5bde4199e7acd8"
+      },
+      "name": "Dreamland Kitsune Super Soft 12\" Plush Toy",
+      "blurb": "Protect your dreams with the guardian of Dreamland kitsune! This super soft plush sits at 12\" high with gorgeous embroidery details!",
+      "goal": 1500,
+      "pledged": 236.29,
+      "state": "live",
+      "slug": "dreamland-kitsune-super-soft-12-plush-toy",
+      "disable_communication": false,
+      "country": "CA",
+      "country_displayable_name": "Canada",
+      "currency": "CAD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1629118768,
+      "state_changed_at": 1626526769,
+      "created_at": 1626181112,
+      "launched_at": 1626526768,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 5,
+      "static_usd_rate": 0.795271,
+      "usd_pledged": "187.91458459",
+      "converted_pledged_amount": 187,
+      "fx_rate": 0.79442567,
+      "usd_exchange_rate": 0.79442567,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1410201892,
+          "name": "Shay",
+          "slug": "videogameshay",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/034/192/999/5e3a2ed66ca5b779e294b7d539f9e872_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1626185832&auto=format&frame=1&q=92&s=ccdc862fa01a4905d1f75bac51227be7",
+              "small": "https://ksr-ugc.imgix.net/assets/034/192/999/5e3a2ed66ca5b779e294b7d539f9e872_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1626185832&auto=format&frame=1&q=92&s=6f63d36cd6acee797b616b175d3f2052",
+              "medium": "https://ksr-ugc.imgix.net/assets/034/192/999/5e3a2ed66ca5b779e294b7d539f9e872_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1626185832&auto=format&frame=1&q=92&s=dfb3a69ffce1ef5d8c5dc4c9a35d20da"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/videogameshay"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1410201892?signature=1627581842.f9a5294089bafb1d53a2aa4397980a058b0bad40"
+              }
+          }
+      },
+      "location": {
+          "id": 4118,
+          "name": "Toronto",
+          "slug": "toronto-on-ca",
+          "short_name": "Toronto, Canada",
+          "displayable_name": "Toronto, Canada",
+          "localized_name": "Toronto",
+          "country": "CA",
+          "state": "ON",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "Canada",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/toronto-on-ca",
+                  "location": "https://www.kickstarter.com/locations/toronto-on-ca"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627548951.320d2eab03291c0c8792e815df1d8bba9d896858&woe_id=4118"
+              }
+          }
+      },
+      "category": {
+          "id": 26,
+          "name": "Crafts",
+          "analytics_name": "Crafts",
+          "slug": "crafts",
+          "position": 3,
+          "color": 16744876,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/crafts"
+              }
+          }
+      },
+      "profile": {
+          "id": 4247910,
+          "project_id": 4247910,
+          "state": "inactive",
+          "state_changed_at": 1626181112,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/192/279/46a23d3325dcf75c348fab199a0f9e1c_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626181881&auto=format&frame=1&q=92&s=ad47fd5ecd7e7e02ec5bde4199e7acd8",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/192/279/46a23d3325dcf75c348fab199a0f9e1c_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626181881&auto=format&frame=1&q=92&s=935fb7b5937184b86b723d62f8de5959"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/videogameshay/dreamland-kitsune-super-soft-12-plush-toy?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/videogameshay/dreamland-kitsune-super-soft-12-plush-toy/rewards"
+          }
+      }
+  },
+  {
+      "id": 1751466168,
+      "photo": {
+          "key": "assets/034/258/826/aa5853d5643ddfa4fc047eef0381e541_original.PNG",
+          "full": "https://ksr-ugc.imgix.net/assets/034/258/826/aa5853d5643ddfa4fc047eef0381e541_original.PNG?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626736519&auto=format&frame=1&q=92&s=833174b893fe616cd5d417a193fc21e3",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/258/826/aa5853d5643ddfa4fc047eef0381e541_original.PNG?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1626736519&auto=format&frame=1&q=92&s=82ca92064723e6eff41e93b74906ff7e",
+          "med": "https://ksr-ugc.imgix.net/assets/034/258/826/aa5853d5643ddfa4fc047eef0381e541_original.PNG?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1626736519&auto=format&frame=1&q=92&s=24574029cbc69811b4fa7c35f2756597",
+          "little": "https://ksr-ugc.imgix.net/assets/034/258/826/aa5853d5643ddfa4fc047eef0381e541_original.PNG?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1626736519&auto=format&frame=1&q=92&s=41a2b17dac8329063679d37bb49e73a8",
+          "small": "https://ksr-ugc.imgix.net/assets/034/258/826/aa5853d5643ddfa4fc047eef0381e541_original.PNG?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1626736519&auto=format&frame=1&q=92&s=4a7385efab3fe6b512c6182b89fa5590",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/258/826/aa5853d5643ddfa4fc047eef0381e541_original.PNG?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1626736519&auto=format&frame=1&q=92&s=f3a8e2daf13e0d8f1777adbba792d5ea",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/258/826/aa5853d5643ddfa4fc047eef0381e541_original.PNG?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1626736519&auto=format&frame=1&q=92&s=b60a97af57f52c747bcc220fe07008a3",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/258/826/aa5853d5643ddfa4fc047eef0381e541_original.PNG?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626736519&auto=format&frame=1&q=92&s=92f97936c67060d320d33395ad9b08d0"
+      },
+      "name": "Custom Drinkware- Koozies to Tumblers!",
+      "blurb": "Custom stainless steel double wall insulated tumbler- choose your color, style and more!",
+      "goal": 1000,
+      "pledged": 48,
+      "state": "live",
+      "slug": "custom-drinkware-koozies-to-tumblers",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1629503559,
+      "state_changed_at": 1626911560,
+      "created_at": 1626730694,
+      "launched_at": 1626911559,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 2,
+      "static_usd_rate": 1,
+      "usd_pledged": "48.0",
+      "converted_pledged_amount": 48,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1836393123,
+          "name": "Erin VanDresar",
+          "slug": "erinv",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/032/856/828/2cf02cfa10dcb1afb8f2c018c88fa625_original.jpeg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1616590069&auto=format&frame=1&q=92&s=cc79467095dc3907782f15a4c464b1d0",
+              "small": "https://ksr-ugc.imgix.net/assets/032/856/828/2cf02cfa10dcb1afb8f2c018c88fa625_original.jpeg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1616590069&auto=format&frame=1&q=92&s=fa1a3cb3d49d1059581c6f41f6a2aa88",
+              "medium": "https://ksr-ugc.imgix.net/assets/032/856/828/2cf02cfa10dcb1afb8f2c018c88fa625_original.jpeg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1616590069&auto=format&frame=1&q=92&s=1c0c45345378f8a2dcbee7f6ff17c891"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/erinv"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1836393123?signature=1627581842.0cc1d189e04c32766234d584c0e06202004ba5f5"
+              }
+          }
+      },
+      "location": {
+          "id": 2423113,
+          "name": "Holland Patent",
+          "slug": "holland-patent-ny",
+          "short_name": "Holland Patent, NY",
+          "displayable_name": "Holland Patent, NY",
+          "localized_name": "Holland Patent",
+          "country": "US",
+          "state": "NY",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/holland-patent-ny",
+                  "location": "https://www.kickstarter.com/locations/holland-patent-ny"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627560525.277b06c16400786eaa87e0e7a6df69b95703f31d&woe_id=2423113"
+              }
+          }
+      },
+      "category": {
+          "id": 26,
+          "name": "Crafts",
+          "analytics_name": "Crafts",
+          "slug": "crafts",
+          "position": 3,
+          "color": 16744876,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/crafts"
+              }
+          }
+      },
+      "profile": {
+          "id": 4251042,
+          "project_id": 4251042,
+          "state": "inactive",
+          "state_changed_at": 1626730694,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/258/826/aa5853d5643ddfa4fc047eef0381e541_original.PNG?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626736519&auto=format&frame=1&q=92&s=92f97936c67060d320d33395ad9b08d0",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/258/826/aa5853d5643ddfa4fc047eef0381e541_original.PNG?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626736519&auto=format&frame=1&q=92&s=833174b893fe616cd5d417a193fc21e3"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/erinv/custom-drinkware-koozies-to-tumblers?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/erinv/custom-drinkware-koozies-to-tumblers/rewards"
+          }
+      }
+  },
+  {
+      "id": 1786371547,
+      "photo": {
+          "key": "assets/033/752/141/d30ba1fdfbe6d17377db320ea050b0a0_original.jpeg",
+          "full": "https://ksr-ugc.imgix.net/assets/033/752/141/d30ba1fdfbe6d17377db320ea050b0a0_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1622669330&auto=format&frame=1&q=92&s=d6f123062c0ce0f243c739b19f6a29f3",
+          "ed": "https://ksr-ugc.imgix.net/assets/033/752/141/d30ba1fdfbe6d17377db320ea050b0a0_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1622669330&auto=format&frame=1&q=92&s=bad6af733284b4ce98d3e1686c94a8a7",
+          "med": "https://ksr-ugc.imgix.net/assets/033/752/141/d30ba1fdfbe6d17377db320ea050b0a0_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1622669330&auto=format&frame=1&q=92&s=43c31334ffcf1e6e2d2f8c2acf50a39f",
+          "little": "https://ksr-ugc.imgix.net/assets/033/752/141/d30ba1fdfbe6d17377db320ea050b0a0_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1622669330&auto=format&frame=1&q=92&s=80d2760e46f66f8173a14614a49d1e77",
+          "small": "https://ksr-ugc.imgix.net/assets/033/752/141/d30ba1fdfbe6d17377db320ea050b0a0_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1622669330&auto=format&frame=1&q=92&s=ebc2289990a89a6a3c7fd4a3ee77111b",
+          "thumb": "https://ksr-ugc.imgix.net/assets/033/752/141/d30ba1fdfbe6d17377db320ea050b0a0_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1622669330&auto=format&frame=1&q=92&s=c3641271ea17c1da25ae4b467db6d6ff",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/033/752/141/d30ba1fdfbe6d17377db320ea050b0a0_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1622669330&auto=format&frame=1&q=92&s=bca617e75180a63aa3af50506c124aaf",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/033/752/141/d30ba1fdfbe6d17377db320ea050b0a0_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1622669330&auto=format&frame=1&q=92&s=15a1e35502b71b7e968d5db38bf131f1"
+      },
+      "name": "Fine Japanese Artisan Ceramic Bowls",
+      "blurb": "Japanese Ceramic. Artisan, Unique, Handcrafted Pieces.",
+      "goal": 12000,
+      "pledged": 172,
+      "state": "live",
+      "slug": "fine-japanese-artisan-ceramic-bowls",
+      "disable_communication": false,
+      "country": "ES",
+      "country_displayable_name": "Spain",
+      "currency": "EUR",
+      "currency_symbol": "€",
+      "currency_trailing_code": false,
+      "deadline": 1628239263,
+      "state_changed_at": 1623055264,
+      "created_at": 1622669273,
+      "launched_at": 1623055263,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 7,
+      "static_usd_rate": 1.21665454,
+      "usd_pledged": "209.26458088",
+      "converted_pledged_amount": 203,
+      "fx_rate": 1.18212951,
+      "usd_exchange_rate": 1.18212951,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1385896214,
+          "name": "Japanese Ceramic",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/021/733/183/601cecd82708d54798b6d2757c3e96f9_original.JPG?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1530207148&auto=format&frame=1&q=92&s=0ea89e6d6ff649ca0a97c14e13f77699",
+              "small": "https://ksr-ugc.imgix.net/assets/021/733/183/601cecd82708d54798b6d2757c3e96f9_original.JPG?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1530207148&auto=format&frame=1&q=92&s=5a4991eaee31e1b8784cd4754d713c7d",
+              "medium": "https://ksr-ugc.imgix.net/assets/021/733/183/601cecd82708d54798b6d2757c3e96f9_original.JPG?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1530207148&auto=format&frame=1&q=92&s=0ca8e5ed3d4c971ffe961fe1465152ad"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/1385896214"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1385896214?signature=1627581842.35d69516479647bce470cede83f2526c8737bd28"
+              }
+          }
+      },
+      "location": {
+          "id": 776688,
+          "name": "Valencia",
+          "slug": "valencia-valencia-valencia",
+          "short_name": "Valencia, Spain",
+          "displayable_name": "Valencia, Spain",
+          "localized_name": "Valencia",
+          "country": "ES",
+          "state": "Valencia",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "Spain",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/valencia-valencia-valencia",
+                  "location": "https://www.kickstarter.com/locations/valencia-valencia-valencia"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549453.9946c27f04247845b07ec6d954f82156d2df308d&woe_id=776688"
+              }
+          }
+      },
+      "category": {
+          "id": 26,
+          "name": "Crafts",
+          "analytics_name": "Crafts",
+          "slug": "crafts",
+          "position": 3,
+          "color": 16744876,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/crafts"
+              }
+          }
+      },
+      "profile": {
+          "id": 4227212,
+          "project_id": 4227212,
+          "state": "inactive",
+          "state_changed_at": 1622669273,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/033/752/141/d30ba1fdfbe6d17377db320ea050b0a0_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1622669330&auto=format&frame=1&q=92&s=15a1e35502b71b7e968d5db38bf131f1",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/033/752/141/d30ba1fdfbe6d17377db320ea050b0a0_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1622669330&auto=format&frame=1&q=92&s=d6f123062c0ce0f243c739b19f6a29f3"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/1385896214/fine-japanese-artisan-ceramic-bowls?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/1385896214/fine-japanese-artisan-ceramic-bowls/rewards"
+          }
+      }
+  },
+  {
+      "id": 504948168,
+      "photo": {
+          "key": "assets/034/001/422/4dc6b5102d5949e1e2d91911cd3eac57_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/034/001/422/4dc6b5102d5949e1e2d91911cd3eac57_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624568752&auto=format&frame=1&q=92&s=71460e8434082be4c384549d947dac4b",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/001/422/4dc6b5102d5949e1e2d91911cd3eac57_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1624568752&auto=format&frame=1&q=92&s=af02a4d8c9258a96d3d1cbe0836a27c1",
+          "med": "https://ksr-ugc.imgix.net/assets/034/001/422/4dc6b5102d5949e1e2d91911cd3eac57_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1624568752&auto=format&frame=1&q=92&s=1ca21fbd7daa972e23d91d23dcdd7b1c",
+          "little": "https://ksr-ugc.imgix.net/assets/034/001/422/4dc6b5102d5949e1e2d91911cd3eac57_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1624568752&auto=format&frame=1&q=92&s=a9518fd83990d11a67eeff13214f86f7",
+          "small": "https://ksr-ugc.imgix.net/assets/034/001/422/4dc6b5102d5949e1e2d91911cd3eac57_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1624568752&auto=format&frame=1&q=92&s=5e72c829a4de2527966919eaf01ade1d",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/001/422/4dc6b5102d5949e1e2d91911cd3eac57_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1624568752&auto=format&frame=1&q=92&s=26764fec776c8260d718dd006d3f80ae",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/001/422/4dc6b5102d5949e1e2d91911cd3eac57_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1624568752&auto=format&frame=1&q=92&s=1b46823a489956286182e9b56f7dbc2a",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/001/422/4dc6b5102d5949e1e2d91911cd3eac57_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624568752&auto=format&frame=1&q=92&s=609559b748dea111625ecf934983931f"
+      },
+      "name": "Marvel-ous Places Pin Set",
+      "blurb": "A set of pins based on places in the MCU.\n\nThey will be unlocked one pin at a time with the ability to add more designs!",
+      "goal": 250,
+      "pledged": 2156,
+      "state": "live",
+      "slug": "marvel-ous-places-pin-set",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1627532475,
+      "state_changed_at": 1624940477,
+      "created_at": 1623691381,
+      "launched_at": 1624940475,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 65,
+      "static_usd_rate": 1,
+      "usd_pledged": "2156.0",
+      "converted_pledged_amount": 2156,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 2038682671,
+          "name": "Susana Martinez",
+          "slug": "brightsunsco",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/023/265/716/885bc0d85d9d3c37f0ffc87f2c8f2296_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1580802034&auto=format&frame=1&q=92&s=3b6e82a15b89a5bc7dd0f2b6f43b07c4",
+              "small": "https://ksr-ugc.imgix.net/assets/023/265/716/885bc0d85d9d3c37f0ffc87f2c8f2296_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1580802034&auto=format&frame=1&q=92&s=ac4d1b634030bcdd6c56286ba4a0e574",
+              "medium": "https://ksr-ugc.imgix.net/assets/023/265/716/885bc0d85d9d3c37f0ffc87f2c8f2296_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1580802034&auto=format&frame=1&q=92&s=d3e9f33e1f495e55f1d923943c6eddd5"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/brightsunsco"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/2038682671?signature=1627581842.65180c07aaf29ec7034646c0ad781b1ea9fc15b8"
+              }
+          }
+      },
+      "location": {
+          "id": 2450022,
+          "name": "Miami",
+          "slug": "miami-fl",
+          "short_name": "Miami, FL",
+          "displayable_name": "Miami, FL",
+          "localized_name": "Miami",
+          "country": "US",
+          "state": "FL",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/miami-fl",
+                  "location": "https://www.kickstarter.com/locations/miami-fl"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549123.7be8fa97084f1f2fbac8f7ba5bfc14198dfe2706&woe_id=2450022"
+              }
+          }
+      },
+      "category": {
+          "id": 26,
+          "name": "Crafts",
+          "analytics_name": "Crafts",
+          "slug": "crafts",
+          "position": 3,
+          "color": 16744876,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/crafts"
+              }
+          }
+      },
+      "profile": {
+          "id": 4233316,
+          "project_id": 4233316,
+          "state": "inactive",
+          "state_changed_at": 1623691381,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/001/422/4dc6b5102d5949e1e2d91911cd3eac57_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624568752&auto=format&frame=1&q=92&s=609559b748dea111625ecf934983931f",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/001/422/4dc6b5102d5949e1e2d91911cd3eac57_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624568752&auto=format&frame=1&q=92&s=71460e8434082be4c384549d947dac4b"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/brightsunsco/marvel-ous-places-pin-set?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/brightsunsco/marvel-ous-places-pin-set/rewards"
+          }
+      }
+  },
+  {
+      "id": 1854133295,
+      "photo": {
+          "key": "assets/033/926/411/a4e6b45e9eabd672abc22d0203a9eeb8_original.jpeg",
+          "full": "https://ksr-ugc.imgix.net/assets/033/926/411/a4e6b45e9eabd672abc22d0203a9eeb8_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1623969633&auto=format&frame=1&q=92&s=a22c9caa9ee3f80a174483bee5799a74",
+          "ed": "https://ksr-ugc.imgix.net/assets/033/926/411/a4e6b45e9eabd672abc22d0203a9eeb8_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1623969633&auto=format&frame=1&q=92&s=5126c59b5ddc7e9d67ba483e4ee951e2",
+          "med": "https://ksr-ugc.imgix.net/assets/033/926/411/a4e6b45e9eabd672abc22d0203a9eeb8_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1623969633&auto=format&frame=1&q=92&s=02f58e1369cc6c7be0d78ec630b21cc3",
+          "little": "https://ksr-ugc.imgix.net/assets/033/926/411/a4e6b45e9eabd672abc22d0203a9eeb8_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1623969633&auto=format&frame=1&q=92&s=3e508f01d548519f99e9ff6cf810c32f",
+          "small": "https://ksr-ugc.imgix.net/assets/033/926/411/a4e6b45e9eabd672abc22d0203a9eeb8_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1623969633&auto=format&frame=1&q=92&s=fd42543e0af7b1deba056ece30fc86c3",
+          "thumb": "https://ksr-ugc.imgix.net/assets/033/926/411/a4e6b45e9eabd672abc22d0203a9eeb8_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1623969633&auto=format&frame=1&q=92&s=66f98ab3c49f2ea167becee74ee9edcf",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/033/926/411/a4e6b45e9eabd672abc22d0203a9eeb8_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1623969633&auto=format&frame=1&q=92&s=c89f3576df95bed67d8ce96c4f6ee50b",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/033/926/411/a4e6b45e9eabd672abc22d0203a9eeb8_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1623969633&auto=format&frame=1&q=92&s=fbceab1b06c6a22f96bf54310aecdfc4"
+      },
+      "name": "Little Peeps Learning Binders",
+      "blurb": "Personalized educational learning activity sheets,and materials for children of all levels!Products for special needs children & charts",
+      "goal": 3500,
+      "pledged": 1,
+      "state": "live",
+      "slug": "little-peeps-learning-binders",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1629154093,
+      "state_changed_at": 1623970094,
+      "created_at": 1623779272,
+      "launched_at": 1623970093,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 1,
+      "static_usd_rate": 1,
+      "usd_pledged": "1.0",
+      "converted_pledged_amount": 1,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 2029983000,
+          "name": "Rachele",
+          "slug": "learningbinders",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/033/901/548/97870d55836ef997c52c736794470725_original.jpeg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1623794133&auto=format&frame=1&q=92&s=f80cf7d82100be2e0b1a083265efa8bd",
+              "small": "https://ksr-ugc.imgix.net/assets/033/901/548/97870d55836ef997c52c736794470725_original.jpeg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1623794133&auto=format&frame=1&q=92&s=1040827c9719b6de6737d349d26ddd9f",
+              "medium": "https://ksr-ugc.imgix.net/assets/033/901/548/97870d55836ef997c52c736794470725_original.jpeg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1623794133&auto=format&frame=1&q=92&s=27a1bcf79c4b3f83856006bb93721eb8"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/learningbinders"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/2029983000?signature=1627581842.9fbb308c95c18f75020f5aa20782fd9ede430df0"
+              }
+          }
+      },
+      "location": {
+          "id": 2404299,
+          "name": "Flemington",
+          "slug": "flemington-nj",
+          "short_name": "Flemington, NJ",
+          "displayable_name": "Flemington, NJ",
+          "localized_name": "Flemington",
+          "country": "US",
+          "state": "NJ",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/flemington-nj",
+                  "location": "https://www.kickstarter.com/locations/flemington-nj"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627553463.39f1cc841ccbf6d603b5390ab9a8a8e116264397&woe_id=2404299"
+              }
+          }
+      },
+      "category": {
+          "id": 345,
+          "name": "DIY",
+          "analytics_name": "DIY",
+          "slug": "crafts/diy",
+          "position": 3,
+          "parent_id": 26,
+          "parent_name": "Crafts",
+          "color": 16744876,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/crafts/diy"
+              }
+          }
+      },
+      "profile": {
+          "id": 4233955,
+          "project_id": 4233955,
+          "state": "inactive",
+          "state_changed_at": 1623779272,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/033/926/411/a4e6b45e9eabd672abc22d0203a9eeb8_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1623969633&auto=format&frame=1&q=92&s=fbceab1b06c6a22f96bf54310aecdfc4",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/033/926/411/a4e6b45e9eabd672abc22d0203a9eeb8_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1623969633&auto=format&frame=1&q=92&s=a22c9caa9ee3f80a174483bee5799a74"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/learningbinders/little-peeps-learning-binders?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/learningbinders/little-peeps-learning-binders/rewards"
+          }
+      }
+  }
+]

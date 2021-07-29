@@ -1,0 +1,1540 @@
+[
+  {
+      "id": 1544880951,
+      "photo": {
+          "key": "assets/034/093/402/df19bb7d0bfc34b83af2495944820037_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/093/402/df19bb7d0bfc34b83af2495944820037_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625304872&auto=format&frame=1&q=92&s=ce1c26dd7f718daba9f29b33d6414c40",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/093/402/df19bb7d0bfc34b83af2495944820037_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1625304872&auto=format&frame=1&q=92&s=2d130da62e364ef6857b7716433f2e89",
+          "med": "https://ksr-ugc.imgix.net/assets/034/093/402/df19bb7d0bfc34b83af2495944820037_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1625304872&auto=format&frame=1&q=92&s=ba5771fa5cc42f5a45550251b030be99",
+          "little": "https://ksr-ugc.imgix.net/assets/034/093/402/df19bb7d0bfc34b83af2495944820037_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1625304872&auto=format&frame=1&q=92&s=213914589ddea6a2d245a8f6a67c030b",
+          "small": "https://ksr-ugc.imgix.net/assets/034/093/402/df19bb7d0bfc34b83af2495944820037_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1625304872&auto=format&frame=1&q=92&s=b63451ea1bb94da6ca1ce325cdebf44a",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/093/402/df19bb7d0bfc34b83af2495944820037_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1625304872&auto=format&frame=1&q=92&s=2cbe994eb25084c2d9a2f1aa61dfb011",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/093/402/df19bb7d0bfc34b83af2495944820037_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1625304872&auto=format&frame=1&q=92&s=386f436454ed1801443ad7bfd78c41a4",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/093/402/df19bb7d0bfc34b83af2495944820037_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625304872&auto=format&frame=1&q=92&s=25d21c93052c60d0e8323c2f342f812e"
+      },
+      "name": "BODIES OF WATER",
+      "blurb": "A Dance on the River Thames",
+      "goal": 7000,
+      "pledged": 5005,
+      "state": "live",
+      "slug": "bodies-of-water-0",
+      "disable_communication": false,
+      "country": "GB",
+      "country_displayable_name": "the United Kingdom",
+      "currency": "GBP",
+      "currency_symbol": "£",
+      "currency_trailing_code": false,
+      "deadline": 1629019937,
+      "state_changed_at": 1625995938,
+      "created_at": 1625085368,
+      "launched_at": 1625995937,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 57,
+      "static_usd_rate": 1.39072,
+      "usd_pledged": "6960.5536",
+      "converted_pledged_amount": 6944,
+      "fx_rate": 1.38747444,
+      "usd_exchange_rate": 1.38747444,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1411511851,
+          "name": "ALICE + SYNNE",
+          "slug": "synnelundesgaard",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/034/071/982/f15f7c19619d746324283059d14afd08_original.png?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1625954470&auto=format&frame=1&q=92&s=66e17d3b1e31c97e173f38274bb4fbd9",
+              "small": "https://ksr-ugc.imgix.net/assets/034/071/982/f15f7c19619d746324283059d14afd08_original.png?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1625954470&auto=format&frame=1&q=92&s=051508aa2a0785224089a57d9068abab",
+              "medium": "https://ksr-ugc.imgix.net/assets/034/071/982/f15f7c19619d746324283059d14afd08_original.png?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1625954470&auto=format&frame=1&q=92&s=9e73f5b2145bb203f722b04ca58f9b92"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/synnelundesgaard"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1411511851?signature=1627583023.66848013d856fc25144d4e4586a3b0df06467952"
+              }
+          }
+      },
+      "location": {
+          "id": 44418,
+          "name": "London",
+          "slug": "london-gb",
+          "short_name": "London, UK",
+          "displayable_name": "London, UK",
+          "localized_name": "London",
+          "country": "GB",
+          "state": "England",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United Kingdom",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/london-gb",
+                  "location": "https://www.kickstarter.com/locations/london-gb"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627548932.ac1e19ecbb5a9f877a8865d239c6a00c6058b589&woe_id=44418"
+              }
+          }
+      },
+      "category": {
+          "id": 254,
+          "name": "Performances",
+          "analytics_name": "Performances",
+          "slug": "dance/performances",
+          "position": 1,
+          "parent_id": 6,
+          "parent_name": "Dance",
+          "color": 10917369,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/dance/performances"
+              }
+          }
+      },
+      "profile": {
+          "id": 4241672,
+          "project_id": 4241672,
+          "state": "inactive",
+          "state_changed_at": 1625085369,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/093/402/df19bb7d0bfc34b83af2495944820037_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625304872&auto=format&frame=1&q=92&s=25d21c93052c60d0e8323c2f342f812e",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/093/402/df19bb7d0bfc34b83af2495944820037_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625304872&auto=format&frame=1&q=92&s=ce1c26dd7f718daba9f29b33d6414c40"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/synnelundesgaard/bodies-of-water-0?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/synnelundesgaard/bodies-of-water-0/rewards"
+          }
+      }
+  },
+  {
+      "id": 1381613057,
+      "photo": {
+          "key": "assets/033/871/062/20dcc2fcc1711a60e8b7c10e92aa22c9_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/033/871/062/20dcc2fcc1711a60e8b7c10e92aa22c9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1623568120&auto=format&frame=1&q=92&s=614cf1977c47a5bf1b75d040052cb9dc",
+          "ed": "https://ksr-ugc.imgix.net/assets/033/871/062/20dcc2fcc1711a60e8b7c10e92aa22c9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1623568120&auto=format&frame=1&q=92&s=e381214807b41789dddf83b016ff7ebd",
+          "med": "https://ksr-ugc.imgix.net/assets/033/871/062/20dcc2fcc1711a60e8b7c10e92aa22c9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1623568120&auto=format&frame=1&q=92&s=54f381c2bc0ceba5ec61219fc4ab7949",
+          "little": "https://ksr-ugc.imgix.net/assets/033/871/062/20dcc2fcc1711a60e8b7c10e92aa22c9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1623568120&auto=format&frame=1&q=92&s=ae98644c80660d8102eaf76917f99540",
+          "small": "https://ksr-ugc.imgix.net/assets/033/871/062/20dcc2fcc1711a60e8b7c10e92aa22c9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1623568120&auto=format&frame=1&q=92&s=7c3bea41cd2870667ad5824fbfd9c24c",
+          "thumb": "https://ksr-ugc.imgix.net/assets/033/871/062/20dcc2fcc1711a60e8b7c10e92aa22c9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1623568120&auto=format&frame=1&q=92&s=d0a3d5e4e70bda49e03bd0cfd9b123d3",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/033/871/062/20dcc2fcc1711a60e8b7c10e92aa22c9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1623568120&auto=format&frame=1&q=92&s=cb50630a12faf02361cd8db6c81a292d",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/033/871/062/20dcc2fcc1711a60e8b7c10e92aa22c9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1623568120&auto=format&frame=1&q=92&s=271dc50ad9ce9ebf6fbc739053e139e9"
+      },
+      "name": "FAMILY HAPPINESS",
+      "blurb": "A new evening length Dance Work by New York City based choreographer, Juliana F. May.",
+      "goal": 8000,
+      "pledged": 8395,
+      "state": "live",
+      "slug": "family-happiness",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1628217900,
+      "state_changed_at": 1625576375,
+      "created_at": 1623567690,
+      "launched_at": 1625576374,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 122,
+      "static_usd_rate": 1,
+      "usd_pledged": "8395.0",
+      "converted_pledged_amount": 8395,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1968194107,
+          "name": "juliana",
+          "slug": "familyhappiness",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/033/871/208/6d613ea059c483c98c5f85cde2b37279_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1623569714&auto=format&frame=1&q=92&s=a6be3aa3bbe28c62378032545ef683f4",
+              "small": "https://ksr-ugc.imgix.net/assets/033/871/208/6d613ea059c483c98c5f85cde2b37279_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1623569714&auto=format&frame=1&q=92&s=a6801a562cc35002d66c1e4fe688c673",
+              "medium": "https://ksr-ugc.imgix.net/assets/033/871/208/6d613ea059c483c98c5f85cde2b37279_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1623569714&auto=format&frame=1&q=92&s=89514471699d303dc97f709fe4bf4188"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/familyhappiness"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1968194107?signature=1627583023.93f80857cee74a3d60626c011de4615109bdbd1a"
+              }
+          }
+      },
+      "location": {
+          "id": 2459115,
+          "name": "New York",
+          "slug": "new-york-ny",
+          "short_name": "New York, NY",
+          "displayable_name": "New York, NY",
+          "localized_name": "New York",
+          "country": "US",
+          "state": "NY",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/new-york-ny",
+                  "location": "https://www.kickstarter.com/locations/new-york-ny"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627548935.798cbc8d8b02f51761ab484df47a3960ccd2e384&woe_id=2459115"
+              }
+          }
+      },
+      "category": {
+          "id": 254,
+          "name": "Performances",
+          "analytics_name": "Performances",
+          "slug": "dance/performances",
+          "position": 1,
+          "parent_id": 6,
+          "parent_name": "Dance",
+          "color": 10917369,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/dance/performances"
+              }
+          }
+      },
+      "profile": {
+          "id": 4232591,
+          "project_id": 4232591,
+          "state": "inactive",
+          "state_changed_at": 1623567690,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/033/871/062/20dcc2fcc1711a60e8b7c10e92aa22c9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1623568120&auto=format&frame=1&q=92&s=271dc50ad9ce9ebf6fbc739053e139e9",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/033/871/062/20dcc2fcc1711a60e8b7c10e92aa22c9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1623568120&auto=format&frame=1&q=92&s=614cf1977c47a5bf1b75d040052cb9dc"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/familyhappiness/family-happiness?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/familyhappiness/family-happiness/rewards"
+          }
+      }
+  },
+  {
+      "id": 1183822105,
+      "photo": {
+          "key": "assets/034/310/552/51a732bf66a0f06b92b47797db58c8ef_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/310/552/51a732bf66a0f06b92b47797db58c8ef_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1627192990&auto=format&frame=1&q=92&s=d524507a64a1272b6a56365d470a1cdb",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/310/552/51a732bf66a0f06b92b47797db58c8ef_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1627192990&auto=format&frame=1&q=92&s=27164d3c85a7dbbc74c938b43cffd489",
+          "med": "https://ksr-ugc.imgix.net/assets/034/310/552/51a732bf66a0f06b92b47797db58c8ef_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1627192990&auto=format&frame=1&q=92&s=225edb3f1fd9747335bb991588acd81b",
+          "little": "https://ksr-ugc.imgix.net/assets/034/310/552/51a732bf66a0f06b92b47797db58c8ef_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1627192990&auto=format&frame=1&q=92&s=447c5c0a2834ce63aed2c7d8ede01c9d",
+          "small": "https://ksr-ugc.imgix.net/assets/034/310/552/51a732bf66a0f06b92b47797db58c8ef_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1627192990&auto=format&frame=1&q=92&s=41e0a9f0451b68293375b3195490452b",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/310/552/51a732bf66a0f06b92b47797db58c8ef_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1627192990&auto=format&frame=1&q=92&s=dc9e091fd0865171c86c01037bbcf9cd",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/310/552/51a732bf66a0f06b92b47797db58c8ef_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1627192990&auto=format&frame=1&q=92&s=5e879b4d549af1fdcb87f358aa1e5a09",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/310/552/51a732bf66a0f06b92b47797db58c8ef_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1627192990&auto=format&frame=1&q=92&s=9e3825129eb448144f1ab46a59623b61"
+      },
+      "name": "Sapphic Lake: Queer Ballet",
+      "blurb": "A new queer ballet by Ania Upstill and Jean Sergent, remixing Tchaikovsky’s Swan Lake score and a lesbian tale from Ovid",
+      "goal": 5000,
+      "pledged": 1110.42,
+      "state": "live",
+      "slug": "sapphic-lake-queer-ballet",
+      "disable_communication": false,
+      "country": "NZ",
+      "country_displayable_name": "New Zealand",
+      "currency": "NZD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1630130580,
+      "state_changed_at": 1627248618,
+      "created_at": 1627192799,
+      "launched_at": 1627248617,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 20,
+      "static_usd_rate": 0.69720275,
+      "usd_pledged": "774.187877655",
+      "converted_pledged_amount": 772,
+      "fx_rate": 0.69575478,
+      "usd_exchange_rate": 0.69575478,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 862757060,
+          "name": "Ania",
+          "slug": "sapphiclake",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/034/310/621/c534d34c2f4ae523460dc6ff6938a051_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1627194539&auto=format&frame=1&q=92&s=09cb970fd12679dfad12e48a1a8c60d5",
+              "small": "https://ksr-ugc.imgix.net/assets/034/310/621/c534d34c2f4ae523460dc6ff6938a051_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1627194539&auto=format&frame=1&q=92&s=335993d42d29ef1a608a04c0144dc99f",
+              "medium": "https://ksr-ugc.imgix.net/assets/034/310/621/c534d34c2f4ae523460dc6ff6938a051_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1627194539&auto=format&frame=1&q=92&s=45712a57196291e9e037ac1a30c8d5b3"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/sapphiclake"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/862757060?signature=1627583023.9666e5184251de2c48a3abcdb78ce24fcd36b153"
+              }
+          }
+      },
+      "location": {
+          "id": 2351310,
+          "name": "Wellington",
+          "slug": "wellington-nz",
+          "short_name": "Wellington, NZ",
+          "displayable_name": "Wellington, NZ",
+          "localized_name": "Wellington",
+          "country": "NZ",
+          "state": "Wellington",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "New Zealand",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/wellington-nz",
+                  "location": "https://www.kickstarter.com/locations/wellington-nz"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627551185.f0015675588d90054bc1d6f0da5705bc8646782a&woe_id=2351310"
+              }
+          }
+      },
+      "category": {
+          "id": 254,
+          "name": "Performances",
+          "analytics_name": "Performances",
+          "slug": "dance/performances",
+          "position": 1,
+          "parent_id": 6,
+          "parent_name": "Dance",
+          "color": 10917369,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/dance/performances"
+              }
+          }
+      },
+      "profile": {
+          "id": 4253712,
+          "project_id": 4253712,
+          "state": "inactive",
+          "state_changed_at": 1627192799,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/310/552/51a732bf66a0f06b92b47797db58c8ef_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1627192990&auto=format&frame=1&q=92&s=9e3825129eb448144f1ab46a59623b61",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/310/552/51a732bf66a0f06b92b47797db58c8ef_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1627192990&auto=format&frame=1&q=92&s=d524507a64a1272b6a56365d470a1cdb"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/sapphiclake/sapphic-lake-queer-ballet?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/sapphiclake/sapphic-lake-queer-ballet/rewards"
+          }
+      }
+  },
+  {
+      "id": 1483596810,
+      "photo": {
+          "key": "assets/034/312/781/4bd01b9409077b4ad9b07b0dbbf17500_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/034/312/781/4bd01b9409077b4ad9b07b0dbbf17500_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1627227442&auto=format&frame=1&q=92&s=8f492fd83418db4e087df4e6f243f08c",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/312/781/4bd01b9409077b4ad9b07b0dbbf17500_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1627227442&auto=format&frame=1&q=92&s=3c642f464957b09dfac189ebc701c503",
+          "med": "https://ksr-ugc.imgix.net/assets/034/312/781/4bd01b9409077b4ad9b07b0dbbf17500_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1627227442&auto=format&frame=1&q=92&s=c55984db8639cc936a7360cd3c6b412e",
+          "little": "https://ksr-ugc.imgix.net/assets/034/312/781/4bd01b9409077b4ad9b07b0dbbf17500_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1627227442&auto=format&frame=1&q=92&s=2b654fd54ff10044f7e31a0e2ea122b9",
+          "small": "https://ksr-ugc.imgix.net/assets/034/312/781/4bd01b9409077b4ad9b07b0dbbf17500_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1627227442&auto=format&frame=1&q=92&s=20f8c232aeb6206581bc0715a0ca23b0",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/312/781/4bd01b9409077b4ad9b07b0dbbf17500_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1627227442&auto=format&frame=1&q=92&s=d4d94952893de6e23fa879ad7745ab44",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/312/781/4bd01b9409077b4ad9b07b0dbbf17500_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1627227442&auto=format&frame=1&q=92&s=ab864dcae838f8daf3e6140148c2f6c6",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/312/781/4bd01b9409077b4ad9b07b0dbbf17500_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1627227442&auto=format&frame=1&q=92&s=cd772035415fdebf3ea1e16bb1d4ab9d"
+      },
+      "name": "Juniper Project Live Performance",
+      "blurb": "A fusion bellydance live show with live-streaming option available.",
+      "goal": 2000,
+      "pledged": 71,
+      "state": "live",
+      "slug": "juniper-project-live-performance",
+      "disable_communication": false,
+      "country": "GB",
+      "country_displayable_name": "the United Kingdom",
+      "currency": "GBP",
+      "currency_symbol": "£",
+      "currency_trailing_code": false,
+      "deadline": 1630450740,
+      "state_changed_at": 1627469653,
+      "created_at": 1627214387,
+      "launched_at": 1627469652,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 4,
+      "static_usd_rate": 1.38282558,
+      "usd_pledged": "98.18061618",
+      "converted_pledged_amount": 98,
+      "fx_rate": 1.38747444,
+      "usd_exchange_rate": 1.38747444,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1487503314,
+          "name": "Alexis Southall",
+          "slug": "alexissouthall",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/034/312/897/146960fee5cb52abd8e7b806e1eadbb6_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1627229118&auto=format&frame=1&q=92&s=d9adcb803f66a77d6e436fe84a2948c7",
+              "small": "https://ksr-ugc.imgix.net/assets/034/312/897/146960fee5cb52abd8e7b806e1eadbb6_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1627229118&auto=format&frame=1&q=92&s=c368aa331119e22dc4d099f061f249d6",
+              "medium": "https://ksr-ugc.imgix.net/assets/034/312/897/146960fee5cb52abd8e7b806e1eadbb6_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1627229118&auto=format&frame=1&q=92&s=b209c4b1fa72f1a0b80b89ac5a46e515"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/alexissouthall"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1487503314?signature=1627583023.dff8f2b512fd7c00e41eb88ec076c41430fd0e6b"
+              }
+          }
+      },
+      "location": {
+          "id": 40859,
+          "name": "Wolverhampton",
+          "slug": "wolverhampton-gb",
+          "short_name": "Wolverhampton, UK",
+          "displayable_name": "Wolverhampton, UK",
+          "localized_name": "Wolverhampton",
+          "country": "GB",
+          "state": "England",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United Kingdom",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/wolverhampton-gb",
+                  "location": "https://www.kickstarter.com/locations/wolverhampton-gb"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627566700.0b78c2504929d2ff0085c8c81db8df5b0ccd22d4&woe_id=40859"
+              }
+          }
+      },
+      "category": {
+          "id": 254,
+          "name": "Performances",
+          "analytics_name": "Performances",
+          "slug": "dance/performances",
+          "position": 1,
+          "parent_id": 6,
+          "parent_name": "Dance",
+          "color": 10917369,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/dance/performances"
+              }
+          }
+      },
+      "profile": {
+          "id": 4253778,
+          "project_id": 4253778,
+          "state": "inactive",
+          "state_changed_at": 1627214387,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/312/781/4bd01b9409077b4ad9b07b0dbbf17500_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1627227442&auto=format&frame=1&q=92&s=cd772035415fdebf3ea1e16bb1d4ab9d",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/312/781/4bd01b9409077b4ad9b07b0dbbf17500_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1627227442&auto=format&frame=1&q=92&s=8f492fd83418db4e087df4e6f243f08c"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/alexissouthall/juniper-project-live-performance?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/alexissouthall/juniper-project-live-performance/rewards"
+          }
+      }
+  },
+  {
+      "id": 1427344878,
+      "photo": {
+          "key": "assets/034/310/061/c0d356cdb990441d2633ea276bb552a5_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/034/310/061/c0d356cdb990441d2633ea276bb552a5_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1627184274&auto=format&frame=1&q=92&s=a7b2e1877860bbda81a7f3f91c482be0",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/310/061/c0d356cdb990441d2633ea276bb552a5_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1627184274&auto=format&frame=1&q=92&s=5164c2bbf49eb725a78590edba1d96bf",
+          "med": "https://ksr-ugc.imgix.net/assets/034/310/061/c0d356cdb990441d2633ea276bb552a5_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1627184274&auto=format&frame=1&q=92&s=db2df5522ce45f8d769e4c416bfc5b37",
+          "little": "https://ksr-ugc.imgix.net/assets/034/310/061/c0d356cdb990441d2633ea276bb552a5_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1627184274&auto=format&frame=1&q=92&s=1cea70d5e46a5a286988aa36d9e182dd",
+          "small": "https://ksr-ugc.imgix.net/assets/034/310/061/c0d356cdb990441d2633ea276bb552a5_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1627184274&auto=format&frame=1&q=92&s=ec2b4aa883169ce2277f4cc510877bfc",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/310/061/c0d356cdb990441d2633ea276bb552a5_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1627184274&auto=format&frame=1&q=92&s=8d940e6d7de11c354504f6a776612a15",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/310/061/c0d356cdb990441d2633ea276bb552a5_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1627184274&auto=format&frame=1&q=92&s=cdf081bca69ebaf8cfc06d53f2ff4c0f",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/310/061/c0d356cdb990441d2633ea276bb552a5_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1627184274&auto=format&frame=1&q=92&s=401425503b0247ff36223c44311db927"
+      },
+      "name": "ELLA Dance Retreat",
+      "blurb": "A Women's Dance & Wellbeing Weekend with a difference",
+      "goal": 5000,
+      "pledged": 1426.32,
+      "state": "live",
+      "slug": "ella-dance-retreat",
+      "disable_communication": false,
+      "country": "AU",
+      "country_displayable_name": "Australia",
+      "currency": "AUD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1629773176,
+      "state_changed_at": 1627181177,
+      "created_at": 1626682913,
+      "launched_at": 1627181176,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 12,
+      "static_usd_rate": 0.73764264,
+      "usd_pledged": "1052.1144502848",
+      "converted_pledged_amount": 1049,
+      "fx_rate": 0.73595485,
+      "usd_exchange_rate": 0.73595485,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 546307863,
+          "name": "Elysia Baker",
+          "slug": "elladanceretreat",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/034/251/344/74019f26e44aa6841e9a2339ad6e6c04_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1626685988&auto=format&frame=1&q=92&s=a5d2fd40554c8e3dc9b5f1a4be463141",
+              "small": "https://ksr-ugc.imgix.net/assets/034/251/344/74019f26e44aa6841e9a2339ad6e6c04_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1626685988&auto=format&frame=1&q=92&s=900383c6e99a9438409131b1f64f0699",
+              "medium": "https://ksr-ugc.imgix.net/assets/034/251/344/74019f26e44aa6841e9a2339ad6e6c04_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1626685988&auto=format&frame=1&q=92&s=d764f43a70badf1bcc500b7ef25e1513"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/elladanceretreat"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/546307863?signature=1627583023.0e8db86a432a5950c4d1d306f2dea39b55702659"
+              }
+          }
+      },
+      "location": {
+          "id": 1103816,
+          "name": "Melbourne",
+          "slug": "melbourne-au",
+          "short_name": "Melbourne, AU",
+          "displayable_name": "Melbourne, AU",
+          "localized_name": "Melbourne",
+          "country": "AU",
+          "state": "VIC",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "Australia",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/melbourne-au",
+                  "location": "https://www.kickstarter.com/locations/melbourne-au"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549017.2525e44c008d092e502744a3b65559429285150d&woe_id=1103816"
+              }
+          }
+      },
+      "category": {
+          "id": 6,
+          "name": "Dance",
+          "analytics_name": "Dance",
+          "slug": "dance",
+          "position": 4,
+          "color": 10917369,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/dance"
+              }
+          }
+      },
+      "profile": {
+          "id": 4250674,
+          "project_id": 4250674,
+          "state": "inactive",
+          "state_changed_at": 1626682913,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/310/061/c0d356cdb990441d2633ea276bb552a5_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1627184274&auto=format&frame=1&q=92&s=401425503b0247ff36223c44311db927",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/310/061/c0d356cdb990441d2633ea276bb552a5_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1627184274&auto=format&frame=1&q=92&s=a7b2e1877860bbda81a7f3f91c482be0"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/elladanceretreat/ella-dance-retreat?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/elladanceretreat/ella-dance-retreat/rewards"
+          }
+      }
+  },
+  {
+      "id": 1131916131,
+      "photo": {
+          "key": "assets/033/981/681/f7ddcddb064b2e312caeeb251dd37b8b_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/033/981/681/f7ddcddb064b2e312caeeb251dd37b8b_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624432090&auto=format&frame=1&q=92&s=824c95b9b05daa92603a1ab49b72de28",
+          "ed": "https://ksr-ugc.imgix.net/assets/033/981/681/f7ddcddb064b2e312caeeb251dd37b8b_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1624432090&auto=format&frame=1&q=92&s=c6ac0a05a2cd16d23b47d6546e1b9ca8",
+          "med": "https://ksr-ugc.imgix.net/assets/033/981/681/f7ddcddb064b2e312caeeb251dd37b8b_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1624432090&auto=format&frame=1&q=92&s=ee41a427d13957c7171be69522982c96",
+          "little": "https://ksr-ugc.imgix.net/assets/033/981/681/f7ddcddb064b2e312caeeb251dd37b8b_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1624432090&auto=format&frame=1&q=92&s=f7eda47943137860bb4873090a3ff726",
+          "small": "https://ksr-ugc.imgix.net/assets/033/981/681/f7ddcddb064b2e312caeeb251dd37b8b_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1624432090&auto=format&frame=1&q=92&s=ec2dcb9c77e3176ccce3e4e3779917d2",
+          "thumb": "https://ksr-ugc.imgix.net/assets/033/981/681/f7ddcddb064b2e312caeeb251dd37b8b_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1624432090&auto=format&frame=1&q=92&s=3c02ff23f1146fcd71ab1239c006814b",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/033/981/681/f7ddcddb064b2e312caeeb251dd37b8b_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1624432090&auto=format&frame=1&q=92&s=e605a9e71f8e3e4a2d354ecfe77b7b56",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/033/981/681/f7ddcddb064b2e312caeeb251dd37b8b_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624432090&auto=format&frame=1&q=92&s=a63b4118d10dd67301058b943d8666ff"
+      },
+      "name": "PHOENIX",
+      "blurb": "Exposing narratives in Choral Compositions through Dance.",
+      "goal": 1200,
+      "pledged": 899,
+      "state": "live",
+      "slug": "phoenix-1",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1629144974,
+      "state_changed_at": 1626120975,
+      "created_at": 1624424457,
+      "launched_at": 1626120974,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 19,
+      "static_usd_rate": 1,
+      "usd_pledged": "899.0",
+      "converted_pledged_amount": 899,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 271611494,
+          "name": "Bella Nazzari",
+          "slug": "phoenix2021",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/033/193/889/fbf694a07c27f9de76adaaf0846a765e_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1626120271&auto=format&frame=1&q=92&s=67772f9a37cc09478c5448615eb71177",
+              "small": "https://ksr-ugc.imgix.net/assets/033/193/889/fbf694a07c27f9de76adaaf0846a765e_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1626120271&auto=format&frame=1&q=92&s=04b53210c861fdc786b17aadcd5a2790",
+              "medium": "https://ksr-ugc.imgix.net/assets/033/193/889/fbf694a07c27f9de76adaaf0846a765e_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1626120271&auto=format&frame=1&q=92&s=13821fc94144d53043ea2088f507ee31"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/phoenix2021"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/271611494?signature=1627583023.1897173f5d0f814e30890bbcfeddb11bddc0be75"
+              }
+          }
+      },
+      "location": {
+          "id": 2442047,
+          "name": "Los Angeles",
+          "slug": "los-angeles-ca",
+          "short_name": "Los Angeles, CA",
+          "displayable_name": "Los Angeles, CA",
+          "localized_name": "Los Angeles",
+          "country": "US",
+          "state": "CA",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/los-angeles-ca",
+                  "location": "https://www.kickstarter.com/locations/los-angeles-ca"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627548931.93059c39f967bfe76b10abc09360af28bb72e9d9&woe_id=2442047"
+              }
+          }
+      },
+      "category": {
+          "id": 254,
+          "name": "Performances",
+          "analytics_name": "Performances",
+          "slug": "dance/performances",
+          "position": 1,
+          "parent_id": 6,
+          "parent_name": "Dance",
+          "color": 10917369,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/dance/performances"
+              }
+          }
+      },
+      "profile": {
+          "id": 4237904,
+          "project_id": 4237904,
+          "state": "inactive",
+          "state_changed_at": 1624424457,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/033/981/681/f7ddcddb064b2e312caeeb251dd37b8b_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624432090&auto=format&frame=1&q=92&s=a63b4118d10dd67301058b943d8666ff",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/033/981/681/f7ddcddb064b2e312caeeb251dd37b8b_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624432090&auto=format&frame=1&q=92&s=824c95b9b05daa92603a1ab49b72de28"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/phoenix2021/phoenix-1?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/phoenix2021/phoenix-1/rewards"
+          }
+      }
+  },
+  {
+      "id": 673786445,
+      "photo": {
+          "key": "assets/034/156/231/a5b6bfa7bfaa9fd158fc3d72ebf30971_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/156/231/a5b6bfa7bfaa9fd158fc3d72ebf30971_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625846440&auto=format&frame=1&q=92&s=a4a06c6b54ba6b92cbc4c0d802cf7bcd",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/156/231/a5b6bfa7bfaa9fd158fc3d72ebf30971_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1625846440&auto=format&frame=1&q=92&s=18c236f3ed452d040af094edbeddef3c",
+          "med": "https://ksr-ugc.imgix.net/assets/034/156/231/a5b6bfa7bfaa9fd158fc3d72ebf30971_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1625846440&auto=format&frame=1&q=92&s=ca036bc83683b759c4675268de2f9bbc",
+          "little": "https://ksr-ugc.imgix.net/assets/034/156/231/a5b6bfa7bfaa9fd158fc3d72ebf30971_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1625846440&auto=format&frame=1&q=92&s=d0559448a549ae26ae25eb829b11c76c",
+          "small": "https://ksr-ugc.imgix.net/assets/034/156/231/a5b6bfa7bfaa9fd158fc3d72ebf30971_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1625846440&auto=format&frame=1&q=92&s=f8d87fe448691b109dbbf93cbba52ba9",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/156/231/a5b6bfa7bfaa9fd158fc3d72ebf30971_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1625846440&auto=format&frame=1&q=92&s=d11271e943d10a2812293a41b68d4512",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/156/231/a5b6bfa7bfaa9fd158fc3d72ebf30971_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1625846440&auto=format&frame=1&q=92&s=ca93630b0a16e983e633526353a1b83a",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/156/231/a5b6bfa7bfaa9fd158fc3d72ebf30971_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625846440&auto=format&frame=1&q=92&s=04f78b85c447ff524bd7d074204222f7"
+      },
+      "name": "Help Concepts Dance Studio Launch!",
+      "blurb": "Concepts Dance Studio is a competitive/recreational dance studio. Drop in classes will be available in Contemporary and Ballet.",
+      "goal": 4000,
+      "pledged": 1486.29,
+      "state": "live",
+      "slug": "help-concepts-dance-studio-launch",
+      "disable_communication": false,
+      "country": "CA",
+      "country_displayable_name": "Canada",
+      "currency": "CAD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1627825188,
+      "state_changed_at": 1626615589,
+      "created_at": 1625778551,
+      "launched_at": 1626615588,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 8,
+      "static_usd_rate": 0.79264112,
+      "usd_pledged": "1178.0945702448",
+      "converted_pledged_amount": 1180,
+      "fx_rate": 0.79442567,
+      "usd_exchange_rate": 0.79442567,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1289716761,
+          "name": "Andrew Dragert",
+          "slug": "conceptsdancestudio",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/034/149/690/20e9c64dc4fd00262df8de1b8ffee5f9_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1625787071&auto=format&frame=1&q=92&s=20bfe5e5e9c41cac03c1db1543aab7f0",
+              "small": "https://ksr-ugc.imgix.net/assets/034/149/690/20e9c64dc4fd00262df8de1b8ffee5f9_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1625787071&auto=format&frame=1&q=92&s=ab5d0b09085193c03d01c1f06256c404",
+              "medium": "https://ksr-ugc.imgix.net/assets/034/149/690/20e9c64dc4fd00262df8de1b8ffee5f9_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1625787071&auto=format&frame=1&q=92&s=3c00785accbe7b7767aa1c5a3ee13e80"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/conceptsdancestudio"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1289716761?signature=1627583023.e84371469c77d3b9a7a57616028b9adaab13f636"
+              }
+          }
+      },
+      "location": {
+          "id": 4364,
+          "name": "Pickering",
+          "slug": "pickering-ca",
+          "short_name": "Pickering, Canada",
+          "displayable_name": "Pickering, Canada",
+          "localized_name": "Pickering",
+          "country": "CA",
+          "state": "ON",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "Canada",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/pickering-ca",
+                  "location": "https://www.kickstarter.com/locations/pickering-ca"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627572190.6c3a4509e4c30397212acb93d5e61c5aed7a1439&woe_id=4364"
+              }
+          }
+      },
+      "category": {
+          "id": 256,
+          "name": "Spaces",
+          "analytics_name": "Spaces",
+          "slug": "dance/spaces",
+          "position": 3,
+          "parent_id": 6,
+          "parent_name": "Dance",
+          "color": 10917369,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/dance/spaces"
+              }
+          }
+      },
+      "profile": {
+          "id": 4245738,
+          "project_id": 4245738,
+          "state": "inactive",
+          "state_changed_at": 1625778551,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/156/231/a5b6bfa7bfaa9fd158fc3d72ebf30971_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625846440&auto=format&frame=1&q=92&s=04f78b85c447ff524bd7d074204222f7",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/156/231/a5b6bfa7bfaa9fd158fc3d72ebf30971_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625846440&auto=format&frame=1&q=92&s=a4a06c6b54ba6b92cbc4c0d802cf7bcd"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/conceptsdancestudio/help-concepts-dance-studio-launch?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/conceptsdancestudio/help-concepts-dance-studio-launch/rewards"
+          }
+      }
+  },
+  {
+      "id": 1482814738,
+      "photo": {
+          "key": "assets/034/085/108/fe3d0773d092af41b42f046c7bcec7c9_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/085/108/fe3d0773d092af41b42f046c7bcec7c9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625235703&auto=format&frame=1&q=92&s=ca998f0b4d6b06c39972eea806147bec",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/085/108/fe3d0773d092af41b42f046c7bcec7c9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1625235703&auto=format&frame=1&q=92&s=312cc26761e056707ebbdae5e309d0bf",
+          "med": "https://ksr-ugc.imgix.net/assets/034/085/108/fe3d0773d092af41b42f046c7bcec7c9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1625235703&auto=format&frame=1&q=92&s=df6a55fe37c7e7a55358e0f8d5c6f83f",
+          "little": "https://ksr-ugc.imgix.net/assets/034/085/108/fe3d0773d092af41b42f046c7bcec7c9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1625235703&auto=format&frame=1&q=92&s=49e38441c2461cba1c92cf7637f306fd",
+          "small": "https://ksr-ugc.imgix.net/assets/034/085/108/fe3d0773d092af41b42f046c7bcec7c9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1625235703&auto=format&frame=1&q=92&s=d19ffb266b964c9d4735dba1bf50faa7",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/085/108/fe3d0773d092af41b42f046c7bcec7c9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1625235703&auto=format&frame=1&q=92&s=1921da6399ec90ed195f0f120af82b58",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/085/108/fe3d0773d092af41b42f046c7bcec7c9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1625235703&auto=format&frame=1&q=92&s=43b2680a03137db2f27518d50f7682d7",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/085/108/fe3d0773d092af41b42f046c7bcec7c9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625235703&auto=format&frame=1&q=92&s=fca6580facccf31259d16ba54bd1492e"
+      },
+      "name": "The Lehenda Film Series",
+      "blurb": "Filming two pieces of Lehenda repertoire on location in Melbourne and regional Victoria, merging the genres of dance and film.",
+      "goal": 4000,
+      "pledged": 3452.32,
+      "state": "live",
+      "slug": "the-lehenda-film-series",
+      "disable_communication": false,
+      "country": "AU",
+      "country_displayable_name": "Australia",
+      "currency": "AUD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1628297574,
+      "state_changed_at": 1625705576,
+      "created_at": 1625234697,
+      "launched_at": 1625705574,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 40,
+      "static_usd_rate": 0.75678629,
+      "usd_pledged": "2612.6684446928",
+      "converted_pledged_amount": 2540,
+      "fx_rate": 0.73595485,
+      "usd_exchange_rate": 0.73595485,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1007745915,
+          "name": "Lehenda Ukrainian Dance Company",
+          "slug": "lehenda",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/008/654/709/a1162d3697315487803690ecaa9ffdd7_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1461537161&auto=format&frame=1&q=92&s=d2ce1eb521a95204e3e4e320d79fcf52",
+              "small": "https://ksr-ugc.imgix.net/assets/008/654/709/a1162d3697315487803690ecaa9ffdd7_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1461537161&auto=format&frame=1&q=92&s=018956d855daf91d90909b9217553bd1",
+              "medium": "https://ksr-ugc.imgix.net/assets/008/654/709/a1162d3697315487803690ecaa9ffdd7_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1461537161&auto=format&frame=1&q=92&s=1ce8ce638d3b6133220d47fb79a3fefa"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/lehenda"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1007745915?signature=1627583023.ce4bcca9af0e2a8a28b41f96a0411d4a24ba389e"
+              }
+          }
+      },
+      "location": {
+          "id": 1103816,
+          "name": "Melbourne",
+          "slug": "melbourne-au",
+          "short_name": "Melbourne, AU",
+          "displayable_name": "Melbourne, AU",
+          "localized_name": "Melbourne",
+          "country": "AU",
+          "state": "VIC",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "Australia",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/melbourne-au",
+                  "location": "https://www.kickstarter.com/locations/melbourne-au"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549017.2525e44c008d092e502744a3b65559429285150d&woe_id=1103816"
+              }
+          }
+      },
+      "category": {
+          "id": 6,
+          "name": "Dance",
+          "analytics_name": "Dance",
+          "slug": "dance",
+          "position": 4,
+          "color": 10917369,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/dance"
+              }
+          }
+      },
+      "profile": {
+          "id": 4242544,
+          "project_id": 4242544,
+          "state": "inactive",
+          "state_changed_at": 1625234697,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/085/108/fe3d0773d092af41b42f046c7bcec7c9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625235703&auto=format&frame=1&q=92&s=fca6580facccf31259d16ba54bd1492e",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/085/108/fe3d0773d092af41b42f046c7bcec7c9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625235703&auto=format&frame=1&q=92&s=ca998f0b4d6b06c39972eea806147bec"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/lehenda/the-lehenda-film-series?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/lehenda/the-lehenda-film-series/rewards"
+          }
+      }
+  },
+  {
+      "id": 1318036731,
+      "photo": {
+          "key": "assets/033/865/420/7b64ca480b76a7afe2f206723dca935c_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/033/865/420/7b64ca480b76a7afe2f206723dca935c_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1623506608&auto=format&frame=1&q=92&s=771668999a434e0380e89c7db9e8853f",
+          "ed": "https://ksr-ugc.imgix.net/assets/033/865/420/7b64ca480b76a7afe2f206723dca935c_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1623506608&auto=format&frame=1&q=92&s=e76fbbe74a93177d665edc9d191b93fb",
+          "med": "https://ksr-ugc.imgix.net/assets/033/865/420/7b64ca480b76a7afe2f206723dca935c_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1623506608&auto=format&frame=1&q=92&s=e18489c7bf2d0723d9db849f5dcafb45",
+          "little": "https://ksr-ugc.imgix.net/assets/033/865/420/7b64ca480b76a7afe2f206723dca935c_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1623506608&auto=format&frame=1&q=92&s=93381879fd3dd4db94d87282d4978d68",
+          "small": "https://ksr-ugc.imgix.net/assets/033/865/420/7b64ca480b76a7afe2f206723dca935c_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1623506608&auto=format&frame=1&q=92&s=cf26644fce2e93eb6b2c91c5e687b3b7",
+          "thumb": "https://ksr-ugc.imgix.net/assets/033/865/420/7b64ca480b76a7afe2f206723dca935c_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1623506608&auto=format&frame=1&q=92&s=513795132a821e8fed4808ec1edfa87b",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/033/865/420/7b64ca480b76a7afe2f206723dca935c_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1623506608&auto=format&frame=1&q=92&s=e102a2bcf49845c7f972517c7ef33642",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/033/865/420/7b64ca480b76a7afe2f206723dca935c_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1623506608&auto=format&frame=1&q=92&s=0a000ae0bee3130d2d9455d015719dee"
+      },
+      "name": "The KC Lesbian Bar Experience",
+      "blurb": "History*Community*Future",
+      "goal": 10000,
+      "pledged": 3183,
+      "state": "live",
+      "slug": "the-kc-lesbian-bar-experience",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1628690548,
+      "state_changed_at": 1623506549,
+      "created_at": 1623359548,
+      "launched_at": 1623506548,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 29,
+      "static_usd_rate": 1,
+      "usd_pledged": "3183.0",
+      "converted_pledged_amount": 3183,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 970888013,
+          "name": "The KC Lesbian Bar Experience",
+          "slug": "tkclbe",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/033/853/498/c6fc53736e174d31199ef30fbfe37944_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1623408656&auto=format&frame=1&q=92&s=6cbdb89a8148e9fc3fe243596a083409",
+              "small": "https://ksr-ugc.imgix.net/assets/033/853/498/c6fc53736e174d31199ef30fbfe37944_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1623408656&auto=format&frame=1&q=92&s=580b45259a0c62357f7e7c28d44016f7",
+              "medium": "https://ksr-ugc.imgix.net/assets/033/853/498/c6fc53736e174d31199ef30fbfe37944_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1623408656&auto=format&frame=1&q=92&s=d5751ca38ad5eb7922a653ffc552385e"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/tkclbe"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/970888013?signature=1627583023.83cdd6a66302bfd525f0e866eb60647180e50802"
+              }
+          }
+      },
+      "location": {
+          "id": 2430683,
+          "name": "Kansas City",
+          "slug": "kansas-city-mo",
+          "short_name": "Kansas City, MO",
+          "displayable_name": "Kansas City, MO",
+          "localized_name": "Kansas City",
+          "country": "US",
+          "state": "MO",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/kansas-city-mo",
+                  "location": "https://www.kickstarter.com/locations/kansas-city-mo"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549592.30b441bb82c32bd3bde11465d524aee83d270e86&woe_id=2430683"
+              }
+          }
+      },
+      "category": {
+          "id": 256,
+          "name": "Spaces",
+          "analytics_name": "Spaces",
+          "slug": "dance/spaces",
+          "position": 3,
+          "parent_id": 6,
+          "parent_name": "Dance",
+          "color": 10917369,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/dance/spaces"
+              }
+          }
+      },
+      "profile": {
+          "id": 4231498,
+          "project_id": 4231498,
+          "state": "inactive",
+          "state_changed_at": 1623359548,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/033/865/420/7b64ca480b76a7afe2f206723dca935c_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1623506608&auto=format&frame=1&q=92&s=0a000ae0bee3130d2d9455d015719dee",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/033/865/420/7b64ca480b76a7afe2f206723dca935c_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1623506608&auto=format&frame=1&q=92&s=771668999a434e0380e89c7db9e8853f"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/tkclbe/the-kc-lesbian-bar-experience?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/tkclbe/the-kc-lesbian-bar-experience/rewards"
+          }
+      }
+  },
+  {
+      "id": 909647957,
+      "photo": {
+          "key": "assets/034/186/861/4f915bc16f8a921cc38cd2656e6bc41a_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/034/186/861/4f915bc16f8a921cc38cd2656e6bc41a_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626135572&auto=format&frame=1&q=92&s=f1f5e640c44115fe39399e11eb9eab24",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/186/861/4f915bc16f8a921cc38cd2656e6bc41a_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1626135572&auto=format&frame=1&q=92&s=e5e525d6a9a6ebf74015644a07287a5e",
+          "med": "https://ksr-ugc.imgix.net/assets/034/186/861/4f915bc16f8a921cc38cd2656e6bc41a_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1626135572&auto=format&frame=1&q=92&s=55d7fed71b7b563cf53747629c05b9be",
+          "little": "https://ksr-ugc.imgix.net/assets/034/186/861/4f915bc16f8a921cc38cd2656e6bc41a_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1626135572&auto=format&frame=1&q=92&s=724fcb6126a2f5114a28ccb9abbc388f",
+          "small": "https://ksr-ugc.imgix.net/assets/034/186/861/4f915bc16f8a921cc38cd2656e6bc41a_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1626135572&auto=format&frame=1&q=92&s=17b2759d7fc1fecdafcb4f1deaf6f6d7",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/186/861/4f915bc16f8a921cc38cd2656e6bc41a_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1626135572&auto=format&frame=1&q=92&s=3b69692cdc9ebfb7f652b89d26746b76",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/186/861/4f915bc16f8a921cc38cd2656e6bc41a_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1626135572&auto=format&frame=1&q=92&s=9d2ac072d54d6ea0f863a8e915ae3a7f",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/186/861/4f915bc16f8a921cc38cd2656e6bc41a_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626135572&auto=format&frame=1&q=92&s=c0c92e5203f367c50e0feeb75bdbe45c"
+      },
+      "name": "RAÍCES (videodanza)",
+      "blurb": "Videodanza que fusiona la danza folklórica mexicana y la contemporánea.",
+      "goal": 3500,
+      "pledged": 418.8,
+      "state": "live",
+      "slug": "raices-videodanza",
+      "disable_communication": false,
+      "country": "MX",
+      "country_displayable_name": "Mexico",
+      "currency": "MXN",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1628888180,
+      "state_changed_at": 1626468981,
+      "created_at": 1626135472,
+      "launched_at": 1626468980,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 2,
+      "static_usd_rate": 0.05021652,
+      "usd_pledged": "21.030678576",
+      "converted_pledged_amount": 20,
+      "fx_rate": 0.05007194,
+      "usd_exchange_rate": 0.05007194,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 172962644,
+          "name": "María Guadalupe de la Torre Durán",
+          "slug": "raicesvideodanza",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/034/199/981/eaccb756a86466dbe3ddd5b99b369307_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1626223806&auto=format&frame=1&q=92&s=7410dceb6378c35e30fd0e006b6dbd35",
+              "small": "https://ksr-ugc.imgix.net/assets/034/199/981/eaccb756a86466dbe3ddd5b99b369307_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1626223806&auto=format&frame=1&q=92&s=2726e0ce5e4c4e4eb2f9a96f28da6e47",
+              "medium": "https://ksr-ugc.imgix.net/assets/034/199/981/eaccb756a86466dbe3ddd5b99b369307_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1626223806&auto=format&frame=1&q=92&s=51cf39fcae6d31710e7927f9d8e027de"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/raicesvideodanza"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/172962644?signature=1627583024.416f821f9bc61363e621adc397b49ab7088eb690"
+              }
+          }
+      },
+      "location": {
+          "id": 55882140,
+          "name": "Jalisco",
+          "slug": "jalisco-tijuana-mx",
+          "short_name": "Jalisco, Mexico",
+          "displayable_name": "Jalisco, Mexico",
+          "localized_name": "Jalisco",
+          "country": "MX",
+          "state": "Baja California",
+          "type": "Suburb",
+          "is_root": false,
+          "expanded_country": "Mexico",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/jalisco-tijuana-mx",
+                  "location": "https://www.kickstarter.com/locations/jalisco-tijuana-mx"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627572240.75cac22b0611a8d3424c68c565ae59447a0323e8&woe_id=55882140"
+              }
+          }
+      },
+      "category": {
+          "id": 6,
+          "name": "Dance",
+          "analytics_name": "Dance",
+          "slug": "dance",
+          "position": 4,
+          "color": 10917369,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/dance"
+              }
+          }
+      },
+      "profile": {
+          "id": 4247650,
+          "project_id": 4247650,
+          "state": "inactive",
+          "state_changed_at": 1626135472,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/186/861/4f915bc16f8a921cc38cd2656e6bc41a_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626135572&auto=format&frame=1&q=92&s=c0c92e5203f367c50e0feeb75bdbe45c",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/186/861/4f915bc16f8a921cc38cd2656e6bc41a_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626135572&auto=format&frame=1&q=92&s=f1f5e640c44115fe39399e11eb9eab24"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/raicesvideodanza/raices-videodanza?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/raicesvideodanza/raices-videodanza/rewards"
+          }
+      }
+  },
+  {
+      "id": 257359448,
+      "photo": {
+          "key": "assets/011/810/459/b34e85d948e4b4f33d30b89dafb36b5c_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/011/810/459/b34e85d948e4b4f33d30b89dafb36b5c_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1463697945&auto=format&frame=1&q=92&s=471a08f76a55ffd67b06eff34c7a3b7c",
+          "ed": "https://ksr-ugc.imgix.net/assets/011/810/459/b34e85d948e4b4f33d30b89dafb36b5c_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1463697945&auto=format&frame=1&q=92&s=f5bb3dc0257b63bd6020e0d23eeb295e",
+          "med": "https://ksr-ugc.imgix.net/assets/011/810/459/b34e85d948e4b4f33d30b89dafb36b5c_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1463697945&auto=format&frame=1&q=92&s=2cc84ef92731683f6162375e7fae1cfe",
+          "little": "https://ksr-ugc.imgix.net/assets/011/810/459/b34e85d948e4b4f33d30b89dafb36b5c_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1463697945&auto=format&frame=1&q=92&s=d1b81a62c81e046c0bde0229843c148a",
+          "small": "https://ksr-ugc.imgix.net/assets/011/810/459/b34e85d948e4b4f33d30b89dafb36b5c_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1463697945&auto=format&frame=1&q=92&s=ecf413da3b3c4c783bb5e00a81e4605c",
+          "thumb": "https://ksr-ugc.imgix.net/assets/011/810/459/b34e85d948e4b4f33d30b89dafb36b5c_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1463697945&auto=format&frame=1&q=92&s=f2df61954f0b09689f6bbf500b4910da",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/011/810/459/b34e85d948e4b4f33d30b89dafb36b5c_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1463697945&auto=format&frame=1&q=92&s=dff3f46137a2cdab2a950a67b79a0ba9",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/011/810/459/b34e85d948e4b4f33d30b89dafb36b5c_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1463697945&auto=format&frame=1&q=92&s=104480ca43f1f936b229ae3883b497c4"
+      },
+      "name": "Tiny Dancer",
+      "blurb": "BALLER INA presents a tiny dancer t-shirt in honor of Elton John.",
+      "goal": 400,
+      "pledged": 713,
+      "state": "successful",
+      "slug": "tiny-dancer",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1416932015,
+      "state_changed_at": 1416932016,
+      "created_at": 1406573903,
+      "launched_at": 1415722415,
+      "staff_pick": true,
+      "is_starrable": false,
+      "backers_count": 41,
+      "static_usd_rate": 1,
+      "usd_pledged": "713.0",
+      "converted_pledged_amount": 713,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1603175373,
+          "name": "Jes Nelson",
+          "slug": "jesnelson",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/008/557/664/7ae2b97095832ca630a94d0ba8085bab_original.JPG?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1461531357&auto=format&frame=1&q=92&s=509a8f351c13f608d4f2540b86dbcc0f",
+              "small": "https://ksr-ugc.imgix.net/assets/008/557/664/7ae2b97095832ca630a94d0ba8085bab_original.JPG?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1461531357&auto=format&frame=1&q=92&s=1b0282522318c6c90d83b8551bf83dfe",
+              "medium": "https://ksr-ugc.imgix.net/assets/008/557/664/7ae2b97095832ca630a94d0ba8085bab_original.JPG?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1461531357&auto=format&frame=1&q=92&s=a97377c75312a7a8f265c55b15bb638d"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/jesnelson"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1603175373?signature=1627583024.c19de6dded9df6518ddac33ea640807ea98ce3ec"
+              }
+          }
+      },
+      "location": {
+          "id": 12589335,
+          "name": "Brooklyn",
+          "slug": "brooklyn-ny",
+          "short_name": "Brooklyn, NY",
+          "displayable_name": "Brooklyn, NY",
+          "localized_name": "Brooklyn",
+          "country": "US",
+          "state": "NY",
+          "type": "County",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/brooklyn-ny",
+                  "location": "https://www.kickstarter.com/locations/brooklyn-ny"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627548994.9b77e312491ac3f40c9b89204e0735acb900397b&woe_id=12589335"
+              }
+          }
+      },
+      "category": {
+          "id": 6,
+          "name": "Dance",
+          "analytics_name": "Dance",
+          "slug": "dance",
+          "position": 4,
+          "color": 10917369,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/dance"
+              }
+          }
+      },
+      "profile": {
+          "id": 1236381,
+          "project_id": 1236381,
+          "state": "active",
+          "state_changed_at": 1427660897,
+          "name": "tiny dancer",
+          "blurb": "baller ina presents a tiny dancer t-shirt in honor of Elton John.",
+          "background_color": "ffebf5",
+          "text_color": "000000",
+          "link_background_color": "000000",
+          "link_text_color": "",
+          "link_text": "cut a rug",
+          "link_url": "http://baller-ina.com",
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/011/810/459/b34e85d948e4b4f33d30b89dafb36b5c_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1463697945&auto=format&frame=1&q=92&s=104480ca43f1f936b229ae3883b497c4",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/011/810/459/b34e85d948e4b4f33d30b89dafb36b5c_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1463697945&auto=format&frame=1&q=92&s=471a08f76a55ffd67b06eff34c7a3b7c"
+              }
+          }
+      },
+      "spotlight": true,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/jesnelson/tiny-dancer?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/jesnelson/tiny-dancer/rewards"
+          }
+      }
+  },
+  {
+      "id": 1257468948,
+      "photo": {
+          "key": "assets/011/625/206/e22dacc78e8279a535e1c0704454f77b_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/011/625/206/e22dacc78e8279a535e1c0704454f77b_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1463685690&auto=format&frame=1&q=92&s=fd3a3d826e4915c6d7cd1639a0ba28a5",
+          "ed": "https://ksr-ugc.imgix.net/assets/011/625/206/e22dacc78e8279a535e1c0704454f77b_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1463685690&auto=format&frame=1&q=92&s=cc842f2561a41fc84b9bbc755c31eacf",
+          "med": "https://ksr-ugc.imgix.net/assets/011/625/206/e22dacc78e8279a535e1c0704454f77b_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1463685690&auto=format&frame=1&q=92&s=9ef64687d07767bb9c9c159d92f55ec3",
+          "little": "https://ksr-ugc.imgix.net/assets/011/625/206/e22dacc78e8279a535e1c0704454f77b_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1463685690&auto=format&frame=1&q=92&s=c41c4b705ffb5027613071afe9ffa795",
+          "small": "https://ksr-ugc.imgix.net/assets/011/625/206/e22dacc78e8279a535e1c0704454f77b_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1463685690&auto=format&frame=1&q=92&s=0f353acd7017bbc276cbed095ec0ba23",
+          "thumb": "https://ksr-ugc.imgix.net/assets/011/625/206/e22dacc78e8279a535e1c0704454f77b_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1463685690&auto=format&frame=1&q=92&s=42f856f2155de04e3ae417aa3758c6ba",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/011/625/206/e22dacc78e8279a535e1c0704454f77b_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1463685690&auto=format&frame=1&q=92&s=7224e42f393d75d0b2195e500e1bdaf9",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/011/625/206/e22dacc78e8279a535e1c0704454f77b_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1463685690&auto=format&frame=1&q=92&s=5496a4cb626d7b3ce65abec46bf9236b"
+      },
+      "name": "Dance Films Builds An Archive",
+      "blurb": "An archive that will change the history of dance on film, making nearly 60 years of ground breaking footage accessible.",
+      "goal": 10000,
+      "pledged": 13243.5,
+      "state": "successful",
+      "slug": "dance-films-builds-an-archive",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1393737493,
+      "state_changed_at": 1393737494,
+      "created_at": 1387572980,
+      "launched_at": 1391145493,
+      "staff_pick": true,
+      "is_starrable": false,
+      "backers_count": 203,
+      "static_usd_rate": 1,
+      "usd_pledged": "13243.5",
+      "converted_pledged_amount": 13243,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1004701960,
+          "name": "Brighid Greene",
+          "slug": "bgreenek",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/006/287/040/6036b1e07cf461c6b2f3a1fb9eed36ba_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1461378637&auto=format&frame=1&q=92&s=732098a161d64151dc9581eac1bef124",
+              "small": "https://ksr-ugc.imgix.net/assets/006/287/040/6036b1e07cf461c6b2f3a1fb9eed36ba_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1461378637&auto=format&frame=1&q=92&s=e7c496a9215f2927bf9ed85dfe2f46bd",
+              "medium": "https://ksr-ugc.imgix.net/assets/006/287/040/6036b1e07cf461c6b2f3a1fb9eed36ba_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1461378637&auto=format&frame=1&q=92&s=b2d45c7575eb341950b082dc4518f757"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/bgreenek"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1004701960?signature=1627583024.a582b12d6a396a6bcdceab4a1eafaf7e2df5f765"
+              }
+          }
+      },
+      "location": {
+          "id": 12589335,
+          "name": "Brooklyn",
+          "slug": "brooklyn-ny",
+          "short_name": "Brooklyn, NY",
+          "displayable_name": "Brooklyn, NY",
+          "localized_name": "Brooklyn",
+          "country": "US",
+          "state": "NY",
+          "type": "County",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/brooklyn-ny",
+                  "location": "https://www.kickstarter.com/locations/brooklyn-ny"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627548994.9b77e312491ac3f40c9b89204e0735acb900397b&woe_id=12589335"
+              }
+          }
+      },
+      "category": {
+          "id": 6,
+          "name": "Dance",
+          "analytics_name": "Dance",
+          "slug": "dance",
+          "position": 4,
+          "color": 10917369,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/dance"
+              }
+          }
+      },
+      "profile": {
+          "id": 821874,
+          "project_id": 821874,
+          "state": "active",
+          "state_changed_at": 1445369415,
+          "name": "Dance Films Builds An Archive",
+          "blurb": "An archive that will change the history of dance on film, making nearly 60 years of ground breaking footage accessible.",
+          "background_color": "27123b",
+          "text_color": "ffffff",
+          "link_background_color": "ffffff",
+          "link_text_color": "27123b",
+          "link_text": "Follow along!",
+          "link_url": "https://twitter.com/search?f=tweets&q=%23DanceFilmsArchive&src=typd",
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/011/625/206/e22dacc78e8279a535e1c0704454f77b_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1463685690&auto=format&frame=1&q=92&s=5496a4cb626d7b3ce65abec46bf9236b",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/011/625/206/e22dacc78e8279a535e1c0704454f77b_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1463685690&auto=format&frame=1&q=92&s=fd3a3d826e4915c6d7cd1639a0ba28a5"
+              }
+          }
+      },
+      "spotlight": true,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/bgreenek/dance-films-builds-an-archive?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/bgreenek/dance-films-builds-an-archive/rewards"
+          }
+      }
+  }
+]
