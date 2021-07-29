@@ -1,8 +1,13 @@
-import userService from './user';
+import { getCustomRepository } from 'typeorm';
+import { UserRepository } from '../data/repositories/user';
+import UserService from './user';
 
-const services = {
-  userService
-};
+export function initServices() {
+  return {
+    userService: new UserService(getCustomRepository(UserRepository))
+  };
+}
 
-export type Services = typeof services;
-export default services;
+export interface Services {
+  userService: UserService
+}

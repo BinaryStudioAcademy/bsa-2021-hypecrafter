@@ -1,6 +1,7 @@
 import { createConnection } from 'typeorm';
 import MicroMq from 'micromq';
-import { Project } from 'hypecrafter-shared';
+import { Project } from 'hypecrafter-shared/enums';
+import { log } from './helpers/logger';
 import initRoutes from './api/routes';
 import { env } from './env';
 
@@ -11,5 +12,6 @@ const app = new MicroMq({
   rabbit
 });
 
-initRoutes(app).start();
-createConnection().catch(e => console.log(e));
+createConnection().then(() => {
+  initRoutes(app).start();
+}).catch((e) => log(e));

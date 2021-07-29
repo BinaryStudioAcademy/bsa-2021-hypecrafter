@@ -2,7 +2,7 @@ import { createConnection } from 'typeorm';
 import cors from 'cors';
 import express, { json } from 'express';
 import Gateway from 'micromq/gateway';
-import { Project } from 'hypecrafter-shared';
+import { Project } from 'hypecrafter-shared/enums';
 import { log } from './helpers';
 import { handleError, logger } from './api/middlewares';
 import initRoutes from './api/routes';

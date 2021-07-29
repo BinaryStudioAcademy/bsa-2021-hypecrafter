@@ -8,6 +8,6 @@ export class UserRepository extends Repository<UserProfile> {
   }
 
   public getById(id: string) {
-    return this.find({ id });
+    return this.findOne({ id });
   }
 }
