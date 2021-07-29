@@ -1,0 +1,1548 @@
+[
+  {
+      "id": 2064957059,
+      "photo": {
+          "key": "assets/034/166/028/3182ab6deaadd0cc68611f7e5a0f6f1c_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/166/028/3182ab6deaadd0cc68611f7e5a0f6f1c_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625940959&auto=format&frame=1&q=92&s=1426a8d94f35cea4493a9ade6b3cacea",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/166/028/3182ab6deaadd0cc68611f7e5a0f6f1c_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1625940959&auto=format&frame=1&q=92&s=26d5a4d98ed1ef34ec2637ffa2fd8fac",
+          "med": "https://ksr-ugc.imgix.net/assets/034/166/028/3182ab6deaadd0cc68611f7e5a0f6f1c_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1625940959&auto=format&frame=1&q=92&s=8da1ccb7541c1c06008d70a6849167bc",
+          "little": "https://ksr-ugc.imgix.net/assets/034/166/028/3182ab6deaadd0cc68611f7e5a0f6f1c_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1625940959&auto=format&frame=1&q=92&s=e5124ac4d76e079116935cb6e82f319b",
+          "small": "https://ksr-ugc.imgix.net/assets/034/166/028/3182ab6deaadd0cc68611f7e5a0f6f1c_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1625940959&auto=format&frame=1&q=92&s=c0aede91a44c33dc3a659b6e3f3610d6",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/166/028/3182ab6deaadd0cc68611f7e5a0f6f1c_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1625940959&auto=format&frame=1&q=92&s=d16859b7fe44db6c6e501d4f37af6bf2",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/166/028/3182ab6deaadd0cc68611f7e5a0f6f1c_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1625940959&auto=format&frame=1&q=92&s=b853c38556e15334f9f03043de0615c7",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/166/028/3182ab6deaadd0cc68611f7e5a0f6f1c_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625940959&auto=format&frame=1&q=92&s=d5a1224aa2003c7cf78b8352610ad6a5"
+      },
+      "name": "Distilled",
+      "blurb": "Craft spirits from around the world in this highly thematic strategy card game!",
+      "goal": 18000,
+      "pledged": 462756.58,
+      "state": "live",
+      "slug": "distilled",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1627606800,
+      "state_changed_at": 1625576444,
+      "created_at": 1577657946,
+      "launched_at": 1625576442,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 6595,
+      "static_usd_rate": 1,
+      "usd_pledged": "462756.58",
+      "converted_pledged_amount": 462756,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1475386744,
+          "name": "Paverson Games",
+          "slug": "paversongames",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/006/334/560/23302221df0b4816ab0a58828c3e1a1c_original.png?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1601390440&auto=format&frame=1&q=92&s=4c18ddf556e86fdf5466a4c6b9804140",
+              "small": "https://ksr-ugc.imgix.net/assets/006/334/560/23302221df0b4816ab0a58828c3e1a1c_original.png?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1601390440&auto=format&frame=1&q=92&s=9b6c8d58b7a89709261035a971b6eab6",
+              "medium": "https://ksr-ugc.imgix.net/assets/006/334/560/23302221df0b4816ab0a58828c3e1a1c_original.png?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1601390440&auto=format&frame=1&q=92&s=a68089d331c027e0999a70d207910eb1"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/paversongames"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1475386744?signature=1627582389.06d9e42d83230647481bcb07550d5dd8ad805d89"
+              }
+          }
+      },
+      "location": {
+          "id": 2449453,
+          "name": "Menomonie",
+          "slug": "menomonie-wi",
+          "short_name": "Menomonie, WI",
+          "displayable_name": "Menomonie, WI",
+          "localized_name": "Menomonie",
+          "country": "US",
+          "state": "WI",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/menomonie-wi",
+                  "location": "https://www.kickstarter.com/locations/menomonie-wi"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627573984.fc8043104161027fc1a7b150a858b1c195d5d4d7&woe_id=2449453"
+              }
+          }
+      },
+      "category": {
+          "id": 34,
+          "name": "Tabletop Games",
+          "analytics_name": "Tabletop Games",
+          "slug": "games/tabletop games",
+          "position": 6,
+          "parent_id": 12,
+          "parent_name": "Games",
+          "color": 51627,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/games/tabletop%20games"
+              }
+          }
+      },
+      "profile": {
+          "id": 3893697,
+          "project_id": 3893697,
+          "state": "inactive",
+          "state_changed_at": 1577657946,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/166/028/3182ab6deaadd0cc68611f7e5a0f6f1c_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625940959&auto=format&frame=1&q=92&s=d5a1224aa2003c7cf78b8352610ad6a5",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/166/028/3182ab6deaadd0cc68611f7e5a0f6f1c_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625940959&auto=format&frame=1&q=92&s=1426a8d94f35cea4493a9ade6b3cacea"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/paversongames/distilled?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/paversongames/distilled/rewards"
+          }
+      }
+  },
+  {
+      "id": 733656464,
+      "photo": {
+          "key": "assets/034/343/698/0c31c3a9fb2ebfa3b4dc9e4e63348570_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/343/698/0c31c3a9fb2ebfa3b4dc9e4e63348570_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1627478961&auto=format&frame=1&q=92&s=94040556612a18503e5d604620731d6d",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/343/698/0c31c3a9fb2ebfa3b4dc9e4e63348570_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1627478961&auto=format&frame=1&q=92&s=715f0c0796805271912e0f004c6d9b40",
+          "med": "https://ksr-ugc.imgix.net/assets/034/343/698/0c31c3a9fb2ebfa3b4dc9e4e63348570_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1627478961&auto=format&frame=1&q=92&s=11d5d5027228faa7501d0fdb921d9b22",
+          "little": "https://ksr-ugc.imgix.net/assets/034/343/698/0c31c3a9fb2ebfa3b4dc9e4e63348570_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1627478961&auto=format&frame=1&q=92&s=7e3de3ccab717d13a3ac8990228cf640",
+          "small": "https://ksr-ugc.imgix.net/assets/034/343/698/0c31c3a9fb2ebfa3b4dc9e4e63348570_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1627478961&auto=format&frame=1&q=92&s=095819b8494d4b3c33e01b8c5ba7e0a8",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/343/698/0c31c3a9fb2ebfa3b4dc9e4e63348570_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1627478961&auto=format&frame=1&q=92&s=3c4eed83569c7646def8ea9946e0fe04",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/343/698/0c31c3a9fb2ebfa3b4dc9e4e63348570_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1627478961&auto=format&frame=1&q=92&s=862108c3cd465e939944d410734bb23c",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/343/698/0c31c3a9fb2ebfa3b4dc9e4e63348570_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1627478961&auto=format&frame=1&q=92&s=2d9207bfe88c2a428b86a741e9afbfb3"
+      },
+      "name": "Animal Adventures: The Faraway Sea",
+      "blurb": "5e RPG campaign where mystical islands appear from a magical fog known as The Rift, inc. 10 new player species, 30+ minis, & more! 🏝",
+      "goal": 50000,
+      "pledged": 443891.55,
+      "state": "live",
+      "slug": "animal-adventures-the-faraway-sea",
+      "disable_communication": false,
+      "country": "GB",
+      "country_displayable_name": "the United Kingdom",
+      "currency": "GBP",
+      "currency_symbol": "£",
+      "currency_trailing_code": false,
+      "deadline": 1627664400,
+      "state_changed_at": 1626800414,
+      "created_at": 1620639323,
+      "launched_at": 1626800412,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 6000,
+      "static_usd_rate": 1.37563314,
+      "usd_pledged": "610631.926745967",
+      "converted_pledged_amount": 615888,
+      "fx_rate": 1.38747444,
+      "usd_exchange_rate": 1.38747444,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 574821137,
+          "name": "Russ Charles",
+          "slug": "russrmc",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/027/850/260/1b39b8ec627330d76c4a3ee638af4415_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1579873365&auto=format&frame=1&q=92&s=4318a20a45a16cb23ae1a1dc1c674b4b",
+              "small": "https://ksr-ugc.imgix.net/assets/027/850/260/1b39b8ec627330d76c4a3ee638af4415_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1579873365&auto=format&frame=1&q=92&s=99d3ce35f4db6c284e985f6f14bebce2",
+              "medium": "https://ksr-ugc.imgix.net/assets/027/850/260/1b39b8ec627330d76c4a3ee638af4415_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1579873365&auto=format&frame=1&q=92&s=9593fde1850f4ceb7e9abe01903d8008"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/russrmc"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/574821137?signature=1627582389.2f2639b03a5f5a2cd032224e1a19b1f4355865ab"
+              }
+          }
+      },
+      "location": {
+          "id": 41117,
+          "name": "Worcester",
+          "slug": "worcester-gb",
+          "short_name": "Worcester, UK",
+          "displayable_name": "Worcester, UK",
+          "localized_name": "Worcester",
+          "country": "GB",
+          "state": "England",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United Kingdom",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/worcester-gb",
+                  "location": "https://www.kickstarter.com/locations/worcester-gb"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627551275.232419912af838da778fd2091a7c9574af1f631d&woe_id=41117"
+              }
+          }
+      },
+      "category": {
+          "id": 34,
+          "name": "Tabletop Games",
+          "analytics_name": "Tabletop Games",
+          "slug": "games/tabletop games",
+          "position": 6,
+          "parent_id": 12,
+          "parent_name": "Games",
+          "color": 51627,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/games/tabletop%20games"
+              }
+          }
+      },
+      "profile": {
+          "id": 4214101,
+          "project_id": 4214101,
+          "state": "inactive",
+          "state_changed_at": 1620639323,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/343/698/0c31c3a9fb2ebfa3b4dc9e4e63348570_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1627478961&auto=format&frame=1&q=92&s=2d9207bfe88c2a428b86a741e9afbfb3",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/343/698/0c31c3a9fb2ebfa3b4dc9e4e63348570_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1627478961&auto=format&frame=1&q=92&s=94040556612a18503e5d604620731d6d"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/russrmc/animal-adventures-the-faraway-sea?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/russrmc/animal-adventures-the-faraway-sea/rewards"
+          }
+      }
+  },
+  {
+      "id": 552248269,
+      "photo": {
+          "key": "assets/034/136/078/7aa8e94089443b19b7732ff68f09b9f2_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/034/136/078/7aa8e94089443b19b7732ff68f09b9f2_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625683651&auto=format&frame=1&q=92&s=7017492a2fcc7a38e6c5d11865e8f06d",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/136/078/7aa8e94089443b19b7732ff68f09b9f2_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1625683651&auto=format&frame=1&q=92&s=3cf9301d25e3815eab71891514292008",
+          "med": "https://ksr-ugc.imgix.net/assets/034/136/078/7aa8e94089443b19b7732ff68f09b9f2_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1625683651&auto=format&frame=1&q=92&s=4ad852f427e1e218294c43bd66f4a68b",
+          "little": "https://ksr-ugc.imgix.net/assets/034/136/078/7aa8e94089443b19b7732ff68f09b9f2_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1625683651&auto=format&frame=1&q=92&s=7785595b90838c0013887b1733a628d7",
+          "small": "https://ksr-ugc.imgix.net/assets/034/136/078/7aa8e94089443b19b7732ff68f09b9f2_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1625683651&auto=format&frame=1&q=92&s=b411ebdf78a0cd9ea04be6c428b30c9f",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/136/078/7aa8e94089443b19b7732ff68f09b9f2_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1625683651&auto=format&frame=1&q=92&s=ce7bee04fa2667c7dd857996051d7010",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/136/078/7aa8e94089443b19b7732ff68f09b9f2_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1625683651&auto=format&frame=1&q=92&s=52bd2cbb937582359f91f32a0f0639ce",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/136/078/7aa8e94089443b19b7732ff68f09b9f2_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625683651&auto=format&frame=1&q=92&s=ad0e6182e6bbbf45b69728786b13a85c"
+      },
+      "name": "Rat Queens: To the Slaughter",
+      "blurb": "Sisters. Warriors. Queens. Friends to the very end. Save Palisade from destruction in this co-operative board game. To the Slaughter!",
+      "goal": 60000,
+      "pledged": 254178,
+      "state": "live",
+      "slug": "rat-queens-to-the-slaughter",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1628085601,
+      "state_changed_at": 1626184803,
+      "created_at": 1614972237,
+      "launched_at": 1626184801,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 2111,
+      "static_usd_rate": 1,
+      "usd_pledged": "254178.0",
+      "converted_pledged_amount": 254178,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 200215330,
+          "name": "Deep Water Games",
+          "slug": "deepwatergames",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/019/161/602/b49fbb5e5e190d27bd8ed148087ce300_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1515616469&auto=format&frame=1&q=92&s=aba33f64cb197a56862e4c10b8a73250",
+              "small": "https://ksr-ugc.imgix.net/assets/019/161/602/b49fbb5e5e190d27bd8ed148087ce300_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1515616469&auto=format&frame=1&q=92&s=08e5a26f5bece8ad4e41be991798ab6d",
+              "medium": "https://ksr-ugc.imgix.net/assets/019/161/602/b49fbb5e5e190d27bd8ed148087ce300_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1515616469&auto=format&frame=1&q=92&s=1280774c52b948f5d6fa58088993e7fe"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/deepwatergames"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/200215330?signature=1627582389.c9aee4e4bc50bc0b4991ed7bca0ca525951e4f09"
+              }
+          }
+      },
+      "location": {
+          "id": 2486545,
+          "name": "Saginaw",
+          "slug": "saginaw-mi",
+          "short_name": "Saginaw, MI",
+          "displayable_name": "Saginaw, MI",
+          "localized_name": "Saginaw",
+          "country": "US",
+          "state": "MI",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/saginaw-mi",
+                  "location": "https://www.kickstarter.com/locations/saginaw-mi"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627552438.2d7ca0417f8fad67d61592690f910f8fe9b58489&woe_id=2486545"
+              }
+          }
+      },
+      "category": {
+          "id": 34,
+          "name": "Tabletop Games",
+          "analytics_name": "Tabletop Games",
+          "slug": "games/tabletop games",
+          "position": 6,
+          "parent_id": 12,
+          "parent_name": "Games",
+          "color": 51627,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/games/tabletop%20games"
+              }
+          }
+      },
+      "profile": {
+          "id": 4176222,
+          "project_id": 4176222,
+          "state": "inactive",
+          "state_changed_at": 1614972237,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/136/078/7aa8e94089443b19b7732ff68f09b9f2_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625683651&auto=format&frame=1&q=92&s=ad0e6182e6bbbf45b69728786b13a85c",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/136/078/7aa8e94089443b19b7732ff68f09b9f2_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625683651&auto=format&frame=1&q=92&s=7017492a2fcc7a38e6c5d11865e8f06d"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/deepwatergames/rat-queens-to-the-slaughter?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/deepwatergames/rat-queens-to-the-slaughter/rewards"
+          }
+      }
+  },
+  {
+      "id": 549880686,
+      "photo": {
+          "key": "assets/034/267/112/89fd456455f99b1541c2ccbb17ae1fab_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/034/267/112/89fd456455f99b1541c2ccbb17ae1fab_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626799829&auto=format&frame=1&q=92&s=b0f704c6e673894b39a0d98554e26b54",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/267/112/89fd456455f99b1541c2ccbb17ae1fab_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1626799829&auto=format&frame=1&q=92&s=f94f58c75de3931539dbd9916ff1bbd8",
+          "med": "https://ksr-ugc.imgix.net/assets/034/267/112/89fd456455f99b1541c2ccbb17ae1fab_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1626799829&auto=format&frame=1&q=92&s=f9c7a5d95f331f64b23df01f38f104c3",
+          "little": "https://ksr-ugc.imgix.net/assets/034/267/112/89fd456455f99b1541c2ccbb17ae1fab_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1626799829&auto=format&frame=1&q=92&s=3f9ab2eac26d015f969e6ec4c3f78e12",
+          "small": "https://ksr-ugc.imgix.net/assets/034/267/112/89fd456455f99b1541c2ccbb17ae1fab_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1626799829&auto=format&frame=1&q=92&s=146eb9ab718e8a792dd60556e89fdafb",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/267/112/89fd456455f99b1541c2ccbb17ae1fab_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1626799829&auto=format&frame=1&q=92&s=ef89ead1d5798b2ee02405131d98cea4",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/267/112/89fd456455f99b1541c2ccbb17ae1fab_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1626799829&auto=format&frame=1&q=92&s=a84b3c7887380c775acd41ea86e9b6d7",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/267/112/89fd456455f99b1541c2ccbb17ae1fab_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626799829&auto=format&frame=1&q=92&s=8694bed74f64fe1dd3c09442102ea9e4"
+      },
+      "name": "Hero Realms Digital Deckbuilding Game",
+      "blurb": "Play this wildly popular deckbuilding game on iOS, Android, and Steam! Create your character, battle and level up!",
+      "goal": 10000,
+      "pledged": 225664,
+      "state": "live",
+      "slug": "hero-realms-digital-deckbuilding-game",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1627610400,
+      "state_changed_at": 1626789545,
+      "created_at": 1624037091,
+      "launched_at": 1626789543,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 3938,
+      "static_usd_rate": 1,
+      "usd_pledged": "225664.0",
+      "converted_pledged_amount": 225664,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1172937197,
+          "name": "Robert Dougherty",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/007/808/973/7ab1255d489548b6ee2db07c652deb4e_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1461480933&auto=format&frame=1&q=92&s=4367ebc2f4eb0f8e968cec0adf2f39a4",
+              "small": "https://ksr-ugc.imgix.net/assets/007/808/973/7ab1255d489548b6ee2db07c652deb4e_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1461480933&auto=format&frame=1&q=92&s=cf99332655bb048a914d3b51252a71d6",
+              "medium": "https://ksr-ugc.imgix.net/assets/007/808/973/7ab1255d489548b6ee2db07c652deb4e_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1461480933&auto=format&frame=1&q=92&s=266b8cb542e5f68e3bffec1740998468"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/1172937197"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1172937197?signature=1627582389.2b6a3675e5c9fb76c6fe54083e1b10f01343c693"
+              }
+          }
+      },
+      "location": {
+          "id": 2406819,
+          "name": "Framingham",
+          "slug": "framingham-ma",
+          "short_name": "Framingham, MA",
+          "displayable_name": "Framingham, MA",
+          "localized_name": "Framingham",
+          "country": "US",
+          "state": "MA",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/framingham-ma",
+                  "location": "https://www.kickstarter.com/locations/framingham-ma"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627550330.ed6a0bf7efdff1b11648f7863dae567dfd399191&woe_id=2406819"
+              }
+          }
+      },
+      "category": {
+          "id": 34,
+          "name": "Tabletop Games",
+          "analytics_name": "Tabletop Games",
+          "slug": "games/tabletop games",
+          "position": 6,
+          "parent_id": 12,
+          "parent_name": "Games",
+          "color": 51627,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/games/tabletop%20games"
+              }
+          }
+      },
+      "profile": {
+          "id": 4235736,
+          "project_id": 4235736,
+          "state": "inactive",
+          "state_changed_at": 1624037091,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/267/112/89fd456455f99b1541c2ccbb17ae1fab_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626799829&auto=format&frame=1&q=92&s=8694bed74f64fe1dd3c09442102ea9e4",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/267/112/89fd456455f99b1541c2ccbb17ae1fab_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626799829&auto=format&frame=1&q=92&s=b0f704c6e673894b39a0d98554e26b54"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/1172937197/hero-realms-digital-deckbuilding-game?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/1172937197/hero-realms-digital-deckbuilding-game/rewards"
+          }
+      }
+  },
+  {
+      "id": 1614398505,
+      "photo": {
+          "key": "assets/034/228/571/79a5f70bf7a56f99bf39283ec96450b1_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/228/571/79a5f70bf7a56f99bf39283ec96450b1_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626438739&auto=format&frame=1&q=92&s=51c5dda03549ced89c4f124aeb373a5e",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/228/571/79a5f70bf7a56f99bf39283ec96450b1_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1626438739&auto=format&frame=1&q=92&s=63d65bf4a754a8176b4c4620d035928f",
+          "med": "https://ksr-ugc.imgix.net/assets/034/228/571/79a5f70bf7a56f99bf39283ec96450b1_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1626438739&auto=format&frame=1&q=92&s=2aaa0b35c3c816f84644f40be6729b91",
+          "little": "https://ksr-ugc.imgix.net/assets/034/228/571/79a5f70bf7a56f99bf39283ec96450b1_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1626438739&auto=format&frame=1&q=92&s=76a89cd50c466e69dc485db0c86c2a6e",
+          "small": "https://ksr-ugc.imgix.net/assets/034/228/571/79a5f70bf7a56f99bf39283ec96450b1_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1626438739&auto=format&frame=1&q=92&s=7bab19c153c6cb9d8ebfe3a3d189ee94",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/228/571/79a5f70bf7a56f99bf39283ec96450b1_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1626438739&auto=format&frame=1&q=92&s=fd7e1fc1866e44c693a523f296dfc9bd",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/228/571/79a5f70bf7a56f99bf39283ec96450b1_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1626438739&auto=format&frame=1&q=92&s=79f62ebd3643dae3ec998b8eb234bd48",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/228/571/79a5f70bf7a56f99bf39283ec96450b1_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626438739&auto=format&frame=1&q=92&s=a4cb9c4de0869b33bcafb9ca3f7d6d2a"
+      },
+      "name": "Soul Raiders ⚔️",
+      "blurb": "A new take on the exploration, adventuring and cooperative genre, for 1 to 4 players",
+      "goal": 50000,
+      "pledged": 236775.11,
+      "state": "live",
+      "slug": "soul-raiders",
+      "disable_communication": false,
+      "country": "FR",
+      "country_displayable_name": "France",
+      "currency": "EUR",
+      "currency_symbol": "€",
+      "currency_trailing_code": false,
+      "deadline": 1628280000,
+      "state_changed_at": 1625663244,
+      "created_at": 1606907537,
+      "launched_at": 1625663241,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 2569,
+      "static_usd_rate": 1.18735937,
+      "usd_pledged": "281137.1454412807",
+      "converted_pledged_amount": 279898,
+      "fx_rate": 1.18212951,
+      "usd_exchange_rate": 1.18212951,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 2100820632,
+          "name": "One for All",
+          "slug": "one4all",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/031/618/866/564c636a9bba3b57fa0853682c941e52_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1606907351&auto=format&frame=1&q=92&s=41cfda47cdfd264a3b1607330be3f73f",
+              "small": "https://ksr-ugc.imgix.net/assets/031/618/866/564c636a9bba3b57fa0853682c941e52_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1606907351&auto=format&frame=1&q=92&s=e6b95805ca7205ca3f8f87f40b9fc3a2",
+              "medium": "https://ksr-ugc.imgix.net/assets/031/618/866/564c636a9bba3b57fa0853682c941e52_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1606907351&auto=format&frame=1&q=92&s=fc95b894deedd52d3b8853032236dd02"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/one4all"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/2100820632?signature=1627582389.1a0660d8ae1482b9117888c90647d3d2e87d1556"
+              }
+          }
+      },
+      "location": {
+          "id": 615702,
+          "name": "Paris",
+          "slug": "paris-fr",
+          "short_name": "Paris, France",
+          "displayable_name": "Paris, France",
+          "localized_name": "Paris",
+          "country": "FR",
+          "state": "Ile-de-France",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "France",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/paris-fr",
+                  "location": "https://www.kickstarter.com/locations/paris-fr"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627548983.ce95579a5b1300cec730e0554f834214095f7994&woe_id=615702"
+              }
+          }
+      },
+      "category": {
+          "id": 34,
+          "name": "Tabletop Games",
+          "analytics_name": "Tabletop Games",
+          "slug": "games/tabletop games",
+          "position": 6,
+          "parent_id": 12,
+          "parent_name": "Games",
+          "color": 51627,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/games/tabletop%20games"
+              }
+          }
+      },
+      "profile": {
+          "id": 4118826,
+          "project_id": 4118826,
+          "state": "inactive",
+          "state_changed_at": 1606907537,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/228/571/79a5f70bf7a56f99bf39283ec96450b1_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626438739&auto=format&frame=1&q=92&s=a4cb9c4de0869b33bcafb9ca3f7d6d2a",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/228/571/79a5f70bf7a56f99bf39283ec96450b1_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626438739&auto=format&frame=1&q=92&s=51c5dda03549ced89c4f124aeb373a5e"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/one4all/soul-raiders?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/one4all/soul-raiders/rewards"
+          }
+      }
+  },
+  {
+      "id": 385749753,
+      "photo": {
+          "key": "assets/034/033/946/3c4a8efa74fa66b13a6a88c670d8309e_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/033/946/3c4a8efa74fa66b13a6a88c670d8309e_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624889552&auto=format&frame=1&q=92&s=02a50f9fc29872c15814c4e4e31ac238",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/033/946/3c4a8efa74fa66b13a6a88c670d8309e_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1624889552&auto=format&frame=1&q=92&s=0a5df4424bd7d07049b37162c984c9cd",
+          "med": "https://ksr-ugc.imgix.net/assets/034/033/946/3c4a8efa74fa66b13a6a88c670d8309e_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1624889552&auto=format&frame=1&q=92&s=6af39e07fab6eb7f37c9c9016dbc2f71",
+          "little": "https://ksr-ugc.imgix.net/assets/034/033/946/3c4a8efa74fa66b13a6a88c670d8309e_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1624889552&auto=format&frame=1&q=92&s=814f545ac39e7d85462b29265cb9869d",
+          "small": "https://ksr-ugc.imgix.net/assets/034/033/946/3c4a8efa74fa66b13a6a88c670d8309e_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1624889552&auto=format&frame=1&q=92&s=32826bc6dd69606a731d042aef48ad17",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/033/946/3c4a8efa74fa66b13a6a88c670d8309e_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1624889552&auto=format&frame=1&q=92&s=b7cd1fcdd598e0f3e669e189e6910181",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/033/946/3c4a8efa74fa66b13a6a88c670d8309e_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1624889552&auto=format&frame=1&q=92&s=029d83b4309d704000bae0d1ec487895",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/033/946/3c4a8efa74fa66b13a6a88c670d8309e_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624889552&auto=format&frame=1&q=92&s=dffad75f7acafd6d150ecf523f547fb3"
+      },
+      "name": "Dungeons of Drakkenheim",
+      "blurb": "A 5e adventure where malevolent monsters and rival factions clash in a dark city devastated by a mysterious meteor shower!",
+      "goal": 20000,
+      "pledged": 1007379,
+      "state": "live",
+      "slug": "dungeons-of-drakkenheim",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1627704000,
+      "state_changed_at": 1624888805,
+      "created_at": 1619744379,
+      "launched_at": 1624888802,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 10047,
+      "static_usd_rate": 1,
+      "usd_pledged": "1007379.0",
+      "converted_pledged_amount": 1007379,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 2144996758,
+          "name": "Dungeon Dudes",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/033/335/708/085607f538ef4f54b983f3548d3dcefd_original.png?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1619745293&auto=format&frame=1&q=92&s=19f356ee0ee13b7d60d1f45daf54c16f",
+              "small": "https://ksr-ugc.imgix.net/assets/033/335/708/085607f538ef4f54b983f3548d3dcefd_original.png?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1619745293&auto=format&frame=1&q=92&s=ab3391c5f8f13bbec640ddba77010c17",
+              "medium": "https://ksr-ugc.imgix.net/assets/033/335/708/085607f538ef4f54b983f3548d3dcefd_original.png?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1619745293&auto=format&frame=1&q=92&s=be0c97722e0ff30643779279b06dd691"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/2144996758"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/2144996758?signature=1627582389.e6ad6416aa2db70c45be30bbb2849df5ef162f44"
+              }
+          }
+      },
+      "location": {
+          "id": 4118,
+          "name": "Toronto",
+          "slug": "toronto-on-ca",
+          "short_name": "Toronto, Canada",
+          "displayable_name": "Toronto, Canada",
+          "localized_name": "Toronto",
+          "country": "CA",
+          "state": "ON",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "Canada",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/toronto-on-ca",
+                  "location": "https://www.kickstarter.com/locations/toronto-on-ca"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627548951.320d2eab03291c0c8792e815df1d8bba9d896858&woe_id=4118"
+              }
+          }
+      },
+      "category": {
+          "id": 34,
+          "name": "Tabletop Games",
+          "analytics_name": "Tabletop Games",
+          "slug": "games/tabletop games",
+          "position": 6,
+          "parent_id": 12,
+          "parent_name": "Games",
+          "color": 51627,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/games/tabletop%20games"
+              }
+          }
+      },
+      "profile": {
+          "id": 4208478,
+          "project_id": 4208478,
+          "state": "inactive",
+          "state_changed_at": 1619744379,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/033/946/3c4a8efa74fa66b13a6a88c670d8309e_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624889552&auto=format&frame=1&q=92&s=dffad75f7acafd6d150ecf523f547fb3",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/033/946/3c4a8efa74fa66b13a6a88c670d8309e_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624889552&auto=format&frame=1&q=92&s=02a50f9fc29872c15814c4e4e31ac238"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/2144996758/dungeons-of-drakkenheim?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/2144996758/dungeons-of-drakkenheim/rewards"
+          }
+      }
+  },
+  {
+      "id": 1487504160,
+      "photo": {
+          "key": "assets/032/925/750/67b8a97da70bf8f7bf1f852ec4a20b01_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/032/925/750/67b8a97da70bf8f7bf1f852ec4a20b01_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1617071490&auto=format&frame=1&q=92&s=ec7d05b2c8eddc8d86bce1c4f56e6748",
+          "ed": "https://ksr-ugc.imgix.net/assets/032/925/750/67b8a97da70bf8f7bf1f852ec4a20b01_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1617071490&auto=format&frame=1&q=92&s=0985c6639e090271f44cbdba1131a2da",
+          "med": "https://ksr-ugc.imgix.net/assets/032/925/750/67b8a97da70bf8f7bf1f852ec4a20b01_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1617071490&auto=format&frame=1&q=92&s=ed90c0141bd6cff0ef1365c2d12863f2",
+          "little": "https://ksr-ugc.imgix.net/assets/032/925/750/67b8a97da70bf8f7bf1f852ec4a20b01_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1617071490&auto=format&frame=1&q=92&s=fcdb9e1b902217f474a9baa137011def",
+          "small": "https://ksr-ugc.imgix.net/assets/032/925/750/67b8a97da70bf8f7bf1f852ec4a20b01_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1617071490&auto=format&frame=1&q=92&s=4966fcf4648f4924b283fee7d994ce24",
+          "thumb": "https://ksr-ugc.imgix.net/assets/032/925/750/67b8a97da70bf8f7bf1f852ec4a20b01_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1617071490&auto=format&frame=1&q=92&s=748b5d1932e1c74abb52bf0d4d1ced7a",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/032/925/750/67b8a97da70bf8f7bf1f852ec4a20b01_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1617071490&auto=format&frame=1&q=92&s=bbe75f709507a009adb2efcba382cc57",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/032/925/750/67b8a97da70bf8f7bf1f852ec4a20b01_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1617071490&auto=format&frame=1&q=92&s=7daf96d1004337699a5ed33825de7520"
+      },
+      "name": "Spire's End: Hildegard",
+      "blurb": "Solo & Cooperative Card Game Adventure",
+      "goal": 15000,
+      "pledged": 188366,
+      "state": "live",
+      "slug": "spires-end-hildegard",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1628783898,
+      "state_changed_at": 1626191900,
+      "created_at": 1594932137,
+      "launched_at": 1626191898,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 4328,
+      "static_usd_rate": 1,
+      "usd_pledged": "188366.0",
+      "converted_pledged_amount": 188366,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1247450154,
+          "name": "Greg Favro",
+          "slug": "favro",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/005/999/068/4c1f1f1475d6005f784338aff1441664_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1551208844&auto=format&frame=1&q=92&s=08ea9650af240c703a00f58bcd4340e5",
+              "small": "https://ksr-ugc.imgix.net/assets/005/999/068/4c1f1f1475d6005f784338aff1441664_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1551208844&auto=format&frame=1&q=92&s=3efe6131795704a19ab9fe8de7f419b6",
+              "medium": "https://ksr-ugc.imgix.net/assets/005/999/068/4c1f1f1475d6005f784338aff1441664_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1551208844&auto=format&frame=1&q=92&s=cd98e9b2fb14987c5ce6218e49897cd9"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/favro"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1247450154?signature=1627582389.e4b1c31476572d3c41692e1471ab19118e338b8c"
+              }
+          }
+      },
+      "location": {
+          "id": 2420380,
+          "name": "Hermosa Beach",
+          "slug": "hermosa-beach-ca",
+          "short_name": "Hermosa Beach, CA",
+          "displayable_name": "Hermosa Beach, CA",
+          "localized_name": "Hermosa Beach",
+          "country": "US",
+          "state": "CA",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/hermosa-beach-ca",
+                  "location": "https://www.kickstarter.com/locations/hermosa-beach-ca"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627565297.321b10ca0d6bcc323cfba2f691b4135c15414df8&woe_id=2420380"
+              }
+          }
+      },
+      "category": {
+          "id": 34,
+          "name": "Tabletop Games",
+          "analytics_name": "Tabletop Games",
+          "slug": "games/tabletop games",
+          "position": 6,
+          "parent_id": 12,
+          "parent_name": "Games",
+          "color": 51627,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/games/tabletop%20games"
+              }
+          }
+      },
+      "profile": {
+          "id": 4034713,
+          "project_id": 4034713,
+          "state": "inactive",
+          "state_changed_at": 1594932137,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/032/925/750/67b8a97da70bf8f7bf1f852ec4a20b01_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1617071490&auto=format&frame=1&q=92&s=7daf96d1004337699a5ed33825de7520",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/032/925/750/67b8a97da70bf8f7bf1f852ec4a20b01_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1617071490&auto=format&frame=1&q=92&s=ec7d05b2c8eddc8d86bce1c4f56e6748"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/favro/spires-end-hildegard?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/favro/spires-end-hildegard/rewards"
+          }
+      }
+  },
+  {
+      "id": 878546777,
+      "photo": {
+          "key": "assets/034/167/688/d75ff2ebaad29216bb361aac75f6d3d1_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/034/167/688/d75ff2ebaad29216bb361aac75f6d3d1_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625954607&auto=format&frame=1&q=92&s=4efb419c13495f8658f2528841578db3",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/167/688/d75ff2ebaad29216bb361aac75f6d3d1_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1625954607&auto=format&frame=1&q=92&s=ec4af1889dab4f48dcbb3cda2be109d1",
+          "med": "https://ksr-ugc.imgix.net/assets/034/167/688/d75ff2ebaad29216bb361aac75f6d3d1_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1625954607&auto=format&frame=1&q=92&s=46d12190ea107fdfe62e933d5c05ce6a",
+          "little": "https://ksr-ugc.imgix.net/assets/034/167/688/d75ff2ebaad29216bb361aac75f6d3d1_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1625954607&auto=format&frame=1&q=92&s=9e1183784548af453512f789b63e9b91",
+          "small": "https://ksr-ugc.imgix.net/assets/034/167/688/d75ff2ebaad29216bb361aac75f6d3d1_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1625954607&auto=format&frame=1&q=92&s=3ba297dcd6e1d0a29f8001c25df17b8f",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/167/688/d75ff2ebaad29216bb361aac75f6d3d1_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1625954607&auto=format&frame=1&q=92&s=be62b8894eba49dbbe377efeb4e500cb",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/167/688/d75ff2ebaad29216bb361aac75f6d3d1_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1625954607&auto=format&frame=1&q=92&s=99278461d0ec0a5b223c30c77e95238e",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/167/688/d75ff2ebaad29216bb361aac75f6d3d1_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625954607&auto=format&frame=1&q=92&s=c48be6735dc885b1c9867da1c0cb1aa8"
+      },
+      "name": "Crowsworn - A Dark and Mysterious Action Packed Metroidvania",
+      "blurb": "Explore a grim fantasy world inhabited by men and monsters alike.",
+      "goal": 125000,
+      "pledged": 680372.98,
+      "state": "live",
+      "slug": "crowsworn-a-dark-and-mysterious-action-packed-metroidvania",
+      "disable_communication": false,
+      "country": "CA",
+      "country_displayable_name": "Canada",
+      "currency": "CAD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1628536032,
+      "state_changed_at": 1625944037,
+      "created_at": 1607612942,
+      "launched_at": 1625944032,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 11265,
+      "static_usd_rate": 0.79724981,
+      "usd_pledged": "542427.2290341338",
+      "converted_pledged_amount": 540505,
+      "fx_rate": 0.79442567,
+      "usd_exchange_rate": 0.79442567,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 249316591,
+          "name": "Mongoose Rodeo",
+          "slug": "mongooserodeo",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/026/579/766/b3a90ea484b7e9ed1426002d0cd09706_original.png?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1607542914&auto=format&frame=1&q=92&s=c46f376c37d1fe688db33b3d4a01ff85",
+              "small": "https://ksr-ugc.imgix.net/assets/026/579/766/b3a90ea484b7e9ed1426002d0cd09706_original.png?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1607542914&auto=format&frame=1&q=92&s=f3e36b97dd75634ea09e6dc45057cb94",
+              "medium": "https://ksr-ugc.imgix.net/assets/026/579/766/b3a90ea484b7e9ed1426002d0cd09706_original.png?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1607542914&auto=format&frame=1&q=92&s=4aea5a7041cc157d32b94129c9128b51"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/mongooserodeo"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/249316591?signature=1627582389.3cffc1ca08fcc51a310189e5779e79fd99de3124"
+              }
+          }
+      },
+      "location": {
+          "id": 4063,
+          "name": "London",
+          "slug": "london-ca",
+          "short_name": "London, Canada",
+          "displayable_name": "London, Canada",
+          "localized_name": "London",
+          "country": "CA",
+          "state": "ON",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "Canada",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/london-ca",
+                  "location": "https://www.kickstarter.com/locations/london-ca"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549561.d8060fde9a194a9dbc9ea6eb3124a86bcf7f4df1&woe_id=4063"
+              }
+          }
+      },
+      "category": {
+          "id": 35,
+          "name": "Video Games",
+          "analytics_name": "Video Games",
+          "slug": "games/video games",
+          "position": 7,
+          "parent_id": 12,
+          "parent_name": "Games",
+          "color": 51627,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/games/video%20games"
+              }
+          }
+      },
+      "profile": {
+          "id": 4123673,
+          "project_id": 4123673,
+          "state": "inactive",
+          "state_changed_at": 1607612942,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/167/688/d75ff2ebaad29216bb361aac75f6d3d1_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625954607&auto=format&frame=1&q=92&s=c48be6735dc885b1c9867da1c0cb1aa8",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/167/688/d75ff2ebaad29216bb361aac75f6d3d1_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625954607&auto=format&frame=1&q=92&s=4efb419c13495f8658f2528841578db3"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/mongooserodeo/crowsworn-a-dark-and-mysterious-action-packed-metroidvania?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/mongooserodeo/crowsworn-a-dark-and-mysterious-action-packed-metroidvania/rewards"
+          }
+      }
+  },
+  {
+      "id": 1600543323,
+      "photo": {
+          "key": "assets/034/187/473/d37f1d4301dae4fa6fff97381c5915b9_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/187/473/d37f1d4301dae4fa6fff97381c5915b9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626141618&auto=format&frame=1&q=92&s=0fb6839c147560641bb85004e99c4976",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/187/473/d37f1d4301dae4fa6fff97381c5915b9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1626141618&auto=format&frame=1&q=92&s=1387e3c7238bad1f22dbfcb7bc728f24",
+          "med": "https://ksr-ugc.imgix.net/assets/034/187/473/d37f1d4301dae4fa6fff97381c5915b9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1626141618&auto=format&frame=1&q=92&s=9b411b9b816753387f9bcfd10b8a60af",
+          "little": "https://ksr-ugc.imgix.net/assets/034/187/473/d37f1d4301dae4fa6fff97381c5915b9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1626141618&auto=format&frame=1&q=92&s=014ee8251ba114359a27c1b397910374",
+          "small": "https://ksr-ugc.imgix.net/assets/034/187/473/d37f1d4301dae4fa6fff97381c5915b9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1626141618&auto=format&frame=1&q=92&s=57d5233f8122e6abae685c931e1ff075",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/187/473/d37f1d4301dae4fa6fff97381c5915b9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1626141618&auto=format&frame=1&q=92&s=645f45b01bdacbe3fdd511897d05614e",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/187/473/d37f1d4301dae4fa6fff97381c5915b9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1626141618&auto=format&frame=1&q=92&s=f1f48b82ddf94302890dd6e24766d5b1",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/187/473/d37f1d4301dae4fa6fff97381c5915b9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626141618&auto=format&frame=1&q=92&s=a941c0270dbddefd0a704ef293eeb710"
+      },
+      "name": "Solutions: The Game",
+      "blurb": "A collaborative game of hope & action for the climate.",
+      "goal": 11500,
+      "pledged": 26600.29,
+      "state": "live",
+      "slug": "solutions",
+      "disable_communication": false,
+      "country": "CA",
+      "country_displayable_name": "Canada",
+      "currency": "CAD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1629219672,
+      "state_changed_at": 1626195674,
+      "created_at": 1605900446,
+      "launched_at": 1626195672,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 313,
+      "static_usd_rate": 0.8024201,
+      "usd_pledged": "21344.607361829",
+      "converted_pledged_amount": 21131,
+      "fx_rate": 0.79442567,
+      "usd_exchange_rate": 0.79442567,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1389021610,
+          "name": "Sam Levac-Levey",
+          "slug": "solutionsthegame",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/031/793/140/11992f941bc87f1189f4994136bc2a13_original.jpeg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1608446656&auto=format&frame=1&q=92&s=32a2d74187517c1f072b32717cfc265b",
+              "small": "https://ksr-ugc.imgix.net/assets/031/793/140/11992f941bc87f1189f4994136bc2a13_original.jpeg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1608446656&auto=format&frame=1&q=92&s=5fa6a375ecdbe2453a96a1ccbb07f3ad",
+              "medium": "https://ksr-ugc.imgix.net/assets/031/793/140/11992f941bc87f1189f4994136bc2a13_original.jpeg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1608446656&auto=format&frame=1&q=92&s=b3c95d4286b8719a039722d2ebcd63e1"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/solutionsthegame"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1389021610?signature=1627582389.32b99e7352f592ce9a69b6ed3b502442fadc1768"
+              }
+          }
+      },
+      "location": {
+          "id": 4177,
+          "name": "Halifax",
+          "slug": "halifax-ca",
+          "short_name": "Halifax, Canada",
+          "displayable_name": "Halifax, Canada",
+          "localized_name": "Halifax",
+          "country": "CA",
+          "state": "NS",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "Canada",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/halifax-ca",
+                  "location": "https://www.kickstarter.com/locations/halifax-ca"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627550303.f01d279e872ef175a6181e9bbdfc46bde1f4ba4e&woe_id=4177"
+              }
+          }
+      },
+      "category": {
+          "id": 34,
+          "name": "Tabletop Games",
+          "analytics_name": "Tabletop Games",
+          "slug": "games/tabletop games",
+          "position": 6,
+          "parent_id": 12,
+          "parent_name": "Games",
+          "color": 51627,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/games/tabletop%20games"
+              }
+          }
+      },
+      "profile": {
+          "id": 4112234,
+          "project_id": 4112234,
+          "state": "inactive",
+          "state_changed_at": 1605900446,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/187/473/d37f1d4301dae4fa6fff97381c5915b9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626141618&auto=format&frame=1&q=92&s=a941c0270dbddefd0a704ef293eeb710",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/187/473/d37f1d4301dae4fa6fff97381c5915b9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626141618&auto=format&frame=1&q=92&s=0fb6839c147560641bb85004e99c4976"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/solutionsthegame/solutions?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/solutionsthegame/solutions/rewards"
+          }
+      }
+  },
+  {
+      "id": 1240668339,
+      "photo": {
+          "key": "assets/034/192/501/ff4cf39a883fbf22a4776dc111ce715c_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/034/192/501/ff4cf39a883fbf22a4776dc111ce715c_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626183309&auto=format&frame=1&q=92&s=6db0f7b5bba37513e2caf313bd8ba387",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/192/501/ff4cf39a883fbf22a4776dc111ce715c_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1626183309&auto=format&frame=1&q=92&s=2de05e357a9abd04d9b39c480f504e2e",
+          "med": "https://ksr-ugc.imgix.net/assets/034/192/501/ff4cf39a883fbf22a4776dc111ce715c_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1626183309&auto=format&frame=1&q=92&s=c153d5c252cfc5de7c82cb0621a2974e",
+          "little": "https://ksr-ugc.imgix.net/assets/034/192/501/ff4cf39a883fbf22a4776dc111ce715c_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1626183309&auto=format&frame=1&q=92&s=e21d327bde15f2f2452c914e741d506e",
+          "small": "https://ksr-ugc.imgix.net/assets/034/192/501/ff4cf39a883fbf22a4776dc111ce715c_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1626183309&auto=format&frame=1&q=92&s=552a337818e079ea436dec435b00bc7c",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/192/501/ff4cf39a883fbf22a4776dc111ce715c_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1626183309&auto=format&frame=1&q=92&s=a43485291a2f85ec4e37b5453d115799",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/192/501/ff4cf39a883fbf22a4776dc111ce715c_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1626183309&auto=format&frame=1&q=92&s=1d4bd1c53df0a6522b0118a5073dd7ef",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/192/501/ff4cf39a883fbf22a4776dc111ce715c_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626183309&auto=format&frame=1&q=92&s=5bb7b6ff4cc95864c6c63314cc0bbc51"
+      },
+      "name": "Cubeamajigs Series 2",
+      "blurb": "Reusable Gaming packs and storage solutions for Magic the Gathering (MtG), Cube, and TCGs.",
+      "goal": 10000,
+      "pledged": 210091,
+      "state": "live",
+      "slug": "cubeamajigs-series-2",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1628794860,
+      "state_changed_at": 1626184750,
+      "created_at": 1620759013,
+      "launched_at": 1626184747,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 2157,
+      "static_usd_rate": 1,
+      "usd_pledged": "210091.0",
+      "converted_pledged_amount": 210091,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1792000526,
+          "name": "Hit Point Press",
+          "slug": "hitpointpress",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/011/001/335/2ecad1d58c087581b3fa571c00629f0e_original.png?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1612815712&auto=format&frame=1&q=92&s=231550a13a2259da8a5e5fff29e44943",
+              "small": "https://ksr-ugc.imgix.net/assets/011/001/335/2ecad1d58c087581b3fa571c00629f0e_original.png?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1612815712&auto=format&frame=1&q=92&s=698b6fd07a0c2e03259fece7761bc063",
+              "medium": "https://ksr-ugc.imgix.net/assets/011/001/335/2ecad1d58c087581b3fa571c00629f0e_original.png?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1612815712&auto=format&frame=1&q=92&s=51ba01093e3bfe561b0fbaad46f36ac2"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/hitpointpress"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1792000526?signature=1627582389.9a7c28b936686082176c7eef2d8621e9a826018a"
+              }
+          }
+      },
+      "location": {
+          "id": 2521358,
+          "name": "Wilmington",
+          "slug": "wilmington-de",
+          "short_name": "Wilmington, DE",
+          "displayable_name": "Wilmington, DE",
+          "localized_name": "Wilmington",
+          "country": "US",
+          "state": "DE",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/wilmington-de",
+                  "location": "https://www.kickstarter.com/locations/wilmington-de"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549240.fb750821e0e4938bedbe74566f9afd02a8e68726&woe_id=2521358"
+              }
+          }
+      },
+      "category": {
+          "id": 34,
+          "name": "Tabletop Games",
+          "analytics_name": "Tabletop Games",
+          "slug": "games/tabletop games",
+          "position": 6,
+          "parent_id": 12,
+          "parent_name": "Games",
+          "color": 51627,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/games/tabletop%20games"
+              }
+          }
+      },
+      "profile": {
+          "id": 4215028,
+          "project_id": 4215028,
+          "state": "inactive",
+          "state_changed_at": 1620759013,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/192/501/ff4cf39a883fbf22a4776dc111ce715c_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626183309&auto=format&frame=1&q=92&s=5bb7b6ff4cc95864c6c63314cc0bbc51",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/192/501/ff4cf39a883fbf22a4776dc111ce715c_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626183309&auto=format&frame=1&q=92&s=6db0f7b5bba37513e2caf313bd8ba387"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/hitpointpress/cubeamajigs-series-2?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/hitpointpress/cubeamajigs-series-2/rewards"
+          }
+      }
+  },
+  {
+      "id": 723673632,
+      "photo": {
+          "key": "assets/034/060/617/efb2f09bc74b7657185255aa88d51bf1_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/034/060/617/efb2f09bc74b7657185255aa88d51bf1_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625067765&auto=format&frame=1&q=92&s=22b8a6a7f84045cd066252e76a83af09",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/060/617/efb2f09bc74b7657185255aa88d51bf1_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1625067765&auto=format&frame=1&q=92&s=730bac105be207833cf408f742d2868d",
+          "med": "https://ksr-ugc.imgix.net/assets/034/060/617/efb2f09bc74b7657185255aa88d51bf1_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1625067765&auto=format&frame=1&q=92&s=db080e2349aef7c88fc60cc175db0d83",
+          "little": "https://ksr-ugc.imgix.net/assets/034/060/617/efb2f09bc74b7657185255aa88d51bf1_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1625067765&auto=format&frame=1&q=92&s=735dbad8040aa770ddcd2a25e30ed4a6",
+          "small": "https://ksr-ugc.imgix.net/assets/034/060/617/efb2f09bc74b7657185255aa88d51bf1_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1625067765&auto=format&frame=1&q=92&s=51c13586762463f17d67b35137073254",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/060/617/efb2f09bc74b7657185255aa88d51bf1_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1625067765&auto=format&frame=1&q=92&s=75f0272adb7815716d0f8c4380ef9eb6",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/060/617/efb2f09bc74b7657185255aa88d51bf1_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1625067765&auto=format&frame=1&q=92&s=4245b6f9af2535e07f1060cccdc776f9",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/060/617/efb2f09bc74b7657185255aa88d51bf1_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625067765&auto=format&frame=1&q=92&s=108f10cd7290e0da5f3c648e5da685cb"
+      },
+      "name": "\" ULTIA \" Trick-taking game for 3 people | ウルティア",
+      "blurb": "A unique 3 player trick taking game to save the planet ULTIA from extinction!",
+      "goal": 250000,
+      "pledged": 1206769,
+      "state": "live",
+      "slug": "ultia",
+      "disable_communication": false,
+      "country": "JP",
+      "country_displayable_name": "Japan",
+      "currency": "JPY",
+      "currency_symbol": "¥",
+      "currency_trailing_code": false,
+      "deadline": 1627711998,
+      "state_changed_at": 1625119999,
+      "created_at": 1620014865,
+      "launched_at": 1625119998,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 355,
+      "static_usd_rate": 0.00905108,
+      "usd_pledged": "10922.56276052",
+      "converted_pledged_amount": 10990,
+      "fx_rate": 0.00910758,
+      "usd_exchange_rate": 0.00910758,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1690007973,
+          "name": "Xuhs scobog",
+          "slug": "xuhsscobog",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/033/366/865/29a42a8de26f696d306024b336533cb1_original.png?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1620014670&auto=format&frame=1&q=92&s=a4a1d8694febd589084b1df7cb0ebb57",
+              "small": "https://ksr-ugc.imgix.net/assets/033/366/865/29a42a8de26f696d306024b336533cb1_original.png?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1620014670&auto=format&frame=1&q=92&s=f481800e2860d1218bf879494d792495",
+              "medium": "https://ksr-ugc.imgix.net/assets/033/366/865/29a42a8de26f696d306024b336533cb1_original.png?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1620014670&auto=format&frame=1&q=92&s=5bc55167d2d229304c6d00741b4a76bf"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/xuhsscobog"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1690007973?signature=1627582389.28af15b2e69863777a586230d3b668e505110073"
+              }
+          }
+      },
+      "location": {
+          "id": 1118370,
+          "name": "Tokyo",
+          "slug": "tokyo-jp",
+          "short_name": "Tokyo, Japan",
+          "displayable_name": "Tokyo, Japan",
+          "localized_name": "Tokyo",
+          "country": "JP",
+          "state": "Tokyo Prefecture",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "Japan",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/tokyo-jp",
+                  "location": "https://www.kickstarter.com/locations/tokyo-jp"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549042.c22fc4f1acdc61f1a1da6f8bcbba082d92738eb6&woe_id=1118370"
+              }
+          }
+      },
+      "category": {
+          "id": 34,
+          "name": "Tabletop Games",
+          "analytics_name": "Tabletop Games",
+          "slug": "games/tabletop games",
+          "position": 6,
+          "parent_id": 12,
+          "parent_name": "Games",
+          "color": 51627,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/games/tabletop%20games"
+              }
+          }
+      },
+      "profile": {
+          "id": 4210025,
+          "project_id": 4210025,
+          "state": "inactive",
+          "state_changed_at": 1620014865,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/060/617/efb2f09bc74b7657185255aa88d51bf1_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625067765&auto=format&frame=1&q=92&s=108f10cd7290e0da5f3c648e5da685cb",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/060/617/efb2f09bc74b7657185255aa88d51bf1_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625067765&auto=format&frame=1&q=92&s=22b8a6a7f84045cd066252e76a83af09"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/xuhsscobog/ultia?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/xuhsscobog/ultia/rewards"
+          }
+      }
+  },
+  {
+      "id": 1069471020,
+      "photo": {
+          "key": "assets/034/201/239/b83a0ee12c607c4a36bad057212a9d20_original.jpeg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/201/239/b83a0ee12c607c4a36bad057212a9d20_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626234880&auto=format&frame=1&q=92&s=6e6904d19c07b868d3a86c87c28ee63c",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/201/239/b83a0ee12c607c4a36bad057212a9d20_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1626234880&auto=format&frame=1&q=92&s=6d97a97979d75718cf985c8418d8bc19",
+          "med": "https://ksr-ugc.imgix.net/assets/034/201/239/b83a0ee12c607c4a36bad057212a9d20_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1626234880&auto=format&frame=1&q=92&s=f700745de858ddc8658ea98b72ba43de",
+          "little": "https://ksr-ugc.imgix.net/assets/034/201/239/b83a0ee12c607c4a36bad057212a9d20_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1626234880&auto=format&frame=1&q=92&s=444cb93530bef8ea07b364fb4e10d0b9",
+          "small": "https://ksr-ugc.imgix.net/assets/034/201/239/b83a0ee12c607c4a36bad057212a9d20_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1626234880&auto=format&frame=1&q=92&s=3626c834cc0991290cd76d1c7f7ade03",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/201/239/b83a0ee12c607c4a36bad057212a9d20_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1626234880&auto=format&frame=1&q=92&s=22119e0f8389e8661cddfcd2916d2222",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/201/239/b83a0ee12c607c4a36bad057212a9d20_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1626234880&auto=format&frame=1&q=92&s=1c989029bb860ab05cc6a11cd02bc200",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/201/239/b83a0ee12c607c4a36bad057212a9d20_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626234880&auto=format&frame=1&q=92&s=353f52bfd4364b13eb70282e7cb00f52"
+      },
+      "name": "Drow City of Llurth Dreir.",
+      "blurb": "Dark Elf City with Over 250+ STL files!  Consisting of 15 Buildings, City Walls, Roads and more.  \nSTL Magnetic Interlocking  System",
+      "goal": 1000,
+      "pledged": 7600,
+      "state": "live",
+      "slug": "drow-city-of-llurth-dreir",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1629990766,
+      "state_changed_at": 1627398768,
+      "created_at": 1623891627,
+      "launched_at": 1627398766,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 170,
+      "static_usd_rate": 1,
+      "usd_pledged": "7600.0",
+      "converted_pledged_amount": 7600,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 733981009,
+          "name": "Tomb Guardians",
+          "slug": "tombguardians",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/026/579/034/3ab911e3760eef7b984cf5a9dce50a7a_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1575229307&auto=format&frame=1&q=92&s=9ce4320cf48f762e84d6a6ec279a4aea",
+              "small": "https://ksr-ugc.imgix.net/assets/026/579/034/3ab911e3760eef7b984cf5a9dce50a7a_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1575229307&auto=format&frame=1&q=92&s=1174d6c002d404da9f4f1324ca4c7254",
+              "medium": "https://ksr-ugc.imgix.net/assets/026/579/034/3ab911e3760eef7b984cf5a9dce50a7a_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1575229307&auto=format&frame=1&q=92&s=d30595c2b923192afe4cf72c7ab54cef"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/tombguardians"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/733981009?signature=1627582389.04a0a428b7a60960639f8086ec1a3fed2d93b163"
+              }
+          }
+      },
+      "location": {
+          "id": 2383660,
+          "name": "Columbus",
+          "slug": "columbus-oh",
+          "short_name": "Columbus, OH",
+          "displayable_name": "Columbus, OH",
+          "localized_name": "Columbus",
+          "country": "US",
+          "state": "OH",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/columbus-oh",
+                  "location": "https://www.kickstarter.com/locations/columbus-oh"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549213.268fcba2800347034140b35e459a74007bc7f30d&woe_id=2383660"
+              }
+          }
+      },
+      "category": {
+          "id": 34,
+          "name": "Tabletop Games",
+          "analytics_name": "Tabletop Games",
+          "slug": "games/tabletop games",
+          "position": 6,
+          "parent_id": 12,
+          "parent_name": "Games",
+          "color": 51627,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/games/tabletop%20games"
+              }
+          }
+      },
+      "profile": {
+          "id": 4234766,
+          "project_id": 4234766,
+          "state": "inactive",
+          "state_changed_at": 1623891627,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/201/239/b83a0ee12c607c4a36bad057212a9d20_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626234880&auto=format&frame=1&q=92&s=353f52bfd4364b13eb70282e7cb00f52",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/201/239/b83a0ee12c607c4a36bad057212a9d20_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626234880&auto=format&frame=1&q=92&s=6e6904d19c07b868d3a86c87c28ee63c"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/tombguardians/drow-city-of-llurth-dreir?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/tombguardians/drow-city-of-llurth-dreir/rewards"
+          }
+      }
+  }
+]

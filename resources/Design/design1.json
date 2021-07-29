@@ -1,0 +1,1539 @@
+[
+  {
+      "id": 1382799446,
+      "photo": {
+          "key": "assets/034/011/076/4559cce2542ea87fb6402ac9a347e102_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/011/076/4559cce2542ea87fb6402ac9a347e102_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624643733&auto=format&frame=1&q=92&s=8bae065a7d45288170cfa4b27a78e270",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/011/076/4559cce2542ea87fb6402ac9a347e102_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1624643733&auto=format&frame=1&q=92&s=f183e1ff985885a75d564bbcd9a53372",
+          "med": "https://ksr-ugc.imgix.net/assets/034/011/076/4559cce2542ea87fb6402ac9a347e102_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1624643733&auto=format&frame=1&q=92&s=b88b6c54abc6adf1a0f5dedd490f30f9",
+          "little": "https://ksr-ugc.imgix.net/assets/034/011/076/4559cce2542ea87fb6402ac9a347e102_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1624643733&auto=format&frame=1&q=92&s=fbb5d8d8fdadcb1f17af9a4fa18b5c81",
+          "small": "https://ksr-ugc.imgix.net/assets/034/011/076/4559cce2542ea87fb6402ac9a347e102_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1624643733&auto=format&frame=1&q=92&s=d559b8c808b4a86b04198418c8a0b1dc",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/011/076/4559cce2542ea87fb6402ac9a347e102_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1624643733&auto=format&frame=1&q=92&s=97476c4178e8b53f56be1bb3059dc2fa",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/011/076/4559cce2542ea87fb6402ac9a347e102_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1624643733&auto=format&frame=1&q=92&s=6bccdb6f745d2e4d2b23ae7086bee1e7",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/011/076/4559cce2542ea87fb6402ac9a347e102_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624643733&auto=format&frame=1&q=92&s=e4ba6b452d57c59f47f6b2ebaac46988"
+      },
+      "name": "The Witchin' Kitchen",
+      "blurb": "A local and sustainable meal kit delivery service for the Omaha-Metro area.",
+      "goal": 8000,
+      "pledged": 8716,
+      "state": "live",
+      "slug": "the-witchin-kitchen",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1630951842,
+      "state_changed_at": 1625767844,
+      "created_at": 1624643524,
+      "launched_at": 1625767842,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 36,
+      "static_usd_rate": 1,
+      "usd_pledged": "8716.0",
+      "converted_pledged_amount": 8716,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 525657846,
+          "name": "Madeline Radcliff-Reilly",
+          "slug": "witchinkitchen",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/034/012/141/2ecc2644abce6f49436b844414228b96_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1624650785&auto=format&frame=1&q=92&s=7465fdc08636656eed180ce9ce45554d",
+              "small": "https://ksr-ugc.imgix.net/assets/034/012/141/2ecc2644abce6f49436b844414228b96_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1624650785&auto=format&frame=1&q=92&s=63207eddac4d4b7b672b1dc932aa5adf",
+              "medium": "https://ksr-ugc.imgix.net/assets/034/012/141/2ecc2644abce6f49436b844414228b96_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1624650785&auto=format&frame=1&q=92&s=6913dffc52fc121d25ab1bbcff51e36b"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/witchinkitchen"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/525657846?signature=1627580024.fc14a06c8cb7e2d6192838f36687ac92df66b9df"
+              }
+          }
+      },
+      "location": {
+          "id": 2465512,
+          "name": "Omaha",
+          "slug": "omaha-ne",
+          "short_name": "Omaha, NE",
+          "displayable_name": "Omaha, NE",
+          "localized_name": "Omaha",
+          "country": "US",
+          "state": "NE",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/omaha-ne",
+                  "location": "https://www.kickstarter.com/locations/omaha-ne"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627551298.11260681faea91dc5d0cce79474e5cf492be1109&woe_id=2465512"
+              }
+          }
+      },
+      "category": {
+          "id": 10,
+          "name": "Food",
+          "analytics_name": "Food",
+          "slug": "food",
+          "position": 8,
+          "color": 16725570,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/food"
+              }
+          }
+      },
+      "profile": {
+          "id": 4239217,
+          "project_id": 4239217,
+          "state": "inactive",
+          "state_changed_at": 1624643524,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/011/076/4559cce2542ea87fb6402ac9a347e102_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624643733&auto=format&frame=1&q=92&s=e4ba6b452d57c59f47f6b2ebaac46988",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/011/076/4559cce2542ea87fb6402ac9a347e102_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624643733&auto=format&frame=1&q=92&s=8bae065a7d45288170cfa4b27a78e270"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/witchinkitchen/the-witchin-kitchen?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/witchinkitchen/the-witchin-kitchen/rewards"
+          }
+      }
+  },
+  {
+      "id": 1617104645,
+      "photo": {
+          "key": "assets/034/010/573/ef0574b2cee1e4d0c353fa53dc59c617_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/010/573/ef0574b2cee1e4d0c353fa53dc59c617_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624640833&auto=format&frame=1&q=92&s=076bba35757f6115c85176dec1cc6193",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/010/573/ef0574b2cee1e4d0c353fa53dc59c617_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1624640833&auto=format&frame=1&q=92&s=3b841b024cd399ba01944fe01a3aa8ff",
+          "med": "https://ksr-ugc.imgix.net/assets/034/010/573/ef0574b2cee1e4d0c353fa53dc59c617_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1624640833&auto=format&frame=1&q=92&s=2577e3f4384c93529e667441fe5c0f27",
+          "little": "https://ksr-ugc.imgix.net/assets/034/010/573/ef0574b2cee1e4d0c353fa53dc59c617_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1624640833&auto=format&frame=1&q=92&s=c3d6149d2a27eabba76c4fa449075567",
+          "small": "https://ksr-ugc.imgix.net/assets/034/010/573/ef0574b2cee1e4d0c353fa53dc59c617_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1624640833&auto=format&frame=1&q=92&s=75303f2ef0fae6d4d172c33c03f59b72",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/010/573/ef0574b2cee1e4d0c353fa53dc59c617_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1624640833&auto=format&frame=1&q=92&s=32c6f3ccaf675847d14ea602a7d60657",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/010/573/ef0574b2cee1e4d0c353fa53dc59c617_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1624640833&auto=format&frame=1&q=92&s=ca765c3f49925aa20027546ccbda3e0b",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/010/573/ef0574b2cee1e4d0c353fa53dc59c617_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624640833&auto=format&frame=1&q=92&s=b26779e4d99cda8ee0bd7fadf0676ca4"
+      },
+      "name": "Puma Yu's - Pete and Ally's brick & mortar!",
+      "blurb": "An inclusive, intimate cocktail-forward bar with an accompanying food program focusing on Southeast Asian flavors",
+      "goal": 50000,
+      "pledged": 18183,
+      "state": "live",
+      "slug": "puma-yus-pete-and-allys-brick-and-mortar",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1630687769,
+      "state_changed_at": 1625503771,
+      "created_at": 1624639560,
+      "launched_at": 1625503769,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 88,
+      "static_usd_rate": 1,
+      "usd_pledged": "18183.0",
+      "converted_pledged_amount": 18183,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 223623037,
+          "name": "Ally Smith",
+          "slug": "pumayus",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/034/011/405/3d80054f0e4228dab071cf7dfec633fd_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1624645818&auto=format&frame=1&q=92&s=bd0cd6deff4fa9d7aab5a91f45141c1e",
+              "small": "https://ksr-ugc.imgix.net/assets/034/011/405/3d80054f0e4228dab071cf7dfec633fd_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1624645818&auto=format&frame=1&q=92&s=8d0ee23213e6de54b7287d6979b86ca0",
+              "medium": "https://ksr-ugc.imgix.net/assets/034/011/405/3d80054f0e4228dab071cf7dfec633fd_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1624645818&auto=format&frame=1&q=92&s=0941ead4ea0ca00cd8df316eebe281d1"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/pumayus"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/223623037?signature=1627580024.00a9737d8193c268d0bc7653c9e8abf9b55ba50e"
+              }
+          }
+      },
+      "location": {
+          "id": 2356940,
+          "name": "Athens",
+          "slug": "athens-ga",
+          "short_name": "Athens, GA",
+          "displayable_name": "Athens, GA",
+          "localized_name": "Athens",
+          "country": "US",
+          "state": "GA",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/athens-ga",
+                  "location": "https://www.kickstarter.com/locations/athens-ga"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627551103.6dbe01f7a9a9d0f2b8d889b496315b312f613a54&woe_id=2356940"
+              }
+          }
+      },
+      "category": {
+          "id": 312,
+          "name": "Restaurants",
+          "analytics_name": "Restaurants",
+          "slug": "food/restaurants",
+          "position": 9,
+          "parent_id": 10,
+          "parent_name": "Food",
+          "color": 16725570,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/food/restaurants"
+              }
+          }
+      },
+      "profile": {
+          "id": 4239185,
+          "project_id": 4239185,
+          "state": "inactive",
+          "state_changed_at": 1624639560,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/010/573/ef0574b2cee1e4d0c353fa53dc59c617_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624640833&auto=format&frame=1&q=92&s=b26779e4d99cda8ee0bd7fadf0676ca4",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/010/573/ef0574b2cee1e4d0c353fa53dc59c617_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624640833&auto=format&frame=1&q=92&s=076bba35757f6115c85176dec1cc6193"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/pumayus/puma-yus-pete-and-allys-brick-and-mortar?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/pumayus/puma-yus-pete-and-allys-brick-and-mortar/rewards"
+          }
+      }
+  },
+  {
+      "id": 131811895,
+      "photo": {
+          "key": "assets/030/120/541/6c5ffc4b77daf164b70051d4c517e937_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/030/120/541/6c5ffc4b77daf164b70051d4c517e937_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1596905842&auto=format&frame=1&q=92&s=8bb3a5a838227305ceca48f11d72813e",
+          "ed": "https://ksr-ugc.imgix.net/assets/030/120/541/6c5ffc4b77daf164b70051d4c517e937_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1596905842&auto=format&frame=1&q=92&s=3ad9f2df81c4cdb198fea2ef298803f4",
+          "med": "https://ksr-ugc.imgix.net/assets/030/120/541/6c5ffc4b77daf164b70051d4c517e937_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1596905842&auto=format&frame=1&q=92&s=7b108633f5a7a2d1c67372d2e90d14d3",
+          "little": "https://ksr-ugc.imgix.net/assets/030/120/541/6c5ffc4b77daf164b70051d4c517e937_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1596905842&auto=format&frame=1&q=92&s=42a242f2f3f6cda447b94a96bd75be3e",
+          "small": "https://ksr-ugc.imgix.net/assets/030/120/541/6c5ffc4b77daf164b70051d4c517e937_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1596905842&auto=format&frame=1&q=92&s=038dc2c351a9b290cb6d4d81b75bb6a1",
+          "thumb": "https://ksr-ugc.imgix.net/assets/030/120/541/6c5ffc4b77daf164b70051d4c517e937_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1596905842&auto=format&frame=1&q=92&s=d381ca561b2cf33d6be8efb49e8aef31",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/030/120/541/6c5ffc4b77daf164b70051d4c517e937_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1596905842&auto=format&frame=1&q=92&s=d9bc7ce66636308af811134aa229673f",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/030/120/541/6c5ffc4b77daf164b70051d4c517e937_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1596905842&auto=format&frame=1&q=92&s=6a842c39532bb64966ae115b0b396040"
+      },
+      "name": "Quanto Basta: The Art of Just Enough",
+      "blurb": "A heritage Italian cookbook with artistically inspired photographs",
+      "goal": 14500,
+      "pledged": 5733.29,
+      "state": "live",
+      "slug": "quanto-basta-the-art-of-just-enough",
+      "disable_communication": false,
+      "country": "CA",
+      "country_displayable_name": "Canada",
+      "currency": "CAD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1627790340,
+      "state_changed_at": 1624652805,
+      "created_at": 1596904677,
+      "launched_at": 1624652803,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 78,
+      "static_usd_rate": 0.81265004,
+      "usd_pledged": "4659.1583478316",
+      "converted_pledged_amount": 4554,
+      "fx_rate": 0.79442567,
+      "usd_exchange_rate": 0.79442567,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1098615877,
+          "name": "Joe Calleja and Lucy Conte",
+          "slug": "quantobastacookbook",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/033/965/407/d838059cd12b1a5c464a9af447de0087_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1624321301&auto=format&frame=1&q=92&s=f52bb73ec3b3a3593ac9b1da360e9ff4",
+              "small": "https://ksr-ugc.imgix.net/assets/033/965/407/d838059cd12b1a5c464a9af447de0087_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1624321301&auto=format&frame=1&q=92&s=9b8114d2d9af217b675cdadace49b36a",
+              "medium": "https://ksr-ugc.imgix.net/assets/033/965/407/d838059cd12b1a5c464a9af447de0087_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1624321301&auto=format&frame=1&q=92&s=019d11767f20d9112a0594a9a3109864"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/quantobastacookbook"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1098615877?signature=1627580024.5efcad6063aeb081b6601a1beb500360c1819541"
+              }
+          }
+      },
+      "location": {
+          "id": 4118,
+          "name": "Toronto",
+          "slug": "toronto-on-ca",
+          "short_name": "Toronto, Canada",
+          "displayable_name": "Toronto, Canada",
+          "localized_name": "Toronto",
+          "country": "CA",
+          "state": "ON",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "Canada",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/toronto-on-ca",
+                  "location": "https://www.kickstarter.com/locations/toronto-on-ca"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627548951.320d2eab03291c0c8792e815df1d8bba9d896858&woe_id=4118"
+              }
+          }
+      },
+      "category": {
+          "id": 306,
+          "name": "Cookbooks",
+          "analytics_name": "Cookbooks",
+          "slug": "food/cookbooks",
+          "position": 3,
+          "parent_id": 10,
+          "parent_name": "Food",
+          "color": 16725570,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/food/cookbooks"
+              }
+          }
+      },
+      "profile": {
+          "id": 4048572,
+          "project_id": 4048572,
+          "state": "inactive",
+          "state_changed_at": 1596904677,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/030/120/541/6c5ffc4b77daf164b70051d4c517e937_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1596905842&auto=format&frame=1&q=92&s=6a842c39532bb64966ae115b0b396040",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/030/120/541/6c5ffc4b77daf164b70051d4c517e937_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1596905842&auto=format&frame=1&q=92&s=8bb3a5a838227305ceca48f11d72813e"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/quantobastacookbook/quanto-basta-the-art-of-just-enough?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/quantobastacookbook/quanto-basta-the-art-of-just-enough/rewards"
+          }
+      }
+  },
+  {
+      "id": 894324999,
+      "photo": {
+          "key": "assets/034/130/372/e44406477571dab2fbf696bc5b3adc61_original.jpeg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/130/372/e44406477571dab2fbf696bc5b3adc61_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625647036&auto=format&frame=1&q=92&s=6ee227a38acb2f0738c2c3eae9060d38",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/130/372/e44406477571dab2fbf696bc5b3adc61_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1625647036&auto=format&frame=1&q=92&s=9e397d28a52a14ed84876332ec78e784",
+          "med": "https://ksr-ugc.imgix.net/assets/034/130/372/e44406477571dab2fbf696bc5b3adc61_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1625647036&auto=format&frame=1&q=92&s=9ef80de9a6d3a64f4637ef4b312b8eeb",
+          "little": "https://ksr-ugc.imgix.net/assets/034/130/372/e44406477571dab2fbf696bc5b3adc61_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1625647036&auto=format&frame=1&q=92&s=b108053c6f0c6b1e3db44585af5d9863",
+          "small": "https://ksr-ugc.imgix.net/assets/034/130/372/e44406477571dab2fbf696bc5b3adc61_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1625647036&auto=format&frame=1&q=92&s=8eef2616c62bd0874d94c2eb813626db",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/130/372/e44406477571dab2fbf696bc5b3adc61_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1625647036&auto=format&frame=1&q=92&s=e20abdf474f8075f903c12839cd31022",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/130/372/e44406477571dab2fbf696bc5b3adc61_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1625647036&auto=format&frame=1&q=92&s=5f94d8afe183954a2488ce07a746555c",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/130/372/e44406477571dab2fbf696bc5b3adc61_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625647036&auto=format&frame=1&q=92&s=1bd1ddd1f10ea7e99e98e9975aa0d814"
+      },
+      "name": "TIR BAKERY",
+      "blurb": "Dedicated to baking with bio-dynamic, organic and freshly stoneground grains",
+      "goal": 175000,
+      "pledged": 48777.17,
+      "state": "live",
+      "slug": "tir-bakery",
+      "disable_communication": false,
+      "country": "DK",
+      "country_displayable_name": "Denmark",
+      "currency": "DKK",
+      "currency_symbol": "kr",
+      "currency_trailing_code": true,
+      "deadline": 1630447140,
+      "state_changed_at": 1626694650,
+      "created_at": 1625646824,
+      "launched_at": 1626694648,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 68,
+      "static_usd_rate": 0.15873016,
+      "usd_pledged": "7742.4079984472",
+      "converted_pledged_amount": 7752,
+      "fx_rate": 0.15893705,
+      "usd_exchange_rate": 0.15893705,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 709238958,
+          "name": "Louise Bannon",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/034/130/890/36b2f7638ca805d24dc6d0ce9ca479f0_original.PNG?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1625651088&auto=format&frame=1&q=92&s=b0489ef5fe6e179f5ef383742ab74054",
+              "small": "https://ksr-ugc.imgix.net/assets/034/130/890/36b2f7638ca805d24dc6d0ce9ca479f0_original.PNG?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1625651088&auto=format&frame=1&q=92&s=839b830dab0b8a17db8e78e12ea704a5",
+              "medium": "https://ksr-ugc.imgix.net/assets/034/130/890/36b2f7638ca805d24dc6d0ce9ca479f0_original.PNG?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1625651088&auto=format&frame=1&q=92&s=b382080d31239af100058f9e26e577e7"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/709238958"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/709238958?signature=1627580024.9c65b5b3ff9242cacbe4f07ef82560a06b81e9e2"
+              }
+          }
+      },
+      "location": {
+          "id": 20099513,
+          "name": "Sjællands Odde",
+          "slug": "sjaellands-odde-dk",
+          "short_name": "Sjællands Odde, Denmark",
+          "displayable_name": "Sjællands Odde, Denmark",
+          "localized_name": "Sjællands Odde",
+          "country": "DK",
+          "state": "Sjaelland",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "Denmark",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/sjaellands-odde-dk",
+                  "location": "https://www.kickstarter.com/locations/sjaellands-odde-dk"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627571174.320a263d20cb69993c0aa47000b97c8fc9e9a3a6&woe_id=20099513"
+              }
+          }
+      },
+      "category": {
+          "id": 10,
+          "name": "Food",
+          "analytics_name": "Food",
+          "slug": "food",
+          "position": 8,
+          "color": 16725570,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/food"
+              }
+          }
+      },
+      "profile": {
+          "id": 4244818,
+          "project_id": 4244818,
+          "state": "inactive",
+          "state_changed_at": 1625646824,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/130/372/e44406477571dab2fbf696bc5b3adc61_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625647036&auto=format&frame=1&q=92&s=1bd1ddd1f10ea7e99e98e9975aa0d814",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/130/372/e44406477571dab2fbf696bc5b3adc61_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625647036&auto=format&frame=1&q=92&s=6ee227a38acb2f0738c2c3eae9060d38"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/709238958/tir-bakery?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/709238958/tir-bakery/rewards"
+          }
+      }
+  },
+  {
+      "id": 2120006296,
+      "photo": {
+          "key": "assets/034/243/750/b6cfb738d26696c2fcdf9363291d790b_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/034/243/750/b6cfb738d26696c2fcdf9363291d790b_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626609862&auto=format&frame=1&q=92&s=e9bf965c3ce1b212e4fac29bff35b004",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/243/750/b6cfb738d26696c2fcdf9363291d790b_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1626609862&auto=format&frame=1&q=92&s=6b9adeb38b6c082ed8c5a2cd9bbcf041",
+          "med": "https://ksr-ugc.imgix.net/assets/034/243/750/b6cfb738d26696c2fcdf9363291d790b_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1626609862&auto=format&frame=1&q=92&s=c5109516728be6fc5222f972b4ca15b9",
+          "little": "https://ksr-ugc.imgix.net/assets/034/243/750/b6cfb738d26696c2fcdf9363291d790b_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1626609862&auto=format&frame=1&q=92&s=ad9ac2f3c507356d1a146dd5c2484946",
+          "small": "https://ksr-ugc.imgix.net/assets/034/243/750/b6cfb738d26696c2fcdf9363291d790b_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1626609862&auto=format&frame=1&q=92&s=a8d2cdacbaf8c67343dc739906c1f6f6",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/243/750/b6cfb738d26696c2fcdf9363291d790b_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1626609862&auto=format&frame=1&q=92&s=7284a8935433647c5d987d972d712b98",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/243/750/b6cfb738d26696c2fcdf9363291d790b_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1626609862&auto=format&frame=1&q=92&s=12b326bd5347dbc977f122e23f070761",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/243/750/b6cfb738d26696c2fcdf9363291d790b_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626609862&auto=format&frame=1&q=92&s=53a236d9b52f395a903822d79c0c7c92"
+      },
+      "name": "Wanna Date: 'Just Add Water' Date Dough Mix!",
+      "blurb": "Vegan Date Dough: Added Sugar-Free, Plant-based, Keto Friendly",
+      "goal": 10000,
+      "pledged": 3447,
+      "state": "live",
+      "slug": "wanna-date-just-add-water-date-dough-mix",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1629978537,
+      "state_changed_at": 1627386539,
+      "created_at": 1626608605,
+      "launched_at": 1627386537,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 58,
+      "static_usd_rate": 1,
+      "usd_pledged": "3447.0",
+      "converted_pledged_amount": 3447,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 387340427,
+          "name": "Melissa Bartow",
+          "slug": "wannadate",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/034/275/560/f67e5c86b5117c548ba31db0739f608b_original.png?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1626964230&auto=format&frame=1&q=92&s=6bb964a20751fc627b86b1322ffd9033",
+              "small": "https://ksr-ugc.imgix.net/assets/034/275/560/f67e5c86b5117c548ba31db0739f608b_original.png?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1626964230&auto=format&frame=1&q=92&s=660a7ee1221314a06c62bf22bb7594ff",
+              "medium": "https://ksr-ugc.imgix.net/assets/034/275/560/f67e5c86b5117c548ba31db0739f608b_original.png?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1626964230&auto=format&frame=1&q=92&s=68237cf34e3ea89ca02265e9cb060eec"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/wannadate"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/387340427?signature=1627580024.6729f98dbfab82cb9d44af546b9f3e606af76567"
+              }
+          }
+      },
+      "location": {
+          "id": 2405872,
+          "name": "Fort Myers",
+          "slug": "fort-myers-fl",
+          "short_name": "Fort Myers, FL",
+          "displayable_name": "Fort Myers, FL",
+          "localized_name": "Fort Myers",
+          "country": "US",
+          "state": "FL",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/fort-myers-fl",
+                  "location": "https://www.kickstarter.com/locations/fort-myers-fl"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627551455.ce5b54baf2638d97bb1970cace7ed65a983f787b&woe_id=2405872"
+              }
+          }
+      },
+      "category": {
+          "id": 315,
+          "name": "Vegan",
+          "analytics_name": "Vegan",
+          "slug": "food/vegan",
+          "position": 12,
+          "parent_id": 10,
+          "parent_name": "Food",
+          "color": 16725570,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/food/vegan"
+              }
+          }
+      },
+      "profile": {
+          "id": 4250299,
+          "project_id": 4250299,
+          "state": "inactive",
+          "state_changed_at": 1626608605,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/243/750/b6cfb738d26696c2fcdf9363291d790b_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1626609862&auto=format&frame=1&q=92&s=53a236d9b52f395a903822d79c0c7c92",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/243/750/b6cfb738d26696c2fcdf9363291d790b_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1626609862&auto=format&frame=1&q=92&s=e9bf965c3ce1b212e4fac29bff35b004"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/wannadate/wanna-date-just-add-water-date-dough-mix?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/wannadate/wanna-date-just-add-water-date-dough-mix/rewards"
+          }
+      }
+  },
+  {
+      "id": 1287599075,
+      "photo": {
+          "key": "assets/034/024/673/63ce8f28c85fad05241a602ab3586a23_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/034/024/673/63ce8f28c85fad05241a602ab3586a23_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624807565&auto=format&frame=1&q=92&s=ab43bea23e06fc6b2f705b6c9e11bfe7",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/024/673/63ce8f28c85fad05241a602ab3586a23_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1624807565&auto=format&frame=1&q=92&s=ef06b1056a31fd11870f92b41e65e635",
+          "med": "https://ksr-ugc.imgix.net/assets/034/024/673/63ce8f28c85fad05241a602ab3586a23_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1624807565&auto=format&frame=1&q=92&s=a4d5edcfe3931dce3f740e85687aed73",
+          "little": "https://ksr-ugc.imgix.net/assets/034/024/673/63ce8f28c85fad05241a602ab3586a23_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1624807565&auto=format&frame=1&q=92&s=b0849ea1abd1aec44b5ee670ea969282",
+          "small": "https://ksr-ugc.imgix.net/assets/034/024/673/63ce8f28c85fad05241a602ab3586a23_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1624807565&auto=format&frame=1&q=92&s=e9d7eda6242a8c63967a36a2498edc4c",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/024/673/63ce8f28c85fad05241a602ab3586a23_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1624807565&auto=format&frame=1&q=92&s=b9ff237d1856bbfcb5db317479909e9d",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/024/673/63ce8f28c85fad05241a602ab3586a23_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1624807565&auto=format&frame=1&q=92&s=d8f052db74594c56b784887d3fdb3f8a",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/024/673/63ce8f28c85fad05241a602ab3586a23_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624807565&auto=format&frame=1&q=92&s=38e3c2432102ab36c03ba1c53022b534"
+      },
+      "name": "Gillie's Gourmet - Artisanal Dry Rubs and Finishing Salts",
+      "blurb": "Elevating home cooking with genuine handcrafted dry rubs and Fleur de Sel finishing salts. All prepared with ultrafine ingredients.",
+      "goal": 300,
+      "pledged": 984,
+      "state": "live",
+      "slug": "gillies-gourmet-artisanal-dry-rubs-and-finishing-salts",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1629467491,
+      "state_changed_at": 1627307492,
+      "created_at": 1624807475,
+      "launched_at": 1627307491,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 14,
+      "static_usd_rate": 1,
+      "usd_pledged": "984.0",
+      "converted_pledged_amount": 984,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 186393384,
+          "name": "The Gilchrist Group",
+          "slug": "gilchristgroup",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/034/259/171/9bb5d05104240e0ca5e1f36f2001e0ec_original.png?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1626739771&auto=format&frame=1&q=92&s=94e4b6848f503e6091727d237cb88b5d",
+              "small": "https://ksr-ugc.imgix.net/assets/034/259/171/9bb5d05104240e0ca5e1f36f2001e0ec_original.png?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1626739771&auto=format&frame=1&q=92&s=60a71ffcc1804da0135eeb8a62210fa8",
+              "medium": "https://ksr-ugc.imgix.net/assets/034/259/171/9bb5d05104240e0ca5e1f36f2001e0ec_original.png?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1626739771&auto=format&frame=1&q=92&s=02dc462c7e2b134cc0df0e1780cb09ab"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/gilchristgroup"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/186393384?signature=1627580024.b1e18481e95a182b4fed7b57ef8bf768458ce193"
+              }
+          }
+      },
+      "location": {
+          "id": 2378426,
+          "name": "Charlotte",
+          "slug": "charlotte-nc",
+          "short_name": "Charlotte, NC",
+          "displayable_name": "Charlotte, NC",
+          "localized_name": "Charlotte",
+          "country": "US",
+          "state": "NC",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/charlotte-nc",
+                  "location": "https://www.kickstarter.com/locations/charlotte-nc"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549337.c61a6e6435733df0a165499e66726d1614434030&woe_id=2378426"
+              }
+          }
+      },
+      "category": {
+          "id": 313,
+          "name": "Small Batch",
+          "analytics_name": "Small Batch",
+          "slug": "food/small batch",
+          "position": 10,
+          "parent_id": 10,
+          "parent_name": "Food",
+          "color": 16725570,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/food/small%20batch"
+              }
+          }
+      },
+      "profile": {
+          "id": 4239933,
+          "project_id": 4239933,
+          "state": "inactive",
+          "state_changed_at": 1624807475,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/024/673/63ce8f28c85fad05241a602ab3586a23_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624807565&auto=format&frame=1&q=92&s=38e3c2432102ab36c03ba1c53022b534",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/024/673/63ce8f28c85fad05241a602ab3586a23_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624807565&auto=format&frame=1&q=92&s=ab43bea23e06fc6b2f705b6c9e11bfe7"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/gilchristgroup/gillies-gourmet-artisanal-dry-rubs-and-finishing-salts?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/gilchristgroup/gillies-gourmet-artisanal-dry-rubs-and-finishing-salts/rewards"
+          }
+      }
+  },
+  {
+      "id": 729297816,
+      "photo": {
+          "key": "assets/033/937/947/fc608a05ec41a216d65c180bd6e943c6_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/033/937/947/fc608a05ec41a216d65c180bd6e943c6_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624057067&auto=format&frame=1&q=92&s=fc2e0fa029c75eda0500a09a7bf98f9f",
+          "ed": "https://ksr-ugc.imgix.net/assets/033/937/947/fc608a05ec41a216d65c180bd6e943c6_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1624057067&auto=format&frame=1&q=92&s=a4584fa1f6ad92d0c3380d224a71f275",
+          "med": "https://ksr-ugc.imgix.net/assets/033/937/947/fc608a05ec41a216d65c180bd6e943c6_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1624057067&auto=format&frame=1&q=92&s=d75f35c24b4ef65d24b4be8db07b0750",
+          "little": "https://ksr-ugc.imgix.net/assets/033/937/947/fc608a05ec41a216d65c180bd6e943c6_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1624057067&auto=format&frame=1&q=92&s=8882a5b306503c8aa467bd6d23b8bc3f",
+          "small": "https://ksr-ugc.imgix.net/assets/033/937/947/fc608a05ec41a216d65c180bd6e943c6_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1624057067&auto=format&frame=1&q=92&s=4e1c1d789341f810353a4c90332b6738",
+          "thumb": "https://ksr-ugc.imgix.net/assets/033/937/947/fc608a05ec41a216d65c180bd6e943c6_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1624057067&auto=format&frame=1&q=92&s=0c4ecda1fe761faaab65ed20b5dc2e0e",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/033/937/947/fc608a05ec41a216d65c180bd6e943c6_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1624057067&auto=format&frame=1&q=92&s=42934d6f0b92496d6ed787f49d538c72",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/033/937/947/fc608a05ec41a216d65c180bd6e943c6_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624057067&auto=format&frame=1&q=92&s=67307e3b9789e5ec856181483df12d97"
+      },
+      "name": "Queer Wave Coffee Seeks Retail Cafe Space",
+      "blurb": "My people are storytellers. This is a story of an indigenous trans person creating physical space thru heart-felt, anti-oppressive work",
+      "goal": 100000,
+      "pledged": 19947.6,
+      "state": "live",
+      "slug": "queer-wave-coffee-seeks-retail-cafe-space",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1628281267,
+      "state_changed_at": 1625689269,
+      "created_at": 1619231761,
+      "launched_at": 1625689267,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 174,
+      "static_usd_rate": 1,
+      "usd_pledged": "19947.6",
+      "converted_pledged_amount": 19947,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1544430679,
+          "name": "Cheyenne Xochitl Love",
+          "slug": "queerwavecoffee",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/033/261/624/cdaec688dbbc37a04a90642d567dda9d_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1619282120&auto=format&frame=1&q=92&s=a1e88c93e83cb4552b269e63919b5c7e",
+              "small": "https://ksr-ugc.imgix.net/assets/033/261/624/cdaec688dbbc37a04a90642d567dda9d_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1619282120&auto=format&frame=1&q=92&s=c6c0e1470be055bedf37e2cf914f4d90",
+              "medium": "https://ksr-ugc.imgix.net/assets/033/261/624/cdaec688dbbc37a04a90642d567dda9d_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1619282120&auto=format&frame=1&q=92&s=e25fe40fcae8245ad060a8933eed08b7"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/queerwavecoffee"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1544430679?signature=1627580024.2fc68a0d1f571923daaa16cb017ff8d9910e1cb9"
+              }
+          }
+      },
+      "location": {
+          "id": 2463583,
+          "name": "Oakland",
+          "slug": "oakland-ca",
+          "short_name": "Oakland, CA",
+          "displayable_name": "Oakland, CA",
+          "localized_name": "Oakland",
+          "country": "US",
+          "state": "CA",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/oakland-ca",
+                  "location": "https://www.kickstarter.com/locations/oakland-ca"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549149.acdb6dca2ed94c57b7b75c51258660eabbd4cb1e&woe_id=2463583"
+              }
+          }
+      },
+      "category": {
+          "id": 307,
+          "name": "Drinks",
+          "analytics_name": "Drinks",
+          "slug": "food/drinks",
+          "position": 4,
+          "parent_id": 10,
+          "parent_name": "Food",
+          "color": 16725570,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/food/drinks"
+              }
+          }
+      },
+      "profile": {
+          "id": 4204814,
+          "project_id": 4204814,
+          "state": "inactive",
+          "state_changed_at": 1619231761,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/033/937/947/fc608a05ec41a216d65c180bd6e943c6_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624057067&auto=format&frame=1&q=92&s=67307e3b9789e5ec856181483df12d97",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/033/937/947/fc608a05ec41a216d65c180bd6e943c6_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624057067&auto=format&frame=1&q=92&s=fc2e0fa029c75eda0500a09a7bf98f9f"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/queerwavecoffee/queer-wave-coffee-seeks-retail-cafe-space?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/queerwavecoffee/queer-wave-coffee-seeks-retail-cafe-space/rewards"
+          }
+      }
+  },
+  {
+      "id": 232071478,
+      "photo": {
+          "key": "assets/033/340/624/705790e131195cc8040d4d5ba81be326_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/033/340/624/705790e131195cc8040d4d5ba81be326_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1619788050&auto=format&frame=1&q=92&s=3bcc75b2b1ba383d0e526268c33ac983",
+          "ed": "https://ksr-ugc.imgix.net/assets/033/340/624/705790e131195cc8040d4d5ba81be326_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1619788050&auto=format&frame=1&q=92&s=b509dd2dd1b701038afa508910f6d824",
+          "med": "https://ksr-ugc.imgix.net/assets/033/340/624/705790e131195cc8040d4d5ba81be326_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1619788050&auto=format&frame=1&q=92&s=1c8499673382bfdda69fc6067f357286",
+          "little": "https://ksr-ugc.imgix.net/assets/033/340/624/705790e131195cc8040d4d5ba81be326_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1619788050&auto=format&frame=1&q=92&s=2a55299ca70475d6862724ede6329a34",
+          "small": "https://ksr-ugc.imgix.net/assets/033/340/624/705790e131195cc8040d4d5ba81be326_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1619788050&auto=format&frame=1&q=92&s=b5913e2283b8808f42c2d464d22b9c0d",
+          "thumb": "https://ksr-ugc.imgix.net/assets/033/340/624/705790e131195cc8040d4d5ba81be326_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1619788050&auto=format&frame=1&q=92&s=6b279c679b7bc428bbd98ffb258cb733",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/033/340/624/705790e131195cc8040d4d5ba81be326_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1619788050&auto=format&frame=1&q=92&s=230b69799f142db24a3be0d9f8119603",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/033/340/624/705790e131195cc8040d4d5ba81be326_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1619788050&auto=format&frame=1&q=92&s=acd1ca700a64825574160fda7d32448f"
+      },
+      "name": "Blawesome: celebrating the beauty of flowers and humanity",
+      "blurb": "Help us purchase a used van to deliver flowers and opportunity to our community from our social care farm",
+      "goal": 30000,
+      "pledged": 6262,
+      "state": "live",
+      "slug": "blawesome-celebrating-the-beauty-of-flowers-and-humanity",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1628959089,
+      "state_changed_at": 1626367091,
+      "created_at": 1581888903,
+      "launched_at": 1626367089,
+      "staff_pick": true,
+      "is_starrable": true,
+      "backers_count": 66,
+      "static_usd_rate": 1,
+      "usd_pledged": "6262.0",
+      "converted_pledged_amount": 6262,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 969155992,
+          "name": "Rebecca Sorensen",
+          "slug": "peaches4free",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/028/271/872/390e19682d109095247b879f8fb7552f_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1583004502&auto=format&frame=1&q=92&s=45a936988c8a392dde155617d46c8b37",
+              "small": "https://ksr-ugc.imgix.net/assets/028/271/872/390e19682d109095247b879f8fb7552f_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1583004502&auto=format&frame=1&q=92&s=6ffb1265ae53337c446b0ddf5df93369",
+              "medium": "https://ksr-ugc.imgix.net/assets/028/271/872/390e19682d109095247b879f8fb7552f_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1583004502&auto=format&frame=1&q=92&s=ebb34ace9403a1f612027f3ac44dfc7a"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/peaches4free"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/969155992?signature=1627580024.64ba6855686ed9cb6287ea7b58f351e774a1d4a9"
+              }
+          }
+      },
+      "location": {
+          "id": 2378134,
+          "name": "Chapel Hill",
+          "slug": "chapel-hill-orange-nc",
+          "short_name": "Chapel Hill, NC",
+          "displayable_name": "Chapel Hill, NC",
+          "localized_name": "Chapel Hill",
+          "country": "US",
+          "state": "NC",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/chapel-hill-orange-nc",
+                  "location": "https://www.kickstarter.com/locations/chapel-hill-orange-nc"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627552099.7617d470d2c057e0010b0b75bfd0d1d92825e13c&woe_id=2378134"
+              }
+          }
+      },
+      "category": {
+          "id": 309,
+          "name": "Farms",
+          "analytics_name": "Farms",
+          "slug": "food/farms",
+          "position": 7,
+          "parent_id": 10,
+          "parent_name": "Food",
+          "color": 16725570,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/food/farms"
+              }
+          }
+      },
+      "profile": {
+          "id": 3935382,
+          "project_id": 3935382,
+          "state": "inactive",
+          "state_changed_at": 1581888903,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/033/340/624/705790e131195cc8040d4d5ba81be326_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1619788050&auto=format&frame=1&q=92&s=acd1ca700a64825574160fda7d32448f",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/033/340/624/705790e131195cc8040d4d5ba81be326_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1619788050&auto=format&frame=1&q=92&s=3bcc75b2b1ba383d0e526268c33ac983"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/peaches4free/blawesome-celebrating-the-beauty-of-flowers-and-humanity?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/peaches4free/blawesome-celebrating-the-beauty-of-flowers-and-humanity/rewards"
+          }
+      }
+  },
+  {
+      "id": 1142186993,
+      "photo": {
+          "key": "assets/033/992/005/c8e6425d82e9b250541dddd0a38fe9ae_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/033/992/005/c8e6425d82e9b250541dddd0a38fe9ae_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624501497&auto=format&frame=1&q=92&s=c3a00f45e167ccba9b5e06706db1b734",
+          "ed": "https://ksr-ugc.imgix.net/assets/033/992/005/c8e6425d82e9b250541dddd0a38fe9ae_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1624501497&auto=format&frame=1&q=92&s=904cd26fbdde70f7960f32c66e0c6791",
+          "med": "https://ksr-ugc.imgix.net/assets/033/992/005/c8e6425d82e9b250541dddd0a38fe9ae_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1624501497&auto=format&frame=1&q=92&s=4822c3ea24fc691f147a7b29b25077c7",
+          "little": "https://ksr-ugc.imgix.net/assets/033/992/005/c8e6425d82e9b250541dddd0a38fe9ae_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1624501497&auto=format&frame=1&q=92&s=08b58a0138e3d4d13444af3d97826823",
+          "small": "https://ksr-ugc.imgix.net/assets/033/992/005/c8e6425d82e9b250541dddd0a38fe9ae_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1624501497&auto=format&frame=1&q=92&s=6c3c8786c0a4221f3b8954a7d5308009",
+          "thumb": "https://ksr-ugc.imgix.net/assets/033/992/005/c8e6425d82e9b250541dddd0a38fe9ae_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1624501497&auto=format&frame=1&q=92&s=51387d52a154e9fbdf21a60aa871d527",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/033/992/005/c8e6425d82e9b250541dddd0a38fe9ae_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1624501497&auto=format&frame=1&q=92&s=93dc84bb12734e5711426bd2e66e7be9",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/033/992/005/c8e6425d82e9b250541dddd0a38fe9ae_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624501497&auto=format&frame=1&q=92&s=f71afe0ca79e72d2572751eb7ed4e3ff"
+      },
+      "name": "Authentic & Fresh New Mexico Chile in a Jar",
+      "blurb": "Roasted, Chopped and Jarred Hatch New Mexico Green and Red Chile",
+      "goal": 3000,
+      "pledged": 181,
+      "state": "live",
+      "slug": "authentic-and-fresh-new-mexico-chile-in-a-jar",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1627698000,
+      "state_changed_at": 1625106002,
+      "created_at": 1622731319,
+      "launched_at": 1625106000,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 6,
+      "static_usd_rate": 1,
+      "usd_pledged": "181.0",
+      "converted_pledged_amount": 181,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 2079918146,
+          "name": "Zane",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/033/992/062/99f42321119509a9cda36dea34ebf666_original.png?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1624502594&auto=format&frame=1&q=92&s=d898fd7123ee72b2d59a45f663bd74dd",
+              "small": "https://ksr-ugc.imgix.net/assets/033/992/062/99f42321119509a9cda36dea34ebf666_original.png?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1624502594&auto=format&frame=1&q=92&s=3982353a252cdbb86758f39365d5a986",
+              "medium": "https://ksr-ugc.imgix.net/assets/033/992/062/99f42321119509a9cda36dea34ebf666_original.png?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1624502594&auto=format&frame=1&q=92&s=31844440e5508497769f532b100eb1fd"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/2079918146"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/2079918146?signature=1627580024.e2f46f180abb632cfbdc31722ccf174f87bee392"
+              }
+          }
+      },
+      "location": {
+          "id": 2352824,
+          "name": "Albuquerque",
+          "slug": "albuquerque-nm",
+          "short_name": "Albuquerque, NM",
+          "displayable_name": "Albuquerque, NM",
+          "localized_name": "Albuquerque",
+          "country": "US",
+          "state": "NM",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/albuquerque-nm",
+                  "location": "https://www.kickstarter.com/locations/albuquerque-nm"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549487.39f9ac9be39c27c3c9dd8d761587717804966f32&woe_id=2352824"
+              }
+          }
+      },
+      "category": {
+          "id": 10,
+          "name": "Food",
+          "analytics_name": "Food",
+          "slug": "food",
+          "position": 8,
+          "color": 16725570,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/food"
+              }
+          }
+      },
+      "profile": {
+          "id": 4227549,
+          "project_id": 4227549,
+          "state": "inactive",
+          "state_changed_at": 1622731319,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/033/992/005/c8e6425d82e9b250541dddd0a38fe9ae_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624501497&auto=format&frame=1&q=92&s=f71afe0ca79e72d2572751eb7ed4e3ff",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/033/992/005/c8e6425d82e9b250541dddd0a38fe9ae_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624501497&auto=format&frame=1&q=92&s=c3a00f45e167ccba9b5e06706db1b734"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/2079918146/authentic-and-fresh-new-mexico-chile-in-a-jar?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/2079918146/authentic-and-fresh-new-mexico-chile-in-a-jar/rewards"
+          }
+      }
+  },
+  {
+      "id": 2102595982,
+      "photo": {
+          "key": "assets/033/875/319/e21f7549da4f2a0153821736fd9f609f_original.jpeg",
+          "full": "https://ksr-ugc.imgix.net/assets/033/875/319/e21f7549da4f2a0153821736fd9f609f_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1623614747&auto=format&frame=1&q=92&s=7824521df2429000cccee5bad442b872",
+          "ed": "https://ksr-ugc.imgix.net/assets/033/875/319/e21f7549da4f2a0153821736fd9f609f_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1623614747&auto=format&frame=1&q=92&s=9628f29cd3dcb71685a0007278f330f1",
+          "med": "https://ksr-ugc.imgix.net/assets/033/875/319/e21f7549da4f2a0153821736fd9f609f_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1623614747&auto=format&frame=1&q=92&s=a9993305e256817513b4e3607d118771",
+          "little": "https://ksr-ugc.imgix.net/assets/033/875/319/e21f7549da4f2a0153821736fd9f609f_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1623614747&auto=format&frame=1&q=92&s=dd16d9ed6c76deab266b245b3629b918",
+          "small": "https://ksr-ugc.imgix.net/assets/033/875/319/e21f7549da4f2a0153821736fd9f609f_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1623614747&auto=format&frame=1&q=92&s=ad7a886b80d694ab86c58bb95600f7c5",
+          "thumb": "https://ksr-ugc.imgix.net/assets/033/875/319/e21f7549da4f2a0153821736fd9f609f_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1623614747&auto=format&frame=1&q=92&s=b17d9869e374b7c5bc64fd759398cc16",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/033/875/319/e21f7549da4f2a0153821736fd9f609f_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1623614747&auto=format&frame=1&q=92&s=9ed2e3935615be39ba067bab734f911e",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/033/875/319/e21f7549da4f2a0153821736fd9f609f_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1623614747&auto=format&frame=1&q=92&s=57027b45bf155e4bf047b7566f720173"
+      },
+      "name": "A food revolution! A Hydroponic Container Farm and Eatery",
+      "blurb": "The Herban Farm, a hydroponic container farm that provides the highest quality Local Herbs and Vegetables to our fast-casual eatery.",
+      "goal": 50000,
+      "pledged": 976,
+      "state": "live",
+      "slug": "a-hydroponic-container-farming-company",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1627758000,
+      "state_changed_at": 1623284497,
+      "created_at": 1623276587,
+      "launched_at": 1623284495,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 15,
+      "static_usd_rate": 1,
+      "usd_pledged": "976.0",
+      "converted_pledged_amount": 976,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 520818743,
+          "name": "Michelle Green",
+          "slug": "herbanfarm",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/033/835/161/985856f22073fa3accf7c1eceb4e903c_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1623345538&auto=format&frame=1&q=92&s=5f871aa674cc547ce252068eec9b739c",
+              "small": "https://ksr-ugc.imgix.net/assets/033/835/161/985856f22073fa3accf7c1eceb4e903c_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1623345538&auto=format&frame=1&q=92&s=d6f14d09f27df997692762e37d2b0f30",
+              "medium": "https://ksr-ugc.imgix.net/assets/033/835/161/985856f22073fa3accf7c1eceb4e903c_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1623345538&auto=format&frame=1&q=92&s=777e142da9355a82b011b51fbc235174"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/herbanfarm"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/520818743?signature=1627580024.18e43c940d976051c6fddfc148751a41d130f3e7"
+              }
+          }
+      },
+      "location": {
+          "id": 2425873,
+          "name": "Huntington Beach",
+          "slug": "huntington-beach-ca",
+          "short_name": "Huntington Beach, CA",
+          "displayable_name": "Huntington Beach, CA",
+          "localized_name": "Huntington Beach",
+          "country": "US",
+          "state": "CA",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/huntington-beach-ca",
+                  "location": "https://www.kickstarter.com/locations/huntington-beach-ca"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627550006.7af65b13b51f454df66df9a81107670274e04cdb&woe_id=2425873"
+              }
+          }
+      },
+      "category": {
+          "id": 309,
+          "name": "Farms",
+          "analytics_name": "Farms",
+          "slug": "food/farms",
+          "position": 7,
+          "parent_id": 10,
+          "parent_name": "Food",
+          "color": 16725570,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/food/farms"
+              }
+          }
+      },
+      "profile": {
+          "id": 4230967,
+          "project_id": 4230967,
+          "state": "inactive",
+          "state_changed_at": 1623276587,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/033/875/319/e21f7549da4f2a0153821736fd9f609f_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1623614747&auto=format&frame=1&q=92&s=57027b45bf155e4bf047b7566f720173",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/033/875/319/e21f7549da4f2a0153821736fd9f609f_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1623614747&auto=format&frame=1&q=92&s=7824521df2429000cccee5bad442b872"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/herbanfarm/a-hydroponic-container-farming-company?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/herbanfarm/a-hydroponic-container-farming-company/rewards"
+          }
+      }
+  },
+  {
+      "id": 876630298,
+      "photo": {
+          "key": "assets/034/156/767/ed1b78b254f3c8dfc13bdd488feac65a_original.jpeg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/156/767/ed1b78b254f3c8dfc13bdd488feac65a_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625849588&auto=format&frame=1&q=92&s=83a29050e9ef2dc357770a6d3c587cb0",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/156/767/ed1b78b254f3c8dfc13bdd488feac65a_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1625849588&auto=format&frame=1&q=92&s=ce65d5a3963a22d5004ce72bb8deaa48",
+          "med": "https://ksr-ugc.imgix.net/assets/034/156/767/ed1b78b254f3c8dfc13bdd488feac65a_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1625849588&auto=format&frame=1&q=92&s=f4ae825b97573030354dd9826cad5a67",
+          "little": "https://ksr-ugc.imgix.net/assets/034/156/767/ed1b78b254f3c8dfc13bdd488feac65a_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1625849588&auto=format&frame=1&q=92&s=ac493a1db58772699e52423ef3cdfc07",
+          "small": "https://ksr-ugc.imgix.net/assets/034/156/767/ed1b78b254f3c8dfc13bdd488feac65a_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1625849588&auto=format&frame=1&q=92&s=819a9b53aad77299e03e6a4686b82829",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/156/767/ed1b78b254f3c8dfc13bdd488feac65a_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1625849588&auto=format&frame=1&q=92&s=13ab38fd535d4b2058cbf66fea178071",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/156/767/ed1b78b254f3c8dfc13bdd488feac65a_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1625849588&auto=format&frame=1&q=92&s=e95c640c1269e5f00c2fa90c02ebe451",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/156/767/ed1b78b254f3c8dfc13bdd488feac65a_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625849588&auto=format&frame=1&q=92&s=1a3067d75e6a44fc169dbf0c389effd5"
+      },
+      "name": "Beer Above Water- A diverse community-inspired beer brand.",
+      "blurb": "A 100% black owned beer brand and beer distribution company located in Murrells Inlet, South Carolina.",
+      "goal": 150000,
+      "pledged": 86,
+      "state": "live",
+      "slug": "beer-above-water-a-diverse-community-inspired-beer-brand",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1628720641,
+      "state_changed_at": 1626128642,
+      "created_at": 1625520270,
+      "launched_at": 1626128641,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 6,
+      "static_usd_rate": 1,
+      "usd_pledged": "86.0",
+      "converted_pledged_amount": 86,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 477981685,
+          "name": "Alan Holmes",
+          "slug": "aholmes843",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/034/124/771/964d39dab5ca0fa097ed0034798ff392_original.jpeg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1625601271&auto=format&frame=1&q=92&s=ae9895925794c075ab4252b0cddd5981",
+              "small": "https://ksr-ugc.imgix.net/assets/034/124/771/964d39dab5ca0fa097ed0034798ff392_original.jpeg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1625601271&auto=format&frame=1&q=92&s=e0921c5f1071e47bbb5bca37be4687df",
+              "medium": "https://ksr-ugc.imgix.net/assets/034/124/771/964d39dab5ca0fa097ed0034798ff392_original.jpeg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1625601271&auto=format&frame=1&q=92&s=73ace1be4408e39eddecacff159a4b04"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/aholmes843"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/477981685?signature=1627580024.1b22708200d1f135fcae92263056e3aadf5284c8"
+              }
+          }
+      },
+      "location": {
+          "id": 2456551,
+          "name": "Murrells Inlet",
+          "slug": "murrells-inlet-sc",
+          "short_name": "Murrells Inlet, SC",
+          "displayable_name": "Murrells Inlet, SC",
+          "localized_name": "Murrells Inlet",
+          "country": "US",
+          "state": "SC",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/murrells-inlet-sc",
+                  "location": "https://www.kickstarter.com/locations/murrells-inlet-sc"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627574452.c4acdc75707229d59ccd83531e2edee858bf5305&woe_id=2456551"
+              }
+          }
+      },
+      "category": {
+          "id": 307,
+          "name": "Drinks",
+          "analytics_name": "Drinks",
+          "slug": "food/drinks",
+          "position": 4,
+          "parent_id": 10,
+          "parent_name": "Food",
+          "color": 16725570,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/food/drinks"
+              }
+          }
+      },
+      "profile": {
+          "id": 4244028,
+          "project_id": 4244028,
+          "state": "inactive",
+          "state_changed_at": 1625520270,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/156/767/ed1b78b254f3c8dfc13bdd488feac65a_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625849588&auto=format&frame=1&q=92&s=1a3067d75e6a44fc169dbf0c389effd5",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/156/767/ed1b78b254f3c8dfc13bdd488feac65a_original.jpeg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625849588&auto=format&frame=1&q=92&s=83a29050e9ef2dc357770a6d3c587cb0"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/aholmes843/beer-above-water-a-diverse-community-inspired-beer-brand?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/aholmes843/beer-above-water-a-diverse-community-inspired-beer-brand/rewards"
+          }
+      }
+  },
+  {
+      "id": 1578691918,
+      "photo": {
+          "key": "assets/033/206/142/ec07da5eb0050bab5a642245d5fab5ec_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/033/206/142/ec07da5eb0050bab5a642245d5fab5ec_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1618943200&auto=format&frame=1&q=92&s=be166506f1fc104ecce6f0729a936bd4",
+          "ed": "https://ksr-ugc.imgix.net/assets/033/206/142/ec07da5eb0050bab5a642245d5fab5ec_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1618943200&auto=format&frame=1&q=92&s=ec9272eb251db2b24af186e1ec6aa040",
+          "med": "https://ksr-ugc.imgix.net/assets/033/206/142/ec07da5eb0050bab5a642245d5fab5ec_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1618943200&auto=format&frame=1&q=92&s=dc6d79c5744b890ca5cf1784097aff11",
+          "little": "https://ksr-ugc.imgix.net/assets/033/206/142/ec07da5eb0050bab5a642245d5fab5ec_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1618943200&auto=format&frame=1&q=92&s=279efcd50cb985bf1aacf1934ee56fed",
+          "small": "https://ksr-ugc.imgix.net/assets/033/206/142/ec07da5eb0050bab5a642245d5fab5ec_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1618943200&auto=format&frame=1&q=92&s=7c9fca4054e9d66858e9ec21f3d40917",
+          "thumb": "https://ksr-ugc.imgix.net/assets/033/206/142/ec07da5eb0050bab5a642245d5fab5ec_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1618943200&auto=format&frame=1&q=92&s=0626c003ecf50e72c102b131857b1d1a",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/033/206/142/ec07da5eb0050bab5a642245d5fab5ec_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1618943200&auto=format&frame=1&q=92&s=1b8f5f81b9259e553d847b99ae22ded2",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/033/206/142/ec07da5eb0050bab5a642245d5fab5ec_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1618943200&auto=format&frame=1&q=92&s=8922678cb5bb1fd62408d794032ae67a"
+      },
+      "name": "Super Fresh",
+      "blurb": "An Organic Farm developed with technical advancements to grow an array of Real Organic vegetables and fruits for everyone.",
+      "goal": 252000,
+      "pledged": 1.29,
+      "state": "live",
+      "slug": "super-fresh",
+      "disable_communication": false,
+      "country": "CA",
+      "country_displayable_name": "Canada",
+      "currency": "CAD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1629466753,
+      "state_changed_at": 1626874753,
+      "created_at": 1618095069,
+      "launched_at": 1626874753,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 1,
+      "static_usd_rate": 0.78401795,
+      "usd_pledged": "1.0113831555",
+      "converted_pledged_amount": 1,
+      "fx_rate": 0.79442567,
+      "usd_exchange_rate": 0.79442567,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 603633787,
+          "name": "Kavan",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/033/206/337/ec07da5eb0050bab5a642245d5fab5ec_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1618943744&auto=format&frame=1&q=92&s=ee646959d73311ae376ec6b75e056ed4",
+              "small": "https://ksr-ugc.imgix.net/assets/033/206/337/ec07da5eb0050bab5a642245d5fab5ec_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1618943744&auto=format&frame=1&q=92&s=09cdaf90135ba31f437785450634d7f9",
+              "medium": "https://ksr-ugc.imgix.net/assets/033/206/337/ec07da5eb0050bab5a642245d5fab5ec_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1618943744&auto=format&frame=1&q=92&s=d72d9a3b75671d83077def38012800fd"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/603633787"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/603633787?signature=1627580024.b6fa00eb5010477fb89b2cd8222fcfb585e6964e"
+              }
+          }
+      },
+      "location": {
+          "id": 4118,
+          "name": "Toronto",
+          "slug": "toronto-on-ca",
+          "short_name": "Toronto, Canada",
+          "displayable_name": "Toronto, Canada",
+          "localized_name": "Toronto",
+          "country": "CA",
+          "state": "ON",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "Canada",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/toronto-on-ca",
+                  "location": "https://www.kickstarter.com/locations/toronto-on-ca"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627548951.320d2eab03291c0c8792e815df1d8bba9d896858&woe_id=4118"
+              }
+          }
+      },
+      "category": {
+          "id": 10,
+          "name": "Food",
+          "analytics_name": "Food",
+          "slug": "food",
+          "position": 8,
+          "color": 16725570,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/food"
+              }
+          }
+      },
+      "profile": {
+          "id": 4196621,
+          "project_id": 4196621,
+          "state": "inactive",
+          "state_changed_at": 1618095069,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/033/206/142/ec07da5eb0050bab5a642245d5fab5ec_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1618943200&auto=format&frame=1&q=92&s=8922678cb5bb1fd62408d794032ae67a",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/033/206/142/ec07da5eb0050bab5a642245d5fab5ec_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1618943200&auto=format&frame=1&q=92&s=be166506f1fc104ecce6f0729a936bd4"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/603633787/super-fresh?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/603633787/super-fresh/rewards"
+          }
+      }
+  }
+]

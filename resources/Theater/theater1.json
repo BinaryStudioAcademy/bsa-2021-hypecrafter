@@ -1,0 +1,1553 @@
+[
+  {
+      "id": 1616394927,
+      "photo": {
+          "key": "assets/033/977/881/58f19ad07f727278946836f0cfea0081_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/033/977/881/58f19ad07f727278946836f0cfea0081_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624400354&auto=format&frame=1&q=92&s=fc038d9c07f0fbc581efc3593b0dc59e",
+          "ed": "https://ksr-ugc.imgix.net/assets/033/977/881/58f19ad07f727278946836f0cfea0081_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1624400354&auto=format&frame=1&q=92&s=fdc49bba26078546ec707ed4175020e0",
+          "med": "https://ksr-ugc.imgix.net/assets/033/977/881/58f19ad07f727278946836f0cfea0081_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1624400354&auto=format&frame=1&q=92&s=eed71eb0ff3132427598f6925b248112",
+          "little": "https://ksr-ugc.imgix.net/assets/033/977/881/58f19ad07f727278946836f0cfea0081_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1624400354&auto=format&frame=1&q=92&s=650db9011741203c855dac84f8e85d48",
+          "small": "https://ksr-ugc.imgix.net/assets/033/977/881/58f19ad07f727278946836f0cfea0081_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1624400354&auto=format&frame=1&q=92&s=760e36158d958724ec169d6dfea78fdc",
+          "thumb": "https://ksr-ugc.imgix.net/assets/033/977/881/58f19ad07f727278946836f0cfea0081_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1624400354&auto=format&frame=1&q=92&s=16de6e503f38fff692fd712e578719f7",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/033/977/881/58f19ad07f727278946836f0cfea0081_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1624400354&auto=format&frame=1&q=92&s=398f9cc8aabe43a190eee055af90cd1f",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/033/977/881/58f19ad07f727278946836f0cfea0081_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624400354&auto=format&frame=1&q=92&s=0110ceb9a5e8ad103309a018a1f8ee30"
+      },
+      "name": "Broadway Mentors Foundation for the Performing Arts",
+      "blurb": "Broadway/TV/Film performers (many Tony Award winners), offer online one on one/master class scholarships to students in financial need.",
+      "goal": 7500,
+      "pledged": 131,
+      "state": "live",
+      "slug": "broadway-mentors-foundation-for-the-performing-arts",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1629483718,
+      "state_changed_at": 1624299720,
+      "created_at": 1617294866,
+      "launched_at": 1624299718,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 3,
+      "static_usd_rate": 1,
+      "usd_pledged": "131.0",
+      "converted_pledged_amount": 131,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 980922666,
+          "name": "Joy Lober Anderson",
+          "slug": "broadwaymentorsfound",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/033/752/891/2faeb69e51ecaa6fcb935191e8cfd0d9_original.jpeg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1622673507&auto=format&frame=1&q=92&s=bac58c3fba130b4cb6f107f63c76384b",
+              "small": "https://ksr-ugc.imgix.net/assets/033/752/891/2faeb69e51ecaa6fcb935191e8cfd0d9_original.jpeg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1622673507&auto=format&frame=1&q=92&s=594677a63ab2056cc9d01a797b97cf87",
+              "medium": "https://ksr-ugc.imgix.net/assets/033/752/891/2faeb69e51ecaa6fcb935191e8cfd0d9_original.jpeg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1622673507&auto=format&frame=1&q=92&s=fd89420e70395d4a2e1559d95e011fac"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/broadwaymentorsfound"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/980922666?signature=1627583906.ce622807fc1302c138c000dc9b232bab82d7b6a9"
+              }
+          }
+      },
+      "location": {
+          "id": 2459115,
+          "name": "New York",
+          "slug": "new-york-ny",
+          "short_name": "New York, NY",
+          "displayable_name": "New York, NY",
+          "localized_name": "New York",
+          "country": "US",
+          "state": "NY",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/new-york-ny",
+                  "location": "https://www.kickstarter.com/locations/new-york-ny"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627548935.798cbc8d8b02f51761ab484df47a3960ccd2e384&woe_id=2459115"
+              }
+          }
+      },
+      "category": {
+          "id": 17,
+          "name": "Theater",
+          "analytics_name": "Theater",
+          "slug": "theater",
+          "position": 15,
+          "color": 16743775,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/theater"
+              }
+          }
+      },
+      "profile": {
+          "id": 4191721,
+          "project_id": 4191721,
+          "state": "inactive",
+          "state_changed_at": 1617294866,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/033/977/881/58f19ad07f727278946836f0cfea0081_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1624400354&auto=format&frame=1&q=92&s=0110ceb9a5e8ad103309a018a1f8ee30",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/033/977/881/58f19ad07f727278946836f0cfea0081_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1624400354&auto=format&frame=1&q=92&s=fc038d9c07f0fbc581efc3593b0dc59e"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/broadwaymentorsfound/broadway-mentors-foundation-for-the-performing-arts?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/broadwaymentorsfound/broadway-mentors-foundation-for-the-performing-arts/rewards"
+          }
+      }
+  },
+  {
+      "id": 1407449131,
+      "photo": {
+          "key": "assets/034/101/914/2ef4ad512dd6a5d55bf416d17e771c19_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/034/101/914/2ef4ad512dd6a5d55bf416d17e771c19_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625413240&auto=format&frame=1&q=92&s=ad370a32731ee5df6cae46425818c216",
+          "ed": "https://ksr-ugc.imgix.net/assets/034/101/914/2ef4ad512dd6a5d55bf416d17e771c19_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1625413240&auto=format&frame=1&q=92&s=a3dca7188629b1bce7976a9750f89d7b",
+          "med": "https://ksr-ugc.imgix.net/assets/034/101/914/2ef4ad512dd6a5d55bf416d17e771c19_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1625413240&auto=format&frame=1&q=92&s=4f416b76f0ebd469f116c72594c5a397",
+          "little": "https://ksr-ugc.imgix.net/assets/034/101/914/2ef4ad512dd6a5d55bf416d17e771c19_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1625413240&auto=format&frame=1&q=92&s=588c0a621b3e5b53f60c18abc01e9f67",
+          "small": "https://ksr-ugc.imgix.net/assets/034/101/914/2ef4ad512dd6a5d55bf416d17e771c19_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1625413240&auto=format&frame=1&q=92&s=2f3325ae618b4b644ccc72c54d5f80bd",
+          "thumb": "https://ksr-ugc.imgix.net/assets/034/101/914/2ef4ad512dd6a5d55bf416d17e771c19_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1625413240&auto=format&frame=1&q=92&s=50b44487f862de06d165cd8f459840e5",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/034/101/914/2ef4ad512dd6a5d55bf416d17e771c19_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1625413240&auto=format&frame=1&q=92&s=20013c1a3fb07bdd6cebc9e46aaf29b5",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/034/101/914/2ef4ad512dd6a5d55bf416d17e771c19_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625413240&auto=format&frame=1&q=92&s=2b0cdfcf5dffd7a5e5626a29f3b1fd94"
+      },
+      "name": "Laboratori d'Arte Stazione 37",
+      "blurb": "Uno spazio dove gli amanti della musica e dell'arte si sentiranno a casa",
+      "goal": 4000,
+      "pledged": 711,
+      "state": "live",
+      "slug": "laboratori-darte-stazione-37",
+      "disable_communication": false,
+      "country": "IT",
+      "country_displayable_name": "Italy",
+      "currency": "EUR",
+      "currency_symbol": "€",
+      "currency_trailing_code": false,
+      "deadline": 1631869167,
+      "state_changed_at": 1626685169,
+      "created_at": 1617204658,
+      "launched_at": 1626685167,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 15,
+      "static_usd_rate": 1.18066542,
+      "usd_pledged": "839.45311362",
+      "converted_pledged_amount": 840,
+      "fx_rate": 1.18212951,
+      "usd_exchange_rate": 1.18212951,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 603898333,
+          "name": "Cooperativa Laboratori d'Arte",
+          "slug": "stazione37",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/034/130/662/4c6696a58fb3c5a704d7fe971333b9e8_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1625649408&auto=format&frame=1&q=92&s=6628fade6e5f0eadfdea75dec7eb1f22",
+              "small": "https://ksr-ugc.imgix.net/assets/034/130/662/4c6696a58fb3c5a704d7fe971333b9e8_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1625649408&auto=format&frame=1&q=92&s=312b7ba491fd91b6e11f1bbc0350134f",
+              "medium": "https://ksr-ugc.imgix.net/assets/034/130/662/4c6696a58fb3c5a704d7fe971333b9e8_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1625649408&auto=format&frame=1&q=92&s=b460eb1cc1a73cf6ab842c8a1c8a7ac5"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/stazione37"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/603898333?signature=1627583906.f0bceed77c1e80549e349e8e0378230bc79b9e41"
+              }
+          }
+      },
+      "location": {
+          "id": 724706,
+          "name": "Taranto",
+          "slug": "taranto-taranto-puglia",
+          "short_name": "Taranto, Italy",
+          "displayable_name": "Taranto, Italy",
+          "localized_name": "Taranto",
+          "country": "IT",
+          "state": "Puglia",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "Italy",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/taranto-taranto-puglia",
+                  "location": "https://www.kickstarter.com/locations/taranto-taranto-puglia"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627548194.838f835e4506cc3f52a86f1cd70370d200ca473b&woe_id=724706"
+              }
+          }
+      },
+      "category": {
+          "id": 286,
+          "name": "Spaces",
+          "analytics_name": "Spaces",
+          "slug": "theater/spaces",
+          "position": 7,
+          "parent_id": 17,
+          "parent_name": "Theater",
+          "color": 16743775,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/theater/spaces"
+              }
+          }
+      },
+      "profile": {
+          "id": 4191073,
+          "project_id": 4191073,
+          "state": "inactive",
+          "state_changed_at": 1617204658,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/034/101/914/2ef4ad512dd6a5d55bf416d17e771c19_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1625413240&auto=format&frame=1&q=92&s=2b0cdfcf5dffd7a5e5626a29f3b1fd94",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/034/101/914/2ef4ad512dd6a5d55bf416d17e771c19_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1625413240&auto=format&frame=1&q=92&s=ad370a32731ee5df6cae46425818c216"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/stazione37/laboratori-darte-stazione-37?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/stazione37/laboratori-darte-stazione-37/rewards"
+          }
+      }
+  },
+  {
+      "id": 1273017441,
+      "photo": {
+          "key": "assets/033/476/282/d895e98532937f945ebf99e07d7b9cb1_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/033/476/282/d895e98532937f945ebf99e07d7b9cb1_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1620760492&auto=format&frame=1&q=92&s=327553a881bc48956af3f7c7616a60d3",
+          "ed": "https://ksr-ugc.imgix.net/assets/033/476/282/d895e98532937f945ebf99e07d7b9cb1_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1620760492&auto=format&frame=1&q=92&s=f918f1155c3a610baf16dd65ba38fcc2",
+          "med": "https://ksr-ugc.imgix.net/assets/033/476/282/d895e98532937f945ebf99e07d7b9cb1_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1620760492&auto=format&frame=1&q=92&s=e17d99869d4eba8846b0f954b3ac22b7",
+          "little": "https://ksr-ugc.imgix.net/assets/033/476/282/d895e98532937f945ebf99e07d7b9cb1_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1620760492&auto=format&frame=1&q=92&s=52734f7404ed419b7176153a31c77019",
+          "small": "https://ksr-ugc.imgix.net/assets/033/476/282/d895e98532937f945ebf99e07d7b9cb1_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1620760492&auto=format&frame=1&q=92&s=53dd0dcda8ec9ed8b6bb5cbf8657ae5a",
+          "thumb": "https://ksr-ugc.imgix.net/assets/033/476/282/d895e98532937f945ebf99e07d7b9cb1_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1620760492&auto=format&frame=1&q=92&s=b43da85bd4a046fad8cf9bad321fd9a4",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/033/476/282/d895e98532937f945ebf99e07d7b9cb1_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1620760492&auto=format&frame=1&q=92&s=96ce2825637949e33cf3c40191c024aa",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/033/476/282/d895e98532937f945ebf99e07d7b9cb1_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1620760492&auto=format&frame=1&q=92&s=f3b7e24650ef05a33bead75ec4d61636"
+      },
+      "name": "Boys Like Us",
+      "blurb": "Sharing my original one act play BOYS LIKE US",
+      "goal": 25,
+      "pledged": 1,
+      "state": "live",
+      "slug": "boys-like-us",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1627944517,
+      "state_changed_at": 1622760518,
+      "created_at": 1618871424,
+      "launched_at": 1622760517,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 1,
+      "static_usd_rate": 1,
+      "usd_pledged": "1.0",
+      "converted_pledged_amount": 1,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 2118747970,
+          "name": "Gladys",
+          "slug": "gmuturi",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/018/527/514/4a765514467efce9da9f4dfb2618960b_original.JPG?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1506647342&auto=format&frame=1&q=92&s=e8c295b73d728bb186d865ea1f4679bc",
+              "small": "https://ksr-ugc.imgix.net/assets/018/527/514/4a765514467efce9da9f4dfb2618960b_original.JPG?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1506647342&auto=format&frame=1&q=92&s=b1b185c6f86f9c3599ee65b83d651aa5",
+              "medium": "https://ksr-ugc.imgix.net/assets/018/527/514/4a765514467efce9da9f4dfb2618960b_original.JPG?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1506647342&auto=format&frame=1&q=92&s=efefc9cb99ea3e5f69705d5c8ababac6"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/gmuturi"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/2118747970?signature=1627583906.c27503fd60f930fb044c2ef582e25900e7787905"
+              }
+          }
+      },
+      "location": {
+          "id": 2409835,
+          "name": "Germantown",
+          "slug": "germantown-montgomery-md",
+          "short_name": "Germantown, MD",
+          "displayable_name": "Germantown, MD",
+          "localized_name": "Germantown",
+          "country": "US",
+          "state": "MD",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/germantown-montgomery-md",
+                  "location": "https://www.kickstarter.com/locations/germantown-montgomery-md"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627559991.4e5876124c45d4ee1ad2677f079680066a6c28ec&woe_id=2409835"
+              }
+          }
+      },
+      "category": {
+          "id": 285,
+          "name": "Plays",
+          "analytics_name": "Plays",
+          "slug": "theater/plays",
+          "position": 6,
+          "parent_id": 17,
+          "parent_name": "Theater",
+          "color": 16743775,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/theater/plays"
+              }
+          }
+      },
+      "profile": {
+          "id": 4201898,
+          "project_id": 4201898,
+          "state": "inactive",
+          "state_changed_at": 1618871424,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/033/476/282/d895e98532937f945ebf99e07d7b9cb1_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1620760492&auto=format&frame=1&q=92&s=f3b7e24650ef05a33bead75ec4d61636",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/033/476/282/d895e98532937f945ebf99e07d7b9cb1_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1620760492&auto=format&frame=1&q=92&s=327553a881bc48956af3f7c7616a60d3"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/gmuturi/boys-like-us?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/gmuturi/boys-like-us/rewards"
+          }
+      }
+  },
+  {
+      "id": 1833374262,
+      "photo": {
+          "key": "assets/033/819/479/2d3e78e3a62870f27a886cf6d47e2677_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/033/819/479/2d3e78e3a62870f27a886cf6d47e2677_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1623175257&auto=format&frame=1&q=92&s=0a4e9c1751a0fe3c8f378af2ae242913",
+          "ed": "https://ksr-ugc.imgix.net/assets/033/819/479/2d3e78e3a62870f27a886cf6d47e2677_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1623175257&auto=format&frame=1&q=92&s=4ce2bb3838d50df614a188982c7c15ce",
+          "med": "https://ksr-ugc.imgix.net/assets/033/819/479/2d3e78e3a62870f27a886cf6d47e2677_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1623175257&auto=format&frame=1&q=92&s=7467de4cfffc575572837844e2337e28",
+          "little": "https://ksr-ugc.imgix.net/assets/033/819/479/2d3e78e3a62870f27a886cf6d47e2677_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1623175257&auto=format&frame=1&q=92&s=3aa33a1c0cd3d8ee8cabc9a9cdc94ec8",
+          "small": "https://ksr-ugc.imgix.net/assets/033/819/479/2d3e78e3a62870f27a886cf6d47e2677_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1623175257&auto=format&frame=1&q=92&s=780d97e0eb0eb863f423ef4e20dccf17",
+          "thumb": "https://ksr-ugc.imgix.net/assets/033/819/479/2d3e78e3a62870f27a886cf6d47e2677_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1623175257&auto=format&frame=1&q=92&s=3916e97404f3b3351af51416aaed38df",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/033/819/479/2d3e78e3a62870f27a886cf6d47e2677_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1623175257&auto=format&frame=1&q=92&s=0fa71d4abbde22906818a9787cfb84d4",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/033/819/479/2d3e78e3a62870f27a886cf6d47e2677_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1623175257&auto=format&frame=1&q=92&s=5c13957370f4fe18d389a4899c787279"
+      },
+      "name": "Fundraising 'Naughty' for Camden Fringe Festival 2021",
+      "blurb": "'Naughty' is a semi-autobiographical, darkly comic, coming of age play exploring the challenges of growing up queer.",
+      "goal": 500,
+      "pledged": 711,
+      "state": "live",
+      "slug": "fundraising-naughty-for-camden-fringe-festival-2021",
+      "disable_communication": false,
+      "country": "GB",
+      "country_displayable_name": "the United Kingdom",
+      "currency": "GBP",
+      "currency_symbol": "£",
+      "currency_trailing_code": false,
+      "deadline": 1628895540,
+      "state_changed_at": 1623780743,
+      "created_at": 1623175077,
+      "launched_at": 1623780742,
+      "staff_pick": false,
+      "is_starrable": true,
+      "backers_count": 13,
+      "static_usd_rate": 1.41106615,
+      "usd_pledged": "1003.26803265",
+      "converted_pledged_amount": 986,
+      "fx_rate": 1.38747444,
+      "usd_exchange_rate": 1.38747444,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1602518734,
+          "name": "Andrew Houghton",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/033/823/305/d92bf8b57809e5199d53de22028b7449_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1623197732&auto=format&frame=1&q=92&s=a057acf6cdc0c5b67adff6d58e952b37",
+              "small": "https://ksr-ugc.imgix.net/assets/033/823/305/d92bf8b57809e5199d53de22028b7449_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1623197732&auto=format&frame=1&q=92&s=9dd1912c24d601ed6974e61c2337a337",
+              "medium": "https://ksr-ugc.imgix.net/assets/033/823/305/d92bf8b57809e5199d53de22028b7449_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1623197732&auto=format&frame=1&q=92&s=eba5324db78308e830c2a011b9756c24"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/1602518734"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1602518734?signature=1627583906.f255cb5eb8092f6a65c4263185daf3529efdc45e"
+              }
+          }
+      },
+      "location": {
+          "id": 12695807,
+          "name": "London Borough of Camden",
+          "slug": "london-borough-of-camden-london-gb",
+          "short_name": "London Borough of Camden, UK",
+          "displayable_name": "London Borough of Camden, UK",
+          "localized_name": "London Borough of Camden",
+          "country": "GB",
+          "state": "England",
+          "type": "LocalAdmin",
+          "is_root": false,
+          "expanded_country": "United Kingdom",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/london-borough-of-camden-london-gb",
+                  "location": "https://www.kickstarter.com/locations/london-borough-of-camden-london-gb"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627560662.273889dba2d7b5786bf3dd1aff2fcea828d7bf8b&woe_id=12695807"
+              }
+          }
+      },
+      "category": {
+          "id": 285,
+          "name": "Plays",
+          "analytics_name": "Plays",
+          "slug": "theater/plays",
+          "position": 6,
+          "parent_id": 17,
+          "parent_name": "Theater",
+          "color": 16743775,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/theater/plays"
+              }
+          }
+      },
+      "profile": {
+          "id": 4230260,
+          "project_id": 4230260,
+          "state": "inactive",
+          "state_changed_at": 1623175077,
+          "name": null,
+          "blurb": null,
+          "background_color": null,
+          "text_color": null,
+          "link_background_color": null,
+          "link_text_color": null,
+          "link_text": null,
+          "link_url": null,
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/033/819/479/2d3e78e3a62870f27a886cf6d47e2677_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1623175257&auto=format&frame=1&q=92&s=5c13957370f4fe18d389a4899c787279",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/033/819/479/2d3e78e3a62870f27a886cf6d47e2677_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1623175257&auto=format&frame=1&q=92&s=0a4e9c1751a0fe3c8f378af2ae242913"
+              }
+          }
+      },
+      "spotlight": false,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/1602518734/fundraising-naughty-for-camden-fringe-festival-2021?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/1602518734/fundraising-naughty-for-camden-fringe-festival-2021/rewards"
+          }
+      }
+  },
+  {
+      "id": 334342652,
+      "photo": {
+          "key": "assets/012/031/336/d051e5950d71793c1b2fe8785f25b771_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/012/031/336/d051e5950d71793c1b2fe8785f25b771_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1463725640&auto=format&frame=1&q=92&s=8a9f6a443cf9c74e4d13f16a5342f2a5",
+          "ed": "https://ksr-ugc.imgix.net/assets/012/031/336/d051e5950d71793c1b2fe8785f25b771_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1463725640&auto=format&frame=1&q=92&s=0a6333b6ecabd4b5677964b17d06e873",
+          "med": "https://ksr-ugc.imgix.net/assets/012/031/336/d051e5950d71793c1b2fe8785f25b771_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1463725640&auto=format&frame=1&q=92&s=b3c431551dc9b262e56d477514d53409",
+          "little": "https://ksr-ugc.imgix.net/assets/012/031/336/d051e5950d71793c1b2fe8785f25b771_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1463725640&auto=format&frame=1&q=92&s=b8cfc50fe1ba99ebe3bfc18a93456db6",
+          "small": "https://ksr-ugc.imgix.net/assets/012/031/336/d051e5950d71793c1b2fe8785f25b771_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1463725640&auto=format&frame=1&q=92&s=10200880a9bf15c3a9df4fbd1b6c3a76",
+          "thumb": "https://ksr-ugc.imgix.net/assets/012/031/336/d051e5950d71793c1b2fe8785f25b771_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1463725640&auto=format&frame=1&q=92&s=f14f3813089cc8edc77db54888c2784e",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/012/031/336/d051e5950d71793c1b2fe8785f25b771_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1463725640&auto=format&frame=1&q=92&s=a1da5685d90825e48802db96b9ebdd97",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/012/031/336/d051e5950d71793c1b2fe8785f25b771_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1463725640&auto=format&frame=1&q=92&s=b51b022a451945709753643d6f343e37"
+      },
+      "name": "Pointless Brewery & Theatre",
+      "blurb": "Creating a home for improvisational theatre and experimental ales.",
+      "goal": 50000,
+      "pledged": 52536.98,
+      "state": "successful",
+      "slug": "pointless-brewery-and-theatre",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1429582664,
+      "state_changed_at": 1429582664,
+      "created_at": 1423504563,
+      "launched_at": 1426213064,
+      "staff_pick": true,
+      "is_starrable": false,
+      "backers_count": 522,
+      "static_usd_rate": 1,
+      "usd_pledged": "52536.98",
+      "converted_pledged_amount": 52536,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 68662954,
+          "name": "Tori and Jason Tomalia",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/009/551/424/939d4723b57225ab524928ec5e99e2e4_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1461602676&auto=format&frame=1&q=92&s=28308a6a92e12a7b5adbb1daca581841",
+              "small": "https://ksr-ugc.imgix.net/assets/009/551/424/939d4723b57225ab524928ec5e99e2e4_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1461602676&auto=format&frame=1&q=92&s=4b7feb463f250db090bac5573cbe3991",
+              "medium": "https://ksr-ugc.imgix.net/assets/009/551/424/939d4723b57225ab524928ec5e99e2e4_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1461602676&auto=format&frame=1&q=92&s=fc67a72336e26cb17d2f5eb79d5f55ed"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/68662954"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/68662954?signature=1627583906.db640d7f28b3f2d835e5d1e7dbad3357c98122d0"
+              }
+          }
+      },
+      "location": {
+          "id": 2354842,
+          "name": "Ann Arbor",
+          "slug": "ann-arbor-mi",
+          "short_name": "Ann Arbor, MI",
+          "displayable_name": "Ann Arbor, MI",
+          "localized_name": "Ann Arbor",
+          "country": "US",
+          "state": "MI",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/ann-arbor-mi",
+                  "location": "https://www.kickstarter.com/locations/ann-arbor-mi"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627549838.44b1201550d0f2db894a70f7a0e05ed8ee65b937&woe_id=2354842"
+              }
+          }
+      },
+      "category": {
+          "id": 17,
+          "name": "Theater",
+          "analytics_name": "Theater",
+          "slug": "theater",
+          "position": 15,
+          "color": 16743775,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/theater"
+              }
+          }
+      },
+      "profile": {
+          "id": 1694183,
+          "project_id": 1694183,
+          "state": "active",
+          "state_changed_at": 1430422204,
+          "name": "Pointless Brewery & Theatre",
+          "blurb": "Creating a home for improvisational theatre and experimental ales.",
+          "background_color": "",
+          "text_color": "",
+          "link_background_color": "",
+          "link_text_color": "",
+          "link_text": "Follow along!",
+          "link_url": "http://www.pointlessbrew.com",
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/012/031/336/d051e5950d71793c1b2fe8785f25b771_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1463725640&auto=format&frame=1&q=92&s=b51b022a451945709753643d6f343e37",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/012/031/336/d051e5950d71793c1b2fe8785f25b771_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1463725640&auto=format&frame=1&q=92&s=8a9f6a443cf9c74e4d13f16a5342f2a5"
+              }
+          }
+      },
+      "spotlight": true,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/68662954/pointless-brewery-and-theatre?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/68662954/pointless-brewery-and-theatre/rewards"
+          }
+      }
+  },
+  {
+      "id": 1960824537,
+      "photo": {
+          "key": "assets/018/754/073/5fea19680c043c7eecb895449e00431a_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/018/754/073/5fea19680c043c7eecb895449e00431a_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1508849531&auto=format&frame=1&q=92&s=fd084967162043e18b9e5f62d0045cca",
+          "ed": "https://ksr-ugc.imgix.net/assets/018/754/073/5fea19680c043c7eecb895449e00431a_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1508849531&auto=format&frame=1&q=92&s=5e83fc6408a71cf20d483c6bdf9ee4cd",
+          "med": "https://ksr-ugc.imgix.net/assets/018/754/073/5fea19680c043c7eecb895449e00431a_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1508849531&auto=format&frame=1&q=92&s=0b440b18126734c8fabecf1588aaa517",
+          "little": "https://ksr-ugc.imgix.net/assets/018/754/073/5fea19680c043c7eecb895449e00431a_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1508849531&auto=format&frame=1&q=92&s=e7182c1a436aa0b5e6efd54907e9407c",
+          "small": "https://ksr-ugc.imgix.net/assets/018/754/073/5fea19680c043c7eecb895449e00431a_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1508849531&auto=format&frame=1&q=92&s=a556dfd20e0ca6675066c48c5c06e37e",
+          "thumb": "https://ksr-ugc.imgix.net/assets/018/754/073/5fea19680c043c7eecb895449e00431a_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1508849531&auto=format&frame=1&q=92&s=d936b1563ff99e7dbb5edd3e2542481f",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/018/754/073/5fea19680c043c7eecb895449e00431a_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1508849531&auto=format&frame=1&q=92&s=65fe91546c7d33185ea815c4126b0972",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/018/754/073/5fea19680c043c7eecb895449e00431a_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1508849531&auto=format&frame=1&q=92&s=520f218b0033d87d1caa4a7a72c99dab"
+      },
+      "name": "Dynasty @ The Hayworth: New, Enchanting Entertainment!",
+      "blurb": "A new home for creators and fans of comedy, music, film, and more.  Plus podcasting and streaming entertainment for all!",
+      "goal": 100000,
+      "pledged": 102997.79,
+      "state": "successful",
+      "slug": "a-new-entertainment-experience-in-a-historic-la-th",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1510905540,
+      "state_changed_at": 1510905540,
+      "created_at": 1328385253,
+      "launched_at": 1508848803,
+      "staff_pick": true,
+      "is_starrable": false,
+      "backers_count": 647,
+      "static_usd_rate": 1,
+      "usd_pledged": "102997.79",
+      "converted_pledged_amount": 102997,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 439618076,
+          "name": "Jamie Flam",
+          "slug": "jamieflam",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/005/770/366/3402394d4c11a38c047db77445f59987_original.png?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1508831323&auto=format&frame=1&q=92&s=50a5daac226639d2933a9573409a24c0",
+              "small": "https://ksr-ugc.imgix.net/assets/005/770/366/3402394d4c11a38c047db77445f59987_original.png?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1508831323&auto=format&frame=1&q=92&s=cef5c2b26a57447274ee6d7ba15373f8",
+              "medium": "https://ksr-ugc.imgix.net/assets/005/770/366/3402394d4c11a38c047db77445f59987_original.png?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1508831323&auto=format&frame=1&q=92&s=47fc2c79765bd14c5088672e81378029"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/jamieflam"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/439618076?signature=1627583906.e5be1b18a1bab555ed3d83616a5269c5065109e5"
+              }
+          }
+      },
+      "location": {
+          "id": 2442047,
+          "name": "Los Angeles",
+          "slug": "los-angeles-ca",
+          "short_name": "Los Angeles, CA",
+          "displayable_name": "Los Angeles, CA",
+          "localized_name": "Los Angeles",
+          "country": "US",
+          "state": "CA",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/los-angeles-ca",
+                  "location": "https://www.kickstarter.com/locations/los-angeles-ca"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627548931.93059c39f967bfe76b10abc09360af28bb72e9d9&woe_id=2442047"
+              }
+          }
+      },
+      "category": {
+          "id": 388,
+          "name": "Comedy",
+          "analytics_name": "Comedy",
+          "slug": "theater/comedy",
+          "position": 1,
+          "parent_id": 17,
+          "parent_name": "Theater",
+          "color": 16743775,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/theater/comedy"
+              }
+          }
+      },
+      "profile": {
+          "id": 75820,
+          "project_id": 75820,
+          "state": "active",
+          "state_changed_at": 1511069867,
+          "name": "Dynasty Typewriter at The Hayworth Theatre",
+          "blurb": "A new home for creators and fans of comedy, music, film, and more.  Plus podcasting and streaming entertainment for all!",
+          "background_color": "004954",
+          "text_color": "004954",
+          "link_background_color": "fe94ab",
+          "link_text_color": "",
+          "link_text": "Follow along!",
+          "link_url": "https://www.kickstarter.com/projects/jamieflam/a-new-entertainment-experience-in-a-historic-la-th?ref=email_nextsteps_spotlight",
+          "show_feature_image": false,
+          "background_image_opacity": 1,
+          "background_image_attributes": {
+              "id": 19300297,
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/019/300/297/1a99a37fadc286667d1d2f4633399cd5_original.jpg?ixlib=rb-4.0.2&w=1600&fit=max&v=1511114233&auto=format&frame=1&q=92&s=c8ddbdfec3775be2a0ec2e04e7dd0893",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/019/300/297/1a99a37fadc286667d1d2f4633399cd5_original.jpg?ixlib=rb-4.0.2&w=460&fit=max&v=1511114233&auto=format&frame=1&q=92&s=eb9b2673732cae2f717c0916230af9a0"
+              }
+          },
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/018/754/073/5fea19680c043c7eecb895449e00431a_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1508849531&auto=format&frame=1&q=92&s=520f218b0033d87d1caa4a7a72c99dab",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/018/754/073/5fea19680c043c7eecb895449e00431a_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1508849531&auto=format&frame=1&q=92&s=fd084967162043e18b9e5f62d0045cca"
+              }
+          }
+      },
+      "spotlight": true,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/jamieflam/a-new-entertainment-experience-in-a-historic-la-th?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/jamieflam/a-new-entertainment-experience-in-a-historic-la-th/rewards"
+          }
+      }
+  },
+  {
+      "id": 1586377223,
+      "photo": {
+          "key": "assets/011/543/595/9b772d190bbe9e544d2ff00d42d404c9_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/011/543/595/9b772d190bbe9e544d2ff00d42d404c9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1463684244&auto=format&frame=1&q=92&s=defca5f16349892f2336d37b09026511",
+          "ed": "https://ksr-ugc.imgix.net/assets/011/543/595/9b772d190bbe9e544d2ff00d42d404c9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1463684244&auto=format&frame=1&q=92&s=1cfadfcc395fa868765af0fd540bbc40",
+          "med": "https://ksr-ugc.imgix.net/assets/011/543/595/9b772d190bbe9e544d2ff00d42d404c9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1463684244&auto=format&frame=1&q=92&s=a2c64f8edc597c3934294effe3c57c6f",
+          "little": "https://ksr-ugc.imgix.net/assets/011/543/595/9b772d190bbe9e544d2ff00d42d404c9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1463684244&auto=format&frame=1&q=92&s=52fbf2e5a5738c961352e738b0e4ad4c",
+          "small": "https://ksr-ugc.imgix.net/assets/011/543/595/9b772d190bbe9e544d2ff00d42d404c9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1463684244&auto=format&frame=1&q=92&s=ff4c37b65d4acbdd293bcfd08f1d03b8",
+          "thumb": "https://ksr-ugc.imgix.net/assets/011/543/595/9b772d190bbe9e544d2ff00d42d404c9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1463684244&auto=format&frame=1&q=92&s=4d5831fbef1ca76c80accacfd5ef6a4e",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/011/543/595/9b772d190bbe9e544d2ff00d42d404c9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1463684244&auto=format&frame=1&q=92&s=f1632dc2a18835bf2e86fc871494f55e",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/011/543/595/9b772d190bbe9e544d2ff00d42d404c9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1463684244&auto=format&frame=1&q=92&s=380f5fcfb803fffe709abfe0774a6856"
+      },
+      "name": "Tarocco",
+      "blurb": "A visionary three-part circus for the stage.",
+      "goal": 7500,
+      "pledged": 7500,
+      "state": "successful",
+      "slug": "tarocco",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1375993209,
+      "state_changed_at": 1375993209,
+      "created_at": 1372390019,
+      "launched_at": 1373401209,
+      "staff_pick": true,
+      "is_starrable": false,
+      "backers_count": 94,
+      "static_usd_rate": 1,
+      "usd_pledged": "7500.0",
+      "converted_pledged_amount": 7500,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1095929364,
+          "name": "Nat Allister",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/007/730/643/9e4789cf6e61ad77868acdcd3df64e41_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1461475722&auto=format&frame=1&q=92&s=1a6b8f068408b37d3254bd931b71b103",
+              "small": "https://ksr-ugc.imgix.net/assets/007/730/643/9e4789cf6e61ad77868acdcd3df64e41_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1461475722&auto=format&frame=1&q=92&s=52347099f316933070db1c702426403e",
+              "medium": "https://ksr-ugc.imgix.net/assets/007/730/643/9e4789cf6e61ad77868acdcd3df64e41_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1461475722&auto=format&frame=1&q=92&s=0e00f1d75a715a10edb34fb777b0b603"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/1095929364"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1095929364?signature=1627583906.2e84c063b02203eb90f24f41c9331c5fe45fc847"
+              }
+          }
+      },
+      "location": {
+          "id": 2356566,
+          "name": "Asheville",
+          "slug": "asheville-nc",
+          "short_name": "Asheville, NC",
+          "displayable_name": "Asheville, NC",
+          "localized_name": "Asheville",
+          "country": "US",
+          "state": "NC",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/asheville-nc",
+                  "location": "https://www.kickstarter.com/locations/asheville-nc"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627550522.7ee3688fcf4f923df5ae2dac4e0136b8a63a3d34&woe_id=2356566"
+              }
+          }
+      },
+      "category": {
+          "id": 17,
+          "name": "Theater",
+          "analytics_name": "Theater",
+          "slug": "theater",
+          "position": 15,
+          "color": 16743775,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/theater"
+              }
+          }
+      },
+      "profile": {
+          "id": 617317,
+          "project_id": 617317,
+          "state": "active",
+          "state_changed_at": 1451152603,
+          "name": "The Fox & Beggar Theater",
+          "blurb": "A visionary three-part circus for the stage.",
+          "background_color": "",
+          "text_color": "",
+          "link_background_color": "",
+          "link_text_color": "",
+          "link_text": "Follow along!",
+          "link_url": "https://www.kickstarter.com/projects/1095929364/tarocco",
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/011/543/595/9b772d190bbe9e544d2ff00d42d404c9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1463684244&auto=format&frame=1&q=92&s=380f5fcfb803fffe709abfe0774a6856",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/011/543/595/9b772d190bbe9e544d2ff00d42d404c9_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1463684244&auto=format&frame=1&q=92&s=defca5f16349892f2336d37b09026511"
+              }
+          }
+      },
+      "spotlight": true,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/1095929364/tarocco?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/1095929364/tarocco/rewards"
+          }
+      }
+  },
+  {
+      "id": 790833302,
+      "photo": {
+          "key": "assets/011/456/041/f649c8f0df924d6f933ddd306891e192_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/011/456/041/f649c8f0df924d6f933ddd306891e192_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1463682972&auto=format&frame=1&q=92&s=2ed929d0937ee5c4682b6a1f1b6aaa69",
+          "ed": "https://ksr-ugc.imgix.net/assets/011/456/041/f649c8f0df924d6f933ddd306891e192_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1463682972&auto=format&frame=1&q=92&s=9afd6fe170349c9cdf2fdc527a3fe439",
+          "med": "https://ksr-ugc.imgix.net/assets/011/456/041/f649c8f0df924d6f933ddd306891e192_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1463682972&auto=format&frame=1&q=92&s=2589358101704b91ee08c1e7c3f9f14a",
+          "little": "https://ksr-ugc.imgix.net/assets/011/456/041/f649c8f0df924d6f933ddd306891e192_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1463682972&auto=format&frame=1&q=92&s=bc3c0ba282a8b50b0f60b14b7b74fcee",
+          "small": "https://ksr-ugc.imgix.net/assets/011/456/041/f649c8f0df924d6f933ddd306891e192_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1463682972&auto=format&frame=1&q=92&s=42ccb88ac5a21a583c5a41d4c7da4eef",
+          "thumb": "https://ksr-ugc.imgix.net/assets/011/456/041/f649c8f0df924d6f933ddd306891e192_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1463682972&auto=format&frame=1&q=92&s=5ae58c15b8ed6ca000ee4a0458be97b8",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/011/456/041/f649c8f0df924d6f933ddd306891e192_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1463682972&auto=format&frame=1&q=92&s=08fac12372d9d0b0499ebe80d67b6c9c",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/011/456/041/f649c8f0df924d6f933ddd306891e192_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1463682972&auto=format&frame=1&q=92&s=a9df8983903b32b52eebda61c71a1426"
+      },
+      "name": "AMERICAN PSYCHO",
+      "blurb": "Patrick Bateman LIVE on stage! Bring a raincoat.",
+      "goal": 150000,
+      "pledged": 154929.48,
+      "state": "successful",
+      "slug": "american-psycho",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1369452600,
+      "state_changed_at": 1369452633,
+      "created_at": 1354324299,
+      "launched_at": 1366642030,
+      "staff_pick": true,
+      "is_starrable": false,
+      "backers_count": 1421,
+      "static_usd_rate": 1,
+      "usd_pledged": "154929.48",
+      "converted_pledged_amount": 154929,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1798121016,
+          "name": "Jesse Singer",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/007/113/463/0a505f203d9a81349cd0bd8cfc731462_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1461435708&auto=format&frame=1&q=92&s=b8f753ee1143e3d4a4f42b1983cc2269",
+              "small": "https://ksr-ugc.imgix.net/assets/007/113/463/0a505f203d9a81349cd0bd8cfc731462_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1461435708&auto=format&frame=1&q=92&s=cdbccf8300fb90cd6c970c0b5dbc8aad",
+              "medium": "https://ksr-ugc.imgix.net/assets/007/113/463/0a505f203d9a81349cd0bd8cfc731462_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1461435708&auto=format&frame=1&q=92&s=ba89a414d254491907180b0836671201"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/1798121016"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1798121016?signature=1627583906.962fbd24e2a924d0b02ccf81ca7ed9ebf6ff24f5"
+              }
+          }
+      },
+      "location": {
+          "id": 44418,
+          "name": "London",
+          "slug": "london-gb",
+          "short_name": "London, UK",
+          "displayable_name": "London, UK",
+          "localized_name": "London",
+          "country": "GB",
+          "state": "England",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United Kingdom",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/london-gb",
+                  "location": "https://www.kickstarter.com/locations/london-gb"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627548932.ac1e19ecbb5a9f877a8865d239c6a00c6058b589&woe_id=44418"
+              }
+          }
+      },
+      "category": {
+          "id": 284,
+          "name": "Musical",
+          "analytics_name": "Musical",
+          "slug": "theater/musical",
+          "position": 5,
+          "parent_id": 17,
+          "parent_name": "Theater",
+          "color": 16743775,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/theater/musical"
+              }
+          }
+      },
+      "profile": {
+          "id": 413173,
+          "project_id": 413173,
+          "state": "active",
+          "state_changed_at": 1445621714,
+          "name": "AMERICAN PSYCHO",
+          "blurb": "Patrick Bateman LIVE on stage! Bring a raincoat.",
+          "background_color": "",
+          "text_color": "",
+          "link_background_color": "",
+          "link_text_color": "",
+          "link_text": "Follow along!",
+          "link_url": "",
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/011/456/041/f649c8f0df924d6f933ddd306891e192_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1463682972&auto=format&frame=1&q=92&s=a9df8983903b32b52eebda61c71a1426",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/011/456/041/f649c8f0df924d6f933ddd306891e192_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1463682972&auto=format&frame=1&q=92&s=2ed929d0937ee5c4682b6a1f1b6aaa69"
+              }
+          }
+      },
+      "spotlight": true,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/1798121016/american-psycho?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/1798121016/american-psycho/rewards"
+          }
+      }
+  },
+  {
+      "id": 1241386930,
+      "photo": {
+          "key": "assets/012/056/048/3b9a9fed0db46b300e77e3f6c3f16151_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/012/056/048/3b9a9fed0db46b300e77e3f6c3f16151_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1463727912&auto=format&frame=1&q=92&s=187bcf2028fde103619d3a3b411ef4ec",
+          "ed": "https://ksr-ugc.imgix.net/assets/012/056/048/3b9a9fed0db46b300e77e3f6c3f16151_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1463727912&auto=format&frame=1&q=92&s=68bac4c706c81270a764ba8c2d53ad57",
+          "med": "https://ksr-ugc.imgix.net/assets/012/056/048/3b9a9fed0db46b300e77e3f6c3f16151_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1463727912&auto=format&frame=1&q=92&s=0c0cf358e729980d1f851502f61314ae",
+          "little": "https://ksr-ugc.imgix.net/assets/012/056/048/3b9a9fed0db46b300e77e3f6c3f16151_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1463727912&auto=format&frame=1&q=92&s=eec170380ff84337f59e1df778cefbcb",
+          "small": "https://ksr-ugc.imgix.net/assets/012/056/048/3b9a9fed0db46b300e77e3f6c3f16151_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1463727912&auto=format&frame=1&q=92&s=3f13a721512c278e7a0c143172c6f0a3",
+          "thumb": "https://ksr-ugc.imgix.net/assets/012/056/048/3b9a9fed0db46b300e77e3f6c3f16151_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1463727912&auto=format&frame=1&q=92&s=e167ba54668da782123d482a0b8a5aed",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/012/056/048/3b9a9fed0db46b300e77e3f6c3f16151_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1463727912&auto=format&frame=1&q=92&s=a81d850623c4d73f276555d4d3fb9aca",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/012/056/048/3b9a9fed0db46b300e77e3f6c3f16151_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1463727912&auto=format&frame=1&q=92&s=c2bd6d32291795911aa15cec7c2542ce"
+      },
+      "name": "The Grand Paradise",
+      "blurb": "An immersive theater experience. A late 1970s tropical resort. A fountain of youth that promises to quench your deepest longings.",
+      "goal": 21700,
+      "pledged": 73354,
+      "state": "successful",
+      "slug": "the-grand-paradise",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1439559061,
+      "state_changed_at": 1439559065,
+      "created_at": 1425325254,
+      "launched_at": 1436967061,
+      "staff_pick": true,
+      "is_starrable": false,
+      "backers_count": 552,
+      "static_usd_rate": 1,
+      "usd_pledged": "73354.0",
+      "converted_pledged_amount": 73354,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 2054002870,
+          "name": "Third Rail Projects",
+          "slug": "thirdrailprojects",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/006/655/738/fe6e2f6dc2adc9628e08523349ce2fd2_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1461402731&auto=format&frame=1&q=92&s=79a7b80561434cdc4359aee2f6f38dc1",
+              "small": "https://ksr-ugc.imgix.net/assets/006/655/738/fe6e2f6dc2adc9628e08523349ce2fd2_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1461402731&auto=format&frame=1&q=92&s=e56d3a7ab388a7fb357d02facc5086c8",
+              "medium": "https://ksr-ugc.imgix.net/assets/006/655/738/fe6e2f6dc2adc9628e08523349ce2fd2_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1461402731&auto=format&frame=1&q=92&s=73de860b4db603ad6c743320cfb7011d"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/thirdrailprojects"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/2054002870?signature=1627583906.96c7349d999fad1dcbcbf95457b46dd809f16cff"
+              }
+          }
+      },
+      "location": {
+          "id": 12589335,
+          "name": "Brooklyn",
+          "slug": "brooklyn-ny",
+          "short_name": "Brooklyn, NY",
+          "displayable_name": "Brooklyn, NY",
+          "localized_name": "Brooklyn",
+          "country": "US",
+          "state": "NY",
+          "type": "County",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/brooklyn-ny",
+                  "location": "https://www.kickstarter.com/locations/brooklyn-ny"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627548994.9b77e312491ac3f40c9b89204e0735acb900397b&woe_id=12589335"
+              }
+          }
+      },
+      "category": {
+          "id": 283,
+          "name": "Immersive",
+          "analytics_name": "Immersive",
+          "slug": "theater/immersive",
+          "position": 4,
+          "parent_id": 17,
+          "parent_name": "Theater",
+          "color": 16743775,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/theater/immersive"
+              }
+          }
+      },
+      "profile": {
+          "id": 1743481,
+          "project_id": 1743481,
+          "state": "active",
+          "state_changed_at": 1439665420,
+          "name": "The Grand Paradise",
+          "blurb": "An immersive theater experience. A late 1970s tropical resort. A fountain of youth that promises to quench your deepest longings.",
+          "background_color": "",
+          "text_color": "",
+          "link_background_color": "",
+          "link_text_color": "",
+          "link_text": "Follow along!",
+          "link_url": "http://www.thegrandparadise.com",
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/012/056/048/3b9a9fed0db46b300e77e3f6c3f16151_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1463727912&auto=format&frame=1&q=92&s=c2bd6d32291795911aa15cec7c2542ce",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/012/056/048/3b9a9fed0db46b300e77e3f6c3f16151_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1463727912&auto=format&frame=1&q=92&s=187bcf2028fde103619d3a3b411ef4ec"
+              }
+          }
+      },
+      "spotlight": true,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/thirdrailprojects/the-grand-paradise?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/thirdrailprojects/the-grand-paradise/rewards"
+          }
+      }
+  },
+  {
+      "id": 1708704776,
+      "photo": {
+          "key": "assets/011/873/366/a55dd3e86e7c1e2bd865a755e5f3f528_original.png",
+          "full": "https://ksr-ugc.imgix.net/assets/011/873/366/a55dd3e86e7c1e2bd865a755e5f3f528_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1463708200&auto=format&frame=1&q=92&s=b3397f73194b08e74115c05292549c87",
+          "ed": "https://ksr-ugc.imgix.net/assets/011/873/366/a55dd3e86e7c1e2bd865a755e5f3f528_original.png?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1463708200&auto=format&frame=1&q=92&s=63833269fd051085c1aa7b2d9d4576a6",
+          "med": "https://ksr-ugc.imgix.net/assets/011/873/366/a55dd3e86e7c1e2bd865a755e5f3f528_original.png?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1463708200&auto=format&frame=1&q=92&s=f4f2775f73bd979e6479b8f9c8dd6fa3",
+          "little": "https://ksr-ugc.imgix.net/assets/011/873/366/a55dd3e86e7c1e2bd865a755e5f3f528_original.png?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1463708200&auto=format&frame=1&q=92&s=acc037c841d271d3d9c36be270ba9683",
+          "small": "https://ksr-ugc.imgix.net/assets/011/873/366/a55dd3e86e7c1e2bd865a755e5f3f528_original.png?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1463708200&auto=format&frame=1&q=92&s=0c41e28e81e9416a3f544eb84188e61e",
+          "thumb": "https://ksr-ugc.imgix.net/assets/011/873/366/a55dd3e86e7c1e2bd865a755e5f3f528_original.png?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1463708200&auto=format&frame=1&q=92&s=125297747f9ad5970ddd6bf6d6063592",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/011/873/366/a55dd3e86e7c1e2bd865a755e5f3f528_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1463708200&auto=format&frame=1&q=92&s=90e6aae8fb472c3a8c3c1795dd04c6c0",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/011/873/366/a55dd3e86e7c1e2bd865a755e5f3f528_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1463708200&auto=format&frame=1&q=92&s=c1f3a207ec457f1184fffe1451238a3b"
+      },
+      "name": "The Eternal Space Brings the Old Penn Station Back to Life",
+      "blurb": "A play that uses photography to tell the story of a friendship forged during the demolition of New York's Pennsylvania Station.",
+      "goal": 20000,
+      "pledged": 23505,
+      "state": "successful",
+      "slug": "the-eternal-space-brings-the-old-penn-station-back",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1415319355,
+      "state_changed_at": 1415319358,
+      "created_at": 1411153645,
+      "launched_at": 1411859755,
+      "staff_pick": true,
+      "is_starrable": false,
+      "backers_count": 213,
+      "static_usd_rate": 1,
+      "usd_pledged": "23505.0",
+      "converted_pledged_amount": 23505,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 1706756548,
+          "name": "Justin Rivers",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/009/273/319/cb74e67f788a8e0981b9b4a5555b8038_original.png?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1461570943&auto=format&frame=1&q=92&s=0a6e36b20b08ecd0990aff69ccf04cec",
+              "small": "https://ksr-ugc.imgix.net/assets/009/273/319/cb74e67f788a8e0981b9b4a5555b8038_original.png?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1461570943&auto=format&frame=1&q=92&s=90793390dcf00e711831297004594889",
+              "medium": "https://ksr-ugc.imgix.net/assets/009/273/319/cb74e67f788a8e0981b9b4a5555b8038_original.png?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1461570943&auto=format&frame=1&q=92&s=a56317b67e1b404f38351ba8d8b3ae9e"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/1706756548"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/1706756548?signature=1627583906.dbb579147d2604cacdc089b5510493e8c726e31a"
+              }
+          }
+      },
+      "location": {
+          "id": 2459115,
+          "name": "New York",
+          "slug": "new-york-ny",
+          "short_name": "New York, NY",
+          "displayable_name": "New York, NY",
+          "localized_name": "New York",
+          "country": "US",
+          "state": "NY",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/new-york-ny",
+                  "location": "https://www.kickstarter.com/locations/new-york-ny"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627548935.798cbc8d8b02f51761ab484df47a3960ccd2e384&woe_id=2459115"
+              }
+          }
+      },
+      "category": {
+          "id": 285,
+          "name": "Plays",
+          "analytics_name": "Plays",
+          "slug": "theater/plays",
+          "position": 6,
+          "parent_id": 17,
+          "parent_name": "Theater",
+          "color": 16743775,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/theater/plays"
+              }
+          }
+      },
+      "profile": {
+          "id": 1367816,
+          "project_id": 1367816,
+          "state": "active",
+          "state_changed_at": 1427311284,
+          "name": "The Eternal Space Brings the Old Penn Station Back to Life",
+          "blurb": "A play that uses photography to tell the story of a friendship forged during the demolition of New York's Pennsylvania Station.",
+          "background_color": "",
+          "text_color": "ffffff",
+          "link_background_color": "ff0052",
+          "link_text_color": "",
+          "link_text": "Learn More",
+          "link_url": "https://www.kickstarter.com/projects/1706756548/the-eternal-space-brings-the-old-penn-station-back",
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "background_image_attributes": {
+              "id": 3502077,
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/003/502/077/a7415a2184ac41a4e92ffbf1911364d4_original.png?ixlib=rb-4.0.2&w=1600&fit=max&v=1427314011&auto=format&frame=1&q=92&s=f4b288e10043999af3d3cc92ac5d71ec",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/003/502/077/a7415a2184ac41a4e92ffbf1911364d4_original.png?ixlib=rb-4.0.2&w=460&fit=max&v=1427314011&auto=format&frame=1&q=92&s=a85ec226e6fba99e7ac35130837a1f3a"
+              }
+          },
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/011/873/366/a55dd3e86e7c1e2bd865a755e5f3f528_original.png?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1463708200&auto=format&frame=1&q=92&s=c1f3a207ec457f1184fffe1451238a3b",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/011/873/366/a55dd3e86e7c1e2bd865a755e5f3f528_original.png?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1463708200&auto=format&frame=1&q=92&s=b3397f73194b08e74115c05292549c87"
+              }
+          }
+      },
+      "spotlight": true,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/1706756548/the-eternal-space-brings-the-old-penn-station-back?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/1706756548/the-eternal-space-brings-the-old-penn-station-back/rewards"
+          }
+      }
+  },
+  {
+      "id": 2132138787,
+      "photo": {
+          "key": "assets/022/288/584/716a3d2d2aede6791ee00055c4338d12_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/022/288/584/716a3d2d2aede6791ee00055c4338d12_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1534790324&auto=format&frame=1&q=92&s=1f7caf7495c7dc75241387356c26cab9",
+          "ed": "https://ksr-ugc.imgix.net/assets/022/288/584/716a3d2d2aede6791ee00055c4338d12_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1534790324&auto=format&frame=1&q=92&s=65df3d26b5176a030c22af29810fc0b5",
+          "med": "https://ksr-ugc.imgix.net/assets/022/288/584/716a3d2d2aede6791ee00055c4338d12_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1534790324&auto=format&frame=1&q=92&s=c164369eabf36fb58f37a8162f7977fa",
+          "little": "https://ksr-ugc.imgix.net/assets/022/288/584/716a3d2d2aede6791ee00055c4338d12_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1534790324&auto=format&frame=1&q=92&s=986cb312661dfb5cba6f660fcdee3051",
+          "small": "https://ksr-ugc.imgix.net/assets/022/288/584/716a3d2d2aede6791ee00055c4338d12_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1534790324&auto=format&frame=1&q=92&s=2a6fa88b554db2c02f4cd25d3298de43",
+          "thumb": "https://ksr-ugc.imgix.net/assets/022/288/584/716a3d2d2aede6791ee00055c4338d12_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1534790324&auto=format&frame=1&q=92&s=534b075ac189bb005afb53f98f66cf4d",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/022/288/584/716a3d2d2aede6791ee00055c4338d12_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1534790324&auto=format&frame=1&q=92&s=382aea6d44f32a05435513e8b3c33647",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/022/288/584/716a3d2d2aede6791ee00055c4338d12_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1534790324&auto=format&frame=1&q=92&s=8a461c33e0cb76d38e79796a233a28fc"
+      },
+      "name": "WHAT TO SEND UP WHEN IT GOES DOWN",
+      "blurb": "A whirlwind performance, play, and celebration by Aleshea Harris.  How will you send up the ones we've lost?",
+      "goal": 25000,
+      "pledged": 26499.5,
+      "state": "successful",
+      "slug": "what-to-send-up-when-it-goes-down",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1537447381,
+      "state_changed_at": 1537447383,
+      "created_at": 1533669933,
+      "launched_at": 1534855381,
+      "staff_pick": true,
+      "is_starrable": false,
+      "backers_count": 343,
+      "static_usd_rate": 1,
+      "usd_pledged": "26499.5",
+      "converted_pledged_amount": 26499,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 235141468,
+          "name": "The Movement Theatre Company",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/022/160/025/487ef3ca4ceafa715bbeb760f6ce9010_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1533685425&auto=format&frame=1&q=92&s=8e9bfd2bf410152c27a77929be936d24",
+              "small": "https://ksr-ugc.imgix.net/assets/022/160/025/487ef3ca4ceafa715bbeb760f6ce9010_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1533685425&auto=format&frame=1&q=92&s=3ada9b7a968b55aa932e7ee6e6f0891f",
+              "medium": "https://ksr-ugc.imgix.net/assets/022/160/025/487ef3ca4ceafa715bbeb760f6ce9010_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1533685425&auto=format&frame=1&q=92&s=14e85fe51747bd462b83fe3cf5ed630a"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/235141468"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/235141468?signature=1627583906.ca68150200d7a4ba26ec2f367b5b83dc74672ba3"
+              }
+          }
+      },
+      "location": {
+          "id": 2459115,
+          "name": "New York",
+          "slug": "new-york-ny",
+          "short_name": "New York, NY",
+          "displayable_name": "New York, NY",
+          "localized_name": "New York",
+          "country": "US",
+          "state": "NY",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/new-york-ny",
+                  "location": "https://www.kickstarter.com/locations/new-york-ny"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627548935.798cbc8d8b02f51761ab484df47a3960ccd2e384&woe_id=2459115"
+              }
+          }
+      },
+      "category": {
+          "id": 283,
+          "name": "Immersive",
+          "analytics_name": "Immersive",
+          "slug": "theater/immersive",
+          "position": 4,
+          "parent_id": 17,
+          "parent_name": "Theater",
+          "color": 16743775,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/theater/immersive"
+              }
+          }
+      },
+      "profile": {
+          "id": 3443227,
+          "project_id": 3443227,
+          "state": "active",
+          "state_changed_at": 1538402764,
+          "name": "WHAT TO SEND UP WHEN IT GOES DOWN",
+          "blurb": "A whirlwind performance, play, and celebration by Aleshea Harris.  How will you send up the ones we've lost?",
+          "background_color": "",
+          "text_color": "",
+          "link_background_color": "",
+          "link_text_color": "",
+          "link_text": "Follow along!",
+          "link_url": "https://www.themovementtheatrecompany.org",
+          "show_feature_image": true,
+          "background_image_opacity": 0.8,
+          "feature_image_attributes": {
+              "id": 22876127,
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/022/876/127/3225f7881c77b01f16a95a587f070e1c_original.jpg?ixlib=rb-4.0.2&w=700&fit=max&v=1539381809&auto=format&frame=1&q=92&s=7771230c96f9a36aee643be3c915b3d6",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/022/876/127/3225f7881c77b01f16a95a587f070e1c_original.jpg?ixlib=rb-4.0.2&crop=faces%2Cedges&w=560&h=315&fit=crop&v=1539381809&auto=format&frame=1&q=92&s=c225e2007385e05dffa68449f99ff8b5"
+              }
+          },
+          "should_show_feature_image_section": true
+      },
+      "spotlight": true,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/235141468/what-to-send-up-when-it-goes-down?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/235141468/what-to-send-up-when-it-goes-down/rewards"
+          }
+      }
+  },
+  {
+      "id": 143571975,
+      "photo": {
+          "key": "assets/011/731/583/f8be9f1f06b4869daeb7c00116d4bc7e_original.jpg",
+          "full": "https://ksr-ugc.imgix.net/assets/011/731/583/f8be9f1f06b4869daeb7c00116d4bc7e_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1463687529&auto=format&frame=1&q=92&s=900c93490a20c9f6b3e1a1b2498ff0bb",
+          "ed": "https://ksr-ugc.imgix.net/assets/011/731/583/f8be9f1f06b4869daeb7c00116d4bc7e_original.jpg?ixlib=rb-4.0.2&crop=faces&w=352&h=198&fit=crop&v=1463687529&auto=format&frame=1&q=92&s=6843a7aa57b2c6f19f6dbe58e90ee938",
+          "med": "https://ksr-ugc.imgix.net/assets/011/731/583/f8be9f1f06b4869daeb7c00116d4bc7e_original.jpg?ixlib=rb-4.0.2&crop=faces&w=272&h=153&fit=crop&v=1463687529&auto=format&frame=1&q=92&s=6cc4109f20110239ce7fc5b94b87f260",
+          "little": "https://ksr-ugc.imgix.net/assets/011/731/583/f8be9f1f06b4869daeb7c00116d4bc7e_original.jpg?ixlib=rb-4.0.2&crop=faces&w=208&h=117&fit=crop&v=1463687529&auto=format&frame=1&q=92&s=699c2154952f04029e824f99674aa641",
+          "small": "https://ksr-ugc.imgix.net/assets/011/731/583/f8be9f1f06b4869daeb7c00116d4bc7e_original.jpg?ixlib=rb-4.0.2&crop=faces&w=160&h=90&fit=crop&v=1463687529&auto=format&frame=1&q=92&s=e627478726f98f0dd5a865df1f78f556",
+          "thumb": "https://ksr-ugc.imgix.net/assets/011/731/583/f8be9f1f06b4869daeb7c00116d4bc7e_original.jpg?ixlib=rb-4.0.2&crop=faces&w=48&h=27&fit=crop&v=1463687529&auto=format&frame=1&q=92&s=d26e5c8f7aae5156b7160153134f7ea1",
+          "1024x576": "https://ksr-ugc.imgix.net/assets/011/731/583/f8be9f1f06b4869daeb7c00116d4bc7e_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1463687529&auto=format&frame=1&q=92&s=13f7d66d76b7ec9582d1fd705272f9cc",
+          "1536x864": "https://ksr-ugc.imgix.net/assets/011/731/583/f8be9f1f06b4869daeb7c00116d4bc7e_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1463687529&auto=format&frame=1&q=92&s=9b3288d0c24347bb423664e4c22d5bee"
+      },
+      "name": "SPIDER-MAN: THE MUSICAL... THE MUSICAL!",
+      "blurb": "A play within a play (within a play?) The \"Inception\" of backyard musicals. With great power comes... little to no responsibility.",
+      "goal": 2000,
+      "pledged": 3520,
+      "state": "successful",
+      "slug": "spider-man-the-musical-the-musical",
+      "disable_communication": false,
+      "country": "US",
+      "country_displayable_name": "the United States",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "currency_trailing_code": true,
+      "deadline": 1407218400,
+      "state_changed_at": 1407218411,
+      "created_at": 1403584177,
+      "launched_at": 1405993628,
+      "staff_pick": true,
+      "is_starrable": false,
+      "backers_count": 144,
+      "static_usd_rate": 1,
+      "usd_pledged": "3520.0",
+      "converted_pledged_amount": 3520,
+      "fx_rate": 1,
+      "usd_exchange_rate": 1,
+      "current_currency": "USD",
+      "usd_type": "international",
+      "creator": {
+          "id": 908956425,
+          "name": "The Colonel Mustard",
+          "slug": "thecolonelmustard",
+          "is_registered": null,
+          "is_email_verified": null,
+          "chosen_currency": null,
+          "is_superbacker": null,
+          "avatar": {
+              "thumb": "https://ksr-ugc.imgix.net/assets/006/455/441/362d0a6fdc2d5bb9342e3846039fb250_original.jpg?ixlib=rb-4.0.2&w=40&h=40&fit=crop&v=1461389848&auto=format&frame=1&q=92&s=6e87dcb67b7cc54dc8e5c5c09450fd81",
+              "small": "https://ksr-ugc.imgix.net/assets/006/455/441/362d0a6fdc2d5bb9342e3846039fb250_original.jpg?ixlib=rb-4.0.2&w=80&h=80&fit=crop&v=1461389848&auto=format&frame=1&q=92&s=f9ab6090b1fc6618890c3805be90e0b2",
+              "medium": "https://ksr-ugc.imgix.net/assets/006/455/441/362d0a6fdc2d5bb9342e3846039fb250_original.jpg?ixlib=rb-4.0.2&w=160&h=160&fit=crop&v=1461389848&auto=format&frame=1&q=92&s=61839c8869e1a0b28d9ba672530a9fc8"
+          },
+          "urls": {
+              "web": {
+                  "user": "https://www.kickstarter.com/profile/thecolonelmustard"
+              },
+              "api": {
+                  "user": "https://api.kickstarter.com/v1/users/908956425?signature=1627583906.ea5259d2eb40d7402196b2b2b453d71bd0eb602e"
+              }
+          }
+      },
+      "location": {
+          "id": 2439482,
+          "name": "Lincoln",
+          "slug": "lincoln-ne",
+          "short_name": "Lincoln, NE",
+          "displayable_name": "Lincoln, NE",
+          "localized_name": "Lincoln",
+          "country": "US",
+          "state": "NE",
+          "type": "Town",
+          "is_root": false,
+          "expanded_country": "United States",
+          "urls": {
+              "web": {
+                  "discover": "https://www.kickstarter.com/discover/places/lincoln-ne",
+                  "location": "https://www.kickstarter.com/locations/lincoln-ne"
+              },
+              "api": {
+                  "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1627551262.c1108e74e149a60f81785fd157485545d4ee66df&woe_id=2439482"
+              }
+          }
+      },
+      "category": {
+          "id": 284,
+          "name": "Musical",
+          "analytics_name": "Musical",
+          "slug": "theater/musical",
+          "position": 5,
+          "parent_id": 17,
+          "parent_name": "Theater",
+          "color": 16743775,
+          "urls": {
+              "web": {
+                  "discover": "http://www.kickstarter.com/discover/categories/theater/musical"
+              }
+          }
+      },
+      "profile": {
+          "id": 1081763,
+          "project_id": 1081763,
+          "state": "active",
+          "state_changed_at": 1458222325,
+          "name": "SPIDER-MAN: THE MUSICAL... THE MUSICAL!",
+          "blurb": "A play within a play (within a play?) The \"Inception\" of backyard musicals. With great power comes... little to no responsibility.",
+          "background_color": "c7ab1b",
+          "text_color": "ffffff",
+          "link_background_color": "",
+          "link_text_color": "",
+          "link_text": "Follow along!",
+          "link_url": "https://www.kickstarter.com/projects/thecolonelmustard/spider-man-the-musical-the-musical",
+          "show_feature_image": false,
+          "background_image_opacity": 0.8,
+          "should_show_feature_image_section": true,
+          "feature_image_attributes": {
+              "image_urls": {
+                  "default": "https://ksr-ugc.imgix.net/assets/011/731/583/f8be9f1f06b4869daeb7c00116d4bc7e_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1463687529&auto=format&frame=1&q=92&s=9b3288d0c24347bb423664e4c22d5bee",
+                  "baseball_card": "https://ksr-ugc.imgix.net/assets/011/731/583/f8be9f1f06b4869daeb7c00116d4bc7e_original.jpg?ixlib=rb-4.0.2&crop=faces&w=560&h=315&fit=crop&v=1463687529&auto=format&frame=1&q=92&s=900c93490a20c9f6b3e1a1b2498ff0bb"
+              }
+          }
+      },
+      "spotlight": true,
+      "urls": {
+          "web": {
+              "project": "https://www.kickstarter.com/projects/thecolonelmustard/spider-man-the-musical-the-musical?ref=discovery_category",
+              "rewards": "https://www.kickstarter.com/projects/thecolonelmustard/spider-man-the-musical-the-musical/rewards"
+          }
+      }
+  }
+]
