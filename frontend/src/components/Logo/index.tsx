@@ -1,4 +1,4 @@
-import './logo.css';
+import './logo.scss';
 
 const Logo = () => (
   <div className="logo glitch">
