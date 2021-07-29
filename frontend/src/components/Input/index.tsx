@@ -39,15 +39,13 @@ const Input: FunctionComponent<Props> = ({
         />
         {type === 'password'
           && (
-            // eslint-disable-next-line jsx-a11y/interactive-supports-focus
-            <span
-              onClick={() => setShowPassword(!showPassword)}
-              onKeyDown={() => setShowPassword(!showPassword)}
-              role="button"
+            <button
+              type="button"
               className={classes['input-password-eye']}
+              onClick={() => setShowPassword(!showPassword)}
             >
               <FontAwesomeIcon icon={showPassword ? faEye : faEyeSlash} />
-            </span>
+            </button>
           ) }
       </div>
       <div className={classes['error-message-container']}>

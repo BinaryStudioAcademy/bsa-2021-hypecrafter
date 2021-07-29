@@ -9,6 +9,7 @@
 
 .input-field-container {
   display: flex;
+  position: relative;
 }
 
 .input-field {
@@ -18,8 +19,10 @@
 
 .input-password-eye {
   position: absolute;
-  top: 42%;
-  left: 92%;
+  border: none;
+  background: none;
+  bottom: 30px;
+  right: 5px;
 }
 
 .error-message-container {
