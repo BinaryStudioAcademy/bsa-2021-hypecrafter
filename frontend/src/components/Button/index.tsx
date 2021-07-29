@@ -6,7 +6,7 @@ import {
   CSSProperties
 } from 'react';
 import classnames from 'classnames';
-import classes from './button.module.css';
+import classes from './styles.module.scss';
 
 interface Props extends ButtonProps {
   className?: string;
@@ -65,7 +65,7 @@ const Button: FunctionComponent<Props> = (props: Props) => {
     flexDirection: 'row-reverse'
   };
 
-  const Btn = ({ children: childrenIcon }: { children?: ReactNode }) => (
+  return (
     <ButtonRB
       style={iconPosition === 'right' ? buttonImgRightStyle : {}}
       className={buttonClass}
@@ -75,15 +75,9 @@ const Button: FunctionComponent<Props> = (props: Props) => {
       href={to}
     >
       {isLoading ? <span>Loading…</span> : children}
-      {childrenIcon}
+      {icon}
     </ButtonRB>
   );
-
-  Btn.defaultProps = {
-    children: null
-  };
-
-  return icon ? <Btn>{icon}</Btn> : <Btn />;
 };
 
 Button.defaultProps = defaultProps;
