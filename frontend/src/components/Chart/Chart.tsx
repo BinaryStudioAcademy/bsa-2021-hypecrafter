@@ -1,30 +1,15 @@
 import ChartComponent from 'react-chartjs-2';
 import React from 'react';
 
-const testData = {
-  labels: ['1', '2', '3', '4', '5', '6'],
-  datasets: [
-    {
-      label: '# of Votes',
-      data: [12, 19, 3, 5, 2, 3],
-      fill: false,
-      backgroundColor: 'rgb(255, 99, 132)',
-      borderColor: 'rgba(255, 99, 132, 1)'
-    }
-  ]
-};
+interface DataItem {
+  label: string;
+  data: number[];
+  fill?: boolean;
+  backgroundColor?: string;
+  borderColor?: string;
+}
 
-type TDataSet = [
-  {
-    label: string;
-    data: number[];
-    fill?: boolean;
-    backgroundColor?: string;
-    borderColor?: string;
-  }
-];
-
-type TChartType =
+type ChartType =
   | 'line'
   | 'bar'
   | 'horizontalBar'
@@ -35,18 +20,14 @@ type TChartType =
   | 'pie'
   | 'scatter';
 
-type IChartProps = {
-  type?: TChartType;
-  data?: TDataSet | any;
-};
+interface ChartProps {
+  type?: ChartType;
+  labels?: string[];
+  datasets?: DataItem;
+}
 
-const ChartExample: React.FC<IChartProps> = ({ type, data }) => {
-  console.log('hello');
-  return (
-    <>
-      <ChartComponent type={type || 'line'} data={data || testData} />
-    </>
-  );
-};
+const Chart: React.FC<ChartProps> = ({ type, datasets, labels }) => (
+  <ChartComponent type={type} data={{ labels, datasets: [datasets] }} />
+);
 
-export default ChartExample;
+export default Chart;
