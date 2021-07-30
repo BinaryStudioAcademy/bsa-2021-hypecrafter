@@ -1,64 +1,52 @@
-import { Bar } from 'react-chartjs-2';
+import ChartComponent from 'react-chartjs-2';
+import React from 'react';
 
-type TDatasets = [
-  {
-    label: string;
-    data: Array<number>;
-    backgroundColor: Array<string>;
-    borderColor: Array<string>;
-    borderWidth: number;
-  }
-];
-
-interface IVerticalBarProps {
-  labels: string[];
-  datasets: TDatasets;
-}
-
-const defaultData = {
-  labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+const testData = {
+  labels: ['1', '2', '3', '4', '5', '6'],
   datasets: [
     {
-      // label: 'By something',
+      label: '# of Votes',
       data: [12, 19, 3, 5, 2, 3],
-      backgroundColor: [
-        'rgba(255, 99, 132, 0.2)',
-        'rgba(54, 162, 235, 0.2)',
-        'rgba(255, 206, 86, 0.2)',
-        'rgba(75, 192, 192, 0.2)',
-        'rgba(153, 102, 255, 0.2)',
-        'rgba(255, 159, 64, 0.2)'
-      ],
-      borderColor: [
-        'rgba(255, 99, 132, 1)',
-        'rgba(54, 162, 235, 1)',
-        'rgba(255, 206, 86, 1)',
-        'rgba(75, 192, 192, 1)',
-        'rgba(153, 102, 255, 1)',
-        'rgba(255, 159, 64, 1)'
-      ],
-      borderWidth: 1
+      fill: false,
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgba(255, 99, 132, 1)'
     }
   ]
 };
 
-const defaultOptions = {
-  title: {
-    display: true,
-    text: 'Some Text'
+type TDataSet = [
+  {
+    label: string;
+    data: number[];
+    fill?: boolean;
+    backgroundColor?: string;
+    borderColor?: string;
   }
+];
+
+type TChartType =
+  | 'line'
+  | 'bar'
+  | 'horizontalBar'
+  | 'radar'
+  | 'doughnut'
+  | 'polarArea'
+  | 'bubble'
+  | 'pie'
+  | 'scatter';
+
+type IChartProps = {
+  type?: TChartType;
+  data?: TDataSet | any;
 };
 
-const VerticalBar = () => (
-  <>
-    <Bar data={defaultData} options={defaultOptions} />
-  </>
-);
+const ChartExample: React.FC<IChartProps> = ({ type, data }) => {
+  console.log('hello');
+  return (
+    <>
+      <ChartComponent type={type || 'line'} data={data || testData} />
+    </>
+  );
+};
 
-const Chart = () => (
-  <>
-    <VerticalBar />
-  </>
-);
-
-export default Chart;
+export default ChartExample;
