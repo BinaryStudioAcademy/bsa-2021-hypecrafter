@@ -1,8 +1,12 @@
 import MicroMq from 'micromq';
+import _ from 'lodash';
 import { Path } from '../../common/enums';
+import { initServices } from '../../services';
 import paymentRouter from './payment';
-import services from '../../services';
 
-const initRoutes = (app: MicroMq) => paymentRouter(services, Path.Payment, app);
+const initRoutes = (app: MicroMq) => {
+  const services = initServices();
+  return _.flow([paymentRouter(services, Path.Payment)])(app);
+};
 
 export default initRoutes;

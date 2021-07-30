@@ -1,8 +1,13 @@
-import paymentService from './payment';
+import { getCustomRepository } from 'typeorm';
+import { DonateRepository } from '../data/repositories/donate';
+import PaymentService from './payment';
 
-const services = {
-  paymentService
-};
+export function initServices() {
+  return {
+    paymentService: new PaymentService(getCustomRepository(DonateRepository))
+  };
+}
 
-export type Services = typeof services;
-export default services;
+export interface Services {
+  paymentService: PaymentService
+}

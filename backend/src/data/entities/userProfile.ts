@@ -1,5 +1,6 @@
-import { Entity, Column } from 'typeorm';
+import { Entity, Column, OneToMany } from 'typeorm';
 import { AbstractEntity } from './abstract';
+import { Donate } from '../../../../payment/src/data/entities/donate';
 
 @Entity()
 export class UserProfile extends AbstractEntity {
@@ -32,4 +33,7 @@ export class UserProfile extends AbstractEntity {
 
   @Column()
   region: string;
+
+  @OneToMany(() => Donate, donate => donate.userProfile)
+  public donate!: Donate[];
 }

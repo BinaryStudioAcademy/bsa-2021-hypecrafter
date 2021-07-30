@@ -1,4 +1,6 @@
 export interface Payment {
-  id: number;
-  name: string;
+  id: string;
+  amount: number;
+  userId: string;
+  projectId: string;
 }
