@@ -1,7 +1,4 @@
-.link {
-  text-decoration: none;
-  width: 100%
-}
+@import "../../styles/vars";
 
 .card {
   padding: 20px;
@@ -11,7 +8,11 @@
   grid-template-columns: calc(45% - 10px) calc(55% - 10px);
   grid-template-rows: calc(100%);
   column-gap: 20px;
-  background: #2E333A;
+  background: $color-root-block-background;
+}
+
+.rounded {
+  border-radius: 1rem;
 }
 
 .cardImage {
@@ -32,7 +33,7 @@
   font-weight: 300;
   font-size: 12px;
   line-height: 14px;
-  color: #0AECEC;
+  color: $color-root-turquoise;
 }
 
 .title {
@@ -46,7 +47,7 @@
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
   overflow: hidden;
-  color: #FAFBFF;
+  color: $color-root-text;
 }
 
 .description {
@@ -61,7 +62,7 @@
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
   overflow: hidden;
-  color: #FAFBFF;
+  color: $color-root-text;
 }
 
 .tags {
@@ -69,43 +70,4 @@
   display: flex;
   gap: 10px;
   overflow: hidden;
-
-  .tag {
-    padding: 4px 9px;
-    background: #474A4F;
-    border-radius: 4px;
-    font-size: 14px;
-    line-height: 16px;
-    color: rgba(250, 251, 255, 0.5);
-  }
-}
-
-.progress {
-  margin-top: 10px;
-
-  .progressInfo {
-    display: flex;
-    justify-content: space-between;
-
-    .goal {
-      font-size: 12px;
-      line-height: 150%;
-      color: #FAFBFF;
-    }
-
-    .percent {
-      font-weight: bold;
-      font-size: 12px;
-      line-height: 140%;
-      color: #0AECEC;
-    }
-  }
-
-  .progressBar {
-    height: 4px;
-
-    div {
-      background: linear-gradient(90deg, #19E3E9 0%, #28ABF2 100%);
-    }
-  }
 }
