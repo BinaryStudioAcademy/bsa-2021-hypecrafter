@@ -1,8 +1,13 @@
-import notificationService from './notification';
+import { getCustomRepository } from 'typeorm';
+import { NotificationRepository } from '../data/repositories/notification';
+import NotificationService from './notification';
 
-const services = {
-  notificationService
-};
+export function initServices() {
+  return {
+    notificationService: new NotificationService(getCustomRepository(NotificationRepository))
+  };
+}
 
-export type Services = typeof services;
-export default services;
+export interface Services {
+  notificationService: NotificationService;
+}

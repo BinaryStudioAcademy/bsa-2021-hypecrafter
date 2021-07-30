@@ -1,8 +1,12 @@
 import MicroMq from 'micromq';
+import _ from 'lodash';
 import { Path } from '../../common/enums';
 import notificationRouter from './notification';
-import services from '../../services';
+import { initServices } from '../../services';
 
-const initRoutes = (app: MicroMq) => notificationRouter(services, Path.Notification, app);
+const initRoutes = (app: MicroMq) => {
+  const services = initServices();
+  return _.flow([notificationRouter(services, Path.Notification)])(app);
+};
 
 export default initRoutes;
