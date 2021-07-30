@@ -15,7 +15,7 @@
         "start:backend": "cd backend && npm run start",
         "start:frontend": "cd frontend && npm run start",
         "start:payment": "cd payment && npm run start",
-        "start": "concurrently -k -p \"{name}: {time}\" -n \"FRONTEND,GATEWAY,BACKEND\" \"npm:start:frontend\" \"npm:start:gateway\" \"npm:start:backend\" \"npm:start:payment\""
+        "start": "concurrently -k -p \"{name}: {time}\" -n \"FRONTEND,GATEWAY,BACKEND,PAYMENT\" \"npm:start:frontend\" \"npm:start:gateway\" \"npm:start:backend\" \"npm:start:payment\""
     },
     "devDependencies": {
         "concurrently": "^6.2.0",
