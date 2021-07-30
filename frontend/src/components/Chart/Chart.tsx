@@ -1,15 +1,16 @@
 import ChartComponent from 'react-chartjs-2';
 import React from 'react';
+import { defaultOptions } from './helpers';
 
-interface DataItem {
+export interface DataItem {
   label: string;
   data: number[];
   fill?: boolean;
   backgroundColor?: string;
-  borderColor?: string;
+  borderColor?: string | ((context: any) => any);
 }
 
-type ChartType =
+export type ChartType =
   | 'line'
   | 'bar'
   | 'horizontalBar'
@@ -23,11 +24,15 @@ type ChartType =
 interface ChartProps {
   type?: ChartType;
   labels?: string[];
-  datasets?: DataItem;
+  dataSets?: DataItem[];
 }
 
-const Chart: React.FC<ChartProps> = ({ type, datasets, labels }) => (
-  <ChartComponent type={type} data={{ labels, datasets: [datasets] }} />
+const Chart: React.FC<ChartProps> = ({ type, dataSets, labels }) => (
+  <ChartComponent
+    type={type}
+    data={{ labels, datasets: dataSets }}
+    options={defaultOptions}
+  />
 );
 
 export default Chart;
