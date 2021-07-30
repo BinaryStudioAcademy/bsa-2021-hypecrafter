@@ -14,7 +14,7 @@ export class Donate extends AbstractEntity {
   @Column()
   public projectId!: string;
 
-  @ManyToOne(() => UserProfile, userProfile => userProfile.donate)
+  @ManyToOne(() => UserProfile, userProfile => userProfile.donates)
   public userProfile!: UserProfile;
   /*
   @ManyToOne(() => Project, project => project.donate)
