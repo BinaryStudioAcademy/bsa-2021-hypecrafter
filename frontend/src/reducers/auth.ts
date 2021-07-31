@@ -9,13 +9,11 @@ import type {
 export interface AuthState {
   isLoading: boolean;
   user: User | null;
-  error: string;
 }
 
 export const authState: AuthState = {
   isLoading: false,
-  user: null,
-  error: ''
+  user: null
 };
 
 export const authReducer = createReducer<AuthState>(authState, {
@@ -36,7 +34,7 @@ export const authReducer = createReducer<AuthState>(authState, {
     return {
       ...state,
       isLoading: false,
-      error: action.payload
+      user: action.payload
     };
   }
 });

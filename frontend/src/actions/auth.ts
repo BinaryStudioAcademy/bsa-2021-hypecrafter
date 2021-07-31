@@ -2,13 +2,13 @@ import { createRoutine } from 'redux-saga-routines';
 import { User } from '../common/types/user';
 
 export enum authActions {
-  AUTH = 'AUTH'
+  AUTH = 'AUTH/FETCH_USER'
 }
 
 export const authAction = createRoutine(authActions.AUTH, {
   trigger: () => undefined,
   success: (user: User) => user,
-  failure: (error: string) => error
+  failure: () => null
 });
 
 export type AuthTriggerActionType = ReturnType<typeof authAction.trigger>;
