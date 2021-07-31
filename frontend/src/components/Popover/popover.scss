@@ -6,3 +6,16 @@
     background: transparent;
   }
 }
+
+#popover-contained {
+  border-radius: 0;
+  border: none;
+  background: #2e333a;
+  .popover-body {
+    padding: 19px 15px 17px 24px;
+    color: #fafbff;
+  }
+  .popover-arrow {
+    display: none;
+  }
+}
