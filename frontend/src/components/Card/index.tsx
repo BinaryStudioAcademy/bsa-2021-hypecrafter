@@ -26,11 +26,11 @@ const CardComponent: FC<Props> = ({
   rounded = false
 }) => (
   <article className={cn(classes.card, { [classes.rounded]: rounded })}>
-    <div className={classes.cardImage}>
+    <div className={classes['card-image']}>
       <img src={image} alt="card img" />
     </div>
 
-    <div className={classes.cardContent}>
+    <div className={classes['card-content']}>
       <div className={classes.category}>{category}</div>
       <div className={classes.title}>{name}</div>
       <div className={classes.description}>{description}</div>

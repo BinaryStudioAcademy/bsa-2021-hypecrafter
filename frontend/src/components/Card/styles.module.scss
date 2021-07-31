@@ -15,7 +15,7 @@
   border-radius: 1rem;
 }
 
-.cardImage {
+.card-image {
   img {
     width: 100%;
     height: 100%;
@@ -23,7 +23,7 @@
   }
 }
 
-.cardContent {
+.card-content {
   max-height:100%;
   display: flex;
   flex-direction: column;
