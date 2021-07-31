@@ -4,6 +4,7 @@ import BootstrapExample from '../BootstrapExample';
 import TranslateExample from '../TranslateExample';
 import ButtonExample from '../ButtonExample';
 import InputExample from '../InputExample';
+import PopoverExample from '../PopoverExample';
 
 function Main() {
   return (
@@ -13,6 +14,7 @@ function Main() {
       <BootstrapExample />
       <ButtonExample />
       <InputExample />
+      <PopoverExample />
     </Container>
   );
 }
