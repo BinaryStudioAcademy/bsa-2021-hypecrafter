@@ -1,36 +1,35 @@
-import { useState, useRef, FunctionComponent, ReactNode } from 'react';
+import { useState, useRef, FC, ReactNode, MouseEvent } from 'react';
 import { Popover as PopoverRB, Overlay } from 'react-bootstrap';
+import { Placement } from 'react-bootstrap/esm/types';
+import './popover.scss';
 
 type HandleClose = () => void;
-type HandleClickFunc=(event: any) => void; // Set correct type
-
-type TriggerFunc=(handleClick: HandleClickFunc) => ReactNode;
-type ChildFunc=(handleClose: HandleClose) => ReactNode;
+type ChildFunc=(handleClose?: HandleClose) => ReactNode;
 
 interface Props{
-  placement?: 'bottom' | 'top' | 'right' | 'left';
-  trigger: TriggerFunc;
+  placement?: Placement;
+  trigger: ReactNode;
   child: ChildFunc;
 }
 
-const Popover: FunctionComponent<Props> = ({ placement = 'bottom', trigger, child }) => {
+const Popover: FC<Props> = ({ placement = 'bottom', trigger, child }) => {
   const [show, setShow] = useState(false);
-  const [target, setTarget] = useState(null);
+  const [target, setTarget] = useState<HTMLElement | null>(null);
   const ref = useRef(null);
 
   const handleClose = () => {
     setShow(false);
   };
 
-  const handleClick : HandleClickFunc = (event) => {
+  const handleClick = (event: MouseEvent<HTMLElement>) => {
     setShow(!show);
-    setTarget(event.target);
+    setTarget(event.target as HTMLElement);
   };
 
   return (
     <div ref={ref}>
       <div className="popover-trigger">
-        {trigger(handleClick)}
+        <button onClick={handleClick} type="button">{trigger}</button>
       </div>
 
       <Overlay

@@ -10,11 +10,11 @@ function Main() {
   return (
     <Container>
       <Users />
+      <PopoverExample />
       <TranslateExample />
       <BootstrapExample />
       <ButtonExample />
       <InputExample />
-      <PopoverExample />
     </Container>
   );
 }

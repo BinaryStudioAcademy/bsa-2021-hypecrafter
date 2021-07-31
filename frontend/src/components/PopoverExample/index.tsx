@@ -1,14 +1,19 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSortDown, faTimes } from '@fortawesome/free-solid-svg-icons';
 import Popover from '../Popover';
 
 const PopoverExample = () => (
   <Popover
-    trigger={(handleClick) => (
-      <button onClick={handleClick} type="submit">Holy guacamole!</button>
-    )}
+    trigger={
+      <FontAwesomeIcon icon={faSortDown} color="white" />
+    }
     child={(handleClose) => (
-      <button onClick={handleClose} type="submit">x</button>
+      <div>
+        <FontAwesomeIcon icon={faTimes} onClick={handleClose} />
+        <div>Someeeeeeee text</div>
+      </div>
     )}
-    placement="top"
+    placement="bottom"
   />
 );
 
