@@ -6,29 +6,17 @@ type Props = ComponentProps<typeof Card> & {
   to: string,
 }
 
-const CardComponent: FC<Props> = ({
+const CardWithLink: FC<Props> = ({
   to,
-  category,
-  tags,
-  name,
-  description,
-  goal,
-  percent,
   image,
-  rounded
+  rounded,
+  children
 }) => (
   <Link to={to}>
-    <Card
-      category={category}
-      tags={tags}
-      name={name}
-      description={description}
-      goal={goal}
-      percent={percent}
-      image={image}
-      rounded={rounded}
-    />
+    <Card image={image} rounded={rounded}>
+      {children}
+    </Card>
   </Link>
 );
 
-export default CardComponent;
+export default CardWithLink;
