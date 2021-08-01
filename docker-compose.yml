@@ -16,8 +16,8 @@ services:
     volumes:
       - ./backend:/app/backend/
       - ./shared:/app/shared/
-  env_file:
-    - .env
+    env_file:
+      - .env
   frontend:
     stdin_open: true
     build:
