@@ -18,19 +18,19 @@
     "start": "concurrently -k -p \"{name}: {time}\" -n \"FRONTEND,GATEWAY,BACKEND,PAYMENT\" \"npm:start:frontend\" \"npm:start:gateway\" \"npm:start:backend\" \"npm:start:payment\""
   },
   "devDependencies": {
-      "concurrently": "^6.2.0",
-      "husky": "^4.3.8",
-      "lint-staged": "^11.1.1"
+    "concurrently": "^6.2.0",
+    "husky": "^4.3.8",
+    "lint-staged": "^11.1.1"
   },
   "husky": {
-      "hooks": {
-          "pre-commit": "lint-staged"
-      }
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
-      "**/*.(js|ts|tsx)": [
-          "npm run lint"
-      ]
+    "**/*.(js|ts|tsx)": [
+      "npm run lint"
+    ]
   },
   "dependencies": {
     "pg": "^8.7.1",
