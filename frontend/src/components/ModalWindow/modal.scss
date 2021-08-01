@@ -1,0 +1,8 @@
+.my-modal {
+	.modal-content {
+		background-color: #334;
+		.btn-close{
+			filter: invert(1) grayscale(100%) brightness(200%);
+		}
+	}
+}
