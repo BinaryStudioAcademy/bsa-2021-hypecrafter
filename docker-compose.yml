@@ -1,8 +1,7 @@
 version: '3'
 services:
   gateway:
-    build:
-      image: "mihailts/hypecrafter-gateway"
+    image: "mihailts/hypecrafter-gateway"
     volumes:
       - ./gateway:/app/gateway/
       - ./shared:/app/shared/
@@ -11,8 +10,7 @@ services:
   backend:
     depends_on:
       - gateway
-    build:
-      image: "mihailts/hypecrafter-backend"
+    image: "mihailts/hypecrafter-backend"
     volumes:
       - ./backend:/app/backend/
       - ./shared:/app/shared/
@@ -20,8 +18,7 @@ services:
       - .env
   frontend:
     stdin_open: true
-    build:
-      image: "mihailts/hypecrafter-frontend"
+    image: "mihailts/hypecrafter-frontend"
     volumes:
       - ./frontend:/app
   nginx:
@@ -30,7 +27,6 @@ services:
       - gateway
       - backend
     restart: always
-    build:
-      image: "mihailts/hypecrafter-nginx"
+    image: "mihailts/hypecrafter-nginx"
     ports:
       - '80:80'
