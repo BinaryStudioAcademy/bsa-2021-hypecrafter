@@ -6,7 +6,12 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development nodemon -r ts-node --files ./src/server.ts",
     "lint": "eslint . --ext .ts",
-    "lint:write": "eslint . --ext .ts --fix"
+    "lint:write": "eslint . --ext .ts --fix",
+    "add-migration": "ts-node node_modules/typeorm/cli.js migration:generate -n",
+    "migrate": "ts-node node_modules/typeorm/cli.js migration:run",
+    "migration-revert": "ts-node node_modules/typeorm/cli.js migration:revert",
+    "seed": "ts-node ./src/data/seeders",
+    "typeorm": "ts-node node_modules/typeorm/cli.js"
   },
   "author": "",
   "license": "ISC",
