@@ -1,12 +1,36 @@
-version: "3"
+version: '3'
 services:
- rabbitmq:
-    image: "rabbitmq:3-management"
-    ports:
-      - "5672:5672"
-      - "15672:15672"
+  gateway:
+    build:
+      image: "mihailts/hypecrafter-gateway"
     volumes:
-      - 'rabbitmq_data:/data'
-
-volumes:
-  rabbitmq_data:
+      - ./gateway:/app/gateway/
+      - ./shared:/app/shared/
+    env_file:
+      - .env
+  backend:
+    depends_on:
+      - gateway
+    build:
+      image: "mihailts/hypecrafter-backend"
+    volumes:
+      - ./backend:/app/backend/
+      - ./shared:/app/shared/
+  env_file:
+    - .env
+  frontend:
+    stdin_open: true
+    build:
+      image: "mihailts/hypecrafter-frontend"
+    volumes:
+      - ./frontend:/app
+  nginx:
+    depends_on:
+      - frontend
+      - gateway
+      - backend
+    restart: always
+    build:
+      image: "mihailts/hypecrafter-nginx"
+    ports:
+      - '80:80'

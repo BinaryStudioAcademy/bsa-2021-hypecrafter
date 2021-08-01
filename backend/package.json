@@ -5,6 +5,7 @@
   "main": "./src/server.ts",
   "scripts": {
     "start": "cross-env NODE_ENV=development nodemon -r ts-node --files ./src/server.ts",
+    "start-prod": "nodemon -r ts-node --files ./src/server.ts",
     "lint": "eslint . --ext .ts",
     "lint:write": "eslint . --ext .ts --fix",
     "add-migration": "ts-node node_modules/typeorm/cli.js migration:generate -n",
@@ -40,6 +41,7 @@
     "hypecrafter-shared": "file:../shared/build",
     "lodash": "^4.17.21",
     "micromq": "^3.0.2",
+    "pg": "^8.7.1",
     "tslib": "^2.3.0",
     "typeorm": "^0.2.34"
   }

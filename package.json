@@ -12,6 +12,8 @@
     "start:gateway": "cd gateway && npm run start",
     "start:backend": "cd backend && npm run start",
     "start:frontend": "cd frontend && npm run start",
+    "start-prod:backend": "cd backend && npm run start-prod",
+    "start-prod:gateway": "cd gateway && npm run start-prod",
     "migrate:backend": "cd backend && npm run migrate",
     "migrate:gateway": "cd gateway && npm run migrate",
     "migrate:all": "npm run migrate:backend && npm run migrate:gateway",
@@ -36,7 +38,6 @@
     ]
   },
   "dependencies": {
-    "pg": "^8.7.1",
     "tslib": "^1.14.1"
   }
 }
