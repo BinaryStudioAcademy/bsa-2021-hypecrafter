@@ -7,8 +7,8 @@ import logo from '../../assets/HypeCrafter.svg';
 import { Routes } from '../../common/enums';
 
 const LoginPage: FC = () => {
-  const [email, setEmail] = useState<string>('');
-  const [password, setPassword] = useState<string>('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const dummySignInHandler: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
