@@ -1,27 +1,15 @@
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 import cn from 'classnames';
 import classes from './styles.module.scss';
-import Tag from '../Tag';
-import ProgressBar from '../ProgressBar';
 
 type Props = {
-  category: string;
-  tags: string[];
-  name: string;
-  description: string;
-  goal: number;
-  percent: number;
+  children: ReactNode;
   image: string;
   rounded?: boolean;
 }
 
 const CardComponent: FC<Props> = ({
-  category,
-  tags,
-  name,
-  description,
-  goal,
-  percent,
+  children,
   image,
   rounded = false
 }) => (
@@ -31,15 +19,7 @@ const CardComponent: FC<Props> = ({
     </div>
 
     <div className={classes['card-content']}>
-      <div className={classes.category}>{category}</div>
-      <div className={classes.title}>{name}</div>
-      <div className={classes.description}>{description}</div>
-
-      <div className={classes.tags}>
-        {tags.map((tag => <Tag text={tag} />))}
-      </div>
-
-      <ProgressBar goal={goal} percent={percent} />
+      {children}
     </div>
   </article>
 );
