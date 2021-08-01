@@ -1,17 +1,17 @@
-import { DonateRepository } from '../../data/repositories';
+import { TransactionRepository } from '../../data/repositories';
 
-export default class DonateService {
-  readonly #donateRepository: DonateRepository;
+export default class TransactionService {
+  readonly #transactionRepository: TransactionRepository;
 
-  constructor(donateRepository: DonateRepository) {
-    this.#donateRepository = donateRepository;
+  constructor(transactionRepository: TransactionRepository) {
+    this.#transactionRepository = transactionRepository;
   }
 
   public getAll() {
-    return this.#donateRepository.getAll();
+    return this.#transactionRepository.getAll();
   }
 
   public getById(id: string) {
-    return this.#donateRepository.getById(id);
+    return this.#transactionRepository.getById(id);
   }
 }
