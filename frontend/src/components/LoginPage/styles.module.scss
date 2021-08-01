@@ -83,6 +83,7 @@
 .sign-in-button {
   @include flex-center;
   margin-top: 15px;
+  margin-bottom: 40px;
   width: 100%;
   height: 45px;
   font-weight: bold;
@@ -92,6 +93,7 @@
 
 .google-button {
   @include flex-center;
+  margin-top: 40px;
   width: 100%;
   height: 45px;
   font-weight: bold;
@@ -101,20 +103,27 @@
   border: 1px solid $color-root-turquoise;
 }
 
-.horizontal-ruler {
-  margin-block: 40px;
-  padding: 0;
-  overflow: visible;
-  text-align: center;
-  border: none;
-  color: $color-root-text;
+.horizontal-ruler-text {
+  position: relative;
+  height: 0;
+  display: flex;
+  justify-content: center;
 
-  &:after {
-    position: relative;
+  div {
+    position: absolute;
+    z-index: 2;
     top: -14px;
     padding: 0 6px;
-    content: "or";
     font-size: 18px;
+    color: $color-root-text;
     background: $color-root-background;
   }
+}
+
+.horizontal-ruler {
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  border: none;
+  color: $color-root-text;
 }

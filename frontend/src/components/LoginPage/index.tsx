@@ -1,12 +1,14 @@
 import { FC, FormEventHandler, MouseEventHandler, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import Button from '../Button';
 import Input from '../Input';
 import classes from './styles.module.scss';
 import logo from '../../assets/HypeCrafter.svg';
-import { Routes } from '../../common/enums';
+import { Routes, Languages } from '../../common/enums';
 
 const LoginPage: FC = () => {
+  const { t, i18n } = useTranslation();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -17,6 +19,7 @@ const LoginPage: FC = () => {
 
   const dummySignInWithGoogleHandler: MouseEventHandler<HTMLButtonElement> = (e) => {
     console.log('Sign In with Google');
+    i18n.changeLanguage(i18n.language === Languages.UA ? Languages.EN : Languages.UA); // temp, for translations test
   };
 
   return (
@@ -27,28 +30,28 @@ const LoginPage: FC = () => {
 
       <div className={classes.content}>
         <form className={classes.form} onSubmit={dummySignInHandler}>
-          <h2 className={classes.title}>Sign In</h2>
+          <h2 className={classes.title}>{t('Sign In')}</h2>
           <div className={classes['register-cta']}>
-            Don’t have an account? <Link to={Routes.SIGNUP}>Sign Up</Link>
+            {t('Don’t have an account?')} <Link to={Routes.SIGNUP}>{t('Sign Up')}</Link>
           </div>
 
           <Input
             type="email"
-            placeholder="Enter your email"
-            label="Email"
+            placeholder={t('Enter your email')}
+            label={t('Email')}
             value={email}
             onChange={setEmail}
             errorMessage=""
           />
 
           <div className={classes['password-cta']}>
-            <Link to={Routes.RESET_PASSWORD}>Forgot your password?</Link>
+            <Link to={Routes.RESET_PASSWORD}>{t('Forgot your password?')}</Link>
           </div>
           <Input
             type="password"
-            placeholder="......."
+            placeholder={t('Enter your password')}
             value={password}
-            label="Password"
+            label={t('Password')}
             onChange={setPassword}
             errorMessage=""
           />
@@ -57,14 +60,17 @@ const LoginPage: FC = () => {
             className={classes['sign-in-button']}
             type="submit"
           >
-            Sign In
+            {t('Sign In')}
           </Button>
+
+          <div className={classes['horizontal-ruler-text']}><div>{t('or')}</div></div>
           <hr className={classes['horizontal-ruler']} />
+
           <Button
             className={classes['google-button']}
             onClick={dummySignInWithGoogleHandler}
           >
-            Sign In with Google
+            {t('Sign In with Google')}
           </Button>
         </form>
       </div>
