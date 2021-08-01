@@ -7,12 +7,12 @@ interface ModalWindowProps {
   title: string | ReactNode;
   body: string | ReactNode;
   footer?: string | ReactNode;
-  showTrigger(): void;
+  onHide(): void;
 }
 const ModalWindow: React.FC<ModalWindowProps> = (props) => {
-  const { title, show, body, footer, showTrigger } = props;
+  const { title, show, body, footer, onHide } = props;
   return (
-    <Modal show={show} onHide={showTrigger} className="my-modal">
+    <Modal show={show} onHide={onHide} className="my-modal">
       <Modal.Header closeButton>
         <Modal.Title>{title}</Modal.Title>
       </Modal.Header>

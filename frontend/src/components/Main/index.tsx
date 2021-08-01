@@ -16,7 +16,7 @@ function Main() {
         show={show}
         title="Modal"
         body="Hello there!"
-        showTrigger={() => {
+        onHide={() => {
           setShow(false);
         }}
       />
