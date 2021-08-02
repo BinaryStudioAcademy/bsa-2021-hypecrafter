@@ -7,7 +7,7 @@ interface ModalWindowProps {
   title: string | ReactNode;
   body: string | ReactNode;
   footer?: string | ReactNode;
-  size: 'small' | 'medium' | 'wide';
+  size: 'small' | 'medium' | 'wide' | 'user-page';
   centered?: boolean;
   onHide(): void;
 }
