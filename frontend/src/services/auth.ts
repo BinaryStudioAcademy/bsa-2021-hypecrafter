@@ -1,1 +1,1 @@
-export const auth = (token: string) => Promise.resolve({ name: 'Anton' });
+export const auth = () => Promise.resolve({ name: 'Anton' });

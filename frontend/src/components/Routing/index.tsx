@@ -4,11 +4,11 @@ import { Route, Switch } from 'react-router-dom';
 import { Routes, StorageKeys } from '../../common/enums';
 import Main from '../Main';
 import { useTypedSelector } from '../../hooks';
-import { authAction } from '../../actions/auth';
+import { authFetchUserAction } from '../../actions/auth';
 
 const Routing = () => {
   const dispatch = useDispatch();
-  const authUser = () => dispatch(authAction());
+  const authUser = () => dispatch(authFetchUserAction());
   const authStore = useTypedSelector(({ auth: { user, isLoading } }) => ({
     user,
     isLoading
@@ -17,7 +17,6 @@ const Routing = () => {
   console.log('auth', user, isLoading);
 
   useEffect(() => {
-    localStorage.setItem(StorageKeys.ACCESS_TOKEN, 'token');
     const token = localStorage.getItem(StorageKeys.ACCESS_TOKEN);
     if (token) {
       authUser();

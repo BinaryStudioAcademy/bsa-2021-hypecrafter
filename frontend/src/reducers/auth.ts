@@ -1,9 +1,8 @@
 import { User } from '../common/types';
 import { createReducer } from '../helpers';
-import { authAction } from '../actions/auth';
+import { authFetchUserAction } from '../actions/auth';
 import type {
-  AuthSuccessActionType,
-  AuthFailureActionType
+  AuthFetchUserSuccessActionType
 } from '../actions/auth';
 
 export interface AuthState {
@@ -17,24 +16,23 @@ export const authState: AuthState = {
 };
 
 export const authReducer = createReducer<AuthState>(authState, {
-  [authAction.TRIGGER](state) {
+  [authFetchUserAction.TRIGGER](state) {
     return {
       ...state,
       isLoading: true
     };
   },
-  [authAction.SUCCESS](state, action: AuthSuccessActionType) {
+  [authFetchUserAction.SUCCESS](state, action: AuthFetchUserSuccessActionType) {
     return {
       ...state,
       isLoading: false,
       user: action.payload
     };
   },
-  [authAction.FAILURE](state, action: AuthFailureActionType) {
+  [authFetchUserAction.FAILURE](state) {
     return {
       ...state,
-      isLoading: false,
-      user: action.payload
+      isLoading: false
     };
   }
 });
