@@ -9,5 +9,8 @@ export const env = {
   },
   server: {
     url: getEnv('REACT_APP_SERVER_URL')
+  },
+  sentry: {
+    dsn: getEnv('SENTRY_DSN')
   }
 };
