@@ -11,7 +11,7 @@
     "install:frontend": "cd frontend && npm install",
     "install:notification": "cd notification && npm install",
     "install:payment": "cd payment && npm install",
-    "install:all": "npm install && npm run build:shared && npm run install:gateway && npm run install:backend && npm run install:frontend, && npm run install:payment",
+    "install:all": "npm install && npm run build:shared && npm run install:gateway && npm run install:backend && npm run install:frontend && npm run install:payment",
     "build:shared": "cd shared && npm install && npm run build",
     "start:gateway": "cd gateway && npm run start",
     "start:backend": "cd backend && npm run start",
