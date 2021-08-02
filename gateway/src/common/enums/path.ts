@@ -1,3 +1,4 @@
 export enum Path {
-  User = '/api/users'
+  User = '/api/users',
+  Auth = '/api/auth'
 }

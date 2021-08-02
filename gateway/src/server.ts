@@ -24,13 +24,13 @@ app.use(logger);
 app.use(json());
 app.use(express.urlencoded({ extended: true }));
 app.use(gateway.middleware());
-app.use(initRoutes());
 app.use(handleError);
 
 app.listen(port, async () => {
   try {
     log(`Server is running at port: ${port}. Environment: "${environment}"`);
     await createConnection();
+    app.use(initRoutes());
   } catch (e) {
     log('App started with error', e);
   }
