@@ -1,25 +1,24 @@
 import { useState, useRef, FC, ReactNode, MouseEvent } from 'react';
 import { Popover as PopoverRB, Overlay } from 'react-bootstrap';
 import { Placement } from 'react-bootstrap/esm/types';
-import './popover.scss';
+import classes from './popover.module.scss';
 
 type HandleClose = () => void;
-type ChildFunc=(handleClose?: HandleClose) => ReactNode;
 
-interface Props{
-  placement?: Placement;
+interface Props {
+  placement?: 'bottom-start' | 'bottom-end' | 'bottom';
   trigger: ReactNode;
-  child: ChildFunc;
+  children: (handleClose?: HandleClose) => ReactNode;
+  id: string;
+  rootClose?: boolean;
 }
 
-const Popover: FC<Props> = ({ placement = 'bottom', trigger, child }) => {
+const Popover: FC<Props> = ({ placement = 'bottom', trigger, children, id, rootClose = false }) => {
   const [show, setShow] = useState(false);
   const [target, setTarget] = useState<HTMLElement | null>(null);
   const ref = useRef(null);
 
-  const handleClose = () => {
-    setShow(false);
-  };
+  const handleClose = () => setShow(false);
 
   const handleClick = (event: MouseEvent<HTMLElement>) => {
     setShow(!show);
@@ -28,19 +27,18 @@ const Popover: FC<Props> = ({ placement = 'bottom', trigger, child }) => {
 
   return (
     <div ref={ref}>
-      <div className="popover-trigger">
-        <button onClick={handleClick} type="button">{trigger}</button>
-      </div>
+      <button onClick={handleClick} type="button" className={classes['popover-trigger']}>{trigger}</button>
 
       <Overlay
         show={show}
         target={target}
         placement={placement}
         container={ref.current}
-        containerPadding={20}
+        onHide={handleClose}
+        rootClose={rootClose}
       >
-        <PopoverRB id="popover-contained">
-          <PopoverRB.Body> {child(handleClose)} </PopoverRB.Body>
+        <PopoverRB id={id} className={classes['popover-container']}>
+          <PopoverRB.Body>{children(handleClose)}</PopoverRB.Body>
         </PopoverRB>
       </Overlay>
     </div>

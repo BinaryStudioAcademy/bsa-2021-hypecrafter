@@ -1,0 +1,18 @@
+@import './../../styles/mixins', './../../styles/vars';
+
+.popover-trigger {
+  @include reset-button;
+}
+
+.popover-container {
+  border-radius: 0;
+  border: none;
+  background: #2e333a;
+  .popover-body {
+    padding: 18px 24px;
+    color: $color-root-text;
+  }
+  .popover-arrow {
+    display: none;
+  }
+}

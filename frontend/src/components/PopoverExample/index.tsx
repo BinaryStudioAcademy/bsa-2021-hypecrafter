@@ -7,14 +7,17 @@ const PopoverExample = () => (
     trigger={
       <FontAwesomeIcon icon={faSortDown} color="white" />
     }
-    child={(handleClose) => (
+    placement="bottom"
+    id="id"
+    rootClose
+  >
+    {(handleClose) => (
       <div>
         <FontAwesomeIcon icon={faTimes} onClick={handleClose} />
         <div>Someeeeeeee text</div>
       </div>
     )}
-    placement="bottom"
-  />
+  </Popover>
 );
 
 export default PopoverExample;
