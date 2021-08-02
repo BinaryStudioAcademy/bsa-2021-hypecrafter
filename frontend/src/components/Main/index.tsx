@@ -5,6 +5,7 @@ import BootstrapExample from '../BootstrapExample';
 import TranslateExample from '../TranslateExample';
 import ButtonExample from '../ButtonExample';
 import InputExample from '../InputExample';
+import CardExample from '../CardExample';
 import ModalWindow from '../ModalWindow';
 
 function Main() {
@@ -24,6 +25,7 @@ function Main() {
       <BootstrapExample />
       <ButtonExample />
       <InputExample />
+      <CardExample />
     </Container>
   );
 }
