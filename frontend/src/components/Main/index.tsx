@@ -6,11 +6,13 @@ import TranslateExample from '../TranslateExample';
 import ButtonExample from '../ButtonExample';
 import InputExample from '../InputExample';
 import ModalWindow from '../ModalWindow';
+import TabsExample from '../TabsExample';
 
 function Main() {
   const [show, setShow] = useState(true);
   return (
     <Container>
+      <TabsExample />
       <Users />
       <ModalWindow
         show={show}

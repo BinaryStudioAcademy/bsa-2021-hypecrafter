@@ -1,19 +1,23 @@
-$color-root-background:#191B1F;
-$color-root-block-background:#2E333A;
-$color-root-grey:#474A4F;
-$color-root-turquoise:#0AECEC;
-$color-root-turquoise-gradient:linear-gradient(90deg, #17E5E8 0%, #27AAF2 100%);
-$color-root-text:#FAFBFF;
-$color-root-text-grey:rgba(250, 251, 255, 0.5);
+$color-root-background: #191b1f;
+$color-root-block-background: #2e333a;
+$color-root-grey: #474a4f;
+$color-root-turquoise: #0aecec;
+$color-root-turquoise-gradient: linear-gradient(
+  90deg,
+  #17e5e8 0%,
+  #27aaf2 100%
+);
+$color-root-text: #fafbff;
+$color-root-text-grey: rgba(250, 251, 255, 0.5);
 
-$font-size-small:12px;
-$font-size-text:14px;
-$font-size-akcent:16px;
-$font-size-category:24px;
+$font-size-small: 12px;
+$font-size-text: 14px;
+$font-size-akcent: 16px;
+$font-size-category: 24px;
 
 // Bootstrap breakpoints
-$breakpoint-sm:576px;
-$breakpoint-md:768px;
-$breakpoint-lg:992px;
-$breakpoint-xl:1200px;
-$breakpoint-xxl:1400px;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
