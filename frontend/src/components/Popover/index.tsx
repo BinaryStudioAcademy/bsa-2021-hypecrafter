@@ -1,7 +1,6 @@
 import { useState, useRef, FC, ReactNode, MouseEvent } from 'react';
 import { Popover as PopoverRB, Overlay } from 'react-bootstrap';
-import { Placement } from 'react-bootstrap/esm/types';
-import classes from './popover.module.scss';
+import classes from './styles.module.scss';
 
 type HandleClose = () => void;
 
@@ -38,7 +37,7 @@ const Popover: FC<Props> = ({ placement = 'bottom', trigger, children, id, rootC
         rootClose={rootClose}
       >
         <PopoverRB id={id} className={classes['popover-container']}>
-          <PopoverRB.Body>{children(handleClose)}</PopoverRB.Body>
+          <PopoverRB.Body className={classes['popover-body']}>{children(handleClose)}</PopoverRB.Body>
         </PopoverRB>
       </Overlay>
     </div>

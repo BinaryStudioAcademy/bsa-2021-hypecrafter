@@ -1,5 +1,4 @@
 @import './../../styles/mixins', './../../styles/vars';
-
 .popover-trigger {
   @include reset-button;
 }
@@ -7,12 +6,13 @@
 .popover-container {
   border-radius: 0;
   border: none;
-  background: #2e333a;
-  .popover-body {
-    padding: 18px 24px;
-    color: $color-root-text;
-  }
-  .popover-arrow {
+  background: $color-root-block-background;
+  :global(.popover-arrow) {
     display: none;
   }
+}
+
+.popover-body {
+  padding: 18px 24px;
+  color: $color-root-text;
 }
