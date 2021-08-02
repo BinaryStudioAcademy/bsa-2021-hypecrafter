@@ -1,0 +1,10 @@
+@import "../../styles/vars";
+
+.tag {
+  padding: 4px 9px;
+  background: $color-root-grey;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-root-text-grey;
+}

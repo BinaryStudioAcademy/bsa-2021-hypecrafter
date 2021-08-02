@@ -1,0 +1,30 @@
+@import "../../styles/vars";
+
+.card {
+  padding: 20px;
+  height: 200px;
+  max-height: 200px;
+  display: grid;
+  grid-template-columns: calc(45% - 10px) calc(55% - 10px);
+  grid-template-rows: calc(100%);
+  column-gap: 20px;
+  background: $color-root-block-background;
+}
+
+.rounded {
+  border-radius: 1rem;
+}
+
+.card-image {
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.card-content {
+  max-height:100%;
+  display: flex;
+  flex-direction: column;
+}

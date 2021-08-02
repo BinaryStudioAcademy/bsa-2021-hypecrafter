@@ -1,6 +1,6 @@
 import { createConnection } from 'typeorm';
 import MicroMq from 'micromq';
-import { Project } from 'hypecrafter-shared';
+import { Project } from 'hypecrafter-shared/enums';
 import { log } from './helpers/logger';
 import initRoutes from './api/routes';
 import { env } from './env';
