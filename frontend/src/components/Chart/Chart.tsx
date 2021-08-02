@@ -23,18 +23,18 @@ export type ChartType =
   | 'scatter';
 
 interface ChartProps {
-  type?: ChartType;
-  labels?: string[];
-  dataSets?: DataItem[];
+  type: ChartType;
+  labels: string[];
+  dataSets: DataItem[];
   options?: ChartOptions;
 }
 
-const Chart: React.FC<ChartProps> = ({ type, dataSets, labels, options }) => (
+const Chart: React.FC<ChartProps> = ({ type, dataSets, labels: propLabels, options }) => (
   <ChartComponent
-    type={type || defaultProps.type}
+    type={type}
     data={{
-      labels: labels || defaultProps.data.labels,
-      datasets: dataSets || defaultProps.data.datasets
+      labels: propLabels,
+      datasets: dataSets
     }}
     options={options || defaultProps.options}
   />

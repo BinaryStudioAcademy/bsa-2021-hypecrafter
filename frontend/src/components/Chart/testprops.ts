@@ -1,3 +1,5 @@
+import { ChartType } from './Chart';
+
 function getGradient(ctx: any, chartArea: any) {
   const gradient = ctx.createLinearGradient(
     0,
@@ -49,8 +51,10 @@ const defaultData = {
   ]
 };
 
+const type: ChartType = 'line';
+
 const defaultProps = {
-  type: 'line',
+  type,
   data: defaultData,
   options: defaultOptions
 };
