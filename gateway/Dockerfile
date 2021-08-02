@@ -1,9 +1,9 @@
-FROM node:alpine
-WORKDIR "/app"
-COPY ./package.json ./
-COPY ./shared/ ./shared/
-RUN npm run build:shared
-COPY ./gateway/ ./gateway/
-RUN npm run install:gateway
+FROM node:14.17.1-alpine3.13
+WORKDIR "/app/shared"
+COPY --from=mihailts/hypecrafter-shared /app .
+WORKDIR "/app/gateway"
+COPY . .
+RUN npm install
 
-CMD ["npm", "run", "start-prod:gateway"]
+EXPOSE 3001
+CMD ["npm", "run", "start-prod"]

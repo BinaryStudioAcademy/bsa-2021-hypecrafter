@@ -1,9 +1,8 @@
-FROM node:alpine
-WORKDIR "/app"
-COPY ./package.json ./
-COPY ./shared/ ./shared/
-RUN npm run build:shared
-COPY ./backend/ ./backend/
-RUN npm run install:backend
+FROM node:14.17.1-alpine3.13
+WORKDIR "/app/shared"
+COPY --from=mihailts/hypecrafter-shared /app .
+WORKDIR "/app/backend"
+COPY . .
+RUN npm install
 
-CMD ["npm", "run", "start-prod:backend"]
+CMD ["npm", "run", "start-prod"]

@@ -2,25 +2,17 @@ version: '3'
 services:
   gateway:
     image: "mihailts/hypecrafter-gateway"
-    volumes:
-      - ./gateway:/app/gateway/
-      - ./shared:/app/shared/
     env_file:
       - .env
   backend:
     depends_on:
       - gateway
     image: "mihailts/hypecrafter-backend"
-    volumes:
-      - ./backend:/app/backend/
-      - ./shared:/app/shared/
     env_file:
       - .env
   frontend:
     stdin_open: true
     image: "mihailts/hypecrafter-frontend"
-    volumes:
-      - ./frontend:/app
   nginx:
     depends_on:
       - frontend
