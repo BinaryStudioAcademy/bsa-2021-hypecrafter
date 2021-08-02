@@ -11,7 +11,24 @@ function getGradient(ctx: any, chartArea: any) {
   return gradient;
 }
 
-const testData = {
+const defaultOptions = {
+  scales: {
+    x: {
+      grid: {
+        display: false
+      }
+    },
+    y: {
+      grid: {
+        drawBorder: false,
+        borderDash: [8],
+        color: 'rgba(255,255,255, 0.4)'
+      }
+    }
+  }
+};
+
+const defaultData = {
   labels: ['1', '2', '3', '4', '5', '6'],
   datasets: [
     {
@@ -32,4 +49,10 @@ const testData = {
   ]
 };
 
-export default testData;
+const defaultProps = {
+  type: 'line',
+  data: defaultData,
+  options: defaultOptions
+};
+
+export default defaultProps;

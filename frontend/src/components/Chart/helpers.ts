@@ -1,20 +1,4 @@
 const blueColors = ['rgb(23, 229, 232)', 'rgb(39, 170, 242)'];
-const defaultOptions = {
-  scales: {
-    x: {
-      grid: {
-        display: false
-      }
-    },
-    y: {
-      grid: {
-        drawBorder: false,
-        borderDash: [8],
-        color: 'rgba(255,255,255, 0.4)'
-      }
-    }
-  }
-};
 
 const getLinearGradient = (ctx: any, chartArea: any, colors: string[]) => {
   const gradient = ctx.createLinearGradient(
@@ -44,4 +28,4 @@ function setBorderColorGradient(colors: string[]) {
   return setFunc;
 }
 
-export { setBorderColorGradient, blueColors, defaultOptions };
+export { setBorderColorGradient, blueColors };
