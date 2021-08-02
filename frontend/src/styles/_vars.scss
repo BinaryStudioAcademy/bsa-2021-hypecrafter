@@ -1,5 +1,6 @@
 $color-root-background: #191b1f;
 $color-root-block-background: #2e333a;
+$color-root-grey: #474a4f;
 $color-root-turquoise: #0aecec;
 $color-root-turquoise-gradient: linear-gradient(
   90deg,
@@ -7,14 +8,15 @@ $color-root-turquoise-gradient: linear-gradient(
   #27aaf2 100%
 );
 $color-root-text: #fafbff;
+$color-root-text-grey: rgba(250, 251, 255, 0.5);
 
 $font-size-small: 12px;
 $font-size-text: 14px;
 $font-size-akcent: 16px;
 $font-size-category: 24px;
 
-$breakpoint-xs: 0px;
-$breakpoint-sm: 600px;
-$breakpoint-md: 960px;
-$breakpoint-lg: 1280px;
-$breakpoint-xs: 1920px;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
