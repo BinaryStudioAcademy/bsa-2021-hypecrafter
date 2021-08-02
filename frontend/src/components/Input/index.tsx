@@ -6,7 +6,7 @@ import classes from './styles.module.scss';
 
 interface Props extends Omit<FormControlProps, 'onChange'> {
   value: string;
-  type?: 'text' | 'textarea' | 'email' | 'password';
+  type?: 'text' | 'textarea' | 'email' | 'password'| 'search';
   placeholder?: string;
   label?: string;
   errorMessage?: string;
@@ -48,9 +48,11 @@ const Input: FunctionComponent<Props> = ({
             </button>
           ) }
       </div>
+      {type !== 'search' && (
       <div className={classes['error-message-container']}>
-        { errorMessage && <span className={classes['error-message']}> {errorMessage} </span> }
+        {errorMessage && <span className={classes['error-message']}> {errorMessage} </span>}
       </div>
+      )}
     </InputGroup>
   );
 };

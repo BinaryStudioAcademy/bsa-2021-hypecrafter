@@ -1,16 +1,17 @@
 import { useState } from 'react';
-import { Container } from 'react-bootstrap';
 import Users from '../../scenes/Users';
 import BootstrapExample from '../BootstrapExample';
 import TranslateExample from '../TranslateExample';
 import ButtonExample from '../ButtonExample';
 import InputExample from '../InputExample';
 import ModalWindow from '../ModalWindow';
+import Header from '../Header';
 
 function Main() {
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
   return (
-    <Container>
+    <div>
+      <Header />
       <Users />
       <ModalWindow
         show={show}
@@ -24,7 +25,7 @@ function Main() {
       <BootstrapExample />
       <ButtonExample />
       <InputExample />
-    </Container>
+    </div>
   );
 }
 
