@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
 import { Routes, StorageKeys } from '../../common/enums';
+import LoginPage from '../LoginPage';
 import Main from '../Main';
 import { useTypedSelector } from '../../hooks';
 import { authFetchUserAction } from '../../actions/auth';
@@ -26,6 +27,7 @@ const Routing = () => {
   return (
     <Switch>
       <Route path={Routes.HOME} exact component={Main} />
+      <Route path={Routes.LOGIN} exact component={LoginPage} />
     </Switch>
   );
 };
