@@ -16,7 +16,7 @@ function Main() {
         show={show}
         title="Modal"
         body="Hello there!"
-        type="user-page"
+        size="medium"
         centered
         onHide={() => {
           setShow(false);

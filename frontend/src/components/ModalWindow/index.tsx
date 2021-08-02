@@ -7,15 +7,15 @@ interface ModalWindowProps {
   title: string | ReactNode;
   body: string | ReactNode;
   footer?: string | ReactNode;
-  type?: string;
+  size: 'small' | 'medium' | 'wide';
   centered?: boolean;
   onHide(): void;
 }
 const ModalWindow: React.FC<ModalWindowProps> = (props) => {
-  const { title, show, body, footer, centered, type, onHide } = props;
+  const { title, show, body, footer, centered, size, onHide } = props;
   return (
     <Modal
-      dialogClassName={type}
+      dialogClassName={`${size}-modal`}
       show={show}
       onHide={onHide}
       className="my-modal"
