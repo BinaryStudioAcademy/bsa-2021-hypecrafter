@@ -16,4 +16,4 @@ createConnection()
   .then(() => {
     initRoutes(app).start();
   })
-  .catch((e: Error) => log(e));
+  .catch((e) => log(e));
