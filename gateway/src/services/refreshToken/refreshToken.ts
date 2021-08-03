@@ -10,4 +10,16 @@ export default class RefreshTokenService {
   public getByToken(token: string) {
     return this.#refreshTokenRepository.getByToken(token);
   }
+
+  public getByUserId(userId: string) {
+    return this.#refreshTokenRepository.getByUserId(userId);
+  }
+
+  public create(data: {token: string, userAgentInfo: string, userId: string}) {
+    return this.#refreshTokenRepository.createToken(data);
+  }
+
+  public deleteByToken(token: string) {
+    return this.#refreshTokenRepository.deleteByToken(token);
+  }
 }
