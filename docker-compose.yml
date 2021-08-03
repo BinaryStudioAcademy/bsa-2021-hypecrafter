@@ -10,6 +10,18 @@ services:
     image: "mihailts/hypecrafter-backend"
     env_file:
       - .env
+  notification:
+    depends_on:
+      - gateway
+    image: "mihailts/hypecrafter-notification"
+    env_file:
+      - .env
+  payment:
+    depends_on:
+      - gateway
+    image: "mihailts/hypecrafter-payment"
+    env_file:
+      - .env
   frontend:
     stdin_open: true
     image: "mihailts/hypecrafter-frontend"
@@ -18,6 +30,8 @@ services:
       - frontend
       - gateway
       - backend
+      - notification
+      - payment
     restart: always
     image: "mihailts/hypecrafter-nginx"
     ports:
