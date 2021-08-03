@@ -1,6 +1,7 @@
+import { Chart } from 'chart.js';
 import { ChartType } from './Chart';
 
-function getGradient(ctx: any, chartArea: any) {
+function getGradient(ctx: CanvasRenderingContext2D, chartArea: { bottom: number; top: number }) {
   const gradient = ctx.createLinearGradient(
     0,
     chartArea.bottom,
@@ -9,7 +10,6 @@ function getGradient(ctx: any, chartArea: any) {
   );
   gradient.addColorStop(0, 'rgb(23, 229, 232)');
   gradient.addColorStop(1, 'rgb(39, 170, 242)');
-
   return gradient;
 }
 
@@ -38,13 +38,14 @@ const defaultData = {
       data: [12, 19, 3, 5, 2, 3],
       fill: false,
       backgroundColor: 'rgb(23, 229, 232)',
-      borderColor(context: any): any {
+      borderColor(context: { chart: Chart }): CanvasGradient | null {
         const { chart } = context;
         const { ctx, chartArea } = chart;
 
         if (!chartArea) {
           return null;
         }
+
         return getGradient(ctx, chartArea);
       }
     }
