@@ -12,7 +12,7 @@ import openApiDocumentation from '../openApiDocumentation.json';
 
 const { port, environment, rabbit } = env.app;
 const gateway = new Gateway({
-  microservices: [Project.BACKEND, Project.PAYMENT],
+  microservices: [Project.BACKEND, Project.PAYMENT, Project.NOTIFICATION],
   rabbit
 });
 

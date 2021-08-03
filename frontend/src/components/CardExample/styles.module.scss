@@ -1,0 +1,16 @@
+@import "../../styles/vars";
+
+.cards {
+  margin-block: 40px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(1, 1fr);
+
+  @media (min-width: $breakpoint-lg) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: $breakpoint-xxl) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

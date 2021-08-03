@@ -1,0 +1,23 @@
+@import '../../styles/vars';
+
+.my-modal {
+  .modal-content {
+    background-color: $color-root-modal-background;
+    .btn-close {
+      filter: invert(1) grayscale(100%) brightness(200%);
+    }
+  }
+}
+.wide-modal {
+  width: 85%;
+  max-width: $breakpoint-lg;
+}
+.small-modal{
+	width: 45%;
+	max-width: $breakpoint-sm;
+}
+
+.medium-modal{
+	width: 65%;
+	max-width: $breakpoint-md;
+}

@@ -1,5 +1,15 @@
 {
     "translation": {
-        "Press on me": "Натисни на мене"
+        "Press on me": "Натисни на мене",
+        "Sign In": "Увійти",
+        "Sign Up": "Зареєструватись",
+        "Email": "Електронна адреса",
+        "Password": "Пароль",
+        "Don’t have an account?": "Немає акаунту?",
+        "Enter your email": "Введіть свою електронну адресу",
+        "Enter your password": "Введіть свій пароль",
+        "Forgot your password?": "Забули пароль?",
+        "or": "або",
+        "Sign In with Google": "Увійти за допомогою Google"
     }
 }
