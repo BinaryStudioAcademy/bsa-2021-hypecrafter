@@ -8,6 +8,7 @@ import InputExample from '../InputExample';
 import PopoverExample from '../PopoverExample';
 import CardExample from '../CardExample';
 import ModalWindow from '../ModalWindow';
+import UserPage from '../UserPage';
 
 function Main() {
   const [show, setShow] = useState(true);
@@ -17,10 +18,10 @@ function Main() {
       <PopoverExample />
       <ModalWindow
         show={show}
-        title="Modal"
-        body="Hello there!"
-        size="medium"
-        centered
+        title="User Page"
+        body={<UserPage />}
+        size="user-page"
+        centered={false}
         onHide={() => {
           setShow(false);
         }}
