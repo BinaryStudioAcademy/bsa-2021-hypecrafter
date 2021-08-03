@@ -1,0 +1,12 @@
+@mixin reset-button {
+  border: none;
+  outline: none;
+  padding: 0;
+  background: transparent;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

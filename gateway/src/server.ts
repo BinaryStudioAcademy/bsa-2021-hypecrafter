@@ -15,7 +15,7 @@ import { WHITE_ROUTES } from './common/constants/whiteRouts';
 
 const { port, environment, rabbit } = env.app;
 const gateway = new Gateway({
-  microservices: [Project.BACKEND, Project.PAYMENT],
+  microservices: [Project.BACKEND, Project.PAYMENT, Project.NOTIFICATION],
   rabbit
 });
 

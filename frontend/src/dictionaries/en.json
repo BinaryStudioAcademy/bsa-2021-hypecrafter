@@ -1,5 +1,15 @@
 {
     "translation": {
-        "Press on me": "Press on me"
+        "Press on me": "Press on me",
+        "Sign In": "Sign In",
+        "Sign Up": "Sign Up",
+        "Email": "Email",
+        "Password": "Password",
+        "Don’t have an account?": "Don't have an account?",
+        "Enter your email": "Enter your email",
+        "Enter your password": "Enter your password",
+        "Forgot your password?": "Forgot your password?",
+        "or": "or",
+        "Sign In with Google": "Sign In with Google"
     }
 }
