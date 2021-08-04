@@ -1,6 +1,7 @@
-@import '../../styles/vars';
+@import '../../../styles/vars';
 .wrp-fund-body {
   background-color: $color-root-block-background;
+
   margin: 15px 0px;
   border-radius: 5px;
   .fund-body {
@@ -11,15 +12,13 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    .input-wrp {
-      h2 {
-        font-size: $font-size-category;
-        color: $color-root-text;
-        img {
-          height: $font-size-category;
-          margin-left: 3px;
-          margin-bottom: 3px;
-        }
+    h2 {
+      font-size: $font-size-category;
+      color: $color-root-text;
+      img {
+        height: $font-size-category;
+        margin-left: 3px;
+        margin-bottom: 3px;
       }
     }
     .purchase-action {
@@ -66,15 +65,19 @@
     background-size: 700% 700%;
     animation: gradient 3.5s ease infinite;
   }
-  *:hover,
-  *:focus,
-  *:active {
-    outline: none;
-    box-shadow: none !important;
-    -webkit-appearance: none;
+}
+@media screen and (max-width: 1000px) {
+  .wrp-fund-body {
+    .fund-body {
+      .purchase-action {
+        background-color: rgba(0, 0, 0, 0);
+        .purchase-action-price {
+          display: none;
+        }
+      }
+    }
   }
 }
-
 @keyframes gradient {
   0% {
     background-position: 0 50%;
@@ -84,20 +87,5 @@
   }
   100% {
     background-position: 0 50%;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  div {
-    .wrp-fund-body {
-      .fund-body {
-        .purchase-action {
-          background-color: rgba(0, 0, 0, 0);
-          .purchase-action-price {
-            display: none;
-          }
-        }
-      }
-    }
   }
 }

@@ -6,7 +6,7 @@ import LoginPage from '../LoginPage';
 import Main from '../Main';
 import { useTypedSelector } from '../../hooks';
 import { authFetchUserAction } from '../../actions/auth';
-import FundsPage from '../FundsPage';
+import FundsPage from '../../scenes/Wallet/FundsPage';
 
 const Routing = () => {
   const dispatch = useDispatch();
