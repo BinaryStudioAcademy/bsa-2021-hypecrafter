@@ -1,6 +1,6 @@
 import { Repositories } from '../data/repositories';
 
-export function initServices(_repositories: Repositories): Record<string, unknown> {
+export function initServices(_repositories: Repositories): Services {
   return {};
 }
 
