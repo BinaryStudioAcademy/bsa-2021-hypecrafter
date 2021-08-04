@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+@import './../../styles/vars';
+
+.logo {
+  font-size: 2rem;
+  font-weight: $font-weight-bold;
+  color: white;
+  font-family: Orbitron;
+  letter-spacing: 0.28em;
+}
+
+.glitch {
+  position: relative;
+  text-shadow: 0.05em 0 0 $color-glitch-red,
+    -0.035em -0.05em 0 $color-glitch-green, 0.05em 0.05em 0 $color-glitch-blue;
+
+  animation: glitch 500ms infinite;
+
+  span {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+
+  span:nth-child(3) {
+    font-weight: $font-weight-lighter;
+    opacity: 0.5;
+    transform: translate(0.01em, 0.03em);
+  }
+
+  span:nth-child(2) {
+    text-shadow: none;
+    animation: none;
+    opacity: 0.9;
+  }
+
+  span:first-child {
+    animation: glitch 650ms infinite;
+    display: block;
+    color: $color-root-turquoise;
+    -webkit-text-stroke: 0.25em $color-root-turquoise;
+  }
+
+  span:last-child {
+    font-weight: $font-weight-lighter;
+    opacity: 0.8;
+    clip-path: polygon(0 100%, 10% 0, 100% 45%, 0 45%);
+    transform: translate(-0.05em, -0.08em);
+  }
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 0.05em 0 0 $color-glitch-red,
+      -0.035em -0.05em 0 $color-glitch-green, 0.05em 0.05em 0 $color-glitch-blue;
+  }
+  14% {
+    text-shadow: 0.05em 0 0 $color-glitch-red,
+      -0.035em -0.05em 0 $color-glitch-green, 0.05em 0.05em 0 $color-glitch-blue;
+  }
+  15% {
+    text-shadow: -0.05em -0.035em 0 $color-glitch-red,
+      0.025em 0.025em 0 $color-glitch-green,
+      -0.05em -0.05em 0 $color-glitch-blue;
+  }
+  49% {
+    text-shadow: -0.05em -0.035em 0 $color-glitch-red,
+      0.025em 0.025em 0 $color-glitch-green,
+      -0.05em -0.05em 0 $color-glitch-blue;
+  }
+  50% {
+    text-shadow: 0.025em 0.05em 0 $color-glitch-red,
+      0.05em 0 0 $color-glitch-green, 0 -0.05em 0 $color-glitch-blue;
+  }
+  99% {
+    text-shadow: 0.025em 0.05em 0 $color-glitch-red,
+      0.05em 0 0 $color-glitch-green, 0 -0.05em 0 $color-glitch-blue;
+  }
+  100% {
+    text-shadow: -0.035em 0 0 $color-glitch-red,
+      -0.035em -0.035em 0 $color-glitch-green,
+      -0.05em -0.05em 0 $color-glitch-blue;
+  }
+}

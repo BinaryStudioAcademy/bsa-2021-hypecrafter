@@ -9,6 +9,7 @@
     }
   },
   "plugins": ["react"],
+  "ignorePatterns": ["src/localization/locale-keys.js"],
   "rules": {
     "no-underscore-dangle": "off",
     "import/no-named-as-default": "off",

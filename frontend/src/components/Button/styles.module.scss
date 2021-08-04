@@ -1,3 +1,5 @@
+@import './../../styles/vars';
+
 .button {
   padding: 5px 10px;
   display: flex;
@@ -14,7 +16,7 @@
 }
 
 .primary {
-  background: linear-gradient(90deg, #14e7e7 0%, #3bcaf9 61.98%, #25a8f1 100%);
+  background: $color-primary-button;
   border: none;
 }
 

@@ -1,15 +1,15 @@
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button, Container } from 'react-bootstrap';
-import { useTranslation } from 'react-i18next';
 import { Languages } from '../../common/enums';
+import { useLocalization } from '../../providers/localization';
 
 const TranslateExample = () => {
-  const { t, i18n } = useTranslation();
+  const { t, changeLanguage, selectedLanguage } = useLocalization();
   return (
     <Container>
       <Button
-        onClick={() => i18n.changeLanguage(i18n.language === Languages.UA
+        onClick={() => changeLanguage(selectedLanguage === Languages.UA
           ? Languages.EN : Languages.UA)}
       >
         <FontAwesomeIcon icon={faSearch} /> {t('Press on me')}

@@ -8,11 +8,21 @@ import InputExample from '../InputExample';
 import PopoverExample from '../PopoverExample';
 import CardExample from '../CardExample';
 import ModalWindow from '../ModalWindow';
+import TextStyleExample from '../TextStyleExample';
+import TabsExample from '../TabsExample';
+import Chart from '../Chart/Chart';
+import defaultProps from '../Chart/testprops';
 
 function Main() {
   const [show, setShow] = useState(true);
   return (
     <Container>
+      <TabsExample />
+      <Chart
+        type={defaultProps.type}
+        labels={defaultProps.data.labels}
+        dataSets={defaultProps.data.datasets}
+      />
       <Users />
       <PopoverExample />
       <ModalWindow
@@ -25,6 +35,7 @@ function Main() {
           setShow(false);
         }}
       />
+      <TextStyleExample />
       <TranslateExample />
       <BootstrapExample />
       <ButtonExample />
