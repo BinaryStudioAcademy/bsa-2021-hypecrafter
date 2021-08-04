@@ -1,3 +1,4 @@
+
 import { Chart } from 'chart.js';
 
 const blueColors = ['rgb(23, 229, 232)', 'rgb(39, 170, 242)'];
