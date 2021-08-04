@@ -1,0 +1,31 @@
+@import '../../styles/vars';
+
+.progress {
+  margin-top: 10px;
+
+  .progress-info {
+    display: flex;
+    justify-content: space-between;
+
+    .goal {
+      font-size: $font-size-small;
+      line-height: 150%;
+      color: $color-root-text;
+    }
+
+    .percent {
+      font-weight: bold;
+      font-size: $font-size-small;
+      line-height: 140%;
+      color: $color-root-turquoise;
+    }
+  }
+
+  .progress-bar {
+    height: 4px;
+
+    div {
+      background: $color-root-turquoise-gradient;
+    }
+  }
+}

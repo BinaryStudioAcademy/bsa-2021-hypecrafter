@@ -1,0 +1,22 @@
+@import '../../../styles/vars';
+@import '../../../styles/mixins';
+
+.item {
+  background: white;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-size: $font-size-akcent;
+  font-weight: bold;
+}
+
+.selected-item {
+  background: $color-root-turquoise-gradient;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-size: $font-size-akcent;
+  font-weight: bold;
+}

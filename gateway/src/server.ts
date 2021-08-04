@@ -1,38 +1,25 @@
 import { createConnection } from 'typeorm';
-import cors from 'cors';
-import express, { json } from 'express';
-import Gateway from 'micromq/gateway';
-import { Project } from 'hypecrafter-shared/enums';
-import swaggerUI from 'swagger-ui-express';
+import express from 'express';
 import { log } from './helpers';
-import { handleError, logger } from './api/middlewares';
 import initRoutes from './api/routes';
 import { env } from './env';
-import openApiDocumentation from '../openApiDocumentation.json';
+import { initMiddlewares } from './api/middlewares';
+import { initServices } from './services';
+import { initRepositories } from './data/repositories';
 
-const { port, environment, rabbit } = env.app;
-const gateway = new Gateway({
-  microservices: [Project.BACKEND, Project.PAYMENT, Project.NOTIFICATION],
-  rabbit
-});
-
+const { port, environment } = env.app;
 const app = express();
 
-app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(openApiDocumentation));
-app.use(cors());
-app.use(logger);
-app.use(json());
-app.use(express.urlencoded({ extended: true }));
-app.use(gateway.middleware());
-app.use(initRoutes());
-app.use(handleError);
-
-app.listen(port, async () => {
+createConnection().then(() => {
   try {
-    log(`Server is running at port: ${port}. Environment: "${environment}"`);
-    await createConnection();
+    const repositories = initRepositories();
+    const services = initServices(repositories);
+    initMiddlewares(app, services);
+    app.use(initRoutes());
+    app.listen(port, () => {
+      log(`Server is running at port: ${port}. Environment: "${environment}"`);
+    });
   } catch (e) {
     log('App started with error', e);
   }
-});
-
+}, err => log('Connection to database was failed.', err));

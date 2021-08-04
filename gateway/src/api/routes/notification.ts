@@ -1,5 +1,5 @@
 import { Router, Response } from 'express';
-import { Project } from 'hypecrafter-shared';
+import { Project } from 'hypecrafter-shared/enums';
 
 const init = () => {
   const router = Router();

@@ -1,45 +1,48 @@
 {
-    "scripts": {
-        "lint:gateway": "cd gateway && npm run lint:write",
-        "lint:backend": "cd backend && npm run lint:write",
-        "lint:frontend": "cd frontend && npm run lint:write",
-        "lint:notification": "cd notification && npm run lint:write",
-        "lint": "npm run lint:gateway && npm run lint:backend && npm run lint:frontend && npm run lint:notification",
-        "install:gateway": "cd gateway && npm install",
-        "install:backend": "cd backend && npm install",
-        "install:frontend": "cd frontend && npm install",
-        "install:notification": "cd notification && npm install",
-        "install:all": "npm install && npm run build:shared && npm run install:gateway && npm run install:backend && npm run install:frontend && npm run install:notification",
-        "build:shared": "cd shared && npm install && npm run build",
-        "start:gateway": "cd gateway && npm run start",
-        "start:backend": "cd backend && npm run start",
-        "start:frontend": "cd frontend && npm run start",
-        "start:notification": "cd notification && npm run start",
-        "start": "concurrently -k -p \"{name}: {time}\" -n \"FRONTEND,GATEWAY,BACKEND,NOTIFICATION\" \"npm:start:frontend\" \"npm:start:gateway\" \"npm:start:backend\" \"npm:start:notification\"",
-        "migrate:backend": "cd backend && npm run migrate",
-        "migrate:gateway": "cd gateway && npm run migrate",
-        "migrate:all": "npm run migrate:backend && npm run migrate:gateway",
-        "seed:backend": "cd backend && npm run seed",
-        "seed:gateway": "cd gateway && npm run seed",
-        "seed:all": "npm run seed:backend && npm run seed:gateway"
-    },
-    "devDependencies": {
-        "concurrently": "^6.2.0",
-        "husky": "^4.3.8",
-        "lint-staged": "^11.1.1"
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged"
-        }
-    },
-    "lint-staged": {
-        "**/*.(js|ts|tsx)": [
-            "npm run lint"
-        ]
-    },
-    "dependencies": {
-        "pg": "^8.7.1",
-        "tslib": "^1.14.1"
+  "scripts": {
+    "lint:gateway": "cd gateway && npm run lint:write",
+    "lint:backend": "cd backend && npm run lint:write",
+    "lint:frontend": "cd frontend && npm run lint:write",
+    "install:gateway": "cd gateway && npm i",
+    "install:backend": "cd backend && npm i",
+    "lint:notification": "cd notification && npm run lint:write",
+    "lint:payment": "cd payment && npm run lint:write",
+    "lint": "npm run lint:gateway && npm run lint:backend && npm run lint:frontend && npm run lint:notification && npm run install:notification && npm run lint:payment",
+    "install:frontend": "cd frontend && npm install",
+    "install:notification": "cd notification && npm install",
+    "install:payment": "cd payment && npm install",
+    "install:all": "npm install && npm run build:shared && npm run install:gateway && npm run install:backend && npm run install:frontend && npm run install:notification && npm run install:payment",
+    "build:shared": "cd shared && npm install && npm run build",
+    "start:gateway": "cd gateway && npm run start",
+    "start:backend": "cd backend && npm run start",
+    "start:frontend": "cd frontend && npm run start",
+    "start:notification": "cd notification && npm run start",
+    "start:payment": "cd payment && npm run start",
+    "start": "concurrently -k -p \"{name}: {time}\" -n \"FRONTEND,GATEWAY,BACKEND,NOTIFICATION,PAYMENT\" \"npm:start:frontend\" \"npm:start:gateway\" \"npm:start:backend\" \"npm:start:notification\" \"npm:start:payment\"",
+    "migrate:backend": "cd backend && npm run migrate",
+    "migrate:gateway": "cd gateway && npm run migrate",
+    "migrate:payment": "cd payment && npm run migrate",
+    "migrate:all": "npm run migrate:backend && npm run migrate:gateway && npm run migrate:payment",
+    "seed:backend": "cd backend && npm run seed",
+    "seed:gateway": "cd gateway && npm run seed",
+    "seed:all": "npm run seed:backend && npm run seed:gateway"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.0",
+    "husky": "^4.3.8",
+    "lint-staged": "^11.1.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "**/*.(js|ts|tsx)": [
+      "npm run lint"
+    ]
+  },
+  "dependencies": {
+    "tslib": "^1.14.1"
+  }
 }

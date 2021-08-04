@@ -21,6 +21,7 @@
     "react",
     "@typescript-eslint"
   ],
+  "ignorePatterns": ["src/localization/locale-keys.js"],
   "rules": {
     "object-curly-newline": "off",
     "react/react-in-jsx-scope": "off",
@@ -67,6 +68,7 @@
       }
     ],
     "arrow-parens": "off",
+    "react/jsx-props-no-spreading": "off",
     "react/jsx-one-expression-per-line": "off",
     "import/prefer-default-export": "off",
     "react/prop-types": "off",
