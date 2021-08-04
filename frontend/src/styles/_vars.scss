@@ -10,11 +10,29 @@ $color-root-turquoise-gradient: linear-gradient(
 );
 $color-root-text: #fafbff;
 $color-root-text-grey: rgba(250, 251, 255, 0.5);
+$color-error: red;
+$color-primary-button: linear-gradient(
+  90deg,
+  #14e7e7 0%,
+  #3bcaf9 61.98%,
+  #25a8f1 100%
+);
+$color-base-border: 1px solid #3a3a3a;
+$color-glitch-red: rgba(255, 0, 0, 0.44);
+$color-glitch-green: rgba(0, 255, 0, 0.44);
+$color-glitch-blue: rgba(0, 0, 255, 0.44);
 
 $font-size-small: 12px;
 $font-size-text: 14px;
 $font-size-akcent: 16px;
+$font-size-large: 18px;
 $font-size-category: 24px;
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$font-weight-lighter: lighter;
 
 $breakpoint-sm: 576px;
 $breakpoint-md: 768px;

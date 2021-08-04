@@ -1,12 +1,12 @@
+import { Services } from './../../services';
 import { Router } from 'express';
 import { Path } from '../../common/enums';
 import userRouter from './user';
 import authRouter from './auth';
-import { initServices } from '../../services';
 import notificationRouter from './notification';
 
-const initRoutes = () => {
-  const services = initServices();
+const initRoutes = (services: Services) => {
+  // const services = initServices();
   const router = Router();
 
   router.use(Path.User, userRouter());

@@ -1,8 +1,8 @@
-@import "../../styles/vars";
+@import '../../styles/vars';
 
 .category {
-  font-weight: 300;
-  font-size: 12px;
+  font-weight: $font-weight-light;
+  font-size: $font-size-small;
   line-height: 14px;
   color: $color-root-turquoise;
 }
@@ -10,8 +10,8 @@
 .title {
   margin-top: 5px;
   max-height: 38px;
-  font-weight: 500;
-  font-size: 16px;
+  font-weight: $font-weight-medium;
+  font-size: $font-size-akcent;
   line-height: 19px;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -25,8 +25,8 @@
   margin-top: 10px;
   margin-bottom: auto;
   max-height: 32px;
-  font-weight: 300;
-  font-size: 14px;
+  font-weight: $font-weight-light;
+  font-size: $font-size-text;
   line-height: 16px;
   display: -webkit-box;
   -webkit-line-clamp: 2;

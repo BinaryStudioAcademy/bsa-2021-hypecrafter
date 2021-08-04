@@ -1,7 +1,7 @@
-import './logo.scss';
+import classes from './logo.module.scss';
 
 const Logo = () => (
-  <div className="logo glitch">
+  <div className={`${classes.logo} ${classes.glitch}`}>
     <span aria-hidden="true">HypeCrafter</span>
     <span aria-hidden="true">HypeCrafter</span>
     <span aria-hidden="true">HypeCrafter</span>
