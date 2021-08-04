@@ -1,9 +1,9 @@
 import { FunctionComponent, MouseEvent, useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
-import Card from '../Card';
-import ProjectCard from '../ProjectCard';
-import { Achievement, Activity, Project } from './interfaces';
-import classes from './styles.module.scss';
+import Card from '../../../components/Card';
+import ProjectCard from '../../../components/ProjectCard';
+import { Achievement, Activity, Project } from '../interfaces';
+import classes from '../styles.module.scss';
 
 interface BodyProps {
   projects: Project[];

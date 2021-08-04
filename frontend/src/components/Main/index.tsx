@@ -8,7 +8,7 @@ import InputExample from '../InputExample';
 import PopoverExample from '../PopoverExample';
 import CardExample from '../CardExample';
 import ModalWindow from '../ModalWindow';
-import UserPage from '../UserPage';
+import UserPage from '../../scenes/UserPage';
 import Chart from '../Chart/Chart';
 import defaultProps from '../Chart/testprops';
 

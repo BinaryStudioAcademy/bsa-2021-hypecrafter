@@ -3,8 +3,8 @@ import { Image } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookSquare, faInstagram, faDribbble } from '@fortawesome/free-brands-svg-icons';
-import { User } from './interfaces';
-import classes from './styles.module.scss';
+import { User } from '../interfaces';
+import classes from '../styles.module.scss';
 
 interface HeaderProps {
   user: User;
