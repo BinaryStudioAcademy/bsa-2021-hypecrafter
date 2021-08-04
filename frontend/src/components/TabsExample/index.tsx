@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Nav } from 'react-bootstrap';
-import Tabs from '../Tabs';
+import { Tabs } from '../Tabs';
 
 const TabsExample: FC = () => {
   const tabs = ['Projects', 'Achievements', 'About me'];

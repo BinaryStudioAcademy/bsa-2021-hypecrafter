@@ -2,12 +2,12 @@ import React, { ReactNode, FC } from 'react';
 import { Nav } from 'react-bootstrap';
 import classes from './styles.module.scss';
 
-interface TabsItemProps {
+interface TabItemProps {
   children?: ReactNode;
   selected?: boolean;
 }
 
-const TabsItem: FC<TabsItemProps> = ({
+const TabItem: FC<TabItemProps> = ({
   children,
   selected = false,
   ...rest
@@ -20,4 +20,4 @@ const TabsItem: FC<TabsItemProps> = ({
   </Nav.Item>
 );
 
-export default TabsItem;
+export default TabItem;
