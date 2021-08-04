@@ -1,4 +1,4 @@
-import React, { FC, ElementType } from 'react';
+import { FC, ElementType } from 'react';
 import { Route, Redirect, RouteProps } from 'react-router-dom';
 import { useTypedSelector } from '../../hooks';
 import { Routes } from '../../common/enums';
