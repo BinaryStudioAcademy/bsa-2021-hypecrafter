@@ -34,6 +34,7 @@ const CardsGrid: FunctionComponent<CardsGridProps> = ({
         image={project.imageUrl}
         percent={Math.floor((project.donated / project.goal) * 100)}
         goal={project.goal}
+        rounded
       />
     ));
 
@@ -51,6 +52,7 @@ const CardsGrid: FunctionComponent<CardsGridProps> = ({
       <Card
         key={achievement.id}
         image={achievement.imageUrl}
+        rounded
       >
         <h4 className={classes['achievement-name']}>{achievement.name}</h4>
         <p>{achievement.description}</p>
