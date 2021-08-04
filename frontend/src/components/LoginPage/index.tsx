@@ -1,12 +1,12 @@
 import { FC, MouseEventHandler } from 'react';
 import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import Button from '../Button';
 import Input from '../Input';
 import classes from './styles.module.scss';
 import logo from '../../assets/HypeCrafter.svg';
 import { Routes, Languages } from '../../common/enums';
+import { useLocalization } from '../../providers/localization';
 
 type FormData = {
   email: string;
@@ -15,7 +15,7 @@ type FormData = {
 
 const LoginPage: FC = () => {
   const { register, handleSubmit, setError, formState: { errors } } = useForm<FormData>();
-  const { t, i18n } = useTranslation();
+  const { t, changeLanguage, selectedLanguage } = useLocalization();
 
   const onSubmit: SubmitHandler<FormData> = data => {
     console.log('Sign In', data.email, data.password);
@@ -28,7 +28,7 @@ const LoginPage: FC = () => {
 
   const dummySignInWithGoogleHandler: MouseEventHandler<HTMLButtonElement> = (e) => {
     console.log('Sign In with Google');
-    i18n.changeLanguage(i18n.language === Languages.UA ? Languages.EN : Languages.UA); // temp, for translations test
+    changeLanguage(selectedLanguage === Languages.UA ? Languages.EN : Languages.UA); // temp, for translations test
   };
 
   return (
