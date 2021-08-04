@@ -1,3 +1,4 @@
+/* eslint-disable  @typescript-eslint/no-explicit-any */
 const blueColors = ['rgb(23, 229, 232)', 'rgb(39, 170, 242)'];
 
 const getLinearGradient = (ctx: any, chartArea: any, colors: string[]) => {
