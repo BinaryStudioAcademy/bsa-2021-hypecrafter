@@ -1,4 +1,4 @@
-import { Entity, OneToOne, JoinColumn, Column } from 'typeorm';
+import { Entity, OneToOne, Column, JoinColumn } from 'typeorm';
 import { AbstractEntity } from './abstract';
 import { UserProfile } from './userProfile';
 
@@ -10,7 +10,7 @@ export class AlertsSettings extends AbstractEntity {
   @Column({ type: 'text' })
   unit: string;
 
-  @OneToOne(() => UserProfile)
+  @OneToOne(() => UserProfile, userProfile => userProfile.alertsSettings)
   @JoinColumn()
   user: UserProfile;
 }

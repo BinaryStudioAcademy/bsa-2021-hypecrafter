@@ -1,15 +1,13 @@
-import { Entity, ManyToOne, BaseEntity, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, ManyToOne } from 'typeorm';
+import { AbstractEntity } from './abstract';
 import { Project } from './project';
 import { Tag } from './tag';
 
 @Entity()
-export class ProjectTag extends BaseEntity {
-  @PrimaryGeneratedColumn('uuid')
-  id: string;
-
+export class ProjectTag extends AbstractEntity {
   @ManyToOne(() => Tag, tag => tag.projectTags)
-  public tag!: Tag;
+  tag!: Tag;
 
   @ManyToOne(() => Project, project => project.projectTags)
-  public project!: Project;
+  project!: Project;
 }

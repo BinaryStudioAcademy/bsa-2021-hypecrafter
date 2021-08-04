@@ -12,7 +12,7 @@ import { Donate } from './donate';
 import { UserProject } from './userProject';
 import { ProjectTag } from './projectTag';
 import { Team } from './team';
-import { FAQ } from './fAQ';
+import { FAQ } from './faq';
 
 @Entity()
 export class Project extends AbstractEntity {
@@ -50,21 +50,21 @@ export class Project extends AbstractEntity {
   region: string;
 
   @ManyToOne(() => Category, category => category.projects)
-  public category!: Category;
+  category!: Category;
 
   @OneToMany(() => Donate, donate => donate.project)
-  public donates!: Donate[];
+  donates!: Donate[];
 
   @OneToMany(() => UserProject, userProject => userProject.project)
-  public userProjects!: UserProject[];
+  userProjects!: UserProject[];
 
   @OneToMany(() => ProjectTag, projectTag => projectTag.project)
-  public projectTags!: ProjectTag[];
+  projectTags!: ProjectTag[];
 
-  @OneToOne(() => Team)
+  @OneToOne(() => Team, team => team.project)
   @JoinColumn()
   team: Team;
 
-  @OneToMany(() => FAQ, fAQ => fAQ.project)
-  public fAQs!: FAQ[];
+  @OneToMany(() => FAQ, faq => faq.project)
+  faqs!: FAQ[];
 }

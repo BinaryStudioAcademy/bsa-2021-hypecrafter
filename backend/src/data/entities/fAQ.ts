@@ -10,6 +10,6 @@ export class FAQ extends AbstractEntity {
   @Column({ type: 'text' })
   answer: string;
 
-  @ManyToOne(() => Project, project => project.fAQs)
-  public project!: Project;
+  @ManyToOne(() => Project, project => project.faqs)
+  project!: Project;
 }

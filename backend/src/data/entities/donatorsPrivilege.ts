@@ -1,6 +1,6 @@
 import { Entity, Column, OneToMany } from 'typeorm';
 import { AbstractEntity } from './abstract';
-import { PDonatorsPrivilege } from './pDonatorsPrivilege';
+import { ProjectDonatorsPrivilege } from './projectDonatorsPrivilege';
 
 @Entity()
 export class DonatorsPrivilege extends AbstractEntity {
@@ -11,8 +11,8 @@ export class DonatorsPrivilege extends AbstractEntity {
   amount: number;
 
   @OneToMany(
-    () => PDonatorsPrivilege,
-    pDonatorsPrivilege => pDonatorsPrivilege.donatorsPrivilege
+    () => ProjectDonatorsPrivilege,
+    projectDonatorsPrivilege => projectDonatorsPrivilege.donatorsPrivilege
   )
-  public pDonatorsPrivileges!: PDonatorsPrivilege[];
+  projectDonatorsPrivileges!: ProjectDonatorsPrivilege[];
 }

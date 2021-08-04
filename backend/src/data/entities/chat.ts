@@ -1,33 +1,17 @@
-import {
-  Entity,
-  ManyToOne,
-  OneToMany,
-  BaseEntity,
-  PrimaryGeneratedColumn,
-  CreateDateColumn,
-  DeleteDateColumn
-} from 'typeorm';
+import { Entity, ManyToOne, OneToMany } from 'typeorm';
+import { AbstractEntity } from './abstract';
 import { Team } from './team';
 import { UserProfile } from './userProfile';
 import { Message } from './message';
 
 @Entity()
-export class Chat extends BaseEntity {
-  @PrimaryGeneratedColumn('uuid')
-  id: string;
-
-  @CreateDateColumn()
-  createdAt: Date;
-
-  @DeleteDateColumn()
-  deletedAt: Date;
-
+export class Chat extends AbstractEntity {
   @ManyToOne(() => Team, team => team.chats)
-  public team!: Team;
+  team!: Team;
 
   @OneToMany(() => Message, message => message.chat)
-  public messages!: Message[];
+  messages!: Message[];
 
   @ManyToOne(() => UserProfile, userProfile => userProfile.chats)
-  public donator!: UserProfile[];
+  donator!: UserProfile[];
 }

@@ -1,4 +1,4 @@
-import { Entity, OneToOne, JoinColumn, OneToMany, Column } from 'typeorm';
+import { Entity, OneToOne, OneToMany, Column, JoinColumn } from 'typeorm';
 import { AbstractEntity } from './abstract';
 import { Project } from './project';
 import { Chat } from './chat';
@@ -8,10 +8,10 @@ export class Team extends AbstractEntity {
   @Column({ type: 'text' })
   name: string;
 
-  @OneToOne(() => Project)
+  @OneToOne(() => Project, project => project.team)
   @JoinColumn()
   project: Project;
 
   @OneToMany(() => Chat, chat => chat.team)
-  public chats!: Chat[];
+  chats!: Chat[];
 }

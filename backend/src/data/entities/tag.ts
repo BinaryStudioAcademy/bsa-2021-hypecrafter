@@ -8,5 +8,5 @@ export class Tag extends AbstractEntity {
   name: string;
 
   @OneToMany(() => ProjectTag, projectTag => projectTag.tag)
-  public projectTags!: ProjectTag[];
+  projectTags!: ProjectTag[];
 }

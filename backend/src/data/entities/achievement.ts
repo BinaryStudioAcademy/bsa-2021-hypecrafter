@@ -1,18 +1,13 @@
 import {
-  BaseEntity,
   Entity,
   Column,
-  OneToMany,
-  PrimaryGeneratedColumn,
-  CreateDateColumn
+  OneToMany
 } from 'typeorm';
+import { AbstractEntity } from './abstract';
 import { UserAchievement } from './userAchievement';
 
 @Entity()
-export class Achievement extends BaseEntity {
-  @PrimaryGeneratedColumn('uuid')
-  id: string;
-
+export class Achievement extends AbstractEntity {
   @Column({ type: 'text' })
   description: string;
 
@@ -23,8 +18,5 @@ export class Achievement extends BaseEntity {
     () => UserAchievement,
     userAchievement => userAchievement.achievement
   )
-  public userAchievements!: UserAchievement[];
-
-  @CreateDateColumn()
-  createdAt: Date;
+  userAchievements!: UserAchievement[];
 }

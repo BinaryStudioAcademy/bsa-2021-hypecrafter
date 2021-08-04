@@ -1,11 +1,4 @@
-import {
-  Entity,
-  Column,
-  ManyToOne,
-  OneToOne,
-  JoinColumn,
-  OneToMany
-} from 'typeorm';
+import { Entity, Column, ManyToOne, OneToMany } from 'typeorm';
 import { AbstractEntity } from './abstract';
 import { Chat } from './chat';
 import { UserProfile } from './userProfile';
@@ -16,13 +9,12 @@ export class Message extends AbstractEntity {
   @Column({ type: 'text' })
   text: string;
 
-  @ManyToOne(() => Chat, (chat) => chat.messages)
-  public chat!: Chat;
+  @ManyToOne(() => Chat, chat => chat.messages)
+  chat!: Chat;
 
-  @OneToOne(() => UserProfile)
-  @JoinColumn()
+  @ManyToOne(() => UserProfile, userProfile => userProfile.messages)
   author: UserProfile;
 
   @OneToMany(() => Comment, comment => comment.messageLink)
-  public comments!: Comment[];
+  comments!: Comment[];
 }

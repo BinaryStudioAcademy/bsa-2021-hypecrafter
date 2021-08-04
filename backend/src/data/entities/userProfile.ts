@@ -1,10 +1,12 @@
-import { Entity, Column, OneToMany, OneToOne, JoinColumn } from 'typeorm';
+import { Entity, Column, OneToMany, JoinColumn, OneToOne } from 'typeorm';
 import { AbstractEntity } from './abstract';
 import { Donate } from './donate';
 import { UserProject } from './userProject';
 import { Chat } from './chat';
 import { AlertsSettings } from './alertsSettings';
 import { UserAchievement } from './userAchievement';
+import { Message } from './message';
+import { Comment } from './comment';
 
 @Entity()
 export class UserProfile extends AbstractEntity {
@@ -39,18 +41,24 @@ export class UserProfile extends AbstractEntity {
   region: string;
 
   @OneToMany(() => Donate, donate => donate.user)
-  public donates!: Donate[];
+  donates!: Donate[];
 
   @OneToMany(() => UserProject, userProject => userProject.user)
-  public userProjects!: UserProject[];
+  userProjects!: UserProject[];
 
   @OneToMany(() => Chat, chat => chat.donator)
-  public chats!: Chat[];
+  chats!: Chat[];
 
   @OneToMany(() => UserAchievement, userAchievement => userAchievement.user)
-  public userAchievements!: UserAchievement[];
+  userAchievements!: UserAchievement[];
 
-  @OneToOne(() => AlertsSettings)
+  @OneToOne(() => AlertsSettings, alertsSettings => alertsSettings.user)
   @JoinColumn()
   alertsSettings: AlertsSettings;
+
+  @OneToMany(() => Message, message => message.author)
+  messages!: Message[];
+
+  @OneToMany(() => Comment, comment => comment.author)
+  comments!: Comment[];
 }

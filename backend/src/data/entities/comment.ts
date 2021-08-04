@@ -2,8 +2,6 @@ import {
   Entity,
   Column,
   ManyToOne,
-  OneToOne,
-  JoinColumn,
   OneToMany
 } from 'typeorm';
 import { AbstractEntity } from './abstract';
@@ -16,15 +14,14 @@ export class Comment extends AbstractEntity {
   message: string;
 
   @ManyToOne(() => Message, message => message.comments)
-  public messageLink!: Message;
+  messageLink!: Message;
 
-  @OneToOne(() => UserProfile)
-  @JoinColumn()
+  @ManyToOne(() => UserProfile, userProfile => userProfile.comments)
   author: UserProfile;
 
   @OneToMany(() => Comment, childComment => childComment.parentComment)
-  public childComments!: Comment[];
+  childComments!: Comment[];
 
   @ManyToOne(() => Comment, parentComment => parentComment.childComments)
-  public parentComment!: Message;
+  parentComment!: Message;
 }
