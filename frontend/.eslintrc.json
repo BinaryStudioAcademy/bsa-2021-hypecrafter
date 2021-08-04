@@ -21,6 +21,7 @@
     "react",
     "@typescript-eslint"
   ],
+  "ignorePatterns": ["src/localization/locale-keys.js"],
   "rules": {
     "object-curly-newline": "off",
     "react/react-in-jsx-scope": "off",

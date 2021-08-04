@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
 const fs = require('fs');
 
@@ -19,7 +18,7 @@ function writeLocalKeys() {
   });
   str += ';\n';
   fs.writeFileSync(path.resolve(__dirname, 'locale-keys.d.ts'), str, {
-    encoding: 'UTF-8'
+    encoding: 'UTF-8',
   });
 }
 
