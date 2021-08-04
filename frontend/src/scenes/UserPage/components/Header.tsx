@@ -58,7 +58,7 @@ const Header: FunctionComponent<HeaderProps> = ({ user }) => {
       <div className={classes['user-about-me']}>
         <h3>About Me</h3>
         <p>
-          {aboutMe} {/* Make 240 symbols limit */}
+          {aboutMe}
         </p>
       </div>
 
