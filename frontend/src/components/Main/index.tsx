@@ -27,7 +27,7 @@ function Main() {
         show={show}
         title="User Page"
         body={<UserPage />}
-        size="user-page"
+        size="extra-wide"
         centered={false}
         onHide={() => {
           setShow(false);
