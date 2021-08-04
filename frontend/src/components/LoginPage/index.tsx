@@ -1,25 +1,34 @@
-import { FC, FormEventHandler, MouseEventHandler, useState } from 'react';
+import { FC, MouseEventHandler } from 'react';
 import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
+import { SubmitHandler, useForm } from 'react-hook-form';
 import Button from '../Button';
 import Input from '../Input';
 import classes from './styles.module.scss';
 import logo from '../../assets/HypeCrafter.svg';
 import { Routes, Languages } from '../../common/enums';
+import { useLocalization } from '../../providers/localization';
+
+type FormData = {
+  email: string;
+  password: string;
+};
 
 const LoginPage: FC = () => {
-  const { t, i18n } = useTranslation();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const { register, handleSubmit, setError, formState: { errors } } = useForm<FormData>();
+  const { t, changeLanguage, selectedLanguage } = useLocalization();
 
-  const dummySignInHandler: FormEventHandler<HTMLFormElement> = (e) => {
-    e.preventDefault();
-    console.log('Sign In');
+  const onSubmit: SubmitHandler<FormData> = data => {
+    console.log('Sign In', data.email, data.password);
+
+    setError('email', { // set error example
+      type: 'manual',
+      message: 'Dont Forget Your Username Should Be Cool!'
+    });
   };
 
   const dummySignInWithGoogleHandler: MouseEventHandler<HTMLButtonElement> = (e) => {
     console.log('Sign In with Google');
-    i18n.changeLanguage(i18n.language === Languages.UA ? Languages.EN : Languages.UA); // temp, for translations test
+    changeLanguage(selectedLanguage === Languages.UA ? Languages.EN : Languages.UA); // temp, for translations test
   };
 
   return (
@@ -29,19 +38,18 @@ const LoginPage: FC = () => {
       </div>
 
       <div className={classes.content}>
-        <form className={classes.form} onSubmit={dummySignInHandler}>
+        <form className={classes.form} onSubmit={handleSubmit(onSubmit)}>
           <h2 className={classes.title}>{t('Sign In')}</h2>
+
           <div className={classes['register-cta']}>
             {t('Don’t have an account?')} <Link to={Routes.SIGNUP}>{t('Sign Up')}</Link>
           </div>
-
           <Input
             type="email"
             placeholder={t('Enter your email')}
             label={t('Email')}
-            value={email}
-            onChange={setEmail}
-            errorMessage=""
+            errorMessage={errors.email?.message}
+            {...register('email', { required: true })}
           />
 
           <div className={classes['password-cta']}>
@@ -50,10 +58,15 @@ const LoginPage: FC = () => {
           <Input
             type="password"
             placeholder={t('Enter your password')}
-            value={password}
             label={t('Password')}
-            onChange={setPassword}
-            errorMessage=""
+            errorMessage={errors.password?.message}
+            {...register('password', {
+              required: true,
+              minLength: {
+                value: 6,
+                message: t('Password is too short (minimum is 6 characters)')
+              }
+            })}
           />
 
           <Button

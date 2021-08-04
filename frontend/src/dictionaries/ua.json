@@ -10,6 +10,7 @@
         "Enter your password": "Введіть свій пароль",
         "Forgot your password?": "Забули пароль?",
         "or": "або",
-        "Sign In with Google": "Увійти за допомогою Google"
+        "Sign In with Google": "Увійти за допомогою Google",
+        "Password is too short (minimum is 6 characters)": "Пароль занадто короткий (мінімум 6 символів)"
     }
 }
