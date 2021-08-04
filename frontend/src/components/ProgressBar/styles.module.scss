@@ -1,4 +1,4 @@
-@import "../../styles/vars";
+@import '../../styles/vars';
 
 .progress {
   margin-top: 10px;
@@ -8,14 +8,14 @@
     justify-content: space-between;
 
     .goal {
-      font-size: 12px;
+      font-size: $font-size-small;
       line-height: 150%;
       color: $color-root-text;
     }
 
     .percent {
       font-weight: bold;
-      font-size: 12px;
+      font-size: $font-size-small;
       line-height: 140%;
       color: $color-root-turquoise;
     }
