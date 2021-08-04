@@ -1,21 +1,22 @@
-import { RefreshToken } from "./../../data/entities/refreshToken";
 import { Router } from "express";
-import { Services } from "../../services/index";
 import randtoken from "rand-token";
-import { authentication as authenticationMiddleware } from "./../middlewares";
+import { authentication as authenticationMiddleware } from "./../middlewares/authentication";
 import { createToken } from "../../helpers/createToken";
+import { User } from "../../data/entities/user";
+import { Services } from "../../services/index";
+import { RefreshToken } from "./../../data/entities/refreshToken";
 
 const init = (services: Services) => {
   const router = Router();
 
   return router
     .post("/login", authenticationMiddleware, async (req, res) => {
-      const userId: string = (req.user as any).id;
+      const userId: string = (req.user as User).id;
       const token: string = createToken(userId);
       const refreshToken: string = randtoken.uid(256);
       await services.refreshTokenService.create({
         token: refreshToken,
-        userAgentInfo: "",
+        userAgentInfo: req.headers["user-agent"],
         userId,
       });
       res.json({ token: `JWT: ${token}`, refreshToken });

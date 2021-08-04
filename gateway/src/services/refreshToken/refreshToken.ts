@@ -1,4 +1,4 @@
-import { RefreshTokenRepository } from '../../data/repositories/refreshToken';
+import { RefreshTokenRepository } from "../../data/repositories/refreshToken";
 
 export default class RefreshTokenService {
   readonly #refreshTokenRepository: RefreshTokenRepository;
@@ -15,7 +15,11 @@ export default class RefreshTokenService {
     return this.#refreshTokenRepository.getByUserId(userId);
   }
 
-  public create(data: {token: string, userAgentInfo: string, userId: string}) {
+  public create(data: {
+    token: string;
+    userAgentInfo: string;
+    userId: string;
+  }) {
     return this.#refreshTokenRepository.createToken(data);
   }
 

@@ -1,4 +1,4 @@
-import { UserRepository } from '../../data/repositories/user';
+import { UserRepository } from "../../data/repositories/user";
 
 export default class UserService {
   readonly #userRepository: UserRepository;

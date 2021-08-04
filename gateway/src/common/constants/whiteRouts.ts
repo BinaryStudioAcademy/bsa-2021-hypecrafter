@@ -1,6 +1,8 @@
 const WHITE_ROUTES = [
   '/auth/login',
-  '/white-rout'
+  '/white-rout',
+  '/auth/token',
+  '/auth/token/reject'
 ];
 
 export { WHITE_ROUTES };

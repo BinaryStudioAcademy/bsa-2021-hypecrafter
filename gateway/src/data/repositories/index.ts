@@ -1,10 +1,13 @@
-import { getCustomRepository } from 'typeorm';
-import { UserRepository } from './user';
-import { RefreshTokenRepository } from './refreshToken';
+import { getCustomRepository } from "typeorm";
+import { UserRepository } from "./user";
+import { RefreshTokenRepository } from "./refreshToken";
 
-export const initRepositories = () : Repositories => ({
+export const initRepositories = (): Repositories => ({
   userRepository: getCustomRepository(UserRepository),
-  refreshRepository: getCustomRepository(RefreshTokenRepository)
+  refreshRepository: getCustomRepository(RefreshTokenRepository),
 });
 
-export type Repositories = { userRepository: UserRepository, refreshRepository: RefreshTokenRepository };
+export type Repositories = {
+  userRepository: UserRepository;
+  refreshRepository: RefreshTokenRepository;
+};
