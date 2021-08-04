@@ -8,6 +8,7 @@ import InputExample from '../InputExample';
 import PopoverExample from '../PopoverExample';
 import CardExample from '../CardExample';
 import ModalWindow from '../ModalWindow';
+import TextStyleExample from '../TextStyleExample';
 
 function Main() {
   const [show, setShow] = useState(true);
@@ -25,6 +26,7 @@ function Main() {
           setShow(false);
         }}
       />
+      <TextStyleExample />
       <TranslateExample />
       <BootstrapExample />
       <ButtonExample />
