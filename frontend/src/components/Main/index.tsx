@@ -7,7 +7,6 @@ import InputExample from '../InputExample';
 import PopoverExample from '../PopoverExample';
 import CardExample from '../CardExample';
 import ModalWindow from '../ModalWindow';
-import Header from '../Header';
 import Chart from '../Chart/Chart';
 import defaultProps from '../Chart/testprops';
 
@@ -15,7 +14,6 @@ function Main() {
   const [show, setShow] = useState(false);
   return (
     <div>
-      <Header />
       <Chart
         type={defaultProps.type}
         labels={defaultProps.data.labels}

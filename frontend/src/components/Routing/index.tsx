@@ -6,6 +6,7 @@ import LoginPage from '../LoginPage';
 import Main from '../Main';
 import { useTypedSelector } from '../../hooks';
 import { authFetchUserAction } from '../../actions/auth';
+import Header from '../Header';
 
 const Routing = () => {
   const dispatch = useDispatch();
@@ -25,10 +26,13 @@ const Routing = () => {
   }, []);
 
   return (
-    <Switch>
-      <Route path={Routes.HOME} exact component={Main} />
-      <Route path={Routes.LOGIN} exact component={LoginPage} />
-    </Switch>
+    <div>
+      <Header />
+      <Switch>
+        <Route path={Routes.HOME} exact component={Main} />
+        <Route path={Routes.LOGIN} exact component={LoginPage} />
+      </Switch>
+    </div>
   );
 };
 

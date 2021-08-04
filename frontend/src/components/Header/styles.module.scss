@@ -17,11 +17,16 @@
     margin-right: 40px;
 }
 .header_menu_item{
-    margin: 0px 15px;
+    margin: 0px 20px;
     background: none!important;
     box-shadow: none!important;
     font-size: 18px;
     font-family: $font-roboto500;
+    color: $color-root-text;
+    text-decoration: none;
+    &:first-child{
+        margin-left: 70px;
+    }
 }
 .header_menu_item_active{
     color: $color-root-turquoise!important;
@@ -69,34 +74,25 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+    > img{
+        height: 24px;
+        margin-right: 5px;
+    }
+    > span{
+        font-size: 16px;
+        font-family: $font-roboto700;
+        margin-top: 2px;
+    }
 }
-.header_hypeCoin > img{
-    height: 24px;
-    margin-right: 5px;
-}
-.header_hypeCoin > span{
-    font-size: 16px;
-    font-family: $font-roboto700;
-    margin-top: 2px;
-}
+
 .header_search{
     margin: 0px 11px;
     position: relative;
-}
-.header_search input{
-    font-size: 12px;
-    color: $color-root-text;
-    width: 282px;
-    height: 45px;
-    border: 1px solid $color-root-text;
-    background: none;
-    padding-left: 48px;
-    ::-ms-clear {
-        display: none;
-    }
-    &:focus{
-        background: none;
-        color: $color-root-text;
+    input{
+        font-size: 12px;
+        width: 282px;
+        height: 45px;
+        padding-left: 48px;
     }
 }
 .header_search_icon{

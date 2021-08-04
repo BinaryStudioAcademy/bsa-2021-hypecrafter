@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
 
 .logo {
-  font-size: 2rem;
+  font-size: 18px;
   font-weight: bold;
   color: white;
   font-family: Orbitron;
   letter-spacing: 0.28em;
+  margin-top: -4px;
 }
 
 .glitch {
@@ -35,6 +36,7 @@
   }
 
   span:first-child {
+    position: relative;
     animation: glitch 650ms infinite;
     display: block;
     color: #0aecec;

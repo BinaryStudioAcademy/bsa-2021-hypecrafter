@@ -2,41 +2,43 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown, faCircle, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faBell } from '@fortawesome/free-regular-svg-icons';
 import { useState } from 'react';
-import Button from '../Button';
-import logo from '../../assets/HypeCrafter.svg';
+import { NavLink } from 'react-router-dom';
+import { Routes } from '../../common/enums';
 import hypeCoin from '../../assets/HypeCoin.png';
 import classes from './styles.module.scss';
 import defaultUserAvatar from '../../assets/default-user-icon.png';
 import Input from '../Input';
+import Link from '../Link';
+import Logo from '../Logo';
 
 const Header = () => {
   const [text, setText] = useState('');
-  const [activePage, setActivePage] = useState('home');
 
   return (
     <div className={classes.header}>
       <div className={classes.header_left}>
-        <a href="/"><img className={classes.logo} src={logo} alt="logo" /></a>
-        <Button
-          className={[classes.header_menu_item,
-            activePage === 'home' ? classes.header_menu_item_active : ''].join(' ')}
-          onClick={() => { setActivePage('home'); }}
-        >Home
-        </Button>
-        <Button
-          className={[classes.header_menu_item,
-            activePage === 'projects' ? classes.header_menu_item_active : ''].join(' ')}
-          onClick={() => { setActivePage('projects'); }}
-        >
-          Projects
-          <FontAwesomeIcon icon={faCaretDown} className={classes.header_menu_item_down} />
-        </Button>
-        <Button
-          className={[classes.header_menu_item,
-            activePage === 'trends' ? classes.header_menu_item_active : ''].join(' ')}
-          onClick={() => { setActivePage('trends'); }}
-        >Trends
-        </Button>
+        <Link to={Routes.HOME}><Logo /></Link>
+        <nav>
+          <NavLink
+            className={classes.header_menu_item}
+            activeClassName={classes.header_menu_item_active}
+            to={Routes.HOME}
+          >Home
+          </NavLink>
+          <NavLink
+            className={classes.header_menu_item}
+            activeClassName={classes.header_menu_item_active}
+            to={Routes.PROJECTS}
+          >Projects
+            <FontAwesomeIcon icon={faCaretDown} className={classes.header_menu_item_down} />
+          </NavLink>
+          <NavLink
+            className={classes.header_menu_item}
+            activeClassName={classes.header_menu_item_active}
+            to={Routes.TRENDS}
+          >Trends
+          </NavLink>
+        </nav>
       </div>
       <div className={classes.header_right}>
         <div className={classes.header_search}>
