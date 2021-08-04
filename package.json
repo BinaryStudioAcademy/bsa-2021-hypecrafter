@@ -3,15 +3,15 @@
     "lint:gateway": "cd gateway && npm run lint:write",
     "lint:backend": "cd backend && npm run lint:write",
     "lint:frontend": "cd frontend && npm run lint:write",
+    "install:gateway": "cd gateway && npm i",
+    "install:backend": "cd backend && npm i",
     "lint:notification": "cd notification && npm run lint:write",
     "lint:payment": "cd payment && npm run lint:write",
     "lint": "npm run lint:gateway && npm run lint:backend && npm run lint:frontend && npm run lint:notification && npm run install:notification && npm run lint:payment",
-    "install:gateway": "cd gateway && npm install",
-    "install:backend": "cd backend && npm install",
     "install:frontend": "cd frontend && npm install",
     "install:notification": "cd notification && npm install",
     "install:payment": "cd payment && npm install",
-    "install:all": "npm install && npm run build:shared && npm run install:gateway && npm run install:backend && npm run install:frontend && npm run install:payment",
+    "install:all": "npm install && npm run build:shared && npm run install:gateway && npm run install:backend && npm run install:frontend && npm run install:notification && npm run install:payment",
     "build:shared": "cd shared && npm install && npm run build",
     "start:gateway": "cd gateway && npm run start",
     "start:backend": "cd backend && npm run start",
@@ -43,7 +43,6 @@
     ]
   },
   "dependencies": {
-    "pg": "^8.7.1",
     "tslib": "^1.14.1"
   }
 }

@@ -1,10 +1,12 @@
+@import './../../styles/vars';
+
 .input-container {
   flex-direction: column;
   width: 100%;
 }
 
 .input-label {
-  font-weight: 500;
+  font-weight: $font-weight-medium;
 }
 
 .input-field-container {
@@ -13,7 +15,7 @@
 }
 
 .input-field {
-  border: 1px solid #3a3a3a;
+  border: $color-base-border;
   border-radius: 1px;
 }
 
@@ -31,6 +33,6 @@
 }
 
 .error-message {
-  color: red;
+  color: $color-error;
   font-size: 0.8rem;
 }
