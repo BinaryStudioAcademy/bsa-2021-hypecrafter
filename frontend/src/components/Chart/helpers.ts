@@ -1,7 +1,13 @@
-/* eslint-disable  @typescript-eslint/no-explicit-any */
+
+import { Chart } from 'chart.js';
+
 const blueColors = ['rgb(23, 229, 232)', 'rgb(39, 170, 242)'];
 
-const getLinearGradient = (ctx: any, chartArea: any, colors: string[]) => {
+const getLinearGradient = (
+  ctx: CanvasRenderingContext2D,
+  chartArea: { bottom: number; top: number },
+  colors: string[]
+) => {
   const gradient = ctx.createLinearGradient(
     0,
     chartArea.bottom,
@@ -16,7 +22,7 @@ const getLinearGradient = (ctx: any, chartArea: any, colors: string[]) => {
 };
 
 function setBorderColorGradient(colors: string[]) {
-  const setFunc = (context: any): any => {
+  const setFunc = (context: { chart: Chart }): CanvasGradient | null => {
     const { chart } = context;
     const { ctx, chartArea } = chart;
 
