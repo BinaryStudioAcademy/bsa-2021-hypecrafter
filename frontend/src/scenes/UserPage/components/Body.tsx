@@ -3,6 +3,7 @@ import { Row, Col, Nav } from 'react-bootstrap';
 import Card from '../../../components/Card';
 import ProjectCard from '../../../components/ProjectCard';
 import { Tabs } from '../../../components/Tabs';
+import { calcDonationProgress } from '../../../helpers/project';
 import { Achievement, Activity, Project } from '../interfaces';
 import classes from '../styles.module.scss';
 
@@ -33,7 +34,7 @@ const CardsGrid: FunctionComponent<CardsGridProps> = ({
         category={project.category}
         tags={project.tags}
         image={project.imageUrl}
-        percent={Math.floor((project.donated / project.goal) * 100)}
+        percent={calcDonationProgress(project.donated, project.goal)}
         goal={project.goal}
         rounded
       />
