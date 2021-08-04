@@ -101,29 +101,6 @@
 .body-container {
   margin-top: 1.5rem;
 
-  .body-tabs {
-    display: flex;
-
-    .body-tab {
-      font-family: $font-roboto700;
-      font-size: $font-size-category;
-      cursor: pointer;
-      margin-right: 18px;
-      border: none;
-      background: none;
-      color: $color-root-text;
-    }
-
-    .body-tab.selected {
-      background: $color-root-turquoise-gradient;
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      -moz-background-clip: text;
-      -moz-text-fill-color: transparent;
-    }
-  }
-
   .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(410px, 410px));

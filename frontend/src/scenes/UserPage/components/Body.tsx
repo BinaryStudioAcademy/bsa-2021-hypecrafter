@@ -1,7 +1,8 @@
 import { FunctionComponent, MouseEvent, useState } from 'react';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Nav } from 'react-bootstrap';
 import Card from '../../../components/Card';
 import ProjectCard from '../../../components/ProjectCard';
+import { Tabs } from '../../../components/Tabs';
 import { Achievement, Activity, Project } from '../interfaces';
 import classes from '../styles.module.scss';
 
@@ -22,7 +23,7 @@ const CardsGrid: FunctionComponent<CardsGridProps> = ({
   projects = [],
   achievements = []
 }) => {
-  if (target === 'projects') {
+  if (target === 'Projects') {
     const renderProjectsList = () => projects.map((project) => (
       <ProjectCard
         key={project.id}
@@ -47,7 +48,7 @@ const CardsGrid: FunctionComponent<CardsGridProps> = ({
     );
   }
 
-  if (target === 'achievements') {
+  if (target === 'Achievements') {
     const renderAchievementsList = () => achievements.map((achievement) => (
       <Card
         key={achievement.id}
@@ -76,9 +77,10 @@ const Body: FunctionComponent<BodyProps> = ({
   achievements,
   activities
 }) => {
-  const [selectedTab, setSelectedTab] = useState('projects');
+  const tabs = ['Projects', 'Achievements'];
+  const [selectedTab, setSelectedTab] = useState('Projects');
 
-  const handleTabChange = (e: MouseEvent<HTMLElement>) => setSelectedTab((e.target as HTMLInputElement).value);
+  const handleTabChange = (e: MouseEvent<HTMLElement>) => setSelectedTab((e.target as HTMLInputElement).innerText);
 
   const renderActivitiesList = () => activities.map((activity) => (
     <div className={classes['activity-container']} key={activity.id}>
@@ -91,24 +93,14 @@ const Body: FunctionComponent<BodyProps> = ({
     <div className={classes['body-container']}>
       <Row>
         <Col xs={12} md={8}>
-          <div className={classes['body-tabs']}>
-            <button
-              className={`${classes['body-tab']} ${selectedTab === 'projects' && classes.selected}`}
-              onClick={handleTabChange}
-              value="projects"
-              type="button"
-            >
-              Projects
-            </button>
-            <button
-              className={`${classes['body-tab']} ${selectedTab === 'achievements' && classes.selected}`}
-              onClick={handleTabChange}
-              value="achievements"
-              type="button"
-            >
-              Achievements
-            </button>
-          </div>
+          <Tabs>
+            <Tabs.Item {...selectedTab === tabs[0] && { selected: true }}>
+              <Nav.Link onClick={handleTabChange}>{tabs[0]}</Nav.Link>
+            </Tabs.Item>
+            <Tabs.Item {...selectedTab === tabs[1] && { selected: true }}>
+              <Nav.Link onClick={handleTabChange}>{tabs[1]}</Nav.Link>
+            </Tabs.Item>
+          </Tabs>
 
           <CardsGrid projects={projects} achievements={achievements} target={selectedTab} />
         </Col>
