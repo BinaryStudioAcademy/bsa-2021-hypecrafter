@@ -1,7 +1,7 @@
 import MicroMq from 'micromq';
 import { User } from '../../common/types';
-import { Services } from '../../services';
 import { wrap } from '../../helpers';
+import { Services } from '../../services';
 
 const init = ({ userService }: Services, path: string) => (app: MicroMq) => app
   .get(path, wrap(() => userService.getAll()))

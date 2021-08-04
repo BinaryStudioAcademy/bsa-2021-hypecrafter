@@ -5,7 +5,7 @@
     "lint:frontend": "cd frontend && npm run lint:write",
     "lint:notification": "cd notification && npm run lint:write",
     "lint:payment": "cd payment && npm run lint:write",
-    "lint": "npm run lint:gateway && npm run lint:backend && npm run lint:frontend && npm run lint:notification && npm run install:notification && npm run lint:payment",
+    "lint": "npm run lint:gateway && npm run lint:backend && npm run lint:frontend && npm run lint:notification && npm run install:notification && npm run lint:payment --ignore-engines",
     "install:gateway": "cd gateway && npm install",
     "install:backend": "cd backend && npm install",
     "install:frontend": "cd frontend && npm install",
@@ -28,7 +28,15 @@
     "seed:all": "npm run seed:backend && npm run seed:gateway"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "4.28.2",
+    "@typescript-eslint/parser": "^4.28.2",
     "concurrently": "^6.2.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-airbnb-typescript": "^12.3.1",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-import": "^2.23.4",
     "husky": "^4.3.8",
     "lint-staged": "^11.1.1"
   },
@@ -39,7 +47,6 @@
   },
   "lint-staged": {
     "**/*.(js|ts|tsx)": [
-      "npm run lint"
     ]
   },
   "dependencies": {

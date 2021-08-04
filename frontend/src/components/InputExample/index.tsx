@@ -1,16 +1,20 @@
 import { useState } from 'react';
-import { Container, Col } from 'react-bootstrap';
+import { Col, Container } from 'react-bootstrap';
 import Input from '../Input';
 
 function InputExample() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [text, setText] = useState('');
-
   return (
     <Container>
       <Col md="4">
-        <Input type="text" value={text} placeholder="Search..." onChange={setText} />
+        <Input
+          type="text"
+          value={text}
+          placeholder="Search..."
+          onChange={setText}
+        />
         <Input
           type="email"
           value={email}

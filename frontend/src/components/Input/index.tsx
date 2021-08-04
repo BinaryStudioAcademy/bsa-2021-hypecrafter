@@ -1,7 +1,7 @@
-import { useState, ChangeEvent, FunctionComponent } from 'react';
-import { InputGroup, FormControlProps, FormControl, FormLabel } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { ChangeEvent, FunctionComponent, useState } from 'react';
+import { FormControl, FormControlProps, FormLabel, InputGroup } from 'react-bootstrap';
 import classes from './styles.module.scss';
 
 interface Props extends Omit<FormControlProps, 'onChange'> {

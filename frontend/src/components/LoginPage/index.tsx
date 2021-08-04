@@ -1,11 +1,11 @@
 import { FC, FormEventHandler, MouseEventHandler, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
+import logo from '../../assets/HypeCrafter.svg';
+import { Languages, Routes } from '../../common/enums';
 import Button from '../Button';
 import Input from '../Input';
 import classes from './styles.module.scss';
-import logo from '../../assets/HypeCrafter.svg';
-import { Routes, Languages } from '../../common/enums';
 
 const LoginPage: FC = () => {
   const { t, i18n } = useTranslation();
@@ -17,9 +17,9 @@ const LoginPage: FC = () => {
     console.log('Sign In');
   };
 
-  const dummySignInWithGoogleHandler: MouseEventHandler<HTMLButtonElement> = (e) => {
+  const dummySignInWithGoogleHandler: MouseEventHandler<HTMLButtonElement> = () => {
     console.log('Sign In with Google');
-    i18n.changeLanguage(i18n.language === Languages.UA ? Languages.EN : Languages.UA); // temp, for translations test
+    i18n.changeLanguage(i18n.language === Languages.UA ? Languages.EN : Languages.UA);
   };
 
   return (

@@ -1,7 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { useTypedSelector } from '../../hooks';
 import { fetchUsersAction, removeUserByIdAction } from './actions';
-
 import classes from './styles.module.scss';
 
 const Users = () => {
@@ -24,14 +23,16 @@ const Users = () => {
         {isLoading && <p>Loading...</p>}
         {!isLoading && (
           <ul>
-            {users.map(it => (
+            {users.map((it) => (
               <li key={it.id}>
                 <article className={classes.item}>
                   <p>
                     <span>Name: </span>
                     <span>{it.name}</span>
                   </p>
-                  <button type="button" onClick={() => removeItem(it.id)}>x</button>
+                  <button type="button" onClick={() => removeItem(it.id)}>
+                    x
+                  </button>
                 </article>
               </li>
             ))}
@@ -39,7 +40,9 @@ const Users = () => {
         )}
       </div>
       <div>
-        <button type="button" onClick={loadItems}>Load Users</button>
+        <button type="button" onClick={loadItems}>
+          Load Users
+        </button>
       </div>
     </section>
   );

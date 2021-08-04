@@ -1,14 +1,14 @@
-import { createConnection } from 'typeorm';
 import cors from 'cors';
 import express, { json } from 'express';
-import Gateway from 'micromq/gateway';
 import { Project } from 'hypecrafter-shared/enums';
+import Gateway from 'micromq/gateway';
 import swaggerUI from 'swagger-ui-express';
-import { log } from './helpers';
+import { createConnection } from 'typeorm';
+import openApiDocumentation from '../openApiDocumentation.json';
 import { handleError, logger } from './api/middlewares';
 import initRoutes from './api/routes';
 import { env } from './env';
-import openApiDocumentation from '../openApiDocumentation.json';
+import { log } from './helpers';
 
 const { port, environment, rabbit } = env.app;
 const gateway = new Gateway({

@@ -1,4 +1,4 @@
-import { Container, Col, Row, Alert, Card, Button, Image } from 'react-bootstrap';
+import { Alert, Button, Card, Col, Container, Image as BSImage, Row } from 'react-bootstrap';
 
 function BootstrapExample() {
   return (
@@ -38,13 +38,13 @@ function BootstrapExample() {
       <Row style={{ marginTop: '2rem' }}>
         <h3>Images Grid Example:</h3>
         <Col xs={6} md={4}>
-          <Image src="https://source.unsplash.com/random/171x180" rounded />
+          <BSImage src="https://source.unsplash.com/random/171x180" rounded />
         </Col>
         <Col xs={6} md={4}>
-          <Image src="https://source.unsplash.com/random/171x180" roundedCircle />
+          <BSImage src="https://source.unsplash.com/random/171x180" roundedCircle />
         </Col>
         <Col xs={6} md={4}>
-          <Image src="https://source.unsplash.com/random/171x180" thumbnail />
+          <BSImage src="https://source.unsplash.com/random/171x180" thumbnail />
         </Col>
       </Row>
     </Container>

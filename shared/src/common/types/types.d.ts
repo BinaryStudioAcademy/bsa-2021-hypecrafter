@@ -1,4 +1,4 @@
-/* eslint-disable */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 declare module 'micromq' {
   import { IRouterMatcher } from 'express';
 
@@ -10,10 +10,15 @@ declare module 'micromq' {
     });
 
     get: IRouterMatcher<any>;
+
     post: IRouterMatcher<any>;
+
     put: IRouterMatcher<any>;
+
     patch: IRouterMatcher<any>;
+
     delete: IRouterMatcher<any>;
+
     start(): void;
   }
   export default MicroMq;
@@ -27,4 +32,4 @@ declare namespace Express {
   }
 }
 
-declare type Empty = Record<string, never>
+declare type Empty = Record<string, never>;

@@ -1,3 +1,5 @@
+@import '../../styles/vars';
+
 .input-container {
   flex-direction: column;
   width: 100%;
@@ -31,6 +33,6 @@
 }
 
 .error-message {
-  color: red;
+  color: $color-root-turquoise;
   font-size: 0.8rem;
 }

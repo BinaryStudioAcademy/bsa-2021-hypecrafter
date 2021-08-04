@@ -16,8 +16,8 @@ export const removeUserByIdAction = createRoutine(UsersActions.REMOVE_USER, {
   trigger: (id: number) => id
 });
 
-export type FetchUsersTriggerActionType = ReturnType<typeof fetchUsersAction.trigger>
-export type FetchUsersSuccessActionType = ReturnType<typeof fetchUsersAction.success>
-export type FetchUsersFailureActionType = ReturnType<typeof fetchUsersAction.failure>
+export type FetchUsersTriggerActionType = ReturnType<typeof fetchUsersAction.trigger>;
+export type FetchUsersSuccessActionType = ReturnType<typeof fetchUsersAction.success>;
+export type FetchUsersFailureActionType = ReturnType<typeof fetchUsersAction.failure>;
 
 export type RemoveUserByIdTriggerActionType = ReturnType<typeof removeUserByIdAction.trigger>;

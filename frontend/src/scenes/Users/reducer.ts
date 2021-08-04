@@ -1,11 +1,9 @@
 import { User } from '../../common/types';
 import { createReducer } from '../../helpers';
-import { fetchUsersAction, removeUserByIdAction } from './actions';
 import type {
-  FetchUsersSuccessActionType,
-  FetchUsersFailureActionType,
-  RemoveUserByIdTriggerActionType
+  FetchUsersFailureActionType, FetchUsersSuccessActionType, RemoveUserByIdTriggerActionType
 } from './actions';
+import { fetchUsersAction, removeUserByIdAction } from './actions';
 
 export interface UsersState {
   isLoading: boolean;
@@ -43,7 +41,7 @@ export const usersReducer = createReducer<UsersState>(initialState, {
   [removeUserByIdAction.TRIGGER](state, action: RemoveUserByIdTriggerActionType) {
     return {
       ...state,
-      items: state.items.filter(it => it.id !== action.payload)
+      items: state.items.filter((it) => it.id !== action.payload)
     };
   }
 });

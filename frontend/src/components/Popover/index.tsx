@@ -1,5 +1,5 @@
-import { useState, useRef, FC, ReactNode, MouseEvent } from 'react';
-import { Popover as PopoverRB, Overlay } from 'react-bootstrap';
+import { FC, MouseEvent, ReactNode, useRef, useState } from 'react';
+import { Overlay, Popover as PopoverRB } from 'react-bootstrap';
 import classes from './styles.module.scss';
 
 type HandleClose = () => void;
@@ -27,7 +27,6 @@ const Popover: FC<Props> = ({ placement = 'bottom', trigger, children, id, rootC
   return (
     <div ref={ref}>
       <button onClick={handleClick} type="button" className={classes['popover-trigger']}>{trigger}</button>
-
       <Overlay
         show={show}
         target={target}

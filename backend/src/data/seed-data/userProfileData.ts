@@ -9,7 +9,7 @@ export const userProfiles = [
     Reprehenderit voluptate ex enim occaecat ex dolor laborum. Ut 
     cillum eiusmod nisi in reprehenderit amet dolor ad et nulla consectetur 
     ipsum.\r\n`,
-    balance: -3.70,
+    balance: -3.7,
     lastLoginDate: 'Wed Jul 28 2021 16:17:48 GMT+0300 (Eastern European Summer Time)',
     region: 'Niue'
   },
@@ -26,7 +26,7 @@ export const userProfiles = [
     proident mollit ullamco cupidatat voluptate ea do ullamco duis id 
     deserunt esse cillum ut. Ea laboris quis exercitation nisi 
     labore tempor id Lorem amet duis proident mollit id.\r\n`,
-    balance: -56.60,
+    balance: -56.6,
     lastLoginDate: 'Wed Jul 28 2021 16:17:48 GMT+0300 (Eastern European Summer Time)',
     region: 'Bouvet Island'
   },
@@ -41,7 +41,7 @@ export const userProfiles = [
     Minim ipsum proident aliqua do officia reprehenderit esse aliquip. 
     Aute voluptate in consequat nostrud ad nulla dolore ad. Ex cillum quis 
     laboris esse ea consectetur nulla in incididunt.\r\n`,
-    balance: -51.60,
+    balance: -51.6,
     lastLoginDate: 'Wed Jul 28 2021 16:17:48 GMT+0300 (Eastern European Summer Time)',
     region: 'Gibraltar'
   },
@@ -73,7 +73,7 @@ export const userProfiles = [
     excepteur tempor. Ipsum anim occaecat consequat non incididunt nisi 
     occaecat commodo minim ea nisi nostrud nostrud deserunt. Sint in ipsum 
     dolor nostrud sit ea. Non exercitation laborum ut labore ut et.\r\n`,
-    balance: 1.30,
+    balance: 1.3,
     lastLoginDate: 'Wed Jul 28 2021 16:17:48 GMT+0300 (Eastern European Summer Time)',
     region: 'New Caledonia'
   },
@@ -89,7 +89,7 @@ export const userProfiles = [
     commodo duis. In consectetur irure sunt aute ut qui adipisicing 
     eu anim amet ad fugiat. Sit Lorem occaecat cillum consequat amet 
     nisi tempor dolor commodo minim esse quis anim.\r\n`,
-    balance: 15.60,
+    balance: 15.6,
     lastLoginDate: 'Wed Jul 28 2021 16:17:48 GMT+0300 (Eastern European Summer Time)',
     region: 'Northern Mariana Islands'
   },
@@ -102,7 +102,7 @@ export const userProfiles = [
     description: `Deserunt et ipsum enim esse commodo. Amet non ut 
     ex eiusmod incididunt mollit. Minim pariatur irure mollit sunt 
     ullamco minim aliqua magna cillum ad minim velit velit.\r\n`,
-    balance: 51.10,
+    balance: 51.1,
     lastLoginDate: 'Wed Jul 28 2021 16:17:48 GMT+0300 (Eastern European Summer Time)',
     region: 'Swaziland'
   }

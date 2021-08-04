@@ -1,4 +1,4 @@
-import { call, put, takeEvery, all } from 'redux-saga/effects';
+import { all, call, put, takeEvery } from 'redux-saga/effects';
 import { User } from '../../common/types';
 import { getUsers } from '../../services/users';
 import { fetchUsersAction } from './actions';

@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
+import { authFetchUserAction } from '../../actions/auth';
 import { Routes, StorageKeys } from '../../common/enums';
+import { useTypedSelector } from '../../hooks';
 import LoginPage from '../LoginPage';
 import Main from '../Main';
-import { useTypedSelector } from '../../hooks';
-import { authFetchUserAction } from '../../actions/auth';
 
 const Routing = () => {
   const dispatch = useDispatch();
