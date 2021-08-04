@@ -7,7 +7,7 @@ const TextStyleExample: FC = () => {
   return (
     <div className={classes.wrapper}>
       <div className={classes.item}>
-        <p className={classes['heading-mini']}>{text}</p>
+        <p className={classes['heading-s']}>{text}</p>
         <p className={classes['heading-sm']}>{text}</p>
         <p className={classes['heading-md']}>{text}</p>
         <p className={classes['heading-lg']}>{text}</p>
@@ -15,7 +15,7 @@ const TextStyleExample: FC = () => {
         <p className={classes['heading-xxl']}>{text}</p>
       </div>
       <div className={classes.item}>
-        <p className={classes['text-mini']}>{text}</p>
+        <p className={classes['text-s']}>{text}</p>
         <p className={classes['text-sm']}>{text}</p>
         <p className={classes['text-sm-bold']}>{text}</p>
         <p className={classes['text-md']}>{text}</p>

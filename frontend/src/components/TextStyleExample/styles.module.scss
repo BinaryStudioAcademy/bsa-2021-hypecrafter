@@ -8,8 +8,8 @@
   margin-right: 100px;
 }
 
-.heading-mini {
-  @include heading-mini;
+.heading-s {
+  @include heading-s;
 }
 
 .heading-sm {
@@ -32,8 +32,8 @@
   @include heading-xxl;
 }
 
-.text-mini {
-  @include text-mini;
+.text-s {
+  @include text-s;
 }
 
 .text-sm {

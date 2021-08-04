@@ -14,7 +14,7 @@
   justify-content: center;
 }
 
-@mixin heading-mini {
+@mixin heading-s {
   font-family: $font-roboto500;
   font-size: $font-size-small;
   font-style: normal;
@@ -56,7 +56,7 @@
   line-height: $line-height-md;
 }
 
-@mixin text-mini {
+@mixin text-s {
   font-family: $font-roboto400;
   font-size: $font-size-mini;
   font-style: normal;
