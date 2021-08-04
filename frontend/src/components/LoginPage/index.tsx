@@ -1,14 +1,14 @@
 import { FC, FormEventHandler, MouseEventHandler, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
 import Button from '../Button';
 import Input from '../Input';
 import classes from './styles.module.scss';
 import logo from '../../assets/HypeCrafter.svg';
 import { Routes, Languages } from '../../common/enums';
+import { useLocalization } from '../../providers/localization';
 
 const LoginPage: FC = () => {
-  const { t, i18n } = useTranslation();
+  const { t, changeLanguage, selectedLanguage } = useLocalization();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -19,7 +19,7 @@ const LoginPage: FC = () => {
 
   const dummySignInWithGoogleHandler: MouseEventHandler<HTMLButtonElement> = (e) => {
     console.log('Sign In with Google');
-    i18n.changeLanguage(i18n.language === Languages.UA ? Languages.EN : Languages.UA); // temp, for translations test
+    changeLanguage(selectedLanguage === Languages.UA ? Languages.EN : Languages.UA); // temp, for translations test
   };
 
   return (
