@@ -49,7 +49,7 @@
     "start:prod": "npx serve -s build",
     "lint": "eslint . --ext .ts",
     "lint:write": "eslint . --ext .ts --fix",
-    "generate keys": "cd src/localization && node locale-keys.js"
+    "generate:keys": "cd src/localization && node locale-keys.js"
   },
   "browserslist": {
     "production": [
