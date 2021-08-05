@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { Switch } from 'react-router-dom';
+import { Switch, useHistory } from 'react-router-dom';
 import { Routes, StorageKeys } from '../../common/enums';
 import LoginPage from '../LoginPage';
 import Main from '../Main';
@@ -19,6 +19,9 @@ const Routing = () => {
     user,
     isLoading
   }));
+  const { location: { pathname } } = useHistory();
+
+  const routesWitoutHeader = [Routes.LOGIN];
   const { user, isLoading } = authStore;
   const hasToken = Boolean(localStorage.getItem(StorageKeys.ACCESS_TOKEN));
 
@@ -30,7 +33,7 @@ const Routing = () => {
 
   return (
     <LoaderWrapper isLoading={isLoading || (!user && hasToken)}>
-      <Header />
+      {!routesWitoutHeader.includes(pathname as Routes) && <Header />}
       <Switch>
         <PublicRoute
           restricted={false}

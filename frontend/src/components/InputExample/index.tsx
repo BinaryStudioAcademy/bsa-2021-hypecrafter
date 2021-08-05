@@ -9,7 +9,7 @@ interface FormData {
 }
 
 function InputExample() {
-  const { register, handleSubmit, formState: { errors } } = useForm<FormData>();
+  const { register, handleSubmit } = useForm<FormData>();
 
   const onSubmit: SubmitHandler<FormData> = data => {
     console.log('Sign In', data);
