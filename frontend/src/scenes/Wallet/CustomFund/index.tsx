@@ -1,21 +1,18 @@
 import React, { FC, useState } from 'react';
-import { useTranslation } from 'react-i18next';
 import { Form } from 'react-bootstrap';
-import coinImg from '../../../assets/HypeCoin.png';
 import classes from './styles.module.scss';
+import { useLocalization } from '../../../providers/localization';
+import Button from '../../../components/Button';
 
 const CustomFund: FC = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useLocalization();
   const [price, setPrice] = useState('5');
   const onSubmit = (event: React.FormEvent) => {
     console.log(price);
     event.preventDefault();
   };
-  function validationPrice(value: string): boolean {
-    return true;
-  }
   const onInput = (event: React.ChangeEvent<HTMLInputElement>) => {
-    if (validationPrice(event.target.value)) setPrice(event.target.value);
+    setPrice(event.target.value);
   };
   return (
     <div className={classes['wrp-fund-body']}>
@@ -32,7 +29,10 @@ const CustomFund: FC = () => {
           />
         </div>
 
-        <button type="submit"> {t('Add funds')}</button>
+        <Button className={classes['add-funds-btn']} type="submit">
+          {' '}
+          {t('Add funds')}
+        </Button>
       </Form>
     </div>
   );

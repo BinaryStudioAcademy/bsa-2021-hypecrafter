@@ -1,14 +1,15 @@
 import { FC, useState } from 'react';
-import { useTranslation } from 'react-i18next';
 import { Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import classes from './styles.module.scss';
 import Fund from '../Fund';
 import CustomFund from '../CustomFund';
 import coinImg from '../../../assets/HypeCoin.png';
+import { useLocalization } from '../../../providers/localization';
+import Button from '../../../components/Button';
 
 const FundsPage: FC = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useLocalization();
   return (
     <Container fluid="sm">
       <div className={classes['wallet-header']}>
@@ -20,7 +21,7 @@ const FundsPage: FC = () => {
           <span>{t('Add funds to your Wallet')}</span>
         </div>
         <h2 className={classes['wallet-header-title']}>
-          {t('ADD FUNDS TO YOUR')} <strong> {t('HYPECRAFTER')}</strong>{' '}
+          {t('ADD FUNDS TO YOUR')} <strong>HYPECRAFTER</strong>{' '}
           {t('WALLET')}
         </h2>
       </div>
@@ -56,8 +57,8 @@ const FundsPage: FC = () => {
                 </span>
               </div>
             </div>
-            <button type="submit">{t('Account details')}</button>
-            <button type="submit">{t('Transactions list')}</button>
+            <Button type="submit">{t('Account details')}</Button>
+            <Button type="submit">{t('Transactions list')}</Button>
           </div>
         </div>
       </div>

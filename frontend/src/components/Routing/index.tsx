@@ -1,14 +1,13 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { Redirect, Route, Switch } from 'react-router-dom';
 import { Switch } from 'react-router-dom';
+import { authFetchUserAction } from '../../actions/auth';
 import { Routes, StorageKeys } from '../../common/enums';
+import { useTypedSelector } from '../../hooks';
+import FundsPage from '../../scenes/Wallet/FundsPage';
 import LoginPage from '../LoginPage';
 import Main from '../Main';
-import { useTypedSelector } from '../../hooks';
-import { authFetchUserAction } from '../../actions/auth';
-import FundsPage from '../../scenes/Wallet/FundsPage';
-import Header from '../Header';
+import PrivateRoute from '../PrivateRoute';
 import PublicRoute from '../PublicRoute';
 
 const Routing = () => {
@@ -19,25 +18,31 @@ const Routing = () => {
     isLoading
   }));
   const { user, isLoading } = authStore;
-  console.log('auth', user, isLoading);
-
+  const hasToken = !!localStorage.getItem(StorageKeys.ACCESS_TOKEN);
   useEffect(() => {
-    const token = localStorage.getItem(StorageKeys.ACCESS_TOKEN);
-    if (token) {
+    if (hasToken && !isLoading) {
       authUser();
     }
   }, []);
-
-  return (
-    <div>
-      <Header />
-      <Switch>
-        <PublicRoute restricted={false} path={Routes.HOME} exact component={Main} />
-        <PublicRoute restricted={false} path={Routes.LOGIN} exact component={LoginPage} />
-        <PrivateRoute path={Routes.ADDFUNDS} exact component={FundsPage} />
-      </Switch>
-    </div>
+  return isLoading || (!user && hasToken) ? (
+    <p>Loading...</p>
+  ) : (
+    <Switch>
+      <PublicRoute
+        restricted={false}
+        path={Routes.HOME}
+        exact
+        component={Main}
+      />
+      <PublicRoute
+        restricted={false}
+        path={Routes.LOGIN}
+        exact
+        component={LoginPage}
+      />
+      <PrivateRoute exact path={Routes.ADDFUNDS} component={FundsPage} />
+    </Switch>
   );
 };
-//      <Route path={Routes.HOME} exact component={Main} />
+
 export default Routing;

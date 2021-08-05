@@ -1,13 +1,14 @@
 import { FC } from 'react';
-import { useTranslation } from 'react-i18next';
 import classes from './styles.module.scss';
 import coinImg from '../../../assets/HypeCoin.png';
+import { useLocalization } from '../../../providers/localization';
+import Button from '../../../components/Button';
 
 interface FundProps {
   price: number;
 }
 const Fund: FC<FundProps> = (props) => {
-  const { t, i18n } = useTranslation();
+  const { t } = useLocalization();
   const { price } = props;
   function onClick() {
     // here mb should be some dispatch
@@ -27,9 +28,9 @@ const Fund: FC<FundProps> = (props) => {
             {` ${price}`}
             <img src={coinImg} alt="Coin" />
           </span>
-          <button onClick={onClick} type="button">
+          <Button className={classes['add-funds-btn']} type="submit">
             {t('Add funds')}
-          </button>
+          </Button>
         </div>
       </div>
     </div>

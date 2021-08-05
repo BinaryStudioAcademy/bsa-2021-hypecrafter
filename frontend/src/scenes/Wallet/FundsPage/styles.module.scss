@@ -63,10 +63,10 @@
         margin: 4px 0px;
         border-width: 0px;
         color:#ddd;
-        background-color:$color-root-grey;
+        background:$color-root-grey !important;
         &:hover{
           color:white;
-          background-color:#595d63;;
+          background-color:#595d63 !important;
         }
       }
     }
