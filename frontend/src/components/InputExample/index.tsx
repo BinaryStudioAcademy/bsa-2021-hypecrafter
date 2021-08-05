@@ -9,7 +9,7 @@ function InputExample() {
 
   return (
     <Container>
-      <Col md="4">
+      <Col lg="4">
         <Input type="text" value={text} placeholder="Search..." onChange={setText} />
         <Input
           type="email"

@@ -93,7 +93,7 @@ const Body: FunctionComponent<BodyProps> = ({
   return (
     <div className={classes['body-container']}>
       <Row>
-        <Col xs={12} md={8}>
+        <Col xs={12} lg={8}>
           <Tabs>
             <Tabs.Item {...selectedTab === tabs[0] && { selected: true }}>
               <Nav.Link onClick={handleTabChange}>{tabs[0]}</Nav.Link>
@@ -105,7 +105,7 @@ const Body: FunctionComponent<BodyProps> = ({
 
           <CardsGrid projects={projects} achievements={achievements} target={selectedTab} />
         </Col>
-        <Col xs={12} md={4}>
+        <Col xs={12} lg={4}>
           <h3 className={classes['activity-header']}>Activity</h3>
           {activitiesList}
         </Col>
