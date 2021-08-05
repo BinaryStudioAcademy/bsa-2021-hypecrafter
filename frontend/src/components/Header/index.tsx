@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown, faCircle, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faBell } from '@fortawesome/free-regular-svg-icons';
-import { useState } from 'react';
+import { useState, ChangeEvent } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Routes } from '../../common/enums';
 import hypeCoin from '../../assets/HypeCoin.png';
@@ -13,6 +13,10 @@ import Logo from '../Logo';
 
 const Header = () => {
   const [text, setText] = useState('');
+
+  const handleSearch = (e: ChangeEvent<HTMLInputElement>) => {
+    setText(e.target.value);
+  };
 
   return (
     <div className={classes.header}>
@@ -43,7 +47,7 @@ const Header = () => {
       <div className={classes.header_right}>
         <div className={classes.header_search}>
           <FontAwesomeIcon icon={faSearch} className={classes.header_search_icon} />
-          <Input type="search" value={text} placeholder="Search..." onChange={setText} />
+          <Input type="search" value={text} placeholder="Search..." onChange={handleSearch} />
         </div>
         <div className={classes.header_hypeCoin}>
           <img src={hypeCoin} alt="HypeCoin" />
