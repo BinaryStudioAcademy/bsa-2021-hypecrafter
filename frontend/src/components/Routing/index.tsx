@@ -9,6 +9,8 @@ import { authFetchUserAction } from '../../actions/auth';
 import Header from '../Header';
 import PublicRoute from '../PublicRoute';
 import LoaderWrapper from '../LoaderWrapper';
+import PrivateRoute from '../PrivateRoute';
+import FundsPage from '../../scenes/Wallet/FundsPage';
 
 const Routing = () => {
   const dispatch = useDispatch();
@@ -30,8 +32,19 @@ const Routing = () => {
     <LoaderWrapper isLoading={isLoading || (!user && hasToken)}>
       <Header />
       <Switch>
-        <PublicRoute restricted={false} path={Routes.HOME} exact component={Main} />
-        <PublicRoute restricted={false} path={Routes.LOGIN} exact component={LoginPage} />
+        <PublicRoute
+          restricted={false}
+          path={Routes.HOME}
+          exact
+          component={Main}
+        />
+        <PublicRoute
+          restricted={false}
+          path={Routes.LOGIN}
+          exact
+          component={LoginPage}
+        />
+        <PrivateRoute exact path={Routes.ADDFUNDS} component={FundsPage} />
       </Switch>
     </LoaderWrapper>
   );
