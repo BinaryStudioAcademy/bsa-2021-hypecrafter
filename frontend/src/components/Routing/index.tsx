@@ -1,14 +1,16 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Switch } from 'react-router-dom';
-import { authFetchUserAction } from '../../actions/auth';
 import { Routes, StorageKeys } from '../../common/enums';
-import { useTypedSelector } from '../../hooks';
-import FundsPage from '../../scenes/Wallet/FundsPage';
 import LoginPage from '../LoginPage';
 import Main from '../Main';
-import PrivateRoute from '../PrivateRoute';
+import { useTypedSelector } from '../../hooks';
+import { authFetchUserAction } from '../../actions/auth';
+import Header from '../Header';
 import PublicRoute from '../PublicRoute';
+import LoaderWrapper from '../LoaderWrapper';
+import PrivateRoute from '../PrivateRoute';
+import FundsPage from '../../scenes/Wallet/FundsPage';
 
 const Routing = () => {
   const dispatch = useDispatch();
@@ -18,30 +20,33 @@ const Routing = () => {
     isLoading
   }));
   const { user, isLoading } = authStore;
-  const hasToken = !!localStorage.getItem(StorageKeys.ACCESS_TOKEN);
+  const hasToken = Boolean(localStorage.getItem(StorageKeys.ACCESS_TOKEN));
+
   useEffect(() => {
-    if (hasToken && !isLoading) {
+    if (hasToken) {
       authUser();
     }
   }, []);
-  return isLoading || (!user && hasToken) ? (
-    <p>Loading...</p>
-  ) : (
-    <Switch>
-      <PublicRoute
-        restricted={false}
-        path={Routes.HOME}
-        exact
-        component={Main}
-      />
-      <PublicRoute
-        restricted={false}
-        path={Routes.LOGIN}
-        exact
-        component={LoginPage}
-      />
-      <PrivateRoute exact path={Routes.ADDFUNDS} component={FundsPage} />
-    </Switch>
+
+  return (
+    <LoaderWrapper isLoading={isLoading || (!user && hasToken)}>
+      <Header />
+      <Switch>
+        <PublicRoute
+          restricted={false}
+          path={Routes.HOME}
+          exact
+          component={Main}
+        />
+        <PublicRoute
+          restricted={false}
+          path={Routes.LOGIN}
+          exact
+          component={LoginPage}
+        />
+        <PrivateRoute exact path={Routes.ADDFUNDS} component={FundsPage} />
+      </Switch>
+    </LoaderWrapper>
   );
 };
 
