@@ -7,6 +7,7 @@ import Main from '../Main';
 import { useTypedSelector } from '../../hooks';
 import { authFetchUserAction } from '../../actions/auth';
 import PublicRoute from '../PublicRoute';
+import MainPage from '../MainPage';
 
 const Routing = () => {
   const dispatch = useDispatch();

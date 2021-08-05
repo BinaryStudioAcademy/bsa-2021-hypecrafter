@@ -10,6 +10,10 @@
   }
 }
 
+.button:hover {
+  border-color: transparent;
+}
+
 .button[href] {
   display: inline-block;
 }
@@ -23,6 +27,9 @@
 }
 
 .outline {
+  border: solid 2px transparent;
+  background: $color-primary-button;
+  box-shadow: 2px 1000px 1px $color-root-background inset;
 }
 
 .circle {

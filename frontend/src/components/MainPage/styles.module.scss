@@ -1,0 +1,78 @@
+@import './../../styles/vars';
+
+.buttons {
+  display: flex;
+  grid-gap: 20px;
+}
+
+.buttons [type='button'] {
+  padding: 10px 20px;
+}
+
+.root {
+  padding: 0px 60px;
+}
+
+.main {
+  min-height: 450px;
+  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: 55% 45%;
+}
+
+.main-text {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-flow: column;
+  padding-right: 180px;
+}
+
+.main-logo-text {
+  font-weight: bold;
+  font-size: 46px;
+}
+
+.logo {
+  background: $color-root-turquoise-gradient;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo-text {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21.6px;
+  margin-bottom: 20px;
+}
+
+.main-bg {
+  width: inherit;
+  img {
+    width: calc(100% + 60px);
+  }
+}
+
+.category {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  color: #fafbff;
+  margin-bottom: 30px;
+}
+
+.cards {
+  margin-bottom: 40px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(1, 1fr);
+
+  @media (min-width: $breakpoint-lg) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: $breakpoint-xxl) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
