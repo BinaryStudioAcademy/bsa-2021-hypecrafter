@@ -1,0 +1,23 @@
+@import '../../../styles/vars';
+@import '../../../styles/mixins';
+@import '../../../styles/fonts';
+
+.item {
+  background: white;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-size: $font-size-category;
+  font-family: $font-roboto700;
+}
+
+.selected-item {
+  background: $color-root-turquoise-gradient;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-size: $font-size-category;
+  font-family: $font-roboto700;
+}

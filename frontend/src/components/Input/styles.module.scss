@@ -1,3 +1,4 @@
+
 @import '../../styles/vars';
 
 .input-container {
@@ -6,7 +7,7 @@
 }
 
 .input-label {
-  font-weight: 500;
+  font-weight: $font-weight-medium;
 }
 
 .input-field-container {
@@ -39,6 +40,6 @@
 }
 
 .error-message {
-  color: red;
+  color: $color-error;
   font-size: 0.8rem;
 }

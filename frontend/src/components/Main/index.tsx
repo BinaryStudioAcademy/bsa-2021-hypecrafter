@@ -7,6 +7,9 @@ import InputExample from '../InputExample';
 import PopoverExample from '../PopoverExample';
 import CardExample from '../CardExample';
 import ModalWindow from '../ModalWindow';
+import UserPage from '../../scenes/UserPage';
+import TextStyleExample from '../TextStyleExample';
+import TabsExample from '../TabsExample';
 import Chart from '../Chart/Chart';
 import defaultProps from '../Chart/testprops';
 
@@ -14,6 +17,7 @@ function Main() {
   const [show, setShow] = useState(false);
   return (
     <div>
+      <TabsExample />
       <Chart
         type={defaultProps.type}
         labels={defaultProps.data.labels}
@@ -23,14 +27,15 @@ function Main() {
       <PopoverExample />
       <ModalWindow
         show={show}
-        title="Modal"
-        body="Hello there!"
-        size="medium"
-        centered
+        title="User Page"
+        body={<UserPage />}
+        size="extra-wide"
+        centered={false}
         onHide={() => {
           setShow(false);
         }}
       />
+      <TextStyleExample />
       <TranslateExample />
       <BootstrapExample />
       <ButtonExample />

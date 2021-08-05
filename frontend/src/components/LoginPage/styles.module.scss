@@ -1,5 +1,4 @@
-@import '../../styles/vars';
-@import '../../styles/mixins';
+@import '../../styles/mixins', '../../styles/vars';
 
 .root {
   min-height: 100vh;
@@ -44,14 +43,14 @@
 
 .title {
   font-weight: bold;
-  font-size: 24px;
+  font-size: $font-size-category;
   line-height: 28px;
   color: $color-root-turquoise;
 }
 
 .register-cta {
   margin: 10px 0 20px;
-  font-size: 12px;
+  font-size: $font-size-small;
   line-height: 14px;
   color: $color-root-text-grey;
 
@@ -73,7 +72,7 @@
     position: absolute;
     top: 2px;
     z-index: 2;
-    font-size: 12px;
+    font-size: $font-size-small;
     line-height: 14px;
     color: $color-root-turquoise;
     text-decoration: none;
@@ -87,7 +86,7 @@
   width: 100%;
   height: 45px;
   font-weight: bold;
-  font-size: 16px;
+  font-size: $font-size-akcent;
   line-height: 19px;
 }
 
@@ -97,7 +96,7 @@
   width: 100%;
   height: 45px;
   font-weight: bold;
-  font-size: 16px;
+  font-size: $font-size-akcent;
   line-height: 19px;
   background: transparent;
   border: 1px solid $color-root-turquoise;
@@ -114,7 +113,7 @@
     z-index: 2;
     top: -14px;
     padding: 0 6px;
-    font-size: 18px;
+    font-size: $font-size-large;
     color: $color-root-text;
     background: $color-root-background;
   }

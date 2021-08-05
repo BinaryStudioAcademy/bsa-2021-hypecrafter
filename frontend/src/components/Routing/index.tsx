@@ -1,12 +1,13 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { Route, Switch } from 'react-router-dom';
+import { Switch } from 'react-router-dom';
 import { Routes, StorageKeys } from '../../common/enums';
 import LoginPage from '../LoginPage';
 import Main from '../Main';
 import { useTypedSelector } from '../../hooks';
 import { authFetchUserAction } from '../../actions/auth';
 import Header from '../Header';
+import PublicRoute from '../PublicRoute';
 
 const Routing = () => {
   const dispatch = useDispatch();
@@ -29,8 +30,8 @@ const Routing = () => {
     <div>
       <Header />
       <Switch>
-        <Route path={Routes.HOME} exact component={Main} />
-        <Route path={Routes.LOGIN} exact component={LoginPage} />
+        <PublicRoute restricted={false} path={Routes.HOME} exact component={Main} />
+        <PublicRoute restricted={false} path={Routes.LOGIN} exact component={LoginPage} />
       </Switch>
     </div>
   );
