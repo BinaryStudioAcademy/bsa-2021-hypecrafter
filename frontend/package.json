@@ -4,6 +4,8 @@
   "private": "false",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-regular-svg-icons": "^5.15.3",
+    "@fortawesome/free-brands-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
     "@sentry/react": "^6.10.0",
@@ -19,6 +21,7 @@
     "react-bootstrap": "^2.0.0-beta.4",
     "react-chartjs-2": "^3.0.4",
     "react-dom": "^17.0.2",
+    "react-hook-form": "^7.12.2",
     "react-i18next": "^11.11.4",
     "react-redux": "^7.2.4",
     "react-router-dom": "^5.2.0",

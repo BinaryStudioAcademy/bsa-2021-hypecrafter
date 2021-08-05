@@ -1,0 +1,12 @@
+.avatar{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+        height: 100%;
+    }
+    span{
+        font-size: 1rem;
+    }
+}

@@ -10,6 +10,7 @@
         "Enter your password": "Enter your password",
         "Forgot your password?": "Forgot your password?",
         "or": "or",
-        "Sign In with Google": "Sign In with Google"
+        "Sign In with Google": "Sign In with Google",
+        "Password is too short (minimum is 6 characters)": "Password is too short (minimum is 6 characters)"
     }
 }

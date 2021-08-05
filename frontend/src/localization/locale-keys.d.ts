@@ -9,4 +9,5 @@ declare type LocaleKeys =
  | 'Enter your password'
  | 'Forgot your password?'
  | 'or'
- | 'Sign In with Google';
+ | 'Sign In with Google'
+ | 'Password is too short (minimum is 6 characters)';

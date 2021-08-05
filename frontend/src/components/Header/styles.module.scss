@@ -1,0 +1,105 @@
+@import '../../styles/vars';
+@import '../../styles/fonts.scss';
+
+.header{
+    height: 105px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 60px;
+}
+.header_left{
+    display: flex;
+    align-items: center;
+}
+.logo{
+    height: 26px;
+    margin-right: 40px;
+}
+.header_menu_item{
+    margin: 0px 20px;
+    background: none!important;
+    box-shadow: none!important;
+    font-size: 18px;
+    font-family: $font-roboto500;
+    color: $color-root-text;
+    text-decoration: none;
+    &:first-child{
+        margin-left: 70px;
+    }
+}
+.header_menu_item_active{
+    color: $color-root-turquoise!important;
+}
+.header_menu_item_down{
+    margin-left: 8px;
+    margin-right: 0px;
+}
+.header_right{
+    display: flex;
+    align-items: center;
+}
+.header_profile{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 11px;
+}
+.header_profile_avatar{
+    height: 35px;
+    border: 2px solid $color-root-turquoise;
+    border-radius: 35px;
+    margin-right: 10px;
+}
+.header_profile_down{
+    font-size: 16px;
+}
+.header_natification{
+    cursor: pointer;
+    margin: 0px 11px;
+    position: relative;
+}
+.header_natification_bell{
+    font-size: 24px;
+    transform: rotate(-30deg)
+}
+.header_natification_new{
+    font-size: 8px;
+    position: absolute;
+    color: $color-root-turquoise;
+    right: 3px;
+}
+.header_hypeCoin{
+    margin: 0px 11px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    > img{
+        height: 24px;
+        margin-right: 5px;
+    }
+    > span{
+        font-size: 16px;
+        font-family: $font-roboto700;
+        margin-top: 2px;
+    }
+}
+
+.header_search{
+    margin: 0px 11px;
+    position: relative;
+    input{
+        font-size: 12px;
+        width: 282px;
+        height: 45px;
+        padding-left: 48px;
+    }
+}
+.header_search_icon{
+    cursor: pointer;
+    position: absolute;
+    font-size: 20px;
+    top: 12px;
+    left: 16px;
+    z-index: 1;
+}
