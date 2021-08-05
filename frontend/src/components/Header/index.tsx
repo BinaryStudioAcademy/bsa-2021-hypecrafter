@@ -6,10 +6,10 @@ import { NavLink } from 'react-router-dom';
 import { Routes } from '../../common/enums';
 import hypeCoin from '../../assets/HypeCoin.png';
 import classes from './styles.module.scss';
-import defaultUserAvatar from '../../assets/default-user-icon.png';
 import Input from '../Input';
 import Link from '../Link';
 import Logo from '../Logo';
+import Avatar from '../Avatar';
 
 const Header = () => {
   const [text, setText] = useState('');
@@ -58,7 +58,7 @@ const Header = () => {
           {true && <FontAwesomeIcon icon={faCircle} className={classes.header_natification_new} />}
         </div>
         <div className={classes.header_profile}>
-          <img className={classes.header_profile_avatar} alt="user" src={false || defaultUserAvatar} />
+          <Avatar width={35} userName="Hype Coin" className={classes.header_profile_avatar} />
           <FontAwesomeIcon icon={faCaretDown} className={classes.header_profile_down} />
         </div>
       </div>
