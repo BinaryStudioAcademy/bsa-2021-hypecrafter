@@ -1,4 +1,4 @@
-@import './../../styles/vars';
+@import '../../styles/mixins', './../../styles/vars';
 
 .buttons {
   display: flex;
@@ -14,10 +14,14 @@
 }
 
 .main {
-  min-height: 450px;
-  margin-bottom: 40px;
+  min-height: 85vh;
   display: grid;
-  grid-template-columns: 55% 45%;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr;
+  @media (max-width: $breakpoint-lg) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 1fr;
+  }
 }
 
 .main-text {
@@ -26,6 +30,10 @@
   align-content: center;
   flex-flow: column;
   padding-right: 180px;
+  @media (max-width: $breakpoint-lg) {
+    grid-row: 2;
+    padding-right: 0px;
+  }
 }
 
 .main-logo-text {
@@ -48,9 +56,15 @@
 }
 
 .main-bg {
-  width: inherit;
-  img {
-    width: calc(100% + 60px);
+  @include flex-center;
+  width: calc(100% + 60px);
+  background-image: url('../../assets/main_bg.jpg');
+  background-position: center;
+  background-size: cover;
+  @media (max-width: $breakpoint-lg) {
+    width: calc(100% + 120px);
+    margin-left: -60px;
+    order: 2;
   }
 }
 

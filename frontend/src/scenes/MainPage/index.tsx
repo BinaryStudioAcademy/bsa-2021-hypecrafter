@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import mainBg from '../../assets/main_bg.png';
 import classes from './styles.module.scss';
 import Button from '../../components/Button';
 import ProjectCard from '../../components/ProjectCard';
@@ -10,7 +9,8 @@ const MainPage: FC = () => {
   // Mocked Data
 
   const popularStartups = [
-    { category: 'Health',
+    { id: '1',
+      category: 'Health',
       tags: ['Bike', 'Speed', 'Mile', 'Bike', 'Speed', 'Mile'],
       name: 'Card Title',
       description: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
@@ -18,7 +18,8 @@ const MainPage: FC = () => {
       goal: 10000,
       percent: 50,
       image: 'https://source.unsplash.com/random/800x600' },
-    { category: 'Health',
+    { id: '2',
+      category: 'Health',
       tags: ['Bike', 'Speed', 'Mile'],
       name: 'Mendi: Real Brain Training - Anytime, Anywhere',
       description: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
@@ -26,7 +27,8 @@ const MainPage: FC = () => {
       goal: 1000,
       percent: 30,
       image: 'https://source.unsplash.com/random/800x600' },
-    { category: 'Health',
+    { id: '3',
+      category: 'Health',
       tags: ['Bike', 'Speed', 'Mile', 'Bike', 'Speed', 'Mile'],
       name: 'Card Title',
       description: 'Card Description',
@@ -35,7 +37,8 @@ const MainPage: FC = () => {
       image: 'https://source.unsplash.com/random/800x600' }];
 
   const recommendedStartups = [
-    { category: 'Health',
+    { id: '4',
+      category: 'Health',
       tags: ['Bike', 'Speed', 'Mile', 'Bike', 'Speed', 'Mile'],
       name: 'Card Title',
       description: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
@@ -43,7 +46,8 @@ const MainPage: FC = () => {
       goal: 10000,
       percent: 50,
       image: 'https://source.unsplash.com/random/800x600' },
-    { category: 'Health',
+    { id: '5',
+      category: 'Health',
       tags: ['Bike', 'Speed', 'Mile'],
       name: 'Mendi: Real Brain Training - Anytime, Anywhere',
       description: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
@@ -51,7 +55,8 @@ const MainPage: FC = () => {
       goal: 1000,
       percent: 30,
       image: 'https://source.unsplash.com/random/800x600' },
-    { category: 'Health',
+    { id: '6',
+      category: 'Health',
       tags: ['Bike', 'Speed', 'Mile', 'Bike', 'Speed', 'Mile'],
       name: 'Card Title',
       description: 'Card Description',
@@ -81,15 +86,14 @@ const MainPage: FC = () => {
             <Button type="button" isOutline>Help Project</Button>
           </div>
         </div>
-        <div className={classes['main-bg']}>
-          <img src={mainBg} alt="main" />
-        </div>
+        <div className={classes['main-bg']} />
       </div>
       <div>
         <div className={classes.category}>Popular startups</div>
         <div className={classes.cards}>
           {popularStartups.map(project => (
             <ProjectCard
+              key={project.id}
               to="/"
               category={project.category}
               tags={project.tags}
@@ -105,6 +109,7 @@ const MainPage: FC = () => {
         <div className={classes.cards}>
           {recommendedStartups.map(project => (
             <ProjectCard
+              key={project.id}
               to="/"
               category={project.category}
               tags={project.tags}
