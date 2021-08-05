@@ -1,6 +1,7 @@
 import classnames from 'classnames';
 import classes from './styles.module.scss';
-import { ColorsAvatar } from '../../common/enums';
+import { ColorsAvatar } from '../../common/constans';
+import { RequireAtLeastOne } from '../../common/types';
 
 interface Props{
     src?: string,
@@ -8,15 +9,17 @@ interface Props{
     width?: number,
     className?:string
 }
-const defaultProps: Props = {
+type SrcOrUserName= RequireAtLeastOne<Props, 'src'|'userName'>
+const defaultProps: SrcOrUserName = {
   src: '',
   userName: '',
   width: 20,
   className: ''
 };
 
-const Avatar = (props: Props) => {
+const Avatar = (props: SrcOrUserName) => {
   const { src, userName, width, className } = props;
+  const heightText = 0.4;
   const avatarClass = classnames(className, classes.avatar);
   const initials = userName?.split(' ').map(str => str.toUpperCase()[0]).join('').substr(0, 2);
 
@@ -26,7 +29,7 @@ const Avatar = (props: Props) => {
     return color;
   };
   const background = src ? `url(${src})` : getColorByName(userName);
-
+  const fontSize = width ? (heightText * width) : 10;
   return (
     <div
       style={{
@@ -38,7 +41,7 @@ const Avatar = (props: Props) => {
       }}
       className={avatarClass}
     >
-      {!src && <span style={{ fontSize: width ? (0.4 * width) : 10 }}>{initials || 'H'}</span>}
+      {!src && <span style={{ fontSize }}>{initials}</span>}
     </div>
   );
 };
