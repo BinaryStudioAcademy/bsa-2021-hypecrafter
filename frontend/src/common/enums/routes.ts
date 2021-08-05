@@ -3,5 +3,7 @@ export enum Routes {
   LOGIN = '/login',
   SIGNUP = '/signup',
   ADDFUNDS = '/addfunds',
-  RESET_PASSWORD = '/reset-password'
+  RESET_PASSWORD = '/reset-password',
+  PROJECTS = '/projects',
+  TRENDS='/trends'
 }

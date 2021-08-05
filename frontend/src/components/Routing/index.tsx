@@ -8,6 +8,7 @@ import Main from '../Main';
 import { useTypedSelector } from '../../hooks';
 import { authFetchUserAction } from '../../actions/auth';
 import FundsPage from '../../scenes/Wallet/FundsPage';
+import Header from '../Header';
 import PublicRoute from '../PublicRoute';
 
 const Routing = () => {
@@ -28,13 +29,14 @@ const Routing = () => {
   }, []);
 
   return (
-    <Switch>
-      <Route path={Routes.HOME} exact component={Main} />
-      <Route path={Routes.ADDFUNDS} exact component={FundsPage} />
-      <Route path={Routes.LOGIN} exact component={LoginPage} />
-      <PublicRoute restricted={false} path={Routes.HOME} exact component={Main} />
-      <PublicRoute restricted={false} path={Routes.LOGIN} exact component={LoginPage} />
-    </Switch>
+    <div>
+      <Header />
+      <Switch>
+        <PublicRoute restricted={false} path={Routes.HOME} exact component={Main} />
+        <PublicRoute restricted={false} path={Routes.LOGIN} exact component={LoginPage} />
+        <PrivateRoute path={Routes.ADDFUNDS} exact component={FundsPage} />
+      </Switch>
+    </div>
   );
 };
 //      <Route path={Routes.HOME} exact component={Main} />

@@ -2,11 +2,12 @@
 @import './../../styles/vars';
 
 .logo {
-  font-size: 2rem;
+  font-size: 18px;
   font-weight: $font-weight-bold;
   color: white;
   font-family: Orbitron;
   letter-spacing: 0.28em;
+  margin-top: -4px;
 }
 
 .glitch {
@@ -35,6 +36,7 @@
   }
 
   span:first-child {
+    position: relative;
     animation: glitch 650ms infinite;
     display: block;
     color: $color-root-turquoise;

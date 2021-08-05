@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Container } from 'react-bootstrap';
 import Users from '../../scenes/Users';
 import BootstrapExample from '../BootstrapExample';
 import TranslateExample from '../TranslateExample';
@@ -8,15 +7,16 @@ import InputExample from '../InputExample';
 import PopoverExample from '../PopoverExample';
 import CardExample from '../CardExample';
 import ModalWindow from '../ModalWindow';
+import UserPage from '../../scenes/UserPage';
 import TextStyleExample from '../TextStyleExample';
 import TabsExample from '../TabsExample';
 import Chart from '../Chart/Chart';
 import defaultProps from '../Chart/testprops';
 
 function Main() {
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
   return (
-    <Container>
+    <div>
       <TabsExample />
       <Chart
         type={defaultProps.type}
@@ -27,10 +27,10 @@ function Main() {
       <PopoverExample />
       <ModalWindow
         show={show}
-        title="Modal"
-        body="Hello there!"
-        size="medium"
-        centered
+        title="User Page"
+        body={<UserPage />}
+        size="extra-wide"
+        centered={false}
         onHide={() => {
           setShow(false);
         }}
@@ -41,7 +41,7 @@ function Main() {
       <ButtonExample />
       <InputExample />
       <CardExample />
-    </Container>
+    </div>
   );
 }
 

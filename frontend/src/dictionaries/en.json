@@ -11,7 +11,8 @@
         "Forgot your password?": "Forgot your password?",
         "or": "or",
         "Sign In with Google": "Sign In with Google",
-
+        "Password is too short (minimum is 6 characters)": "Password is too short (minimum is 6 characters)",
+        
         "Add":"Add",
         "Add funds":"Add funds",
         "Custom fund":"Custom fund",
@@ -26,6 +27,6 @@
         "YOUR HYPECRAFTER ACCOUNT":"YOUR HYPECRAFTER ACCOUNT",
         "Current Wallet balance":"Current Wallet balance",
         "Account details":"Account details",
-        "Transactions list":"Transactions list"
+        "Transactions list":"Transactions list",
     }
 }
