@@ -8,6 +8,7 @@ import { useTypedSelector } from '../../hooks';
 import { authFetchUserAction } from '../../actions/auth';
 import Header from '../Header';
 import PublicRoute from '../PublicRoute';
+import LoaderWrapper from '../LoaderWrapper';
 
 const Routing = () => {
   const dispatch = useDispatch();
@@ -17,23 +18,22 @@ const Routing = () => {
     isLoading
   }));
   const { user, isLoading } = authStore;
-  console.log('auth', user, isLoading);
+  const hasToken = Boolean(localStorage.getItem(StorageKeys.ACCESS_TOKEN));
 
   useEffect(() => {
-    const token = localStorage.getItem(StorageKeys.ACCESS_TOKEN);
-    if (token) {
+    if (hasToken) {
       authUser();
     }
   }, []);
 
   return (
-    <div>
+    <LoaderWrapper isLoading={isLoading || (!user && hasToken)}>
       <Header />
       <Switch>
         <PublicRoute restricted={false} path={Routes.HOME} exact component={Main} />
         <PublicRoute restricted={false} path={Routes.LOGIN} exact component={LoginPage} />
       </Switch>
-    </div>
+    </LoaderWrapper>
   );
 };
 
