@@ -10,10 +10,7 @@ interface FundProps {
 const Fund: FC<FundProps> = (props) => {
   const { t } = useLocalization();
   const { price } = props;
-  function onClick() {
-    // here mb should be some dispatch
-    console.log(price);
-  }
+
   return (
     <div className={classes['wrp-fund-body']}>
       <div className={classes['fund-body']}>

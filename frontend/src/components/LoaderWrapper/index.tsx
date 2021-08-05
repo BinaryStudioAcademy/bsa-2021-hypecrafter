@@ -9,7 +9,7 @@ interface Props {
 const LoaderWrapper: FC<Props> = ({ isLoading, children }) => (
   <>
     {isLoading && <div className={classes['loader-wrapper']}><Logo /></div>}
-    {children}
+    {!isLoading && children}
   </>
 );
 

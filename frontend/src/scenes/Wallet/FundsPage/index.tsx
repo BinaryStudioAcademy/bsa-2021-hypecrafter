@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC } from 'react';
 import { Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import classes from './styles.module.scss';
