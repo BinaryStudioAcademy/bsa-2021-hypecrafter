@@ -1,5 +1,6 @@
 @import '../../../styles/vars';
 @import '../../../styles/mixins';
+@import '../../../styles/fonts';
 
 .item {
   background: white;
@@ -7,8 +8,8 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  font-size: $font-size-akcent;
-  font-weight: bold;
+  font-size: $font-size-category;
+  font-family: $font-roboto700;
 }
 
 .selected-item {
@@ -17,6 +18,6 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  font-size: $font-size-akcent;
-  font-weight: bold;
+  font-size: $font-size-category;
+  font-family: $font-roboto700;
 }

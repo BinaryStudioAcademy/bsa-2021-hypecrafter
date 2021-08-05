@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { FC } from 'react';
 import { Nav } from 'react-bootstrap';
 import TabsItem from '../tab-item';
