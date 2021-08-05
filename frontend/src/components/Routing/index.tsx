@@ -6,6 +6,7 @@ import LoginPage from '../LoginPage';
 import Main from '../Main';
 import { useTypedSelector } from '../../hooks';
 import { authFetchUserAction } from '../../actions/auth';
+import Header from '../Header';
 import PublicRoute from '../PublicRoute';
 
 const Routing = () => {
@@ -26,10 +27,13 @@ const Routing = () => {
   }, []);
 
   return (
-    <Switch>
-      <PublicRoute restricted={false} path={Routes.HOME} exact component={Main} />
-      <PublicRoute restricted={false} path={Routes.LOGIN} exact component={LoginPage} />
-    </Switch>
+    <div>
+      <Header />
+      <Switch>
+        <PublicRoute restricted={false} path={Routes.HOME} exact component={Main} />
+        <PublicRoute restricted={false} path={Routes.LOGIN} exact component={LoginPage} />
+      </Switch>
+    </div>
   );
 };
 
