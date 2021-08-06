@@ -12,7 +12,7 @@ import { Donate } from './donate';
 import { UserProject } from './userProject';
 import { ProjectTag } from './projectTag';
 import { Team } from './team';
-import { FAQ } from './faqs';
+import { FAQ } from './faq';
 
 @Entity()
 export class Project extends AbstractEntity {
