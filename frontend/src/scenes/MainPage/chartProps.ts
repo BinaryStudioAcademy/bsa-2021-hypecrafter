@@ -33,10 +33,10 @@ const defaultOptions = {
 };
 
 const defaultData = {
-  labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9'],
+  labels: ['Tech', 'Health', 'Game', 'Film', 'Podcast', 'Transportation', 'Education', 'Art', 'Home'],
   datasets: [
     {
-      label: '# of Votes',
+      label: 'Invested projects',
       data: [12, 19, 3, 5, 2, 3, 7, 8, 9],
       fill: false,
       backgroundColor(context: { chart: Chart }): CanvasGradient | null {
