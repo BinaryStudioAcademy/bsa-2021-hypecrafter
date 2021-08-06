@@ -1,11 +1,27 @@
+import { useEffect } from 'react';
 import { Container, Row } from 'react-bootstrap';
+import { useDispatch } from 'react-redux';
+import { useTypedSelector } from '../../hooks';
+import { fetchUserProfileAction } from './actions';
 import Body from './components/Body';
 import Header from './components/Header';
 import './styles.module.scss';
 
 const UserPage = () => {
+  const dispatch = useDispatch();
+  const store = useTypedSelector(({ userProfile: { item, isLoading } }) => ({
+    user: item,
+    isLoading
+  }));
+
+  const { user, isLoading } = store;
+
+  useEffect(() => {
+    dispatch(fetchUserProfileAction('1'));
+  }, []);
+
   // Mocked Data
-  const user = {
+  const userData = {
     firstName: 'Anakin',
     secondName: 'Skywalker',
     location: 'Kyiv, Ukraine',
@@ -101,7 +117,7 @@ const UserPage = () => {
   return (
     <Container>
       <Row>
-        <Header user={user} />
+        <Header user={userData} />
       </Row>
       <Row>
         <Body projects={projects} achievements={achievements} activities={activities} />
