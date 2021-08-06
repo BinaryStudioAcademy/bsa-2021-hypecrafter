@@ -1,4 +1,7 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { useTypedSelector } from '../../hooks';
+import { fetchPopularProjectsAction, fetchRecommendedProjectsAction } from '../../actions/projects';
 import classes from './styles.module.scss';
 import Button from '../../components/Button';
 import ProjectCard from '../../components/ProjectCard';
@@ -7,62 +10,18 @@ import defaultProps from './chartProps';
 
 const MainPage: FC = () => {
   // Mocked Data
+  const dispatch = useDispatch();
+  const { popular: popularStartups, recommended: recommendedStartups } = useTypedSelector((
+    { projects: { popular, recommended } }
+  ) => ({
+    popular, recommended
+  }));
 
-  const popularStartups = [
-    { id: '1',
-      category: 'Health',
-      tags: ['Bike', 'Speed', 'Mile', 'Bike', 'Speed', 'Mile'],
-      name: 'Card Title',
-      description: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-          classical Latin literature from 45 BC, making it over 2000 years old.`,
-      goal: 10000,
-      percent: 50,
-      image: 'https://source.unsplash.com/random/800x600' },
-    { id: '2',
-      category: 'Health',
-      tags: ['Bike', 'Speed', 'Mile'],
-      name: 'Mendi: Real Brain Training - Anytime, Anywhere',
-      description: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-      classical Latin literature from 45 BC, making it over 2000 years old.`,
-      goal: 1000,
-      percent: 30,
-      image: 'https://source.unsplash.com/random/800x600' },
-    { id: '3',
-      category: 'Health',
-      tags: ['Bike', 'Speed', 'Mile', 'Bike', 'Speed', 'Mile'],
-      name: 'Card Title',
-      description: 'Card Description',
-      goal: 50000,
-      percent: 70,
-      image: 'https://source.unsplash.com/random/800x600' }];
+  useEffect(() => {
+    dispatch(fetchRecommendedProjectsAction());
+    dispatch(fetchPopularProjectsAction());
+  }, [dispatch]);
 
-  const recommendedStartups = [
-    { id: '4',
-      category: 'Health',
-      tags: ['Bike', 'Speed', 'Mile', 'Bike', 'Speed', 'Mile'],
-      name: 'Card Title',
-      description: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-              classical Latin literature from 45 BC, making it over 2000 years old.`,
-      goal: 10000,
-      percent: 50,
-      image: 'https://source.unsplash.com/random/800x600' },
-    { id: '5',
-      category: 'Health',
-      tags: ['Bike', 'Speed', 'Mile'],
-      name: 'Mendi: Real Brain Training - Anytime, Anywhere',
-      description: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-          classical Latin literature from 45 BC, making it over 2000 years old.`,
-      goal: 1000,
-      percent: 30,
-      image: 'https://source.unsplash.com/random/800x600' },
-    { id: '6',
-      category: 'Health',
-      tags: ['Bike', 'Speed', 'Mile', 'Bike', 'Speed', 'Mile'],
-      name: 'Card Title',
-      description: 'Card Description',
-      goal: 50000,
-      percent: 70,
-      image: 'https://source.unsplash.com/random/800x600' }];
   return (
     <div className={classes.root}>
       <div className={classes.main}>
