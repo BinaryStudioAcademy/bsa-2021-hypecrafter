@@ -7,12 +7,12 @@ export class DonatorsPrivilege extends AbstractEntity {
   @Column({ type: 'text' })
   privilege: string;
 
-  @Column({ type: 'money' })
+  @Column({ type: 'numeric' })
   amount: number;
 
   @OneToMany(
     () => ProjectDonatorsPrivilege,
     projectDonatorsPrivilege => projectDonatorsPrivilege.donatorsPrivilege
   )
-  projectDonatorsPrivileges!: ProjectDonatorsPrivilege[];
+  projectDonatorsPrivileges: ProjectDonatorsPrivilege[];
 }

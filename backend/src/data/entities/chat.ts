@@ -7,11 +7,11 @@ import { Message } from './message';
 @Entity()
 export class Chat extends AbstractEntity {
   @ManyToOne(() => Team, team => team.chats)
-  team!: Team;
+  team: Team;
 
   @OneToMany(() => Message, message => message.chat)
-  messages!: Message[];
+  messages: Message[];
 
   @ManyToOne(() => UserProfile, userProfile => userProfile.chats)
-  donator!: UserProfile[];
+  donator: UserProfile[];
 }

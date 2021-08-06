@@ -13,5 +13,5 @@ export class Team extends AbstractEntity {
   project: Project;
 
   @OneToMany(() => Chat, chat => chat.team)
-  chats!: Chat[];
+  chats: Chat[];
 }

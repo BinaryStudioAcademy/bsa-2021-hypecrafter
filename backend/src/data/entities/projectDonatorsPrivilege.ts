@@ -9,8 +9,8 @@ export class ProjectDonatorsPrivilege extends AbstractEntity {
     () => DonatorsPrivilege,
     donatorsPrivilege => donatorsPrivilege.projectDonatorsPrivileges
   )
-  donatorsPrivilege!: DonatorsPrivilege;
+  donatorsPrivilege: DonatorsPrivilege;
 
   @ManyToOne(() => Project, project => project.donates)
-  project!: Project;
+  project: Project;
 }

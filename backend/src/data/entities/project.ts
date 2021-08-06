@@ -12,7 +12,7 @@ import { Donate } from './donate';
 import { UserProject } from './userProject';
 import { ProjectTag } from './projectTag';
 import { Team } from './team';
-import { FAQ } from './faq';
+import { FAQ } from './faqs';
 
 @Entity()
 export class Project extends AbstractEntity {
@@ -28,7 +28,7 @@ export class Project extends AbstractEntity {
   })
   isActive: boolean;
 
-  @Column({ type: 'money' })
+  @Column({ type: 'numeric' })
   goal: number;
 
   @Column()
@@ -40,7 +40,7 @@ export class Project extends AbstractEntity {
   @Column({ type: 'int' })
   totalViews: number;
 
-  @Column({ type: 'int' })
+  @Column({ type: 'real' })
   minutesToRead: number;
 
   @Column({ type: 'int' })
@@ -50,21 +50,21 @@ export class Project extends AbstractEntity {
   region: string;
 
   @ManyToOne(() => Category, category => category.projects)
-  category!: Category;
+  category: Category;
 
   @OneToMany(() => Donate, donate => donate.project)
-  donates!: Donate[];
+  donates: Donate[];
 
   @OneToMany(() => UserProject, userProject => userProject.project)
-  userProjects!: UserProject[];
+  userProjects: UserProject[];
 
   @OneToMany(() => ProjectTag, projectTag => projectTag.project)
-  projectTags!: ProjectTag[];
+  projectTags: ProjectTag[];
 
   @OneToOne(() => Team, team => team.project)
   @JoinColumn()
   team: Team;
 
   @OneToMany(() => FAQ, faq => faq.project)
-  faqs!: FAQ[];
+  faqs: FAQ[];
 }

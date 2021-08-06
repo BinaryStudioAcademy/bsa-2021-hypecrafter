@@ -22,7 +22,7 @@ export class UserProfile extends AbstractEntity {
   @Column()
   phoneNumber: string;
 
-  @Column({ type: 'money' })
+  @Column({ type: 'numeric' })
   balance: number;
 
   // @Column()
@@ -41,24 +41,24 @@ export class UserProfile extends AbstractEntity {
   region: string;
 
   @OneToMany(() => Donate, donate => donate.user)
-  donates!: Donate[];
+  donates: Donate[];
 
   @OneToMany(() => UserProject, userProject => userProject.user)
-  userProjects!: UserProject[];
+  userProjects: UserProject[];
 
   @OneToMany(() => Chat, chat => chat.donator)
-  chats!: Chat[];
+  chats: Chat[];
 
   @OneToMany(() => UserAchievement, userAchievement => userAchievement.user)
-  userAchievements!: UserAchievement[];
+  userAchievements: UserAchievement[];
 
   @OneToOne(() => AlertsSettings, alertsSettings => alertsSettings.user)
   @JoinColumn()
   alertsSettings: AlertsSettings;
 
   @OneToMany(() => Message, message => message.author)
-  messages!: Message[];
+  messages: Message[];
 
   @OneToMany(() => Comment, comment => comment.author)
-  comments!: Comment[];
+  comments: Comment[];
 }

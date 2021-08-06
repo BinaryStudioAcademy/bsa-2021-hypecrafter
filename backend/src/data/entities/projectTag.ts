@@ -6,8 +6,8 @@ import { Tag } from './tag';
 @Entity()
 export class ProjectTag extends AbstractEntity {
   @ManyToOne(() => Tag, tag => tag.projectTags)
-  tag!: Tag;
+  tag: Tag;
 
   @ManyToOne(() => Project, project => project.projectTags)
-  project!: Project;
+  project: Project;
 }

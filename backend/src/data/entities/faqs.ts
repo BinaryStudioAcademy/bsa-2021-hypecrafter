@@ -11,5 +11,5 @@ export class FAQ extends AbstractEntity {
   answer: string;
 
   @ManyToOne(() => Project, project => project.faqs)
-  project!: Project;
+  project: Project;
 }

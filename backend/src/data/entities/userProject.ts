@@ -16,8 +16,8 @@ export class UserProject extends AbstractEntity {
   mark: Mark;
 
   @ManyToOne(() => UserProfile, userProfile => userProfile.userProjects)
-  user!: UserProfile;
+  user: UserProfile;
 
   @ManyToOne(() => Project, project => project.userProjects)
-  project!: Project;
+  project: Project;
 }

@@ -12,5 +12,5 @@ export class Category extends AbstractEntity {
   name: CategoryType;
 
   @OneToMany(() => Project, project => project.category)
-  projects!: Project[];
+  projects: Project[];
 }

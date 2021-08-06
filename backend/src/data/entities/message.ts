@@ -10,11 +10,11 @@ export class Message extends AbstractEntity {
   text: string;
 
   @ManyToOne(() => Chat, chat => chat.messages)
-  chat!: Chat;
+  chat: Chat;
 
   @ManyToOne(() => UserProfile, userProfile => userProfile.messages)
   author: UserProfile;
 
   @OneToMany(() => Comment, comment => comment.messageLink)
-  comments!: Comment[];
+  comments: Comment[];
 }
