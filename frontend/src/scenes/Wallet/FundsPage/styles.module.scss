@@ -1,0 +1,100 @@
+@import '../../../styles/vars';
+
+.breadcrumbs {
+  padding-top: 24px;
+  color: rgb(122, 122, 122);
+  font-size: $font-size-small;
+  a {
+    text-decoration: none;
+    color: $color-root-text-grey;
+    &:hover {
+      color: $color-root-text;
+    }
+  }
+}
+.wallet-header {
+  padding-bottom: 35px;
+  max-width: $breakpoint-xl;
+}
+.wallet-header-title {
+  font-size: $font-size-title;
+  padding-top: 8px;
+  strong {
+    background-image: $color-root-turquoise-gradient;
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+  }
+}
+.wallet-page-content {
+  max-width: $breakpoint-xl;
+  display: flex;
+  .wallet-info-block {
+    min-width: 350px;
+    margin-left: 40px;
+    .wallet-info-body {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      background-color: $color-root-block-background;
+      .wallet-balance-block {
+        display: flex;
+        justify-content: space-between;
+        
+        align-items: flex-end;
+        h3{
+          color:#eee;
+          font-size: $font-size-akcent;
+        }
+        .wallet-balance {
+          span{
+            font-size: $font-size-category;
+            img {
+              height: $font-size-category;
+              margin-bottom: 3px;
+            }
+          }
+        }
+      }
+      button{
+        margin: 4px 0px;
+        border-width: 0px;
+        color:#ddd;
+        background:$color-root-grey !important;
+        &:hover{
+          color:white;
+          background-color:#595d63 !important;
+        }
+      }
+    }
+  }
+  .funds-block{
+    flex-grow: 1;
+  }
+}
+.addfunds-header {
+  color: $color-root-turquoise;
+  font-size: $font-size-akcent;
+}
+
+.addfunds-about {
+  margin: 7px 0;
+  max-width: $breakpoint-md;
+  color: $color-root-text;
+  font-size: $font-size-text;
+}
+@media screen and (max-width: 1000px) {
+  .wallet-page-content {
+    flex-direction: column-reverse;
+    .wallet-info-block{
+      h2{
+        font-size: $font-size-akcent;
+      }
+      min-width: 0px;
+      margin:10px 0px;
+    }
+  }
+}

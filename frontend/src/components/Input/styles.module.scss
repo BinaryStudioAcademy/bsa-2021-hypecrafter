@@ -1,4 +1,5 @@
-@import './../../styles/vars';
+
+@import '../../styles/vars';
 
 .input-container {
   flex-direction: column;
@@ -15,8 +16,14 @@
 }
 
 .input-field {
-  border: $color-base-border;
+  border: 1px solid $color-root-text;
   border-radius: 1px;
+  background: none;
+  color: $color-root-text;
+  &:focus{
+      background: none;
+      color: $color-root-text;
+  }
 }
 
 .input-password-eye {

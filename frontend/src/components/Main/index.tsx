@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Container } from 'react-bootstrap';
 import Users from '../../scenes/Users';
 import BootstrapExample from '../BootstrapExample';
 import TranslateExample from '../TranslateExample';
@@ -15,9 +14,9 @@ import Chart from '../Chart/Chart';
 import defaultProps from '../Chart/testprops';
 
 function Main() {
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
   return (
-    <Container>
+    <div>
       <TabsExample />
       <Chart
         type={defaultProps.type}
@@ -42,7 +41,7 @@ function Main() {
       <ButtonExample />
       <InputExample />
       <CardExample />
-    </Container>
+    </div>
   );
 }
 

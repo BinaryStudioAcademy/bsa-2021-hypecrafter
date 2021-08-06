@@ -1,12 +1,16 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { Switch } from 'react-router-dom';
+import { Switch, useHistory } from 'react-router-dom';
 import { Routes, StorageKeys } from '../../common/enums';
 import LoginPage from '../LoginPage';
 import Main from '../Main';
 import { useTypedSelector } from '../../hooks';
 import { authFetchUserAction } from '../../actions/auth';
+import Header from '../Header';
 import PublicRoute from '../PublicRoute';
+import LoaderWrapper from '../LoaderWrapper';
+import PrivateRoute from '../PrivateRoute';
+import FundsPage from '../../scenes/Wallet/FundsPage';
 
 const Routing = () => {
   const dispatch = useDispatch();
@@ -15,21 +19,37 @@ const Routing = () => {
     user,
     isLoading
   }));
+  const { location: { pathname } } = useHistory();
+
+  const routesWitoutHeader = [Routes.LOGIN];
   const { user, isLoading } = authStore;
-  console.log('auth', user, isLoading);
+  const hasToken = Boolean(localStorage.getItem(StorageKeys.ACCESS_TOKEN));
 
   useEffect(() => {
-    const token = localStorage.getItem(StorageKeys.ACCESS_TOKEN);
-    if (token) {
+    if (hasToken) {
       authUser();
     }
   }, []);
 
   return (
-    <Switch>
-      <PublicRoute restricted={false} path={Routes.HOME} exact component={Main} />
-      <PublicRoute restricted={false} path={Routes.LOGIN} exact component={LoginPage} />
-    </Switch>
+    <LoaderWrapper isLoading={isLoading || (!user && hasToken)}>
+      {!routesWitoutHeader.includes(pathname as Routes) && <Header />}
+      <Switch>
+        <PublicRoute
+          restricted={false}
+          path={Routes.HOME}
+          exact
+          component={Main}
+        />
+        <PublicRoute
+          restricted={false}
+          path={Routes.LOGIN}
+          exact
+          component={LoginPage}
+        />
+        <PrivateRoute exact path={Routes.ADDFUNDS} component={FundsPage} />
+      </Switch>
+    </LoaderWrapper>
   );
 };
 

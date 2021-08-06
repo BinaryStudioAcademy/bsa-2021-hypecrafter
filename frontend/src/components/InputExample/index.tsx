@@ -1,31 +1,39 @@
-import { useState } from 'react';
 import { Container, Col } from 'react-bootstrap';
+import { SubmitHandler, useForm } from 'react-hook-form';
 import Input from '../Input';
 
+interface FormData {
+  email: string;
+  password: string;
+  text: string;
+}
+
 function InputExample() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [text, setText] = useState('');
+  const { register, handleSubmit } = useForm<FormData>();
+
+  const onSubmit: SubmitHandler<FormData> = data => {
+    console.log('Sign In', data);
+  };
 
   return (
     <Container>
-      <Col lg="4">
-        <Input type="text" value={text} placeholder="Search..." onChange={setText} />
-        <Input
-          type="email"
-          value={email}
-          placeholder="Enter your email"
-          label="Email"
-          onChange={setEmail}
-          errorMessage="Error example."
-        />
-        <Input
-          type="password"
-          value={password}
-          placeholder="Enter your password"
-          label="Password"
-          onChange={setPassword}
-        />
+      <Col md="4">
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <Input type="text" placeholder="Search..." {...register('email')} />
+          <Input
+            type="email"
+            placeholder="Enter your email"
+            label="Email"
+            errorMessage="Error example."
+            {...register('email', { required: true })}
+          />
+          <Input
+            type="password"
+            placeholder="Enter your password"
+            label="Password"
+            {...register('email', { required: true })}
+          />
+        </form>
       </Col>
     </Container>
   );
