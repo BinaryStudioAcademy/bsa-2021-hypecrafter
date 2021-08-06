@@ -7,7 +7,7 @@ export interface DataItem {
   label: string;
   data: number[];
   fill?: boolean;
-  backgroundColor?: string;
+  backgroundColor?: string | ((context: {chart: Chartjs}) => CanvasGradient| null);
   borderColor?: string | ((context: {chart: Chartjs}) => CanvasGradient| null);
 }
 

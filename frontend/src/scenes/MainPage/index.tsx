@@ -3,7 +3,7 @@ import classes from './styles.module.scss';
 import Button from '../../components/Button';
 import ProjectCard from '../../components/ProjectCard';
 import Chart from '../../components/Chart/Chart';
-import defaultProps from '../../components/Chart/testprops';
+import defaultProps from './chartProps';
 
 const MainPage: FC = () => {
   // Mocked Data
