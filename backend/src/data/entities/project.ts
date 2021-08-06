@@ -43,7 +43,7 @@ export class Project extends AbstractEntity {
   @Column({ type: 'real' })
   minutesToRead: number;
 
-  @Column({ type: 'int' })
+  @Column({ type: 'real' })
   totalInteractionTime: number;
 
   @Column({ type: 'text' })
