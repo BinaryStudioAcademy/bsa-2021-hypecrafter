@@ -1,0 +1,65 @@
+@import '../../../styles/vars';
+@import '../../../styles/fonts';
+@import '../../../styles/mixins';
+
+.breadcrumbs {
+  padding-top: 24px;
+  color: rgb(122, 122, 122);
+  font-size: $font-size-small;
+  a {
+    text-decoration: none;
+    color: $color-root-text-grey;
+    &:hover {
+      color: $color-root-text;
+    }
+  }
+}
+.wallet-header {
+  padding-bottom: 350px;
+  max-width: $breakpoint-xl;
+}
+.wallet-header-title {
+  font-size: $font-size-title;
+  padding-top: 8px;
+}
+.transaction-table-wrp {
+  margin: 0 auto;
+  width: $breakpoint-lg !important;
+  table {
+    thead {
+      th {
+        @include text-md;
+      }
+    }
+    tbody {
+      tr {
+        img {
+          width: $font-size-text !important;
+          min-width: $font-size-text !important;
+          margin-left: 3px;
+          margin-bottom: 2px;
+        }
+        @include text-md;
+        :nth-child(1) {
+          width: 10% !important;
+          font-size: $font-size-small;
+        }
+        :nth-child(2) {
+          width: 40% !important;
+        }
+        :nth-child(3) {
+          width: 20% !important;
+        }
+        :nth-child(4) {
+          width: 10% !important;
+        }
+        :nth-child(5) {
+          width: 10% !important;
+        }
+        :nth-child(6) {
+          width: 10% !important;
+        }
+      }
+    }
+  }
+}

@@ -25,4 +25,11 @@ declare type LocaleKeys =
  | 'YOUR HYPECRAFTER ACCOUNT'
  | 'Current Wallet balance'
  | 'Account details'
- | 'Transactions list';
+ | 'Transactions list'
+ | 'Date'
+ | 'Items'
+ | 'Type'
+ | 'Total'
+ | 'Change'
+ | 'Balance'
+ | 'Transaction list';

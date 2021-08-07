@@ -26,6 +26,13 @@
         "YOUR HYPECRAFTER ACCOUNT":"МІЙ АКАУНТ HYPECRAFTER",
         "Current Wallet balance":"Кошти в гаманці",
         "Account details":"Відомості акаунта",
-        "Transactions list":"Список транзакцій"
+        "Transactions list":"Список транзакцій",
+        "Date":"Дата",
+        "Items":"Товари",
+        "Type":"Тип",
+        "Total":"Усього",
+        "Change":"Зміна",
+        "Balance":"Залишок",
+        "Transaction list":"Список транзакцій"
     }
 }

@@ -11,6 +11,7 @@ import PublicRoute from '../PublicRoute';
 import LoaderWrapper from '../LoaderWrapper';
 import PrivateRoute from '../PrivateRoute';
 import FundsPage from '../../scenes/Wallet/FundsPage';
+import Transactions from '../../scenes/Wallet/Transactions';
 
 const Routing = () => {
   const dispatch = useDispatch();
@@ -27,6 +28,7 @@ const Routing = () => {
 
   useEffect(() => {
     if (hasToken) {
+      console.log(hasToken);
       authUser();
     }
   }, []);
@@ -48,6 +50,7 @@ const Routing = () => {
           component={LoginPage}
         />
         <PrivateRoute exact path={Routes.ADDFUNDS} component={FundsPage} />
+        <PrivateRoute exact path={Routes.TRANSACTIONS} component={Transactions} />
       </Switch>
     </LoaderWrapper>
   );

@@ -27,6 +27,13 @@
         "YOUR HYPECRAFTER ACCOUNT":"YOUR HYPECRAFTER ACCOUNT",
         "Current Wallet balance":"Current Wallet balance",
         "Account details":"Account details",
-        "Transactions list":"Transactions list"
+        "Transactions list":"Transactions list",
+        "Date":"Date",
+        "Items":"Items",
+        "Type":"Type",
+        "Total":"Total",
+        "Change":"Change",
+        "Balance":"Balance",
+        "Transaction list":"Transaction list"
     }
 }
