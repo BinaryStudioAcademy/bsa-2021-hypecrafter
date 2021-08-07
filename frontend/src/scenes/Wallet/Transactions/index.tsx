@@ -53,64 +53,62 @@ const Transactions: FC = () => {
     useSortBy
   );
   return (
-    <>
-      <div className={classes['transaction-table-wrp']}>
-        <div className={classes.breadcrumbs}>
-          <Link to="/"> {t('Home')}</Link>
-          {' > '}
-          <Link to="/account">{t('Account')}</Link>
-          {' > '}
-          <span>{t('Transaction list')}</span>
-        </div>
-        <h2 className={classes['wallet-header-title']}>
-          {t('Transaction list')}
-        </h2>
-        <Table
-          className={classes['transaction-table']}
-          striped
-          bordered
-          hover
-          variant="dark"
-        >
-          <thead>
-            {headerGroups.map((headerGroup) => (
-              <tr {...headerGroup.getHeaderGroupProps()}>
-                {headerGroup.headers.map((column) => (
-                  <th {...column.getHeaderProps()}>
-                    {column.render('Header')}
-                  </th>
-                ))}
-              </tr>
-            ))}
-          </thead>
-          <tbody {...getTableBodyProps()}>
-            {rows.map((row) => {
-              prepareRow(row);
-              return (
-                <tr {...row.getRowProps()}>
-                  {row.cells.map((cell) => {
-                    console.log(cell);
-                    return (
-                      <td {...cell.getCellProps()}>
-                        {cell.column.Header === t('Change') && cell.value > 0 ? '+' : false}
-                        {cell.render('Cell')}
-                        {cell.column.Header === t('Total')
-                        || cell.column.Header === t('Change')
-                        || cell.column.Header === t('Balance') ? (
-                          <img src={coinImg} alt="Coin" />
-                          ) : (
-                            false
-                          )}
-                      </td>
-                    );
-                  })}
-                </tr>
-              );
-            })}
-          </tbody>
-        </Table>
+    <div className={classes['transaction-table-wrp']}>
+      <div className={classes.breadcrumbs}>
+        <Link to="/"> {t('Home')}</Link>
+        {' > '}
+        <Link to="/account">{t('Account')}</Link>
+        {' > '}
+        <span>{t('Transaction list')}</span>
       </div>
-    </>
+      <h2 className={classes['wallet-header-title']}>
+        {t('Transaction list')}
+      </h2>
+      <Table
+        className={classes['transaction-table']}
+        striped
+        bordered
+        hover
+        variant="dark"
+      >
+        <thead>
+          {headerGroups.map((headerGroup) => (
+            <tr {...headerGroup.getHeaderGroupProps()}>
+              {headerGroup.headers.map((column) => (
+                <th {...column.getHeaderProps()}>{column.render('Header')}</th>
+              ))}
+            </tr>
+          ))}
+        </thead>
+        <tbody {...getTableBodyProps()}>
+          {rows.map((row) => {
+            prepareRow(row);
+            return (
+              <tr {...row.getRowProps()}>
+                {row.cells.map((cell) => {
+                  console.log(cell);
+                  return (
+                    <td {...cell.getCellProps()}>
+                      {cell.column.Header === t('Change') && cell.value > 0
+                        ? '+'
+                        : false}
+                      {cell.render('Cell')}
+                      {cell.column.Header === t('Total')
+                      || cell.column.Header === t('Change')
+                      || cell.column.Header === t('Balance') ? (
+                        <img src={coinImg} alt="Coin" />
+                        ) : (
+                          false
+                        )}
+                    </td>
+                  );
+                })}
+              </tr>
+            );
+          })}
+        </tbody>
+      </Table>
+    </div>
   );
 };
 export default Transactions;
