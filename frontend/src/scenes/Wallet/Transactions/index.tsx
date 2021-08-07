@@ -92,6 +92,7 @@ const Transactions: FC = () => {
                     console.log(cell);
                     return (
                       <td {...cell.getCellProps()}>
+                        {cell.column.Header === t('Change') && cell.value > 0 ? '+' : false}
                         {cell.render('Cell')}
                         {cell.column.Header === t('Total')
                         || cell.column.Header === t('Change')

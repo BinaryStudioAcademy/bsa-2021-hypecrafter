@@ -33,6 +33,8 @@
     }
     tbody {
       tr {
+        height: 50px;
+        vertical-align:middle;
         img {
           width: $font-size-text !important;
           min-width: $font-size-text !important;
