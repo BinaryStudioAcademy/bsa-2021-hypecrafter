@@ -38,10 +38,7 @@ const getUserData = files => {
           minutesToRead: getRandomNumber(5),
           totalInteractionTime: getRandomNumber(2600000),
           region: project.location.name,
-          category: project.category.parent_name || project.category.analytics_name,
-          donates: '',
-          team: '',
-          faqs: ''
+          category: project.category.parent_name || project.category.analytics_name
         }
       };
     });
