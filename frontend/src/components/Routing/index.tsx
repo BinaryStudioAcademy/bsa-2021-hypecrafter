@@ -47,7 +47,7 @@ const Routing = () => {
           restricted={false}
           path={Routes.LOGIN}
           exact
-          component={Transactions}
+          component={LoginPage}
         />
         <PrivateRoute exact path={Routes.ADDFUNDS} component={FundsPage} />
         <PrivateRoute exact path={Routes.TRANSACTIONS} component={Transactions} />
