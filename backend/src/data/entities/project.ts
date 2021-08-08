@@ -8,11 +8,13 @@ import {
 } from 'typeorm';
 import { AbstractEntity } from './abstract';
 import { Category } from './category';
+import { Comment } from './comment';
 import { Donate } from './donate';
 import { UserProject } from './userProject';
 import { ProjectTag } from './projectTag';
 import { Team } from './team';
 import { FAQ } from './faq';
+import { UserProfile } from './userProfile';
 
 @Entity()
 export class Project extends AbstractEntity {
@@ -21,6 +23,9 @@ export class Project extends AbstractEntity {
 
   @Column({ type: 'text' })
   description: string;
+
+  @Column({ nullable: true })
+  content: string;
 
   @Column({
     type: 'bool',
@@ -49,8 +54,9 @@ export class Project extends AbstractEntity {
   @Column({ type: 'text' })
   region: string;
 
-  @ManyToOne(() => Category, category => category.projects)
-  category: Category;
+  @OneToOne(() => Team, team => team.project)
+  @JoinColumn()
+  team: Team;
 
   @OneToMany(() => Donate, donate => donate.project)
   donates: Donate[];
@@ -61,10 +67,15 @@ export class Project extends AbstractEntity {
   @OneToMany(() => ProjectTag, projectTag => projectTag.project)
   projectTags: ProjectTag[];
 
-  @OneToOne(() => Team, team => team.project)
-  @JoinColumn()
-  team: Team;
-
   @OneToMany(() => FAQ, faq => faq.project)
   faqs: FAQ[];
+
+  @OneToMany(() => Comment, comment => comment.project)
+  comments: Comment[];
+
+  @ManyToOne(() => Category, category => category.projects)
+  category: Category;
+
+  @ManyToOne(() => UserProfile, userProfile => userProfile.projects)
+  author: UserProfile;
 }

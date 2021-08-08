@@ -7,7 +7,7 @@ import { Mark } from '../../common/enums';
 @Entity()
 export class UserProject extends AbstractEntity {
   @Column({ type: 'bool' })
-  IsWatched: boolean;
+  isWatched: boolean;
 
   @Column({
     type: 'enum',

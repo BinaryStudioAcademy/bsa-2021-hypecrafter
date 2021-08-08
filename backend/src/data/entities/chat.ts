@@ -13,5 +13,5 @@ export class Chat extends AbstractEntity {
   messages: Message[];
 
   @ManyToOne(() => UserProfile, userProfile => userProfile.chats)
-  donator: UserProfile[];
+  donator: UserProfile;
 }

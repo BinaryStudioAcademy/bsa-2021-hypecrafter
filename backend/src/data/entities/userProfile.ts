@@ -7,38 +7,38 @@ import { AlertsSettings } from './alertsSettings';
 import { UserAchievement } from './userAchievement';
 import { Message } from './message';
 import { Comment } from './comment';
+import { Tag } from './tag';
+import { Project } from './project';
 
 @Entity()
 export class UserProfile extends AbstractEntity {
-  @Column()
+  @Column({ nullable: true })
   firstName: string;
 
-  @Column()
+  @Column({ nullable: true })
   lastName: string;
 
   @Column()
   email: string;
 
-  @Column()
+  @Column({ nullable: true })
   phoneNumber: string;
 
   @Column({ type: 'numeric' })
   balance: number;
 
-  // @Column()
-  // passwordHash: string;
-
-  // @Column()
-  // passwordSalt: string;
-
   @Column()
   lastLoginDate: Date;
 
-  @Column()
+  @Column({ nullable: true })
   description: string;
 
-  @Column()
+  @Column({ nullable: true })
   region: string;
+
+  @OneToOne(() => AlertsSettings, alertsSettings => alertsSettings.user)
+  @JoinColumn()
+  alertsSettings: AlertsSettings;
 
   @OneToMany(() => Donate, donate => donate.user)
   donates: Donate[];
@@ -52,13 +52,15 @@ export class UserProfile extends AbstractEntity {
   @OneToMany(() => UserAchievement, userAchievement => userAchievement.user)
   userAchievements: UserAchievement[];
 
-  @OneToOne(() => AlertsSettings, alertsSettings => alertsSettings.user)
-  @JoinColumn()
-  alertsSettings: AlertsSettings;
-
   @OneToMany(() => Message, message => message.author)
   messages: Message[];
 
   @OneToMany(() => Comment, comment => comment.author)
   comments: Comment[];
+
+  @OneToMany(() => Tag, tag => tag.author)
+  tags: Tag[];
+
+  @OneToMany(() => Project, project => project.author)
+  projects: Project[];
 }

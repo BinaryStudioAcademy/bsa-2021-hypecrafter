@@ -1,8 +1,7 @@
-import { Entity, Column, ManyToOne, OneToMany } from 'typeorm';
+import { Entity, Column, ManyToOne } from 'typeorm';
 import { AbstractEntity } from './abstract';
 import { Chat } from './chat';
 import { UserProfile } from './userProfile';
-import { Comment } from './comment';
 
 @Entity()
 export class Message extends AbstractEntity {
@@ -14,7 +13,4 @@ export class Message extends AbstractEntity {
 
   @ManyToOne(() => UserProfile, userProfile => userProfile.messages)
   author: UserProfile;
-
-  @OneToMany(() => Comment, comment => comment.messageLink)
-  comments: Comment[];
 }
