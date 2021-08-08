@@ -5,11 +5,13 @@ import type {
   CreateProjectSuccessActionType,
   CreateProjectFailureActionType
 } from './actions';
+import { Routes } from '../../common/enums';
 
 export interface ProjectState{
-    isLoading: boolean;
-    project: Project;
-    error: string;
+  isLoading: boolean;
+  project: Project;
+  error: string;
+  currentPage: Routes;
 }
 
 const newProject: Project = {
@@ -27,7 +29,8 @@ const newProject: Project = {
 export const initialState: ProjectState = {
   isLoading: false,
   project: newProject,
-  error: ''
+  error: '',
+  currentPage: Routes.HOME
 };
 
 export const projectReduser = createReducer<ProjectState>(initialState, {
