@@ -8,10 +8,6 @@ export const alertsSettings = [
     userId: '4da2c9f3-ce90-4817-90d0-5116d57a5b14'
   },
   {
-    id: '99a6b714-3209-46c6-b92e-497a9178d63b',
-    userId: 'aa984f73-fadc-4d9a-8a9f-e0e50002f061'
-  },
-  {
     id: '496cc3f4-0452-449b-8501-b651b10c9042',
     userId: 'aa984f73-fadc-4d9a-8a9f-e0e50002f061'
   },

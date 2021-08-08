@@ -34,22 +34,6 @@ export const userProfiles = [
   },
   {
     id: 'aa984f73-fadc-4d9a-8a9f-e0e50002f061',
-    firstName: 'Burgess',
-    lastName: 'Pratt',
-    email: 'burgesspratt@snacktion.com',
-    phoneNumber: '+1 (908) 504-2563',
-    description: `Excepteur sunt nisi sint commodo amet adipisicing
-    excepteur nostrud veniam excepteur. Anim ut laboris elit et.
-    Minim ipsum proident aliqua do officia reprehenderit esse aliquip.
-    Aute voluptate in consequat nostrud ad nulla dolore ad. Ex cillum quis
-    laboris esse ea consectetur nulla in incididunt.\r\n`,
-    balance: -51.6,
-    lastLoginDate:
-      'Wed Jul 28 2021 16:17:48 GMT+0300 (Eastern European Summer Time)',
-    region: 'Gibraltar'
-  },
-  {
-    id: 'aa984f73-fadc-4d9a-8a9f-e0e50002f061',
     firstName: 'Marta',
     lastName: 'Ford',
     email: 'martaford@snacktion.com',
