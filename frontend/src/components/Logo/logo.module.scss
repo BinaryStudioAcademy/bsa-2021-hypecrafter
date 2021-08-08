@@ -2,17 +2,18 @@
 @import './../../styles/vars';
 
 .logo {
-  font-size: 2rem;
+  font-size: 18px;
   font-weight: $font-weight-bold;
   color: white;
   font-family: Orbitron;
   letter-spacing: 0.28em;
+  margin-top: -4px;
 }
 
 .glitch {
   position: relative;
-  text-shadow: 0.05em 0 0 $color-glitch-red,
-    -0.035em -0.05em 0 $color-glitch-green, 0.05em 0.05em 0 $color-glitch-blue;
+  text-shadow: 0.25em 0 0 $color-glitch-red,
+    -0.035em -0.25em 0 $color-glitch-green, 0.25em 0.25em 0 $color-glitch-blue;
 
   animation: glitch 500ms infinite;
 
@@ -35,6 +36,7 @@
   }
 
   span:first-child {
+    position: relative;
     animation: glitch 650ms infinite;
     display: block;
     color: $color-root-turquoise;
@@ -45,40 +47,40 @@
     font-weight: $font-weight-lighter;
     opacity: 0.8;
     clip-path: polygon(0 100%, 10% 0, 100% 45%, 0 45%);
-    transform: translate(-0.05em, -0.08em);
+    transform: translate(-0.25em, -0.08em);
   }
 }
 
 @keyframes glitch {
   0% {
-    text-shadow: 0.05em 0 0 $color-glitch-red,
-      -0.035em -0.05em 0 $color-glitch-green, 0.05em 0.05em 0 $color-glitch-blue;
+    text-shadow: 0.25em 0 0 $color-glitch-red,
+      -0.035em -0.25em 0 $color-glitch-green, 0.25em 0.25em 0 $color-glitch-blue;
   }
   14% {
-    text-shadow: 0.05em 0 0 $color-glitch-red,
-      -0.035em -0.05em 0 $color-glitch-green, 0.05em 0.05em 0 $color-glitch-blue;
+    text-shadow: 0.25em 0 0 $color-glitch-red,
+      -0.035em -0.25em 0 $color-glitch-green, 0.25em 0.25em 0 $color-glitch-blue;
   }
   15% {
-    text-shadow: -0.05em -0.035em 0 $color-glitch-red,
+    text-shadow: -0.25em -0.035em 0 $color-glitch-red,
       0.025em 0.025em 0 $color-glitch-green,
-      -0.05em -0.05em 0 $color-glitch-blue;
+      -0.25em -0.25em 0 $color-glitch-blue;
   }
   49% {
-    text-shadow: -0.05em -0.035em 0 $color-glitch-red,
+    text-shadow: -0.25em -0.035em 0 $color-glitch-red,
       0.025em 0.025em 0 $color-glitch-green,
-      -0.05em -0.05em 0 $color-glitch-blue;
+      -0.25em -0.25em 0 $color-glitch-blue;
   }
   50% {
-    text-shadow: 0.025em 0.05em 0 $color-glitch-red,
-      0.05em 0 0 $color-glitch-green, 0 -0.05em 0 $color-glitch-blue;
+    text-shadow: 0.025em 0.25em 0 $color-glitch-red,
+      0.25em 0 0 $color-glitch-green, 0 -0.25em 0 $color-glitch-blue;
   }
   99% {
-    text-shadow: 0.025em 0.05em 0 $color-glitch-red,
-      0.05em 0 0 $color-glitch-green, 0 -0.05em 0 $color-glitch-blue;
+    text-shadow: 0.025em 0.25em 0 $color-glitch-red,
+      0.25em 0 0 $color-glitch-green, 0 -0.25em 0 $color-glitch-blue;
   }
   100% {
     text-shadow: -0.035em 0 0 $color-glitch-red,
       -0.035em -0.035em 0 $color-glitch-green,
-      -0.05em -0.05em 0 $color-glitch-blue;
+      -0.25em -0.25em 0 $color-glitch-blue;
   }
 }

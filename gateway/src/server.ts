@@ -1,11 +1,12 @@
 import { createConnection } from 'typeorm';
 import express from 'express';
 import { log } from './helpers';
+import { initMiddlewares } from './api/middlewares';
 import initRoutes from './api/routes';
 import { env } from './env';
-import { initMiddlewares } from './api/middlewares';
 import { initServices } from './services';
 import { initRepositories } from './data/repositories';
+import { initPassport } from './api/passport';
 
 const { port, environment } = env.app;
 const app = express();
@@ -14,8 +15,9 @@ createConnection().then(() => {
   try {
     const repositories = initRepositories();
     const services = initServices(repositories);
+    initPassport(app, repositories);
     initMiddlewares(app, services);
-    app.use(initRoutes());
+    app.use(initRoutes(services));
     app.listen(port, () => {
       log(`Server is running at port: ${port}. Environment: "${environment}"`);
     });

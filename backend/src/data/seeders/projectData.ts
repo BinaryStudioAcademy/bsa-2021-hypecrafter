@@ -1,7 +1,5 @@
-/* eslint-disable no-console */
 /* eslint-disable no-await-in-loop */
 /* eslint-disable no-restricted-syntax */
-/* eslint-disable import/no-extraneous-dependencies */
 import { Connection } from 'typeorm';
 import { Mark } from '../../common/enums';
 import { Category, UserProfile, Project, UserProject } from '../entities';
