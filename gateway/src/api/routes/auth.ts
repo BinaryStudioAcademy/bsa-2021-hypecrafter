@@ -3,13 +3,14 @@ import { authentication as authenticationMiddleware } from "./../middlewares/aut
 import { User } from "../../data/entities/user";
 import { Services } from "../../services/index";
 import { wrap } from "../../helpers/request";
+import { AuthApiPath } from "../../common/enums";
 
 const init = (services: Services) => {
   const router = Router();
 
   return router
     .post(
-      "/login",
+      AuthApiPath.Login,
       authenticationMiddleware,
       wrap<
         Empty,
@@ -25,7 +26,7 @@ const init = (services: Services) => {
       })
     )
     .post(
-      "/token",
+      AuthApiPath.Token,
       wrap<
         Empty,
         { accessToken: string },
@@ -33,19 +34,19 @@ const init = (services: Services) => {
         Empty
       >(async (req) => {
         const { userId, refreshToken } = req.body;
-        const result = await services.authService.createAccessToken(
-          userId,
-          refreshToken
-        );
-        if (result) {
+        try {
+          const result = await services.authService.createAccessToken(
+            userId,
+            refreshToken
+          );
           return { result };
-        } else {
+        } catch (err) {
           return { statusCode: 401 };
         }
       })
     )
     .post(
-      "/token/reject",
+      AuthApiPath.TokenReject,
       wrap<Empty, Empty, { refreshToken: string }, Empty>(async (req) => {
         const { refreshToken } = req.body;
         await services.authService.deleteRefreshToken(refreshToken);

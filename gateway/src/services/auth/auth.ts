@@ -35,7 +35,7 @@ export default class AuthService {
       const accessToken: string = createToken(userId);
       return { accessToken };
     } else {
-      return null;
+      throw new Error('Refresh token is invalid');
     }
   }
 
