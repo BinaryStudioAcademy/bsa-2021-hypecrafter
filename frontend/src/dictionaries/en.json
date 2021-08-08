@@ -11,6 +11,22 @@
         "Forgot your password?": "Forgot your password?",
         "or": "or",
         "Sign In with Google": "Sign In with Google",
-        "Password is too short (minimum is 6 characters)": "Password is too short (minimum is 6 characters)"
+        "Password is too short (minimum is 6 characters)": "Password is too short (minimum is 6 characters)",
+        
+        "Add":"Add",
+        "Add funds":"Add funds",
+        "Custom fund":"Custom fund",
+        "Home":"Home",
+        "Account":"Account",
+        "Add funds to your Wallet":"Add funds to your Wallet",
+        "ADD FUNDS TO YOUR":"ADD FUNDS TO YOUR",
+        "WALLET":"WALLET",
+        "ADD FUNDS TO YOUR WALLET":"ADD FUNDS TO YOUR WALLET",
+        "Funds in your HypeCrafter Wallet may be used for help of any project you are interested in on HypeCrafter.":"Funds in your HypeCrafter Wallet may be used for help of any project you are interested in on HypeCrafter.",
+        "You’ll have a chance to review your order before it’s placed.":"You’ll have a chance to review your order before it’s placed.",
+        "YOUR HYPECRAFTER ACCOUNT":"YOUR HYPECRAFTER ACCOUNT",
+        "Current Wallet balance":"Current Wallet balance",
+        "Account details":"Account details",
+        "Transactions list":"Transactions list"
     }
 }

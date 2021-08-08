@@ -5,7 +5,7 @@ import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import classes from './styles.module.scss';
 
 interface Props extends FormControlProps {
-  type?: 'text' | 'textarea' | 'email' | 'password';
+  type?: 'text' | 'textarea' | 'email' | 'password'| 'search';
   placeholder?: string;
   label?: string;
   errorMessage?: string;
@@ -43,9 +43,11 @@ const Input = forwardRef<HTMLInputElement, Props>(({
             </button>
           ) }
       </div>
+      {type !== 'search' && (
       <div className={classes['error-message-container']}>
-        { errorMessage && <span className={classes['error-message']}> {errorMessage} </span> }
+        {errorMessage && <span className={classes['error-message']}> {errorMessage} </span>}
       </div>
+      )}
     </InputGroup>
   );
 });

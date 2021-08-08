@@ -12,12 +12,16 @@
   width: 85%;
   max-width: $breakpoint-lg;
 }
-.small-modal{
-	width: 45%;
-	max-width: $breakpoint-sm;
+.small-modal {
+  width: 45%;
+  max-width: $breakpoint-sm;
 }
 
-.medium-modal{
-	width: 65%;
-	max-width: $breakpoint-md;
+.medium-modal {
+  width: 65%;
+  max-width: $breakpoint-md;
+}
+
+.extra-wide-modal {
+  max-width: 1440px;
 }
