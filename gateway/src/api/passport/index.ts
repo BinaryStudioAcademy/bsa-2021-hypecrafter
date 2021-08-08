@@ -11,14 +11,14 @@ const options = {
   secretOrKey: env.jwt.secret,
 };
 
-export function initPassport(app: Express, _repositories: Repositories) {
+export function initPassport(app: Express, repositories: Repositories) {
   passport.use(
     "login",
     new LocalStrategy(
       { usernameField: "email" },
       async (email, password, done) => {
         try {
-          const user = await _repositories.userRepository.getByEmail(email);
+          const user = await repositories.userRepository.getByEmail(email);
           if (!user) {
             return done(null, false);
           }

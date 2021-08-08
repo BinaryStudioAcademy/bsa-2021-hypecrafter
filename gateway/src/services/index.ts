@@ -1,12 +1,12 @@
-import UserService from "./user";
-import RefreshTokenService from "./refreshToken";
+import AuthService from "./auth";
 import { Repositories } from "../data/repositories";
 
-export function initServices(_repositories: Repositories): Services {
+export function initServices(repositories: Repositories): Services {
   return {
-    userService: new UserService(_repositories.userRepository),
-    refreshTokenService: new RefreshTokenService(_repositories.refreshRepository)
+    authService: new AuthService(repositories.refreshTokenRepository),
   };
 }
 
-export type Services = { userService: UserService, refreshTokenService: RefreshTokenService };
+export type Services = {
+  authService: AuthService;
+};
