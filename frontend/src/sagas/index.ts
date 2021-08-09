@@ -1,12 +1,14 @@
 import { all } from 'redux-saga/effects';
 import usersSaga from '../scenes/Users/sagas';
 import authSaga from './auth';
-import projectsSaga from '../scenes/MainPage/sagas';
+import mainPageSaga from '../scenes/MainPage/sagas';
+import projectSaga from '../scenes/CreateProject/sagas';
 
 export default function* rootSaga() {
   yield all([
-    projectsSaga(),
+    mainPageSaga(),
     usersSaga(),
-    authSaga()
+    authSaga(),
+    projectSaga()
   ]);
 }

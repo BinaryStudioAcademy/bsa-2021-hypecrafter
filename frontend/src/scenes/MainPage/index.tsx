@@ -9,13 +9,14 @@ import ProjectCard from '../../components/ProjectCard';
 import Chart from '../../components/Chart';
 import defaultProps from './chartProps';
 import { useLocalization } from '../../providers/localization';
+import { Project } from '../../common/types';
 
 const MainPage: FC = () => {
   const { t } = useLocalization();
   const dispatch = useDispatch();
   const { popular: popularStartups, recommended: recommendedStartups, isLoading: isStartupsLoading } = useTypedSelector(
     (
-      { projects: { popular, recommended, isLoading } }
+      { mainPage: { popular, recommended, isLoading } }
     ) => ({
       popular, recommended, isLoading
     })
@@ -49,7 +50,7 @@ const MainPage: FC = () => {
         <section>
           <div className={classes.category}>{t('Popular startups')}</div>
           <div className={classes.cards}>
-            {isStartupsLoading ? <Spinner animation="border" /> : popularStartups.map(project => (
+            {isStartupsLoading ? <Spinner animation="border" /> : popularStartups.map((project: Project) => (
               <ProjectCard
                 key={project.id}
                 to="/"
@@ -58,8 +59,8 @@ const MainPage: FC = () => {
                 name={project.name}
                 description={project.description}
                 goal={project.goal}
-                percent={project.percent}
-                image={project.image}
+                percent={Math.floor((100 * project.donated) / project.goal)}
+                image={project.imageUrl}
               />
             ))}
           </div>
@@ -67,7 +68,7 @@ const MainPage: FC = () => {
         <section>
           <div className={classes.category}>{t('Recommended for you')}</div>
           <div className={classes.cards}>
-            {isStartupsLoading ? <Spinner animation="border" /> : recommendedStartups.map(project => (
+            {isStartupsLoading ? <Spinner animation="border" /> : recommendedStartups.map((project: Project) => (
               <ProjectCard
                 key={project.id}
                 to="/"
@@ -76,8 +77,8 @@ const MainPage: FC = () => {
                 name={project.name}
                 description={project.description}
                 goal={project.goal}
-                percent={project.percent}
-                image={project.image}
+                percent={Math.floor((100 * project.donated) / project.goal)}
+                image={project.imageUrl}
               />
             ))}
           </div>

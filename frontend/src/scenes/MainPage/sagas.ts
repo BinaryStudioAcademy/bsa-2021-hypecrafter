@@ -8,7 +8,7 @@ function* fetchPopularAndRecommendedProjectsRequest() {
     const response: { popular: Project[], recommended: Project[] } = yield call(getPopularAndRecommendedProjects);
     yield put(fetchPopularAndRecommendedProjectsAction.success(response));
   } catch (error) {
-    yield put(fetchPopularAndRecommendedProjectsAction.failure('Failed to load projects'));
+    yield put(fetchPopularAndRecommendedProjectsAction.failure(error as string));
   }
 }
 
@@ -16,7 +16,7 @@ function* watchFetchPopularAndRecommendedProjectsRequest() {
   yield takeEvery(fetchPopularAndRecommendedProjectsAction.TRIGGER, fetchPopularAndRecommendedProjectsRequest);
 }
 
-export default function* projectsSaga() {
+export default function* mainPageSaga() {
   yield all([
     watchFetchPopularAndRecommendedProjectsRequest()
   ]);

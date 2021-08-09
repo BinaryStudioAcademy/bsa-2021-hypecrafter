@@ -3,3 +3,4 @@ export * from './user';
 export * from './project';
 export * from './http';
 export * from './params';
+export * from './project';

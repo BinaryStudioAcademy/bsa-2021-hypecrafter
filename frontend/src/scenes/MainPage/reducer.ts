@@ -7,19 +7,19 @@ import type {
   FetchPopularAndRecommendedProjectsSuccessActionType
 } from './actions';
 
-export interface ProjectState {
+export interface MainPageState {
   isLoading: boolean;
   popular: Project[];
   recommended: Project[];
 }
 
-export const projectState: ProjectState = {
+export const mainPageState: MainPageState = {
   isLoading: false,
   popular: [],
   recommended: []
 };
 
-export const projectsReducer = createReducer<ProjectState>(projectState, {
+export const mainPageReducer = createReducer<MainPageState>(mainPageState, {
   [fetchPopularAndRecommendedProjectsAction.TRIGGER](state) {
     return {
       ...state,
@@ -43,4 +43,4 @@ export const projectsReducer = createReducer<ProjectState>(projectState, {
   }
 });
 
-export default projectsReducer;
+export default mainPageReducer;

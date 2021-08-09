@@ -26,7 +26,7 @@ const LoginPage: FC = () => {
     });
   };
 
-  const dummySignInWithGoogleHandler: MouseEventHandler<HTMLButtonElement> = (e) => {
+  const dummySignInWithGoogleHandler: MouseEventHandler<HTMLButtonElement> = () => {
     console.log('Sign In with Google');
     changeLanguage(selectedLanguage === Languages.UA ? Languages.EN : Languages.UA); // temp, for translations test
   };

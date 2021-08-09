@@ -2,18 +2,21 @@ import { combineReducers } from 'redux';
 import { StoreState } from '../common/types';
 import usersReducer, { initialState as usersInitialState } from '../scenes/Users/reducer';
 import authReducer, { authState } from './auth';
-import projectsReducer, { projectState } from '../scenes/MainPage/reducer';
+import mainPageReducer, { mainPageState } from '../scenes/MainPage/reducer';
+import projectReduser, { initialState as projectInitialState } from '../scenes/CreateProject/reducer';
 
 const initialState: StoreState = {
-  projects: projectState,
+  mainPage: mainPageState,
   users: usersInitialState,
-  auth: authState
+  auth: authState,
+  project: projectInitialState
 };
 
 const rootReducer = combineReducers({
-  projects: projectsReducer,
+  mainPage: mainPageReducer,
   users: usersReducer,
-  auth: authReducer
+  auth: authReducer,
+  project: projectReduser
 });
 
 export { initialState, rootReducer };
