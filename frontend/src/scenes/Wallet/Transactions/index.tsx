@@ -1,10 +1,10 @@
 import { FC, useMemo } from 'react';
 import { Table } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { useTable, Column, useSortBy } from 'react-table';
+import { useTable, Column, Cell, useSortBy } from 'react-table';
 import classes from './styles.module.scss';
 import mock from './mock.json';
-import { useLocalization } from '../../../providers/localization';
+import { useLocalization, TranslatorType } from '../../../providers/localization';
 import coinImg from '../../../assets/HypeCoin.png';
 
 interface Data {
@@ -15,6 +15,37 @@ interface Data {
   change: number;
   balance: number;
 }
+
+function RenderCell(cell: Cell<Data>, t:TranslatorType) {
+  console.log(cell.column.Header);
+  switch (cell.column.Header) {
+    case t('Total'):
+      return (
+        <>
+          {cell.value}
+          <img src={coinImg} alt="Coin" />
+        </>
+      );
+    case t('Change'):
+      return (
+        <>
+          {cell.value > 0 ? '+' : false}
+          {cell.value}
+          <img src={coinImg} alt="Coin" />
+        </>
+      );
+    case t('Balance'):
+      return (
+        <>
+          {cell.value}
+          <img src={coinImg} alt="Coin" />
+        </>
+      );
+    default:
+      return cell.value;
+  }
+}
+
 const Transactions: FC = () => {
   const { t, selectedLanguage } = useLocalization();
   const data: Data[] = useMemo(() => [...mock], []);
@@ -87,21 +118,7 @@ const Transactions: FC = () => {
               <tr {...row.getRowProps()}>
                 {row.cells.map((cell) => {
                   console.log(cell);
-                  return (
-                    <td {...cell.getCellProps()}>
-                      {cell.column.Header === t('Change') && cell.value > 0
-                        ? '+'
-                        : false}
-                      {cell.render('Cell')}
-                      {cell.column.Header === t('Total')
-                      || cell.column.Header === t('Change')
-                      || cell.column.Header === t('Balance') ? (
-                        <img src={coinImg} alt="Coin" />
-                        ) : (
-                          false
-                        )}
-                    </td>
-                  );
+                  return <td {...cell.getCellProps()}>{RenderCell(cell, t)}</td>;
                 })}
               </tr>
             );
