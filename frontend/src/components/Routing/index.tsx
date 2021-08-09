@@ -22,7 +22,7 @@ const Routing = () => {
   }));
   const { location: { pathname } } = useHistory();
 
-  const routesWitoutHeader = [Routes.LOGIN];
+  const routesWitoutHeader = [Routes.LOGIN, Routes.SIGNUP];
   const { user, isLoading } = authStore;
   const hasToken = Boolean(localStorage.getItem(StorageKeys.ACCESS_TOKEN));
 

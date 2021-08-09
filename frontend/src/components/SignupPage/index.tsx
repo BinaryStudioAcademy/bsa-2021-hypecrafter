@@ -8,9 +8,13 @@ import logo from '../../assets/HypeCrafter.svg';
 import Input from '../Input';
 import Button from '../Button';
 import { Routes } from '../../common/enums';
+import { useLocalization } from '../../providers/localization';
 
 interface MainFormProps {
   setIsMainForm: CallableFunction;
+  setMainFormInfo: CallableFunction;
+  mainFormInfo: MainFormData;
+  t: CallableFunction;
 }
 
 type MainFormData = {
@@ -21,38 +25,33 @@ type MainFormData = {
 };
 
 const MainForm: FunctionComponent<MainFormProps> = ({
-  setIsMainForm
+  setIsMainForm, setMainFormInfo, mainFormInfo, t
 }: MainFormProps) => {
   const {
     register,
     handleSubmit,
-    setError,
     formState: { errors }
   } = useForm<MainFormData>();
 
   const onSubmit: SubmitHandler<MainFormData> = (data) => {
     setIsMainForm(false);
     console.log(
-      'Sign In',
+      'Sign Un',
       data.email,
       data.password,
       data.firstName,
       data.lastName
     );
-
-    /*
-    setError('email', { // set error example
-      type: 'manual',
-      message: 'Dont Forget Your Username Should Be Cool!'
-    });
-    */
   };
 
   const dummySignUpWithGoogleHandler: MouseEventHandler<HTMLButtonElement> = (
     e
   ) => {
     console.log('Sign Up with Google');
-    // changeLanguage(selectedLanguage === Languages.UA ? Languages.EN : Languages.UA); // temp, for translations test
+  };
+
+  const handleChange = (field: string, value: string) => {
+    setMainFormInfo({ ...mainFormInfo, [field]: value });
   };
 
   return (
@@ -60,128 +59,203 @@ const MainForm: FunctionComponent<MainFormProps> = ({
       <div className={classes['name-wrapper']}>
         <Input
           type="text"
-          placeholder="Enter your first name"
-          label="First name"
+          placeholder={t('Enter your first name')}
+          label={t('First name')}
+          value={mainFormInfo.firstName}
           errorMessage={errors.firstName?.message}
           {...register('firstName', {
             required: true,
             minLength: {
               value: 2,
-              message: 'First name is too short'
+              message: t('First name is too short')
             }
           })}
+          onChange={event => handleChange('firstName', event.target.value)}
         />
         <Input
           type="text"
-          placeholder="Enter your last name"
-          label="Last name"
+          placeholder={t('Enter your last name')}
+          label={t('Last name')}
           errorMessage={errors.lastName?.message}
+          value={mainFormInfo.lastName}
           {...register('lastName', {
             required: true,
             minLength: {
               value: 2,
-              message: 'Last name is too short'
+              message: t('Last name is too short')
             }
           })}
+          onChange={event => handleChange('lastName', event.target.value)}
         />
       </div>
       <Input
         type="email"
-        placeholder="Enter your email"
-        label="Email"
+        placeholder={t('Enter your email')}
+        label={t('Email')}
         errorMessage={errors.email?.message}
+        value={mainFormInfo.email}
         {...register('email', {
-          required: true,
-          pattern: /[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+/
+          required: true
         })}
+        onChange={event => handleChange('email', event.target.value)}
       />
       <Input
         type="password"
-        placeholder="Enter your password"
-        label="Password"
+        placeholder={t('Enter your password')}
+        label={t('Password')}
         errorMessage={errors.password?.message}
+        value={mainFormInfo.password}
         {...register('password', {
           required: true,
           minLength: {
             value: 6,
-            message: 'Password is too short (minimum is 6 characters)'
+            message: t('Password is too short (minimum is 6 characters)')
           }
         })}
+        onChange={event => handleChange('password', event.target.value)}
       />
       <Button className={classes['sign-up-button']} type="submit">
-        Sign Up
+        {t('Sign Up')}
       </Button>
       <div className={classes['register-cta']}>
-        By signing up, you agree to our{' '}
-        <Link to={Routes.SIGNUP}>Privacy Policy</Link> and{' '}
-        <Link to={Routes.SIGNUP}>Terms of use</Link>
+        {t('By signing up, you agree to our')}{' '}
+        <Link to={Routes.SIGNUP}>{t('Privacy Policy')}</Link> and{' '}
+        <Link to={Routes.SIGNUP}>{t('Terms of use')}</Link>
       </div>
       <div className={classes['horizontal-ruler-text']}>
-        <div>or</div>
+        <div>{t('or')}</div>
       </div>
       <hr className={classes['horizontal-ruler']} />
       <Button
         className={classes['google-button']}
         onClick={dummySignUpWithGoogleHandler}
       >
-        Sign Up with Google
+        {t('Sign Up with Google')}
       </Button>
     </form>
   );
 };
 
+interface DetailFormProps {
+  setIsMainForm: CallableFunction;
+  mainFormInfo: MainFormData;
+  t: CallableFunction;
+}
+
 type DetailFormData = {
-  country: string;
-  phone: string;
-  gender: string;
-  birthday: string;
+  country?: string;
+  phone?: string;
+  gender?: string;
+  birthday?: string;
 };
 
-const DetailForm: FunctionComponent<MainFormProps> = ({
-  setIsMainForm
-}: MainFormProps) => {
+const DetailForm: FunctionComponent<DetailFormProps> = ({
+  setIsMainForm, mainFormInfo, t
+}: DetailFormProps) => {
+  const {
+    register,
+    handleSubmit
+  } = useForm<DetailFormData>();
+
+  const onSubmit: SubmitHandler<DetailFormData> = (data) => {
+    setIsMainForm(false);
+    console.log(
+      'Sign Up',
+      data.country,
+      data.phone,
+      data.gender,
+      data.birthday,
+      mainFormInfo.email,
+      mainFormInfo.firstName,
+      mainFormInfo.lastName,
+      mainFormInfo.password
+    );
+  };
+
   const handleBackButtonClick = () => {
     setIsMainForm(true);
   };
+
   return (
-    <div>
-      <Input type="text" placeholder="Country (optional)" label="Country" />
-      <Input type="text" placeholder="Phone (optional)" label="Phone" />
-      <Form.Group className={classes['gender-form']}>
-        <Form.Label>Gender</Form.Label>
-        <Form.Select aria-label="Floating label select example">
-          <option value="1">Male</option>
-          <option value="2">Female</option>
-          <option value="3">Other</option>
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <Form.Group className={classes['select-form']}>
+        <Form.Label>{t('Country')}</Form.Label>
+        <Form.Select
+          {...register('country', {
+            required: false
+          })}
+        >
+          <option value="">{t('Country (optional)')}</option>
+          <option value="France">{t('France')}</option>
+          <option value="Poland">{t('Poland')}</option>
+          <option value="Switzerland">{t('Switzerland')}</option>
+          <option value="UA">{t('Ukraine')}</option>
+          <option value="GB">{t('United Kingdom')}</option>
+        </Form.Select>
+      </Form.Group>
+      <Input
+        type="text"
+        placeholder={t('Phone (optional)')}
+        label={t('Phone')}
+        {...register('phone', {
+          required: false,
+          pattern: {
+            value: /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/,
+            message: t('Phone number is invalid')
+          }
+        })}
+      />
+      <Form.Group className={classes['select-form']}>
+        <Form.Label>{t('Gender')}</Form.Label>
+        <Form.Select
+          {...register('gender', {
+            required: false
+          })}
+        >
+          <option value="">{t('Gender (optional)')}</option>
+          <option value="male">{t('Male')}</option>
+          <option value="female">{t('Female')}</option>
+          <option value="other">{t('Other')}</option>
         </Form.Select>
       </Form.Group>
       <Form.Group className={classes['birth-form']}>
-        <Form.Label>Birthday</Form.Label>
+        <Form.Label>{t('Birthday')}</Form.Label>
         <br />
         <input
           className={classes['birth-input']}
           type="date"
-          placeholder="Birthday"
+          placeholder={t('Birthday')}
+          {...register('birthday', {
+            required: false
+          })}
         />
       </Form.Group>
       <div className={classes['detail-form-control']}>
         <Button
           className={classes['sign-up-button']}
-          type="submit"
+          type="button"
           onClick={handleBackButtonClick}
         >
-          Back
+          {t('Back')}
         </Button>
         <Button className={classes['sign-up-button']} type="submit">
-          Submit
+          {t('Submit')}
         </Button>
       </div>
-    </div>
+    </form>
   );
 };
 
 const SignupPage: FunctionComponent = (props) => {
   const [isMainForm, setIsMainForm] = useState(true);
+  const [mainFormInfo, setMainFormInfo] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: ''
+  });
+
+  const { t } = useLocalization();
 
   return (
     <div className={classes.root}>
@@ -190,27 +264,36 @@ const SignupPage: FunctionComponent = (props) => {
       </div>
       <div className={classes.content}>
         <div className={classes.form}>
-          <h2 className={classes.title}>Sign Up</h2>
+          <h2 className={classes.title}>{t('Sign In')}</h2>
           <div className={classes['form-titles-wrapper']}>
             <h4
               className={classNames(`${classes['form-title']}`, {
                 [`${classes.chosen}`]: isMainForm
               })}
             >
-              Create account
+              {t('Create account')}
             </h4>
             <h4
               className={classNames(`${classes['form-title']}`, {
                 [`${classes.chosen}`]: !isMainForm
               })}
             >
-              Personal details
+              {t('Personal details')}
             </h4>
           </div>
           {isMainForm ? (
-            <MainForm setIsMainForm={setIsMainForm} />
+            <MainForm
+              setIsMainForm={setIsMainForm}
+              mainFormInfo={mainFormInfo}
+              setMainFormInfo={setMainFormInfo}
+              t={t}
+            />
           ) : (
-            <DetailForm setIsMainForm={setIsMainForm} />
+            <DetailForm
+              setIsMainForm={setIsMainForm}
+              mainFormInfo={mainFormInfo}
+              t={t}
+            />
           )}
         </div>
       </div>
