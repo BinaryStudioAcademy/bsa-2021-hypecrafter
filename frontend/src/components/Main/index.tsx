@@ -18,7 +18,7 @@ function Main() {
   const [show, setShow] = useState(false);
   return (
     <div>
-      <Counter value={40} />
+      <Counter value={4000} />
       <TabsExample />
       <Chart
         type={defaultProps.type}
