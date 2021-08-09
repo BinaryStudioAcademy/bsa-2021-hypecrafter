@@ -10,8 +10,8 @@ import ModalWindow from '../ModalWindow';
 import UserPage from '../../scenes/UserPage';
 import TextStyleExample from '../TextStyleExample';
 import TabsExample from '../TabsExample';
-import Chart from '../Chart/Chart';
-import defaultProps from '../Chart/testprops';
+import Chart from '../Chart';
+import defaultProps from '../Chart/utils';
 
 function Main() {
   const [show, setShow] = useState(false);
@@ -19,7 +19,7 @@ function Main() {
     <div>
       <TabsExample />
       <Chart
-        type={defaultProps.type}
+        type="line"
         labels={defaultProps.data.labels}
         dataSets={defaultProps.data.datasets}
       />

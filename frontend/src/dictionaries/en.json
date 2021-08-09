@@ -1,16 +1,23 @@
 {
-    "translation": {
-        "Press on me": "Press on me",
-        "Sign In": "Sign In",
-        "Sign Up": "Sign Up",
-        "Email": "Email",
-        "Password": "Password",
-        "Don’t have an account?": "Don't have an account?",
-        "Enter your email": "Enter your email",
-        "Enter your password": "Enter your password",
-        "Forgot your password?": "Forgot your password?",
-        "or": "or",
-        "Sign In with Google": "Sign In with Google",
-        "Password is too short (minimum is 6 characters)": "Password is too short (minimum is 6 characters)"
-    }
+  "translation": {
+    "Press on me": "Press on me",
+    "Sign In": "Sign In",
+    "Sign Up": "Sign Up",
+    "Email": "Email",
+    "Password": "Password",
+    "Don’t have an account?": "Don't have an account?",
+    "Enter your email": "Enter your email",
+    "Enter your password": "Enter your password",
+    "Forgot your password?": "Forgot your password?",
+    "or": "or",
+    "Sign In with Google": "Sign In with Google",
+    "Password is too short (minimum is 6 characters)": "Password is too short (minimum is 6 characters)",
+    "Do you have a good ...": "Do you have a good and well thought-out idea and are you ready to conquer the peaks on your own to make your dream come true? But sometimes, alone, the difficult path from concept to finished product is not easy at all. HypeCrafter will lend a helping hand, and more than one!",
+    "Create Project": "Create Project",
+    "Help Project": "Help Project",
+    "Popular startups": "Popular startups",
+    "Recommended for you": "Recommended for you",
+    "Interesting topics": "Interesting topics",
+    "faithful assistant": "faithful assistant"
+  }
 }

@@ -1,7 +1,7 @@
 import ChartComponent from 'react-chartjs-2';
 import { ChartOptions, Chart as Chartjs } from 'chart.js';
 import React from 'react';
-import defaultProps from './testprops';
+import defaultProps from './utils';
 
 export interface DataItem {
   label: string;
@@ -29,11 +29,11 @@ interface ChartProps {
   options?: ChartOptions;
 }
 
-const Chart: React.FC<ChartProps> = ({ type, dataSets, labels: propLabels, options }) => (
+const Chart: React.FC<ChartProps> = ({ type, dataSets, labels, options }) => (
   <ChartComponent
     type={type}
     data={{
-      labels: propLabels,
+      labels,
       datasets: dataSets
     }}
     options={options || defaultProps.options}

@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import { StoreState } from '../common/types';
 import usersReducer, { initialState as usersInitialState } from '../scenes/Users/reducer';
 import authReducer, { authState } from './auth';
-import projectsReducer, { projectState } from './projects';
+import projectsReducer, { projectState } from '../scenes/MainPage/reducer';
 
 const initialState: StoreState = {
   projects: projectState,

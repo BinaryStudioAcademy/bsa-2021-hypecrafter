@@ -10,15 +10,20 @@
 }
 
 .root {
+  position: relative;
+  width: 100%;
   padding: 0px 60px;
+  @media (min-width: 1900px) {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
 }
 
 .main {
-  min-height: 85vh;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 1fr;
-  @media (max-width: $breakpoint-lg) {
+  @media (max-width: $breakpoint-xl) {
     grid-template-columns: 1fr;
     grid-template-rows: 200px 1fr;
   }
@@ -29,10 +34,11 @@
   justify-content: center;
   align-content: center;
   flex-flow: column;
+  padding: 200px 0px;
   padding-right: 180px;
-  @media (max-width: $breakpoint-lg) {
+  @media (max-width: $breakpoint-xl) {
     grid-row: 2;
-    padding-right: 0px;
+    padding: 50px 0px;
   }
 }
 
@@ -55,13 +61,17 @@
   margin-bottom: 20px;
 }
 
+.content {
+  margin-bottom: 20px;
+}
+
 .main-bg {
   @include flex-center;
   width: calc(100% + 60px);
   background-image: url('../../assets/main_bg.jpg');
   background-position: center;
   background-size: cover;
-  @media (max-width: $breakpoint-lg) {
+  @media (max-width: $breakpoint-xl) {
     width: calc(100% + 120px);
     margin-left: -60px;
     order: 2;

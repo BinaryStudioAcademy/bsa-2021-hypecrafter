@@ -1,5 +1,5 @@
 import { Chart } from 'chart.js';
-import { ChartType } from '../../components/Chart/Chart';
+import { ChartType } from '../../components/Chart';
 
 function getGradient(ctx: CanvasRenderingContext2D, chartArea: { bottom: number; top: number }) {
   const gradient = ctx.createLinearGradient(
@@ -14,7 +14,7 @@ function getGradient(ctx: CanvasRenderingContext2D, chartArea: { bottom: number;
 }
 
 const defaultOptions = {
-  aspectRatio: 0,
+  responsive: true,
   maintainAspectRatio: false,
   scales: {
     x: {
