@@ -1,21 +1,22 @@
-import { Repositories } from "./../../data/repositories/index";
-import passport from "passport";
-import { Strategy as LocalStrategy } from "passport-local";
-import { Strategy as JwtStrategy, ExtractJwt } from "passport-jwt";
-import { env } from "../../env";
-import { Express } from "express";
-import { cryptCompare } from "../../helpers/crypt";
+// eslint-disable-next-line import/no-self-import
+import passport from 'passport';
+import { Express } from 'express';
+import { Strategy as LocalStrategy } from 'passport-local';
+import { Strategy as JwtStrategy, ExtractJwt } from 'passport-jwt';
+import { env } from '../../env';
+import { Repositories } from '../../data/repositories';
+import { cryptCompare } from '../../helpers/crypt';
 
 const options = {
   jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
-  secretOrKey: env.jwt.secret,
+  secretOrKey: env.jwt.secret
 };
 
 export function initPassport(app: Express, repositories: Repositories) {
   passport.use(
-    "login",
+    'login',
     new LocalStrategy(
-      { usernameField: "email" },
+      { usernameField: 'email' },
       async (email, password, done) => {
         try {
           const user = await repositories.userRepository.getByEmail(email);
