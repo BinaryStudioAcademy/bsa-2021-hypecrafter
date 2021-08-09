@@ -11,9 +11,9 @@ export const useActions = () => {
   return useMemo(
     () => actions.map(action => ({
       [action.name]: {
-        trigger: bindActionCreators(action, dispatch),
-        success: bindActionCreators(action, dispatch),
-        failure: bindActionCreators(action, dispatch)
+        trigger: bindActionCreators(action.trigger, dispatch),
+        success: bindActionCreators(action.success, dispatch),
+        failure: bindActionCreators(action.failure, dispatch)
       }
     })),
     actions
