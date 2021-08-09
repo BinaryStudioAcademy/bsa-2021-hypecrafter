@@ -1,8 +1,8 @@
 import { Repository, EntityRepository } from 'typeorm';
-import { Transaction } from '../entities/transaction';
+import { Replenishment } from '../entities/replenishment';
 
-@EntityRepository(Transaction)
-export class TransactionRepository extends Repository<Transaction> {
+@EntityRepository(Replenishment)
+export class TransactionRepository extends Repository<Replenishment> {
   public getAll() {
     return this.find();
   }
