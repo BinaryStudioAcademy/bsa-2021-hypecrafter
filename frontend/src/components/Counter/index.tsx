@@ -1,37 +1,28 @@
-import { useEffect, useRef, useState } from 'react';
-import formate from './helpers';
+import React, { useEffect, useState } from 'react';
+import { animateCounterDown, animateCounterUp, formate } from './helpers';
 import classes from './styles.module.scss';
 
-const Counter = ({ value }: { value: number }) => {
-  const [currVal, setCurrVal] = useState(0);
+const Counter = React.memo(({ value }: { value: number }) => {
+  const [current, setCurrent] = useState(0);
   const [isChanging, setIsChanging] = useState(false);
-
-  const changeInTimeout = (start: number, nextVal: number, time: number) => {
-    const timer = setTimeout(() => {
-      setCurrVal(start + nextVal);
-      console.log(start + nextVal);
-      clearTimeout(timer);
-    }, time);
-  };
+  const isCurrentBiger = current > value;
 
   useEffect(() => {
-    if (currVal < value - 100) {
-      changeInTimeout(currVal, 7, 10);
-    } else if (currVal < value) {
-      changeInTimeout(currVal, 3, 15);
+    if (isCurrentBiger) {
+      animateCounterDown(current, value, setCurrent, setIsChanging);
+    } else {
+      animateCounterUp(current, value, setCurrent, setIsChanging);
     }
-
-    setIsChanging(true);
-  }, [currVal]);
+  }, [current, value]);
 
   return (
     <div className={classes.counter}>
       <div>Rating</div>
       <div className={isChanging ? classes.changing : classes.value}>
-        {formate(currVal, 2)}
+        {formate(current, 2)}
       </div>
     </div>
   );
-};
+});
 
 export default Counter;
