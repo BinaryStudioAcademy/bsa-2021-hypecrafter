@@ -6,8 +6,15 @@ import classes from './styles.module.scss';
 import mock from './mock.json';
 import { useLocalization } from '../../../providers/localization';
 import coinImg from '../../../assets/HypeCoin.png';
-import { IData as Data } from './utils';
 
+interface Data {
+  date: string;
+  items: string;
+  type: string;
+  total: number;
+  change: number;
+  balance: number;
+}
 const Transactions: FC = () => {
   const { t, selectedLanguage } = useLocalization();
   const data: Data[] = useMemo(() => [...mock], []);
