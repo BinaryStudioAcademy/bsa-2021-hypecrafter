@@ -12,11 +12,13 @@ import TextStyleExample from '../TextStyleExample';
 import TabsExample from '../TabsExample';
 import Chart from '../Chart/Chart';
 import defaultProps from '../Chart/testprops';
+import Counter from '../Counter';
 
 function Main() {
   const [show, setShow] = useState(false);
   return (
     <div>
+      <Counter value={40} />
       <TabsExample />
       <Chart
         type={defaultProps.type}
