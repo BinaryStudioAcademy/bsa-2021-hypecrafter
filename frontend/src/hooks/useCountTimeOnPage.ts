@@ -1,15 +1,19 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
-const useCountTimeOnPage = () => {
-  const [seconds, setSeconds] = useState(0);
-  const timer = setTimeout(() => setSeconds(() => seconds + 1), 1000);
+const useCountTimeOnPage = (callback: (time: number) => void) => {
+  const timeRef = useRef(0);
+  const timer = setInterval(() => {
+    timeRef.current += 1;
+  }, 1000);
 
-  useEffect(() => {
-    console.log(`time passed: ${seconds} seconds`);
-    return () => clearTimeout(timer);
-  }, [seconds]);
+  if (+`${timer}` !== 1) clearInterval(timer);
 
-  return seconds;
+  useEffect(() => () => {
+    callback(timeRef.current);
+    clearInterval(timer);
+  });
+
+  return timeRef.current;
 };
 
 export default useCountTimeOnPage;
