@@ -1,7 +1,12 @@
-import { Repositories } from '../data/repositories';
+import AuthService from "./auth";
+import { Repositories } from "../data/repositories";
 
-export function initServices(_repositories: Repositories): Services {
-  return {};
+export function initServices(repositories: Repositories): Services {
+  return {
+    authService: new AuthService(repositories.refreshTokenRepository),
+  };
 }
 
-export type Services = Record<string, unknown>;
+export type Services = {
+  authService: AuthService;
+};

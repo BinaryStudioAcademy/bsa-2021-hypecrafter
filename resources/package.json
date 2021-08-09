@@ -1,0 +1,20 @@
+{
+  "name": "resources",
+  "private": "false",
+  "version": "0.1.0",
+  "main": "./src/gulpfile.js",
+  "scripts": {
+    "start": "gulp",
+    "gulp": "./node_modules/.bin/gulp"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chance": "^1.1.7",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-if": "^3.0.0",
+    "gulp-jsoncombine": "^1.0.4",
+    "random-datetime": "^1.0.1"
+  }
+}
