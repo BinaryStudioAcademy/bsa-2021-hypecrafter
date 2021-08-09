@@ -13,11 +13,7 @@ export const useActions = () => {
       Object.assign(
         accumulator,
         {
-          [action.name]: {
-            trigger: bindActionCreators(action.trigger, dispatch),
-            success: bindActionCreators(action.success, dispatch),
-            failure: bindActionCreators(action.failure, dispatch)
-          }
+          [action.name]: bindActionCreators(action.trigger, dispatch)
         }
       )
     )),
