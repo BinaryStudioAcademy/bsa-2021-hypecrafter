@@ -1,7 +1,6 @@
 import { bindActionCreators } from 'redux';
 import { useDispatch } from 'react-redux';
 import { useMemo } from 'react';
-// import {Routine } from '@types/redux-saga-routines'
 import { authFetchUserAction } from '../actions';
 
 const actions = [authFetchUserAction];
