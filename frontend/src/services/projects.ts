@@ -9,8 +9,9 @@ export const getPopularAndRecommendedProjects = () => Promise.resolve(
         description: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
             classical Latin literature from 45 BC, making it over 2000 years old.`,
         goal: 10000,
-        percent: 50,
-        image: 'https://source.unsplash.com/random/800x600'
+        donated: 50,
+        imageUrl: 'https://source.unsplash.com/random/800x600',
+        url: ''
       },
       {
         id: '5',
@@ -20,8 +21,9 @@ export const getPopularAndRecommendedProjects = () => Promise.resolve(
         description: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
         classical Latin literature from 45 BC, making it over 2000 years old.`,
         goal: 1000,
-        percent: 30,
-        image: 'https://source.unsplash.com/random/800x600'
+        donated: 30,
+        imageUrl: 'https://source.unsplash.com/random/800x600',
+        url: ''
       },
       {
         id: '6',
@@ -30,8 +32,9 @@ export const getPopularAndRecommendedProjects = () => Promise.resolve(
         name: 'Card Title',
         description: 'Card Description',
         goal: 50000,
-        percent: 70,
-        image: 'https://source.unsplash.com/random/800x600'
+        donated: 70,
+        imageUrl: 'https://source.unsplash.com/random/800x600',
+        url: ''
       }],
     popular: [
       {
@@ -42,8 +45,9 @@ export const getPopularAndRecommendedProjects = () => Promise.resolve(
         description: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
           classical Latin literature from 45 BC, making it over 2000 years old.`,
         goal: 10000,
-        percent: 100,
-        image: 'https://source.unsplash.com/random/800x600'
+        donated: 100,
+        imageUrl: 'https://source.unsplash.com/random/800x600',
+        url: ''
       },
       {
         id: '2',
@@ -53,8 +57,9 @@ export const getPopularAndRecommendedProjects = () => Promise.resolve(
         description: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
       classical Latin literature from 45 BC, making it over 2000 years old.`,
         goal: 1000,
-        percent: 30,
-        image: 'https://source.unsplash.com/random/800x600'
+        donated: 30,
+        imageUrl: 'https://source.unsplash.com/random/800x600',
+        url: ''
       },
       {
         id: '3',
@@ -63,8 +68,9 @@ export const getPopularAndRecommendedProjects = () => Promise.resolve(
         name: 'Card Title',
         description: 'Card Description',
         goal: 50000,
-        percent: 70,
-        image: 'https://source.unsplash.com/random/800x600'
+        donated: 70,
+        imageUrl: 'https://source.unsplash.com/random/800x600',
+        url: ''
       }]
   }
 );
