@@ -9,13 +9,18 @@ export const useActions = () => {
   const dispatch = useDispatch();
 
   return useMemo(
-    () => actions.map(action => ({
-      [action.name]: {
-        trigger: bindActionCreators(action.trigger, dispatch),
-        success: bindActionCreators(action.success, dispatch),
-        failure: bindActionCreators(action.failure, dispatch)
-      }
-    })),
+    () => actions.reduce((accumulator, action) => (
+      Object.assign(
+        accumulator,
+        {
+          [action.name]: {
+            trigger: bindActionCreators(action.trigger, dispatch),
+            success: bindActionCreators(action.success, dispatch),
+            failure: bindActionCreators(action.failure, dispatch)
+          }
+        }
+      )
+    )),
     actions
   );
 };
