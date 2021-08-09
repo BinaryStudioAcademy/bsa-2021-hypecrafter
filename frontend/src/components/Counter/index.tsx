@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import classes from './styles.module.scss';
 
 function nFormatter(num: number, digits: number) {
@@ -21,10 +22,26 @@ function nFormatter(num: number, digits: number) {
 }
 
 const Counter = ({ value }: { value: number }) => {
+  const [currVal, setCurrVal] = useState(0);
+  const [isChanging, setIsChanging] = useState(false);
+
+  useEffect(() => {
+    setIsChanging(true);
+
+    if (currVal < value - 11) {
+      setTimeout(() => setCurrVal(currVal + 11), 1);
+    } else if (currVal < value) {
+      setTimeout(() => setCurrVal(currVal + 1), 1);
+    }
+    if (currVal === value) {
+      setIsChanging(false);
+    }
+  }, [currVal]);
+
   return (
     <div className={classes.counter}>
       <div>Rating</div>
-      <div className={classes.value}>{nFormatter(value, 1)}</div>
+      <div className={isChanging ? classes.changing : classes.value}>{nFormatter(currVal, 1)}</div>
     </div>
   );
 };

@@ -17,9 +17,19 @@
   font-size: 24px;
 }
 
-.value {
+.value, .changing {
   font-size: 52px;
   background: $color-root-turquoise-gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.changing {
+  background: linear-gradient(
+    90deg,
+    #219a9c 0%,
+    #00a6ff 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
