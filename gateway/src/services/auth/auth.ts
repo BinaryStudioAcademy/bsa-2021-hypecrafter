@@ -1,7 +1,9 @@
-import { RefreshToken } from "./../../data/entities/refreshToken";
-import randtoken from "rand-token";
-import { createToken } from "../../helpers/createToken";
-import { RefreshTokenRepository } from "../../data/repositories/refreshToken";
+import { RefreshToken } from './../../data/entities/refreshToken';
+import randtoken from 'rand-token';
+import { createToken } from '../../helpers/createToken';
+import { RefreshTokenRepository } from '../../data/repositories/refreshToken';
+import { CustomError } from '../../helpers/customError';
+import { HttpStatusCode } from '../../../../shared/build/enums';
 
 export default class AuthService {
   readonly #refreshTokenRepository: RefreshTokenRepository;
@@ -19,7 +21,7 @@ export default class AuthService {
     this.#refreshTokenRepository.createToken({
       token: refreshToken,
       userAgentInfo,
-      userId,
+      userId
     });
 
     return { accessToken, refreshToken };
@@ -35,7 +37,7 @@ export default class AuthService {
       const accessToken: string = createToken(userId);
       return { accessToken };
     } else {
-      throw new Error('Refresh token is invalid');
+      throw new CustomError(HttpStatusCode.UNAUTHORIZED, 'Refresh token is invalid');
     }
   }
 
