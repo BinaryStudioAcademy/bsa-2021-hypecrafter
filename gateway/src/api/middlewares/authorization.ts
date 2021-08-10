@@ -4,7 +4,7 @@ import { validateUuid } from '../../helpers/uuid';
 
 const authorization = (routesWhiteList: Array<string> = []): RequestHandler => (
   (req, res, next) => (routesWhiteList.some(route => {
-    if (route.includes('/:id')) validateUuid(route, req.path);
+    if (route.includes('/:id')) return validateUuid(route, req.path);
     return route === req.path;
   })
     ? next()
