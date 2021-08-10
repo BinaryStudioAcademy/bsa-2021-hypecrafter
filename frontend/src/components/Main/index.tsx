@@ -13,11 +13,13 @@ import TabsExample from '../TabsExample';
 import Chart from '../Chart/Chart';
 import defaultProps from '../Chart/testprops';
 import SelectExample from '../SelectExample';
+import ExampleCounter from '../Counter/ExampleCounter';
 
 function Main() {
   const [show, setShow] = useState(false);
   return (
     <div>
+      <ExampleCounter />
       <TabsExample />
       <Chart
         type={defaultProps.type}
