@@ -3,9 +3,10 @@ import { useEffect, useRef } from 'react';
 const timers: NodeJS.Timeout[] = [];
 const useCountTimeOnPage = (callback: (time: number) => void) => {
   const timeRef = useRef(0);
+  const delay = 100;
   const timer = setInterval(() => {
     timeRef.current += 1;
-  }, 1000);
+  }, delay);  
 
   timers.push(timer);
 
