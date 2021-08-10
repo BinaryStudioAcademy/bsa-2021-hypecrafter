@@ -1,3 +1,4 @@
+import classnames from 'classnames';
 import { FC, MouseEvent, ReactNode, useRef, useState } from 'react';
 import { Overlay, Popover as PopoverRB } from 'react-bootstrap';
 import classes from './styles.module.scss';
@@ -10,12 +11,14 @@ interface Props {
   children: (handleClose?: HandleClose) => ReactNode;
   id: string;
   rootClose?: boolean;
+  className?: string;
 }
 
-const Popover: FC<Props> = ({ placement = 'bottom', trigger, children, id, rootClose = false }) => {
+const Popover: FC<Props> = ({ placement = 'bottom', trigger, children, id, rootClose = false, className }) => {
   const [show, setShow] = useState(false);
   const [target, setTarget] = useState<HTMLElement | null>(null);
   const ref = useRef(null);
+  const menuClass = classnames(className, classes['popover-container']);
 
   const handleClose = () => setShow(false);
 
@@ -35,7 +38,7 @@ const Popover: FC<Props> = ({ placement = 'bottom', trigger, children, id, rootC
         onHide={handleClose}
         rootClose={rootClose}
       >
-        <PopoverRB id={id} className={classes['popover-container']}>
+        <PopoverRB id={id} className={menuClass}>
           <PopoverRB.Body className={classes['popover-body']}>{children(handleClose)}</PopoverRB.Body>
         </PopoverRB>
       </Overlay>

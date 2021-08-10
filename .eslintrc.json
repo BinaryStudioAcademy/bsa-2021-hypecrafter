@@ -9,7 +9,7 @@
   "parserOptions": {
     "sourceType": "module",
     "ecmaVersion": "latest",
-    "project": "./tsconfig.base.json",
+    "project": "./tsconfig.json",
     "tsconfigRootDir": "./"
   },
   "plugins": ["@typescript-eslint"],

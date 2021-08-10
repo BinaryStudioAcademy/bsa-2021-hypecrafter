@@ -6,6 +6,7 @@ import ButtonExample from '../ButtonExample';
 import CardExample from '../CardExample';
 import Chart from '../Chart/Chart';
 import defaultProps from '../Chart/testprops';
+import ExampleCounter from '../Counter/ExampleCounter';
 import InputExample from '../InputExample';
 import ModalWindow from '../ModalWindow';
 import PopoverExample from '../PopoverExample';
@@ -17,6 +18,7 @@ function Main() {
   const [show, setShow] = useState(false);
   return (
     <div>
+      <ExampleCounter />
       <TabsExample />
       <Chart
         type={defaultProps.type}
