@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretDown, faCircle, faSearch, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faCaretDown, faCircle, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faBell } from '@fortawesome/free-regular-svg-icons';
 import { useState, ChangeEvent } from 'react';
 import { NavLink } from 'react-router-dom';
