@@ -36,7 +36,7 @@ export default class AuthService {
       const accessToken: string = createToken(userId);
       return { accessToken };
     } else {
-      throw new CustomError('BAD_REQUEST','Refresh token is invalid');
+      throw new CustomError('UNAUTHORIZED','Refresh token is invalid');
     }
   }
 
