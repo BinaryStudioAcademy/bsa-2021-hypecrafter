@@ -42,6 +42,7 @@ const Chart: React.FC<ChartProps> = ({
   height = 'auto'
 }) => {
   defaults.font.size = fontSize;
+
   return (
     <div style={{ width, height }}>
       <ChartComponent
