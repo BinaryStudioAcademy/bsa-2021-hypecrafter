@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/BinaryStudioAcademy/bsa-2021-hypecrafter.svg?branch=develop)](https://travis-ci.com/BinaryStudioAcademy/bsa-2021-hypecrafter)
+
 # HypeCrafter
 Do you have a brilliant idea and are you ready to conquer the heights to make your dream a reality?  
 But sometimes it's not easy to make the difficult journey from concept to finished product on your own.  HypeCrafter lends a helping hand, and not just one!  
