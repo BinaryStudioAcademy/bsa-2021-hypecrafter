@@ -27,7 +27,7 @@ deploy:
   - provider: elasticbeanstalk
     region: 'us-west-2'
     app: 'hypecrafter'
-    env: 'hypecrafter3-env'
+    env: 'hypecrafter2-env'
     bucket_name: 'elasticbeanstalk-us-west-2-196585924295'
     bucket_path: 'hypecrafter'
     on:
