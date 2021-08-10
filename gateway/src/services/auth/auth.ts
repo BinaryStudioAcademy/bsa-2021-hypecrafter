@@ -31,8 +31,7 @@ export default class AuthService {
     userId: string,
     refreshToken: string
   ): Promise<{ accessToken: string }> {
-    const userToken: RefreshToken =
-      await this.#refreshTokenRepository.getByToken(refreshToken);
+    const userToken: RefreshToken = await this.#refreshTokenRepository.getByToken(refreshToken);
     if (userToken && userToken.token === refreshToken) {
       const accessToken: string = createToken(userId);
       return { accessToken };
@@ -42,8 +41,7 @@ export default class AuthService {
   }
 
   public async deleteRefreshToken(refreshToken: string) {
-    const tokenItem: RefreshToken =
-      await this.#refreshTokenRepository.getByToken(refreshToken);
+    const tokenItem: RefreshToken = await this.#refreshTokenRepository.getByToken(refreshToken);
     if (tokenItem) {
       await this.#refreshTokenRepository.deleteByToken(refreshToken);
     }
