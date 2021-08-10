@@ -1,12 +1,12 @@
 import { useEffect, useRef } from 'react';
+import { delay } from '../common/constans';
 
 const timers: NodeJS.Timeout[] = [];
 const useCountTimeOnPage = (callback: (time: number) => void) => {
   const timeRef = useRef(0);
-  const delay = 100;
   const timer = setInterval(() => {
     timeRef.current += 1;
-  }, delay);  
+  }, delay);
 
   timers.push(timer);
 
