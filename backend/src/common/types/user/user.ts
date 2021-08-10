@@ -1,9 +1,9 @@
-export interface User {
+export interface UserProfile {
   firstName: string;
   lastName: string;
   email: string;
   phoneNumber: string;
-  balance: string;
+  balance: number;
   // passwordHash: string;
   // passwordSalt: string;
   lastLoginDate: Date;

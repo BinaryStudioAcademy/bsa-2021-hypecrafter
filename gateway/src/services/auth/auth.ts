@@ -1,5 +1,5 @@
-import { RefreshToken } from "./../../data/entities/refreshToken";
 import randtoken from "rand-token";
+import { RefreshToken } from "./../../data/entities/refreshToken";
 import { createToken } from "../../helpers/createToken";
 import { RefreshTokenRepository } from "../../data/repositories/refreshToken";
 

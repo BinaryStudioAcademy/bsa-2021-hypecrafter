@@ -1,10 +1,16 @@
 import MicroMq from 'micromq';
-import { User } from '../../common/types';
+import { UserProfile } from '../../common/types';
 import { Services } from '../../services';
 import { wrap } from '../../helpers';
 
 const init = ({ userService }: Services, path: string) => (app: MicroMq) => app
-  .get(path, wrap(() => userService.getAll()))
-  .get(`${path}/:id`, wrap<Empty, User, { id: string }, Empty>((req) => userService.getById(req.params.id)));
+  .get(path, wrap(() => {
+    console.log('user getAll');
+    return userService.getAll();
+  }))
+  .get(`${path}/:id`, wrap<Empty, UserProfile, { id: string }, Empty>((req) => {
+    console.log('GET Backend API');
+    return userService.getById(req.params.id);
+  }));
 
 export default init;
