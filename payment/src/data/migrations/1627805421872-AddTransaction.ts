@@ -11,7 +11,7 @@ export class AddTransaction1627805421872 implements MigrationInterface {
           "amount" integer NOT NULL,
           "userId" character varying NOT NULL,
           "projectId" character varying NOT NULL,
-          CONSTRAINT "PK_89eadb93a89810556e1cbcd6ab9" PRIMARY KEY ("id")
+          CONSTRAINT "PK_89eadb91a89810556e1cbcd6ab9" PRIMARY KEY ("id")
         )`);
     }
 

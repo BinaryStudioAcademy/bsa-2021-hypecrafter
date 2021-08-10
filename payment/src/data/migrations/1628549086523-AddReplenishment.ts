@@ -11,7 +11,7 @@ export class AddReplenishment1628549086523 implements MigrationInterface {
           "amount" integer NOT NULL,
           "userId" character varying NOT NULL,
           "type" character varying NOT NULL,
-          CONSTRAINT "PK_89eadb93a89810556e1cbcd6ab8" PRIMARY KEY ("id")
+          CONSTRAINT "PK_89eadb93a89810556e1cbcd6ab3" PRIMARY KEY ("id")
         )`);
     }
 
