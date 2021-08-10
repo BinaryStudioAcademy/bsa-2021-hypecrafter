@@ -2,6 +2,7 @@ import { RefreshToken } from "./../../data/entities/refreshToken";
 import randtoken from "rand-token";
 import { createToken } from "../../helpers/createToken";
 import { RefreshTokenRepository } from "../../data/repositories/refreshToken";
+import { CustomError } from "../../helpers/customError";
 
 export default class AuthService {
   readonly #refreshTokenRepository: RefreshTokenRepository;
@@ -35,7 +36,7 @@ export default class AuthService {
       const accessToken: string = createToken(userId);
       return { accessToken };
     } else {
-      throw new Error('Refresh token is invalid');
+      throw new CustomError('BAD_REQUEST','Refresh token is invalid');
     }
   }
 
