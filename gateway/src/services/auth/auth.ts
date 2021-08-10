@@ -37,9 +37,7 @@ export default class AuthService {
       const accessToken: string = createToken(userId);
       return { accessToken };
     } else {
-      const code = HttpStatusCode.UNAUTHORIZED;
-      const name = HttpStatusCode[code] as keyof typeof HttpStatusCode;
-      throw new CustomError(name, 'Refresh token is invalid');
+      throw new CustomError(HttpStatusCode.UNAUTHORIZED, 'Refresh token is invalid');
     }
   }
 

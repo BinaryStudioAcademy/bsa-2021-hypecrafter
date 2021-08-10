@@ -1,9 +1,10 @@
 import { HttpStatusCode } from '../../../shared/build/enums';
 
 export class CustomError extends Error {
-  name: keyof typeof HttpStatusCode;
-  constructor(type: keyof typeof HttpStatusCode, message: string) {
+  status: number;
+  constructor(type: number, message: string) {
     super(message);
-    this.name = type;
+    this.status = type;
+    this.name = HttpStatusCode[type];
   }
 }
