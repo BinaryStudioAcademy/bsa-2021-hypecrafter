@@ -1,22 +1,25 @@
 import { bindActionCreators } from 'redux';
 import { useDispatch } from 'react-redux';
 import { useMemo } from 'react';
-import { authFetchUserAction } from '../actions';
+import { Routine } from 'redux-saga-routines';
+import * as actions from '../actions';
 
-const actions = [authFetchUserAction];
+type TAccumulator = { [x: string]: Routine; }
+type TActionsNameValue = [string, Routine]
 
-export const useActions = () => {
+export const useAction = () => {
   const dispatch = useDispatch();
+  const actionsNameValue = Object.entries({ ...actions }) as TActionsNameValue[];
 
   return useMemo(
-    () => actions.reduce((accumulator, action) => (
+    () => actionsNameValue.reduce((accumulator: TAccumulator, [actionName, actionValue]) => (
       Object.assign(
         accumulator,
         {
-          [action.name]: bindActionCreators(action.trigger, dispatch)
+          [actionName]: bindActionCreators(actionValue, dispatch)
         }
       )
-    )),
-    actions
+    ), {}),
+    actionsNameValue
   );
 };
