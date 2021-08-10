@@ -12,7 +12,6 @@ export default class UserService {
   }
 
   public getById(id: string) {
-    console.log('GET BY ID');
     return this.#userRepository.getById(id);
   }
 }

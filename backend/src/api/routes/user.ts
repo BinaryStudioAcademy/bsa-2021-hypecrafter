@@ -5,11 +5,11 @@ import { wrap } from '../../helpers';
 
 const init = ({ userService }: Services, path: string) => (app: MicroMq) => app
   .get(path, wrap(() => {
-    console.log('user getAll');
+    console.log('Users GET all');
     return userService.getAll();
   }))
   .get(`${path}/:id`, wrap<Empty, UserProfile, { id: string }, Empty>((req) => {
-    console.log('GET Backend API');
+    console.log('Users GET by ID');
     return userService.getById(req.params.id);
   }));
 
