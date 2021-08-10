@@ -1,2 +1,8 @@
-export const getTopics = () => fetch('http://localhost:3001/topics').then(response => response.json());
+import { api } from '../helpers/http';
+
+export const getTopics = async () => {
+  localStorage.setItem('ACCESS_TOKEN', 'aaaaaa');
+  const topics = await api.get({ url: 'topics' });
+  return topics;
+};
 

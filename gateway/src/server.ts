@@ -1,5 +1,6 @@
 import { createConnection } from 'typeorm';
 import express from 'express';
+import cors from 'cors';
 import { log } from './helpers';
 import { initMiddlewares } from './api/middlewares';
 import initRoutes from './api/routes';
@@ -10,7 +11,7 @@ import { initPassport } from './api/passport';
 
 const { port, environment } = env.app;
 const app = express();
-
+app.use(cors());
 createConnection().then(() => {
   try {
     const repositories = initRepositories();
