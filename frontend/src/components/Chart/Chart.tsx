@@ -4,7 +4,6 @@ import React from 'react';
 import defaultProps from './testprops';
 import classes from './style.module.scss';
 
-console.log(classes);
 export interface DataItem {
   label: string;
   data: number[];
