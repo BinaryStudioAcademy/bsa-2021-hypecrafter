@@ -19,6 +19,10 @@ deploy:
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_SECRET_KEY
 
+cache:
+  directories:
+  - docker_images
+
 before_install:
   - docker load -i docker_images/images.tar || true
 
