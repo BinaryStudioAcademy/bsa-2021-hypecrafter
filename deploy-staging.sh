@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 
-if ([ "$TRAVIS_BRANCH" == "master" ] || [ "$TRAVIS_BRANCH" == "develop" ] || [ ! -z "$TRAVIS_TAG" ]) && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
+if ([[ "$TRAVIS_BRANCH" == "master" ]] || [[ "$TRAVIS_BRANCH" == "develop" ]] || [[ ! -z "$TRAVIS_TAG" ]]) && [[ "$TRAVIS_PULL_REQUEST" == "false" ]]; then
   docker build -t mihailts/hypecrafter-frontend -f frontend/Dockerfile ./frontend
   docker build -t mihailts/hypecrafter-nginx -f nginx/Dockerfile ./nginx
   docker build -t mihailts/hypecrafter-shared -f shared/Dockerfile ./shared
