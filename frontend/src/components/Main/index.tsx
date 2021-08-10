@@ -12,6 +12,7 @@ import TextStyleExample from '../TextStyleExample';
 import TabsExample from '../TabsExample';
 import Chart from '../Chart/Chart';
 import defaultProps from '../Chart/testprops';
+import SelectExample from '../SelectExample';
 
 function Main() {
   const [show, setShow] = useState(false);
@@ -41,6 +42,7 @@ function Main() {
       <ButtonExample />
       <InputExample />
       <CardExample />
+      <SelectExample />
     </div>
   );
 }
