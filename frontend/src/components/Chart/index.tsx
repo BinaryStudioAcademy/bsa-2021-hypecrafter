@@ -1,5 +1,5 @@
 import ChartComponent from 'react-chartjs-2';
-import { ChartOptions, Chart as Chartjs } from 'chart.js';
+import { ChartOptions, Chart as Chartjs, defaults } from 'chart.js';
 import React from 'react';
 import defaultProps from './utils';
 
@@ -27,17 +27,33 @@ interface ChartProps {
   labels: string[];
   dataSets: DataItem[];
   options?: ChartOptions;
+  fontSize?: number;
+  width?: string,
+  height?: string
 }
 
-const Chart: React.FC<ChartProps> = ({ type, dataSets, labels, options }) => (
-  <ChartComponent
-    type={type}
-    data={{
-      labels,
-      datasets: dataSets
-    }}
-    options={options || defaultProps.options}
-  />
-);
+const Chart: React.FC<ChartProps> = ({
+  type,
+  dataSets,
+  labels: propLabels,
+  options,
+  fontSize = 14,
+  width = 'auto',
+  height = 'auto'
+}) => {
+  defaults.font.size = fontSize;
+  return (
+    <div style={{ width, height }}>
+      <ChartComponent
+        type={type}
+        data={{
+          labels: propLabels,
+          datasets: dataSets
+        }}
+        options={options || defaultProps.options}
+      />
+    </div>
+  );
+};
 
 export default Chart;

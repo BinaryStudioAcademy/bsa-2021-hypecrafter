@@ -13,7 +13,7 @@ Sentry.init({
   integrations: [new Integrations.BrowserTracing()],
   tracesSampleRate: 1.0
 });
-
+localStorage.setItem('ACCESS_TOKEN', 'aaaaaa');
 ReactDOM.render(
   <React.StrictMode>
     <App />

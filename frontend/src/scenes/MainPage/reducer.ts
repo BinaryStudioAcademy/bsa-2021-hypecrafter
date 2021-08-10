@@ -1,22 +1,20 @@
-import { Project } from '../../common/types';
+import { Project, Topic } from '../../common/types';
 import { createReducer } from '../../helpers';
-import {
-  fetchPopularAndRecommendedProjectsAction
-} from './actions';
-import type {
-  FetchPopularAndRecommendedProjectsSuccessActionType
-} from './actions';
+import { fetchPopularAndRecommendedProjectsAction, fetchTopics } from './actions';
+import type { FetchPopularAndRecommendedProjectsSuccessActionType, FetchTopics } from './actions';
 
 export interface MainPageState {
   isLoading: boolean;
   popular: Project[];
   recommended: Project[];
+  topics: Topic[]
 }
 
 export const mainPageState: MainPageState = {
   isLoading: false,
   popular: [],
-  recommended: []
+  recommended: [],
+  topics: []
 };
 
 export const mainPageReducer = createReducer<MainPageState>(mainPageState, {
@@ -39,6 +37,14 @@ export const mainPageReducer = createReducer<MainPageState>(mainPageState, {
     return {
       ...state,
       isLoading: false
+    };
+  },
+  [fetchTopics.SUCCESS](state, action:
+    FetchTopics) {
+    return {
+      ...state,
+      isLoading: false,
+      topics: action.payload
     };
   }
 });

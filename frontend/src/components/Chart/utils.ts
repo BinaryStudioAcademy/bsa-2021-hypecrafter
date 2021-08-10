@@ -13,6 +13,7 @@ function getGradient(ctx: CanvasRenderingContext2D, chartArea: { bottom: number;
 }
 
 const defaultOptions = {
+  responsive: true,
   scales: {
     x: {
       grid: {

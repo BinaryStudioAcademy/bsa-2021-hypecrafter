@@ -2,28 +2,57 @@ import { FC, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Spinner } from 'react-bootstrap';
 import { useTypedSelector } from '../../hooks';
-import { fetchPopularAndRecommendedProjectsAction } from './actions';
+import { fetchPopularAndRecommendedProjectsAction, fetchTopics } from './actions';
 import classes from './styles.module.scss';
 import Button from '../../components/Button';
 import ProjectCard from '../../components/ProjectCard';
 import Chart from '../../components/Chart';
-import defaultProps from './chartProps';
+import { makeChartProps } from './chartProps';
 import { useLocalization } from '../../providers/localization';
 import { Project } from '../../common/types';
+import { calcDonationProgress } from '../../helpers/project';
 
 const MainPage: FC = () => {
   const { t } = useLocalization();
   const dispatch = useDispatch();
-  const { popular: popularStartups, recommended: recommendedStartups, isLoading: isStartupsLoading } = useTypedSelector(
+  const {
+    popular: popularStartups,
+    recommended: recommendedStartups,
+    isLoading: isStartupsLoading, topics } = useTypedSelector(
     (
-      { mainPage: { popular, recommended, isLoading } }
+      { mainPage }
     ) => ({
-      popular, recommended, isLoading
+      popular: mainPage.popular,
+      recommended: mainPage.recommended,
+      isLoading: mainPage.isLoading,
+      topics: mainPage.topics
     })
   );
   useEffect(() => {
     dispatch(fetchPopularAndRecommendedProjectsAction());
+    dispatch(fetchTopics());
   }, [dispatch]);
+
+  const makeChart = () => {
+    const labels: string[] = [];
+    const data: number[] = [];
+    topics.forEach(topic => {
+      labels.push(topic.name);
+      data.push(topic.sum);
+    });
+    const defaultProps = makeChartProps(labels, data);
+    return (
+      <Chart
+        type="bar"
+        labels={defaultProps.data.labels}
+        dataSets={defaultProps.data.datasets}
+        options={defaultProps.options}
+        fontSize={20}
+        width="100%"
+        height="300px"
+      />
+    );
+  };
 
   return (
     <div className={classes.root}>
@@ -59,7 +88,7 @@ const MainPage: FC = () => {
                 name={project.name}
                 description={project.description}
                 goal={project.goal}
-                percent={Math.floor((100 * project.donated) / project.goal)}
+                percent={calcDonationProgress(project.donated, project.goal)}
                 image={project.imageUrl}
               />
             ))}
@@ -77,15 +106,17 @@ const MainPage: FC = () => {
                 name={project.name}
                 description={project.description}
                 goal={project.goal}
-                percent={Math.floor((100 * project.donated) / project.goal)}
+                percent={calcDonationProgress(project.donated, project.goal)}
                 image={project.imageUrl}
               />
             ))}
           </div>
         </section>
-        <section className={classes.chart}>
+        <section>
           <div className={classes.category}>{t('Interesting topics')}</div>
-          <Chart type="bar" labels={defaultProps.data.labels} dataSets={defaultProps.data.datasets} />
+          <div className={classes.chart}>
+            {topics && makeChart()}
+          </div>
         </section>
       </div>
     </div>

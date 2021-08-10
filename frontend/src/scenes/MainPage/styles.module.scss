@@ -3,6 +3,9 @@
 .buttons {
   display: flex;
   grid-gap: 20px;
+  @media (max-width: $breakpoint-md) {
+    margin-top: 20px;
+  }
 }
 
 .buttons [type='button'] {
@@ -14,14 +17,14 @@
   width: 100%;
   padding: 0px 60px;
   @media (min-width: 1900px) {
-    max-width: 1600px;
+    max-width: 1900px;
     margin: 0 auto;
   }
 }
 
 .main {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 55% 45%;
   grid-template-rows: 1fr;
   @media (max-width: $breakpoint-xl) {
     grid-template-columns: 1fr;
@@ -35,7 +38,7 @@
   align-content: center;
   flex-flow: column;
   padding: 200px 0px;
-  padding-right: 180px;
+  padding-right: 140px;
   @media (max-width: $breakpoint-xl) {
     grid-row: 2;
     padding: 50px 0px;
@@ -71,7 +74,7 @@
   background-image: url('../../assets/main_bg.jpg');
   background-position: center;
   background-size: cover;
-  @media (max-width: $breakpoint-xl) {
+  @media (max-width: $breakpoint-xxxl) {
     width: calc(100% + 120px);
     margin-left: -60px;
     order: 2;
