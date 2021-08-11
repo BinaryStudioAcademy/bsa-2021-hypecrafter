@@ -5,7 +5,7 @@ interface Size {
   width: number | undefined;
 }
 
-export default function useWindowSize(): { windowSize: Size, isMobile: boolean } {
+export default function useWindowResize(): { windowSize: Size, isMobile: boolean } {
   const [windowSize, setWindowSize] = useState<Size>({
     width: undefined
   });
