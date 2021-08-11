@@ -1,7 +1,9 @@
-import randtoken from "rand-token";
-import { RefreshToken } from "./../../data/entities/refreshToken";
-import { createToken } from "../../helpers/createToken";
-import { RefreshTokenRepository } from "../../data/repositories/refreshToken";
+import randtoken from 'rand-token';
+import { RefreshToken } from '../../data/entities/refreshToken';
+import { createToken } from '../../helpers/createToken';
+import { RefreshTokenRepository } from '../../data/repositories/refreshToken';
+import { CustomError } from '../../helpers/customError';
+import { HttpStatusCode } from '../../../../shared/build/enums';
 
 export default class AuthService {
   readonly #refreshTokenRepository: RefreshTokenRepository;
@@ -19,7 +21,7 @@ export default class AuthService {
     this.#refreshTokenRepository.createToken({
       token: refreshToken,
       userAgentInfo,
-      userId,
+      userId
     });
 
     return { accessToken, refreshToken };
@@ -29,19 +31,16 @@ export default class AuthService {
     userId: string,
     refreshToken: string
   ): Promise<{ accessToken: string }> {
-    const userToken: RefreshToken =
-      await this.#refreshTokenRepository.getByToken(refreshToken);
+    const userToken: RefreshToken = await this.#refreshTokenRepository.getByToken(refreshToken);
     if (userToken && userToken.token === refreshToken) {
       const accessToken: string = createToken(userId);
       return { accessToken };
-    } else {
-      throw new Error('Refresh token is invalid');
     }
+    throw new CustomError(HttpStatusCode.UNAUTHORIZED, 'Refresh token is invalid');
   }
 
   public async deleteRefreshToken(refreshToken: string) {
-    const tokenItem: RefreshToken =
-      await this.#refreshTokenRepository.getByToken(refreshToken);
+    const tokenItem: RefreshToken = await this.#refreshTokenRepository.getByToken(refreshToken);
     if (tokenItem) {
       await this.#refreshTokenRepository.deleteByToken(refreshToken);
     }
