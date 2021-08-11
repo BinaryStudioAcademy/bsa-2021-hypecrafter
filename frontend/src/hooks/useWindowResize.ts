@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { maxMobileWidth } from '../common/constans/index';
+import { maxMobileWidth } from '../common/constans';
 
 interface Size {
   width: number | undefined;
