@@ -2,7 +2,8 @@ export enum Path {
   Topic = '/topics',
   User = '/users',
   Auth = '/auth',
-  Notification = '/notifications'
+  Notification = '/notifications',
+  Project = '/projects'
 }
 
 export enum AuthApiPath {

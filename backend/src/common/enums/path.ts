@@ -1,4 +1,5 @@
 export enum Path {
   User = '/users',
-  Topic = '/topics'
+  Topic = '/topics',
+  Project = '/projects'
 }

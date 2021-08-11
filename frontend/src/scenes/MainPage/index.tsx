@@ -7,7 +7,7 @@ import classes from './styles.module.scss';
 import Button from '../../components/Button';
 import ProjectCard from '../../components/ProjectCard';
 import Chart from '../../components/Chart';
-import { makeChartProps } from './chartProps';
+import { makeChartProps } from './utils';
 import { useLocalization } from '../../providers/localization';
 import { Project } from '../../common/types';
 import { calcDonationProgress } from '../../helpers/project';
@@ -29,11 +29,12 @@ const MainPage: FC = () => {
     })
   );
   useEffect(() => {
+    // loadData
     dispatch(fetchPopularAndRecommendedProjectsAction());
     dispatch(fetchTopics());
   }, [dispatch]);
 
-  const makeChart = () => {
+  const renderChart = () => {
     const labels: string[] = [];
     const data: number[] = [];
     topics.forEach(topic => {
@@ -89,7 +90,7 @@ const MainPage: FC = () => {
                 description={project.description}
                 goal={project.goal}
                 percent={calcDonationProgress(project.donated, project.goal)}
-                image={project.imageUrl}
+                image="https://source.unsplash.com/random/800x600"
               />
             ))}
           </div>
@@ -107,7 +108,7 @@ const MainPage: FC = () => {
                 description={project.description}
                 goal={project.goal}
                 percent={calcDonationProgress(project.donated, project.goal)}
-                image={project.imageUrl}
+                image="https://source.unsplash.com/random/800x600"
               />
             ))}
           </div>
@@ -115,7 +116,7 @@ const MainPage: FC = () => {
         <section>
           <div className={classes.category}>{t('Interesting topics')}</div>
           <div className={classes.chart}>
-            {topics && makeChart()}
+            {topics && renderChart()}
           </div>
         </section>
       </div>

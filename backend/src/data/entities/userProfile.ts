@@ -24,7 +24,7 @@ export class UserProfile extends AbstractEntity {
   @Column({ nullable: true })
   phoneNumber: string;
 
-  @Column({ type: 'numeric' })
+  @Column({ type: 'numeric', default: 0 })
   balance: number;
 
   @Column()
