@@ -1,16 +1,17 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Switch, useHistory } from 'react-router-dom';
+import { authFetchUserAction } from '../../actions/auth';
 import { Routes, StorageKeys } from '../../common/enums';
+import { useTypedSelector } from '../../hooks';
+import FundsPage from '../../scenes/Wallet/FundsPage';
+import Header from '../Header';
+import LoaderWrapper from '../LoaderWrapper';
 import LoginPage from '../LoginPage';
 import Main from '../Main';
-import { useTypedSelector } from '../../hooks';
-import { authFetchUserAction } from '../../actions/auth';
-import Header from '../Header';
-import PublicRoute from '../PublicRoute';
-import LoaderWrapper from '../LoaderWrapper';
 import PrivateRoute from '../PrivateRoute';
-import FundsPage from '../../scenes/Wallet/FundsPage';
+import PublicRoute from '../PublicRoute';
+import SignupPage from '../SignupPage';
 
 const Routing = () => {
   const dispatch = useDispatch();
@@ -21,7 +22,7 @@ const Routing = () => {
   }));
   const { location: { pathname } } = useHistory();
 
-  const routesWitoutHeader = [Routes.LOGIN];
+  const routesWitoutHeader = [Routes.LOGIN, Routes.SIGNUP];
   const { user, isLoading } = authStore;
   const hasToken = Boolean(localStorage.getItem(StorageKeys.ACCESS_TOKEN));
 
@@ -46,6 +47,12 @@ const Routing = () => {
           path={Routes.LOGIN}
           exact
           component={LoginPage}
+        />
+        <PublicRoute
+          restricted={false}
+          path={Routes.SIGNUP}
+          exact
+          component={SignupPage}
         />
         <PrivateRoute exact path={Routes.ADDFUNDS} component={FundsPage} />
       </Switch>

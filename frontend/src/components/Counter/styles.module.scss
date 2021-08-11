@@ -1,0 +1,35 @@
+@import '../../styles/vars';
+@import '../../styles/fonts.scss';
+
+// $color-root-block-background - block color
+
+.counter {
+  width: 170px;
+  height: 160px;
+  background: $color-root-block-background;
+  border-radius: 6px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: $font-roboto700;
+  font-size: 24px;
+}
+
+.value, .changing {
+  font-size: 52px;
+  background: $color-root-turquoise-gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.changing {
+  background: linear-gradient(
+    90deg,
+    #219a9c 0%,
+    #00a6ff 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

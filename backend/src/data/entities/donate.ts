@@ -1,21 +1,16 @@
-import { BaseEntity, Entity, Column, ManyToOne, PrimaryGeneratedColumn, CreateDateColumn } from 'typeorm';
+import { Entity, Column, ManyToOne } from 'typeorm';
+import { AbstractEntity } from './abstract';
 import { UserProfile } from './userProfile';
-// import { Project } from './project';
+import { Project } from './project';
 
 @Entity()
-export class Donate extends BaseEntity {
-  @PrimaryGeneratedColumn('uuid')
-  id: string;
-
-  @Column()
+export class Donate extends AbstractEntity {
+  @Column({ type: 'numeric' })
   amount: number;
 
   @ManyToOne(() => UserProfile, userProfile => userProfile.donates)
-  public userProfile!: UserProfile;
-  /*
-  @ManyToOne(() => Project, project => project.donate)
-  public project!: Project; */
+  user: UserProfile;
 
-  @CreateDateColumn()
-  createdAt: Date;
+  @ManyToOne(() => Project, project => project.donates)
+  project: Project;
 }

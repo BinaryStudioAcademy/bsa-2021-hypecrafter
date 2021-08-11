@@ -1,39 +1,78 @@
-import { Entity, Column, OneToMany } from 'typeorm';
+import { Entity, Column, OneToMany, JoinColumn, OneToOne } from 'typeorm';
 import { AbstractEntity } from './abstract';
 import { Donate } from './donate';
+import { UserProject } from './userProject';
+import { Chat } from './chat';
+import { AlertsSettings } from './alertsSettings';
+import { UserAchievement } from './userAchievement';
+import { Message } from './message';
+import { Comment } from './comment';
+import { Tag } from './tag';
+import { Project } from './project';
 
 @Entity()
 export class UserProfile extends AbstractEntity {
-  @Column()
+  @Column({ nullable: true })
   firstName: string;
 
-  @Column()
+  @Column({ nullable: true })
   lastName: string;
 
   @Column()
   email: string;
 
-  @Column()
+  @Column({ nullable: true })
   phoneNumber: string;
 
-  @Column()
-  balance: string;
+  @Column({ type: 'numeric' })
+  balance: number;
 
-  // @Column()
-  // passwordHash: string;
-
-  // @Column()
-  // passwordSalt: string;
+  @Column({ type: 'numeric', default: 0 })
+  rating: number;
 
   @Column()
   lastLoginDate: Date;
 
-  @Column()
+  @Column({ nullable: true })
   description: string;
 
-  @Column()
+  @Column({ nullable: true })
   region: string;
 
-  @OneToMany(() => Donate, donate => donate.userProfile)
-  public donates!: Donate[];
+  @Column({ nullable: true })
+  instagramUrl: string;
+
+  @Column({ nullable: true })
+  facebookUrl: string;
+
+  @Column({ nullable: true })
+  dribbleUrl: string;
+
+  @OneToOne(() => AlertsSettings, alertsSettings => alertsSettings.user)
+  @JoinColumn()
+  alertsSettings: AlertsSettings;
+
+  @OneToMany(() => Donate, donate => donate.user)
+  donates: Donate[];
+
+  @OneToMany(() => UserProject, userProject => userProject.user)
+  userProjects: UserProject[];
+
+  @OneToMany(() => Chat, chat => chat.donator)
+  chats: Chat[];
+
+  @OneToMany(() => UserAchievement, userAchievement => userAchievement.user)
+  userAchievements: UserAchievement[];
+
+  @OneToMany(() => Message, message => message.author)
+  messages: Message[];
+
+  @OneToMany(() => Comment, comment => comment.author)
+  comments: Comment[];
+
+  @OneToMany(() => Tag, tag => tag.author)
+  tags: Tag[];
+
+  @OneToMany(() => Project, project => project.author)
+  projects: Project[];
 }

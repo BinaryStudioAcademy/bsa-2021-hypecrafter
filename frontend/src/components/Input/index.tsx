@@ -1,14 +1,15 @@
-import { useState, forwardRef } from 'react';
-import { InputGroup, FormControlProps, FormControl, FormLabel } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { forwardRef, useState } from 'react';
+import { FormControl, FormControlProps, FormLabel, InputGroup } from 'react-bootstrap';
 import classes from './styles.module.scss';
 
 interface Props extends FormControlProps {
-  type?: 'text' | 'textarea' | 'email' | 'password'| 'search';
+  type?: 'text' | 'textarea' | 'email' | 'password' | 'search' | 'number';
   placeholder?: string;
   label?: string;
   errorMessage?: string;
+  step?: number;
 }
 
 const Input = forwardRef<HTMLInputElement, Props>(({
@@ -16,13 +17,14 @@ const Input = forwardRef<HTMLInputElement, Props>(({
   placeholder = '',
   label,
   errorMessage,
+  step = 2,
   ...restInputProps
 }, ref) => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
     <InputGroup className={classes['input-container']}>
-      { label && <FormLabel htmlFor="input" className={classes['input-label']}> {label} </FormLabel> }
+      {label && <FormLabel htmlFor="input" className={classes['input-label']}> {label} </FormLabel>}
       <div className="input-field-container">
         <FormControl
           ref={ref}
@@ -30,6 +32,7 @@ const Input = forwardRef<HTMLInputElement, Props>(({
           placeholder={placeholder}
           id="input"
           className={classes['input-field']}
+          step={step}
           {...restInputProps}
         />
         {type === 'password'
@@ -51,5 +54,7 @@ const Input = forwardRef<HTMLInputElement, Props>(({
     </InputGroup>
   );
 });
+
+Input.displayName = 'Input';
 
 export default Input;

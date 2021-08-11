@@ -1,12 +1,12 @@
-import { FC, ReactNode } from 'react';
 import cn from 'classnames';
+import { FC, ReactNode } from 'react';
 import classes from './styles.module.scss';
 
 type Props = {
   children: ReactNode;
   image: string;
   rounded?: boolean;
-}
+};
 
 const CardComponent: FC<Props> = ({
   children,
