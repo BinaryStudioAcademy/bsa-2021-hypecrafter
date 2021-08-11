@@ -5,26 +5,7 @@
   width: 100%;
 }
 
-:global(#input-arrow-up) {
-  fill: white;
-}
-
-input[type='number']::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-}
-
-input[type='number']:hover::-webkit-inner-spin-button {
-  background-image: url('../../assets/scroll.svg');
-  background-position: center;
-  background-size: cover;
-  filter: invert(57%) sepia(94%) saturate(2339%) hue-rotate(173deg)
-    brightness(98%) contrast(93%);
-  width: 14px;
-  height: 25px;
-  margin: 4px;
-}
-
-input[type='number']:hover .input-label {
+.input-label {
   font-weight: $font-weight-medium;
 }
 
@@ -60,4 +41,19 @@ input[type='number']:hover .input-label {
 .error-message {
   color: $color-error;
   font-size: 0.8rem;
+}
+
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type='number']:hover::-webkit-inner-spin-button {
+  background-image: url('../../assets/scroll.svg');
+  background-position: center;
+  background-size: cover;
+  filter: invert(57%) sepia(94%) saturate(2339%) hue-rotate(173deg)
+    brightness(98%) contrast(93%);
+  width: 14px;
+  height: 25px;
+  margin: 4px;
 }
