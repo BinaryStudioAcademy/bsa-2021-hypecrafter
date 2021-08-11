@@ -1,0 +1,20 @@
+@import '../../../../../styles/vars';
+@import '../../../../../styles/mixins';
+
+.subtopic-item {
+  @include heading-md;
+  margin-right: 40px;
+  background: none !important;
+  box-shadow: none !important;
+  color: $color-root-text;
+  text-decoration: none;
+}
+
+.subtopic-item-active {
+  @include heading-md;
+  margin-right: 40px;
+  background: none !important;
+  box-shadow: none !important;
+  color: $color-root-turquoise !important;
+  text-decoration: none;
+}

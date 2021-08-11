@@ -4,6 +4,7 @@ import { Switch, useHistory } from 'react-router-dom';
 import { Routes, StorageKeys } from '../../common/enums';
 import LoginPage from '../LoginPage';
 import Main from '../Main';
+import TrendsPage from '../../scenes/TrendsPage';
 import { useTypedSelector } from '../../hooks';
 import { authFetchUserAction } from '../../actions/auth';
 import Header from '../Header';
@@ -48,6 +49,12 @@ const Routing = () => {
           component={LoginPage}
         />
         <PrivateRoute exact path={Routes.ADDFUNDS} component={FundsPage} />
+        <PublicRoute
+          restricted={false}
+          path="/trends"
+          exact
+          component={TrendsPage}
+        />
       </Switch>
     </LoaderWrapper>
   );

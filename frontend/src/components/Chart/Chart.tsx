@@ -7,8 +7,14 @@ export interface DataItem {
   label: string;
   data: number[];
   fill?: boolean;
-  backgroundColor?: string;
-  borderColor?: string | ((context: {chart: Chartjs}) => CanvasGradient| null);
+  backgroundColor?:
+    | string
+    | string[]
+    | ((context: { chart: Chartjs }) => CanvasGradient | null);
+  borderColor?:
+    | string
+    | string[]
+    | ((context: { chart: Chartjs }) => CanvasGradient | null);
 }
 
 export type ChartType =
@@ -29,7 +35,12 @@ interface ChartProps {
   options?: ChartOptions;
 }
 
-const Chart: React.FC<ChartProps> = ({ type, dataSets, labels: propLabels, options }) => (
+const Chart: React.FC<ChartProps> = ({
+  type,
+  dataSets,
+  labels: propLabels,
+  options
+}) => (
   <ChartComponent
     type={type}
     data={{

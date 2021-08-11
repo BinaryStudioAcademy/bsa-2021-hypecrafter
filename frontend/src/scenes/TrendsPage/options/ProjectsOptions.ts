@@ -1,0 +1,53 @@
+import { ChartType } from '../../../components/Chart/Chart';
+import { Project } from '../interfaces';
+
+const randomBrightColor = (length: number) => {
+  const colors: string[] = [];
+  while (colors.length < length) {
+    colors.push(`hsl(${360 * Math.random()},100%,50%)`);
+  }
+  return colors;
+};
+
+const defaultOptions = {
+  responsive: true,
+  maintainAspectRatio: false,
+  scales: {
+    gridLines: {
+      display: false
+    }
+  },
+  plugins: {
+    legend: {
+      display: false
+    }
+  }
+};
+
+const getDefaultData = (data: Project[]) => ({
+  labels: data.map((el) => el.name),
+  datasets: [
+    {
+      label: 'Projects',
+      data: data.map((el) => el.donated),
+      backgroundColor: randomBrightColor(data.length),
+      borderWidth: 0.4,
+      radius: 150,
+      cutout: 135
+    }
+  ]
+});
+
+const type: ChartType = 'doughnut';
+
+const getDefProps = (items: Project[]) => {
+  const data = getDefaultData(items);
+  return {
+    type,
+    labels: data.labels,
+    dataSets: data.datasets,
+    options: defaultOptions
+  };
+};
+
+export default getDefProps;

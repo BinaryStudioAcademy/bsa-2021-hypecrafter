@@ -1,0 +1,13 @@
+@import '../../styles/vars';
+@import '../../styles/mixins';
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  background-color: $color-root-background;
+}
+
+
