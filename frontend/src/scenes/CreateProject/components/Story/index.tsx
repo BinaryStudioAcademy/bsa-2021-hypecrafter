@@ -1,30 +1,32 @@
-import { FC } from 'react';
+import { FC, useRef, useState } from 'react';
+import JoditEditor from 'jodit-react';
 import Layout from '../Layout';
 import classes from './styles.module.scss';
 import Button from '../../../../components/Button';
 import { CurrentPage } from '../../enums';
-import Input from '../../../../components/Input';
-import Select from '../../../../components/Select';
 
 interface Props {
   changePage: (currentPage: CurrentPage) => void
   currentPage:CurrentPage
 }
 
-const Basic: FC<Props> = ({ changePage, currentPage }) => {
+const Story: FC<Props> = ({ changePage, currentPage }) => {
+  const editor = useRef(null);
+  const [content, setContent] = useState('');
   const handleBack = () => changePage(currentPage - 1);
   const handleNext = () => changePage(currentPage + 1);
   const body = (
-    <div>
-      <Select
-        options={[{ text: 'test1', value: 'test1' }, { text: 'test2', value: 'test2' }]}
-        label="Pick a project category to connect with a specific community."
+    <div className={classes.editor}>
+      <p>Tell potential contributors more about your campaign.
+        Provide details that will motivate people to contribute.
+        A good pitch is compelling, informative, and easy to digest.
+      </p>
+      <JoditEditor
+        ref={editor}
+        value={content}
+        onBlur={newContent => setContent(newContent)}
+        onChange={newContent => setContent(newContent)}
       />
-      <Input
-        type="textarea"
-        label="Describe what you’ll be creating."
-      />
-
     </div>
   );
   const footer = (
@@ -35,7 +37,7 @@ const Basic: FC<Props> = ({ changePage, currentPage }) => {
   );
   return (
     <Layout
-      header="First, let’s get you set up."
+      header="Set up a story"
       setCurrentPage={changePage}
       body={body}
       footer={footer}
@@ -44,4 +46,4 @@ const Basic: FC<Props> = ({ changePage, currentPage }) => {
   );
 };
 
-export default Basic;
+export default Story;
