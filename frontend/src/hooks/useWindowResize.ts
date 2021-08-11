@@ -9,7 +9,7 @@ export default function useWindowResize(): { windowSize: Size, isMobile: boolean
   const [windowSize, setWindowSize] = useState<Size>({
     width: undefined
   });
-  const [isMobile, setIsMobile] = useState<boolean>(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     function handleResize() {
