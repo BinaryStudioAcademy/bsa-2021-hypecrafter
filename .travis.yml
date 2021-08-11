@@ -1,0 +1,30 @@
+sudo: required
+language: generic
+
+services:
+  - docker
+
+after_success:
+  - ./deploy-staging.sh
+
+deploy:
+  - provider: elasticbeanstalk
+    region: 'us-west-2'
+    app: 'hypecrafter'
+    env: 'hypecrafter2-env'
+    bucket_name: 'elasticbeanstalk-us-west-2-196585924295'
+    bucket_path: 'hypecrafter'
+    on:
+      branch: develop
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+
+cache:
+  directories:
+  - docker_images
+
+before_install:
+  - docker load -i docker_images/images.tar || true
+
+before_cache:
+  - docker save -o docker_images/images.tar $(docker images -a -q)

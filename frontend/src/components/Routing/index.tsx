@@ -12,6 +12,7 @@ import PublicRoute from '../PublicRoute';
 import LoaderWrapper from '../LoaderWrapper';
 import PrivateRoute from '../PrivateRoute';
 import FundsPage from '../../scenes/Wallet/FundsPage';
+import SignupPage from '../SignupPage';
 
 const Routing = () => {
   const dispatch = useDispatch();
@@ -22,7 +23,7 @@ const Routing = () => {
   }));
   const { location: { pathname } } = useHistory();
 
-  const routesWitoutHeader = [Routes.LOGIN];
+  const routesWitoutHeader = [Routes.LOGIN, Routes.SIGNUP];
   const { user, isLoading } = authStore;
   const hasToken = Boolean(localStorage.getItem(StorageKeys.ACCESS_TOKEN));
 
@@ -47,6 +48,12 @@ const Routing = () => {
           path={Routes.LOGIN}
           exact
           component={LoginPage}
+        />
+        <PublicRoute
+          restricted={false}
+          path={Routes.SIGNUP}
+          exact
+          component={SignupPage}
         />
         <PrivateRoute exact path={Routes.ADDFUNDS} component={FundsPage} />
         <PublicRoute

@@ -1,3 +1,4 @@
+@import '../../styles/vars';
 .avatar{
     overflow: hidden;
     display: flex;
@@ -8,5 +9,6 @@
     }
     span{
         font-size: 1rem;
+        color: $color-root-text;
     }
 }
