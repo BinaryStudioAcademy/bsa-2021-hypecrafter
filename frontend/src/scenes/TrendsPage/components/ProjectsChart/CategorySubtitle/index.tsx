@@ -21,12 +21,12 @@ const CategorySubtitle: FC<CategorySubtitleProps> = ({
   return (
     <Button
       key={item.id}
+      onClick={handleClick}
       className={
         isSelected
           ? `${classes['subtopic-item']} ${classes['subtopic-item-active']}`
           : classes['subtopic-item']
       }
-      onClick={handleClick}
     >
       {item.name}
     </Button>
