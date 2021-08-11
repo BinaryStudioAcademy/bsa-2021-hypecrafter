@@ -7,12 +7,13 @@ import { env } from './env';
 import { initServices } from './services';
 import { initRepositories } from './data/repositories';
 import { initPassport } from './api/passport';
-
+import UserSeeder from './data/seeders/userSeeder'
 const { port, environment } = env.app;
 const app = express();
 
-createConnection().then(() => {
+createConnection().then(async () => {
   try {
+    await UserSeeder.execute();
     const repositories = initRepositories();
     const services = initServices(repositories);
     initPassport(app, repositories);

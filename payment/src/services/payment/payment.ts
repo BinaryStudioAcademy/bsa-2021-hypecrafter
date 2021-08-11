@@ -14,4 +14,8 @@ export default class TransactionService {
   public getById(id: string) {
     return this.#transactionRepository.getById(id);
   }
+
+  public getByUserId(useId: string) {
+    return this.#transactionRepository.getByUserId(useId);
+  }
 }

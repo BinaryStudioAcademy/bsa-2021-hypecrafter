@@ -39,6 +39,7 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "hypecrafter-shared": "file:../shared/build",
+    "jwt-decode": "^3.1.2",
     "lodash": "^4.17.21",
     "micromq": "^3.0.2",
     "pg": "^8.7.1",

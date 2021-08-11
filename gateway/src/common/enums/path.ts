@@ -1,7 +1,8 @@
 export enum Path {
   User = "/users",
   Auth = "/auth",
-  Notification = "/notifications"
+  Notification = "/notifications",
+  Payment = "/payment"
 }
 
 export enum AuthApiPath {
