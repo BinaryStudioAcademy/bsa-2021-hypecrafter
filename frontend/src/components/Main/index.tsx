@@ -17,7 +17,7 @@ import ExampleCounter from '../Counter/ExampleCounter';
 import Input from '../Input';
 
 function Main() {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
   return (
     <div>
       <Input type="number" />

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import {MigrationInterface, QueryRunner} from "typeorm";
 
 export class UpdateRelations1628407165448 implements MigrationInterface {
