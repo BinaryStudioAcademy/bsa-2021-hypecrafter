@@ -1,4 +1,3 @@
-
 @import '../../styles/vars';
 
 .input-container {
@@ -6,7 +5,26 @@
   width: 100%;
 }
 
-.input-label {
+:global(#input-arrow-up) {
+  fill: white;
+}
+
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type='number']:hover::-webkit-inner-spin-button {
+  background-image: url('../../assets/scroll.svg');
+  background-position: center;
+  background-size: cover;
+  filter: invert(57%) sepia(94%) saturate(2339%) hue-rotate(173deg)
+    brightness(98%) contrast(93%);
+  width: 14px;
+  height: 25px;
+  margin: 4px;
+}
+
+input[type='number']:hover .input-label {
   font-weight: $font-weight-medium;
 }
 
@@ -20,9 +38,9 @@
   border-radius: 1px;
   background: none;
   color: $color-root-text;
-  &:focus{
-      background: none;
-      color: $color-root-text;
+  &:focus {
+    background: none;
+    color: $color-root-text;
   }
 }
 
