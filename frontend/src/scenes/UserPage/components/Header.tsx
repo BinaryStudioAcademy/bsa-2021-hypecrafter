@@ -1,10 +1,10 @@
+import { faDribbble, faFacebookSquare, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FunctionComponent } from 'react';
 import { Col, Container, Image, Row } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
-import { faFacebookSquare, faInstagram, faDribbble } from '@fortawesome/free-brands-svg-icons';
-import classes from '../styles.module.scss';
 import { UserProfile } from '../../../common/types';
+import classes from '../styles.module.scss';
 
 interface HeaderProps {
   userProfile: UserProfile;

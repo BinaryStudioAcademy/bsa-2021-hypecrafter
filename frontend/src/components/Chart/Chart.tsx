@@ -1,8 +1,8 @@
-import ChartComponent from 'react-chartjs-2';
-import { ChartOptions, Chart as Chartjs } from 'chart.js';
+import { Chart as Chartjs, ChartOptions } from 'chart.js';
 import React from 'react';
-import defaultProps from './testprops';
+import ChartComponent from 'react-chartjs-2';
 import classes from './style.module.scss';
+import defaultProps from './testprops';
 
 export interface DataItem {
   label: string;
@@ -10,8 +10,8 @@ export interface DataItem {
   fill?: boolean;
   backgroundColor?: string;
   borderColor?:
-    | string
-    | ((context: { chart: Chartjs }) => CanvasGradient | null);
+  | string
+  | ((context: { chart: Chartjs }) => CanvasGradient | null);
 }
 
 export type ChartType =

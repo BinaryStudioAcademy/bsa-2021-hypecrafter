@@ -1,8 +1,8 @@
 import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
-import dictionaries from '../dictionaries';
+import { initReactI18next } from 'react-i18next';
 import { Languages } from '../common/enums';
+import dictionaries from '../dictionaries';
 
 i18n
   .use(LanguageDetector)

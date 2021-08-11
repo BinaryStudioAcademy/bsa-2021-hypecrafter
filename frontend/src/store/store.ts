@@ -1,4 +1,6 @@
-import { applyMiddleware, CombinedState, compose, createStore, Middleware } from 'redux';
+import {
+  applyMiddleware, CombinedState, compose, createStore, Middleware
+} from 'redux';
 import type { Reducer, StoreState } from '../common/types';
 
 interface ConfigureStoreParams {

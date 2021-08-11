@@ -11,6 +11,6 @@ export const fetchUserProfileAction = createRoutine(UsersProfileActions.FETCH_US
   failure: (error: string) => error
 });
 
-export type FetchUserProfileTriggerActionType = ReturnType<typeof fetchUserProfileAction.trigger>
-export type FetchUserProfileSuccessActionType = ReturnType<typeof fetchUserProfileAction.success>
-export type FetchUserProfileFailureActionType = ReturnType<typeof fetchUserProfileAction.failure>
+export type FetchUserProfileTriggerActionType = ReturnType<typeof fetchUserProfileAction.trigger>;
+export type FetchUserProfileSuccessActionType = ReturnType<typeof fetchUserProfileAction.success>;
+export type FetchUserProfileFailureActionType = ReturnType<typeof fetchUserProfileAction.failure>;

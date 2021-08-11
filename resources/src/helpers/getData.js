@@ -39,6 +39,7 @@ const getUserData = files => {
     });
     response = [...response, ...result];
   }
+  
   return Buffer.from(JSON.stringify(response));
 };
 

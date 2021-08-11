@@ -1,5 +1,5 @@
 import { FunctionComponent, MouseEvent, useState } from 'react';
-import { Row, Col, Nav } from 'react-bootstrap';
+import { Col, Nav, Row } from 'react-bootstrap';
 import Card from '../../../components/Card';
 import ProjectCard from '../../../components/ProjectCard';
 import { Tabs } from '../../../components/Tabs';

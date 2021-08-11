@@ -1,13 +1,14 @@
-import { TOptions, StringMap, Callback, TFunction } from 'i18next';
-import { createContext, useContext, FC } from 'react';
+import { Callback, StringMap, TFunction, TOptions } from 'i18next';
+import { createContext, FC, useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 
 type ContextProps = {
   t: (key: LocaleKeys, options?: string | TOptions<StringMap> | undefined) => string,
   changeLanguage(lng?: string, callback?: Callback): Promise<TFunction>, selectedLanguage: string
 };
+
 const LocalizationContext = createContext<ContextProps>({} as ContextProps);
-export const useLocalization = () => useContext(LocalizationContext);
+const useLocalization = () => useContext(LocalizationContext);
 
 const LocalizationProvider: FC = ({ children }) => {
   const { t, i18n } = useTranslation();
@@ -20,3 +21,4 @@ const LocalizationProvider: FC = ({ children }) => {
 };
 
 export default LocalizationProvider;
+export { useLocalization };

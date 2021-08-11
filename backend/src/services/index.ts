@@ -9,5 +9,5 @@ export function initServices() {
 }
 
 export interface Services {
-  userService: UserService
+  userService: UserService;
 }
