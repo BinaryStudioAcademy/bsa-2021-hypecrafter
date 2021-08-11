@@ -1,20 +1,19 @@
 import { useState } from 'react';
 import UserPage from '../../scenes/UserPage';
-import Users from '../../scenes/Users';
 import BootstrapExample from '../BootstrapExample';
 import ButtonExample from '../ButtonExample';
 import CardExample from '../CardExample';
 import Chart from '../Chart/Chart';
 import defaultProps from '../Chart/testprops';
-import SelectExample from '../SelectExample';
 import ExampleCounter from '../Counter/ExampleCounter';
+import Input from '../Input';
 import InputExample from '../InputExample';
 import ModalWindow from '../ModalWindow';
 import PopoverExample from '../PopoverExample';
+import SelectExample from '../SelectExample';
 import TabsExample from '../TabsExample';
 import TextStyleExample from '../TextStyleExample';
 import TranslateExample from '../TranslateExample';
-import Input from '../Input';
 
 function Main() {
   const [show, setShow] = useState(true);
@@ -28,7 +27,6 @@ function Main() {
         labels={defaultProps.data.labels}
         dataSets={defaultProps.data.datasets}
       />
-      <Users />
       <PopoverExample />
       <ModalWindow
         show={show}

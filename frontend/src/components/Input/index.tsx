@@ -5,7 +5,7 @@ import { FormControl, FormControlProps, FormLabel, InputGroup } from 'react-boot
 import classes from './styles.module.scss';
 
 interface Props extends FormControlProps {
-  type?: 'text' | 'textarea' | 'email' | 'password'| 'search' | 'number';
+  type?: 'text' | 'textarea' | 'email' | 'password' | 'search' | 'number';
   placeholder?: string;
   label?: string;
   errorMessage?: string;

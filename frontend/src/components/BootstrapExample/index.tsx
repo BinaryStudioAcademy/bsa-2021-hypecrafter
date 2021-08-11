@@ -1,4 +1,4 @@
-import { Alert, Button, Card, Col, Container, Image as BSImage, Row } from 'react-bootstrap';
+import { Alert, Button, Card, Col, Container, Image, Row } from 'react-bootstrap';
 
 function BootstrapExample() {
   return (

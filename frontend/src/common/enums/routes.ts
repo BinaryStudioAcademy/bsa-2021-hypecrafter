@@ -1,7 +1,7 @@
 export enum Routes {
   HOME = '/',
   LOGIN = '/login',
-  LOGOUT='/logout',
+  LOGOUT = '/logout',
   SIGNUP = '/signup',
   ADDFUNDS = '/add-funds',
   RESET_PASSWORD = '/reset-password',
@@ -10,5 +10,5 @@ export enum Routes {
   PROJECTS_CREATE = '/projects/create',
 
   TRENDS = '/trends',
-  PROFILE='/profile'
+  PROFILE = '/profile'
 }
