@@ -4,7 +4,7 @@ import { RefreshTokenRepository } from './refreshToken';
 
 export const initRepositories = (): Repositories => ({
   userRepository: getCustomRepository(UserRepository),
-  refreshTokenRepository: getCustomRepository(RefreshTokenRepository),
+  refreshTokenRepository: getCustomRepository(RefreshTokenRepository)
 });
 
 export type Repositories = {

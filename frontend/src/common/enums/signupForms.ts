@@ -1,0 +1,4 @@
+export enum Pages {
+  MAIN_FORM = 'MAIN_FORM',
+  ADDITIONAL_FORM = 'ADDITIONAL_FORM'
+}

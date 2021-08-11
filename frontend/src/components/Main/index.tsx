@@ -12,11 +12,16 @@ import TextStyleExample from '../TextStyleExample';
 import TabsExample from '../TabsExample';
 import Chart from '../Chart/Chart';
 import defaultProps from '../Chart/testprops';
+import SelectExample from '../SelectExample';
+import ExampleCounter from '../Counter/ExampleCounter';
+import Input from '../Input';
 
 function Main() {
   const [show, setShow] = useState(false);
   return (
     <div>
+      <Input type="number" />
+      <ExampleCounter />
       <TabsExample />
       <Chart
         type={defaultProps.type}
@@ -41,6 +46,7 @@ function Main() {
       <ButtonExample />
       <InputExample />
       <CardExample />
+      <SelectExample />
     </div>
   );
 }

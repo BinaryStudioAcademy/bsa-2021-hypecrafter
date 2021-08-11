@@ -5,10 +5,11 @@ import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import classes from './styles.module.scss';
 
 interface Props extends FormControlProps {
-  type?: 'text' | 'textarea' | 'email' | 'password'| 'search';
+  type?: 'text' | 'textarea' | 'email' | 'password'| 'search' | 'number';
   placeholder?: string;
   label?: string;
   errorMessage?: string;
+  step?: number;
 }
 
 const Input = forwardRef<HTMLInputElement, Props>(({
@@ -16,6 +17,7 @@ const Input = forwardRef<HTMLInputElement, Props>(({
   placeholder = '',
   label,
   errorMessage,
+  step = 2,
   ...restInputProps
 }, ref) => {
   const [showPassword, setShowPassword] = useState(false);
@@ -31,6 +33,7 @@ const Input = forwardRef<HTMLInputElement, Props>(({
           id="input"
           className={classes['input-field']}
           as={type === 'textarea' ? 'textarea' : 'input'}
+          step={step}
           {...restInputProps}
         />
         {type === 'password'
