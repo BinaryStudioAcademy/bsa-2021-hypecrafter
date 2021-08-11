@@ -14,7 +14,7 @@ import Chart from '../Chart/Chart';
 import defaultProps from '../Chart/testprops';
 
 function Main() {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
   return (
     <div>
       <TabsExample />

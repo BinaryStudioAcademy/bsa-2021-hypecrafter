@@ -1,11 +1,18 @@
 export interface UserProfile {
-  id: number,
-  name: string,
-  specialty: string,
-  location: string,
-  aboutMe: string,
-  rating: number,
-  instagram?: string,
-  facebook?: string,
-  dribble?: string
+  id: string;
+  firstName?: string;
+  lastName?: string;
+  email: string;
+  phoneNumber?: string;
+  description?: string;
+  region?: string;
+  balance: string;
+  rating: number;
+  instagramUrl?: string;
+  facebookUrl?: string;
+  dribbleUrl?: string;
+  lastLoginDate: string;
+  createdAt: string;
+  updatedAt?: string | null;
+  deletedAt?: string | null;
 }

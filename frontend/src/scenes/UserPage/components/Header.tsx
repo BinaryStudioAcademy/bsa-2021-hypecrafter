@@ -3,25 +3,24 @@ import { Col, Container, Image, Row } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookSquare, faInstagram, faDribbble } from '@fortawesome/free-brands-svg-icons';
-import { User } from '../interfaces';
 import classes from '../styles.module.scss';
+import { UserProfile } from '../../../common/types';
 
 interface HeaderProps {
-  user: User;
+  userProfile: UserProfile;
 }
 
-const Header: FunctionComponent<HeaderProps> = ({ user }) => {
+const Header: FunctionComponent<HeaderProps> = ({ userProfile }) => {
   const {
     firstName,
-    secondName,
-    location,
-    speciality,
-    aboutMe,
+    lastName,
+    region,
+    description,
     rating,
     instagramUrl,
     facebookUrl,
     dribbleUrl
-  } = user;
+  } = userProfile;
 
   return (
     <Container className={classes['header-container']}>
@@ -31,11 +30,11 @@ const Header: FunctionComponent<HeaderProps> = ({ user }) => {
         </Col>
         <Col md={12} lg={5} xl={4} className="text-md-left">
           <div className={classes['user-info']}>
-            <p className={classes['user-name']}>{`${firstName} ${secondName}`}</p>
-            <p className={classes['user-spec']}>{speciality}</p>
+            <p className={classes['user-name']}>{`${firstName} ${lastName}`}</p>
+            <p className={classes['user-spec']}>Specialty</p>
             <div>
               <FontAwesomeIcon icon={faMapMarkerAlt} />
-              <span className={classes['user-city']}>{location}</span>
+              <span className={classes['user-city']}>{region}</span>
             </div>
             <div className={classes['user-links']}>
               {instagramUrl
@@ -63,7 +62,7 @@ const Header: FunctionComponent<HeaderProps> = ({ user }) => {
           <div className={classes['user-about-me']}>
             <h3>About Me</h3>
             <p>
-              {aboutMe}
+              {description}
             </p>
           </div>
         </Col>

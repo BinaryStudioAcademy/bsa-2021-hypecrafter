@@ -1,5 +1,5 @@
 import { createRoutine } from 'redux-saga-routines';
-import { User } from '../../common/types/user';
+import { UserProfile } from '../../common/types';
 
 export enum UsersProfileActions {
   FETCH_USER = 'USERS/GET_BY_ID'
@@ -7,7 +7,7 @@ export enum UsersProfileActions {
 
 export const fetchUserProfileAction = createRoutine(UsersProfileActions.FETCH_USER, {
   trigger: (id: string) => id,
-  success: (user: User) => user,
+  success: (userProfile: UserProfile) => userProfile,
   failure: (error: string) => error
 });
 

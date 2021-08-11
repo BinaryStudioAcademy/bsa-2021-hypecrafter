@@ -1,11 +1,11 @@
-import { User } from '../../common/types';
+import { UserProfile } from '../../common/types';
 import { createReducer } from '../../helpers';
 import { fetchUserProfileAction } from './actions';
 import type { FetchUserProfileSuccessActionType, FetchUserProfileFailureActionType } from './actions';
 
 export interface UserProfileState {
   isLoading: boolean;
-  item: User | undefined;
+  item: UserProfile | undefined;
   error: string;
 }
 

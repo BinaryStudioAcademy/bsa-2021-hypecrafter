@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
+import LoaderWrapper from '../../components/LoaderWrapper';
 import { useTypedSelector } from '../../hooks';
 import { fetchUserProfileAction } from './actions';
 import Body from './components/Body';
@@ -10,28 +11,17 @@ import './styles.module.scss';
 const UserPage = () => {
   const dispatch = useDispatch();
   const store = useTypedSelector(({ userProfile: { item, isLoading } }) => ({
-    user: item,
+    userProfile: item,
     isLoading
   }));
 
-  const { user, isLoading } = store;
+  const { userProfile, isLoading } = store;
 
   useEffect(() => {
-    dispatch(fetchUserProfileAction('1'));
+    dispatch(fetchUserProfileAction('ac7a5b8f-7fc4-4d1e-81c9-1a9c49c9b529'));
   }, []);
 
   // Mocked Data
-  const userData = {
-    firstName: 'Anakin',
-    secondName: 'Skywalker',
-    location: 'Kyiv, Ukraine',
-    speciality: 'Sith apprentice',
-    // eslint-disable-next-line max-len
-    aboutMe: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima numquam ipsa nobis pariatur similique eveniet maiores tempora itaque nihil, aspernatur eligendi aperiam cumque odio temporibus molestiae.',
-    rating: 4.5,
-    instagramUrl: 'https://www.instagram.com/robertdowneyjr/',
-    facebookUrl: 'https://www.facebook.com/robmooreprogressive'
-  };
   const projects = [
     {
       id: '1',
@@ -116,12 +106,14 @@ const UserPage = () => {
 
   return (
     <Container>
-      <Row>
-        <Header user={userData} />
-      </Row>
-      <Row>
-        <Body projects={projects} achievements={achievements} activities={activities} />
-      </Row>
+      <LoaderWrapper isLoading={isLoading}>
+        <Row>
+          { !!userProfile && (<Header userProfile={userProfile} />)}
+        </Row>
+        <Row>
+          <Body projects={projects} achievements={achievements} activities={activities} />
+        </Row>
+      </LoaderWrapper>
     </Container>
   );
 };
