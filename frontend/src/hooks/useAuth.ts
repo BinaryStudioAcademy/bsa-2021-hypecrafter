@@ -1,14 +1,9 @@
-import { useSelector } from 'react-redux';
-import { StoreState } from '../common/types/store';
+import { useTypedSelector } from './store';
 
-export const useAuth = () => {
-  const id = useSelector(({ auth: { user } }: StoreState) => {
-    if (!user) return null;
-    if (typeof user.id === 'undefined') return null;
-    return user.id;
-  });
-
-  const isAuthorized = Boolean(id);
-
-  return { id, isAuthorized };
-};
+export const useAuth = () => (
+  useTypedSelector(({ auth }) => (
+    !auth.user
+      ? { id: undefined, isAuthorized: false }
+      : { id: auth.user.id, isAuthorized: true }
+  ))
+);
