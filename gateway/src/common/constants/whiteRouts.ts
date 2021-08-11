@@ -4,9 +4,7 @@ const WHITE_ROUTES = [
   '/auth/token',
   '/auth/token/reject',
   '/users',
-  '/users/:id',
-  '/topics',
-  '/projects'
+  '/users/:id'
 ];
 
 export { WHITE_ROUTES };
