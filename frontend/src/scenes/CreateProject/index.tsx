@@ -1,12 +1,15 @@
 import { useDispatch } from 'react-redux';
+import { useState } from 'react';
 import { createProjectAction } from './actions';
 import { Project } from '../../common/types/project';
+import Layout from './components/Layout';
+import { CurrentPage } from './enums';
 
 import classes from './styles.module.scss';
 
 const CreateProject = () => {
   const dispatch = useDispatch();
-
+  const [currentPage, setCurrentPage] = useState(CurrentPage.BEFORE_START);
   const createProject = (project:Project) => dispatch(createProjectAction(project));
   const newProject: Project = {
     id: '',
@@ -21,11 +24,7 @@ const CreateProject = () => {
   };
 
   return (
-    <button
-      type="button"
-      onClick={() => createProject(newProject)}
-    >Add Project
-    </button>
+    <Layout currentPage={currentPage} onChangePage={setCurrentPage} />
   );
 };
 

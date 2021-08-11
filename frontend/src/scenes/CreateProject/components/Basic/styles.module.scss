@@ -1,0 +1,11 @@
+@import '../../../../styles/vars';
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+    border-top: 1px solid $color-root-text;
+    .back{
+        background: none;
+        border: 1px solid $color-root-text;
+    }
+}

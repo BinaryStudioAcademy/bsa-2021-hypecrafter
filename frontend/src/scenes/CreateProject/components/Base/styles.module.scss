@@ -1,0 +1,39 @@
+@import '../../../../styles/vars';
+@import '../../../../styles/fonts.scss';
+
+$width_panel:200px;
+
+.root{
+    display: flex;
+    justify-content: center;
+}
+.layout_name{
+    font-size: $font-size-hyper-text;
+    font-family: $font-roboto700;
+    margin-left: $width_panel;
+}
+.layout_base{
+    width: 100%;
+    max-width: 900px;
+}
+.layout_left{
+    width: $width_panel;
+    padding: 0 15px;
+    min-height: 100%;
+}
+.layout_left_menu{
+    background: $color-root-block-background;
+    border-radius: 5px;
+    height: 100%;
+    padding: 10px;
+    button{
+        background: none;
+        width: 100%;
+    }
+}
+.layout_body{
+    display: flex;
+}
+.layout_center{
+    width: calc(100% - 2 * #{$width_panel});
+}

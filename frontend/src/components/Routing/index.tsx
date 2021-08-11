@@ -11,6 +11,7 @@ import PublicRoute from '../PublicRoute';
 import LoaderWrapper from '../LoaderWrapper';
 import PrivateRoute from '../PrivateRoute';
 import FundsPage from '../../scenes/Wallet/FundsPage';
+import CreateProject from '../../scenes/CreateProject';
 
 const Routing = () => {
   const dispatch = useDispatch();
@@ -48,6 +49,7 @@ const Routing = () => {
           component={LoginPage}
         />
         <PrivateRoute exact path={Routes.ADDFUNDS} component={FundsPage} />
+        <PublicRoute restricted={false} exact path={Routes.PROJECTS_CREATE} component={CreateProject} />
       </Switch>
     </LoaderWrapper>
   );
