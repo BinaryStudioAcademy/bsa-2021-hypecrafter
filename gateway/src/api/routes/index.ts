@@ -1,9 +1,9 @@
-import { Services } from "./../../services";
-import { Router } from "express";
-import { Path } from "../../common/enums";
-import userRouter from "./user";
-import authRouter from "./auth";
-import notificationRouter from "./notification";
+import { Router } from 'express';
+import { Services } from '../../services';
+import { Path } from '../../common/enums';
+import userRouter from './user';
+import authRouter from './auth';
+import notificationRouter from './notification';
 
 const initRoutes = (services: Services) => {
   const router = Router();

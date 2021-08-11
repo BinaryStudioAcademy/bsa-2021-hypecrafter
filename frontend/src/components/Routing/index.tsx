@@ -11,6 +11,7 @@ import LoginPage from '../LoginPage';
 import Main from '../Main';
 import PrivateRoute from '../PrivateRoute';
 import PublicRoute from '../PublicRoute';
+import SignupPage from '../SignupPage';
 
 const Routing = () => {
   const dispatch = useDispatch();
@@ -21,9 +22,9 @@ const Routing = () => {
   }));
   const { location: { pathname } } = useHistory();
 
+  const routesWitoutHeader = [Routes.LOGIN, Routes.SIGNUP];
   const { user, isLoading } = authStore;
   const hasToken = Boolean(localStorage.getItem(StorageKeys.ACCESS_TOKEN));
-  const routesWitoutHeader = [Routes.LOGIN];
 
   useEffect(() => {
     if (hasToken) {
@@ -46,6 +47,12 @@ const Routing = () => {
           path={Routes.LOGIN}
           exact
           component={LoginPage}
+        />
+        <PublicRoute
+          restricted={false}
+          path={Routes.SIGNUP}
+          exact
+          component={SignupPage}
         />
         <PrivateRoute exact path={Routes.ADDFUNDS} component={FundsPage} />
       </Switch>

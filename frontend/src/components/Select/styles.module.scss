@@ -1,0 +1,28 @@
+@import '../../styles/vars';
+
+.select-container {
+  flex-direction: column;
+  width: 100%;
+}
+
+.select-label {
+  font-weight: $font-weight-medium;
+}
+
+.select-field {
+  border: 1px solid $color-root-text;
+  border-radius: 1px;
+  background: none;
+  color: $color-root-text;
+  &:focus{
+      background: none;
+      color: $color-root-text;
+  }
+  margin-bottom: 1.5rem;
+}
+
+.select-option {
+  border: 1px solid $color-root-text;
+  border-radius: 1px;
+  background-color: $color-root-background;
+}

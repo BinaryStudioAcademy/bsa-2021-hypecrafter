@@ -5,10 +5,11 @@ import { FormControl, FormControlProps, FormLabel, InputGroup } from 'react-boot
 import classes from './styles.module.scss';
 
 interface Props extends FormControlProps {
-  type?: 'text' | 'textarea' | 'email' | 'password' | 'search';
+  type?: 'text' | 'textarea' | 'email' | 'password'| 'search' | 'number';
   placeholder?: string;
   label?: string;
   errorMessage?: string;
+  step?: number;
 }
 
 const Input = forwardRef<HTMLInputElement, Props>(({
@@ -16,6 +17,7 @@ const Input = forwardRef<HTMLInputElement, Props>(({
   placeholder = '',
   label,
   errorMessage,
+  step = 2,
   ...restInputProps
 }, ref) => {
   const [showPassword, setShowPassword] = useState(false);
@@ -30,6 +32,7 @@ const Input = forwardRef<HTMLInputElement, Props>(({
           placeholder={placeholder}
           id="input"
           className={classes['input-field']}
+          step={step}
           {...restInputProps}
         />
         {type === 'password'
