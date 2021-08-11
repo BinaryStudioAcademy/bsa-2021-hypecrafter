@@ -1,9 +1,9 @@
-import { User } from '../common/types';
-import { createReducer } from '../helpers';
-import { authFetchUserAction } from '../actions/auth';
 import type {
   AuthFetchUserSuccessActionType
 } from '../actions/auth';
+import { authFetchUserAction } from '../actions/auth';
+import { User } from '../common/types';
+import { createReducer } from '../helpers';
 
 export interface AuthState {
   isLoading: boolean;

@@ -1,103 +1,35 @@
 {
   "env": {
-    "browser": true,
-    "es2021": true
+    "browser": true
   },
-  "extends": [
-    "plugin:react/recommended",
-    "airbnb",
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended"
-  ],
-  "parser": "@typescript-eslint/parser",
+  "extends": ["airbnb-typescript", "plugin:react/recommended", "../.eslintrc.json"],
   "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": "latest",
+    "project": "./tsconfig.json",
     "ecmaFeatures": {
       "jsx": true
-    },
-    "ecmaVersion": 12,
-    "sourceType": "module"
+    }
   },
-  "plugins": [
-    "react",
-    "@typescript-eslint"
-  ],
-  "ignorePatterns": ["src/localization/locale-keys.js"],
+  "plugins": ["react"],
   "rules": {
-    "object-curly-newline": "off",
+    "react/display-name": "off",
+    "no-underscore-dangle": "off",
+    "import/no-named-as-default": "off",
     "react/react-in-jsx-scope": "off",
-    "@typescript-eslint/explicit-module-boundary-types": "off",
-    "@typescript-eslint/explicit-function-return-type": "off",
-    "no-shadow": "off",
-    "@typescript-eslint/no-shadow": [
-      "error"
-    ],
-    "no-use-before-define": "off",
-    "comma-dangle": [
-      "error",
-      "never"
-    ],
-    "max-len": [
-      "error",
-      {
-        "code": 120
-      }
-    ],
-    "@typescript-eslint/no-use-before-define": [
-      "error"
-    ],
-    "react/jsx-filename-extension": [
-      "warn",
-      {
-        "extensions": [
-          ".tsx"
-        ]
-      }
-    ],
-    "no-multiple-empty-lines": [
-      "error",
-      {
-        "max": 1
-      }
-    ],
-    "import/extensions": [
-      "error",
-      "ignorePackages",
-      {
-        "ts": "never",
-        "tsx": "never"
-      }
-    ],
-    "arrow-parens": "off",
-    "react/jsx-props-no-spreading": "off",
+    "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
+    "no-multiple-empty-lines": ["error", { "max": 1 }],
     "react/jsx-one-expression-per-line": "off",
-    "import/prefer-default-export": "off",
     "react/prop-types": "off",
+    "react/jsx-props-no-spreading": "off",
+    "@typescript-eslint/no-redeclare": "off",
     "jsx-a11y/label-has-associated-control": [
       "error",
       {
         "required": {
-          "some": [
-            "htmlFor"
-          ]
+          "some": ["htmlFor"]
         }
       }
     ]
-  },
-  "settings": {
-    "import/resolver": {
-      "node": {
-        "extensions": [
-          ".js",
-          ".jsx",
-          ".ts",
-          ".tsx"
-        ],
-        "moduleDirectory": [
-          "node_modules",
-          "."
-        ]
-      },
-      "typescript": {}
-    }
   }
 }

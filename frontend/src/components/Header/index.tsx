@@ -1,16 +1,16 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretDown, faCircle, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faBell } from '@fortawesome/free-regular-svg-icons';
-import { useState, ChangeEvent } from 'react';
+import { faCaretDown, faCircle, faSearch } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { ChangeEvent, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Routes } from '../../common/enums';
 import hypeCoin from '../../assets/HypeCoin.png';
-import classes from './styles.module.scss';
+import { Routes } from '../../common/enums';
+import Avatar from '../Avatar';
 import Input from '../Input';
 import Link from '../Link';
 import Logo from '../Logo';
-import Avatar from '../Avatar';
 import Popover from '../Popover';
+import classes from './styles.module.scss';
 
 const Header = () => {
   const [text, setText] = useState('');

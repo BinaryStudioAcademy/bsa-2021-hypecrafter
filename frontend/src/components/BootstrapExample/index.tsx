@@ -1,4 +1,4 @@
-import { Container, Col, Row, Alert, Card, Button, Image } from 'react-bootstrap';
+import { Alert, Button, Card, Col, Container, Image, Row } from 'react-bootstrap';
 
 function BootstrapExample() {
   return (
@@ -20,7 +20,7 @@ function BootstrapExample() {
 
       <Row style={{ marginTop: '2rem' }}>
         <h3>Card Example:</h3>
-        <Col md="auto">
+        <Col lg="auto">
           <Card style={{ width: '18rem' }}>
             <Card.Img variant="top" src="https://source.unsplash.com/random/800x600" />
             <Card.Body>
@@ -37,13 +37,13 @@ function BootstrapExample() {
 
       <Row style={{ marginTop: '2rem' }}>
         <h3>Images Grid Example:</h3>
-        <Col xs={6} md={4}>
+        <Col xs={6} lg={4}>
           <Image src="https://source.unsplash.com/random/171x180" rounded />
         </Col>
-        <Col xs={6} md={4}>
+        <Col xs={6} lg={4}>
           <Image src="https://source.unsplash.com/random/171x180" roundedCircle />
         </Col>
-        <Col xs={6} md={4}>
+        <Col xs={6} lg={4}>
           <Image src="https://source.unsplash.com/random/171x180" thumbnail />
         </Col>
       </Row>

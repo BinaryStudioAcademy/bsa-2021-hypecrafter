@@ -1,37 +1,35 @@
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { Switch, useHistory } from 'react-router-dom';
+import { Switch, useLocation } from 'react-router-dom';
 import { Routes, StorageKeys } from '../../common/enums';
+import { useAction, useTypedSelector } from '../../hooks';
+import Header from '../Header';
+import LoaderWrapper from '../LoaderWrapper';
 import LoginPage from '../LoginPage';
 import Main from '../Main';
-import { useTypedSelector } from '../../hooks';
-import { authFetchUserAction } from '../../actions/auth';
-import Header from '../Header';
-import PublicRoute from '../PublicRoute';
-import LoaderWrapper from '../LoaderWrapper';
 import PrivateRoute from '../PrivateRoute';
 import FundsPage from '../../scenes/Wallet/FundsPage';
 import CreateProject from '../../scenes/CreateProject';
+import PublicRoute from '../PublicRoute';
 import SignupPage from '../SignupPage';
 
+const routesWitoutHeader = [Routes.LOGIN, Routes.SIGNUP];
+
 const Routing = () => {
-  const dispatch = useDispatch();
-  const authUser = () => dispatch(authFetchUserAction());
+  const { authFetchUserAction } = useAction();
   const authStore = useTypedSelector(({ auth: { user, isLoading } }) => ({
     user,
     isLoading
   }));
-  const { location: { pathname } } = useHistory();
+  const { pathname } = useLocation();
 
-  const routesWitoutHeader = [Routes.LOGIN, Routes.SIGNUP];
   const { user, isLoading } = authStore;
   const hasToken = Boolean(localStorage.getItem(StorageKeys.ACCESS_TOKEN));
 
   useEffect(() => {
     if (hasToken) {
-      authUser();
+      authFetchUserAction();
     }
-  }, []);
+  }, [authFetchUserAction]);
 
   return (
     <LoaderWrapper isLoading={isLoading || (!user && hasToken)}>
