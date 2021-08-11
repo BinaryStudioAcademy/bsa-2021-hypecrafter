@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import Base from '../Base';
+import Layout from '../Layout';
 import classes from './styles.module.scss';
 import Button from '../../../../components/Button';
 import { CurrentPage } from '../../enums';
@@ -23,14 +23,17 @@ const Basic: FC<Props> = ({ changePage }) => {
         type="textarea"
         label="Describe what you’ll be creating."
       />
-      <div className={classes.footer}>
-        <Button onClick={handleBack} className={classes.back}>Go back</Button>
-        <Button onClick={handleNext}>Continue</Button>
-      </div>
+
+    </div>
+  );
+  const footer = (
+    <div className={classes.footer}>
+      <Button onClick={handleBack} className={classes.back}>Go back</Button>
+      <Button onClick={handleNext}>Continue</Button>
     </div>
   );
   return (
-    <Base header="First, let’s get you set up." body={body} />);
+    <Layout header="First, let’s get you set up." body={body} footer={footer} />);
 };
 
 export default Basic;

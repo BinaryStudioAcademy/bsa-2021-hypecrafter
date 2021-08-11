@@ -2,8 +2,9 @@ import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { createProjectAction } from './actions';
 import { Project } from '../../common/types/project';
-import Layout from './components/Layout';
 import { CurrentPage } from './enums';
+import Basic from './components/Basic';
+import BeforeStart from './components/BeforeStart';
 
 import classes from './styles.module.scss';
 
@@ -22,10 +23,14 @@ const CreateProject = () => {
     tags: [],
     url: ''
   };
-
-  return (
-    <Layout currentPage={currentPage} onChangePage={setCurrentPage} />
-  );
+  switch (currentPage) {
+    case CurrentPage.BEFORE_START:
+      return <BeforeStart changePage={setCurrentPage} />;
+    case CurrentPage.BASIC:
+      return <Basic changePage={setCurrentPage} />;
+    default:
+      return <BeforeStart changePage={setCurrentPage} />;
+  }
 };
 
 export default CreateProject;

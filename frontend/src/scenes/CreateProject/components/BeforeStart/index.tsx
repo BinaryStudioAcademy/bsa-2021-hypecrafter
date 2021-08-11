@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import Base from '../Base';
+import Layout from '../Layout';
 import classes from './styles.module.scss';
 import Button from '../../../../components/Button';
 import { CurrentPage } from '../../enums';
@@ -37,11 +37,15 @@ const BeforeStart: FC<Props> = ({ changePage }) => {
         and more than one!
       </p>
       <input type="checkbox" title="I agree" aria-label="I agre" />
-      <div className={classes.footer}><Button onClick={handleChangePage}>Create Project</Button></div>
+    </div>
+  );
+  const footer = (
+    <div className={classes.footer}>
+      <Button onClick={handleChangePage}>Create Project</Button>
     </div>
   );
   return (
-    <Base header="Before we start..." body={body} />);
+    <Layout header="Before we start..." body={body} footer={footer} />);
 };
 
 export default BeforeStart;

@@ -1,17 +1,36 @@
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
+import Button from '../../../../components/Button';
+import classes from './styles.module.scss';
 import { CurrentPage } from '../../enums';
-import Basic from '../Basic';
-import BeforeStart from '../BeforeStart';
 
-interface Props {
-  currentPage: CurrentPage,
-  onChangePage: (currentPage:CurrentPage)=>void
+interface Props{
+  header: string,
+  body?: ReactNode,
+  footer?: ReactNode,
+  currentPage?:CurrentPage
 }
 
-const Layout: FC<Props> = ({ currentPage, onChangePage }) => (
-  <div>
-    {currentPage === CurrentPage.BEFORE_START && <BeforeStart changePage={onChangePage} />}
-    {currentPage === CurrentPage.BASIC && <Basic changePage={onChangePage} />}
+const Layout: FC<Props> = ({ header, body, footer, currentPage }) => (
+  <div className={classes.root}>
+    <div className={classes.layout_base}>
+      <header>{header}</header>
+      <section>
+        <aside>
+          <div className={classes.menu}>
+            <Button>Basic</Button>
+            <Button>Story</Button>
+            <Button>Team</Button>
+            <Button>Funding</Button>
+            <Button>Benefits</Button>
+            <Button>Settings</Button>
+          </div>
+        </aside>
+        <article>
+          {body}
+          <footer>{footer}</footer>
+        </article>
+      </section>
+    </div>
   </div>
 );
 export default Layout;

@@ -7,7 +7,7 @@ $width_panel:200px;
     display: flex;
     justify-content: center;
 }
-.layout_name{
+header{
     font-size: $font-size-hyper-text;
     font-family: $font-roboto700;
     margin-left: $width_panel;
@@ -16,12 +16,12 @@ $width_panel:200px;
     width: 100%;
     max-width: 900px;
 }
-.layout_left{
+aside{
     width: $width_panel;
     padding: 0 15px;
     min-height: 100%;
 }
-.layout_left_menu{
+.menu{
     background: $color-root-block-background;
     border-radius: 5px;
     height: 100%;
@@ -29,11 +29,22 @@ $width_panel:200px;
     button{
         background: none;
         width: 100%;
+        &:focus{
+            box-shadow: none!important;
+        }
+        &:hover{
+            background: $color-root-modal-background;
+        }
     }
 }
-.layout_body{
+section{
     display: flex;
 }
-.layout_center{
+article{
     width: calc(100% - 2 * #{$width_panel});
+}
+footer{
+    margin: 10px 0;
+    padding-top: 20px;
+    border-top: 1px solid $color-root-text;
 }
