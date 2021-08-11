@@ -1,0 +1,86 @@
+openapi: 3.0.0
+info:
+  title: API
+  description: API documentation for BSA-Project [Hypecrafter](https://github.com/BinaryStudioAcademy/bsa-2021-hypecrafter)
+  version: 0.1.9
+servers:
+  - url: http://localhost:3001/api
+    description: Main server
+paths:
+  /users:
+    get:
+      tags:
+        - User
+      summary: Returns a list of users.
+      responses:
+        '200':
+          description: A JSON array of user names
+          content:
+            application/json:
+              schema: 
+                $ref: '#/components/schemas/User'
+              example:
+                - id: 1
+                  name: "Carmela Sykes"
+                - id: 2
+                  name: "Esther Leach"
+                - id: 3
+                  name: "Stuart Powers"
+        '408':
+          description: Something go wrong
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Timed out"
+  /users/{userId}:
+    get:
+      tags:
+        - User
+      summary: Returns a user by ID.
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          description: The ID of the user to return.
+          schema:
+            type: integer
+            format: int64
+            minimum: 1
+      responses:
+        '200':
+          description: A user object.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '408':
+          description: Something go wrong
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Timed out"
+components:
+  schemas:
+    User:
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+      # Both properties are required
+      required:  
+        - id
+        - name
+      example:
+        id: 3
+        name: "Stuart Powers"
+tags:
+  - name: User
