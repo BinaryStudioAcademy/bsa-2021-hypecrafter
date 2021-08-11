@@ -12,12 +12,15 @@ import TextStyleExample from '../TextStyleExample';
 import TabsExample from '../TabsExample';
 import Chart from '../Chart';
 import defaultProps from '../Chart/utils';
+import SelectExample from '../SelectExample';
 import ExampleCounter from '../Counter/ExampleCounter';
+import Input from '../Input';
 
 function Main() {
   const [show, setShow] = useState(false);
   return (
     <div>
+      <Input type="number" />
       <ExampleCounter />
       <TabsExample />
       <Chart
@@ -43,6 +46,7 @@ function Main() {
       <ButtonExample />
       <InputExample />
       <CardExample />
+      <SelectExample />
     </div>
   );
 }

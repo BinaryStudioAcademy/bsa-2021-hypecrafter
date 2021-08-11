@@ -20,4 +20,4 @@ const useCountTimeOnPage = (callback: (time: number) => void) => {
   return timeRef.current;
 };
 
-export default useCountTimeOnPage;
+export { useCountTimeOnPage };
