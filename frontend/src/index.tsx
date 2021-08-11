@@ -1,12 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
 import * as Sentry from '@sentry/react';
 import { Integrations } from '@sentry/tracing';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles/index.scss';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import App from './components/App';
-import './services/i18n';
 import { env } from './env';
+import './services/i18n';
+import './styles/index.scss';
 
 Sentry.init({
   dsn: env.sentry.dsn,

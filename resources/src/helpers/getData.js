@@ -1,8 +1,3 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-/* eslint-disable no-loop-func */
-/* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable guard-for-in */
-/* eslint-disable no-restricted-syntax */
 const chance = require('chance').Chance();
 const randomDate = require('random-datetime');
 const getRandomNumber = require('./getRandomNumber');
@@ -44,6 +39,7 @@ const getUserData = files => {
     });
     response = [...response, ...result];
   }
+  
   return Buffer.from(JSON.stringify(response));
 };
 

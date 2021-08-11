@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import classes from './styles.module.scss';
-import Tag from '../Tag';
-import ProgressBar from '../ProgressBar';
 import CardWithLink from '../Card/CardWithLink';
+import ProgressBar from '../ProgressBar';
+import Tag from '../Tag';
+import classes from './styles.module.scss';
 
 type Props = {
   to: string,
@@ -14,7 +14,7 @@ type Props = {
   percent: number;
   image: string;
   rounded?: boolean;
-}
+};
 
 const ProjectCard: FC<Props> = ({
   to,
@@ -33,7 +33,7 @@ const ProjectCard: FC<Props> = ({
     <div className={classes.description}>{description}</div>
 
     <div className={classes.tags}>
-      {tags.map((tag => <Tag text={tag} />))}
+      {tags.map(tag => <Tag key={tag} text={tag} />)}
     </div>
 
     <ProgressBar goal={goal} percent={percent} />

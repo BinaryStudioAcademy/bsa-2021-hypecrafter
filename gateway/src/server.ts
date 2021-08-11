@@ -1,13 +1,13 @@
-import { createConnection } from 'typeorm';
-import express from 'express';
 import cors from 'cors';
-import { log } from './helpers';
+import express from 'express';
+import { createConnection } from 'typeorm';
 import { initMiddlewares } from './api/middlewares';
-import initRoutes from './api/routes';
-import { env } from './env';
-import { initServices } from './services';
-import { initRepositories } from './data/repositories';
 import { initPassport } from './api/passport';
+import initRoutes from './api/routes';
+import { initRepositories } from './data/repositories';
+import { env } from './env';
+import { log } from './helpers';
+import { initServices } from './services';
 
 const { port, environment } = env.app;
 const app = express();
