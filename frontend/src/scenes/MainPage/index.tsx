@@ -1,20 +1,21 @@
 import { FC, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { useTypedSelector } from '../../hooks';
-import { fetchPopularAndRecommendedProjectsAction, fetchTopics } from './actions';
-import classes from './styles.module.scss';
-import Button from '../../components/Button';
-import ProjectCard from '../../components/ProjectCard';
-import Chart from '../../components/Chart';
-import { makeChartProps } from './utils';
-import { useLocalization } from '../../providers/localization';
 import { Project } from '../../common/types';
-import { calcDonationProgress } from '../../helpers/project';
+import Button from '../../components/Button';
+import Chart from '../../components/Chart';
 import LoaderWrapper from '../../components/LoaderWrapper';
+import ProjectCard from '../../components/ProjectCard';
+import { calcDonationProgress } from '../../helpers/project';
+import { useTypedSelector } from '../../hooks';
+import { useAction } from '../../hooks/useAction';
+import { useLocalization } from '../../providers/localization';
+import classes from './styles.module.scss';
+import { makeChartProps } from './utils';
 
 const MainPage: FC = () => {
   const { t } = useLocalization();
   const dispatch = useDispatch();
+  const actions = useAction();
   const {
     popular: popularStartups,
     recommended: recommendedStartups,
@@ -29,8 +30,8 @@ const MainPage: FC = () => {
     })
   );
   useEffect(() => {
-    dispatch(fetchPopularAndRecommendedProjectsAction());
-    dispatch(fetchTopics());
+    dispatch(actions.fetchPopularAndRecommendedProjectsAction());
+    dispatch(actions.fetchTopics());
   }, [dispatch]);
 
   const renderChart = () => {
