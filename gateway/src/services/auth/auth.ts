@@ -1,5 +1,5 @@
-import { RefreshToken } from './../../data/entities/refreshToken';
 import randtoken from 'rand-token';
+import { RefreshToken } from '../../data/entities/refreshToken';
 import { createToken } from '../../helpers/createToken';
 import { RefreshTokenRepository } from '../../data/repositories/refreshToken';
 import { CustomError } from '../../helpers/customError';
@@ -35,9 +35,8 @@ export default class AuthService {
     if (userToken && userToken.token === refreshToken) {
       const accessToken: string = createToken(userId);
       return { accessToken };
-    } else {
-      throw new CustomError(HttpStatusCode.UNAUTHORIZED, 'Refresh token is invalid');
     }
+    throw new CustomError(HttpStatusCode.UNAUTHORIZED, 'Refresh token is invalid');
   }
 
   public async deleteRefreshToken(refreshToken: string) {

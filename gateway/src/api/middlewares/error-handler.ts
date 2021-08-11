@@ -8,8 +8,8 @@ export const handleError = (
   res: Response,
   _next: NextFunction
 ) => {
-  const {status, message} = error;
-  
+  const { status, message } = error;
+
   log(error);
   res.sendStatus(status).send(message);
 };
