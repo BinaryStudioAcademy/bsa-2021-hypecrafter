@@ -1,14 +1,14 @@
-import ChartComponent from 'react-chartjs-2';
-import { ChartOptions, Chart as Chartjs, defaults } from 'chart.js';
+import { Chart as Chartjs, ChartOptions, defaults } from 'chart.js';
 import React from 'react';
+import ChartComponent from 'react-chartjs-2';
 import defaultProps from './utils';
 
 export interface DataItem {
   label: string;
   data: number[];
   fill?: boolean;
-  backgroundColor?: string | ((context: {chart: Chartjs}) => CanvasGradient| null);
-  borderColor?: string | ((context: {chart: Chartjs}) => CanvasGradient| null);
+  backgroundColor?: string | ((context: { chart: Chartjs }) => CanvasGradient | null);
+  borderColor?: string | ((context: { chart: Chartjs }) => CanvasGradient | null);
 }
 
 export type ChartType =

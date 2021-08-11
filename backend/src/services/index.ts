@@ -1,8 +1,8 @@
 import { getCustomRepository } from 'typeorm';
-import { UserRepository, TopicRepository, ProjectRepository } from '../data/repositories';
-import UserService from './user';
-import TopicService from './topic';
+import { ProjectRepository, TopicRepository, UserRepository } from '../data/repositories';
 import ProjectService from './project';
+import TopicService from './topic';
+import UserService from './user';
 
 export function initServices() {
   return {

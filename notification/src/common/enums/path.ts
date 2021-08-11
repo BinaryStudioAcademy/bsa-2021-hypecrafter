@@ -1,3 +1,3 @@
 export enum Path {
-    Notification = '/api/notifications',
+  Notification = '/api/notifications',
 }

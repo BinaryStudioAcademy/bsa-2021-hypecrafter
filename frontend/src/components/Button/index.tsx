@@ -1,11 +1,6 @@
-import { Button as ButtonRB, ButtonProps } from 'react-bootstrap';
-import {
-  MouseEventHandler,
-  ReactNode,
-  FunctionComponent,
-  CSSProperties
-} from 'react';
 import classnames from 'classnames';
+import { CSSProperties, FunctionComponent, MouseEventHandler, ReactNode } from 'react';
+import { Button as ButtonRB, ButtonProps } from 'react-bootstrap';
 import classes from './styles.module.scss';
 
 interface Props extends ButtonProps {

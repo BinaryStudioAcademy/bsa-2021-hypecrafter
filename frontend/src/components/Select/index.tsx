@@ -18,7 +18,7 @@ const Select = forwardRef<HTMLSelectElement, Props>(({
     {label && <Form.Label className={classes['select-label']}>{label}</Form.Label>}
     <Form.Select ref={ref} {...restFormGroupProps} className={classes['select-field']}>
       {defaultText && <option className={classes['select-option']} value="">{defaultText}</option>}
-      {options.map((option, i) => (
+      {options.map((option) => (
         <option className={classes['select-option']} key={option.value} value={option.value}>{option.text}</option>
       ))}
     </Form.Select>

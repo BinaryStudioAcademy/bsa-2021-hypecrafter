@@ -1,7 +1,7 @@
 import { Project, Topic } from '../../common/types';
 import { createReducer } from '../../helpers';
-import { fetchPopularAndRecommendedProjectsAction, fetchTopics } from './actions';
 import type { FetchPopularAndRecommendedProjectsSuccessActionType, FetchTopics } from './actions';
+import { fetchPopularAndRecommendedProjectsAction, fetchTopics } from './actions';
 
 export interface MainPageState {
   isLoading: boolean;
@@ -25,7 +25,7 @@ export const mainPageReducer = createReducer<MainPageState>(mainPageState, {
     };
   },
   [fetchPopularAndRecommendedProjectsAction.SUCCESS](state, action:
-    FetchPopularAndRecommendedProjectsSuccessActionType) {
+  FetchPopularAndRecommendedProjectsSuccessActionType) {
     return {
       ...state,
       isLoading: false,
@@ -40,7 +40,7 @@ export const mainPageReducer = createReducer<MainPageState>(mainPageState, {
     };
   },
   [fetchTopics.SUCCESS](state, action:
-    FetchTopics) {
+  FetchTopics) {
     return {
       ...state,
       isLoading: false,

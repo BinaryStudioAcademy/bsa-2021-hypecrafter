@@ -1,11 +1,11 @@
-import { UsersState } from '../../../scenes/Users/reducer';
 import { AuthState } from '../../../reducers/auth';
-import { MainPageState } from '../../../scenes/MainPage/reducer';
 import { ProjectState } from '../../../scenes/CreateProject/reducer';
+import { MainPageState } from '../../../scenes/MainPage/reducer';
+import { UserProfileState } from '../../../scenes/UserPage/reducer';
 
 export interface StoreState {
   mainPage: MainPageState;
-  users: UsersState;
+  userProfile: UserProfileState;
   auth: AuthState;
   project: ProjectState;
 }

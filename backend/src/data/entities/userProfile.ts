@@ -27,6 +27,9 @@ export class UserProfile extends AbstractEntity {
   @Column({ type: 'numeric', default: 0 })
   balance: number;
 
+  @Column({ type: 'numeric', default: 0 })
+  rating: number;
+
   @Column()
   lastLoginDate: Date;
 
@@ -35,6 +38,15 @@ export class UserProfile extends AbstractEntity {
 
   @Column({ nullable: true })
   region: string;
+
+  @Column({ nullable: true })
+  instagramUrl: string;
+
+  @Column({ nullable: true })
+  facebookUrl: string;
+
+  @Column({ nullable: true })
+  dribbleUrl: string;
 
   @OneToOne(() => AlertsSettings, alertsSettings => alertsSettings.user)
   @JoinColumn()

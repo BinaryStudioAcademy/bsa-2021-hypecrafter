@@ -1,4 +1,4 @@
-import { Container, Col } from 'react-bootstrap';
+import { Col, Container } from 'react-bootstrap';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import Input from '../Input';
 
@@ -11,9 +11,7 @@ interface FormData {
 function InputExample() {
   const { register, handleSubmit } = useForm<FormData>();
 
-  const onSubmit: SubmitHandler<FormData> = data => {
-    console.log('Sign In', data);
-  };
+  const onSubmit: SubmitHandler<FormData> = () => null;
 
   return (
     <Container>

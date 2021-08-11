@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
 const { task, src, dest } = require('gulp');
 const del = require('del');
 const gulpIf = require('gulp-if');

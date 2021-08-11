@@ -21,13 +21,13 @@ export const fetchTopics = createRoutine(ProjectsActions
 });
 
 export type FetchPopularAndRecommendedProjectsTriggerActionType =
-  ReturnType<typeof fetchPopularAndRecommendedProjectsAction.trigger>
+  ReturnType<typeof fetchPopularAndRecommendedProjectsAction.trigger>;
 
 export type FetchPopularAndRecommendedProjectsSuccessActionType =
-  ReturnType<typeof fetchPopularAndRecommendedProjectsAction.success>
+  ReturnType<typeof fetchPopularAndRecommendedProjectsAction.success>;
 
 export type FetchPopularAndRecommendedProjectsFailureActionType =
-  ReturnType<typeof fetchPopularAndRecommendedProjectsAction.failure>
+  ReturnType<typeof fetchPopularAndRecommendedProjectsAction.failure>;
 
-export type FetchTopics = ReturnType<typeof fetchTopics.success>
+export type FetchTopics = ReturnType<typeof fetchTopics.success>;
 
