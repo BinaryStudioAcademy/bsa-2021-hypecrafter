@@ -17,6 +17,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/yamljs": "^0.2.31",
     "@types/bcrypt": "^5.0.0",
     "@types/cors": "^2.8.12",
     "@types/express": "^4.17.3",
@@ -37,7 +38,6 @@
     "nodemon": "2.0.9"
   },
   "dependencies": {
-    "@types/yamljs": "^0.2.31",
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
