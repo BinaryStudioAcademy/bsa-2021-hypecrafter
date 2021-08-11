@@ -1,6 +1,5 @@
 import { FC, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { Spinner } from 'react-bootstrap';
 import { useTypedSelector } from '../../hooks';
 import { fetchPopularAndRecommendedProjectsAction, fetchTopics } from './actions';
 import classes from './styles.module.scss';
@@ -11,6 +10,7 @@ import { makeChartProps } from './utils';
 import { useLocalization } from '../../providers/localization';
 import { Project } from '../../common/types';
 import { calcDonationProgress } from '../../helpers/project';
+import LoaderWrapper from '../../components/LoaderWrapper';
 
 const MainPage: FC = () => {
   const { t } = useLocalization();
@@ -29,7 +29,6 @@ const MainPage: FC = () => {
     })
   );
   useEffect(() => {
-    // loadData
     dispatch(fetchPopularAndRecommendedProjectsAction());
     dispatch(fetchTopics());
   }, [dispatch]);
@@ -80,37 +79,41 @@ const MainPage: FC = () => {
         <section>
           <div className={classes.category}>{t('Popular startups')}</div>
           <div className={classes.cards}>
-            {isStartupsLoading ? <Spinner animation="border" /> : popularStartups.map((project: Project) => (
-              <ProjectCard
-                key={project.id}
-                to="/"
-                category={project.category}
-                tags={project.tags}
-                name={project.name}
-                description={project.description}
-                goal={project.goal}
-                percent={calcDonationProgress(project.donated, project.goal)}
-                image="https://source.unsplash.com/random/800x600"
-              />
-            ))}
+            <LoaderWrapper isLoading={isStartupsLoading}>
+              {popularStartups.map((project: Project) => (
+                <ProjectCard
+                  key={project.id}
+                  to="/"
+                  category={project.category}
+                  tags={project.tags}
+                  name={project.name}
+                  description={project.description}
+                  goal={project.goal}
+                  percent={calcDonationProgress(project.donated, project.goal)}
+                  image="https://source.unsplash.com/random/800x600"
+                />
+              ))}
+            </LoaderWrapper>
           </div>
         </section>
         <section>
           <div className={classes.category}>{t('Recommended for you')}</div>
           <div className={classes.cards}>
-            {isStartupsLoading ? <Spinner animation="border" /> : recommendedStartups.map((project: Project) => (
-              <ProjectCard
-                key={project.id}
-                to="/"
-                category={project.category}
-                tags={project.tags}
-                name={project.name}
-                description={project.description}
-                goal={project.goal}
-                percent={calcDonationProgress(project.donated, project.goal)}
-                image="https://source.unsplash.com/random/800x600"
-              />
-            ))}
+            <LoaderWrapper isLoading={isStartupsLoading}>
+              {recommendedStartups.map((project: Project) => (
+                <ProjectCard
+                  key={project.id}
+                  to="/"
+                  category={project.category}
+                  tags={project.tags}
+                  name={project.name}
+                  description={project.description}
+                  goal={project.goal}
+                  percent={calcDonationProgress(project.donated, project.goal)}
+                  image="https://source.unsplash.com/random/800x600"
+                />
+              ))}
+            </LoaderWrapper>
           </div>
         </section>
         <section>
