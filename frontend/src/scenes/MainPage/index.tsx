@@ -41,6 +41,7 @@ const MainPage: FC = () => {
       data.push(topic.sum);
     });
     const defaultProps = makeChartProps(labels, data);
+
     return (
       <Chart
         type="bar"
@@ -83,7 +84,7 @@ const MainPage: FC = () => {
               {popularStartups.map((project: Project) => (
                 <ProjectCard
                   key={project.id}
-                  to="/"
+                  to={`/projects/${project.id}`}
                   category={project.category}
                   tags={project.tags}
                   name={project.name}
@@ -103,7 +104,7 @@ const MainPage: FC = () => {
               {recommendedStartups.map((project: Project) => (
                 <ProjectCard
                   key={project.id}
-                  to="/"
+                  to={`/projects/${project.id}`}
                   category={project.category}
                   tags={project.tags}
                   name={project.name}

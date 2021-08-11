@@ -1,5 +1,5 @@
-import { Project } from '../../common/types';
 import { ProjectRepository } from '../../data/repositories';
+import { mapProjects } from '../../data/mappers/mapProjects';
 
 export default class ProjectService {
   readonly #projectRepository: ProjectRepository;
@@ -12,8 +12,8 @@ export default class ProjectService {
     const popular = await this.#projectRepository.getPopular();
     const recommended = await this.#projectRepository.getRecommended();
     return {
-      popular: popular.map((it: Project) => ({ ...it, tags: it.tags.split(',') })),
-      recommended: recommended.map((it: Project) => ({ ...it, tags: (it.tags).split(',') }))
+      popular: mapProjects(popular),
+      recommended: mapProjects(recommended)
     };
   }
 }
