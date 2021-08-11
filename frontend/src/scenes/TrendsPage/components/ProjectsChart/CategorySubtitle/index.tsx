@@ -1,11 +1,12 @@
 import { FC } from 'react';
 import { Category } from '../../../interfaces';
+import Button from '../../../../../components/Button';
 import classes from './style.module.scss';
 
 interface CategorySubtitleProps {
   item: Category;
   isSelected: boolean;
-  onCategoryClick: (name: Category) => void;
+  onCategoryClick: CallableFunction;
 }
 
 const CategorySubtitle: FC<CategorySubtitleProps> = ({
@@ -18,18 +19,17 @@ const CategorySubtitle: FC<CategorySubtitleProps> = ({
   };
 
   return (
-    <div
+    <Button
       key={item.id}
       className={
-        isSelected ? classes['subtopic-item-active'] : classes['subtopic-item']
+        isSelected
+          ? `${classes['subtopic-item']} ${classes['subtopic-item-active']}`
+          : classes['subtopic-item']
       }
       onClick={handleClick}
-      onKeyDown={handleClick}
-      role="button"
-      tabIndex={0}
     >
       {item.name}
-    </div>
+    </Button>
   );
 };
 

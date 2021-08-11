@@ -12,11 +12,12 @@ interface ChartProps {
 
 interface PopularTagsChartProps {
   defaultParams: ChartProps;
+  t: CallableFunction;
 }
 
-const PopularTagsChart: FC<PopularTagsChartProps> = ({ defaultParams }) => (
-  <div className={classes.item}>
-    <div className={classes.topic}>Popular tags</div>
+const PopularTagsChart: FC<PopularTagsChartProps> = ({ defaultParams, t }) => (
+  <section className={classes.item}>
+    <header className={classes.topic}>{t('Popular tags')}</header>
     <div className={classes['top-chart-wrapper']}>
       <Chart
         type={defaultParams.type}
@@ -25,7 +26,7 @@ const PopularTagsChart: FC<PopularTagsChartProps> = ({ defaultParams }) => (
         options={defaultParams.options}
       />
     </div>
-  </div>
+  </section>
 );
 
 export default PopularTagsChart;

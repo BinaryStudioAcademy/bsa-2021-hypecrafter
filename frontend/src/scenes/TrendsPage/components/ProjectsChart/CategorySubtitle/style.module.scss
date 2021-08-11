@@ -2,8 +2,9 @@
 @import '../../../../../styles/mixins';
 
 .subtopic-item {
+  @include reset-button;
   @include heading-md;
-  margin-right: 40px;
+  margin: 0 40px 10px 0;
   background: none !important;
   box-shadow: none !important;
   color: $color-root-text;
@@ -11,10 +12,5 @@
 }
 
 .subtopic-item-active {
-  @include heading-md;
-  margin-right: 40px;
-  background: none !important;
-  box-shadow: none !important;
   color: $color-root-turquoise !important;
-  text-decoration: none;
 }

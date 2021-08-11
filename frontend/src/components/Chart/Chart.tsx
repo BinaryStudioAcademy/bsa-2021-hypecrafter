@@ -2,7 +2,6 @@ import ChartComponent from 'react-chartjs-2';
 import { ChartOptions, Chart as Chartjs } from 'chart.js';
 import React from 'react';
 import defaultProps from './testprops';
-import classes from './style.module.scss';
 
 export interface DataItem {
   label: string;

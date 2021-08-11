@@ -15,11 +15,13 @@ interface ChartProps {
 interface PopularProjectsChartProps {
   defaultParams: ChartProps;
   categories: Category[];
+  t: CallableFunction;
 }
 
 const PopularProjectsChart: FC<PopularProjectsChartProps> = ({
   defaultParams,
-  categories
+  categories,
+  t
 }) => {
   const [selectedItem, setSelectedItem] = useState(categories[0]);
 
@@ -28,8 +30,8 @@ const PopularProjectsChart: FC<PopularProjectsChartProps> = ({
   };
 
   return (
-    <div className={classes.item}>
-      <div className={classes.topic}>Popular projects</div>
+    <section className={classes.item}>
+      <header className={classes.topic}>{t('Popular projects')}</header>
       <div className={classes['subtopic-wrapper']}>
         {categories.map((el: Category) => (
           <CategorySubtitle
@@ -41,7 +43,7 @@ const PopularProjectsChart: FC<PopularProjectsChartProps> = ({
         ))}
       </div>
       <div className={classes['text-wrapper']}>
-        <div className={classes.text}>{selectedItem.name}</div>
+        <p className={classes.text}>{selectedItem.name}</p>
         <div className={classes['bottom-chart-wrapper']}>
           <Chart
             type={defaultParams.type}
@@ -51,7 +53,7 @@ const PopularProjectsChart: FC<PopularProjectsChartProps> = ({
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
