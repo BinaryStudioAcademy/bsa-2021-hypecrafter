@@ -1,5 +1,4 @@
 import { FC, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
 import { Project } from '../../common/types';
 import Button from '../../components/Button';
 import Chart from '../../components/Chart';
@@ -14,7 +13,6 @@ import { makeChartProps } from './utils';
 
 const MainPage: FC = () => {
   const { t } = useLocalization();
-  const dispatch = useDispatch();
   const actions = useAction();
   const {
     popular: popularStartups,
@@ -30,9 +28,9 @@ const MainPage: FC = () => {
     })
   );
   useEffect(() => {
-    dispatch(actions.fetchPopularAndRecommendedProjectsAction());
-    dispatch(actions.fetchTopics());
-  }, [dispatch]);
+    actions.fetchPopularAndRecommendedProjectsAction();
+    actions.fetchTopics();
+  }, []);
 
   const renderChart = () => {
     const labels: string[] = [];
