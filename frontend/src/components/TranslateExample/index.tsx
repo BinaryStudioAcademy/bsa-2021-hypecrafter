@@ -1,6 +1,6 @@
-import { Button, Container } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Button, Container } from 'react-bootstrap';
 import { Languages } from '../../common/enums';
 import { useLocalization } from '../../providers/localization';
 
@@ -17,4 +17,5 @@ const TranslateExample = () => {
     </Container>
   );
 };
+
 export default TranslateExample;
