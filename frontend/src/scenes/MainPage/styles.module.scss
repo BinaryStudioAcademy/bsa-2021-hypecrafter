@@ -1,0 +1,106 @@
+@import '../../styles/mixins', './../../styles/vars';
+
+.buttons {
+  display: flex;
+  grid-gap: 20px;
+  @media (max-width: $breakpoint-md) {
+    margin-top: 20px;
+  }
+}
+
+.buttons [type='button'] {
+  padding: 10px 20px;
+}
+
+.root {
+  position: relative;
+  width: 100%;
+  padding: 0px 60px;
+  @media (min-width: 1900px) {
+    max-width: 1900px;
+    margin: 0 auto;
+  }
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  grid-template-rows: 1fr;
+  @media (max-width: $breakpoint-xl) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 1fr;
+  }
+}
+
+.main-text {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-flow: column;
+  padding: 200px 0px;
+  padding-right: 140px;
+  @media (max-width: $breakpoint-xl) {
+    grid-row: 2;
+    padding: 50px 0px;
+  }
+}
+
+.main-logo-text {
+  font-weight: bold;
+  font-size: 46px;
+}
+
+.logo {
+  background: $color-root-turquoise-gradient;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo-text {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21.6px;
+  margin-bottom: 20px;
+}
+
+.content {
+  margin-bottom: 20px;
+}
+
+.main-bg {
+  @include flex-center;
+  width: calc(100% + 60px);
+  background-image: url('../../assets/main_bg.jpg');
+  background-position: center;
+  background-size: cover;
+  @media (max-width: $breakpoint-xxxl) {
+    width: calc(100% + 120px);
+    margin-left: -60px;
+    order: 2;
+  }
+}
+
+.category {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  color: #fafbff;
+  margin-bottom: 30px;
+}
+
+.cards {
+  position: relative;
+  margin-bottom: 40px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(1, 1fr);
+
+  @media (min-width: $breakpoint-lg) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: $breakpoint-xxl) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -3,8 +3,6 @@
 
 .header-container {
   margin: 1.5rem 0;
-  display: flex;
-  width: 100%;
 
   .user-avatar {
     width: 190px;
@@ -60,6 +58,7 @@
     padding: 16px;
     border-radius: 6px;
     margin-left: auto;
+    margin-right: auto;
     background: $color-root-block-background;
     overflow: hidden;
 
@@ -76,7 +75,6 @@
     width: 170px;
     height: 150px;
     padding: 16px;
-    margin-left: 20px;
     border-radius: 6px;
     background: $color-root-block-background;
     text-align: center;
@@ -94,6 +92,30 @@
       -webkit-text-fill-color: transparent;
       -moz-background-clip: text;
       -moz-text-fill-color: transparent;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-lg) {
+    .user-about-me,
+    .user-rating {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .user-about-me {
+      margin: 1rem 0;
+    }
+
+    .user-info {
+      text-align: center;
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-lg) and (max-width: $breakpoint-xl) {
+    .user-about-me {
+      margin: 1rem 0;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }

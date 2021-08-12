@@ -5,13 +5,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   * {
     margin: 0 5px;
   }
-}
-
-.button[href] {
-  display: inline-block;
+  &:hover {
+    border-color: transparent;
+  }
+  &[href] {
+    display: inline-block;
+  }
 }
 
 .primary {
@@ -19,10 +22,16 @@
   border: none;
 }
 
-.secondary {
+.primary-outline {
+  background: $color-primary-button;
 }
 
 .outline {
+  border: solid 2px transparent;
+  box-shadow: 2px 1000px 1px $color-root-background inset;
+}
+
+.secondary {
 }
 
 .circle {

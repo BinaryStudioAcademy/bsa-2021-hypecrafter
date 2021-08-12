@@ -10,6 +10,9 @@ export const userProfiles = [
     cillum eiusmod nisi in reprehenderit amet dolor ad et nulla consectetur
     ipsum.\r\n`,
     balance: -3.7,
+    rating: 2.4,
+    instagramUrl: 'https://www.instagram.com/robertdowneyjr/',
+    facebookUrl: 'https://www.facebook.com/robmooreprogressive',
     lastLoginDate:
       'Wed Jul 28 2021 16:17:48 GMT+0300 (Eastern European Summer Time)',
     region: 'Niue'
@@ -28,6 +31,9 @@ export const userProfiles = [
     deserunt esse cillum ut. Ea laboris quis exercitation nisi
     labore tempor id Lorem amet duis proident mollit id.\r\n`,
     balance: -56.6,
+    rating: 4.2,
+    instagramUrl: 'https://www.instagram.com/robertdowneyjr/',
+    facebookUrl: 'https://www.facebook.com/robmooreprogressive',
     lastLoginDate:
       'Wed Jul 28 2021 16:17:48 GMT+0300 (Eastern European Summer Time)',
     region: 'Bouvet Island'
@@ -45,6 +51,9 @@ export const userProfiles = [
     ea veniam laborum ullamco sit aliqua consectetur ullamco eiusmod. Eiusmod deserunt cupidatat tempor duis
     Lorem consequat et excepteur laborum anim.\r\n`,
     balance: 77.45,
+    rating: 3.1,
+    instagramUrl: 'https://www.instagram.com/robertdowneyjr/',
+    facebookUrl: 'https://www.facebook.com/robmooreprogressive',
     lastLoginDate:
       'Wed Jul 28 2021 16:17:48 GMT+0300 (Eastern European Summer Time)',
     region: 'India'
@@ -62,6 +71,9 @@ export const userProfiles = [
     occaecat commodo minim ea nisi nostrud nostrud deserunt. Sint in ipsum
     dolor nostrud sit ea. Non exercitation laborum ut labore ut et.\r\n`,
     balance: 1.3,
+    rating: 3.8,
+    instagramUrl: 'https://www.instagram.com/robertdowneyjr/',
+    facebookUrl: 'https://www.facebook.com/robmooreprogressive',
     lastLoginDate:
       'Wed Jul 28 2021 16:17:48 GMT+0300 (Eastern European Summer Time)',
     region: 'New Caledonia'
@@ -79,6 +91,9 @@ export const userProfiles = [
     eu anim amet ad fugiat. Sit Lorem occaecat cillum consequat amet
     nisi tempor dolor commodo minim esse quis anim.\r\n`,
     balance: 15.6,
+    rating: 5.7,
+    instagramUrl: 'https://www.instagram.com/robertdowneyjr/',
+    facebookUrl: 'https://www.facebook.com/robmooreprogressive',
     lastLoginDate:
       'Wed Jul 28 2021 16:17:48 GMT+0300 (Eastern European Summer Time)',
     region: 'Northern Mariana Islands'
@@ -93,6 +108,9 @@ export const userProfiles = [
     ex eiusmod incididunt mollit. Minim pariatur irure mollit sunt
     ullamco minim aliqua magna cillum ad minim velit velit.\r\n`,
     balance: 51.1,
+    rating: 7.9,
+    instagramUrl: 'https://www.instagram.com/robertdowneyjr/',
+    facebookUrl: 'https://www.facebook.com/robmooreprogressive',
     lastLoginDate:
       'Wed Jul 28 2021 16:17:48 GMT+0300 (Eastern European Summer Time)',
     region: 'Swaziland'
