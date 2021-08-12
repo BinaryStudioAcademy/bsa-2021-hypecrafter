@@ -1,5 +1,5 @@
-import { Repository, EntityRepository } from 'typeorm';
-import { User } from '../entities/user';
+import { Repository, EntityRepository } from "typeorm";
+import { User } from "../entities/user";
 
 @EntityRepository(User)
 export class UserRepository extends Repository<User> {
@@ -13,5 +13,10 @@ export class UserRepository extends Repository<User> {
 
   getByEmail(email: string) {
     return this.findOne({ email });
+  }
+
+  createUser(data: { email: string; passwordHash: string }) {
+    const newUser: User = Object.assign(new User(), data);
+    return this.save(newUser);
   }
 }

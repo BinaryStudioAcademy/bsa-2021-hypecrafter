@@ -1,13 +1,10 @@
-import { getCustomRepository } from 'typeorm';
-import { UserRepository } from '../data/repositories/user';
 import UserService from './user';
+import { Repositories } from '../data/repositories';
 
-export function initServices() {
+export function initServices(repositories: Repositories): Services {
   return {
-    userService: new UserService(getCustomRepository(UserRepository))
+    userService: new UserService(repositories.userRepository)
   };
 }
 
-export interface Services {
-  userService: UserService
-}
+export type Services = { userService: UserService }

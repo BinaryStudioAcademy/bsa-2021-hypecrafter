@@ -11,7 +11,7 @@ import PublicRoute from '../PublicRoute';
 import LoaderWrapper from '../LoaderWrapper';
 import PrivateRoute from '../PrivateRoute';
 import FundsPage from '../../scenes/Wallet/FundsPage';
-import SignupPage from '../SignupPage';
+import SignupPage from '../../scenes/SignupPage';
 
 const Routing = () => {
   const dispatch = useDispatch();

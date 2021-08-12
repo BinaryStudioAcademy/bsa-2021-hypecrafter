@@ -35,6 +35,22 @@ export function initPassport(app: Express, repositories: Repositories) {
   );
 
   passport.use(
+    "register",
+    new LocalStrategy(
+      { passReqToCallback: true, usernameField: "email" },
+      async ({ body: data }, email, _password, done) => {
+        try {
+          return (await repositories.userRepository.getByEmail(email))
+            ? done({ status: 401, message: "Email is already taken." }, null)
+            : done(null, { ...data, email });
+        } catch (err) {
+          return done(err);
+        }
+      }
+    )
+  );
+
+  passport.use(
     new JwtStrategy(options, async (jwtPayload, done) => {
       done(null, jwtPayload);
     })

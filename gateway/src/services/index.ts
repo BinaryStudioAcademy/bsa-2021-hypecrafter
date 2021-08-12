@@ -3,7 +3,7 @@ import { Repositories } from '../data/repositories';
 
 export function initServices(repositories: Repositories): Services {
   return {
-    authService: new AuthService(repositories.refreshTokenRepository)
+    authService: new AuthService(repositories.refreshTokenRepository, repositories.userRepository)
   };
 }
 

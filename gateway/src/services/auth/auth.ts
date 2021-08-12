@@ -2,14 +2,18 @@ import { RefreshToken } from './../../data/entities/refreshToken';
 import randtoken from 'rand-token';
 import { createToken } from '../../helpers/createToken';
 import { RefreshTokenRepository } from '../../data/repositories/refreshToken';
+import { UserRepository } from '../../data/repositories/user';
 import { CustomError } from '../../helpers/customError';
 import { HttpStatusCode } from '../../../../shared/build/enums';
+import { encrypt } from '../../helpers/crypt';
 
 export default class AuthService {
   readonly #refreshTokenRepository: RefreshTokenRepository;
+  readonly #userRepository: UserRepository;
 
-  constructor(refreshTokenRepository: RefreshTokenRepository) {
+  constructor(refreshTokenRepository: RefreshTokenRepository, userRepository: UserRepository) {
     this.#refreshTokenRepository = refreshTokenRepository;
+    this.#userRepository = userRepository
   }
 
   public loginUser(
@@ -45,5 +49,17 @@ export default class AuthService {
     if (tokenItem) {
       await this.#refreshTokenRepository.deleteByToken(refreshToken);
     }
+  }
+
+  public async registerUser(
+    email: string,
+    password: string
+  ) {
+    const passwordHash: string = await encrypt(password);
+    const newUser = await this.#userRepository.createUser({
+      email,
+      passwordHash
+    });
+    return newUser;
   }
 }

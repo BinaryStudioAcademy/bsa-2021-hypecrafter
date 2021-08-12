@@ -3,8 +3,8 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import { Routes } from '../../../common/enums';
 import classes from '../styles.module.scss';
-import Input from '../../Input';
-import Button from '../../Button';
+import Input from '../../../components/Input';
+import Button from '../../../components/Button';
 import { Pages } from '../../../common/enums/signupForms';
 
 export type MainFormData = {

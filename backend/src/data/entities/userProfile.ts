@@ -36,6 +36,12 @@ export class UserProfile extends AbstractEntity {
   @Column({ nullable: true })
   region: string;
 
+  @Column({ nullable: true })
+  gender: string;
+
+  @Column({ nullable: true })
+  birthday: string;
+
   @OneToOne(() => AlertsSettings, alertsSettings => alertsSettings.user)
   @JoinColumn()
   alertsSettings: AlertsSettings;

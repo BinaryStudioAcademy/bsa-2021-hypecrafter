@@ -3,10 +3,12 @@ export interface User {
   lastName: string;
   email: string;
   phoneNumber: string;
-  balance: string;
+  balance: number;
   // passwordHash: string;
   // passwordSalt: string;
   lastLoginDate: Date;
   description: string;
   region: string;
+  gender: string;
+  birthday: string;
 }

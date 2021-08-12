@@ -1,13 +1,42 @@
-import { FunctionComponent, useState } from 'react';
+import { FunctionComponent, useState, useEffect } from 'react';
+import { withRouter, RouteComponentProps } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import classNames from 'classnames';
+import { useTypedSelector } from '../../hooks';
 import classes from './styles.module.scss';
 import logo from '../../assets/HypeCrafter.svg';
 import { useLocalization } from '../../providers/localization';
 import MainForm from './components/form-main';
 import AdditionalForm from './components/form-additional';
 import { Pages } from '../../common/enums/signupForms';
+import { registerUserAction } from './actions';
+import { SignupData } from '../../common/types/signup';
 
-const SignupPage: FunctionComponent = () => {
+// type Props = {} & RouteComponentProps
+
+const SignupPage: FunctionComponent = (props: any) => {
+  const { history } = props;
+  const dispatch = useDispatch();
+  const store = useTypedSelector(({ registration: { tokens, isLoading, error } }) => ({
+    accessToken: tokens?.accessToken,
+    refreshToken: tokens?.refreshToken,
+    isLoading,
+    error
+  }));
+  const { accessToken, refreshToken, isLoading, error } = store;
+
+  useEffect(() => {
+    if (error) {
+      console.log('error');
+    } else if (refreshToken) {
+      history.push('/');
+    }
+  });
+
+  const handleSignup = (data: SignupData) => {
+    dispatch(registerUserAction(data));
+  };
+
   const [currentPage, setCurrentPage] = useState(Pages.MAIN_FORM);
   const [mainFormInfo, setMainFormInfo] = useState({
     firstName: '',
@@ -32,6 +61,7 @@ const SignupPage: FunctionComponent = () => {
         setCurrentPage={setCurrentPage}
         mainFormInfo={mainFormInfo}
         t={t}
+        onSignup={handleSignup}
       />
     )
   };
@@ -67,4 +97,4 @@ const SignupPage: FunctionComponent = () => {
   );
 };
 
-export default SignupPage;
+export default withRouter(SignupPage);

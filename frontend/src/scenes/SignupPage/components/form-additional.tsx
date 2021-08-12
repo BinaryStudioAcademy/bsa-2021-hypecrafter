@@ -2,8 +2,8 @@ import { FunctionComponent } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { Form } from 'react-bootstrap';
 import classes from '../styles.module.scss';
-import Input from '../../Input';
-import Button from '../../Button';
+import Input from '../../../components/Input';
+import Button from '../../../components/Button';
 import { MainFormData } from './form-main';
 import { Pages } from '../../../common/enums/signupForms';
 
@@ -18,27 +18,41 @@ interface AdditionalFormProps {
   setCurrentPage: CallableFunction;
   mainFormInfo: MainFormData;
   t: CallableFunction;
+  onSignup: CallableFunction;
 }
 
 const AdditionalForm: FunctionComponent<AdditionalFormProps> = ({
   setCurrentPage,
   mainFormInfo,
-  t
+  t,
+  onSignup
 }: AdditionalFormProps) => {
   const { register, handleSubmit } = useForm<AdditionalFormData>();
 
   const onSubmit: SubmitHandler<AdditionalFormData> = (data) => {
     setCurrentPage(Pages.ADDITIONAL_FORM);
+    const { country: region, phone: phoneNumber, gender, birthday } = data;
+    const { email, firstName, lastName, password } = mainFormInfo;
+    onSignup({
+      region,
+      phoneNumber,
+      gender,
+      birthday,
+      email,
+      firstName,
+      lastName,
+      password
+    });
     console.log(
       'Sign Up',
-      data.country,
-      data.phone,
-      data.gender,
-      data.birthday,
-      mainFormInfo.email,
-      mainFormInfo.firstName,
-      mainFormInfo.lastName,
-      mainFormInfo.password
+      region,
+      phoneNumber,
+      gender,
+      birthday,
+      email,
+      firstName,
+      lastName,
+      password
     );
   };
 
