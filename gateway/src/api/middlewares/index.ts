@@ -1,16 +1,16 @@
-import express, { Express, json } from 'express';
 import cors from 'cors';
-import Gateway from 'micromq/gateway';
-import YAML from 'yamljs';
-import path from 'path';
+import express, { Express, json } from 'express';
 import { Project } from 'hypecrafter-shared/enums';
+import Gateway from 'micromq/gateway';
+import path from 'path';
 import swaggerUI, { JsonObject } from 'swagger-ui-express';
+import YAML from 'yamljs';
+import { WHITE_ROUTES } from '../../common/constants/whiteRouts';
+import { env } from '../../env';
+import { Services } from '../../services';
+import { authorization } from './authorization';
 import { handleError } from './error-handler';
 import { logger } from './logger';
-import { authorization } from './authorization';
-import { Services } from '../../services';
-import { env } from '../../env';
-import { WHITE_ROUTES } from '../../common/constants/whiteRouts';
 
 const swagger_path = path.resolve(
   __dirname,
@@ -24,9 +24,8 @@ export const initMiddlewares = (app: Express, _services: Services) => {
     microservices: [Project.BACKEND, Project.PAYMENT, Project.NOTIFICATION],
     rabbit,
   });
-
-  app.use('/', authorization(WHITE_ROUTES));
   app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
+  app.use('/', authorization(WHITE_ROUTES));
   app.use(cors());
   app.use(logger);
   app.use(json());
