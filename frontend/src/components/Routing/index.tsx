@@ -3,6 +3,7 @@ import { Switch, useLocation, Redirect } from 'react-router-dom';
 import { Routes, StorageKeys } from '../../common/enums';
 import { useAction, useTypedSelector } from '../../hooks';
 import MainPage from '../../scenes/MainPage';
+import TrendsPage from '../../scenes/TrendsPage';
 import FundsPage from '../../scenes/Wallet/FundsPage';
 import Header from '../Header';
 import LoaderWrapper from '../LoaderWrapper';
@@ -53,6 +54,12 @@ const Routing = () => {
           component={SignupPage}
         />
         <PrivateRoute exact path={Routes.ADDFUNDS} component={FundsPage} />
+        <PublicRoute
+          restricted={false}
+          path="/trends"
+          exact
+          component={TrendsPage}
+        />
         <PublicRoute
           restricted={false}
           path={Routes.NOTFOUND}

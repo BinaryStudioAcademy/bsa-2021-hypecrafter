@@ -64,4 +64,6 @@ declare type LocaleKeys =
   | 'Spain'
   | 'Switzerland'
   | 'Ukraine'
-  | 'United Kingdom';
+  | 'United Kingdom'
+  | 'Popular tags'
+  | 'Popular projects';
