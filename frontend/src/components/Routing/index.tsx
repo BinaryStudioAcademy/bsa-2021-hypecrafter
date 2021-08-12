@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { Switch, useHistory } from 'react-router-dom';
+import { Redirect, Switch, useHistory } from 'react-router-dom';
 import { Routes, StorageKeys } from '../../common/enums';
 import LoginPage from '../LoginPage';
 import Main from '../Main';
@@ -11,6 +11,7 @@ import PublicRoute from '../PublicRoute';
 import LoaderWrapper from '../LoaderWrapper';
 import PrivateRoute from '../PrivateRoute';
 import FundsPage from '../../scenes/Wallet/FundsPage';
+import PageNotFound from '../PageNotFound';
 
 const Routing = () => {
   const dispatch = useDispatch();
@@ -19,7 +20,9 @@ const Routing = () => {
     user,
     isLoading
   }));
-  const { location: { pathname } } = useHistory();
+  const {
+    location: { pathname }
+  } = useHistory();
 
   const routesWitoutHeader = [Routes.LOGIN];
   const { user, isLoading } = authStore;
@@ -48,6 +51,13 @@ const Routing = () => {
           component={LoginPage}
         />
         <PrivateRoute exact path={Routes.ADDFUNDS} component={FundsPage} />
+        <PublicRoute
+          restricted={false}
+          path={Routes.NOTFOUND}
+          exact
+          component={PageNotFound}
+        />
+        <Redirect from="*" to={Routes.NOTFOUND} />
       </Switch>
     </LoaderWrapper>
   );

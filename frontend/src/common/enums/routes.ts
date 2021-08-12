@@ -5,5 +5,6 @@ export enum Routes {
   ADDFUNDS = '/add-funds',
   RESET_PASSWORD = '/reset-password',
   PROJECTS = '/projects',
-  TRENDS='/trends'
+  TRENDS = '/trends',
+  NOTFOUND = '/page-not-found'
 }
