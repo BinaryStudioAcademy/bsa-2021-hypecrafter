@@ -1,13 +1,6 @@
 import { ChartType } from '../../../components/Chart/Chart';
 import { Project } from '../interfaces';
-
-const randomBrightColor = (length: number) => {
-  const colors: string[] = [];
-  while (colors.length < length) {
-    colors.push(`hsl(${360 * Math.random()},100%,50%)`);
-  }
-  return colors;
-};
+import { randomBrightColor } from '../../../helpers';
 
 const defaultOptions = {
   responsive: true,

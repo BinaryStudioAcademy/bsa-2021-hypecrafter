@@ -5,10 +5,7 @@ import {
   blueColorsReverse
 } from '../../../components/Chart/helpers';
 import { TagItem } from '../interfaces';
-
-const getSortedArray = (array: TagItem[]) => {
-  array.sort((a, b) => (a.quantity > b.quantity ? -1 : 1));
-};
+import { getSortedArray } from '../../../helpers';
 
 const getDefaultOptions = (data: TagItem[]) => ({
   responsive: true,
@@ -47,7 +44,7 @@ const getDefaultOptions = (data: TagItem[]) => ({
 });
 
 const getDefaultData = (data: TagItem[]) => {
-  getSortedArray(data);
+  getSortedArray(data, 'quantity');
   return {
     labels: data.map((item) => item.name),
     datasets: [

@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import classnames from 'classnames';
 import { Category } from '../../../interfaces';
 import Button from '../../../../../components/Button';
 import classes from './style.module.scss';
@@ -22,11 +23,10 @@ const CategorySubtitle: FC<CategorySubtitleProps> = ({
     <Button
       key={item.id}
       onClick={handleClick}
-      className={
-        isSelected
-          ? `${classes['subtopic-item']} ${classes['subtopic-item-active']}`
-          : classes['subtopic-item']
-      }
+      className={classnames({
+        [classes['subtopic-item']]: true,
+        [classes['subtopic-item-active']]: isSelected
+      })}
     >
       {item.name}
     </Button>
