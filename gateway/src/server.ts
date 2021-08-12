@@ -1,3 +1,4 @@
+import cors from 'cors';
 import express from 'express';
 import { createConnection } from 'typeorm';
 import { initMiddlewares } from './api/middlewares';
@@ -10,7 +11,7 @@ import { initServices } from './services';
 
 const { port, environment } = env.app;
 const app = express();
-
+app.use(cors());
 createConnection().then(() => {
   try {
     const repositories = initRepositories();

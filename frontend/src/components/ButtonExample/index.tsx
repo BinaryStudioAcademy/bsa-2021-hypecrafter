@@ -5,7 +5,7 @@ const ButtonExample = () => (
     <Button className="aaaa" type="button" onClick={() => true}>
       <span>Button</span>
     </Button>
-    <Button type="button" isLoading isDisabled>
+    <Button type="button" disable>
       <span>LoadingButton</span>
     </Button>
     <Button type="button" shape="circle">

@@ -1,5 +1,4 @@
 import { Chart } from 'chart.js';
-import { ChartType } from './Chart';
 
 function getGradient(ctx: CanvasRenderingContext2D, chartArea: { bottom: number; top: number }) {
   const gradient = ctx.createLinearGradient(
@@ -53,10 +52,7 @@ const defaultData = {
   ]
 };
 
-const type: ChartType = 'line';
-
 const defaultProps = {
-  type,
   data: defaultData,
   options: defaultOptions
 };

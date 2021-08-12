@@ -40,6 +40,7 @@
     "arrow-parens": "off",
     "import/prefer-default-export": "off"
   },
+  "ignorePatterns": "resources",
   "settings": {
     "import/resolver": {
       "node": {

@@ -2,11 +2,11 @@ import { useEffect } from 'react';
 import { Switch, useLocation } from 'react-router-dom';
 import { Routes, StorageKeys } from '../../common/enums';
 import { useAction, useTypedSelector } from '../../hooks';
+import MainPage from '../../scenes/MainPage';
 import FundsPage from '../../scenes/Wallet/FundsPage';
 import Header from '../Header';
 import LoaderWrapper from '../LoaderWrapper';
 import LoginPage from '../LoginPage';
-import Main from '../Main';
 import PrivateRoute from '../PrivateRoute';
 import PublicRoute from '../PublicRoute';
 import SignupPage from '../SignupPage';
@@ -31,14 +31,14 @@ const Routing = () => {
   }, [authFetchUserAction]);
 
   return (
-    <LoaderWrapper isLoading={isLoading || (!user && hasToken)}>
+    <LoaderWrapper isLoading={isLoading || (!user && hasToken)} variant='page'>
       {!routesWitoutHeader.includes(pathname as Routes) && <Header />}
       <Switch>
         <PublicRoute
           restricted={false}
           path={Routes.HOME}
           exact
-          component={Main}
+          component={MainPage}
         />
         <PublicRoute
           restricted={false}
