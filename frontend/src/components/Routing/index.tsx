@@ -31,7 +31,7 @@ const Routing = () => {
   }, [authFetchUserAction]);
 
   return (
-    <LoaderWrapper isLoading={isLoading || (!user && hasToken)}>
+    <LoaderWrapper isLoading={isLoading || (!user && hasToken)} variant='page'>
       {!routesWitoutHeader.includes(pathname as Routes) && <Header />}
       <Switch>
         <PublicRoute

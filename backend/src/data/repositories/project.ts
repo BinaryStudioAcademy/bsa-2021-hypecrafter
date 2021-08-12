@@ -1,4 +1,4 @@
-import { Repository, EntityRepository } from 'typeorm';
+import { EntityRepository, Repository } from 'typeorm';
 import { Project } from '../entities/project';
 
 @EntityRepository(Project)
@@ -8,13 +8,13 @@ export class ProjectRepository extends Repository<Project> {
   private getProjectsByOrder(order: string) {
     return this.createQueryBuilder('project')
       .select(`
-        amount as donated,
+        amount AS donated,
         description,
-        project.name as "name",
+        project.name AS "name",
         project."id",
         goal,
-        category.name as "category",
-        array_to_string(array_agg(tag.name),', ') as "tags"
+        category.name AS "category",
+        array_to_string(array_agg(tag.name),', ') AS "tags"
       `)
       .leftJoin('project.donates', 'donate')
       .leftJoin('project.category', 'category')

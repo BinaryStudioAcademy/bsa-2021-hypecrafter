@@ -13,7 +13,7 @@ import { makeChartProps } from './utils';
 
 const MainPage: FC = () => {
   const { t } = useLocalization();
-  const actions = useAction();
+  const { fetchPopularAndRecommendedProjectsAction, fetchTopics } = useAction();
   const {
     popular: popularStartups,
     recommended: recommendedStartups,
@@ -28,8 +28,8 @@ const MainPage: FC = () => {
     })
   );
   useEffect(() => {
-    actions.fetchPopularAndRecommendedProjectsAction();
-    actions.fetchTopics();
+    fetchPopularAndRecommendedProjectsAction();
+    fetchTopics();
   }, []);
 
   const renderChart = () => {
@@ -70,7 +70,7 @@ const MainPage: FC = () => {
           </div>
           <div className={classes.buttons}>
             <Button type="button">{t('Create Project')}</Button>
-            <Button type="button" variant="primary" isOutline>{t('Help Project')}</Button>
+            <Button type="button" variant="primary" outline>{t('Help Project')}</Button>
           </div>
         </div>
         <div className={classes['main-bg']} />
