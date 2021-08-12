@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Switch, useLocation } from 'react-router-dom';
+import { Switch, useLocation, Redirect } from 'react-router-dom';
 import { Routes, StorageKeys } from '../../common/enums';
 import { useAction, useTypedSelector } from '../../hooks';
 import MainPage from '../../scenes/MainPage';
@@ -9,6 +9,7 @@ import Header from '../Header';
 import LoaderWrapper from '../LoaderWrapper';
 import LoginPage from '../LoginPage';
 import PrivateRoute from '../PrivateRoute';
+import PageNotFound from '../PageNotFound';
 import PublicRoute from '../PublicRoute';
 import SignupPage from '../SignupPage';
 
@@ -21,7 +22,6 @@ const Routing = () => {
     isLoading
   }));
   const { pathname } = useLocation();
-
   const { user, isLoading } = authStore;
   const hasToken = Boolean(localStorage.getItem(StorageKeys.ACCESS_TOKEN));
 
@@ -60,6 +60,13 @@ const Routing = () => {
           exact
           component={TrendsPage}
         />
+        <PublicRoute
+          restricted={false}
+          path={Routes.NOTFOUND}
+          exact
+          component={PageNotFound}
+        />
+        <Redirect from="*" to={Routes.NOTFOUND} />
       </Switch>
     </LoaderWrapper>
   );
