@@ -1,7 +1,7 @@
 import { FC, ReactNode } from 'react';
 import Button from '../../../../components/Button';
-import classes from './styles.module.scss';
 import { CurrentPage } from '../../enums';
+import classes from './styles.module.scss';
 
 interface Props{
   header: string,
@@ -17,22 +17,38 @@ const Layout: FC<Props> = ({ header, body, footer, currentPage, setCurrentPage }
       <header>{header}</header>
       <section>
         <aside>{currentPage !== CurrentPage.BEFORE_START && (
-          <div className={classes.menu}>
-            <Button
-              onClick={() => setCurrentPage(CurrentPage.BASIC)}
-              className={currentPage === CurrentPage.BASIC ? classes.activePage : ''}
-            >Basic
-            </Button>
-            <Button
-              onClick={() => setCurrentPage(CurrentPage.STORY)}
-              className={currentPage === CurrentPage.STORY ? classes.activePage : ''}
-            >Story
-            </Button>
-            <Button>Team</Button>
-            <Button>Funding</Button>
-            <Button>Benefits</Button>
-            <Button>Settings</Button>
-          </div>
+        <div className={classes.menu}>
+          <Button
+            onClick={() => setCurrentPage(CurrentPage.BASIC)}
+            className={currentPage === CurrentPage.BASIC ? classes.activePage : ''}
+          >Basic
+          </Button>
+          <Button
+            onClick={() => setCurrentPage(CurrentPage.STORY)}
+            className={currentPage === CurrentPage.STORY ? classes.activePage : ''}
+          >Story
+          </Button>
+          <Button
+            onClick={() => setCurrentPage(CurrentPage.TEAM)}
+            className={currentPage === CurrentPage.TEAM ? classes.activePage : ''}
+          >Team
+          </Button>
+          <Button
+            onClick={() => setCurrentPage(CurrentPage.FUNDING)}
+            className={currentPage === CurrentPage.FUNDING ? classes.activePage : ''}
+          >Funding
+          </Button>
+          <Button
+            onClick={() => setCurrentPage(CurrentPage.BENEFITS)}
+            className={currentPage === CurrentPage.BENEFITS ? classes.activePage : ''}
+          >Benefits
+          </Button>
+          <Button
+            onClick={() => setCurrentPage(CurrentPage.SETTINGS)}
+            className={currentPage === CurrentPage.SETTINGS ? classes.activePage : ''}
+          >Settings
+          </Button>
+        </div>
         )}
         </aside>
         <article>

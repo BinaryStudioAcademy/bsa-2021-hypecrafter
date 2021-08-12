@@ -2,9 +2,9 @@ import { FC } from 'react';
 import classes from './styles.module.scss';
 
 interface Props{
-    label: string,
-    value: boolean,
-    onChange:()=>void
+  label: string,
+  value: boolean,
+  onChange:()=>void
 }
 
 const Checkbox: FC<Props> = ({ label, value, onChange }) => (
