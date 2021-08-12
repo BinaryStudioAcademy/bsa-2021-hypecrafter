@@ -97,3 +97,10 @@
   font-style: normal;
   line-height: $line-height-md;
 }
+
+@mixin hoover ($bg-color) {
+  cursor: pointer;
+  &:hover {
+    background-color: lighten($bg-color, 25%) !important;
+  }
+}

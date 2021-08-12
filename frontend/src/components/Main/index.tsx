@@ -3,8 +3,8 @@ import UserPage from '../../scenes/UserPage';
 import BootstrapExample from '../BootstrapExample';
 import ButtonExample from '../ButtonExample';
 import CardExample from '../CardExample';
-import Chart from '../Chart/Chart';
-import defaultProps from '../Chart/testprops';
+import Chart from '../Chart';
+import defaultProps from '../Chart/utils';
 import ExampleCounter from '../Counter/ExampleCounter';
 import Input from '../Input';
 import InputExample from '../InputExample';
@@ -23,7 +23,7 @@ function Main() {
       <ExampleCounter />
       <TabsExample />
       <Chart
-        type={defaultProps.type}
+        type="line"
         labels={defaultProps.data.labels}
         dataSets={defaultProps.data.datasets}
       />

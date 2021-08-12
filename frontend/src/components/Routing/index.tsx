@@ -1,14 +1,16 @@
 import { useEffect } from 'react';
-import { Switch, useLocation } from 'react-router-dom';
+import { Switch, useLocation, Redirect } from 'react-router-dom';
 import { Routes, StorageKeys } from '../../common/enums';
 import { useAction, useTypedSelector } from '../../hooks';
+import MainPage from '../../scenes/MainPage';
+import TrendsPage from '../../scenes/TrendsPage';
 import Header from '../Header';
 import LoaderWrapper from '../LoaderWrapper';
 import LoginPage from '../LoginPage';
-import Main from '../Main';
 import PrivateRoute from '../PrivateRoute';
 import FundsPage from '../../scenes/Wallet/FundsPage';
 import CreateProject from '../../scenes/CreateProject';
+import PageNotFound from '../PageNotFound';
 import PublicRoute from '../PublicRoute';
 import SignupPage from '../SignupPage';
 
@@ -21,7 +23,6 @@ const Routing = () => {
     isLoading
   }));
   const { pathname } = useLocation();
-
   const { user, isLoading } = authStore;
   const hasToken = Boolean(localStorage.getItem(StorageKeys.ACCESS_TOKEN));
 
@@ -32,14 +33,14 @@ const Routing = () => {
   }, [authFetchUserAction]);
 
   return (
-    <LoaderWrapper isLoading={isLoading || (!user && hasToken)}>
+    <LoaderWrapper isLoading={isLoading || (!user && hasToken)} variant='page'>
       {!routesWitoutHeader.includes(pathname as Routes) && <Header />}
       <Switch>
         <PublicRoute
           restricted={false}
           path={Routes.HOME}
           exact
-          component={Main}
+          component={MainPage}
         />
         <PublicRoute
           restricted={false}
@@ -54,7 +55,23 @@ const Routing = () => {
           component={SignupPage}
         />
         <PrivateRoute exact path={Routes.ADDFUNDS} component={FundsPage} />
+<<<<<<< HEAD
         <PublicRoute restricted={false} exact path={Routes.PROJECTS_CREATE} component={CreateProject} />
+=======
+        <PublicRoute
+          restricted={false}
+          path="/trends"
+          exact
+          component={TrendsPage}
+        />
+        <PublicRoute
+          restricted={false}
+          path={Routes.NOTFOUND}
+          exact
+          component={PageNotFound}
+        />
+        <Redirect from="*" to={Routes.NOTFOUND} />
+>>>>>>> develop
       </Switch>
     </LoaderWrapper>
   );
