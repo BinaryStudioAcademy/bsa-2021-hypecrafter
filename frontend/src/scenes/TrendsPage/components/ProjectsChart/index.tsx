@@ -1,9 +1,9 @@
-import { FC, useState } from 'react';
 import { ChartOptions } from 'chart.js';
-import classes from './style.module.scss';
-import Chart, { DataItem, ChartType } from '../../../../components/Chart/Chart';
+import { FC, useState } from 'react';
+import Chart, { ChartType, DataItem } from '../../../../components/Chart';
 import { Category } from '../../interfaces';
 import CategorySubtitle from './CategorySubtitle';
+import classes from './style.module.scss';
 
 interface ChartProps {
   type: ChartType;
@@ -50,6 +50,8 @@ const PopularProjectsChart: FC<PopularProjectsChartProps> = ({
             labels={defaultParams.labels}
             dataSets={defaultParams.dataSets}
             options={defaultParams.options}
+            height="400px"
+            width="300px"
           />
         </div>
       </div>

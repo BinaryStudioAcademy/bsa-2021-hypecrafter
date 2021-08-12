@@ -10,4 +10,4 @@ declare interface ParamsDictionary {
 }
 declare interface Query { [key: string]: undefined | string | string[] | Query | Query[] }
 
-declare type Empty = Record<string, never>
+declare type Empty = Record<string, never>;

@@ -1,13 +1,13 @@
 import { FC } from 'react';
 import { Container } from 'react-bootstrap';
-import classes from './styles.module.scss';
-import { tags, projects, categories } from './data';
 import { useLocalization } from '../../providers/localization';
-import { TagsChart, ProjectsChart } from './components';
-import { getTagsOptions, getProjectsOptions } from './options';
+import { ProjectsChart, TagsChart } from './components';
+import { categories, projects, tags } from './data';
+import { getProjectsOptions, getTagsOptions } from './options';
+import classes from './styles.module.scss';
 
 const TrendsPage: FC = () => {
-  const { t, changeLanguage } = useLocalization();
+  const { t } = useLocalization();
 
   const defProps = getProjectsOptions(projects);
   const defaultProps = getTagsOptions(tags);

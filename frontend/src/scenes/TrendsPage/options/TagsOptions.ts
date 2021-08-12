@@ -1,11 +1,10 @@
-import { ChartEvent, ActiveElement } from 'chart.js';
-import { ChartType } from '../../../components/Chart/Chart';
+import { ActiveElement, ChartEvent } from 'chart.js';
+import { ChartType } from '../../../components/Chart';
 import {
-  setBorderColorGradient,
-  blueColorsReverse
+  blueColorsReverse, setBorderColorGradient
 } from '../../../components/Chart/helpers';
-import { TagItem } from '../interfaces';
 import { getSortedArray } from '../../../helpers';
+import { TagItem } from '../interfaces';
 
 const getDefaultOptions = (data: TagItem[]) => ({
   responsive: true,

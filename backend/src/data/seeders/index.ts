@@ -1,12 +1,12 @@
 import { createConnection } from 'typeorm';
 import { log } from '../../helpers/logger';
-import UserProfileSeeder from './userProfileSeeder';
+import AlertsSettingsSeeder from './alertsSettingsSeeder';
 import CategorySeeder from './categorySeeder';
-import TagsSeeder from './tagsSeeder';
 import ProjectSeeder from './projectSeeder';
 import ProjectTagsSeeder from './projectTagsSeeder';
+import TagsSeeder from './tagsSeeder';
 import UserProfileProjectSeeder from './userProfileProjectSeeder';
-import AlertsSettingsSeeder from './alertsSettingsSeeder';
+import UserProfileSeeder from './userProfileSeeder';
 
 createConnection()
   .then(async () => {

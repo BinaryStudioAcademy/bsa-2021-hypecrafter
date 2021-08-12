@@ -1,7 +1,7 @@
-import { FC } from 'react';
 import { ChartOptions } from 'chart.js';
+import { FC } from 'react';
+import Chart, { ChartType, DataItem } from '../../../../components/Chart';
 import classes from './style.module.scss';
-import Chart, { DataItem, ChartType } from '../../../../components/Chart/Chart';
 
 interface ChartProps {
   type: ChartType;
@@ -24,6 +24,7 @@ const PopularTagsChart: FC<PopularTagsChartProps> = ({ defaultParams, t }) => (
         labels={defaultParams.labels}
         dataSets={defaultParams.dataSets}
         options={defaultParams.options}
+        height="230px"
       />
     </div>
   </section>

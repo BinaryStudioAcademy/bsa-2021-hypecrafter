@@ -1,34 +1,32 @@
 import { useState } from 'react';
-import Users from '../../scenes/Users';
-import BootstrapExample from '../BootstrapExample';
-import TranslateExample from '../TranslateExample';
-import ButtonExample from '../ButtonExample';
-import InputExample from '../InputExample';
-import PopoverExample from '../PopoverExample';
-import CardExample from '../CardExample';
-import ModalWindow from '../ModalWindow';
 import UserPage from '../../scenes/UserPage';
-import TextStyleExample from '../TextStyleExample';
-import TabsExample from '../TabsExample';
-import Chart from '../Chart/Chart';
-import defaultProps from '../Chart/testprops';
-import SelectExample from '../SelectExample';
+import BootstrapExample from '../BootstrapExample';
+import ButtonExample from '../ButtonExample';
+import CardExample from '../CardExample';
+import Chart from '../Chart';
+import defaultProps from '../Chart/utils';
 import ExampleCounter from '../Counter/ExampleCounter';
 import Input from '../Input';
+import InputExample from '../InputExample';
+import ModalWindow from '../ModalWindow';
+import PopoverExample from '../PopoverExample';
+import SelectExample from '../SelectExample';
+import TabsExample from '../TabsExample';
+import TextStyleExample from '../TextStyleExample';
+import TranslateExample from '../TranslateExample';
 
 function Main() {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
   return (
     <div>
       <Input type="number" />
       <ExampleCounter />
       <TabsExample />
       <Chart
-        type={defaultProps.type}
+        type="line"
         labels={defaultProps.data.labels}
         dataSets={defaultProps.data.datasets}
       />
-      <Users />
       <PopoverExample />
       <ModalWindow
         show={show}

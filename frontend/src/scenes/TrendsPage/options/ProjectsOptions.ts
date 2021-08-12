@@ -1,6 +1,6 @@
-import { ChartType } from '../../../components/Chart/Chart';
-import { Project } from '../interfaces';
+import { ChartType } from '../../../components/Chart';
 import { randomBrightColor } from '../../../helpers';
+import { Project } from '../interfaces';
 
 const defaultOptions = {
   responsive: true,

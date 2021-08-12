@@ -1,8 +1,8 @@
 type ChangeType = 'up' | 'down';
-type setNum = React.Dispatch<React.SetStateAction<number>>;
-type setBool = React.Dispatch<React.SetStateAction<boolean>>;
+type SetNum = React.Dispatch<React.SetStateAction<number>>;
+type SetBool = React.Dispatch<React.SetStateAction<boolean>>;
 
-function changeInTimeout(setCurrent: setNum) {
+function changeInTimeout(setCurrent: SetNum) {
   return (start: number, nextVal: number, time: number, type: ChangeType) => {
     const timer = setTimeout(() => {
       if (type === 'up') {
@@ -18,8 +18,8 @@ function changeInTimeout(setCurrent: setNum) {
 function animateCounterDown(
   current: number,
   value: number,
-  setCurrent: setNum,
-  setIsChanging: setBool
+  setCurrent: SetNum,
+  setIsChanging: SetBool
 ) {
   setIsChanging(true);
 
