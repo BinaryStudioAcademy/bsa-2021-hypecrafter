@@ -1,15 +1,16 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretDown, faCircle, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faBell } from '@fortawesome/free-regular-svg-icons';
-import { useState, ChangeEvent } from 'react';
+import { faCaretDown, faCircle, faSearch } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { ChangeEvent, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Routes } from '../../common/enums';
 import hypeCoin from '../../assets/HypeCoin.png';
-import classes from './styles.module.scss';
+import { Routes } from '../../common/enums';
+import Avatar from '../Avatar';
 import Input from '../Input';
 import Link from '../Link';
 import Logo from '../Logo';
-import Avatar from '../Avatar';
+import Popover from '../Popover';
+import classes from './styles.module.scss';
 
 const Header = () => {
   const [text, setText] = useState('');
@@ -57,10 +58,30 @@ const Header = () => {
           <FontAwesomeIcon icon={faBell} className={classes.header_natification_bell} />
           {true && <FontAwesomeIcon icon={faCircle} className={classes.header_natification_new} />}
         </div>
-        <div className={classes.header_profile}>
-          <Avatar width={35} userName="Hype Coin" className={classes.header_profile_avatar} />
-          <FontAwesomeIcon icon={faCaretDown} className={classes.header_profile_down} />
-        </div>
+        <Popover
+          trigger={(
+            <div className={classes.header_profile}>
+              <Avatar width={35} userName="Hype Coin" className={classes.header_profile_avatar} />
+              <FontAwesomeIcon icon={faCaretDown} className={classes.header_profile_down} />
+            </div>
+          )}
+          placement="bottom-end"
+          id="id"
+          rootClose
+          className={classes.menu_user_container}
+        >
+          {() => (
+            <div className={classes.menu_user}>
+              <Link to={Routes.PROFILE}>View account</Link>
+              <Link to={Routes.PROFILE}>Edit profile</Link>
+              <div className={classes.menu_line} />
+              <Link to={Routes.PROJECTS_CREATE}>Create project</Link>
+              <div className={classes.menu_line} />
+              <Link to={Routes.LOGOUT}>Log out</Link>
+            </div>
+          )}
+        </Popover>
+
       </div>
     </div>
   );

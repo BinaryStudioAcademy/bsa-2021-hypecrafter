@@ -1,5 +1,5 @@
-import MicroMq from 'micromq';
 import _ from 'lodash';
+import MicroMq from 'micromq';
 import { Path } from '../../common/enums';
 import { initServices } from '../../services';
 import userRouter from './user';

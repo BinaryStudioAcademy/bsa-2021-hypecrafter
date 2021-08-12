@@ -1,15 +1,15 @@
 import classnames from 'classnames';
-import classes from './styles.module.scss';
 import { ColorsAvatar } from '../../common/constans';
 import { RequireAtLeastOne } from '../../common/types';
+import classes from './styles.module.scss';
 
 interface Props{
-    src?: string,
-    userName?: string,
-    width?: number,
-    className?:string
+  src?: string,
+  userName?: string,
+  width?: number,
+  className?:string
 }
-type SrcOrUserName= RequireAtLeastOne<Props, 'src'|'userName'>
+type SrcOrUserName = RequireAtLeastOne<Props, 'src' | 'userName'>;
 const defaultProps: SrcOrUserName = {
   src: '',
   userName: '',

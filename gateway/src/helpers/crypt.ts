@@ -1,4 +1,4 @@
-import { hash, genSalt, compare, hashSync, genSaltSync } from "bcrypt";
+import { hash, genSalt, compare, hashSync, genSaltSync } from 'bcrypt';
 
 const encrypt = async (password: string) => {
   const salt = await genSalt();
@@ -6,8 +6,7 @@ const encrypt = async (password: string) => {
   return passwordHash;
 };
 
-const cryptCompare = (data: string, encrypted: string) =>
-  compare(data, encrypted);
+const cryptCompare = (data: string, encrypted: string) => compare(data, encrypted);
 
 const encryptSync = (password: string) => {
   const salt = genSaltSync();

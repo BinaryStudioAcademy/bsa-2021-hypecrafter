@@ -1,6 +1,7 @@
-import ChartComponent from 'react-chartjs-2';
-import { ChartOptions, Chart as Chartjs } from 'chart.js';
+import { Chart as Chartjs, ChartOptions } from 'chart.js';
 import React from 'react';
+import ChartComponent from 'react-chartjs-2';
+import classes from './style.module.scss';
 import defaultProps from './testprops';
 
 export interface DataItem {
@@ -8,7 +9,9 @@ export interface DataItem {
   data: number[];
   fill?: boolean;
   backgroundColor?: string;
-  borderColor?: string | ((context: {chart: Chartjs}) => CanvasGradient| null);
+  borderColor?:
+  | string
+  | ((context: { chart: Chartjs }) => CanvasGradient | null);
 }
 
 export type ChartType =
@@ -29,15 +32,22 @@ interface ChartProps {
   options?: ChartOptions;
 }
 
-const Chart: React.FC<ChartProps> = ({ type, dataSets, labels: propLabels, options }) => (
-  <ChartComponent
-    type={type}
-    data={{
-      labels: propLabels,
-      datasets: dataSets
-    }}
-    options={options || defaultProps.options}
-  />
+const Chart: React.FC<ChartProps> = ({
+  type,
+  dataSets,
+  labels: propLabels,
+  options
+}) => (
+  <div className={classes.chart}>
+    <ChartComponent
+      type={type}
+      data={{
+        labels: propLabels,
+        datasets: dataSets
+      }}
+      options={options || defaultProps.options}
+    />
+  </div>
 );
 
 export default Chart;

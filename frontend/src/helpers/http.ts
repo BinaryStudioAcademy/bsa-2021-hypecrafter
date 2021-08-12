@@ -1,5 +1,5 @@
 import queryString from 'query-string';
-import { HttpMethod, HttpHeader, HttpStatusCode, StorageKeys } from '../common/enums';
+import { HttpHeader, HttpMethod, HttpStatusCode, StorageKeys } from '../common/enums';
 import { RequestArgs } from '../common/types';
 import { env } from '../env';
 
@@ -46,7 +46,7 @@ const getOptions = (method: HttpMethod, { params }: RequestArgs) => {
 };
 
 const getUrlWithQuery = (url: string, query?: Record<string, string>)
-  : string => `${url}${query ? `?${queryString.stringify(query)}` : ''}`;
+: string => `${url}${query ? `?${queryString.stringify(query)}` : ''}`;
 
 const getUrl = (method: HttpMethod, { url, params, config }: RequestArgs): string => {
   if (config?.isExternal) {
