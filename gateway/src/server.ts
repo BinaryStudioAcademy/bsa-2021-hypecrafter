@@ -1,6 +1,7 @@
 import cors from 'cors';
 import express from 'express';
 import { createConnection } from 'typeorm';
+import UserSeeder from '../src/data/seeders/userSeeder';
 import { initMiddlewares } from './api/middlewares';
 import { initPassport } from './api/passport';
 import initRoutes from './api/routes';
@@ -12,7 +13,7 @@ import { initServices } from './services';
 const { port, environment } = env.app;
 const app = express();
 app.use(cors());
-createConnection().then(() => {
+createConnection().then(async() => {
   try {
     await UserSeeder.execute();
     const repositories = initRepositories();
