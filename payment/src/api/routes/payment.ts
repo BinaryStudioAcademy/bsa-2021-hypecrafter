@@ -5,6 +5,6 @@ import { wrap } from '../../helpers';
 
 const init = ({ paymentService }: Services, path: string) => (app: MicroMq) => app
   .get(path, wrap(() => paymentService.getAll()))
-  .get(`${path}/:id`, wrap<Empty, Payment, { id: string }, Empty>((req) => paymentService.getById(req.params.id)));
+  .get(`${path}/:id`, wrap<Empty, Payment, { id: string }, Empty>((req) => paymentService.getByUserId(req.params.id)));
 
 export default init;
