@@ -1,20 +1,16 @@
 import {
-  Entity,
-  Column,
-  OneToMany,
-  ManyToOne,
-  OneToOne,
-  JoinColumn
+  Column, Entity, JoinColumn, ManyToOne, OneToMany, OneToOne
 } from 'typeorm';
 import { AbstractEntity } from './abstract';
 import { Category } from './category';
 import { Comment } from './comment';
 import { Donate } from './donate';
-import { UserProject } from './userProject';
+import { FAQ } from './faq';
+import { Funding } from './funding';
 import { ProjectTag } from './projectTag';
 import { Team } from './team';
-import { FAQ } from './faq';
 import { UserProfile } from './userProfile';
+import { UserProject } from './userProject';
 
 @Entity()
 export class Project extends AbstractEntity {
@@ -78,4 +74,8 @@ export class Project extends AbstractEntity {
 
   @ManyToOne(() => UserProfile, userProfile => userProfile.projects)
   author: UserProfile;
+
+  @OneToOne(() => Funding, funding => funding.project)
+  @JoinColumn()
+  funding: Funding;
 }

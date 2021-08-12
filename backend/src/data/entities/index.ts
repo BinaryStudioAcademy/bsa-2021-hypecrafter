@@ -16,3 +16,4 @@ export * from './team';
 export * from './userAchievement';
 export * from './userProfile';
 export * from './userProject';
+export * from './funding';

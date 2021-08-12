@@ -1,14 +1,15 @@
-import { Entity, Column, OneToMany, JoinColumn, OneToOne } from 'typeorm';
+import { Column, Entity, JoinColumn, OneToMany, OneToOne } from 'typeorm';
 import { AbstractEntity } from './abstract';
-import { Donate } from './donate';
-import { UserProject } from './userProject';
-import { Chat } from './chat';
 import { AlertsSettings } from './alertsSettings';
-import { UserAchievement } from './userAchievement';
-import { Message } from './message';
+import { Chat } from './chat';
 import { Comment } from './comment';
-import { Tag } from './tag';
+import { Donate } from './donate';
+import { Funding } from './funding';
+import { Message } from './message';
 import { Project } from './project';
+import { Tag } from './tag';
+import { UserAchievement } from './userAchievement';
+import { UserProject } from './userProject';
 
 @Entity()
 export class UserProfile extends AbstractEntity {
@@ -57,6 +58,9 @@ export class UserProfile extends AbstractEntity {
 
   @OneToMany(() => UserProject, userProject => userProject.user)
   userProjects: UserProject[];
+
+  @OneToMany(() => Funding, funding => funding.sponsors)
+  funding: Funding[];
 
   @OneToMany(() => Chat, chat => chat.donator)
   chats: Chat[];
