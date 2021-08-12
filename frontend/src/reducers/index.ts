@@ -3,17 +3,20 @@ import { StoreState } from '../common/types';
 import projectReduser, { initialState as projectInitialState } from '../scenes/CreateProject/reducer';
 import userProfileReducer, { initialState as userProfileInitialState } from '../scenes/UserPage/reducer';
 import authReducer, { authState } from './auth';
+import usersReducer, { initialState as usersInitialState } from './users';
 
 const initialState: StoreState = {
   userProfile: userProfileInitialState,
   auth: authState,
-  project: projectInitialState
+  project: projectInitialState,
+  users: usersInitialState
 };
 
 const rootReducer = combineReducers({
   userProfile: userProfileReducer,
   auth: authReducer,
-  project: projectReduser
+  project: projectReduser,
+  users: usersReducer
 });
 
 export { initialState, rootReducer };

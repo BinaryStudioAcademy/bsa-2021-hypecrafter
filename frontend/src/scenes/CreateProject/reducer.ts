@@ -1,11 +1,11 @@
+import { Routes } from '../../common/enums';
 import { Project } from '../../common/types';
 import { createReducer } from '../../helpers';
-import { createProjectAction } from './actions';
 import type {
-  CreateProjectSuccessActionType,
-  CreateProjectFailureActionType
+  CreateProjectFailureActionType,
+  CreateProjectSuccessActionType
 } from './actions';
-import { Routes } from '../../common/enums';
+import { createProjectAction } from './actions';
 
 export interface ProjectState{
   isLoading: boolean;

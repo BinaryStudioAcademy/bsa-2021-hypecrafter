@@ -1,7 +1,9 @@
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import Button from '../../../../components/Button';
 import Checkbox from '../../../../components/Checkbox';
+import LoaderWrapper from '../../../../components/LoaderWrapper';
 import Select from '../../../../components/Select';
+import { useAction, useTypedSelector } from '../../../../hooks';
 import { CurrentPage } from '../../enums';
 import Layout from '../Layout';
 import classes from './styles.module.scss';
@@ -19,11 +21,24 @@ const Team: FC<Props> = ({ changePage, currentPage }) => {
   };
   const handleBack = () => changePage(currentPage - 1);
   const handleNext = () => changePage(currentPage + 1);
+
+  const store = useTypedSelector(({ users: { users, isLoading } }) => ({
+    users,
+    isLoading
+  }));
+  const { users, isLoading } = store;
+  const { getUsersAction } = useAction();
+
+  useEffect(() => {
+    getUsersAction();
+  }, [getUsersAction]);
+
   const body = (
     <div>
       <Select
-        options={[{ text: 'test1', value: 'test1' }, { text: 'test2', value: 'test2' }]}
+        options={users.map(user => ({ text: `${user.lastName} ${user.firstName} (${user.email})`, value: user.id }))}
         label="Pick a members to add they to team."
+        defaultText="-"
       />
       <Button onClick={handleBack} className={classes.addMember}>Add</Button>
       <p>We will notify this person</p>
@@ -37,13 +52,15 @@ const Team: FC<Props> = ({ changePage, currentPage }) => {
     </div>
   );
   return (
-    <Layout
-      header="Add member"
-      setCurrentPage={changePage}
-      body={body}
-      footer={footer}
-      currentPage={currentPage}
-    />
+    <LoaderWrapper isLoading={isLoading}>
+      <Layout
+        header="Add member"
+        setCurrentPage={changePage}
+        body={body}
+        footer={footer}
+        currentPage={currentPage}
+      />
+    </LoaderWrapper>
   );
 };
 

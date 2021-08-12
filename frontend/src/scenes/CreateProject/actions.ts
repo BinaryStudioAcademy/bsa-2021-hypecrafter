@@ -14,3 +14,4 @@ export const createProjectAction = createRoutine(ProjectActions.SAVE_PROJECT, {
 export type CreateProjectTriggerActionType = ReturnType<typeof createProjectAction.trigger>;
 export type CreateProjectSuccessActionType = ReturnType<typeof createProjectAction.success>;
 export type CreateProjectFailureActionType = ReturnType<typeof createProjectAction.failure>;
+
