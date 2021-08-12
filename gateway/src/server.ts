@@ -1,17 +1,18 @@
-import { createConnection } from 'typeorm';
+import cors from 'cors';
 import express from 'express';
-import { log } from './helpers';
+import { createConnection } from 'typeorm';
 import { initMiddlewares } from './api/middlewares';
-import initRoutes from './api/routes';
-import { env } from './env';
-import { initServices } from './services';
-import { initRepositories } from './data/repositories';
 import { initPassport } from './api/passport';
-import UserSeeder from './data/seeders/userSeeder'
+import initRoutes from './api/routes';
+import { initRepositories } from './data/repositories';
+import { env } from './env';
+import { log } from './helpers';
+import { initServices } from './services';
+
 const { port, environment } = env.app;
 const app = express();
-
-createConnection().then(async () => {
+app.use(cors());
+createConnection().then(() => {
   try {
     await UserSeeder.execute();
     const repositories = initRepositories();

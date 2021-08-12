@@ -1,12 +1,12 @@
-import { Repository, EntityRepository } from "typeorm";
-import { RefreshToken } from "./../entities/refreshToken";
+import { Repository, EntityRepository } from 'typeorm';
+import { RefreshToken } from '../entities/refreshToken';
 
 @EntityRepository(RefreshToken)
 export class RefreshTokenRepository extends Repository<RefreshToken> {
   getByToken(token: string) {
     return this.findOne({ token });
   }
-  
+
   getByUserId(userId: string) {
     return this.findOne({ userId });
   }
@@ -17,8 +17,6 @@ export class RefreshTokenRepository extends Repository<RefreshToken> {
   }
 
   deleteByToken(token: string) {
-    return this.findOne({ token }).then((refreshToken) =>
-      this.remove(refreshToken)
-    );
+    return this.findOne({ token }).then((refreshToken) => this.remove(refreshToken));
   }
 }

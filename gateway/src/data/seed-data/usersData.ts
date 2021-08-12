@@ -1,4 +1,4 @@
-import { encryptSync } from "../../helpers/crypt";
+import { encryptSync } from '../../helpers/crypt';
 
 const hash = (password: string) => encryptSync(password);
 

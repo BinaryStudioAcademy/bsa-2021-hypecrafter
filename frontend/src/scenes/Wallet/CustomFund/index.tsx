@@ -1,17 +1,17 @@
-import React, { FC, useState } from 'react';
+import { ChangeEvent, FC, FormEvent, useState } from 'react';
 import { Form } from 'react-bootstrap';
-import classes from './styles.module.scss';
-import { useLocalization } from '../../../providers/localization';
 import Button from '../../../components/Button';
+import { useLocalization } from '../../../providers/localization';
+import classes from './styles.module.scss';
 
 const CustomFund: FC = () => {
   const { t } = useLocalization();
   const [price, setPrice] = useState('5');
-  const onSubmit = (event: React.FormEvent) => {
+  const onSubmit = (event: FormEvent) => {
     console.log(price);
     event.preventDefault();
   };
-  const onInput = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const onInput = (event: ChangeEvent<HTMLInputElement>) => {
     setPrice(event.target.value);
   };
   return (

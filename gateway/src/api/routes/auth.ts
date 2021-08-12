@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { authentication as authenticationMiddleware } from './../middlewares/authentication';
+import { authentication as authenticationMiddleware } from '../middlewares/authentication';
 import { User } from '../../data/entities/user';
 import { Services } from '../../services/index';
 import { wrap } from '../../helpers/request';

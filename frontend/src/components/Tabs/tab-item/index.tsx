@@ -1,4 +1,4 @@
-import React, { ReactNode, FC } from 'react';
+import { FC, ReactNode } from 'react';
 import { Nav } from 'react-bootstrap';
 import classes from './styles.module.scss';
 
