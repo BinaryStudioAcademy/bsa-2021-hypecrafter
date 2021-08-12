@@ -1,4 +1,6 @@
+import jwtDecode from 'jwt-decode';
 import { TransactionHistoryRepository } from '../../data/repositories';
+import { TokenPayload } from '../../common/types';
 
 export default class TransactionService {
   readonly #transactionHistoryRepository: TransactionHistoryRepository;
@@ -19,7 +21,10 @@ export default class TransactionService {
     return this.#transactionHistoryRepository.getById(id);
   }
 
-  public getByUserId(useId: string) {
-    return this.#transactionHistoryRepository.getByUserId(useId);
+  public getByToken(token: string, pageNum: number) {
+    const decoded = <TokenPayload>jwtDecode(token);
+    const { userId } = decoded;
+
+    return this.#transactionHistoryRepository.getByUserId(userId, pageNum);
   }
 }

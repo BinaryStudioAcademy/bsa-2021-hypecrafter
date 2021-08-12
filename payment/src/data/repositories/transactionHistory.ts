@@ -1,20 +1,32 @@
 import { Repository, EntityRepository } from 'typeorm';
-import { TransactionHistory as transaction_history} from '../entities/transactionHistory';
+import { paginationStep, Payment } from '../../common/types';
+import { TransactionHistory } from '../entities/transactionHistory';
 
-@EntityRepository(transaction_history)
-export class TransactionHistoryRepository extends Repository<transaction_history> {
+@EntityRepository(TransactionHistory)
+export class TransactionHistoryRepository extends Repository<TransactionHistory> {
   public getAll() {
     return this.find();
   }
-  public getCountByUserId(userId: string){
-    console.log()
-    return this.queryRunner.query(`SELECT COUNT(*) FROM "transaction_history" WHERE userId = '${userId}'`)
+
+  public getCountByUserId(userId: string) {
+    return this.query(`SELECT COUNT(*) FROM "transaction_history" WHERE "userId" = '${userId}'`);
   }
+
   public getById(id: string) {
     return this.findOne({ id });
   }
 
-  public getByUserId(userId: string) {
-    return this.queryRunner.query(`SELECT * FROM "transaction_history" WHERE userId = '${userId}'`);
+  public async getByUserId(userId: string, pageNum: number) {
+    const { count } = (await this.getCountByUserId(userId))[0];
+    const page: Payment[] = await this.query(
+      `SELECT * FROM "transaction_history" WHERE "userId" = '${userId}' OFFSET ${
+        (pageNum - 1) * paginationStep
+      } ROWS FETCH NEXT ${paginationStep} ROWS ONLY;`
+    );
+    const isLast: boolean = count <= pageNum * paginationStep;
+    return {
+      isLast,
+      page
+    };
   }
 }
