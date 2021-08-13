@@ -66,4 +66,5 @@ declare type LocaleKeys =
   | 'Ukraine'
   | 'United Kingdom'
   | 'Popular tags'
-  | 'Popular projects';
+  | 'Popular projects'
+  | 'PAGE NOT FOUND';
