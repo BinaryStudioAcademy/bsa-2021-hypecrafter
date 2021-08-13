@@ -1,15 +1,16 @@
 import { useEffect } from 'react';
-import { Switch, useLocation, Redirect } from 'react-router-dom';
+import { Redirect, Switch, useLocation } from 'react-router-dom';
 import { Routes, StorageKeys } from '../../common/enums';
 import { useAction, useTypedSelector } from '../../hooks';
 import MainPage from '../../scenes/MainPage';
+import ProjectPage from '../../scenes/ProjectPage';
 import TrendsPage from '../../scenes/TrendsPage';
 import FundsPage from '../../scenes/Wallet/FundsPage';
 import Header from '../Header';
 import LoaderWrapper from '../LoaderWrapper';
 import LoginPage from '../LoginPage';
-import PrivateRoute from '../PrivateRoute';
 import PageNotFound from '../PageNotFound';
+import PrivateRoute from '../PrivateRoute';
 import PublicRoute from '../PublicRoute';
 import SignupPage from '../SignupPage';
 
@@ -59,6 +60,12 @@ const Routing = () => {
           path="/trends"
           exact
           component={TrendsPage}
+        />
+        <PublicRoute
+          restricted={false}
+          path="/projects/:id"
+          exact
+          component={ProjectPage}
         />
         <PublicRoute
           restricted={false}

@@ -18,6 +18,6 @@ export default class ProjectService {
 
   public async getById(id: string) {
     const project = await this.#projectRepository.getById(id);
-    return project;
+    return project[0];
   }
 }
