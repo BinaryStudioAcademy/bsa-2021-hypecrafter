@@ -73,7 +73,7 @@ paths:
     get:
       tags:
         - Payment
-      summary: Returns page of transaction history by page number and token.
+      summary: Returns page of transaction history by page number and userId.
       parameters:
         - name: userId
           in: path
@@ -99,8 +99,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/HistoryTransactionsPage'
-        '401':
-          description: Token is wrong or empty
         '408':
           description: Something go wrong.
           content:
