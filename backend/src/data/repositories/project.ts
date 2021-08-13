@@ -56,11 +56,15 @@ export class ProjectRepository extends Repository<Project> {
       likes,
       dislikes
     `)
-      .leftJoin(`SELECT
-      SUM(amount) AS donated,
-      COUNT ( DISTINCT "userId" ) AS "bakersAmount",
-      "projectId"
-    FROM donate GROUP BY "projectId"`, 'dn', 'dn."projectId" = project."id"')
+      //   .leftJoin(
+      //     `SELECT
+      // SUM(amount) AS donated,
+      // COUNT ( DISTINCT "userId" ) AS "bakersAmount",
+      // "projectId"
+      // FROM donate GROUP BY "projectId"`, 'dn', 'dn."projectId" = project."id"')
+      // .leftJoin(subQuery => subQuery.select(`      SUM(amount) AS donated,
+      // COUNT ( DISTINCT "userId" ) AS "bakersAmount",
+      // "projectId"`))
       .leftJoin('project.category', 'category')
       .leftJoin('project.projectTags', 'projectTags')
       .leftJoin('projectTags.tag', 'tag')
