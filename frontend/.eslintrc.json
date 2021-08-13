@@ -31,5 +31,6 @@
         }
       }
     ]
-  }
+  },
+  "ignorePatterns": "src/localization/locale-keys.js"
 }

@@ -1,7 +1,7 @@
-
 import { Chart } from 'chart.js';
 
 const blueColors = ['rgb(23, 229, 232)', 'rgb(39, 170, 242)'];
+const blueColorsReverse = ['rgb(39, 170, 242)', 'rgb(23, 229, 232)'];
 
 const getLinearGradient = (
   ctx: CanvasRenderingContext2D,
@@ -35,4 +35,4 @@ function setBorderColorGradient(colors: string[]) {
   return setFunc;
 }
 
-export { setBorderColorGradient, blueColors };
+export { setBorderColorGradient, blueColors, blueColorsReverse };
