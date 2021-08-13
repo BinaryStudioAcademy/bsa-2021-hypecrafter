@@ -20,10 +20,11 @@ function ProjectPage() {
   useEffect(() => {
     fetchProject(id);
   }, []);
+
   return (
     <Container>
       <Row>
-        <Header />
+        <Header project={project} />
       </Row>
     </Container>
   );
