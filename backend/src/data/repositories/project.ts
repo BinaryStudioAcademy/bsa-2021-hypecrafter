@@ -56,60 +56,30 @@ export class ProjectRepository extends Repository<Project> {
       likes,
       dislikes
     `)
-      //   .leftJoin(
-      //     `SELECT
-      // SUM(amount) AS donated,
-      // COUNT ( DISTINCT "userId" ) AS "bakersAmount",
-      // "projectId"
-      // FROM donate GROUP BY "projectId"`, 'dn', 'dn."projectId" = project."id"')
-      // .leftJoin(subQuery => subQuery.select(`      SUM(amount) AS donated,
-      // COUNT ( DISTINCT "userId" ) AS "bakersAmount",
-      // "projectId"`))
-      .leftJoin('project.category', 'category')
+      .leftJoin(subQuery => subQuery.select(`
+      SUM(amount) AS donated,
+      COUNT ( DISTINCT "userId" ) AS "bakersAmount",
+      "projectId"`)
+        .from('donate', 'donate')
+        .groupBy('"projectId"'), 'dn', 'dn."projectId" = project.id')
+      .leftJoin(subQuery => subQuery.select(`
+      SUM(CASE user_project.mark WHEN 'like' then 1 else 0 end) AS likes,
+      SUM(CASE user_project.mark WHEN 'dislike' then 1 else 0 end) AS dislikes,
+      "projectId"
+      `)
+        .from('user_project', 'user_project')
+        .groupBy('"projectId"'), 'up', 'up."projectId"=project.id')
       .leftJoin('project.projectTags', 'projectTags')
       .leftJoin('projectTags.tag', 'tag')
       .where(`project."id"='${id}'`)
       .groupBy(`
       project."id", 
-      likes, 
-      dislikes, 
       donated, 
-      "bakersAmount"
-    `)
+      "bakersAmount",
+      likes,
+      dislikes
+      `)
       .execute();
-    // return this.query(`
-    // SELECT
-    // project."id",
-    // project."imageUrl",
-    // donated,
-    // description,
-    // project.name,
-    // project."finishDate",
-    // goal,
-    // array_to_string(array_agg(tag.name),', ') AS "tags",
-    // "bakersAmount",
-    // likes,
-    // dislikes
-    // FROM project
-    // LEFT JOIN (
-    //   SELECT
-    //   SUM(amount) AS donated,
-    //   COUNT ( DISTINCT "userId" ) AS "bakersAmount",
-    //   "projectId"
-    // FROM donate GROUP BY "projectId")
-    //    AS dn ON dn."projectId" = project."id"
-    // LEFT JOIN(
-    //   SELECT
-    //   "projectId",
-    //   SUM(case user_project.mark when 'like' then 1 else 0 end) AS likes,
-    //   SUM(case user_project.mark when 'dislike' then 1 else 0 end) AS dislikes
-    //   FROM user_project
-    //   GROUP BY user_project."projectId") AS up ON up."projectId"=project."id"
-    // LEFT JOIN project_tag ON project_tag."projectId" = project."id"
-    // LEFT JOIN tag ON tag."id"=project_tag."tagId"
-    // WHERE project."id"='${id}'
-    // GROUP BY project."id", likes, dislikes, donated, "bakersAmount"
-    // `);
   }
 }
 
