@@ -1,5 +1,6 @@
-import { ProjectRepository } from '../../data/repositories';
+import { Project } from '../../data/entities';
 import { mapProjects } from '../../data/mappers/mapProjects';
+import { ProjectRepository } from '../../data/repositories';
 
 export default class ProjectService {
   readonly #projectRepository: ProjectRepository;
@@ -15,5 +16,10 @@ export default class ProjectService {
       popular: mapProjects(popular),
       recommended: mapProjects(recommended)
     };
+  }
+
+  public async createProject(body: Project) {
+    const project = this.#projectRepository.create(body);
+    return project;
   }
 }
