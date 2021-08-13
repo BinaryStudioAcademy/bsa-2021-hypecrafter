@@ -7,21 +7,30 @@ interface IUseLeavePage {
   message?: string
 }
 
+/**
+  *  **This is an example of use.**
+  *  message - This is your message when blocking.
+  *            Default 'You must completely create a project.'
+  *
+  *  isBlocking - This is the presence of a blocking of leaving the page.
+  *               Default true.
+  *
+  *  Basic usage example:
+  *  ```typescript
+  *  <LeavePage
+  *    message="Your message when blocking."
+  *    isBlocking={true}
+  *  >
+  *    <CreateProject />
+  *  </LeavePage >
+  *  ```
+  */
+
 const LeavePage: FC<IUseLeavePage> = ({
   isBlocking = true,
   message = 'You must completely create a project.'
 }) => {
   const [isShowModal, setShowModal] = useState(false);
-
-  /*
-    * This is an example of use.
-    *<LeavePage
-    *  message="Your message when blocking. Default 'You must completely create a project.'"
-    *  isBlocking={true/false } Default true.
-    *>
-    *  <CreateProject />
-    *</LeavePage >
-  */
 
   const handleBlockedNavigation = () => {
     if (isBlocking) {
