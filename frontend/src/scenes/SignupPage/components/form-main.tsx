@@ -2,10 +2,10 @@ import { FunctionComponent, MouseEventHandler } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import { Routes } from '../../../common/enums';
-import classes from '../styles.module.scss';
-import Input from '../../../components/Input';
-import Button from '../../../components/Button';
 import { Pages } from '../../../common/enums/signupForms';
+import Button from '../../../components/Button';
+import Input from '../../../components/Input';
+import classes from '../styles.module.scss';
 
 export type MainFormData = {
   firstName: string;
@@ -44,9 +44,7 @@ const MainForm: FunctionComponent<MainFormProps> = ({
     );
   };
 
-  const dummySignUpWithGoogleHandler: MouseEventHandler<HTMLButtonElement> = (
-    e
-  ) => {
+  const dummySignUpWithGoogleHandler: MouseEventHandler<HTMLButtonElement> = () => {
     console.log('Sign Up with Google');
   };
 

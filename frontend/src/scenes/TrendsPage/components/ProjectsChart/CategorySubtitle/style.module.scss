@@ -1,0 +1,16 @@
+@import '../../../../../styles/vars';
+@import '../../../../../styles/mixins';
+
+.subtopic-item {
+  @include reset-button;
+  @include heading-md;
+  margin: 0 40px 10px 0;
+  background: none !important;
+  box-shadow: none !important;
+  color: $color-root-text;
+  text-decoration: none;
+}
+
+.subtopic-item-active {
+  color: $color-root-turquoise !important;
+}

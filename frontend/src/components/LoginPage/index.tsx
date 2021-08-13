@@ -1,12 +1,12 @@
 import { FC, MouseEventHandler } from 'react';
-import { Link } from 'react-router-dom';
 import { SubmitHandler, useForm } from 'react-hook-form';
+import { Link } from 'react-router-dom';
+import logo from '../../assets/HypeCrafter.svg';
+import { Languages, Routes } from '../../common/enums';
+import { useLocalization } from '../../providers/localization';
 import Button from '../Button';
 import Input from '../Input';
 import classes from './styles.module.scss';
-import logo from '../../assets/HypeCrafter.svg';
-import { Routes, Languages } from '../../common/enums';
-import { useLocalization } from '../../providers/localization';
 
 type FormData = {
   email: string;
@@ -17,7 +17,7 @@ const LoginPage: FC = () => {
   const { register, handleSubmit, setError, formState: { errors } } = useForm<FormData>();
   const { t, changeLanguage, selectedLanguage } = useLocalization();
 
-  const onSubmit: SubmitHandler<FormData> = data => {
+  const onSubmit: SubmitHandler<FormData> = (data) => {
     console.log('Sign In', data.email, data.password);
 
     setError('email', { // set error example

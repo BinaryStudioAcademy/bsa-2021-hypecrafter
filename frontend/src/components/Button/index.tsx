@@ -1,22 +1,17 @@
-import { Button as ButtonRB, ButtonProps } from 'react-bootstrap';
-import {
-  MouseEventHandler,
-  ReactNode,
-  FunctionComponent,
-  CSSProperties
-} from 'react';
 import classnames from 'classnames';
+import { CSSProperties, FunctionComponent, MouseEventHandler, ReactNode } from 'react';
+import { Button as ButtonRB, ButtonProps } from 'react-bootstrap';
 import classes from './styles.module.scss';
 
 interface Props extends ButtonProps {
   className?: string;
   onClick?: MouseEventHandler<Element>;
   type?: 'submit' | 'reset' | 'button';
-  isDisabled?: boolean;
+  disable?: boolean;
   children?: ReactNode | string;
-  isOutline?: boolean;
+  outline?: boolean;
   variant?: 'primary' | 'secondary';
-  isLoading?: boolean;
+  loading?: boolean;
   shape?: 'rectangle' | 'circle';
   iconPosition?: 'left' | 'right';
   icon?: string | ReactNode;
@@ -26,12 +21,12 @@ interface Props extends ButtonProps {
 const defaultProps: Props = {
   className: '',
   type: 'button',
-  isDisabled: false,
-  isOutline: false,
+  disable: false,
+  outline: false,
   variant: 'primary',
   onClick: () => undefined,
   children: '',
-  isLoading: false,
+  loading: false,
   shape: 'rectangle',
   iconPosition: 'left',
   icon: null,
@@ -43,11 +38,11 @@ const Button: FunctionComponent<Props> = (props: Props) => {
     className,
     onClick,
     type,
-    isDisabled,
+    disable,
     children,
-    isOutline,
+    outline,
     variant,
-    isLoading,
+    loading,
     shape,
     iconPosition,
     icon,
@@ -57,7 +52,8 @@ const Button: FunctionComponent<Props> = (props: Props) => {
   const buttonClass = classnames(className, {
     [classes.button]: true,
     [classes[`${variant}`]]: true,
-    [classes.outline]: isOutline,
+    [classes[`${variant}-outline`]]: outline,
+    [classes.outline]: outline,
     [classes[`${shape}`]]: true
   });
 
@@ -71,10 +67,10 @@ const Button: FunctionComponent<Props> = (props: Props) => {
       className={buttonClass}
       onClick={onClick}
       type={type}
-      disabled={isDisabled}
+      disabled={disable}
       href={to}
     >
-      {isLoading ? <span>Loading…</span> : children}
+      {loading ? <span>Loading…</span> : children}
       {icon}
     </ButtonRB>
   );

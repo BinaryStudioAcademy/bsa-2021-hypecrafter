@@ -1,7 +1,7 @@
-import { UserProfile } from './../../data/entities/userProfile';
 import MicroMq from 'micromq';
-import { Services } from '../../services';
 import { wrap } from '../../helpers';
+import { Services } from '../../services';
+import { UserProfile } from './../../data/entities/userProfile';
 
 const init = ({ userService }: Services, path: string) => (app: MicroMq) => {
   console.log('path', path);

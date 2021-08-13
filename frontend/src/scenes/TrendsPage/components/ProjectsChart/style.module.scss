@@ -1,0 +1,38 @@
+@import '../../../../styles/vars';
+@import '../../../../styles/mixins';
+
+.subtopic-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.item {
+  background-color: $color-root-block-background;
+  padding: 30px;
+  margin-bottom: 50px;
+}
+
+.bottom-chart-wrapper {
+  position: relative;
+  height: 400px;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.text-wrapper {
+  position: relative;
+}
+
+.text {
+  @include heading-md;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.topic {
+  @include heading-xl;
+  margin-bottom: 20px;
+}
