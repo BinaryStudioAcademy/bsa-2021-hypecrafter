@@ -1,7 +1,7 @@
-import { FC, ElementType } from 'react';
-import { Route, Redirect, RouteProps } from 'react-router-dom';
-import { useTypedSelector } from '../../hooks';
+import { ElementType, FC } from 'react';
+import { Redirect, Route, RouteProps } from 'react-router-dom';
 import { Routes } from '../../common/enums';
+import { useTypedSelector } from '../../hooks';
 
 type PublicRouteProps = {
   restricted: boolean,

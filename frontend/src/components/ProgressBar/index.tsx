@@ -5,7 +5,7 @@ import classes from './styles.module.scss';
 type Props = {
   goal: number,
   percent: number,
-}
+};
 
 const ProgressBarComponent: FC<Props> = ({ goal, percent }) => (
   <div className={classes.progress}>

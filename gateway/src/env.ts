@@ -10,5 +10,9 @@ export const env = {
     rabbit: {
       url: getEnv('RABBIT_URL') || 'amqp://localhost'
     }
+  },
+  jwt: {
+    secret: getEnv('SECRET_KEY'),
+    expiresIn: '24h'
   }
 };

@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { Nav } from 'react-bootstrap';
 import { Tabs } from '../Tabs';
 

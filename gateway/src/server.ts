@@ -1,21 +1,24 @@
-import { createConnection } from 'typeorm';
+import cors from 'cors';
 import express from 'express';
-import { log } from './helpers';
-import initRoutes from './api/routes';
-import { env } from './env';
+import { createConnection } from 'typeorm';
 import { initMiddlewares } from './api/middlewares';
-import { initServices } from './services';
+import { initPassport } from './api/passport';
+import initRoutes from './api/routes';
 import { initRepositories } from './data/repositories';
+import { env } from './env';
+import { log } from './helpers';
+import { initServices } from './services';
 
 const { port, environment } = env.app;
 const app = express();
-
-createConnection().then(() => {
+app.use(cors());
+createConnection().then(async() => {
   try {
     const repositories = initRepositories();
     const services = initServices(repositories);
+    initPassport(app, repositories);
     initMiddlewares(app, services);
-    app.use(initRoutes());
+    app.use(initRoutes(services));
     app.listen(port, () => {
       log(`Server is running at port: ${port}. Environment: "${environment}"`);
     });
