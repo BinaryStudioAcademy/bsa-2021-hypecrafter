@@ -2,5 +2,5 @@ export const asyncForEach = async <T>(fn: (x: T) => Promise<null>, list: readonl
   list.reduce(async (listPromise, item) => {
     await listPromise;
     return fn(item);
-  }, Promise.resolve(null));
+  }, Promise.resolve());
 };
