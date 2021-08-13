@@ -1,13 +1,12 @@
 import MicroMq from 'micromq';
 import { Page } from '../../common/types';
-import { Services } from '../../services';
 import { wrap } from '../../helpers';
+import { Services } from '../../services';
 
 const init = ({ paymentService }: Services, path: string) => (app: MicroMq) => app.get(
-  `${path}/:page`,
-  wrap<Empty, Page, { page: string }, Empty>(async (req) => {
-    const token: string = req.headers.authorization;
-    return paymentService.getByToken(token, req.params.page);
+  `${path}/:userId/:page`,
+  wrap<Empty, Page, { page: string, userId: string }, Empty>(async (req) => {
+    return paymentService.getByUserId(req.params.userId, req.params.page);
   })
 );
 

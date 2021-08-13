@@ -1,10 +1,9 @@
-import { createConnection } from 'typeorm';
-import MicroMq from 'micromq';
 import { Project } from 'hypecrafter-shared/enums';
-import { log } from './helpers/logger';
+import MicroMq from 'micromq';
+import { createConnection } from 'typeorm';
 import initRoutes from './api/routes';
 import { env } from './env';
-import TransactionHistorySeeder from './data/seeders/transactionHistorySeeder';
+import { log } from './helpers/logger';
 
 const { rabbit } = env.app;
 
@@ -14,6 +13,5 @@ const app = new MicroMq({
 });
 
 createConnection().then(async() => {
-  await TransactionHistorySeeder.execute()
   initRoutes(app).start();
 }).catch((e) => log(e));

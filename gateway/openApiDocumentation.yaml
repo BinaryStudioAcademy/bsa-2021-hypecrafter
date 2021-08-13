@@ -69,12 +69,20 @@ paths:
                   error:
                     type: string
                     example: "Timed out"
-  /payment/{page}:
+  /payment/{userId}/{page}:
     get:
       tags:
         - Payment
       summary: Returns page of transaction history by page number and token.
       parameters:
+        - name: userId
+          in: path
+          required: true
+          description: The userId.
+          schema:
+            type: string
+            format: uuid
+            example: "ac7a5b8f-7fc4-4d1e-81c9-1a9c49c9b529"
         - name: page
           in: path
           required: true
@@ -83,6 +91,7 @@ paths:
             type: integer
             format: int64
             minimum: 1
+            example: 2
       responses:
         '200':
           description: Receive page object was success.
@@ -107,7 +116,7 @@ components:
     bearerAuth:           
       type: http
       scheme: bearer
-      bearerFormat: JWT 
+      bearerFormat: JWT
   schemas:
     User:
       properties:

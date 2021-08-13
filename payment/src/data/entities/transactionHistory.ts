@@ -1,4 +1,4 @@
-import { Entity, Column } from 'typeorm';
+import { Column, Entity } from 'typeorm';
 import { AbstractEntity } from './abstract';
 
 @Entity()
@@ -10,11 +10,11 @@ export class TransactionHistory extends AbstractEntity {
   public balance: number;
 
   @Column()
-  public userId!: string;
+  public userId: string;
 
   @Column()
-  public type!: string;
+  public type: string;
 
   @Column()
-  public item!: string;
+  public item: string;
 }
