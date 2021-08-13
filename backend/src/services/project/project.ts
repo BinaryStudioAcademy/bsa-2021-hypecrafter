@@ -1,4 +1,3 @@
-import { mapProjects } from '../../data/mappers/mapProjects';
 import { ProjectRepository } from '../../data/repositories';
 
 export default class ProjectService {
@@ -12,8 +11,8 @@ export default class ProjectService {
     const popular = await this.#projectRepository.getPopular();
     const recommended = await this.#projectRepository.getRecommended();
     return {
-      popular: mapProjects(popular),
-      recommended: mapProjects(recommended)
+      popular,
+      recommended
     };
   }
 

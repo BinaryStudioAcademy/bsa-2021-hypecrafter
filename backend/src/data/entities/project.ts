@@ -52,6 +52,15 @@ export class Project extends AbstractEntity {
   @Column({ type: 'text', nullable: true })
   imageUrl: string;
 
+  @Column({ type: 'text', nullable: true })
+  instagramUrl: string;
+
+  @Column({ type: 'text', nullable: true })
+  facebookUrl: string;
+
+  @Column({ type: 'text', nullable: true })
+  dribbleUrl: string;
+
   @OneToOne(() => Team, team => team.project)
   @JoinColumn()
   team: Team;

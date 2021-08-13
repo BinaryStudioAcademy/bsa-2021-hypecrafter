@@ -14,7 +14,7 @@ export class ProjectRepository extends Repository<Project> {
         project."id",
         goal,
         category.name AS "category",
-        array_to_string(array_agg(tag.name),', ') AS "tags"
+        array_agg(tag.name) AS "tags"
       `)
       .leftJoin('project.donates', 'donate')
       .leftJoin('project.category', 'category')
@@ -44,40 +44,49 @@ export class ProjectRepository extends Repository<Project> {
   public getById(id: string) {
     return this.createQueryBuilder('project')
       .select(`
-      project."id",
-      project."imageUrl",
-      donated,
-      description,
-      project.name,
-      project."finishDate",
-      goal,
-      array_to_string(array_agg(tag.name),', ') AS "tags",
-      "bakersAmount",
-      likes,
-      dislikes
-    `)
-      .leftJoin(subQuery => subQuery.select(`
-      SUM(amount) AS donated,
-      COUNT ( DISTINCT "userId" ) AS "bakersAmount",
-      "projectId"`)
+        project."id",
+        project."imageUrl",
+        project."instagramUrl",
+        project."facebookUrl",
+        project."dribbleUrl",
+        donated,
+        description,
+        category.name AS "category",
+        project.name,
+        project."finishDate",
+        goal,
+        array_agg(tag.name) AS "tags",
+        "bakersAmount",
+        likes,
+        dislikes
+      `)
+      .leftJoin(subQuery => subQuery
+        .select(`
+          SUM(amount) AS donated,
+          COUNT(DISTINCT "userId") AS "bakersAmount",
+          "projectId"
+        `)
         .from('donate', 'donate')
         .groupBy('"projectId"'), 'dn', 'dn."projectId" = project.id')
-      .leftJoin(subQuery => subQuery.select(`
-      SUM(CASE user_project.mark WHEN 'like' then 1 else 0 end) AS likes,
-      SUM(CASE user_project.mark WHEN 'dislike' then 1 else 0 end) AS dislikes,
-      "projectId"
-      `)
+      .leftJoin(subQuery => subQuery
+        .select(`
+          SUM(CASE user_project.mark WHEN 'like' THEN 1 ELSE 0 END) AS likes,
+          SUM(CASE user_project.mark WHEN 'dislike' THEN 1 ELSE 0 END) AS dislikes,
+          "projectId"
+        `)
         .from('user_project', 'user_project')
-        .groupBy('"projectId"'), 'up', 'up."projectId"=project.id')
+        .groupBy('"projectId"'), 'up', 'up."projectId" = project.id')
+      .leftJoin('project.category', 'category')
       .leftJoin('project.projectTags', 'projectTags')
       .leftJoin('projectTags.tag', 'tag')
-      .where(`project."id"='${id}'`)
+      .where(`project."id" = '${id}'`)
       .groupBy(`
-      project."id", 
-      donated, 
-      "bakersAmount",
-      likes,
-      dislikes
+        project."id", 
+        donated, 
+        "bakersAmount",
+        likes,
+        dislikes,
+        category.name
       `)
       .execute();
   }
