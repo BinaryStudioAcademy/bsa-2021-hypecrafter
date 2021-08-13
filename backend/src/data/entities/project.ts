@@ -1,20 +1,15 @@
 import {
-  Entity,
-  Column,
-  OneToMany,
-  ManyToOne,
-  OneToOne,
-  JoinColumn
+  Column, Entity, JoinColumn, ManyToOne, OneToMany, OneToOne
 } from 'typeorm';
 import { AbstractEntity } from './abstract';
 import { Category } from './category';
 import { Comment } from './comment';
 import { Donate } from './donate';
-import { UserProject } from './userProject';
+import { FAQ } from './faq';
 import { ProjectTag } from './projectTag';
 import { Team } from './team';
-import { FAQ } from './faq';
 import { UserProfile } from './userProfile';
+import { UserProject } from './userProject';
 
 @Entity()
 export class Project extends AbstractEntity {
@@ -53,6 +48,9 @@ export class Project extends AbstractEntity {
 
   @Column({ type: 'text' })
   region: string;
+
+  @Column({ type: 'text', nullable: true })
+  imageUrl: string;
 
   @OneToOne(() => Team, team => team.project)
   @JoinColumn()

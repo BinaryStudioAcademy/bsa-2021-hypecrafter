@@ -6,7 +6,8 @@ const WHITE_ROUTES = [
   '/users',
   '/users/:id',
   '/topics',
-  '/projects'
+  '/projects',
+  '/projects/:id'
 ];
 
 export { WHITE_ROUTES };

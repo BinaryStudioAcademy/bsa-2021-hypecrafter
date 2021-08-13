@@ -2,6 +2,7 @@ import { createConnection } from 'typeorm';
 import { log } from '../../helpers/logger';
 import AlertsSettingsSeeder from './alertsSettingsSeeder';
 import CategorySeeder from './categorySeeder';
+import DonateSeeder from './donateSeeder';
 import ProjectSeeder from './projectSeeder';
 import ProjectTagsSeeder from './projectTagsSeeder';
 import TagsSeeder from './tagsSeeder';
@@ -17,5 +18,6 @@ createConnection()
     await ProjectTagsSeeder.execute();
     await UserProfileProjectSeeder.execute();
     await AlertsSettingsSeeder.execute();
+    await DonateSeeder.execute();
   })
   .catch(log);
