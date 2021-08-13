@@ -1,9 +1,9 @@
 import { Router } from 'express';
-import { authentication as authenticationMiddleware } from '../middlewares/authentication';
-import { User } from '../../data/entities/user';
-import { Services } from '../../services/index';
-import { wrap } from '../../helpers/request';
 import { AuthApiPath } from '../../common/enums';
+import { User } from '../../data/entities/user';
+import { wrap } from '../../helpers/request';
+import { Services } from '../../services/index';
+import { authentication as authenticationMiddleware } from '../middlewares/authentication';
 
 const init = (services: Services) => {
   const router = Router();
