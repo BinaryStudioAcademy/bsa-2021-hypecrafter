@@ -8,7 +8,6 @@ import { calcDonationProgress } from '../../helpers/project';
 import { useTypedSelector } from '../../hooks';
 import { useAction } from '../../hooks/useAction';
 import { useLocalization } from '../../providers/localization';
-import ProjectPage from '../ProjectPage';
 import classes from './styles.module.scss';
 import { makeChartProps } from './utils';
 
@@ -57,7 +56,6 @@ const MainPage: FC = () => {
 
   return (
     <div className={classes.root}>
-      <ProjectPage />
       <section className={classes.main}>
         <div className={classes['main-text']}>
           <div className={classes['main-logo-text']}>
