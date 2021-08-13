@@ -1,5 +1,5 @@
 {
-  "extends": "../tsconfig.json",
+  "extends": "../shared/tsconfig.base.json",
   "include": ["./src/**/*.ts", "../shared/**/*.ts"],
   "exclude": ["node_modules"],
   "outDir": "dist"
