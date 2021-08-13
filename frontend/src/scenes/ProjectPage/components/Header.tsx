@@ -1,34 +1,78 @@
+import { faDribbble, faFacebookSquare, faInstagram } from '@fortawesome/free-brands-svg-icons';
+// import { faBookmark as faBookmarkFilled } from '@fortawesome/free-solid-svg-icons';
+import { faBookmark as faBookmarkEmpty } from '@fortawesome/free-regular-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FunctionComponent } from 'react';
 import { Col, Container, Image, Row } from 'react-bootstrap';
+import { ProjectPage } from '../../../common/types';
 import classes from '../styles.module.scss';
 
-function Header() {
+interface HeaderProps {
+  project: ProjectPage;
+}
+
+const Header: FunctionComponent<HeaderProps> = ({ project }) => {
+  const {
+    name,
+    description,
+    // category,
+    imageUrl,
+    // tags,
+    // goal,
+    // donated,
+    // likes,
+    // dislikes,
+    instagramUrl,
+    facebookUrl,
+    dribbleUrl,
+  } = project;
+
+  // const [isFavorite, setFavorite] = useState(false);
+
   return (
     <Container>
       <Row>
         <Col xs={12} lg={5}>
-          <Image src="https://source.unsplash.com/random/800x400" className={classes['project-image']} />
+          <Image src={imageUrl} className={classes['project-image']} />
         </Col>
         <Col xs={12} lg={7}>
           <Row>
             <Col xs={10} lg={10}>
-              <h3 className={classes['project-name']}>Project Name</h3>
+              <h3 className={classes['project-name']}>{name}</h3>
             </Col>
             <Col xs={2} lg={2}>
-              Svg
+              <FontAwesomeIcon icon={faBookmarkEmpty} size="2x" />
             </Col>
           </Row>
           <Row>
             <Col xs={10} lg={10}>
-              <p className={classes['project-description']}>Suspendisse eleifend vehicula leo, in ornare turpis eleifend
-                quis. Maecenas sit amet quam lacus. Quisque commodo lobortis ultrices.
-                Curabitur feugiat augue ut consectetur pellentesque.
-              </p>
+              <p className={classes['project-description']}>{description}</p>
             </Col>
+          </Row>
+          <Row className={classes['project-social-links-container']}>
+            {instagramUrl
+              && (
+              <a href={instagramUrl} target="_blank" rel="noreferrer">
+                <FontAwesomeIcon icon={faInstagram} size="2x" />
+              </a>
+              )}
+            {facebookUrl
+              && (
+                <a href={facebookUrl} target="_blank" rel="noreferrer">
+                  <FontAwesomeIcon icon={faFacebookSquare} size="2x" />
+                </a>
+              )}
+            {dribbleUrl
+              && (
+              <a href={dribbleUrl} target="_blank" rel="noreferrer">
+                <FontAwesomeIcon icon={faDribbble} size="2x" />
+              </a>
+              )}
           </Row>
         </Col>
       </Row>
     </Container>
   );
-}
+};
 
 export default Header;
