@@ -11,6 +11,6 @@ export const registerUserAction = createRoutine(RegistrationActions.REGISTER_USE
   failure: (error: string) => error
 });
 
-export type RegisterUserActionType = ReturnType<typeof registerUserAction.trigger>
-export type RegisterUserSuccessActionType = ReturnType<typeof registerUserAction.success>
-export type RegisterUserFailureActionType = ReturnType<typeof registerUserAction.failure>
+export type RegisterUserActionType = ReturnType<typeof registerUserAction.trigger>;
+export type RegisterUserSuccessActionType = ReturnType<typeof registerUserAction.success>;
+export type RegisterUserFailureActionType = ReturnType<typeof registerUserAction.failure>;

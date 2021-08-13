@@ -1,18 +1,16 @@
-import { FunctionComponent, useState, useEffect } from 'react';
-import { withRouter, RouteComponentProps } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
 import classNames from 'classnames';
-import { useTypedSelector } from '../../hooks';
-import classes from './styles.module.scss';
+import { FunctionComponent, useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import logo from '../../assets/HypeCrafter.svg';
-import { useLocalization } from '../../providers/localization';
-import MainForm from './components/form-main';
-import AdditionalForm from './components/form-additional';
 import { Pages } from '../../common/enums/signupForms';
-import { registerUserAction } from './actions';
 import { SignupData } from '../../common/types/signup';
-
-// type Props = {} & RouteComponentProps
+import { useTypedSelector } from '../../hooks';
+import { useLocalization } from '../../providers/localization';
+import { registerUserAction } from './actions';
+import AdditionalForm from './components/form-additional';
+import MainForm from './components/form-main';
+import classes from './styles.module.scss';
 
 const SignupPage: FunctionComponent = (props: any) => {
   const { history } = props;
@@ -23,7 +21,7 @@ const SignupPage: FunctionComponent = (props: any) => {
     isLoading,
     error
   }));
-  const { accessToken, refreshToken, isLoading, error } = store;
+  const { refreshToken, error } = store;
 
   useEffect(() => {
     if (error) {
