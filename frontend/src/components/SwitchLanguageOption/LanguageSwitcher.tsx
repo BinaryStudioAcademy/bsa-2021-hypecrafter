@@ -1,20 +1,21 @@
 import { Languages } from '../../common/enums';
 import { useLocalization } from '../../providers/localization';
+import classes from './styles.module.scss';
 
 const LanguageSwitcher = () => {
   const { t, changeLanguage, selectedLanguage: currLang } = useLocalization();
   const otherLanguage = currLang === Languages.EN ? Languages.UA : Languages.EN;
-  const currentText = `${t('Switch to')} ${otherLanguage.toUpperCase()}`;
+  const currentText = t('Switch to', { lang: otherLanguage.toUpperCase() });
   const switchHandler = () => {
     if (currLang === Languages.EN) changeLanguage(Languages.UA);
     else changeLanguage(Languages.EN);
   };
-/* eslint-disable */
+
   return (
-    <a style={{textDecoration: 1}} href="#" onClick={switchHandler}>
+    <button type="button" className={classes.switchBtn} onClick={switchHandler}>
       {currentText}
-    </a>
+    </button>
   );
 };
-/* eslint-enable */
+
 export default LanguageSwitcher;
