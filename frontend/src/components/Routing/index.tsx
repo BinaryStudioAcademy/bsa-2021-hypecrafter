@@ -55,9 +55,7 @@ const Routing = () => {
           component={SignupPage}
         />
         <PrivateRoute exact path={Routes.ADDFUNDS} component={FundsPage} />
-<<<<<<< HEAD
         <PublicRoute restricted={false} exact path={Routes.PROJECTS_CREATE} component={CreateProject} />
-=======
         <PublicRoute
           restricted={false}
           path="/trends"
@@ -71,7 +69,6 @@ const Routing = () => {
           component={PageNotFound}
         />
         <Redirect from="*" to={Routes.NOTFOUND} />
->>>>>>> develop
       </Switch>
     </LoaderWrapper>
   );
