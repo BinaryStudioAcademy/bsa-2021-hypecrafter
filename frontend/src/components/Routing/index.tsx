@@ -10,6 +10,7 @@ import Main from '../Main';
 import PrivateRoute from '../PrivateRoute';
 import PublicRoute from '../PublicRoute';
 import SignupPage from '../SignupPage';
+import Projects from '../../scenes/Projects';
 
 const routesWitoutHeader = [Routes.LOGIN, Routes.SIGNUP];
 
@@ -51,6 +52,12 @@ const Routing = () => {
           path={Routes.SIGNUP}
           exact
           component={SignupPage}
+        />
+        <PublicRoute
+          restricted={false}
+          path={Routes.PROJECTS}
+          exact
+          component={Projects}
         />
         <PrivateRoute exact path={Routes.ADDFUNDS} component={FundsPage} />
       </Switch>

@@ -57,6 +57,15 @@
         "Poland": "Польща",
         "Switzerland": "Швейцарія",
         "Ukraine": "Україна",
-        "United Kingdom": "Велика Британія"
+        "United Kingdom": "Велика Британія",
+        "Sort by": "Сортувати по",
+        "Filter by": "Фільтрувати по",
+        "All": "Все",
+        "Favorite": "Улюблене",
+        "Invested": "Інвестовано",
+        "Own": "Власне",
+        "Name": "Назва",
+        "Date": "Дата",
+        "projects found": "проектів знайдено"
     }
 }

@@ -12,7 +12,6 @@
         "or": "or",
         "Sign In with Google": "Sign In with Google",
         "Password is too short (minimum is 6 characters)": "Password is too short (minimum is 6 characters)",
-        
         "Add":"Add",
         "Add funds":"Add funds",
         "Custom fund":"Custom fund",
@@ -28,7 +27,6 @@
         "Current Wallet balance":"Current Wallet balance",
         "Account details":"Account details",
         "Transactions list":"Transactions list",
-
         "Create account": "Create account",
         "Personal details":"Personal details",
         "First name": "First name",
@@ -55,11 +53,19 @@
         "First name is too short": "First name is too short",
         "Last name is too short": "Last name is too short",
         "Phone number is invalid": "Phone number is invalid",
-
         "France": "France",
         "Poland": "Poland",
         "Switzerland": "Switzerland",
         "Ukraine": "Ukraine",
-        "United Kingdom": "United Kingdom"
+        "United Kingdom": "United Kingdom",
+        "Sort by": "Sort by",
+        "Filter by": "Filter by",
+        "All": "All",
+        "Favorite": "Favorite",
+        "Invested": "Invested",
+        "Own": "Own",
+        "Name": "Name",
+        "Date": "Date",
+        "projects found": "projects found"
     }
 }

@@ -58,3 +58,12 @@ declare type LocaleKeys =
  | 'Switzerland'
  | 'Ukraine'
  | 'United Kingdom'
+ | 'Sort by'
+ | 'Filter by'
+ | 'All'
+ | 'Favorite'
+ | 'Invested'
+ | 'Own'
+ | 'Name'
+ | 'Date'
+ | 'projects found';
