@@ -1,16 +1,16 @@
 import { useEffect } from 'react';
-import { Switch, useLocation, Redirect } from 'react-router-dom';
+import { Redirect, Switch, useLocation } from 'react-router-dom';
 import { Routes, StorageKeys } from '../../common/enums';
 import { useAction, useTypedSelector } from '../../hooks';
+import CreateProject from '../../scenes/CreateProject';
 import MainPage from '../../scenes/MainPage';
 import TrendsPage from '../../scenes/TrendsPage';
+import FundsPage from '../../scenes/Wallet/FundsPage';
 import Header from '../Header';
 import LoaderWrapper from '../LoaderWrapper';
 import LoginPage from '../LoginPage';
-import PrivateRoute from '../PrivateRoute';
-import FundsPage from '../../scenes/Wallet/FundsPage';
-import CreateProject from '../../scenes/CreateProject';
 import PageNotFound from '../PageNotFound';
+import PrivateRoute from '../PrivateRoute';
 import PublicRoute from '../PublicRoute';
 import SignupPage from '../SignupPage';
 
@@ -55,7 +55,12 @@ const Routing = () => {
           component={SignupPage}
         />
         <PrivateRoute exact path={Routes.ADDFUNDS} component={FundsPage} />
-        <PublicRoute restricted={false} exact path={Routes.PROJECTS_CREATE} component={CreateProject} />
+        <PublicRoute
+          restricted={false}
+          exact
+          path={Routes.PROJECTS_CREATE}
+          component={CreateProject}
+        />
         <PublicRoute
           restricted={false}
           path="/trends"

@@ -69,6 +69,37 @@ paths:
                   error:
                     type: string
                     example: "Timed out"
+  /projects:
+    put:
+      tags:
+        - Project
+      summary: Create a project.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+      responses:
+        '200':
+          description: A project object.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Project'
+        '408':
+          description: Something go wrong
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Timed out"
 components:
   schemas:
     User:
@@ -84,5 +115,19 @@ components:
       example:
         id: 3
         name: "Stuart Powers"
+    Project:
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+      # Both properties are required
+      required:  
+        - id
+        - name
+      example:
+        id: 3
+        name: "New project"
 tags:
   - name: User
+  - name: Project
