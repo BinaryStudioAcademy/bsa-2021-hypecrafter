@@ -4,81 +4,19 @@ import { Link } from 'react-router-dom';
 import { useTable, Column, Cell, useSortBy } from 'react-table';
 import classes from './styles.module.scss';
 import mock from './mock.json';
-import { useLocalization, TranslatorType } from '../../../providers/localization';
-import coinImg from '../../../assets/HypeCoin.png';
-
-interface Data {
-  date: string;
-  items: string;
-  type: string;
-  total: number;
-  change: number;
-  balance: number;
-}
-
-function RenderCell(cell: Cell<Data>, t:TranslatorType) {
-  console.log(cell.column.Header);
-  switch (cell.column.Header) {
-    case t('Total'):
-      return (
-        <>
-          {cell.value}
-          <img src={coinImg} alt="Coin" />
-        </>
-      );
-    case t('Change'):
-      return (
-        <>
-          {cell.value > 0 ? '+' : false}
-          {cell.value}
-          <img src={coinImg} alt="Coin" />
-        </>
-      );
-    case t('Balance'):
-      return (
-        <>
-          {cell.value}
-          <img src={coinImg} alt="Coin" />
-        </>
-      );
-    default:
-      return cell.value;
-  }
-}
+import { useLocalization } from '../../../providers/localization';
+import { Data, getColumns } from './utils';
+import { Routes } from '../../../common/enums';
+import RenderCell from './RenderCell';
 
 const Transactions: FC = () => {
   const { t, selectedLanguage } = useLocalization();
   const data: Data[] = useMemo(() => [...mock], []);
   const columns: Column<Data>[] = useMemo(
-    () => [
-      {
-        Header: t('Date'),
-        accessor: 'date'
-      },
-      {
-        Header: t('Items'),
-        accessor: 'items'
-      },
-      {
-        Header: t('Type'),
-        accessor: 'type'
-      },
-      {
-        Header: t('Total'),
-        accessor: 'total'
-      },
-      {
-        Header: t('Change'),
-        accessor: 'change'
-      },
-      {
-        Header: t('Balance'),
-        accessor: 'balance'
-      }
-    ],
+    () => getColumns(t),
     [selectedLanguage]
   );
-
+  console.log(columns);
   const { getTableBodyProps, headerGroups, rows, prepareRow } = useTable<Data>(
     { columns, data },
     useSortBy
@@ -86,7 +24,7 @@ const Transactions: FC = () => {
   return (
     <div className={classes['transaction-table-wrp']}>
       <div className={classes.breadcrumbs}>
-        <Link to="/"> {t('Home')}</Link>
+        <Link to={Routes.HOME}> {t('Home')}</Link>
         {' > '}
         <Link to="/account">{t('Account')}</Link>
         {' > '}
@@ -95,18 +33,18 @@ const Transactions: FC = () => {
       <h2 className={classes['wallet-header-title']}>
         {t('Transaction list')}
       </h2>
-      <Table
-        className={classes['transaction-table']}
-        striped
-        bordered
-        hover
-        variant="dark"
-      >
+      <table className={classes['transaction-table']}>
         <thead>
-          {headerGroups.map((headerGroup) => (
+          {headerGroups.map(headerGroup => (
             <tr {...headerGroup.getHeaderGroupProps()}>
-              {headerGroup.headers.map((column) => (
-                <th {...column.getHeaderProps()}>{column.render('Header')}</th>
+              {headerGroup.headers.map(column => (
+                <th
+                  {...column.getHeaderProps({
+                    style: { maxWidth: column.maxWidth, minWidth: column.minWidth, width: column.width }
+                  })}
+                >
+                  <span>{column.render('Header')}</span>
+                </th>
               ))}
             </tr>
           ))}
@@ -117,14 +55,24 @@ const Transactions: FC = () => {
             return (
               <tr {...row.getRowProps()}>
                 {row.cells.map((cell) => {
-                  console.log(cell);
-                  return <td {...cell.getCellProps()}>{RenderCell(cell, t)}</td>;
+                  const props = {
+                    t,
+                    props: cell.getCellProps({
+                      style: {
+                        minWidth: cell.column.minWidth,
+                        maxWidth: cell.column.maxWidth,
+                        width: cell.column.width
+                      }
+                    }),
+                    cell
+                  };
+                  return <RenderCell {...props} />;
                 })}
               </tr>
             );
           })}
         </tbody>
-      </Table>
+      </table>
     </div>
   );
 };

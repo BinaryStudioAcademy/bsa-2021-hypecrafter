@@ -27,40 +27,36 @@
   width: $breakpoint-lg !important;
   table {
     thead {
+      background-color: $color-root-table-header-background;
       th {
         @include text-md;
+        height: 50px;
+        padding-left: 10px;
       }
     }
     tbody {
       tr {
         height: 50px;
-        vertical-align:middle;
-        img {
-          width: $font-size-text !important;
-          min-width: $font-size-text !important;
-          margin-left: 3px;
-          margin-bottom: 2px;
-        }
-        @include text-md;
-        :nth-child(1) {
-          width: 10% !important;
-          font-size: $font-size-small;
-        }
-        :nth-child(2) {
-          width: 40% !important;
-        }
-        :nth-child(3) {
-          width: 20% !important;
-        }
-        :nth-child(4) {
-          width: 10% !important;
-        }
-        :nth-child(5) {
-          width: 10% !important;
-        }
-        :nth-child(6) {
-          width: 10% !important;
-        }
+        td{
+          overflow:hidden;
+          white-space:nowrap;
+          text-overflow: ellipsis;
+          vertical-align:middle;
+          padding-left: 10px;
+          img {
+            width: $font-size-text !important;
+            min-width: $font-size-text !important;
+            margin-left: 3px;
+            margin-bottom: 2px;
+          }
+          @include text-md;
+      }
+      }
+      tr:nth-child(odd) {
+        background-color: $color-root-table-odd-background;
+      }
+      tr:nth-child(even) {
+        background-color: $color-root-table-even-background;
       }
     }
   }
