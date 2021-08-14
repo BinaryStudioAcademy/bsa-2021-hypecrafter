@@ -57,13 +57,13 @@ const Routing = () => {
         <PrivateRoute exact path={Routes.ADDFUNDS} component={FundsPage} />
         <PublicRoute
           restricted={false}
-          path="/trends"
+          path={Routes.TRENDS}
           exact
           component={TrendsPage}
         />
         <PublicRoute
           restricted={false}
-          path="/projects/:id"
+          path={Routes.PROJECTS + Routes.ID}
           exact
           component={ProjectPage}
         />

@@ -49,6 +49,8 @@ export class ProjectRepository extends Repository<Project> {
         project."instagramUrl",
         project."facebookUrl",
         project."dribbleUrl",
+        project.content as story,
+        "FAQ",
         donated,
         description,
         category.name AS "category",
@@ -77,6 +79,18 @@ export class ProjectRepository extends Repository<Project> {
         .from('user_project', 'user_project')
         .groupBy('"projectId"'), 'up', 'up."projectId" = project.id')
       .leftJoin('project.category', 'category')
+      .leftJoin(subQuery => subQuery
+        .select(`
+          jsonb_agg(
+            jsonb_build_object(
+              'question', question,
+              'answer', answer 
+            )
+          ) AS "FAQ",
+          "projectId"
+        `)
+        .from('faq', 'faq')
+        .groupBy('"projectId"'), 'fq', 'fq."projectId" = project.id')
       .leftJoin('project.projectTags', 'projectTags')
       .leftJoin('projectTags.tag', 'tag')
       .where(`project."id" = '${id}'`)
@@ -86,7 +100,8 @@ export class ProjectRepository extends Repository<Project> {
         "bakersAmount",
         likes,
         dislikes,
-        category.name
+        category.name,
+        "FAQ"
       `)
       .execute();
   }

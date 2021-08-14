@@ -7,9 +7,9 @@ export interface ProjectPage {
   tags: string[];
   goal: number;
   donated: number;
-  url?: string;
-  likes?: number;
-  dislikes?: number;
+  likes: number;
+  dislikes: number;
+  FAQ: { question: string, answer: string }[];
   instagramUrl?: string;
   facebookUrl?: string;
   dribbleUrl?: string;

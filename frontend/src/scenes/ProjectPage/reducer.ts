@@ -1,16 +1,16 @@
-import { Project } from '../../common/types';
+import { ProjectPage } from '../../common/types';
 import { createReducer } from '../../helpers';
 import type { FetchProjectSuccessActionType } from './actions';
 import { fetchProject } from './actions';
 
 export interface ProjectPageState {
   isLoading: boolean;
-  project: Project;
+  project: ProjectPage;
 }
 
 export const projectPageState: ProjectPageState = {
   isLoading: false,
-  project: {} as Project
+  project: {} as ProjectPage
 };
 
 const projectPageReducer = createReducer<ProjectPageState>(projectPageState, {

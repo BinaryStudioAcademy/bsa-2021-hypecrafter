@@ -1,5 +1,5 @@
 import { createRoutine } from 'redux-saga-routines';
-import { Project } from '../../common/types';
+import { ProjectPage } from '../../common/types';
 
 export enum ProjectsActions {
   FETCH_PROJECT = 'PROJECTS/GET_PROJECT'
@@ -8,7 +8,7 @@ export enum ProjectsActions {
 export const fetchProject = createRoutine(ProjectsActions
   .FETCH_PROJECT, {
   trigger: (id: string) => id,
-  success: (project: Project) => project,
+  success: (project: ProjectPage) => project,
   failure: (error: string) => error
 });
 

@@ -3,6 +3,7 @@ import { log } from '../../helpers/logger';
 import AlertsSettingsSeeder from './alertsSettingsSeeder';
 import CategorySeeder from './categorySeeder';
 import DonateSeeder from './donateSeeder';
+import FaqSeeder from './faqSeeder';
 import ProjectSeeder from './projectSeeder';
 import ProjectTagsSeeder from './projectTagsSeeder';
 import TagsSeeder from './tagsSeeder';
@@ -19,5 +20,6 @@ createConnection()
     await UserProfileProjectSeeder.execute();
     await AlertsSettingsSeeder.execute();
     await DonateSeeder.execute();
+    await FaqSeeder.execute();
   })
   .catch(log);

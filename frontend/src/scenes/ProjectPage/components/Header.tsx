@@ -22,6 +22,7 @@ const Header: FunctionComponent<HeaderProps> = ({ project }) => {
     // donated,
     // likes,
     // dislikes,
+    // FAQ,
     instagramUrl,
     facebookUrl,
     dribbleUrl,
