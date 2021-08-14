@@ -1,12 +1,12 @@
-import { Cell, TableCellProps } from 'react-table';
 import { FC } from 'react';
-import { Data } from './utils';
-import { TranslatorType } from '../../../providers/localization';
+import { Cell, TableCellProps } from 'react-table';
 import coinImg from '../../../assets/HypeCoin.png';
+import { TranslatorType } from '../../../providers/localization';
+import { HeaderI } from './utils';
 
 interface RenderCellProps {
   props: TableCellProps;
-  cell: Cell<Data>;
+  cell: Cell<HeaderI>;
   t: TranslatorType;
 }
 const RenderCell: FC<RenderCellProps> = (cellProps: RenderCellProps) => {

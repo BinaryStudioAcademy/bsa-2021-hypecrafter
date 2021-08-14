@@ -1,26 +1,31 @@
 import { FC, useMemo } from 'react';
-import { Table } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { useTable, Column, Cell, useSortBy } from 'react-table';
-import classes from './styles.module.scss';
-import mock from './mock.json';
-import { useLocalization } from '../../../providers/localization';
-import { Data, getColumns } from './utils';
+import { Column, useSortBy, useTable } from 'react-table';
 import { Routes } from '../../../common/enums';
+import Button from '../../../components/Button';
+import { useLocalization } from '../../../providers/localization';
+import mock from './mock.json';
 import RenderCell from './RenderCell';
+import classes from './styles.module.scss';
+import { getColumns, HeaderI } from './utils';
 
 const Transactions: FC = () => {
   const { t, selectedLanguage } = useLocalization();
-  const data: Data[] = useMemo(() => [...mock], []);
-  const columns: Column<Data>[] = useMemo(
+  const data: HeaderI[] = useMemo(() => [...mock], []);
+  const columns: Column<HeaderI>[] = useMemo(
     () => getColumns(t),
     [selectedLanguage]
   );
-  console.log(columns);
-  const { getTableBodyProps, headerGroups, rows, prepareRow } = useTable<Data>(
+  const { getTableBodyProps, headerGroups, rows, prepareRow } = useTable<HeaderI>(
     { columns, data },
     useSortBy
   );
+  const btnLoadMore = <Button variant="secondary">Load more</Button>;
+  // const spinner = (
+  //   <Spinner animation="border" role="status" variant="secondary">
+  //     <span className="visually-hidden">Loading...</span>
+  //   </Spinner>
+  // );
   return (
     <div className={classes['transaction-table-wrp']}>
       <div className={classes.breadcrumbs}>
@@ -28,20 +33,21 @@ const Transactions: FC = () => {
         {' > '}
         <Link to="/account">{t('Account')}</Link>
         {' > '}
-        <span>{t('Transaction list')}</span>
+        <span>{t('Transactions list')}</span>
       </div>
       <h2 className={classes['wallet-header-title']}>
-        {t('Transaction list')}
+        {t('Transactions list')}
       </h2>
       <table className={classes['transaction-table']}>
         <thead>
           {headerGroups.map(headerGroup => (
-            <tr {...headerGroup.getHeaderGroupProps()}>
+            <tr {...headerGroup.getHeaderGroupProps()} key={headerGroup.id}>
               {headerGroup.headers.map(column => (
                 <th
                   {...column.getHeaderProps({
                     style: { maxWidth: column.maxWidth, minWidth: column.minWidth, width: column.width }
                   })}
+                  key={column.id}
                 >
                   <span>{column.render('Header')}</span>
                 </th>
@@ -53,7 +59,7 @@ const Transactions: FC = () => {
           {rows.map((row) => {
             prepareRow(row);
             return (
-              <tr {...row.getRowProps()}>
+              <tr {...row.getRowProps()} key={row.id}>
                 {row.cells.map((cell) => {
                   const props = {
                     t,
@@ -66,13 +72,16 @@ const Transactions: FC = () => {
                     }),
                     cell
                   };
-                  return <RenderCell {...props} />;
+                  return <RenderCell {...props} key={cell.column.id} />;
                 })}
               </tr>
             );
           })}
         </tbody>
       </table>
+      <div className={classes['pagination-wrp']}>
+        {btnLoadMore}
+      </div>
     </div>
   );
 };
