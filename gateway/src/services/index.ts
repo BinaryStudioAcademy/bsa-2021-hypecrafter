@@ -1,5 +1,5 @@
-import AuthService from './auth';
 import { Repositories } from '../data/repositories';
+import AuthService from './auth';
 
 export function initServices(repositories: Repositories): Services {
   return {

@@ -1,6 +1,6 @@
 export enum Path {
-  User = "/users",
-  Register = "/auth/register",
+  User = '/users',
+  Register = '/auth/register',
   Topic = '/topics',
   Project = '/projects'
 }

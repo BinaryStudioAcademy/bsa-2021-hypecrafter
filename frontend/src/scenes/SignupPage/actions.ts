@@ -1,5 +1,5 @@
 import { createRoutine } from 'redux-saga-routines';
-import { SignupData } from '../../common/types/signup';
+import { SignupData, Tokens } from '../../common/types/signup';
 
 export enum RegistrationActions {
   REGISTER_USER = 'REGISTRATION/REGISTER_USER'
@@ -7,7 +7,7 @@ export enum RegistrationActions {
 
 export const registerUserAction = createRoutine(RegistrationActions.REGISTER_USER, {
   trigger: (data: SignupData) => data,
-  success: (tokens: { refreshToken: string, accessToken: string }) => tokens,
+  success: (tokens: Tokens) => tokens,
   failure: (error: string) => error
 });
 

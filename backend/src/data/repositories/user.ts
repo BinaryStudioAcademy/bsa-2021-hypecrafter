@@ -1,5 +1,6 @@
-import { EntityRepository, Repository } from "typeorm";
-import { UserProfile } from "../entities/userProfile";
+import { EntityRepository, Repository } from 'typeorm';
+import { RegisterData } from '../../common/types/registration';
+import { UserProfile } from '../entities/userProfile';
 
 @EntityRepository(UserProfile)
 export class UserRepository extends Repository<UserProfile> {
@@ -11,21 +12,8 @@ export class UserRepository extends Repository<UserProfile> {
     return this.findOne({ id });
   }
 
-  public createUser(data: {
-    region: string;
-    phoneNumber: string;
-    gender: string;
-    birthday: string;
-    email: string;
-    firstName: string;
-    lastName: string;
-    password: string;
-  }) {
-    const newUserProfile: UserProfile = Object.assign(new UserProfile(), {
-      ...data,
-      lastLoginDate: "2021-08-12 17:53:04.083578",
-      balance: 0
-    });
+  public createUser(data: RegisterData) {
+    const newUserProfile = Object.assign(new UserProfile(), data);
     return this.save(newUserProfile);
   }
 }

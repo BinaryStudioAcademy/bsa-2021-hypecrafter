@@ -15,8 +15,8 @@ export type MainFormData = {
 };
 
 interface MainFormProps {
-  setCurrentPage: CallableFunction;
-  setMainFormInfo: CallableFunction;
+  setCurrentPage: React.Dispatch<React.SetStateAction<Pages>>;
+  setMainFormInfo: React.Dispatch<React.SetStateAction<MainFormData>>;
   mainFormInfo: MainFormData;
   t: CallableFunction;
 }
@@ -33,18 +33,12 @@ const MainForm: FunctionComponent<MainFormProps> = ({
     formState: { errors }
   } = useForm<MainFormData>();
 
-  const onSubmit: SubmitHandler<MainFormData> = (data) => {
+  const onSubmit: SubmitHandler<MainFormData> = () => {
     setCurrentPage(Pages.ADDITIONAL_FORM);
-    console.log(
-      'Sign Un',
-      data.email,
-      data.password,
-      data.firstName,
-      data.lastName
-    );
   };
 
   const dummySignUpWithGoogleHandler: MouseEventHandler<HTMLButtonElement> = () => {
+    // eslint-disable-next-line no-console
     console.log('Sign Up with Google');
   };
 

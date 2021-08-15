@@ -1,19 +1,20 @@
 import randtoken from 'rand-token';
+import { HttpStatusCode } from '../../../../shared/build/enums';
 import { RefreshToken } from '../../data/entities/refreshToken';
-import { createToken } from '../../helpers/createToken';
 import { RefreshTokenRepository } from '../../data/repositories/refreshToken';
 import { UserRepository } from '../../data/repositories/user';
-import { CustomError } from '../../helpers/customError';
-import { HttpStatusCode } from '../../../../shared/build/enums';
+import { createToken } from '../../helpers/createToken';
 import { encrypt } from '../../helpers/crypt';
+import { CustomError } from '../../helpers/customError';
 
 export default class AuthService {
   readonly #refreshTokenRepository: RefreshTokenRepository;
+
   readonly #userRepository: UserRepository;
 
   constructor(refreshTokenRepository: RefreshTokenRepository, userRepository: UserRepository) {
     this.#refreshTokenRepository = refreshTokenRepository;
-    this.#userRepository = userRepository
+    this.#userRepository = userRepository;
   }
 
   public loginUser(

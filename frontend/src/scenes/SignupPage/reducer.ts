@@ -1,13 +1,13 @@
+import { Tokens } from '../../common/types/signup';
 import { createReducer } from '../../helpers';
-import { registerUserAction } from './actions';
 import type {
-  RegisterUserSuccessActionType,
-  RegisterUserFailureActionType
+  RegisterUserFailureActionType, RegisterUserSuccessActionType
 } from './actions';
+import { registerUserAction } from './actions';
 
 export interface RegistrationState {
   isLoading: boolean;
-  tokens: { accessToken: string, refreshToken: string } | null;
+  tokens: Tokens | null;
   error: string;
 }
 

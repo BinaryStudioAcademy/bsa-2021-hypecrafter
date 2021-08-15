@@ -12,10 +12,10 @@ import { UserProject } from './userProject';
 
 @Entity()
 export class UserProfile extends AbstractEntity {
-  @Column({ nullable: true })
+  @Column()
   firstName: string;
 
-  @Column({ nullable: true })
+  @Column()
   lastName: string;
 
   @Column()
@@ -44,6 +44,8 @@ export class UserProfile extends AbstractEntity {
 
   @Column({ nullable: true })
   birthday: string;
+
+  @Column({ nullable: true })
   instagramUrl: string;
 
   @Column({ nullable: true })

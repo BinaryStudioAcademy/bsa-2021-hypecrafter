@@ -1,14 +1,15 @@
-import { call, put, takeEvery, all } from 'redux-saga/effects';
+import { all, call, put, takeEvery } from 'redux-saga/effects';
+import { Tokens } from '../../common/types/signup';
+import { Action } from '../../common/types/store/action';
+import { setAccessToken, setRefreshToken } from '../../helpers/localStorage';
 import { register } from '../../services/register';
 import { registerUserAction } from './actions';
-import { Action } from '../../common/types/store/action';
-import { StorageKeys } from '../../common/enums/storage-keys';
 
 function* registerUserRequest(action: Action) {
   try {
-    const response: { accessToken: string, refreshToken: string } = yield call(register, action.payload);
-    localStorage.setItem(StorageKeys.ACCESS_TOKEN, response.accessToken);
-    localStorage.setItem(StorageKeys.REFRESH_TOKEN, response.refreshToken);
+    const response: Tokens = yield call(register, action.payload);
+    setAccessToken(response.accessToken);
+    setRefreshToken(response.refreshToken);
     yield put(registerUserAction.success(response));
   } catch (error) {
     yield put(registerUserAction.failure('Failed register'));

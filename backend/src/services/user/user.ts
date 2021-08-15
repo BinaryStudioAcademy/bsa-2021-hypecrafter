@@ -1,4 +1,7 @@
-import { UserRepository } from "../../data/repositories";
+import { HttpStatusCode } from '../../../../shared/build/enums';
+import { RegisterData, RegisterReqBody } from '../../common/types/registration/registration';
+import { UserRepository } from '../../data/repositories';
+import { CustomError } from '../../helpers/customError';
 
 export default class UserService {
   readonly #userRepository: UserRepository;
@@ -15,16 +18,19 @@ export default class UserService {
     return this.#userRepository.getById(id);
   }
 
-  public createUser(data: {
-    region: string;
-    phoneNumber: string;
-    gender: string;
-    birthday: string;
-    email: string;
-    firstName: string;
-    lastName: string;
-    password: string;
-  }) {
+  public async registerUser({ data, tokens }: RegisterReqBody) {
+    try {
+      await this.#userRepository.createUser(data);
+      return tokens;
+    } catch (err) {
+      throw new CustomError(
+        HttpStatusCode.INTERNAL_SERVER_ERROR,
+        'User not created'
+      );
+    }
+  }
+
+  public createUser(data: RegisterData) {
     return this.#userRepository.createUser(data);
   }
 }

@@ -1,10 +1,10 @@
+import { Express } from 'express';
 // eslint-disable-next-line import/no-self-import
 import passport from 'passport';
-import { Express } from 'express';
+import { ExtractJwt, Strategy as JwtStrategy } from 'passport-jwt';
 import { Strategy as LocalStrategy } from 'passport-local';
-import { Strategy as JwtStrategy, ExtractJwt } from 'passport-jwt';
-import { env } from '../../env';
 import { Repositories } from '../../data/repositories';
+import { env } from '../../env';
 import { cryptCompare } from '../../helpers/crypt';
 
 const options = {
@@ -35,13 +35,13 @@ export function initPassport(app: Express, repositories: Repositories) {
   );
 
   passport.use(
-    "register",
+    'register',
     new LocalStrategy(
-      { passReqToCallback: true, usernameField: "email" },
+      { passReqToCallback: true, usernameField: 'email' },
       async ({ body: data }, email, _password, done) => {
         try {
           return (await repositories.userRepository.getByEmail(email))
-            ? done({ status: 401, message: "Email is already taken." }, null)
+            ? done({ status: 401, message: 'Email is already taken.' }, null)
             : done(null, { ...data, email });
         } catch (err) {
           return done(err);

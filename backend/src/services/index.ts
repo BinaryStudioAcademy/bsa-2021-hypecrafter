@@ -15,4 +15,4 @@ export type Services = {
   userService: UserService,
   topicService: TopicService,
   projectService: ProjectService
-}
+};

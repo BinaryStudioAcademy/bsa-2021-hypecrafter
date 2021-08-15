@@ -18,4 +18,4 @@ createConnection().then(() => {
   const repositories = initRepositories();
   const services = initServices(repositories);
   initRoutes(app, services).start();
-}).catch((e) => log(e));
+}).catch(log);
