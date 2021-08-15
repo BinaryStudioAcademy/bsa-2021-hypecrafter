@@ -12,7 +12,7 @@ import { initServices } from './services';
 const { port, environment } = env.app;
 const app = express();
 app.use(cors());
-createConnection().then(async() => {
+createConnection().then(() => {
   try {
     const repositories = initRepositories();
     const services = initServices(repositories);
