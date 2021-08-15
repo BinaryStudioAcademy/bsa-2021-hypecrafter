@@ -4,7 +4,6 @@ export enum Path {
   Auth = '/auth',
   Notification = '/notifications',
   Project = '/projects',
-  Invalid = '/*'
 }
 
 export enum AuthApiPath {

@@ -2,7 +2,6 @@ import { Router } from 'express';
 import { Path } from '../../common/enums';
 import { Services } from '../../services';
 import authRouter from './auth';
-import invalidRouter from './invalid';
 import notificationRouter from './notification';
 import projectRouter from './project';
 import topicRouter from './topic';
@@ -16,7 +15,6 @@ const initRoutes = (services: Services) => {
   router.use(Path.Auth, authRouter(services));
   router.use(Path.Notification, notificationRouter());
   router.use(Path.Project, projectRouter());
-  router.use(Path.Invalid, invalidRouter())
   return router;
 };
 
