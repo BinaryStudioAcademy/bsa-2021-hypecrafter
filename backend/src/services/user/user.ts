@@ -22,7 +22,7 @@ export default class UserService {
     try {
       await this.#userRepository.createUser(data);
       return tokens;
-    } catch (err) {
+    } catch {
       throw new CustomError(
         HttpStatusCode.INTERNAL_SERVER_ERROR,
         'User not created'
