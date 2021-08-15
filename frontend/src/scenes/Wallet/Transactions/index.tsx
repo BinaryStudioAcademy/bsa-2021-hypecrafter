@@ -1,17 +1,23 @@
 import { FC, useMemo } from 'react';
+import { Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { Column, useSortBy, useTable } from 'react-table';
 import { Routes } from '../../../common/enums';
 import Button from '../../../components/Button';
+import { useTypedSelector } from '../../../hooks';
 import { useLocalization } from '../../../providers/localization';
-import mock from './mock.json';
 import RenderCell from './RenderCell';
 import classes from './styles.module.scss';
 import { getColumns, HeaderI } from './utils';
 
 const Transactions: FC = () => {
+  const { page, isLast, isLoading } = useTypedSelector(
+    (
+      { transactions }
+    ) => transactions
+  );
   const { t, selectedLanguage } = useLocalization();
-  const data: HeaderI[] = useMemo(() => [...mock], []);
+  const data: HeaderI[] = useMemo(() => [...page], []);
   const columns: Column<HeaderI>[] = useMemo(
     () => getColumns(t),
     [selectedLanguage]
@@ -21,11 +27,11 @@ const Transactions: FC = () => {
     useSortBy
   );
   const btnLoadMore = <Button variant="secondary">Load more</Button>;
-  // const spinner = (
-  //   <Spinner animation="border" role="status" variant="secondary">
-  //     <span className="visually-hidden">Loading...</span>
-  //   </Spinner>
-  // );
+  const spinner = (
+    <Spinner animation="border" role="status" variant="secondary">
+      <span className="visually-hidden">Loading...</span>
+    </Spinner>
+  );
   return (
     <div className={classes['transaction-table-wrp']}>
       <div className={classes.breadcrumbs}>
@@ -80,7 +86,7 @@ const Transactions: FC = () => {
         </tbody>
       </table>
       <div className={classes['pagination-wrp']}>
-        {btnLoadMore}
+        {isLast ? isLoading ? spinner : btnLoadMore : false}
       </div>
     </div>
   );

@@ -11,7 +11,6 @@ interface RenderCellProps {
 }
 const RenderCell: FC<RenderCellProps> = (cellProps: RenderCellProps) => {
   const { props, cell, t } = cellProps;
-  console.log(cellProps);
   switch (cell.column.Header) {
     case t('Total'):
       return (
