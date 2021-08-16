@@ -1,32 +1,36 @@
 @import '../../styles/vars';
 @import '../../styles/fonts';
 
-.project-image {
-  object-fit: cover;
-  width: 100%;
-}
+.project-header {
+  height: 420px;
 
-.project-name {
-  font-size: $font-size-category;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.project-social-links-container {
-  margin-left: 3px;
-
-  a {
-    padding: 5px 10px;
-    width: 43px;
-    border-radius: 2px;
-    margin-right: 10px;
-    background-color: $color-root-grey;
-    color: $color-root-text;
+  .project-image {
+    object-fit: cover;
+    width: 100%;
   }
 
-  a:hover {
-    color: $color-root-turquoise;
+  .project-name {
+    font-size: $font-size-category;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .project-social-links-container {
+    margin-left: 3px;
+
+    a {
+      padding: 5px 10px;
+      width: 43px;
+      border-radius: 2px;
+      margin-right: 10px;
+      background-color: $color-root-grey;
+      color: $color-root-text;
+    }
+
+    a:hover {
+      color: $color-root-turquoise;
+    }
   }
 }
 

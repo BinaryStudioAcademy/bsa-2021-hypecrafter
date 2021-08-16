@@ -31,7 +31,7 @@ const Header: FunctionComponent<HeaderProps> = ({ project }) => {
   // const [isFavorite, setFavorite] = useState(false);
 
   return (
-    <Container>
+    <Container className={classes['project-header']}>
       <Row>
         <Col xs={12} lg={5}>
           <Image src={imageUrl} className={classes['project-image']} />
