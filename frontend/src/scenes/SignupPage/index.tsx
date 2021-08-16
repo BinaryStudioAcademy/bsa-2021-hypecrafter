@@ -25,7 +25,7 @@ const SignupPage: FunctionComponent = () => {
     if (refreshToken) {
       history.push('/');
     }
-  });
+  }, [refreshToken]);
 
   const handleSignup = (data: SignupData) => {
     registerUserAction(data);

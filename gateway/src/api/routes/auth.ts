@@ -43,7 +43,7 @@ const init = (services: Services) => {
             refreshToken
           );
           return result;
-        } catch (err) {
+        } catch {
           throw new CustomError(
             HttpStatusCode.UNAUTHORIZED,
             'Token is invalid'
@@ -59,18 +59,21 @@ const init = (services: Services) => {
       })
     )
     .post(AuthApiPath.Register, registrationMiddleware, async (req, res) => {
-      const newUser: User = await services.authService.registerUser(
-        req.body.email,
-        req.body.password
-      );
-      if (newUser) {
+      try {
+        const newUser: User = await services.authService.registerUser(
+          req.body.email,
+          req.body.password
+        );
         const userId: string = newUser.id;
         const userAgentInfo: string = req.headers['user-agent'];
         const tokens: Tokens = services.authService.loginUser(userId, userAgentInfo);
         req.body = { data: req.body, tokens };
         res.delegate(Project.BACKEND);
-      } else {
-        res.send(500);
+      } catch {
+        throw new CustomError(
+          HttpStatusCode.INTERNAL_SERVER_ERROR,
+          'User is not created'
+        );
       }
     });
 };
