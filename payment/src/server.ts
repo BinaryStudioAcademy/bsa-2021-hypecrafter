@@ -12,6 +12,6 @@ const app = new MicroMq({
   rabbit
 });
 
-createConnection().then(async() => {
+createConnection().then(() => {
   initRoutes(app).start();
 }).catch((e) => log(e));

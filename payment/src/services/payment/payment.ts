@@ -11,10 +11,6 @@ export default class TransactionService {
     return this.#transactionHistoryRepository.getAll();
   }
 
-  // public getCount(useId: string) {
-  //   return this.#transactionHistoryRepository.getCountByUserId(useId);
-  // }
-
   public getById(id: string) {
     return this.#transactionHistoryRepository.getById(id);
   }
