@@ -14,9 +14,9 @@ interface TransactionAction extends Action {
 function* fetchTransactionsPage(action: TransactionAction) {
   try {
     const { userId, pageNum } = action.payload;
-    console.log('transacions saga', userId, pageNum);
     const transactionsPage: TransactionsPage = yield call(getPage, userId, pageNum);
-    yield put(fetchTransactionsPageAction.success(transactionsPage));
+    const isFirstPage = pageNum === 1;
+    yield put(fetchTransactionsPageAction.success({ ...transactionsPage, isFirstPage }));
   } catch (error) {
     console.log(error.message);
     yield put(fetchTransactionsPageAction.failure('Failed to transactions data'));

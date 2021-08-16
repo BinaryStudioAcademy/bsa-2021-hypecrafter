@@ -1,7 +1,7 @@
 export interface PageRow {
-  id?: string;
-  date: string;
-  items: string;
+  id: string;
+  createdAt: string;
+  item: string;
   type: string;
   total: number;
   balance: number;
@@ -9,5 +9,6 @@ export interface PageRow {
 
 export interface TransactionsPage{
   page: PageRow[];
-  isLast: boolean
+  isLast: boolean;
+  isFirstPage: boolean;
 }

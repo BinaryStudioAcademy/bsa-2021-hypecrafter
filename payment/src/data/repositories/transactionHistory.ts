@@ -19,10 +19,12 @@ export class TransactionHistoryRepository extends Repository<TransactionHistory>
   public async getByUserId(userId: string, pageNum: number) {
     const skipNum = (pageNum - 1) * paginationStep;
     const count = await this.getCountByUserId(userId);
-    const page = await this.createQueryBuilder("transactionHistory")
-    .select(["id",`"createdAt"`,"item","type","total","balance"])
-    .where(`"userId" = '${userId}'`).skip(skipNum).take(paginationStep).getRawMany();
-    console.log(page, count);
+    const page = await this.createQueryBuilder('transactionHistory')
+      .select(['id', '"createdAt"', 'item', 'type', 'total', 'balance'])
+      .where(`"userId" = '${userId}'`).skip(skipNum)
+      .take(paginationStep)
+      .getRawMany();
+    console.log(count <= pageNum * paginationStep);
     const isLast: boolean = count <= pageNum * paginationStep;
     return {
       isLast,

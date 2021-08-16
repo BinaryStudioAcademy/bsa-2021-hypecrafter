@@ -29,10 +29,15 @@ export const transactionsReducer = createReducer<PageState>(initialState, {
     };
   },
   [fetchTransactionsPageAction.SUCCESS](state, action: FetchTransactionsActionSucces) {
+    let newPage = state.page;
+    if (action.payload.isFirstPage) {
+      newPage = action.payload.page;
+    } else { newPage = [...state.page, ...action.payload.page]; }
     return {
       ...state,
-      page: action.payload.page,
-      isLoading: true
+      page: newPage,
+      isLoading: false,
+      isLast: action.payload.isLast
     };
   }
 });

@@ -8,9 +8,10 @@ interface RenderCellProps {
   props: TableCellProps;
   cell: Cell<PageRow>;
   t: TranslatorType;
+  selectedLanguage: string;
 }
 const RenderCell: FC<RenderCellProps> = (cellProps: RenderCellProps) => {
-  const { props, cell, t } = cellProps;
+  const { selectedLanguage, props, cell, t } = cellProps;
   switch (cell.column.Header) {
     case t('Total'):
       return (
@@ -34,6 +35,23 @@ const RenderCell: FC<RenderCellProps> = (cellProps: RenderCellProps) => {
           <img src={coinImg} alt="Coin" />
         </td>
       );
+    case t('Date'): {
+      if (selectedLanguage === 'ua') {
+        return (
+          <td {...props}>
+            {new Date(cell.value).toLocaleDateString('uk-UA',
+              { year: 'numeric', month: 'short', day: 'numeric' })}
+          </td>
+        );
+      }
+      return (
+        <td {...props}>
+          {new Date(cell.value).toLocaleDateString('en-EN',
+            { year: 'numeric', month: 'short', day: 'numeric' })}
+        </td>
+      );
+      break;
+    }
     default:
       return (<td {...props}>{cell.value}</td>);
   }

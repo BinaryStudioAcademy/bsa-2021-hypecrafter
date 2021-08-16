@@ -1,7 +1,7 @@
-import { FC, useEffect, useMemo } from 'react';
+import { FC, useEffect, useMemo, useState } from 'react';
 import { Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { Column, useSortBy, useTable } from 'react-table';
+import { Column, useTable } from 'react-table';
 import { Routes } from '../../../common/enums';
 import { PageRow } from '../../../common/types';
 import Button from '../../../components/Button';
@@ -17,12 +17,13 @@ const Transactions: FC = () => {
       { transactions }
     ) => transactions
   );
+  const [pageNum, setPageNum] = useState(1);
   const { fetchTransactionsPageAction } = useAction();
   useEffect(() => {
-    fetchTransactionsPageAction('ac7a5b8f-7fc4-4d1e-81c9-1a9c49c9b529', 1);
-  }, []);
+    fetchTransactionsPageAction('ac7a5b8f-7fc4-4d1e-81c9-1a9c49c9b529', pageNum);
+  }, [pageNum]);
   const { t, selectedLanguage } = useLocalization();
-  const data: PageRow[] = useMemo(() => [...page], []);
+
   const pagination = useMemo(() => {
     if (isLast) return false;
     if (isLoading) {
@@ -32,15 +33,14 @@ const Transactions: FC = () => {
         </Spinner>
       );
     }
-    return (<Button variant="secondary">Load more</Button>);
+    return (<Button onClick={() => setPageNum(prev => prev + 1)} variant="secondary">Load more</Button>);
   }, [isLast, isLoading]);
   const columns: Column<PageRow>[] = useMemo(
     () => getColumns(t),
     [selectedLanguage]
   );
   const { getTableBodyProps, headerGroups, rows, prepareRow } = useTable<PageRow>(
-    { columns, data },
-    useSortBy
+    { columns, data: page }
   );
   return (
     <div className={classes['transaction-table-wrp']}>
@@ -56,9 +56,9 @@ const Transactions: FC = () => {
       </h2>
       <table className={classes['transaction-table']}>
         <thead>
-          {headerGroups.map(headerGroup => (
-            <tr {...headerGroup.getHeaderGroupProps()} key={headerGroup.id}>
-              {headerGroup.headers.map(column => (
+          {headerGroups.map(HeaderGroup => (
+            <tr {...HeaderGroup.getHeaderGroupProps()} key={HeaderGroup.id}>
+              {HeaderGroup.headers.map(column => (
                 <th
                   {...column.getHeaderProps({
                     style: { maxWidth: column.maxWidth, minWidth: column.minWidth, width: column.width }
@@ -78,6 +78,7 @@ const Transactions: FC = () => {
               <tr {...row.getRowProps()} key={row.id}>
                 {row.cells.map((cell) => {
                   const props = {
+                    selectedLanguage,
                     t,
                     props: cell.getCellProps({
                       style: {
@@ -88,7 +89,7 @@ const Transactions: FC = () => {
                     }),
                     cell
                   };
-                  return <RenderCell {...props} key={cell.column.id} />;
+                  return <RenderCell {...props} key={cell.row.id + cell.column.id} />;
                 })}
               </tr>
             );

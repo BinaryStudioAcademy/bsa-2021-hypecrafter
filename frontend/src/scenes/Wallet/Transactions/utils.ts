@@ -11,14 +11,14 @@ export const getColumns = (t:TranslatorType):Column<PageRow>[] => {
   return ([
     {
       Header: t('Date'),
-      accessor: 'date',
+      accessor: 'createdAt',
       maxWidth: widthDate,
       minWidth: widthDate,
       width: widthDate
     },
     {
       Header: t('Items'),
-      accessor: 'items',
+      accessor: 'item',
       maxWidth: widthItems,
       minWidth: widthItems,
       width: widthItems
