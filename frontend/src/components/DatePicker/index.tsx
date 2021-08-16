@@ -1,17 +1,22 @@
-import { useState } from 'react';
-import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
-import style from './styles.module.scss';
+import DayPickerInput from 'react-day-picker/DayPickerInput';
+import 'react-day-picker/lib/style.css';
+import styles from './style.scss';
 
-const DatePickerInput = () => {
-  const [startDate, setStartDate] = useState(new Date());
-  const triangle = document.getElementsByClassName('react-datepicker__triangle')[0] as HTMLElement;
-  triangle.style.left = '-7';
+interface DatePickerProps {
+  daySetter: (day: Date) => void;
+}
+
+const DatePickerInput: React.FC<DatePickerProps> = ({ daySetter }) => {
+  const handleDayChange = (selectedDay: Date) => {
+    daySetter(selectedDay);
+  };
+
   return (
-    <DatePicker
-      className={style.input}
-      selected={startDate}
-      onChange={(date: Date) => setStartDate(date)}
+    <DayPickerInput
+      classNames={styles}
+      placeholder="DD/MM/YYYY"
+      format="DD/MM/YYYY"
+      onDayChange={handleDayChange}
     />
   );
 };

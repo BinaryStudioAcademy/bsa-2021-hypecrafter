@@ -20,7 +20,7 @@
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.0-beta.4",
     "react-chartjs-2": "^3.0.4",
-    "react-datepicker": "^4.2.0",
+    "react-day-picker": "^7.4.10",
     "react-dom": "^17.0.2",
     "react-hook-form": "^7.12.2",
     "react-i18next": "^11.11.4",
@@ -35,7 +35,6 @@
   "devDependencies": {
     "@types/node": "^12.20.18",
     "@types/react": "^17.0.14",
-    "@types/react-datepicker": "^4.1.4",
     "@types/react-dom": "^17.0.9",
     "@types/react-router-dom": "^5.1.8",
     "@types/redux-saga-routines": "^3.1.2",
