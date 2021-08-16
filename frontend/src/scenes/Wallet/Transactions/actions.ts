@@ -6,7 +6,7 @@ export enum WalletActions {
 }
 
 export const fetchTransactionsPageAction = createRoutine(WalletActions.GET_TRANSACTIONS, {
-  trigger: (userId: string, pageNum: number) => ({ userId, pageNum }),
+  trigger: (userId: string, lastPage: number) => ({ userId, lastPage }),
   request: () => undefined,
   success: (transactionPage: TransactionsPage) => transactionPage
 });

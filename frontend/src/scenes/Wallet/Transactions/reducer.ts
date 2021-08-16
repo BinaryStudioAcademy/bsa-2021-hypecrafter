@@ -7,12 +7,14 @@ export interface PageState {
   isLoading: boolean;
   isLast: boolean;
   page: PageRow[];
+  lastPage: number;
 }
 
 export const initialState: PageState = {
   isLoading: true,
   isLast: false,
-  page: []
+  page: [],
+  lastPage: 0
 };
 
 export const transactionsReducer = createReducer<PageState>(initialState, {
@@ -29,15 +31,12 @@ export const transactionsReducer = createReducer<PageState>(initialState, {
     };
   },
   [fetchTransactionsPageAction.SUCCESS](state, action: FetchTransactionsActionSucces) {
-    let newPage = state.page;
-    if (action.payload.isFirstPage) {
-      newPage = action.payload.page;
-    } else { newPage = [...state.page, ...action.payload.page]; }
     return {
       ...state,
-      page: newPage,
+      page: [...state.page, ...action.payload.page],
       isLoading: false,
-      isLast: action.payload.isLast
+      isLast: action.payload.isLast,
+      lastPage: state.lastPage + 1
     };
   }
 });

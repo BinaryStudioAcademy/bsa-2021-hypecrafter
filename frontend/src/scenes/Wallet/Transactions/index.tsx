@@ -1,4 +1,4 @@
-import { FC, useEffect, useMemo, useState } from 'react';
+import { FC, useCallback, useEffect, useMemo } from 'react';
 import { Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { Column, useTable } from 'react-table';
@@ -12,18 +12,18 @@ import classes from './styles.module.scss';
 import { getColumns } from './utils';
 
 const Transactions: FC = () => {
-  const { page, isLast, isLoading } = useTypedSelector(
+  const { lastPage, page, isLast, isLoading } = useTypedSelector(
     (
       { transactions }
     ) => transactions
   );
-  const [pageNum, setPageNum] = useState(1);
   const { fetchTransactionsPageAction } = useAction();
-  useEffect(() => {
-    fetchTransactionsPageAction('ac7a5b8f-7fc4-4d1e-81c9-1a9c49c9b529', pageNum);
-  }, [pageNum]);
   const { t, selectedLanguage } = useLocalization();
-
+  const updatePage = useCallback(
+    () => fetchTransactionsPageAction('ac7a5b8f-7fc4-4d1e-81c9-1a9c49c9b529', lastPage),
+    [lastPage]
+  );
+  useEffect(() => { if (lastPage === 0) updatePage(); }, []);
   const pagination = useMemo(() => {
     if (isLast) return false;
     if (isLoading) {
@@ -33,7 +33,7 @@ const Transactions: FC = () => {
         </Spinner>
       );
     }
-    return (<Button onClick={() => setPageNum(prev => prev + 1)} variant="secondary">Load more</Button>);
+    return (<Button onClick={updatePage} variant="secondary">Load more</Button>);
   }, [isLast, isLoading]);
   const columns: Column<PageRow>[] = useMemo(
     () => getColumns(t),

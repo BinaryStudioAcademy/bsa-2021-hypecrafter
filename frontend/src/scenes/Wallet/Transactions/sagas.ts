@@ -7,16 +7,17 @@ import { fetchTransactionsPageAction } from './actions';
 interface TransactionAction extends Action {
   payload: {
     userId: string;
-    pageNum: number
+    lastPage: number
   }
 }
 
 function* fetchTransactionsPage(action: TransactionAction) {
   try {
-    const { userId, pageNum } = action.payload;
-    const transactionsPage: TransactionsPage = yield call(getPage, userId, pageNum);
-    const isFirstPage = pageNum === 1;
-    yield put(fetchTransactionsPageAction.success({ ...transactionsPage, isFirstPage }));
+    console.log(action.payload);
+    const { userId, lastPage } = action.payload;
+    console.log(userId, lastPage);
+    const transactionsPage: TransactionsPage = yield call(getPage, userId, lastPage + 1);
+    yield put(fetchTransactionsPageAction.success(transactionsPage));
   } catch (error) {
     console.log(error.message);
     yield put(fetchTransactionsPageAction.failure('Failed to transactions data'));

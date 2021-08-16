@@ -10,5 +10,4 @@ export interface PageRow {
 export interface TransactionsPage{
   page: PageRow[];
   isLast: boolean;
-  isFirstPage: boolean;
 }
