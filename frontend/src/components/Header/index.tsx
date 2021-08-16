@@ -10,6 +10,7 @@ import Input from '../Input';
 import Link from '../Link';
 import Logo from '../Logo';
 import Popover from '../Popover';
+import LanguageSwitcher from '../SwitchLanguageOption/LanguageSwitcher';
 import classes from './styles.module.scss';
 
 const Header = () => {
@@ -74,6 +75,8 @@ const Header = () => {
             <div className={classes.menu_user}>
               <Link to={Routes.PROFILE}>View account</Link>
               <Link to={Routes.PROFILE}>Edit profile</Link>
+              <div className={classes.menu_line} />
+              <LanguageSwitcher />
               <div className={classes.menu_line} />
               <Link to={Routes.PROJECTS_CREATE}>Create project</Link>
               <div className={classes.menu_line} />
