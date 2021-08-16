@@ -57,7 +57,7 @@ const Transactions: FC = () => {
       <table className={classes['transaction-table']}>
         <thead>
           {headerGroups.map(HeaderGroup => (
-            <tr {...HeaderGroup.getHeaderGroupProps()} key={HeaderGroup.id}>
+            <tr {...HeaderGroup.getHeaderGroupProps()} key={`Headers${HeaderGroup.id}`}>
               {HeaderGroup.headers.map(column => (
                 <th
                   {...column.getHeaderProps({
