@@ -8,7 +8,7 @@ export class ProjectRepository extends Repository<Project> {
   private getProjectsByOrder(order: string) {
     return this.createQueryBuilder('project')
       .select(`
-        amount AS donated,
+        donated,
         description,
         project.name AS "name",
         project."id",
@@ -16,7 +16,13 @@ export class ProjectRepository extends Repository<Project> {
         category.name AS "category",
         array_agg(tag.name) AS "tags"
       `)
-      .leftJoin('project.donates', 'donate')
+      .leftJoin(subQuery => subQuery
+        .select(`
+          SUM(amount) AS donated,
+          "projectId"
+        `)
+        .from('donate', 'donate')
+        .groupBy('"projectId"'), 'dn', 'dn."projectId" = project.id')
       .leftJoin('project.category', 'category')
       .leftJoin('project.projectTags', 'projectTags')
       .leftJoin('projectTags.tag', 'tag')
@@ -57,10 +63,11 @@ export class ProjectRepository extends Repository<Project> {
         project.name,
         project."finishDate",
         goal,
-        array_agg(tag.name) AS "tags",
+        tags,
         "bakersAmount",
         likes,
-        dislikes
+        dislikes,
+        privileges
       `)
       .leftJoin(subQuery => subQuery
         .select(`
@@ -91,18 +98,30 @@ export class ProjectRepository extends Repository<Project> {
         `)
         .from('faq', 'faq')
         .groupBy('"projectId"'), 'fq', 'fq."projectId" = project.id')
-      .leftJoin('project.projectTags', 'projectTags')
-      .leftJoin('projectTags.tag', 'tag')
+      .leftJoin(subQuery => subQuery
+        .select(`
+            jsonb_agg(
+              jsonb_build_object(
+                'privilege', privilege,
+                'amount', amount
+              )
+            ) AS "privileges",
+            "projectId"
+          `)
+        .from(Project, 'project')
+        .leftJoin('project.projectDonatorsPrivileges', 'projectDonatorsPrivileges')
+        .leftJoin('projectDonatorsPrivileges.donatorsPrivilege', 'donatorsPrivilege')
+        .groupBy('"projectId"'), 'dp', 'dp."projectId" = project.id')
+      .leftJoin(subQuery => subQuery
+        .select(`
+          array_agg(tag.name) AS "tags",
+          "projectId"
+        `)
+        .from(Project, 'project')
+        .leftJoin('project.projectTags', 'projectTags')
+        .leftJoin('projectTags.tag', 'tag')
+        .groupBy('"projectId"'), 'tg', 'tg."projectId" = project.id')
       .where(`project."id" = '${id}'`)
-      .groupBy(`
-        project."id", 
-        donated, 
-        "bakersAmount",
-        likes,
-        dislikes,
-        category.name,
-        "FAQ"
-      `)
       .execute();
   }
 }

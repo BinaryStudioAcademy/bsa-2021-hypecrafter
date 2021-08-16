@@ -1,6 +1,7 @@
 import {
   Column, Entity, JoinColumn, ManyToOne, OneToMany, OneToOne
 } from 'typeorm';
+import { ProjectDonatorsPrivilege } from '.';
 import { AbstractEntity } from './abstract';
 import { Category } from './category';
 import { Comment } from './comment';
@@ -82,6 +83,9 @@ export class Project extends AbstractEntity {
 
   @ManyToOne(() => Category, category => category.projects)
   category: Category;
+
+  @OneToMany(() => ProjectDonatorsPrivilege, projectDonatorsPrivilege => projectDonatorsPrivilege.project)
+  projectDonatorsPrivileges: ProjectDonatorsPrivilege[];
 
   @ManyToOne(() => UserProfile, userProfile => userProfile.projects)
   author: UserProfile;

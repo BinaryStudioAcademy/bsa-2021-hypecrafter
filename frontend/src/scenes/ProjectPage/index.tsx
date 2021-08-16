@@ -1,6 +1,6 @@
 import { MouseEvent, useEffect, useState } from 'react';
 import { Container, Nav, Row } from 'react-bootstrap';
-// import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import LoaderWrapper from '../../components/LoaderWrapper';
 import { Tabs } from '../../components/Tabs';
 import { useAction, useTypedSelector } from '../../hooks';
@@ -9,7 +9,7 @@ import Header from './components/Header';
 import classes from './styles.module.scss';
 
 function ProjectPage() {
-  // const { id } = useParams<{ id: string }>();
+  const { id } = useParams<{ id: string }>();
   const { fetchProject } = useAction();
   const { project, isLoading } = useTypedSelector(
     (
@@ -26,8 +26,7 @@ function ProjectPage() {
   const handleTabChange = (e: MouseEvent<HTMLElement>) => setSelectedTab((e.target as HTMLInputElement).innerText);
 
   useEffect(() => {
-    // fetchProject(id);
-    fetchProject('2808acdc-e4c8-4d67-85b9-ee91d09942bb');
+    fetchProject(id);
   }, []);
 
   return (
