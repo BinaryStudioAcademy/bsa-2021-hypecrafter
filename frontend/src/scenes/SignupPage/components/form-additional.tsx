@@ -1,45 +1,38 @@
 import { FunctionComponent } from 'react';
-import { SubmitHandler, useForm } from 'react-hook-form';
 import { Form } from 'react-bootstrap';
-import classes from '../styles.module.scss';
-import Input from '../../Input';
-import Button from '../../Button';
-import { MainFormData } from './form-main';
+import { SubmitHandler, useForm } from 'react-hook-form';
 import { Pages } from '../../../common/enums/signupForms';
+import { SignupData } from '../../../common/types/signup';
+import Button from '../../../components/Button';
+import Input from '../../../components/Input';
+import classes from '../styles.module.scss';
+import { MainFormData } from './form-main';
 
 type AdditionalFormData = {
-  country?: string;
-  phone?: string;
+  region?: string;
+  phoneNumber?: string;
   gender?: string;
   birthday?: string;
 };
 
 interface AdditionalFormProps {
-  setCurrentPage: CallableFunction;
+  setCurrentPage: React.Dispatch<React.SetStateAction<Pages>>;
   mainFormInfo: MainFormData;
   t: CallableFunction;
+  onSignup: (data: SignupData) => void;
 }
 
 const AdditionalForm: FunctionComponent<AdditionalFormProps> = ({
   setCurrentPage,
   mainFormInfo,
-  t
+  t,
+  onSignup
 }: AdditionalFormProps) => {
   const { register, handleSubmit } = useForm<AdditionalFormData>();
 
   const onSubmit: SubmitHandler<AdditionalFormData> = (data) => {
     setCurrentPage(Pages.ADDITIONAL_FORM);
-    console.log(
-      'Sign Up',
-      data.country,
-      data.phone,
-      data.gender,
-      data.birthday,
-      mainFormInfo.email,
-      mainFormInfo.firstName,
-      mainFormInfo.lastName,
-      mainFormInfo.password
-    );
+    onSignup({ ...mainFormInfo, ...data } as SignupData);
   };
 
   const handleBackButtonClick = () => {
@@ -51,7 +44,7 @@ const AdditionalForm: FunctionComponent<AdditionalFormProps> = ({
       <Form.Group className={classes['select-form']}>
         <Form.Label>{t('Country')}</Form.Label>
         <Form.Select
-          {...register('country', {
+          {...register('region', {
             required: false
           })}
         >
@@ -67,7 +60,7 @@ const AdditionalForm: FunctionComponent<AdditionalFormProps> = ({
         type="text"
         placeholder={t('Phone (optional)')}
         label={t('Phone')}
-        {...register('phone', {
+        {...register('phoneNumber', {
           required: false,
           pattern: {
             value: /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/,
