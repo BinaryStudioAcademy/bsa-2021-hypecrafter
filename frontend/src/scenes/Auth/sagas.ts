@@ -2,8 +2,9 @@ import { all, call, put, takeEvery } from 'redux-saga/effects';
 import { Tokens } from '../../common/types/signup';
 import { Action } from '../../common/types/store/action';
 import { setAccessToken, setRefreshToken } from '../../helpers/localStorage';
+import { login } from '../../services/login';
 import { register } from '../../services/register';
-import { registerUserAction } from './actions';
+import { loginAction, registerUserAction } from './actions';
 
 function* registerUserRequest(action: Action) {
   try {
@@ -20,9 +21,25 @@ function* watchFetchUsersRequest() {
   yield takeEvery(registerUserAction.TRIGGER, registerUserRequest);
 }
 
-export default function* registrationSaga() {
+function* loginRequest(action: Action) {
+  try {
+    const response: Tokens = yield call(login, action.payload);
+    setAccessToken(response.accessToken);
+    setRefreshToken(response.refreshToken);
+    yield put(loginAction.success(response));
+  } catch (error) {
+    yield put(loginAction.failure('Failed login'));
+  }
+}
+
+function* watchLoginRequest() {
+  yield takeEvery(loginAction.TRIGGER, loginRequest);
+}
+
+export default function* authenticationSaga() {
   yield all([
-    watchFetchUsersRequest()
+    watchFetchUsersRequest(),
+    watchLoginRequest()
   ]);
 }
 

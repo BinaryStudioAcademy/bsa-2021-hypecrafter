@@ -1,11 +1,12 @@
 import classNames from 'classnames';
 import { FunctionComponent, useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import logo from '../../assets/HypeCrafter.svg';
-import { Pages } from '../../common/enums/signupForms';
-import { SignupData } from '../../common/types/signup';
-import { useAction, useTypedSelector } from '../../hooks';
-import { useLocalization } from '../../providers/localization';
+import logo from '../../../assets/HypeCrafter.svg';
+import { Pages } from '../../../common/enums/signupForms';
+import { SignupData } from '../../../common/types/signup';
+import { useAction, useTypedSelector } from '../../../hooks';
+import { useLocalization } from '../../../providers/localization';
+import classesAuth from '../styles.module.scss';
 import AdditionalForm from './components/form-additional';
 import MainForm from './components/form-main';
 import classes from './styles.module.scss';
@@ -13,7 +14,7 @@ import classes from './styles.module.scss';
 const SignupPage: FunctionComponent = () => {
   const history = useHistory();
   const { registerUserAction } = useAction();
-  const store = useTypedSelector(({ registration: { tokens, isLoading, error } }) => ({
+  const store = useTypedSelector(({ authentication: { tokens, isLoading, error } }) => ({
     accessToken: tokens?.accessToken,
     refreshToken: tokens?.refreshToken,
     isLoading,
@@ -61,13 +62,13 @@ const SignupPage: FunctionComponent = () => {
   };
 
   return (
-    <div className={classes.root}>
-      <div className={classes.hero}>
-        <img className={classes.logo} src={logo} alt="logo" />
+    <div className={classesAuth.root}>
+      <div className={classesAuth.hero}>
+        <img className={classesAuth.logo} src={logo} alt="logo" />
       </div>
-      <div className={classes.content}>
-        <div className={classes.form}>
-          <h2 className={classes.title}>{t('Sign In')}</h2>
+      <div className={classesAuth.content}>
+        <div className={classesAuth.form}>
+          <h2 className={classesAuth.title}>{t('Sign In')}</h2>
           <div className={classes['form-titles-wrapper']}>
             <h4
               className={classNames(`${classes['form-title']}`, {

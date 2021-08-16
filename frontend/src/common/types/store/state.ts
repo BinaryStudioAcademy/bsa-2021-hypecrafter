@@ -1,7 +1,7 @@
 import { AuthState } from '../../../reducers/auth';
+import { AuthenticationState } from '../../../scenes/Auth/reducer';
 import { ProjectState } from '../../../scenes/CreateProject/reducer';
 import { MainPageState } from '../../../scenes/MainPage/reducer';
-import { RegistrationState } from '../../../scenes/SignupPage/reducer';
 import { UserProfileState } from '../../../scenes/UserPage/reducer';
 
 export interface StoreState {
@@ -9,5 +9,5 @@ export interface StoreState {
   userProfile: UserProfileState;
   auth: AuthState;
   project: ProjectState;
-  registration: RegistrationState;
+  authentication: AuthenticationState;
 }
