@@ -1,13 +1,36 @@
-import { FunctionComponent, useState } from 'react';
 import classNames from 'classnames';
-import classes from './styles.module.scss';
+import { FunctionComponent, useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import logo from '../../assets/HypeCrafter.svg';
-import { useLocalization } from '../../providers/localization';
-import MainForm from './components/form-main';
-import AdditionalForm from './components/form-additional';
 import { Pages } from '../../common/enums/signupForms';
+import { SignupData } from '../../common/types/signup';
+import { useAction, useTypedSelector } from '../../hooks';
+import { useLocalization } from '../../providers/localization';
+import AdditionalForm from './components/form-additional';
+import MainForm from './components/form-main';
+import classes from './styles.module.scss';
 
 const SignupPage: FunctionComponent = () => {
+  const history = useHistory();
+  const { registerUserAction } = useAction();
+  const store = useTypedSelector(({ registration: { tokens, isLoading, error } }) => ({
+    accessToken: tokens?.accessToken,
+    refreshToken: tokens?.refreshToken,
+    isLoading,
+    error
+  }));
+  const { refreshToken } = store;
+
+  useEffect(() => {
+    if (refreshToken) {
+      history.push('/');
+    }
+  }, [refreshToken]);
+
+  const handleSignup = (data: SignupData) => {
+    registerUserAction(data);
+  };
+
   const [currentPage, setCurrentPage] = useState(Pages.MAIN_FORM);
   const [mainFormInfo, setMainFormInfo] = useState({
     firstName: '',
@@ -32,6 +55,7 @@ const SignupPage: FunctionComponent = () => {
         setCurrentPage={setCurrentPage}
         mainFormInfo={mainFormInfo}
         t={t}
+        onSignup={handleSignup}
       />
     )
   };

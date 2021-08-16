@@ -3,6 +3,7 @@ const WHITE_ROUTES = [
   '/white-rout',
   '/auth/token',
   '/auth/token/reject',
+  '/auth/register',
   '/users',
   '/users/:id',
   '/topics',
