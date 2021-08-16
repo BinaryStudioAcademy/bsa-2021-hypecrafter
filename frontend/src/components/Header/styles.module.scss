@@ -156,7 +156,7 @@
 
   &::after {
     content: " ";
-    top: 2.45rem;
+    top: 2.5rem;
     left: 1rem;
     right: 1rem;
     position: absolute;
@@ -283,6 +283,7 @@
   grid-column-start: profile-start;
   grid-column-end: profile-finish;
   position: relative;
+  cursor: pointer;
 }
 
 .mobile_menu_profile {
@@ -290,6 +291,7 @@
   top: 3.3rem;
   right: 0;
   width: 9rem;
+  cursor: pointer;
   @include color-style;
 }
 
@@ -366,6 +368,16 @@
   .mobile_projects_menu_drop {
     display: block !important;
     position: static !important;
+  }
+
+  .mobile_projects_drop::after {
+    content: " ";
+    top: 2.45rem;
+    left: 1rem;
+    right: 1rem;
+    position: absolute;
+    height: 1px;
+    border-bottom: 1px solid $color-root-text;
   }
 
   .mobile_project_menu_list {
