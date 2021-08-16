@@ -43,7 +43,7 @@
     "By signing up, you agree to our": "By signing up, you agree to our",
     "Privacy Policy": "Privacy Policy",
     "Terms of use": "Terms of use",
-    "Sign Up with Google": "Sign Un with Google",
+    "Sign Up with Google": "Sign Up with Google",
     "and": "and",
     "Country": "Country",
     "Country (optional)": "Country (optional)",
@@ -76,6 +76,9 @@
     "Own": "Own",
     "Name": "Name",
     "Date": "Date",
-    "projects found": "projects found"
+    "projects found": "projects found",
+    "Switch to": "Switch to {{lang}}",
+    "Have an account?": "Have an account?",
+    "Log in": "Log in"
   }
 }

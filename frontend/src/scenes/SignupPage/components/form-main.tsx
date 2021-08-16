@@ -3,8 +3,8 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import { Routes } from '../../../common/enums';
 import { Pages } from '../../../common/enums/signupForms';
-import Button from '../../Button';
-import Input from '../../Input';
+import Button from '../../../components/Button';
+import Input from '../../../components/Input';
 import classes from '../styles.module.scss';
 
 export type MainFormData = {
@@ -15,8 +15,8 @@ export type MainFormData = {
 };
 
 interface MainFormProps {
-  setCurrentPage: CallableFunction;
-  setMainFormInfo: CallableFunction;
+  setCurrentPage: React.Dispatch<React.SetStateAction<Pages>>;
+  setMainFormInfo: React.Dispatch<React.SetStateAction<MainFormData>>;
   mainFormInfo: MainFormData;
   t: CallableFunction;
 }
@@ -33,18 +33,12 @@ const MainForm: FunctionComponent<MainFormProps> = ({
     formState: { errors }
   } = useForm<MainFormData>();
 
-  const onSubmit: SubmitHandler<MainFormData> = (data) => {
+  const onSubmit: SubmitHandler<MainFormData> = () => {
     setCurrentPage(Pages.ADDITIONAL_FORM);
-    console.log(
-      'Sign Un',
-      data.email,
-      data.password,
-      data.firstName,
-      data.lastName
-    );
   };
 
   const dummySignUpWithGoogleHandler: MouseEventHandler<HTMLButtonElement> = () => {
+    // eslint-disable-next-line no-console
     console.log('Sign Up with Google');
   };
 
@@ -117,7 +111,7 @@ const MainForm: FunctionComponent<MainFormProps> = ({
       </Button>
       <div className={classes['register-cta']}>
         {t('By signing up, you agree to our')}{' '}
-        <Link to={Routes.SIGNUP}>{t('Privacy Policy')}</Link> and{' '}
+        <Link to={Routes.SIGNUP}>{t('Privacy Policy')}</Link> {t('and')}{' '}
         <Link to={Routes.SIGNUP}>{t('Terms of use')}</Link>
       </div>
       <div className={classes['horizontal-ruler-text']}>

@@ -53,6 +53,7 @@
   font-size: $font-size-small;
   line-height: 14px;
   color: $color-root-text-grey;
+  line-height: 1.5;
 
   a {
     color: $color-root-turquoise;
@@ -128,7 +129,7 @@
 }
 
 .form-titles-wrapper {
-  margin: 20px 0 30px;
+  margin: -15px 0 30px;
 }
 
 .form-title {

@@ -1,19 +1,18 @@
-import { getCustomRepository } from 'typeorm';
-import { ProjectRepository, TopicRepository, UserRepository } from '../data/repositories';
+import { Repositories } from '../data/repositories';
 import ProjectService from './project';
 import TopicService from './topic';
 import UserService from './user';
 
-export function initServices() {
+export function initServices(repositories: Repositories): Services {
   return {
-    userService: new UserService(getCustomRepository(UserRepository)),
-    topicService: new TopicService(getCustomRepository(TopicRepository)),
-    projectService: new ProjectService(getCustomRepository(ProjectRepository))
+    userService: new UserService(repositories.userRepository),
+    topicService: new TopicService(repositories.topicRepository),
+    projectService: new ProjectService(repositories.projectRepository)
   };
 }
 
-export interface Services {
+export type Services = {
   userService: UserService,
   topicService: TopicService,
   projectService: ProjectService
-}
+};

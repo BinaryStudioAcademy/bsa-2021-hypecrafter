@@ -2,7 +2,7 @@
   "translation": {
     "Press on me": "Натисни на мене",
     "Sign In": "Увійти",
-    "Sign Up": "Зареєструватись",
+    "Sign Up": "Реєстрація",
     "Email": "Електронна адреса",
     "Password": "Пароль",
     "Don’t have an account?": "Немає акаунту?",
@@ -40,7 +40,7 @@
     "Enter your first name": "Введіть своє ім'я",
     "Last name": "Прізвище",
     "Enter your last name": "Введіть своє прізвище",
-    "By signing up, you agree to our": "Реєструючить ви приймаєте нашу",
+    "By signing up, you agree to our": "Реєструючись ви приймаєте нашу",
     "Privacy Policy": "Політику Конфіденційності",
     "Terms of use": "Умови користування",
     "Sign Up with Google": "Зареєструватися за допомогою Google",
@@ -76,6 +76,9 @@
     "Own": "Власне",
     "Name": "Назва",
     "Date": "Дата",
-    "projects found": "проектів знайдено"
+    "projects found": "проектів знайдено",
+    "Switch to": "Перейти на {{lang}}",
+    "Have an account?": "Уже маєте акаунт?",
+    "Log in": "Увійти"
   }
 }
