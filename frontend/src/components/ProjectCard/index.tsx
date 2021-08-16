@@ -6,7 +6,7 @@ import classes from './styles.module.scss';
 
 type Props = {
   to: string,
-  category: string;
+  category?: string;
   tags: string[];
   name: string;
   description: string;

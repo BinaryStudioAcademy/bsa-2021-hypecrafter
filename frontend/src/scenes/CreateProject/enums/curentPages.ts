@@ -5,5 +5,6 @@ export enum CurrentPage{
   TEAM,
   FUNDING,
   BENEFITS,
-  SETTINGS
+  SETTINGS,
+  END
 }

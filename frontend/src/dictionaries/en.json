@@ -72,6 +72,20 @@
 
     "Popular tags": "Popular tags",
     "Popular projects": "Popular projects",
-    "PAGE NOT FOUND": "PAGE NOT FOUND"
+    "PAGE NOT FOUND": "PAGE NOT FOUND",
+
+    "Basic":"Basic",
+    "Story":"Story",
+    "Team":"Team",
+    "Funding":"Funding",
+    "Benefits":"Benefits",
+    "Settings":"Settings",
+
+    "Write a clear, brief title that helps people quickly understand the gist of your project.":"Write a clear, brief title that helps people quickly understand the gist of your project.",
+    "Pick a project category to connect with a specific community.":"Pick a project category to connect with a specific community.",
+    "Describe what you’ll be creating.":"Describe what you’ll be creating.",
+    "Go back":"Go back",
+    "Continue":"Continue",
+    "First, let’s get you set up.":"First, let’s get you set up."
   }
 }

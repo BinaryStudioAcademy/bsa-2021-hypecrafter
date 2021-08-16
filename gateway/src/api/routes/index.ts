@@ -6,6 +6,7 @@ import authRouter from './auth';
 import notificationRouter from './notification';
 import topicRouter from './topic';
 import projectRouter from './project';
+import categoryRouter from './category';
 
 const initRoutes = (services: Services) => {
   const router = Router();
@@ -15,6 +16,7 @@ const initRoutes = (services: Services) => {
   router.use(Path.Auth, authRouter(services));
   router.use(Path.Notification, notificationRouter());
   router.use(Path.Project, projectRouter());
+  router.use(Path.Category, categoryRouter());
 
   return router;
 };

@@ -18,12 +18,13 @@ const Funding: FC<Props> = ({ changePage, currentPage }) => {
     setChecked(!checked);
   };
   const handleBack = () => changePage(currentPage - 1);
-  const handleNext = () => changePage(currentPage + 1);
+  const handleNext = () => changePage(CurrentPage.END);
   const body = (
     <div>
       <Select
         options={[{ text: 'test1', value: 'test1' }, { text: 'test2', value: 'test2' }]}
         label="Pick a members to add they to funding."
+        onSelectChange={value => console.log(value)}
       />
       <Button onClick={handleBack} className={classes.addMember}>Add</Button>
       <p>We will notify this person</p>
@@ -33,7 +34,7 @@ const Funding: FC<Props> = ({ changePage, currentPage }) => {
   const footer = (
     <div className={classes.footer}>
       <Button onClick={handleBack} className={classes.back}>Go back</Button>
-      <Button onClick={handleNext} isDisabled={!checked}>Continue</Button>
+      <Button onClick={handleNext} disabled={!checked}>Continue</Button>
     </div>
   );
   return (

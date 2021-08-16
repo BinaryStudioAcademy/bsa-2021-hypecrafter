@@ -1,4 +1,4 @@
-import { Container, Col } from 'react-bootstrap';
+import { Col, Container } from 'react-bootstrap';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import Select from '../Select';
 
@@ -26,6 +26,7 @@ const SelectExample = () => {
               { value: '2', text: 'ppp' }
             ]}
             {...register('Selector1', { required: true })}
+            onSelectChange={value => console.log(value)}
           />
           <Select
             options={[
@@ -33,6 +34,7 @@ const SelectExample = () => {
               { value: '22', text: 'bbbb' }
             ]}
             {...register('Selector2', { required: true })}
+            onSelectChange={value => console.log(value)}
           />
           <button type="submit">Submit</button>
         </form>

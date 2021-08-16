@@ -19,8 +19,7 @@ export default class ProjectService {
   }
 
   public async createProject(body: Project) {
-    console.log('fdddddddddddddddddd');
-    const project = this.#projectRepository.create(body);
+    const project = await this.#projectRepository.save({ ...new Project(), ...body });
     return project;
   }
 }

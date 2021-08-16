@@ -66,4 +66,17 @@ declare type LocaleKeys =
   | 'Ukraine'
   | 'United Kingdom'
   | 'Popular tags'
-  | 'Popular projects';
+  | 'Popular projects'
+  | 'PAGE NOT FOUND'
+  | 'Basic'
+  | 'Story'
+  | 'Team'
+  | 'Funding'
+  | 'Benefits'
+  | 'Settings'
+  | 'Write a clear, brief title that helps people quickly understand the gist of your project.'
+  | 'Pick a project category to connect with a specific community.'
+  | 'Describe what you’ll be creating.'
+  | 'Go back'
+  | 'Continue'
+  | 'First, let’s get you set up.';

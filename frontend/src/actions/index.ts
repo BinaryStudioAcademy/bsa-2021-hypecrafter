@@ -3,4 +3,5 @@ export { fetchPopularAndRecommendedProjectsAction, fetchTopics } from '../scenes
 export { fetchUserProfileAction } from '../scenes/UserPage/actions';
 export { authFetchUserAction } from './auth';
 export { getUsersAction } from './users';
+export { getCategoriesAction } from './categories';
 

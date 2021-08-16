@@ -1,46 +1,75 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
+import Button from '../../../../components/Button';
+import Input from '../../../../components/Input';
+import LoaderWrapper from '../../../../components/LoaderWrapper';
+import Select from '../../../../components/Select';
+import SelectExample from '../../../../components/SelectExample';
+import { useAction, useTypedSelector } from '../../../../hooks';
+import { useLocalization } from '../../../../providers/localization';
+import { CurrentPage, ProjectKeys } from '../../enums';
 import Layout from '../Layout';
 import classes from './styles.module.scss';
-import Button from '../../../../components/Button';
-import { CurrentPage } from '../../enums';
-import Input from '../../../../components/Input';
-import Select from '../../../../components/Select';
 
 interface Props {
   changePage: (currentPage: CurrentPage) => void
-  currentPage:CurrentPage
+  currentPage: CurrentPage,
+  onChangeValue: (name: ProjectKeys, value: string) => void
+  name: string,
+  description:string
 }
 
-const Basic: FC<Props> = ({ changePage, currentPage }) => {
+const Basic: FC<Props> = ({ changePage, currentPage, onChangeValue, name, description }) => {
+  const { t } = useLocalization();
   const handleBack = () => changePage(currentPage - 1);
   const handleNext = () => changePage(currentPage + 1);
+  const store = useTypedSelector(({ categories: { categories, isLoading } }) => ({
+    categories,
+    isLoading
+  }));
+  const { categories, isLoading } = store;
+  const { getCategoriesAction } = useAction();
+  useEffect(() => {
+    getCategoriesAction();
+  }, [getCategoriesAction]);
   const body = (
     <div>
+      <Input
+        type="text"
+        label={t('Write a clear, brief title that helps people quickly understand the gist of your project.')}
+        onChange={e => onChangeValue(ProjectKeys.NAME, e.target.value)}
+        value={name}
+      />
       <Select
-        options={[{ text: 'test1', value: 'test1' }, { text: 'test2', value: 'test2' }]}
-        label="Pick a project category to connect with a specific community."
+        options={categories.map(category => ({ text: category.name, value: category.id }))}
+        label={t('Pick a project category to connect with a specific community.')}
+        defaultText="-"
+        onSelectChange={value => onChangeValue(ProjectKeys.NAME, value)}
       />
       <Input
         type="textarea"
-        label="Describe what you’ll be creating."
+        label={t('Describe what you’ll be creating.')}
+        onChange={e => onChangeValue(ProjectKeys.DESCRIPTION, e.target.value)}
+        value={description}
       />
-
+      <SelectExample />
     </div>
   );
   const footer = (
     <div className={classes.footer}>
-      <Button onClick={handleBack} className={classes.back}>Go back</Button>
-      <Button onClick={handleNext}>Continue</Button>
+      <Button onClick={handleBack} className={classes.back}>{t('Go back')}</Button>
+      <Button onClick={handleNext}>{t('Continue')}</Button>
     </div>
   );
   return (
-    <Layout
-      header="First, let’s get you set up."
-      setCurrentPage={changePage}
-      body={body}
-      footer={footer}
-      currentPage={currentPage}
-    />
+    <LoaderWrapper isLoading={isLoading}>
+      <Layout
+        header={t('First, let’s get you set up.')}
+        setCurrentPage={changePage}
+        body={body}
+        footer={footer}
+        currentPage={currentPage}
+      />
+    </LoaderWrapper>
   );
 };
 

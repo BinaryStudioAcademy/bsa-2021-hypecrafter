@@ -1,9 +1,9 @@
 import { FC, useState } from 'react';
+import Button from '../../../../components/Button';
+import Checkbox from '../../../../components/Checkbox';
+import { CurrentPage } from '../../enums';
 import Layout from '../Layout';
 import classes from './styles.module.scss';
-import Button from '../../../../components/Button';
-import { CurrentPage } from '../../enums';
-import Checkbox from '../../../../components/Checkbox';
 
 interface Props {
   changePage: (currentPage: CurrentPage) => void
@@ -48,7 +48,7 @@ const BeforeStart: FC<Props> = ({ changePage, currentPage }) => {
   );
   const footer = (
     <div className={classes.footer}>
-      <Button onClick={handleChangePage} isDisabled={!checked}>Create Project</Button>
+      <Button onClick={handleChangePage} disabled={!checked}>Create Project</Button>
     </div>
   );
 

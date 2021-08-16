@@ -23,7 +23,13 @@ const newProject: Project = {
   imageUrl: '',
   name: '',
   tags: [],
-  url: ''
+  url: '',
+  totalViews: 0,
+  minutesToRead: 0,
+  region: '',
+  totalInteractionTime: 0,
+  startDate: '',
+  finishDate: ''
 };
 
 export const initialState: ProjectState = {

@@ -39,6 +39,7 @@ const Team: FC<Props> = ({ changePage, currentPage }) => {
         options={users.map(user => ({ text: `${user.lastName} ${user.firstName} (${user.email})`, value: user.id }))}
         label="Pick a members to add they to team."
         defaultText="-"
+        onSelectChange={value => console.log(value)}
       />
       <Button onClick={handleBack} className={classes.addMember}>Add</Button>
       <p>We will notify this person</p>
@@ -48,7 +49,7 @@ const Team: FC<Props> = ({ changePage, currentPage }) => {
   const footer = (
     <div className={classes.footer}>
       <Button onClick={handleBack} className={classes.back}>Go back</Button>
-      <Button onClick={handleNext} isDisabled={!checked}>Continue</Button>
+      <Button onClick={handleNext} disabled={!checked}>Continue</Button>
     </div>
   );
   return (
