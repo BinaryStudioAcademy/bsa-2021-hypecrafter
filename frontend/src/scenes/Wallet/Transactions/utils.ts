@@ -1,27 +1,8 @@
 import { Column } from 'react-table';
+import { PageRow } from '../../../common/types';
 import { TranslatorType } from '../../../providers/localization';
 
-export interface HeaderI {
-  date: string;
-  items: string;
-  type: string;
-  total: number;
-  change: number;
-  balance: number;
-}
-
-export interface PageRow {
-  id: string;
-  userId: string;
-  date: string;
-  item: string;
-  type: string;
-  total: number;
-  change: number;
-  balance: number;
-}
-
-export const getColumns = (t:TranslatorType):Column<HeaderI>[] => {
+export const getColumns = (t:TranslatorType):Column<PageRow>[] => {
   const widthDate = 99;
   const widthItems = 396;
   const widthType = 198;

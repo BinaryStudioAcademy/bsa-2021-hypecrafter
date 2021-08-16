@@ -1,14 +1,15 @@
-import { FC, useMemo } from 'react';
+import { FC, useEffect, useMemo } from 'react';
 import { Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { Column, useSortBy, useTable } from 'react-table';
 import { Routes } from '../../../common/enums';
+import { PageRow } from '../../../common/types';
 import Button from '../../../components/Button';
-import { useTypedSelector } from '../../../hooks';
+import { useAction, useTypedSelector } from '../../../hooks';
 import { useLocalization } from '../../../providers/localization';
 import RenderCell from './RenderCell';
 import classes from './styles.module.scss';
-import { getColumns, HeaderI } from './utils';
+import { getColumns } from './utils';
 
 const Transactions: FC = () => {
   const { page, isLast, isLoading } = useTypedSelector(
@@ -16,8 +17,12 @@ const Transactions: FC = () => {
       { transactions }
     ) => transactions
   );
+  const { fetchTransactionsPageAction } = useAction();
+  useEffect(() => {
+    fetchTransactionsPageAction('ac7a5b8f-7fc4-4d1e-81c9-1a9c49c9b529', 1);
+  }, []);
   const { t, selectedLanguage } = useLocalization();
-  const data: HeaderI[] = useMemo(() => [...page], []);
+  const data: PageRow[] = useMemo(() => [...page], []);
   const pagination = useMemo(() => {
     if (isLast) return false;
     if (isLoading) {
@@ -29,11 +34,11 @@ const Transactions: FC = () => {
     }
     return (<Button variant="secondary">Load more</Button>);
   }, [isLast, isLoading]);
-  const columns: Column<HeaderI>[] = useMemo(
+  const columns: Column<PageRow>[] = useMemo(
     () => getColumns(t),
     [selectedLanguage]
   );
-  const { getTableBodyProps, headerGroups, rows, prepareRow } = useTable<HeaderI>(
+  const { getTableBodyProps, headerGroups, rows, prepareRow } = useTable<PageRow>(
     { columns, data },
     useSortBy
   );

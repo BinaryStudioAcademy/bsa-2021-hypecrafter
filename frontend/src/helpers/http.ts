@@ -22,23 +22,21 @@ const getInitHeaders = (
 ) => {
   const headers: HeadersInit = new Headers();
   if (hasContent) {
+    console.log(hasContent);
     headers.set(HttpHeader.CONTENT_TYPE, contentType);
   }
-
   const token = getAccessToken();
   if (token) {
+    console.log(token);
     headers.set(HttpHeader.AUTHORIZATION, `Bearer ${token}`);
   }
-
   return headers;
 };
 
 const getOptions = (method: HttpMethod, { params }: RequestArgs) => {
   const isBodyExist = params && method !== HttpMethod.GET;
-
   const headers = getInitHeaders(isBodyExist);
   const body = isBodyExist ? { body: JSON.stringify(params) } : {};
-
   return {
     method,
     headers,
@@ -68,11 +66,14 @@ const getUrl = (method: HttpMethod, { url, params, config }: RequestArgs): strin
 };
 
 const makeRequest = (method: HttpMethod) => async <T>(args: RequestArgs) => {
+  console.log(2342342);
   const url = getUrl(method, args);
+  console.log(333333);
   const options = getOptions(method, args);
-
+  console.log(44444);
+  console.log(options);
   let result = await fetch(url, options);
-
+  console.log(result.status);
   if (result.status === HttpStatusCode.UNAUTHORIZED) {
     const refreshTokenResponse = await refreshToken();
 

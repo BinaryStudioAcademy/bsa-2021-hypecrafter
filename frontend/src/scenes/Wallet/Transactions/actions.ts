@@ -1,16 +1,16 @@
 import { createRoutine } from 'redux-saga-routines';
-import { PageRow } from './utils';
+import { TransactionsPage } from '../../../common/types';
 
 export enum WalletActions {
   GET_TRANSACTIONS = 'WALLET/GET_TRANSACTIONS'
 }
 
-export const getTransactionsPage = createRoutine(WalletActions.GET_TRANSACTIONS, {
+export const fetchTransactionsPageAction = createRoutine(WalletActions.GET_TRANSACTIONS, {
   trigger: (userId: string, pageNum: number) => ({ userId, pageNum }),
   request: () => undefined,
-  success: (isLast: boolean, page: PageRow[]) => ({ isLast, page })
+  success: (transactionPage: TransactionsPage) => transactionPage
 });
 
-export type GetTransactionsActionTrigger = ReturnType<typeof getTransactionsPage.trigger>;
-export type GetTransactionsActionRequest = ReturnType<typeof getTransactionsPage.request>;
-export type GetTransactionsActionSucces = ReturnType<typeof getTransactionsPage.success>;
+export type FetchTransactionsActionTrigger = ReturnType<typeof fetchTransactionsPageAction.trigger>;
+export type FetchTransactionsActionRequest = ReturnType<typeof fetchTransactionsPageAction.request>;
+export type FetchTransactionsActionSucces = ReturnType<typeof fetchTransactionsPageAction.success>;

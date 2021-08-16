@@ -19,6 +19,7 @@ const routesWitoutHeader = [Routes.LOGIN, Routes.SIGNUP];
 
 const Routing = () => {
   const { authFetchUserAction } = useAction();
+
   const authStore = useTypedSelector(({ auth: { user, isLoading } }) => ({
     user,
     isLoading

@@ -1,34 +1,34 @@
+import { PageRow } from '../../../common/types';
 import { createReducer } from '../../../helpers';
-import type { GetTransactionsActionSucces } from './actions';
-import { getTransactionsPage } from './actions';
-import { PageRow } from './utils';
+import type { FetchTransactionsActionSucces } from './actions';
+import { fetchTransactionsPageAction } from './actions';
 
 export interface PageState {
   isLoading: boolean;
-  isLast: true;
+  isLast: boolean;
   page: PageRow[];
 }
 
 export const initialState: PageState = {
-  isLoading: false,
-  isLast: true,
+  isLoading: true,
+  isLast: false,
   page: []
 };
 
 export const transactionsReducer = createReducer<PageState>(initialState, {
-  [getTransactionsPage.TRIGGER](state) {
+  [fetchTransactionsPageAction.TRIGGER](state) {
     return {
       ...state,
       isLoading: true
     };
   },
-  [getTransactionsPage.REQUEST](state) {
+  [fetchTransactionsPageAction.REQUEST](state) {
     return {
       ...state,
       isLoading: true
     };
   },
-  [getTransactionsPage.SUCCESS](state, action: GetTransactionsActionSucces) {
+  [fetchTransactionsPageAction.SUCCESS](state, action: FetchTransactionsActionSucces) {
     return {
       ...state,
       page: action.payload.page,

@@ -3,6 +3,7 @@ import projectSaga from '../scenes/CreateProject/sagas';
 import mainPageSaga from '../scenes/MainPage/sagas';
 import registrationSaga from '../scenes/SignupPage/sagas';
 import userProfileSaga from '../scenes/UserPage/sagas';
+import TransactionsPageSaga from '../scenes/Wallet/Transactions/sagas';
 import authSaga from './auth';
 
 export default function* rootSaga() {
@@ -11,6 +12,7 @@ export default function* rootSaga() {
     userProfileSaga(),
     authSaga(),
     projectSaga(),
-    registrationSaga()
+    registrationSaga(),
+    TransactionsPageSaga()
   ]);
 }

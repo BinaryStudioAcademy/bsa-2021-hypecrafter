@@ -67,10 +67,10 @@ declare type LocaleKeys =
   | 'Phone number is invalid'
   | 'France'
   | 'Poland'
-  | 'Spain'
   | 'Switzerland'
   | 'Ukraine'
   | 'United Kingdom'
   | 'Popular tags'
   | 'Popular projects'
-  | 'PAGE NOT FOUND';
+  | 'PAGE NOT FOUND'
+  | 'Switch to';

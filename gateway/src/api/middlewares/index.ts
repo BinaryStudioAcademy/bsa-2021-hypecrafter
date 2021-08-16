@@ -12,11 +12,11 @@ import { authorization } from './authorization';
 import { handleError } from './error-handler';
 import { logger } from './logger';
 
-const swagger_path = path.resolve(
+const swaggerPath = path.resolve(
   __dirname,
   '../../../openApiDocumentation.yaml'
 );
-const swaggerDocument: JsonObject = YAML.load(swagger_path);
+const swaggerDocument: JsonObject = YAML.load(swaggerPath);
 
 export const initMiddlewares = (app: Express, _services: Services) => {
   const { rabbit } = env.app;
