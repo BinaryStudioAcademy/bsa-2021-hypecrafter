@@ -10,6 +10,7 @@ export interface ProjectPage {
   likes: number;
   dislikes: number;
   FAQ: { question: string, answer: string }[];
+  story: string;
   instagramUrl?: string;
   facebookUrl?: string;
   dribbleUrl?: string;
