@@ -18,6 +18,17 @@ const Transactions: FC = () => {
   );
   const { t, selectedLanguage } = useLocalization();
   const data: HeaderI[] = useMemo(() => [...page], []);
+  const pagination = useMemo(() => {
+    if (isLast) return false;
+    if (isLoading) {
+      return (
+        <Spinner animation="border" role="status" variant="secondary">
+          <span className="visually-hidden">Loading...</span>
+        </Spinner>
+      );
+    }
+    return (<Button variant="secondary">Load more</Button>);
+  }, [isLast, isLoading]);
   const columns: Column<HeaderI>[] = useMemo(
     () => getColumns(t),
     [selectedLanguage]
@@ -25,12 +36,6 @@ const Transactions: FC = () => {
   const { getTableBodyProps, headerGroups, rows, prepareRow } = useTable<HeaderI>(
     { columns, data },
     useSortBy
-  );
-  const btnLoadMore = <Button variant="secondary">Load more</Button>;
-  const spinner = (
-    <Spinner animation="border" role="status" variant="secondary">
-      <span className="visually-hidden">Loading...</span>
-    </Spinner>
   );
   return (
     <div className={classes['transaction-table-wrp']}>
@@ -86,7 +91,7 @@ const Transactions: FC = () => {
         </tbody>
       </table>
       <div className={classes['pagination-wrp']}>
-        {isLast ? isLoading ? spinner : btnLoadMore : false}
+        {pagination}
       </div>
     </div>
   );
