@@ -1,7 +1,8 @@
 import classNames from 'classnames';
 import { FunctionComponent, useEffect, useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import logo from '../../../assets/HypeCrafter.svg';
+import { Routes } from '../../../common/enums';
 import { Pages } from '../../../common/enums/signupForms';
 import { SignupData } from '../../../common/types/signup';
 import { useAction, useTypedSelector } from '../../../hooks';
@@ -68,7 +69,11 @@ const SignupPage: FunctionComponent = () => {
       </div>
       <div className={classesAuth.content}>
         <div className={classesAuth.form}>
-          <h2 className={classesAuth.title}>{t('Sign In')}</h2>
+          <h2 className={classesAuth.title}>{t('Sign Up')}</h2>
+          <div className={classes['register-cta']}>
+            {t('Have an account?')}{' '}
+            <Link to={Routes.LOGIN}>{t('Log in')}</Link>
+          </div>
           <div className={classes['form-titles-wrapper']}>
             <h4
               className={classNames(`${classes['form-title']}`, {

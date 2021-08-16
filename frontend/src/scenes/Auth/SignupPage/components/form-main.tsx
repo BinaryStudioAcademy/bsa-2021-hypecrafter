@@ -112,7 +112,7 @@ const MainForm: FunctionComponent<MainFormProps> = ({
       </Button>
       <div className={classes['register-cta']}>
         {t('By signing up, you agree to our')}{' '}
-        <Link to={Routes.SIGNUP}>{t('Privacy Policy')}</Link> and{' '}
+        <Link to={Routes.SIGNUP}>{t('Privacy Policy')}</Link> {t('and')}{' '}
         <Link to={Routes.SIGNUP}>{t('Terms of use')}</Link>
       </div>
       <div className={classesAuth['horizontal-ruler-text']}>
