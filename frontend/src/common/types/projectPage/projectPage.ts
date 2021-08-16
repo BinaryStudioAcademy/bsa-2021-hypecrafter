@@ -11,6 +11,9 @@ export interface ProjectPage {
   dislikes: number;
   FAQ: { question: string, answer: string }[];
   story: string;
+  privileges: { amount: number, privilege: string }[];
+  bakersAmount: number;
+  finishDate: string;
   instagramUrl?: string;
   facebookUrl?: string;
   dribbleUrl?: string;

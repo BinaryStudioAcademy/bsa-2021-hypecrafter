@@ -19,6 +19,6 @@ export default class ProjectService {
 
   public async getById(id: string) {
     const project = await this.#projectRepository.getById(id);
-    return project[0];
+    return project[0]; // rewrite when error handling middleware works
   }
 }

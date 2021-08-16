@@ -1,4 +1,5 @@
 import { EntityRepository, Repository } from 'typeorm';
+import { Project as MyProject } from '../../common/types';
 import { Project } from '../entities/project';
 
 @EntityRepository(Project)
@@ -47,7 +48,7 @@ export class ProjectRepository extends Repository<Project> {
     return this.getProjectsByOrder('project."updatedAt"');
   }
 
-  public getById(id: string) {
+  public getById(id: string): Promise<MyProject[]> {
     return this.createQueryBuilder('project')
       .select(`
         project."id",
@@ -55,7 +56,7 @@ export class ProjectRepository extends Repository<Project> {
         project."instagramUrl",
         project."facebookUrl",
         project."dribbleUrl",
-        project.content as story,
+        project.content AS story,
         "FAQ",
         donated,
         description,
