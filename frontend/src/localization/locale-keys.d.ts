@@ -67,4 +67,6 @@ declare type LocaleKeys =
  | 'Popular tags'
  | 'Popular projects'
  | 'PAGE NOT FOUND'
- | 'Switch to';
+ | 'Switch to'
+ | 'Have an account?'
+ | 'Log in';
