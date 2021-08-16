@@ -1,0 +1,17 @@
+@import '../../../../styles/vars';
+@import '../../../../styles/mixins';
+
+.item {
+  background-color: $color-root-block-background;
+  padding: 30px;
+  margin-bottom: 50px;
+}
+
+.top-chart-wrapper {
+  height: 230px;
+}
+
+.topic {
+  @include heading-xl;
+  margin-bottom: 20px;
+}

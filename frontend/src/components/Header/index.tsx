@@ -19,6 +19,7 @@ import Input from '../Input';
 import Link from '../Link';
 import Logo from '../Logo';
 import Popover from '../Popover';
+import LanguageSwitcher from '../SwitchLanguageOption/LanguageSwitcher';
 import classes from './styles.module.scss';
 
 const Header = () => {
@@ -82,10 +83,10 @@ const Header = () => {
       setMobileMenu(false);
       setProjectsMobileMenu(false);
     } else {
-      setHideOnScroll(false)
+      setHideOnScroll(false);
     }
     prevScrollPos = currentScrollPos;
-  }
+  };
 
   return (
     <>
@@ -154,6 +155,8 @@ const Header = () => {
               <div className={classes.menu_user}>
                 <Link to={Routes.PROFILE}>View account</Link>
                 <Link to={Routes.PROFILE}>Edit profile</Link>
+                <div className={classes.menu_line} />
+                <LanguageSwitcher />
                 <div className={classes.menu_line} />
                 <Link to={Routes.PROJECTS_CREATE}>Create project</Link>
                 <div className={classes.menu_line} />
@@ -303,6 +306,14 @@ const Header = () => {
               >
                 Edit profile
               </NavLink>
+              <div
+                className={`
+                  ${classes.mobile_menu_item}
+                  ${classes.line_both}
+                `}
+              >
+                <LanguageSwitcher />
+              </div>
               <NavLink
                 to={Routes.PROJECTS_CREATE}
                 className={`
@@ -321,7 +332,7 @@ const Header = () => {
             </div>
           </div>
         </Navbar>
-      </div >
+      </div>
     </>
   );
 };
