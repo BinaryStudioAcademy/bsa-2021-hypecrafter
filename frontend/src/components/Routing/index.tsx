@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Switch, useLocation, Redirect } from 'react-router-dom';
+import { Redirect, Switch, useLocation } from 'react-router-dom';
 import { Routes, StorageKeys } from '../../common/enums';
 import { useAction, useTypedSelector } from '../../hooks';
 import MainPage from '../../scenes/MainPage';
@@ -8,8 +8,9 @@ import FundsPage from '../../scenes/Wallet/FundsPage';
 import Header from '../Header';
 import LoaderWrapper from '../LoaderWrapper';
 import LoginPage from '../LoginPage';
-import PrivateRoute from '../PrivateRoute';
+import Main from '../Main';
 import PageNotFound from '../PageNotFound';
+import PrivateRoute from '../PrivateRoute';
 import PublicRoute from '../PublicRoute';
 import SignupPage from '../SignupPage';
 
@@ -32,7 +33,7 @@ const Routing = () => {
   }, [authFetchUserAction]);
 
   return (
-    <LoaderWrapper isLoading={isLoading || (!user && hasToken)} variant='page'>
+    <LoaderWrapper isLoading={isLoading || (!user && hasToken)} variant="page">
       {!routesWitoutHeader.includes(pathname as Routes) && <Header />}
       <Switch>
         <PublicRoute
@@ -65,6 +66,12 @@ const Routing = () => {
           path={Routes.NOTFOUND}
           exact
           component={PageNotFound}
+        />
+        <PublicRoute
+          restricted={false}
+          path={Routes.EXAMPLES}
+          exact
+          component={Main}
         />
         <Redirect from="*" to={Routes.NOTFOUND} />
       </Switch>
