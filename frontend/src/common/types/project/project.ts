@@ -9,3 +9,12 @@ export interface Project {
   donated: number;
   url?: string;
 }
+
+export interface ProjectPage extends Project {
+  likes: number;
+  dislikes: number;
+  FAQ: { question: string, answer: string }[];
+  instagramUrl?: string;
+  facebookUrl?: string;
+  dribbleUrl?: string;
+}
