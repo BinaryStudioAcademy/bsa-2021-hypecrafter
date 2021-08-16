@@ -2,7 +2,7 @@
   "translation": {
     "Press on me": "Натисни на мене",
     "Sign In": "Увійти",
-    "Sign Up": "Зареєструватись",
+    "Sign Up": "Реєстрація",
     "Email": "Електронна адреса",
     "Password": "Пароль",
     "Don’t have an account?": "Немає акаунту?",
@@ -46,7 +46,7 @@
     "Enter your first name": "Введіть своє ім'я",
     "Last name": "Прізвище",
     "Enter your last name": "Введіть своє прізвище",
-    "By signing up, you agree to our": "Реєструючить ви приймаєте нашу",
+    "By signing up, you agree to our": "Реєструючись ви приймаєте нашу",
     "Privacy Policy": "Політику Конфіденційності",
     "Terms of use": "Умови користування",
     "Sign Up with Google": "Зареєструватися за допомогою Google",
@@ -74,6 +74,8 @@
     "Popular tags": "Популярні теги",
     "Popular projects": "Популярні проекти",
     "PAGE NOT FOUND": "Сторінку не знайдено",
-    "Switch to": "Перейти на {{lang}}"
+    "Switch to": "Перейти на {{lang}}",
+    "Have an account?": "Уже маєте акаунт?",
+    "Log in": "Увійти"
   }
 }
