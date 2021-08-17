@@ -9,7 +9,7 @@ export interface ProjectPage {
   donated: number;
   likes: number;
   dislikes: number;
-  FAQ: { question: string, answer: string }[];
+  FAQ: { id: string, question: string, answer: string }[];
   story: string;
   privileges: { amount: number, privilege: string }[];
   bakersAmount: number;
