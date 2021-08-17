@@ -1,6 +1,6 @@
 import { FC, ReactElement, useState } from 'react';
-import TabTitle from '../TabTitle';
 import classes from '../styles.module.scss';
+import TabTitle from '../TabTitle';
 
 type TabsProps = {
   children: ReactElement[];
@@ -14,8 +14,7 @@ const Tabs: FC<TabsProps> = ({ children }) => {
       <ul className={classes['tabs-container']}>
         {children.map((item, index) => (
           <TabTitle
-            // eslint-disable-next-line react/no-array-index-key
-            key={index}
+            key={item.props.title}
             index={index}
             title={item.props.title}
             setSelectedTab={setSelectedTab}
