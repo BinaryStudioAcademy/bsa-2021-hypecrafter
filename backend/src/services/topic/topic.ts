@@ -1,5 +1,5 @@
-import { TopicRepository } from '../../data/repositories';
 import { mapTopics } from '../../data/mappers';
+import { TopicRepository } from '../../data/repositories';
 
 export default class TopicService {
   readonly #topicRepository: TopicRepository;

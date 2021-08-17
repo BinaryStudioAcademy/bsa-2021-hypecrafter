@@ -17,15 +17,16 @@ export const mainPageState: MainPageState = {
   topics: []
 };
 
-export const mainPageReducer = createReducer<MainPageState>(mainPageState, {
+const mainPageReducer = createReducer<MainPageState>(mainPageState, {
   [fetchPopularAndRecommendedProjectsAction.TRIGGER](state) {
     return {
       ...state,
       isLoading: true
     };
   },
-  [fetchPopularAndRecommendedProjectsAction.SUCCESS](state, action:
-  FetchPopularAndRecommendedProjectsSuccessActionType) {
+  [fetchPopularAndRecommendedProjectsAction.SUCCESS](
+    state, action: FetchPopularAndRecommendedProjectsSuccessActionType
+  ) {
     return {
       ...state,
       isLoading: false,
@@ -39,8 +40,7 @@ export const mainPageReducer = createReducer<MainPageState>(mainPageState, {
       isLoading: false
     };
   },
-  [fetchTopics.SUCCESS](state, action:
-  FetchTopics) {
+  [fetchTopics.SUCCESS](state, action: FetchTopics) {
     return {
       ...state,
       isLoading: false,
