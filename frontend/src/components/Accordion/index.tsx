@@ -11,16 +11,18 @@ interface Props {
 }
 
 const Accordion: FC<Props> = ({ accordions }) => (
-  <AccordionBS defaultActiveKey="0" className={classes.main}>
+  <div>
     {accordions.map(({ id, question, answer }) => (
-      <AccordionBS.Item eventKey="1" className={classes.item} key={id}>
-        <AccordionBS.Header className={classes.header}>{question}</AccordionBS.Header>
-        <AccordionBS.Body className={classes.body}>
-          {answer}
-        </AccordionBS.Body>
-      </AccordionBS.Item>
+      <AccordionBS defaultActiveKey="0" className={classes.main} key={id}>
+        <AccordionBS.Item eventKey="1" className={classes.item}>
+          <AccordionBS.Header className={classes.header}>{question}</AccordionBS.Header>
+          <AccordionBS.Body className={classes.body}>
+            {answer}
+          </AccordionBS.Body>
+        </AccordionBS.Item>
+      </AccordionBS>
     ))}
-  </AccordionBS>
+  </div>
 );
 
 export default Accordion;
