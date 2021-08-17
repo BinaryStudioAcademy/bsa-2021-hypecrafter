@@ -100,4 +100,7 @@ declare type LocaleKeys =
  | 'Load more'
  | 'Loading...'
  | 'Balance replenishment'
- | 'Pledge project';
+ | 'Pledge project'
+ | 'Finally'
+ | 'Your location can be a key factor for the investor in your favor.'
+ | 'Decide on the terms for which you want to collect the above amount';

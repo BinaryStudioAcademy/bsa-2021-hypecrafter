@@ -5,6 +5,7 @@ export interface CreateProject{
   category: string;
   content: string;
   goal: number;
+  region: string;
 
   imageUrl?: string;
   tags?: string[];
@@ -13,8 +14,8 @@ export interface CreateProject{
   url?: string;
   totalViews?: number;
   minutesToRead?: number;
-  region?: string;
+
   totalInteractionTime?: number;
-  startDate?: string;
-  finishDate?: string;
+  startDate?: Date;
+  finishDate?: Date;
 }

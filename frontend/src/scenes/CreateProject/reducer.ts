@@ -28,8 +28,8 @@ const newProject: CreateProject = {
   minutesToRead: 0,
   region: '',
   totalInteractionTime: 0,
-  startDate: '',
-  finishDate: '',
+  startDate: new Date(),
+  finishDate: new Date(),
   content: ''
 };
 

@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import Button from '../../../../components/Button';
+import DatePickerInput from '../../../../components/DatePicker';
 import Input from '../../../../components/Input';
 import { useLocalization } from '../../../../providers/localization';
 import { CurrentPage, ProjectKeys } from '../../enums';
@@ -9,11 +10,13 @@ import classes from './styles.module.scss';
 interface Props {
   changePage: (currentPage: CurrentPage) => void
   currentPage: CurrentPage,
-  onChangeValue: (name: ProjectKeys, value: string) => void,
-  goal:number
+  onChangeValue: (name: ProjectKeys, value: any) => void,
+  goal: number,
+  startDate?: Date,
+  finishDate?:Date,
 }
 
-const Funding: FC<Props> = ({ changePage, currentPage, onChangeValue, goal }) => {
+const Funding: FC<Props> = ({ changePage, currentPage, onChangeValue, goal, startDate, finishDate }) => {
   const { t } = useLocalization();
   const handleBack = () => changePage(currentPage - 1);
   const handleNext = () => changePage(CurrentPage.END);
@@ -25,6 +28,11 @@ const Funding: FC<Props> = ({ changePage, currentPage, onChangeValue, goal }) =>
         onChange={e => onChangeValue(ProjectKeys.GOAL, e.target.value)}
         value={goal}
       />
+      <p>{t('Decide on the terms for which you want to collect the above amount')}</p>
+      <div className={classes.dateBlock}>
+        <DatePickerInput daySetter={day => onChangeValue(ProjectKeys.START_DATE, day)} value={startDate} />
+        <DatePickerInput daySetter={day => onChangeValue(ProjectKeys.FINISH_DATE, day)} value={finishDate} />
+      </div>
     </div>
   );
   const footer = (
