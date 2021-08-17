@@ -1,23 +1,19 @@
 import { FC } from 'react';
-import { Nav } from 'react-bootstrap';
-import { Tabs } from '../Tabs';
+import { Tabs, Tab } from '../Tabs';
 
-const TabsExample: FC = () => {
-  const tabs = ['Projects', 'Achievements', 'About me'];
+const Test = () => (
+  <div>
+    <h3>Hi</h3>
+    <p>Test component here</p>
+  </div>
+);
 
-  return (
-    <Tabs>
-      <Tabs.Item>
-        <Nav.Link>{tabs[0]}</Nav.Link>
-      </Tabs.Item>
-      <Tabs.Item selected>
-        <Nav.Link>{tabs[1]}</Nav.Link>
-      </Tabs.Item>
-      <Tabs.Item>
-        <Nav.Link>{tabs[2]}</Nav.Link>
-      </Tabs.Item>
-    </Tabs>
-  );
-};
+const TabsExample: FC = () => (
+  <Tabs>
+    <Tab title="Lemon">Lemon is yellow</Tab>
+    <Tab title="Strawberry"><Test /></Tab>
+    <Tab title="Pear">Pear is green</Tab>
+  </Tabs>
+);
 
 export default TabsExample;
