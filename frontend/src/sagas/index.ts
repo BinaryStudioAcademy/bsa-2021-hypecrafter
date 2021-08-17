@@ -1,7 +1,9 @@
 import { all } from 'redux-saga/effects';
+import authenticationSaga from '../scenes/Auth/sagas';
 import projectSaga from '../scenes/CreateProject/sagas';
 import mainPageSaga from '../scenes/MainPage/sagas';
 import userProfileSaga from '../scenes/UserPage/sagas';
+import transactionsPageSaga from '../scenes/Wallet/Transactions/sagas';
 import authSaga from './auth';
 import categoriesSaga from './categories';
 import usersSaga from './users';
@@ -13,6 +15,8 @@ export default function* rootSaga() {
     authSaga(),
     projectSaga(),
     usersSaga(),
-    categoriesSaga()
+    categoriesSaga(),
+    transactionsPageSaga(),
+    authenticationSaga()
   ]);
 }

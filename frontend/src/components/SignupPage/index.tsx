@@ -1,13 +1,40 @@
-import { FunctionComponent, useState } from 'react';
 import classNames from 'classnames';
-import classes from './styles.module.scss';
+import { FunctionComponent, useEffect, useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
+import { Routes } from '../../../common/enums';
+import { Pages } from '../../../common/enums/signupForms';
+import { SignupData } from '../../../common/types/signup';
+import { useAction, useTypedSelector } from '../../../hooks';
 import logo from '../../assets/HypeCrafter.svg';
 import { useLocalization } from '../../providers/localization';
-import MainForm from './components/form-main';
+import classesAuth from '../styles.module.scss';
 import AdditionalForm from './components/form-additional';
-import { Pages } from '../../common/enums/signupForms';
+import MainForm from './components/form-main';
+import classes from './styles.module.scss';
+
+
 
 const SignupPage: FunctionComponent = () => {
+  const history = useHistory();
+  const { registerUserAction } = useAction();
+  const store = useTypedSelector(({ authentication: { tokens, isLoading, error } }) => ({
+    accessToken: tokens?.accessToken,
+    refreshToken: tokens?.refreshToken,
+    isLoading,
+    error
+  }));
+  const { refreshToken } = store;
+
+  useEffect(() => {
+    if (refreshToken) {
+      history.push('/');
+    }
+  }, [refreshToken]);
+
+  const handleSignup = (data: SignupData) => {
+    registerUserAction(data);
+  };
+
   const [currentPage, setCurrentPage] = useState(Pages.MAIN_FORM);
   const [mainFormInfo, setMainFormInfo] = useState({
     firstName: '',
@@ -37,13 +64,17 @@ const SignupPage: FunctionComponent = () => {
   };
 
   return (
-    <div className={classes.root}>
-      <div className={classes.hero}>
-        <img className={classes.logo} src={logo} alt="logo" />
+    <div className={classesAuth.root}>
+      <div className={classesAuth.hero}>
+        <img className={classesAuth.logo} src={logo} alt="logo" />
       </div>
-      <div className={classes.content}>
-        <div className={classes.form}>
-          <h2 className={classes.title}>{t('Sign In')}</h2>
+      <div className={classesAuth.content}>
+        <div className={classesAuth.form}>
+          <h2 className={classesAuth.title}>{t('Sign Up')}</h2>
+          <div className={classes['register-cta']}>
+            {t('Have an account?')}{' '}
+            <Link to={Routes.LOGIN}>{t('Log in')}</Link>
+          </div>
           <div className={classes['form-titles-wrapper']}>
             <h4
               className={classNames(`${classes['form-title']}`, {

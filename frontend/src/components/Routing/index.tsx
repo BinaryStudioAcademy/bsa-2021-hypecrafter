@@ -2,17 +2,18 @@ import { useEffect } from 'react';
 import { Redirect, Switch, useLocation } from 'react-router-dom';
 import { Routes, StorageKeys } from '../../common/enums';
 import { useAction, useTypedSelector } from '../../hooks';
+import LoginPage from '../../scenes/Auth/LoginPage';
+import SignupPage from '../../scenes/Auth/SignupPage';
 import CreateProject from '../../scenes/CreateProject';
 import MainPage from '../../scenes/MainPage';
 import TrendsPage from '../../scenes/TrendsPage';
 import FundsPage from '../../scenes/Wallet/FundsPage';
+import Transactions from '../../scenes/Wallet/Transactions';
 import Header from '../Header';
 import LoaderWrapper from '../LoaderWrapper';
-import LoginPage from '../LoginPage';
 import PageNotFound from '../PageNotFound';
 import PrivateRoute from '../PrivateRoute';
 import PublicRoute from '../PublicRoute';
-import SignupPage from '../SignupPage';
 
 const routesWitoutHeader = [Routes.LOGIN, Routes.SIGNUP];
 
@@ -55,6 +56,7 @@ const Routing = () => {
           component={SignupPage}
         />
         <PrivateRoute exact path={Routes.ADDFUNDS} component={FundsPage} />
+        <PrivateRoute exact path={Routes.TRANSACTIONS} component={Transactions} />
         <PublicRoute
           restricted={false}
           exact
