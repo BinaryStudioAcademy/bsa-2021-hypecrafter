@@ -23,6 +23,7 @@ const init = (services: Services) => {
       Empty
       >((req) => {
         const userId: string = (req.user as User).id;
+        console.log(userId);
         const userAgentInfo: string = req.headers['user-agent'];
         const result = services.authService.loginUser(userId, userAgentInfo);
         return Promise.resolve(result);
