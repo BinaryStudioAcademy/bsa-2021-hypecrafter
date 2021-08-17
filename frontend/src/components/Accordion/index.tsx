@@ -3,16 +3,16 @@ import { Accordion as AccordionBS } from 'react-bootstrap';
 import classes from './styles.module.scss';
 
 interface Props {
-  accordions:{
+  items:{
     id: string;
     question: ReactNode | string;
     answer: ReactNode | string;
   }[];
 }
 
-const Accordion: FC<Props> = ({ accordions }) => (
+const Accordion: FC<Props> = ({ items }) => (
   <div>
-    {accordions.map(({ id, question, answer }) => (
+    {items.map(({ id, question, answer }) => (
       <AccordionBS defaultActiveKey="0" className={classes.main} key={id}>
         <AccordionBS.Item eventKey="1" className={classes.item}>
           <AccordionBS.Header className={classes.header}>{question}</AccordionBS.Header>
