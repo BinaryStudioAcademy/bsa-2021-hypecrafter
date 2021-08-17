@@ -192,7 +192,7 @@ const Header = () => {
                   to={Routes.PROFILE}
                   className={classes.desktop_menu_item}
                 >
-                  View account
+                  Localization
                 </NavLink>
                 <NavLink
                   to={Routes.PROFILE}
@@ -360,7 +360,7 @@ const Header = () => {
                 to={Routes.PROFILE}
                 className={classes.mobile_menu_item}
               >
-                View account
+                Localization
               </NavLink>
               <NavLink
                 to={Routes.PROFILE}
