@@ -3,12 +3,6 @@
 @import "../../styles/_mixins.scss";
 
 /* General */
-.mobile_hide_on_scroll {
-  background-color: $color-menu-finish-background;
-  color: $color-root-text !important;
-  backdrop-filter: blur(6px);
-}
-
 .visible {
   display: block;
 }
@@ -496,6 +490,12 @@
   top: 1rem;
   left: 8rem;
   @include color-style;
+}
+
+.mobile_hide_on_scroll {
+  background-color: $color-menu-finish-background !important;
+  color: $color-root-text !important;
+  backdrop-filter: blur(6px);
 }
 
 @media (max-width: 510px) {
