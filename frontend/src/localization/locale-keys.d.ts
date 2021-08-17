@@ -75,4 +75,8 @@ declare type LocaleKeys =
  | 'PAGE NOT FOUND'
  | 'Switch to'
  | 'Have an account?'
- | 'Log in';
+ | 'Log in'
+ | 'Load more'
+ | 'Loading...'
+ | 'Balance replenishment'
+ | 'Pledge project';
