@@ -63,10 +63,12 @@
           }
         }
       }
-      button{
+      a{
         margin: 4px 0px;
         border-width: 0px;
         color:#ddd;
+        padding: 7px 15px;
+        text-decoration: none;
         background:$color-root-grey !important;
         &:hover{
           color:white;
