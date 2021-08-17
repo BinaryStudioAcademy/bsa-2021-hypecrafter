@@ -4,11 +4,13 @@ export enum Path {
   Auth = '/auth',
   Notification = '/notifications',
   Project = '/projects',
-  Category = '/categories'
+  Category = '/categories',
+  Payment = '/payment',
 }
 
 export enum AuthApiPath {
   Login = '/login',
   Token = '/token',
-  TokenReject = '/token/reject'
+  TokenReject = '/token/reject',
+  Register = '/register'
 }

@@ -35,6 +35,12 @@
     "YOUR HYPECRAFTER ACCOUNT": "YOUR HYPECRAFTER ACCOUNT",
     "Current Wallet balance": "Current Wallet balance",
     "Account details": "Account details",
+    "Date":"Date",
+    "Items":"Items",
+    "Type":"Type",
+    "Total":"Total",
+    "Change":"Change",
+    "Balance":"Balance",
     "Transactions list": "Transactions list",
 
     "Create account": "Create account",
@@ -46,7 +52,7 @@
     "By signing up, you agree to our": "By signing up, you agree to our",
     "Privacy Policy": "Privacy Policy",
     "Terms of use": "Terms of use",
-    "Sign Up with Google": "Sign Un with Google",
+    "Sign Up with Google": "Sign Up with Google",
     "and": "and",
     "Country": "Country",
     "Country (optional)": "Country (optional)",
@@ -95,6 +101,15 @@
     "I agree with privacy consent":"I agree with privacy consent",
     "Agreement":"Do you have a good and well thought-out idea and are you ready to conquer the peaks on your own to make your dream come true? But sometimes, alone, the difficult path from concept to finished product is not easy at all. HypeCrafter will lend a helping hand, and more than one! ",
     "Set an achievable goal that covers what you need to complete your project.":"Set an achievable goal that covers what you need to complete your project.",
-    "Campaign Goal":"Campaign Goal"
+    "Campaign Goal":"Campaign Goal",
+    "Switch to": "Switch to {{lang}}",
+
+    "Have an account?": "Have an account?",
+    "Log in": "Log in",
+
+    "Load more":"Load more",
+    "Loading...":"Loading...",
+    "Pledge project":"Pledge project",
+    "Balance replenishment":"Balance replenishment"
   }
 }

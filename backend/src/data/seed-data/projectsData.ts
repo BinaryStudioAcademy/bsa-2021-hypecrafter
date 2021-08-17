@@ -15,6 +15,10 @@ export const projects = [
     region: 'Lexington',
     categoryId: '17f15729-d24a-4099-97fa-41bbdaeca646',
     authorId: 'ac7a5b8f-7fc4-4d1e-81c9-1a9c49c9b529',
+    imageUrl: 'https://source.unsplash.com/random/800x600',
+    instagramUrl: 'https://www.instagram.com/robertdowneyjr/',
+    facebookUrl: 'https://www.facebook.com/robmooreprogressive',
+    dribbleUrl: 'https://dribbble.com/shots/16234093-Penguins-illustration'
   }, {
     id: '21f6880e-9375-46bd-afc6-4b5634746e3a',
     name: 'Lanterns Burn Bright: A Halloween Art Countdown',
@@ -30,7 +34,10 @@ export const projects = [
     region: 'Abingdon',
     categoryId: '17f15729-d24a-4099-97fa-41bbdaeca646',
     authorId: 'ac7a5b8f-7fc4-4d1e-81c9-1a9c49c9b529',
-
+    imageUrl: 'https://source.unsplash.com/random/800x600',
+    instagramUrl: 'https://www.instagram.com/robertdowneyjr/',
+    facebookUrl: 'https://www.facebook.com/robmooreprogressive',
+    dribbleUrl: 'https://dribbble.com/shots/16234093-Penguins-illustration'
   },
   {
 
@@ -47,7 +54,11 @@ export const projects = [
     totalInteractionTime: 2361552,
     region: 'North Hollywood',
     categoryId: '17f15729-d24a-4099-97fa-41bbdaeca646',
-    authorId: 'ac7a5b8f-7fc4-4d1e-81c9-1a9c49c9b529'
+    authorId: 'ac7a5b8f-7fc4-4d1e-81c9-1a9c49c9b529',
+    imageUrl: 'https://source.unsplash.com/random/800x600',
+    instagramUrl: 'https://www.instagram.com/robertdowneyjr/',
+    facebookUrl: 'https://www.facebook.com/robmooreprogressive',
+    dribbleUrl: 'https://dribbble.com/shots/16234093-Penguins-illustration'
   },
   {
     id: '3a014366-9a20-45e5-9005-ceafa67ff300',
@@ -63,7 +74,11 @@ export const projects = [
     totalInteractionTime: 2310941,
     region: 'Bromont',
     categoryId: '17f15729-d24a-4099-97fa-41bbdaeca646',
-    authorId: 'ac7a5b8f-7fc4-4d1e-81c9-1a9c49c9b529'
+    authorId: 'ac7a5b8f-7fc4-4d1e-81c9-1a9c49c9b529',
+    imageUrl: 'https://source.unsplash.com/random/800x600',
+    instagramUrl: 'https://www.instagram.com/robertdowneyjr/',
+    facebookUrl: 'https://www.facebook.com/robmooreprogressive',
+    dribbleUrl: 'https://dribbble.com/shots/16234093-Penguins-illustration'
   },
   {
     id: 'd51adf1a-b777-41c1-8a52-49ec5b652a35',
@@ -79,7 +94,11 @@ export const projects = [
     totalInteractionTime: 2153627,
     region: 'Los Angeles',
     categoryId: '17f15729-d24a-4099-97fa-41bbdaeca646',
-    authorId: 'ac7a5b8f-7fc4-4d1e-81c9-1a9c49c9b529'
+    authorId: 'ac7a5b8f-7fc4-4d1e-81c9-1a9c49c9b529',
+    imageUrl: 'https://source.unsplash.com/random/800x600',
+    instagramUrl: 'https://www.instagram.com/robertdowneyjr/',
+    facebookUrl: 'https://www.facebook.com/robmooreprogressive',
+    dribbleUrl: 'https://dribbble.com/shots/16234093-Penguins-illustration'
   },
   {
     id: '4e24a5fd-e5d3-49b1-a8be-21232023601b',
@@ -95,7 +114,11 @@ export const projects = [
     totalInteractionTime: 1663733,
     region: 'Pensacola',
     categoryId: '60f01b12-46ac-466a-9e0d-7488f94ed641',
-    authorId: 'ac7a5b8f-7fc4-4d1e-81c9-1a9c49c9b529'
+    authorId: 'ac7a5b8f-7fc4-4d1e-81c9-1a9c49c9b529',
+    imageUrl: 'https://source.unsplash.com/random/800x600',
+    instagramUrl: 'https://www.instagram.com/robertdowneyjr/',
+    facebookUrl: 'https://www.facebook.com/robmooreprogressive',
+    dribbleUrl: 'https://dribbble.com/shots/16234093-Penguins-illustration'
   },
   {
     id: '58186c94-2f1a-4bbb-86c6-af7d15feb10b',
@@ -111,7 +134,11 @@ export const projects = [
     totalInteractionTime: 596097,
     region: 'Mississauga',
     categoryId: '3e482d79-aac3-4981-87a2-31c24c28ac39',
-    authorId: 'ac7a5b8f-7fc4-4d1e-81c9-1a9c49c9b529'
+    authorId: 'ac7a5b8f-7fc4-4d1e-81c9-1a9c49c9b529',
+    imageUrl: 'https://source.unsplash.com/random/800x600',
+    instagramUrl: 'https://www.instagram.com/robertdowneyjr/',
+    facebookUrl: 'https://www.facebook.com/robmooreprogressive',
+    dribbleUrl: 'https://dribbble.com/shots/16234093-Penguins-illustration'
   },
   {
     id: 'a9ea4107-10de-44f0-93da-3c24c1932e56',
@@ -127,7 +154,11 @@ export const projects = [
     totalInteractionTime: 625942,
     region: 'Barnegat',
     categoryId: '60f01b12-46ac-466a-9e0d-7488f94ed641',
-    authorId: 'ac7a5b8f-7fc4-4d1e-81c9-1a9c49c9b529'
+    authorId: 'ac7a5b8f-7fc4-4d1e-81c9-1a9c49c9b529',
+    imageUrl: 'https://source.unsplash.com/random/800x600',
+    instagramUrl: 'https://www.instagram.com/robertdowneyjr/',
+    facebookUrl: 'https://www.facebook.com/robmooreprogressive',
+    dribbleUrl: 'https://dribbble.com/shots/16234093-Penguins-illustration'
   },
   {
     id: '65cc65ae-b21e-480d-93bd-abcf61007b65',
@@ -143,7 +174,11 @@ export const projects = [
     totalInteractionTime: 573106,
     region: 'Grand Junction',
     categoryId: '17f15729-d24a-4099-97fa-41bbdaeca646',
-    authorId: 'ac7a5b8f-7fc4-4d1e-81c9-1a9c49c9b529'
+    authorId: 'ac7a5b8f-7fc4-4d1e-81c9-1a9c49c9b529',
+    imageUrl: 'https://source.unsplash.com/random/800x600',
+    instagramUrl: 'https://www.instagram.com/robertdowneyjr/',
+    facebookUrl: 'https://www.facebook.com/robmooreprogressive',
+    dribbleUrl: 'https://dribbble.com/shots/16234093-Penguins-illustration'
   },
   {
     id: 'b727f491-d963-4c32-9453-d0541c16f7cd',
@@ -159,7 +194,11 @@ export const projects = [
     totalInteractionTime: 626844,
     region: 'Columbus',
     categoryId: '865bbac9-eb71-4da4-a746-d7f49608005a',
-    authorId: 'ac7a5b8f-7fc4-4d1e-81c9-1a9c49c9b529'
+    authorId: 'ac7a5b8f-7fc4-4d1e-81c9-1a9c49c9b529',
+    imageUrl: 'https://source.unsplash.com/random/800x600',
+    instagramUrl: 'https://www.instagram.com/robertdowneyjr/',
+    facebookUrl: 'https://www.facebook.com/robmooreprogressive',
+    dribbleUrl: 'https://dribbble.com/shots/16234093-Penguins-illustration'
   },
   {
     id: '315b6c9b-2764-47b6-adcd-ff72b14d02f1',
@@ -175,6 +214,10 @@ export const projects = [
     totalInteractionTime: 208029,
     region: 'Calgary',
     categoryId: '865bbac9-eb71-4da4-a746-d7f49608005a',
-    authorId: 'ac7a5b8f-7fc4-4d1e-81c9-1a9c49c9b529'
+    authorId: 'ac7a5b8f-7fc4-4d1e-81c9-1a9c49c9b529',
+    imageUrl: 'https://source.unsplash.com/random/800x600',
+    instagramUrl: 'https://www.instagram.com/robertdowneyjr/',
+    facebookUrl: 'https://www.facebook.com/robmooreprogressive',
+    dribbleUrl: 'https://dribbble.com/shots/16234093-Penguins-illustration'
   }
 ];

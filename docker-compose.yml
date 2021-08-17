@@ -25,6 +25,8 @@ services:
   frontend:
     stdin_open: true
     image: "mihailts/hypecrafter-frontend"
+    env_file:
+      - .env
   nginx:
     depends_on:
       - frontend
