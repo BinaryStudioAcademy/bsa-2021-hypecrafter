@@ -35,6 +35,12 @@
     "YOUR HYPECRAFTER ACCOUNT": "YOUR HYPECRAFTER ACCOUNT",
     "Current Wallet balance": "Current Wallet balance",
     "Account details": "Account details",
+    "Date":"Date",
+    "Items":"Items",
+    "Type":"Type",
+    "Total":"Total",
+    "Change":"Change",
+    "Balance":"Balance",
     "Transactions list": "Transactions list",
 
     "Create account": "Create account",
@@ -46,7 +52,7 @@
     "By signing up, you agree to our": "By signing up, you agree to our",
     "Privacy Policy": "Privacy Policy",
     "Terms of use": "Terms of use",
-    "Sign Up with Google": "Sign Un with Google",
+    "Sign Up with Google": "Sign Up with Google",
     "and": "and",
     "Country": "Country",
     "Country (optional)": "Country (optional)",
@@ -74,6 +80,14 @@
     "Popular projects": "Popular projects",
     "PAGE NOT FOUND": "PAGE NOT FOUND",
 
-    "Switch to": "Switch to {{lang}}"
+    "Switch to": "Switch to {{lang}}",
+
+    "Have an account?": "Have an account?",
+    "Log in": "Log in",
+
+    "Load more":"Load more",
+    "Loading...":"Loading...",
+    "Pledge project":"Pledge project",
+    "Balance replenishment":"Balance replenishment"
   }
 }

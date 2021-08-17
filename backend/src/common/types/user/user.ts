@@ -7,4 +7,6 @@ export interface UserProfile {
   lastLoginDate: Date;
   description: string;
   region: string;
+  gender: string;
+  birthday: string;
 }
