@@ -124,9 +124,10 @@
     height: 24px;
     margin-right: 5px;
   }
-  span {
+  a {
     font-size: 16px;
     font-family: $font-roboto700;
+    color: $color-root-text !important;
     margin-top: 2px;
   }
 }

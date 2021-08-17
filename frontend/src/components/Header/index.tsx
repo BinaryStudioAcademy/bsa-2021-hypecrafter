@@ -124,7 +124,8 @@ const Header = () => {
                 className={`
                   ${classes.desktop_project_menu_list}
                   ${isProjectsMenu ? classes.visible : classes.hide}
-                    `}
+                  ${isHideOnScroll ? classes.mobile_hide_on_scroll : ''}
+                `}
               >
                 <NavLink
                   to={Routes.PROJECTS}
@@ -186,6 +187,7 @@ const Header = () => {
                 className={`
                 ${classes.desktop_menu_profile}
                 ${isProfileMenu ? classes.visible : classes.hide}
+                ${isHideOnScroll ? classes.mobile_hide_on_scroll : ''}
               `}
               >
                 <NavLink
@@ -233,9 +235,9 @@ const Header = () => {
           expand="xxl"
           variant="dark"
           className={`
-          ${classes.mobile_navigation}
-          ${isHideOnScroll ? classes.mobile_hide_on_scroll : ''}
-        `}
+            ${classes.mobile_navigation}
+            ${isHideOnScroll ? classes.mobile_hide_on_scroll : ''}
+          `}
         >
           <div className={classes.mobile_search}>
             <FontAwesomeIcon
@@ -257,6 +259,7 @@ const Header = () => {
             <Nav className={`
                 ${classes.mobile_menu_list}
                 ${isMobileMenu ? classes.visible : classes.hide}
+                ${isHideOnScroll ? classes.mobile_hide_on_scroll : ''}
               `}
             >
               <NavLink
@@ -290,6 +293,7 @@ const Header = () => {
                   className={`
                   ${classes.mobile_project_menu_list}
                   ${isProjectsMenu ? classes.visible : classes.hide}
+                  ${isHideOnScroll ? classes.mobile_hide_on_scroll : ''}
                     `}
                 >
                   <NavLink
@@ -339,7 +343,12 @@ const Header = () => {
               className={classes.mobile_notification_new}
             />
           </div>
-          <div className={classes.mobile_profile}>
+          <div
+            className={`
+              ${classes.mobile_profile}
+              ${isHideOnScroll ? classes.mobile_hide_on_scroll : ''}
+            `}
+          >
             <Nav.Link
               onClick={handleProfileMenuForMobile}
               onTouchStart={handleProfileMenuForMobile}
