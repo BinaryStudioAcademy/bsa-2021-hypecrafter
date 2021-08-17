@@ -2,7 +2,7 @@
   "env": {
     "browser": true
   },
-  "extends": ["airbnb-typescript", "plugin:react/recommended", "../.eslintrc.json"],
+  "extends": ["airbnb-typescript", "plugin:react/recommended", "../shared/.eslintrc.base.json"],
   "parserOptions": {
     "sourceType": "module",
     "ecmaVersion": "latest",

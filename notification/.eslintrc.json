@@ -1,5 +1,5 @@
 {
-  "extends": "../.eslintrc.json",
+  "extends": "../shared/.eslintrc.base.json",
   "parserOptions": {
     "sourceType": "module",
     "ecmaVersion": "latest",
