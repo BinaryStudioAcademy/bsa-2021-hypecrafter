@@ -1,15 +1,20 @@
 import randtoken from 'rand-token';
-import { RefreshToken } from '../../data/entities/refreshToken';
-import { createToken } from '../../helpers/createToken';
-import { RefreshTokenRepository } from '../../data/repositories/refreshToken';
-import { CustomError } from '../../helpers/customError';
 import { HttpStatusCode } from '../../../../shared/build/enums';
+import { RefreshToken } from '../../data/entities/refreshToken';
+import { RefreshTokenRepository } from '../../data/repositories/refreshToken';
+import { UserRepository } from '../../data/repositories/user';
+import { createToken } from '../../helpers/createToken';
+import { encrypt } from '../../helpers/crypt';
+import { CustomError } from '../../helpers/customError';
 
 export default class AuthService {
   readonly #refreshTokenRepository: RefreshTokenRepository;
 
-  constructor(refreshTokenRepository: RefreshTokenRepository) {
+  readonly #userRepository: UserRepository;
+
+  constructor(refreshTokenRepository: RefreshTokenRepository, userRepository: UserRepository) {
     this.#refreshTokenRepository = refreshTokenRepository;
+    this.#userRepository = userRepository;
   }
 
   public loginUser(
@@ -44,5 +49,17 @@ export default class AuthService {
     if (tokenItem) {
       await this.#refreshTokenRepository.deleteByToken(refreshToken);
     }
+  }
+
+  public async registerUser(
+    email: string,
+    password: string
+  ) {
+    const passwordHash: string = await encrypt(password);
+    const newUser = await this.#userRepository.createUser({
+      email,
+      passwordHash
+    });
+    return newUser;
   }
 }
