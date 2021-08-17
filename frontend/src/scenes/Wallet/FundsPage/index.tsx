@@ -7,6 +7,7 @@ import CustomFund from '../CustomFund';
 import coinImg from '../../../assets/HypeCoin.png';
 import { useLocalization } from '../../../providers/localization';
 import Button from '../../../components/Button';
+import { Routes } from '../../../common/enums';
 
 const FundsPage: FC = () => {
   const { t } = useLocalization();
@@ -14,7 +15,7 @@ const FundsPage: FC = () => {
     <Container fluid="sm">
       <div className={classes['wallet-header']}>
         <div className={classes.breadcrumbs}>
-          <Link to="/"> {t('Home')}</Link>
+          <Link to={Routes.HOME}> {t('Home')}</Link>
           {' > '}
           <Link to="/account">{t('Account')}</Link>
           {' > '}

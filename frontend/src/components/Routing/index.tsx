@@ -8,6 +8,7 @@ import SignupPage from '../../scenes/Auth/SignupPage';
 import MainPage from '../../scenes/MainPage';
 import TrendsPage from '../../scenes/TrendsPage';
 import FundsPage from '../../scenes/Wallet/FundsPage';
+import Transactions from '../../scenes/Wallet/Transactions';
 import Header from '../Header';
 import LoaderWrapper from '../LoaderWrapper';
 import PageNotFound from '../PageNotFound';
@@ -55,6 +56,7 @@ const Routing = () => {
           component={SignupPage}
         />
         <PrivateRoute exact path={Routes.ADDFUNDS} component={FundsPage} />
+        <PrivateRoute exact path={Routes.TRANSACTIONS} component={Transactions} />
         <PublicRoute
           restricted={false}
           path="/trends"
