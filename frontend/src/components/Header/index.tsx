@@ -25,7 +25,7 @@ const Header = () => {
   const [isMobileMenu, setMobileMenu] = useState(false);
   const [isProjectsMenu, setProjectsMenu] = useState(false);
   const [isProfileMenu, setProfileMenu] = useState(false);
-  const [isHideOnScroll, setHideOnScroll] = useState(true);
+  const [isHideOnScroll, setHideOnScroll] = useState(false);
   const { isMobile } = useWindowResize();
 
   const handleProfileMenuForMobile = () => {
@@ -61,14 +61,14 @@ const Header = () => {
   };
 
   const scrollDownCallback = () => {
-    setHideOnScroll(true);
+    setHideOnScroll(false);
     setProfileMenu(false);
     setMobileMenu(false);
     setProjectsMenu(false);
   };
 
   const scrollUpCallback = () => {
-    setHideOnScroll(false);
+    setHideOnScroll(true);
   };
 
   useScroll(
@@ -89,10 +89,12 @@ const Header = () => {
         `}
       >
         <div className={classes.header_left}>
-          <Nav>
-            <Link to={Routes.HOME}>
-              <Logo />
-            </Link>
+          <Link to={Routes.HOME}>
+            <Logo />
+          </Link>
+          <Nav
+            className={classes.desktop_header_menu}
+          >
             <NavLink
               className={classes.header_menu_item}
               activeClassName={classes.header_menu_item_active}
@@ -158,68 +160,72 @@ const Header = () => {
             <FontAwesomeIcon icon={faSearch} className={classes.header_search_icon} />
             <Input type="search" value={text} placeholder="Search..." onChange={handleSearch} />
           </div>
-          <div className={classes.header_hypeCoin}>
-            <img src={hypeCoin} alt="HypeCoin" />
-            <span>1500</span>
-          </div>
-          <div className={classes.header_natification}>
-            <FontAwesomeIcon icon={faBell} className={classes.header_natification_bell} />
-            {true && <FontAwesomeIcon icon={faCircle} className={classes.header_natification_new} />}
-          </div>
-          <div className={classes.desktop_profile}>
-            <Nav.Link
-              onClick={handleProfileMenuForMobile}
-              onTouchStart={handleProfileMenuForMobile}
-            >
-              <Avatar
-                width={35}
-                userName="Hype Coin"
-                className={classes.header_profile_avatar}
-              />
-            </Nav.Link>
-            <div
-              className={`
+          <Nav
+            className={classes.desktop_header_user_menu}
+          >
+            <div className={classes.header_hypeCoin}>
+              <img src={hypeCoin} alt="HypeCoin" />
+              <span>1500</span>
+            </div>
+            <div className={classes.header_natification}>
+              <FontAwesomeIcon icon={faBell} className={classes.header_natification_bell} />
+              {true && <FontAwesomeIcon icon={faCircle} className={classes.header_natification_new} />}
+            </div>
+            <div className={classes.desktop_profile}>
+              <Nav.Link
+                onClick={handleProfileMenuForMobile}
+                onTouchStart={handleProfileMenuForMobile}
+              >
+                <Avatar
+                  width={35}
+                  userName="Hype Coin"
+                  className={classes.header_profile_avatar}
+                />
+              </Nav.Link>
+              <div
+                className={`
                 ${classes.desktop_menu_profile}
                 ${isProfileMenu ? classes.visible : classes.hide}
               `}
-            >
-              <NavLink
-                to={Routes.PROFILE}
-                className={classes.desktop_menu_item}
               >
-                View account
-              </NavLink>
-              <NavLink
-                to={Routes.PROFILE}
-                className={classes.desktop_menu_item}
-              >
-                Edit profile
-              </NavLink>
-              <div
-                className={`
+                <NavLink
+                  to={Routes.PROFILE}
+                  className={classes.desktop_menu_item}
+                >
+                  View account
+                </NavLink>
+                <NavLink
+                  to={Routes.PROFILE}
+                  className={classes.desktop_menu_item}
+                >
+                  Edit profile
+                </NavLink>
+                <div
+                  className={`
                   ${classes.desktop_menu_item}
                   ${classes.line_both_desktop}
                 `}
-              >
-                <LanguageSwitcher />
+                >
+                  <LanguageSwitcher />
+                </div>
+                <NavLink
+                  to={Routes.PROJECTS_CREATE}
+                  className={`
+                  ${classes.desktop_menu_item}
+                  ${classes.line_both_desktop}
+                `}
+                >
+                  Create project
+                </NavLink>
+                <NavLink
+                  to={Routes.LOGOUT}
+                  className={classes.desktop_menu_item}
+                >
+                  Log out
+                </NavLink>
               </div>
-              <NavLink
-                to={Routes.PROJECTS_CREATE}
-                className={`
-                  ${classes.desktop_menu_item}
-                  ${classes.line_both_desktop}
-                `}
-              >
-                Create project
-              </NavLink>
-              <NavLink
-                to={Routes.LOGOUT}
-                className={classes.desktop_menu_item}
-              >
-                Log out
-              </NavLink>
             </div>
-          </div>
+          </Nav>
         </div>
       </div>
       <div className={isMobile ? classes.visible : classes.hide}>

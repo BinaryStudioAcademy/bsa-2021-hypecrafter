@@ -4,7 +4,9 @@
 
 /* General */
 .mobile_hide_on_scroll {
-  opacity: 0;
+  background-color: $color-menu-finish-background;
+  color: $color-root-text !important;
+  backdrop-filter: blur(6px);
 }
 
 .visible {
@@ -20,13 +22,13 @@
 }
 
 @mixin color-style {
-  background-color: $color-mobile-menu-background;
-  backdrop-filter: blur(6px);
+  background-color: $color-menu-start-background;
   color: $color-root-text !important;
+  blur: 0;
 }
 
 @mixin mobile-menu-hoover {
-  @include hoover($color-mobile-menu-background);
+  @include hoover($color-menu-finish-background);
 }
 
 .header {
@@ -41,7 +43,8 @@
   align-items: center;
   padding: 0px 60px;
   @include color-style;
-  transition: opacity 0.5s;
+  transition: blur 1s;
+  transition: background-color 1s;
 }
 .header_left {
   display: flex;
@@ -197,6 +200,12 @@
   }
 }
 
+.desktop_header_user_menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .desktop_profile {
   z-index: 20;
   position: relative;
@@ -260,11 +269,35 @@
   @include color-style;
 }
 
-@media (max-width: 1120px) {
+@media (max-width: 1160px) {
+  .header_left {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 4rem;
+  }
+
+  .header_menu_item:first-child {
+    margin-left: -3px;
+  }
+}
+
+@media (max-width: 925px) {
   .header {
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
+  }
+
+  .header_left {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 2rem;
+    width: 100%;
+  }
+
+  .header_right {
+    width: 100%;
   }
 }
 
@@ -316,7 +349,8 @@
   display: grid;
   grid-template-columns: [start] 2% [hamburger-menu-start] 4rem [hamburger-menu-finish] 1.4rem [logo-start] 1fr [logo-finish] 0.5rem [hypeCoin-start] 5rem [hypeCoin-finish] 0.5rem [notification-start] 2.5rem [notification-finish] 0.5rem [profile-start] 3rem [profile-finish] 2% [finish];
   grid-template-rows: [start] 2% [search-start] 46% [search-finish] 4% [menu-start] 46% [menu-finish] 2% [finish];
-  transition: opacity 0.5s;
+  transition: blur 1s;
+  transition: background-color 1s;
 }
 
 .mobile_search {
