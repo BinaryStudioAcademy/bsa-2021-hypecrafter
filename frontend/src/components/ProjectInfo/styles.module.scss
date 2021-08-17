@@ -1,0 +1,89 @@
+@import '../../styles/vars';
+@import '../../styles/fonts';
+
+.info-block-container {
+  width: 96%;
+  height: 221px;
+  margin-top: 20px;
+  padding: 10px 12px;
+  background-color: $color-root-block-background;
+  border-radius: 6px;
+
+  .info-block-entity {
+    text-align: center;
+
+    .info-backers-amount,
+    .info-days-amount {
+      font-weight: $font-weight-bold;
+      font-size: 24px;
+      margin-bottom: 0.5rem;
+    }
+
+    .info-backers,
+    .info-goal,
+    .info-days {
+      font-family: $font-roboto300;
+      font-size: 20px;
+    }
+
+    .info-goal-amount {
+      font-family: $font-roboto700;
+      font-size: 36px;
+      margin-bottom: 0.4rem;
+      background: $color-root-turquoise-gradient;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+    }
+  }
+
+  .info-block-footer {
+    margin-top: 20px;
+
+    .likes-container {
+      color: #25c685;
+      button {
+        color: #25c685;
+      }
+    }
+
+    .dislikes-container {
+      color: #ff575f;
+      button {
+        margin-bottom: 8px;
+        color: #ff575f;
+      }
+    }
+
+    .likes-container,
+    .dislikes-container {
+      width: 90px;
+
+      button {
+        background: none;
+        border: none;
+      }
+    }
+
+    .likes-amount,
+    .dislikes-amount {
+      user-select: none;
+      margin-left: 4px;
+      font-size: $font-size-akcent;
+      font-weight: $font-weight-medium;
+    }
+
+    .buttons-container {
+      width: 200px;
+      margin-left: auto;
+      display: flex;
+      justify-content: flex-end;
+
+      Button {
+        margin-left: 12px;
+      }
+    }
+  }
+}

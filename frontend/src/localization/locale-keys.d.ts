@@ -32,6 +32,12 @@ declare type LocaleKeys =
  | 'YOUR HYPECRAFTER ACCOUNT'
  | 'Current Wallet balance'
  | 'Account details'
+ | 'Date'
+ | 'Items'
+ | 'Type'
+ | 'Total'
+ | 'Change'
+ | 'Balance'
  | 'Transactions list'
  | 'Create account'
  | 'Personal details'
@@ -69,4 +75,8 @@ declare type LocaleKeys =
  | 'PAGE NOT FOUND'
  | 'Switch to'
  | 'Have an account?'
- | 'Log in';
+ | 'Log in'
+ | 'Load more'
+ | 'Loading...'
+ | 'Balance replenishment'
+ | 'Pledge project';

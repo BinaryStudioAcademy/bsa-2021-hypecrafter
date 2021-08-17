@@ -2,8 +2,10 @@ import { Callback, StringMap, TFunction, TOptions } from 'i18next';
 import { createContext, FC, useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 
+export type TranslatorType = (key: LocaleKeys, options?: string | TOptions<StringMap> | undefined) => string;
+
 type ContextProps = {
-  t: (key: LocaleKeys, options?: string | TOptions<StringMap> | undefined) => string,
+  t: TranslatorType,
   changeLanguage(lng?: string, callback?: Callback): Promise<TFunction>, selectedLanguage: string
 };
 
