@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+
 import { createProjectAction } from './actions';
 import Basic from './components/Basic';
 import BeforeStart from './components/BeforeStart';
 import Funding from './components/Funding';
+import Settings from './components/Settings';
 import Story from './components/Story';
 import Team from './components/Team';
 import { CurrentPage, ProjectKeys } from './enums';
@@ -13,19 +15,15 @@ import { CreateProject as Project } from './types/project';
 
 const CreateProject = () => {
   const initProject: Project = {
-    name: 'test name',
-    description: 'test description',
+    name: '',
+    description: '',
     category: '',
     content: '',
     goal: 0,
+    region: '',
 
     imageUrl: '',
     tags: [],
-    url: '',
-    totalViews: 10,
-    minutesToRead: 10,
-    region: 'test region',
-    totalInteractionTime: 10,
     startDate: '2021-08-21 10:10:10',
     finishDate: '2021-08-21 10:10:10',
 
@@ -45,6 +43,7 @@ const CreateProject = () => {
   const handleChangeValue = (name: ProjectKeys, value: any) => {
     setNewProject({ ...newProject, [name]: value });
   };
+
   switch (currentPage) {
     case CurrentPage.BEFORE_START:
       return <BeforeStart changePage={setCurrentPage} currentPage={currentPage} />;
@@ -73,14 +72,23 @@ const CreateProject = () => {
     case CurrentPage.FUNDING:
       return (
         <Funding
-          changePage={end}
+          changePage={setCurrentPage}
           goal={newProject.goal}
           currentPage={currentPage}
           onChangeValue={handleChangeValue}
         />
       );
+    case CurrentPage.SETTINGS:
+      return (
+        <Settings
+          changePage={end}
+          onChangeValue={handleChangeValue}
+          currentPage={currentPage}
+          region={newProject.region}
+        />
+      );
     default:
-      return <BeforeStart changePage={setCurrentPage} currentPage={currentPage} />;
+      return null;
   }
 };
 

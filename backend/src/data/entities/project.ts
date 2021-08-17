@@ -1,20 +1,15 @@
 import {
-  Entity,
-  Column,
-  OneToMany,
-  ManyToOne,
-  OneToOne,
-  JoinColumn
+  Column, Entity, JoinColumn, ManyToOne, OneToMany, OneToOne
 } from 'typeorm';
 import { AbstractEntity } from './abstract';
 import { Category } from './category';
 import { Comment } from './comment';
 import { Donate } from './donate';
-import { UserProject } from './userProject';
+import { FAQ } from './faq';
 import { ProjectTag } from './projectTag';
 import { Team } from './team';
-import { FAQ } from './faq';
 import { UserProfile } from './userProfile';
+import { UserProject } from './userProject';
 
 @Entity()
 export class Project extends AbstractEntity {
@@ -42,13 +37,13 @@ export class Project extends AbstractEntity {
   @Column()
   finishDate: Date;
 
-  @Column({ type: 'int' })
+  @Column({ type: 'int', default: 0 })
   totalViews: number;
 
-  @Column({ type: 'real' })
+  @Column({ type: 'real', default: 0 })
   minutesToRead: number;
 
-  @Column({ type: 'real' })
+  @Column({ type: 'real', default: 0 })
   totalInteractionTime: number;
 
   @Column({ type: 'text' })

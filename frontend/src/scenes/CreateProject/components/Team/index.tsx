@@ -49,7 +49,7 @@ const Team: FC<Props> = ({ changePage, currentPage }) => {
   const footer = (
     <div className={classes.footer}>
       <Button onClick={handleBack} className={classes.back}>Go back</Button>
-      <Button onClick={handleNext} disabled={!checked}>Continue</Button>
+      <Button onClick={handleNext} disable={!checked}>Continue</Button>
     </div>
   );
   return (

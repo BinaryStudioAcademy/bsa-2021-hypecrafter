@@ -23,7 +23,6 @@ const newProject: CreateProject = {
   imageUrl: '',
   name: '',
   tags: [],
-  url: '',
   totalViews: 0,
   minutesToRead: 0,
   region: '',

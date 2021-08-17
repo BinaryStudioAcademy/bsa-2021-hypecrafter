@@ -88,4 +88,6 @@ declare type LocaleKeys =
   | 'I agree with privacy consent'
   | 'Agreement'
   | 'Set an achievable goal that covers what you need to complete your project.'
-  | 'Campaign Goal';
+  | 'Campaign Goal'
+  | 'Finally'
+  | 'Your location can be a key factor for the investor in your favor.';

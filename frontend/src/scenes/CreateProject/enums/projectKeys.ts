@@ -3,5 +3,6 @@ export enum ProjectKeys {
   DESCRIPTION = 'description',
   CATEGORY = 'category',
   CONTENT = 'content',
-  GOAL = 'goal'
+  GOAL = 'goal',
+  REGION = 'region'
 }

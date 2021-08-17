@@ -2,6 +2,7 @@ import { FC } from 'react';
 import Button from '../../../../components/Button';
 import Input from '../../../../components/Input';
 import { useLocalization } from '../../../../providers/localization';
+import upload from '../../../../services/image';
 import { CurrentPage, ProjectKeys } from '../../enums';
 import Layout from '../Layout';
 import classes from './styles.module.scss';
@@ -10,32 +11,48 @@ interface Props {
   changePage: (currentPage: CurrentPage) => void
   currentPage: CurrentPage,
   onChangeValue: (name: ProjectKeys, value: string) => void,
-  goal:number
+  region:string
 }
 
-const Funding: FC<Props> = ({ changePage, currentPage, onChangeValue, goal }) => {
+const Settings: FC<Props> = ({ changePage, currentPage, onChangeValue, region }) => {
   const { t } = useLocalization();
   const handleBack = () => changePage(currentPage - 1);
-  const handleNext = () => changePage(currentPage + 1);
+  const handleNext = () => changePage(CurrentPage.END);
+  const uploadImage = (e: any) => {
+    const { target } = e;
+    const [file] = target.files;
+    upload(file).then(res => console.log(res)).catch(err => console.log(err));
+  };
   const body = (
     <div>
       <Input
-        type="number"
-        label={t('Set an achievable goal that covers what you need to complete your project.')}
-        onChange={e => onChangeValue(ProjectKeys.GOAL, e.target.value)}
-        value={goal}
+        type="text"
+        label={t('Your location can be a key factor for the investor in your favor.')}
+        onChange={e => onChangeValue(ProjectKeys.REGION, e.target.value)}
+        value={region}
       />
+      <Button>
+        <label>
+          Attach image
+          <input
+            name="image"
+            type="file"
+            onChange={uploadImage}
+            hidden
+          />
+        </label>
+      </Button>
     </div>
   );
   const footer = (
     <div className={classes.footer}>
       <Button onClick={handleBack} className={classes.back}>{t('Go back')}</Button>
-      <Button onClick={handleNext}>{t('Continue')}</Button>
+      <Button onClick={handleNext}>{t('Create Project')}</Button>
     </div>
   );
   return (
     <Layout
-      header={t('Campaign Goal')}
+      header={t('Finally')}
       setCurrentPage={changePage}
       body={body}
       footer={footer}
@@ -44,4 +61,4 @@ const Funding: FC<Props> = ({ changePage, currentPage, onChangeValue, goal }) =>
   );
 };
 
-export default Funding;
+export default Settings;
