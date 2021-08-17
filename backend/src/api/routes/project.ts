@@ -1,7 +1,6 @@
 import MicroMq from 'micromq';
-// import { InsertResult } from 'typeorm';
-import { CreateProject } from '../../data/entities';
 import { Project } from '../../common/types';
+import { Project as CreateProject } from '../../data/entities';
 import { wrap } from '../../helpers';
 import { Services } from '../../services';
 

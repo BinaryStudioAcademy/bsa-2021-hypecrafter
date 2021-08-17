@@ -68,7 +68,6 @@ const Routing = () => {
         />
         <PublicRoute
           restricted={false}
-          path="/trends"
           path={Routes.TRENDS}
           exact
           component={TrendsPage}

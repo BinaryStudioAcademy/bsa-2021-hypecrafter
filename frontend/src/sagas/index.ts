@@ -16,7 +16,7 @@ export default function* rootSaga() {
     authSaga(),
     projectSaga(),
     usersSaga(),
-    categoriesSaga()
+    categoriesSaga(),
     projectPageSaga(),
     transactionsPageSaga(),
     authenticationSaga()

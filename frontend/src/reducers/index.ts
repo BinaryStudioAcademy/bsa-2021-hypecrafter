@@ -17,7 +17,7 @@ const initialState: StoreState = {
   auth: authState,
   project: projectInitialState,
   users: usersInitialState,
-  categories: categoriesInitialState
+  categories: categoriesInitialState,
   projectPage: projectPageState,
   authentication: authenticationInitialState
 };
@@ -28,7 +28,7 @@ const rootReducer = combineReducers({
   auth: authReducer,
   project: projectReduser,
   users: usersReducer,
-  categories: categoriesReducer
+  categories: categoriesReducer,
   projectPage: projectPageReducer,
   transactions: transactionsReducer,
   authentication: authenticationReducer
