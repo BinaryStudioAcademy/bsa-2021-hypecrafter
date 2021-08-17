@@ -19,7 +19,6 @@ const init = (services: Services) => {
         Empty
       >(async (req) => {
         const userId: string = (req.user as User).id;
-        console.log(userId);
         const userAgentInfo: string = req.headers['user-agent'];
         const result: { accessToken: string; refreshToken: string } = (
           services.authService.loginUser(userId, userAgentInfo)

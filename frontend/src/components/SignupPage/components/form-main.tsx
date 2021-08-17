@@ -5,7 +5,6 @@ import { Routes } from '../../../common/enums';
 import { Pages } from '../../../common/enums/signupForms';
 import Button from '../../Button';
 import Input from '../../Input';
-import classesAuth from '../../styles.module.scss';
 import classes from '../styles.module.scss';
 
 export type MainFormData = {
@@ -121,12 +120,12 @@ const MainForm: FunctionComponent<MainFormProps> = ({
         <Link to={Routes.SIGNUP}>{t('Privacy Policy')}</Link> and{' '}
         <Link to={Routes.SIGNUP}>{t('Terms of use')}</Link>
       </div>
-      <div className={classesAuth['horizontal-ruler-text']}>
+      <div className={classes['horizontal-ruler-text']}>
         <div>{t('or')}</div>
       </div>
-      <hr className={classesAuth['horizontal-ruler']} />
+      <hr className={classes['horizontal-ruler']} />
       <Button
-        className={classesAuth['google-button']}
+        className={classes['google-button']}
         onClick={dummySignUpWithGoogleHandler}
       >
         {t('Sign Up with Google')}

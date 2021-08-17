@@ -6,7 +6,6 @@ export enum Routes {
   ADDFUNDS = '/add-funds',
   RESET_PASSWORD = '/reset-password',
   PROJECTS = '/projects',
-  TRANSACTIONS = '/transactions',
   TRENDS = '/trends',
   PROJECTS_CREATE = '/projects/create',
   PROFILE = '/profile',

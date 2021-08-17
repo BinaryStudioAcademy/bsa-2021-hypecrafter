@@ -1,13 +1,10 @@
 import MicroMq from 'micromq';
-import { Page } from '../../common/types';
-import { wrap } from '../../helpers';
+import { Payment } from '../../common/types';
 import { Services } from '../../services';
+import { wrap } from '../../helpers';
 
-const init = ({ paymentService }: Services, path: string) => (app: MicroMq) => app.get(
-  `${path}/:userId/:page`,
-  wrap<Empty, Page, { page: string, userId: string }, Empty>(async (req) => {
-    return paymentService.getByUserId(req.params.userId, req.params.page);
-  })
-);
+const init = ({ paymentService }: Services, path: string) => (app: MicroMq) => app
+  .get(path, wrap(() => paymentService.getAll()))
+  .get(`${path}/:id`, wrap<Empty, Payment, { id: string }, Empty>((req) => paymentService.getById(req.params.id)));
 
 export default init;

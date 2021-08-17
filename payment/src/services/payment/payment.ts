@@ -1,21 +1,17 @@
-import { TransactionHistoryRepository } from '../../data/repositories';
+import { TransactionRepository } from '../../data/repositories';
 
 export default class TransactionService {
-  readonly #transactionHistoryRepository: TransactionHistoryRepository;
+  readonly #transactionRepository: TransactionRepository;
 
-  constructor(transactionHistoryRepository: TransactionHistoryRepository) {
-    this.#transactionHistoryRepository = transactionHistoryRepository;
+  constructor(transactionRepository: TransactionRepository) {
+    this.#transactionRepository = transactionRepository;
   }
 
   public getAll() {
-    return this.#transactionHistoryRepository.getAll();
+    return this.#transactionRepository.getAll();
   }
 
   public getById(id: string) {
-    return this.#transactionHistoryRepository.getById(id);
-  }
-
-  public getByUserId(userId: string, pageNum: number) {
-    return this.#transactionHistoryRepository.getByUserId(userId, pageNum);
+    return this.#transactionRepository.getById(id);
   }
 }

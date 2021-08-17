@@ -1,14 +1,12 @@
-import { FC, MouseEventHandler, useEffect } from 'react';
+import { FC, MouseEventHandler } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
-import { Link, useHistory } from 'react-router-dom';
-import logo from '../../../assets/HypeCrafter.svg';
-import { Languages, Routes } from '../../../common/enums';
-import { LoginData } from '../../../common/types/login';
-import Button from '../../../components/Button';
-import Input from '../../../components/Input';
-import { useAction, useTypedSelector } from '../../../hooks';
-import { useLocalization } from '../../../providers/localization';
-import classes from '../styles.module.scss';
+import { Link } from 'react-router-dom';
+import logo from '../../assets/HypeCrafter.svg';
+import { Languages, Routes } from '../../common/enums';
+import { useLocalization } from '../../providers/localization';
+import Button from '../Button';
+import Input from '../Input';
+import classes from './styles.module.scss';
 
 type FormData = {
   email: string;
@@ -16,34 +14,22 @@ type FormData = {
 };
 
 const LoginPage: FC = () => {
-  const history = useHistory();
-  const { loginAction } = useAction();
-
-  const store = useTypedSelector(({ authentication: { tokens, isLoading, error } }) => ({
-    accessToken: tokens?.accessToken,
-    refreshToken: tokens?.refreshToken,
-    isLoading,
-    error
-  }));
-  const { refreshToken } = store;
-
-  const { register, handleSubmit, formState: { errors } } = useForm<FormData>();
+  const { register, handleSubmit, setError, formState: { errors } } = useForm<FormData>();
   const { t, changeLanguage, selectedLanguage } = useLocalization();
 
-  const onSubmit: SubmitHandler<FormData> = (data: LoginData) => {
-    loginAction(data);
+  const onSubmit: SubmitHandler<FormData> = (data) => {
+    console.log('Sign In', data.email, data.password);
+
+    setError('email', { // set error example
+      type: 'manual',
+      message: 'Dont Forget Your Username Should Be Cool!'
+    });
   };
 
   const dummySignInWithGoogleHandler: MouseEventHandler<HTMLButtonElement> = () => {
     console.log('Sign In with Google');
     changeLanguage(selectedLanguage === Languages.UA ? Languages.EN : Languages.UA); // temp, for translations test
   };
-
-  useEffect(() => {
-    if (refreshToken) {
-      history.push('/');
-    }
-  }, [refreshToken]);
 
   return (
     <div className={classes.root}>

@@ -1,10 +1,10 @@
 import { getCustomRepository } from 'typeorm';
-import { TransactionHistoryRepository } from '../data/repositories';
+import { TransactionRepository } from '../data/repositories';
 import PaymentService from './payment';
 
 export function initServices() {
   return {
-    paymentService: new PaymentService(getCustomRepository(TransactionHistoryRepository))
+    paymentService: new PaymentService(getCustomRepository(TransactionRepository))
   };
 }
 

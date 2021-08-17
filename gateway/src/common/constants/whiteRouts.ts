@@ -7,9 +7,7 @@ const WHITE_ROUTES = [
   '/users/:id',
   '/topics',
   '/projects',
-  '/categories',
-  '/api-docs',
-  '/payment/:id/:page'
+  '/categories'
 ];
 
 export { WHITE_ROUTES };

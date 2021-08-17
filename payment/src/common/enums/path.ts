@@ -1,3 +1,3 @@
 export enum Path {
-  Payment = '/payment'
+  Payment = '/api/payments'
 }

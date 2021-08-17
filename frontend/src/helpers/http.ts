@@ -16,7 +16,7 @@ const logout = async () => {
 };
 
 const getInitHeaders = (
-  hasContent = false,
+  hasContent = true,
   contentType = 'application/json'
 ) => {
   const headers: HeadersInit = new Headers();

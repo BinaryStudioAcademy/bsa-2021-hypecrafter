@@ -1,11 +1,11 @@
 import { FunctionComponent } from 'react';
-import { Form } from 'react-bootstrap';
 import { SubmitHandler, useForm } from 'react-hook-form';
-import { Pages } from '../../../../common/enums/signupForms';
-import Button from '../../../../components/Button';
-import Input from '../../../../components/Input';
+import { Form } from 'react-bootstrap';
 import classes from '../styles.module.scss';
+import Input from '../../Input';
+import Button from '../../Button';
 import { MainFormData } from './form-main';
+import { Pages } from '../../../common/enums/signupForms';
 
 type AdditionalFormData = {
   country?: string;
