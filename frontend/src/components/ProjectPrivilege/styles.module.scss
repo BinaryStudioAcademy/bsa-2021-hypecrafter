@@ -1,8 +1,15 @@
 @import './../../styles/fonts', './../../styles/vars';
 
+$component-width: 323px;
+$component-height: 433px;
+$default-font-size: 14px;
+$title-font-size: 18px;
+$value-font-size: 28px;
+$img-size: 24px;
+
 .wrapper {
-  width: 423px;
-  min-height: 533px;
+  width: $component-width;
+  min-height: $component-height;
   padding: 20px 35px;
   background: $color-root-block-background;
   border-radius: 3px;
@@ -12,12 +19,12 @@
   justify-content: space-between;
   align-items: flex-start;
 
-  font-size: 24px;
+  font-size: $default-font-size;
 }
 
 .title {
   font-family: $font-roboto700;
-  font-size: 28px;
+  font-size: $title-font-size;
   margin-left: 3px;
 }
 
@@ -37,22 +44,22 @@
   height: 18px;
   margin-top: 8px;
   span {
-    font-size: 36px;
+    font-size: $value-font-size;
     margin-right: 4px;
     font-family: $font-roboto700;
   }
   img {
-    width: 34px;
-    height: 34px;
+    width: $img-size;
+    height: $img-size;
   }
 }
 
 .or_more {
   font-family: $font-roboto300;
+  margin-top: 4px;
 }
 
 .content {
-  width: 353px;
   height: 180px;
 }
 

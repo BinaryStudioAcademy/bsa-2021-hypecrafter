@@ -8,7 +8,7 @@ interface PrivilegesProps {
   includes: string[];
   backers: number;
 }
-const maxChars = 153;
+const maxChars = 283;
 
 const ProjectPrivilege: React.FC<PrivilegesProps> = ({
   value,
@@ -18,24 +18,24 @@ const ProjectPrivilege: React.FC<PrivilegesProps> = ({
   backers
 }) => (
   <div className={classes.wrapper}>
-    <div className={classes.value_wrapper}>
+    <header className={classes.value_wrapper}>
       <div className={classes.value}>
         <span>{value}</span>
         <img src={hypeCoin} alt="HypeCoin" />
       </div>
       <div className={classes.or_more}>or more</div>
-    </div>
+    </header>
     <div className={classes.title}>{title}</div>
-    <div className={classes.content}>
+    <article className={classes.content}>
       {content.length > maxChars ? content.slice(0, maxChars).concat('...') : content}
-    </div>
+    </article>
     <div className={classes.includes_title}>Includes:</div>
     <ul className={classes.includes_ul}>
       {includes.map((elem, index) => (
         <li key={`${index ** 2}-privilege-include`}>{elem}</li>
       ))}
     </ul>
-    <div className={classes.backers}>Backers {backers}</div>
+    <footer className={classes.backers}>Backers {backers}</footer>
   </div>
 );
 
