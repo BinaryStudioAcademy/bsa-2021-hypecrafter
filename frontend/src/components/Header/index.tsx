@@ -52,8 +52,8 @@ const Header = () => {
           <Input type="search" value={text} placeholder="Search..." onChange={handleSearch} />
         </div>
         <div className={classes.header_hypeCoin}>
-          <img src={hypeCoin} alt="HypeCoin" />
-          <span>1500</span>
+          <Link to={Routes.ADDFUNDS}><img src={hypeCoin} alt="HypeCoin" /></Link>
+          <Link to={Routes.ADDFUNDS}>1500</Link>
         </div>
         <div className={classes.header_natification}>
           <FontAwesomeIcon icon={faBell} className={classes.header_natification_bell} />
