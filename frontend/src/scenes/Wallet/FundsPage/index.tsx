@@ -57,7 +57,7 @@ const FundsPage: FC = () => {
                 </span>
               </div>
             </div>
-            <Link to={Routes.TRANSACTIONS}>{t('Account details')}</Link>
+            <Link to={Routes.HOME}>{t('Account details')}</Link>
             <Link to={Routes.TRANSACTIONS}>{t('Transactions list')}</Link>
           </div>
         </div>
