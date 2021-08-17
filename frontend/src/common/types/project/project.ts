@@ -13,7 +13,7 @@ export interface Project {
   region: string;
   totalInteractionTime: number;
   startDate: string;
-  finishDate: string;
+  finishDate: Date;
 }
 
 export interface ProjectPage extends Project {

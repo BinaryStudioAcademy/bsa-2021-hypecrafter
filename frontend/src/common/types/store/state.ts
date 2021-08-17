@@ -14,6 +14,6 @@ export interface StoreState {
   users: UsersState;
   categories: CategoriesState;
   projectPage: ProjectPageState;
-  transactions: PageState
+  transactions: PageState;
   authentication: AuthenticationState;
 }

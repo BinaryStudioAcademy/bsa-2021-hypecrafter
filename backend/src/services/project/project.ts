@@ -1,4 +1,5 @@
 import { Project } from '../../common/types';
+import { Project as CreateProject } from '../../data/entities';
 import { ProjectRepository } from '../../data/repositories';
 
 export default class ProjectService {
@@ -17,8 +18,8 @@ export default class ProjectService {
     };
   }
 
-  public async createProject(body: Project) {
-    const project = await this.#projectRepository.save({ ...new Project(), ...body });
+  public async createProject(body: CreateProject) {
+    const project = await this.#projectRepository.save(body);
     return project;
   }
 

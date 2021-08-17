@@ -2,7 +2,6 @@ import { FC } from 'react';
 import Button from '../../../../components/Button';
 import Input from '../../../../components/Input';
 import { useLocalization } from '../../../../providers/localization';
-import upload from '../../../../services/image';
 import { CurrentPage, ProjectKeys } from '../../enums';
 import Layout from '../Layout';
 import classes from './styles.module.scss';
@@ -19,9 +18,10 @@ const Settings: FC<Props> = ({ changePage, currentPage, onChangeValue, region })
   const handleBack = () => changePage(currentPage - 1);
   const handleNext = () => changePage(CurrentPage.END);
   const uploadImage = (e: any) => {
-    const { target } = e;
-    const [file] = target.files;
-    upload(file).then(res => console.log(res)).catch(err => console.log(err));
+    console.log(e);
+    // const { target } = e;
+    // const [file] = target.files;
+    // upload(file).then(res => console.log(res)).catch(err => console.log(err));
   };
   const body = (
     <div>
