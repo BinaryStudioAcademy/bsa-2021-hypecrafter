@@ -1,10 +1,10 @@
 import { FunctionComponent } from 'react';
 import { Form } from 'react-bootstrap';
 import { SubmitHandler, useForm } from 'react-hook-form';
-import { Pages } from '../../../common/enums/signupForms';
-import { SignupData } from '../../../common/types/signup';
-import Button from '../../../components/Button';
-import Input from '../../../components/Input';
+import { Pages } from '../../../../common/enums/signupForms';
+import { SignupData } from '../../../../common/types/signup';
+import Button from '../../../../components/Button';
+import Input from '../../../../components/Input';
 import classes from '../styles.module.scss';
 import { MainFormData } from './form-main';
 

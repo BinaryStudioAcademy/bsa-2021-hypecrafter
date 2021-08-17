@@ -1,0 +1,67 @@
+@import '../../../styles/mixins', '../../../styles/vars';
+
+.register-cta {
+  margin: 10px 0 40px;
+  font-size: $font-size-small;
+  line-height: 14px;
+  color: $color-root-text-grey;
+
+  a {
+    color: $color-root-turquoise;
+    text-decoration: none;
+  }
+}
+
+.sign-up-button {
+  @include flex-center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+  height: 45px;
+  font-weight: bold;
+  font-size: $font-size-akcent;
+  line-height: 19px;
+}
+
+.form-titles-wrapper {
+  margin: 20px 0 30px;
+}
+
+.form-title {
+  color: $color-root-turquoise;
+  font-weight: bold;
+  font-size: $font-size-akcent;
+}
+
+.form-title:not(.chosen) {
+  filter: blur(1px);
+}
+
+.detail-form-control,
+.name-wrapper,
+.form-titles-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.name-wrapper div {
+  width: 48%;
+}
+
+.name-wrapper div div {
+  width: 100%;
+}
+
+.detail-form-control button {
+  width: 45%;
+}
+
+.birth-input {
+  width: 100%;
+}
+
+.select-form,
+.birth-form {
+  margin-bottom: 24px;
+}
