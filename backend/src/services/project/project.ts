@@ -1,5 +1,4 @@
-import { Project } from '../../data/entities';
-import { mapProjects } from '../../data/mappers/mapProjects';
+import { Project } from '../../common/types';
 import { ProjectRepository } from '../../data/repositories';
 
 export default class ProjectService {
@@ -10,16 +9,21 @@ export default class ProjectService {
   }
 
   public async getPopularAndRecommended() {
-    const popular = await this.#projectRepository.getPopular();
-    const recommended = await this.#projectRepository.getRecommended();
+    const popular: Project[] = await this.#projectRepository.getPopular();
+    const recommended: Project[] = await this.#projectRepository.getRecommended();
     return {
-      popular: mapProjects(popular),
-      recommended: mapProjects(recommended)
+      popular,
+      recommended
     };
   }
 
   public async createProject(body: Project) {
     const project = await this.#projectRepository.save({ ...new Project(), ...body });
     return project;
+  }
+
+  public async getById(id: string) {
+    const project = await this.#projectRepository.getById(id);
+    return project[0];
   }
 }

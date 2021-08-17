@@ -1,3 +1,5 @@
+@import '../../styles/vars';
+
 .loader-wrapper {
   top: 0;
   left: 0;
@@ -6,6 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background: rgba(#111, .5);
 }
 
 .loader-default {
@@ -14,4 +17,34 @@
 
 .loader-page {
   position: fixed;
+}
+
+.spinner {
+  border: 4px solid rgba(#111, .5);
+  border-radius: 50%;
+  border-top: 4px solid $color-root-turquoise;
+  width: 120px;
+  height: 120px;
+  box-shadow: 0 0 10px rgba($color-root-turquoise, .8);
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

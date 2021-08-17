@@ -2,6 +2,7 @@ import { combineReducers } from 'redux';
 import { StoreState } from '../common/types';
 import projectReduser, { initialState as projectInitialState } from '../scenes/CreateProject/reducer';
 import mainPageReducer, { mainPageState } from '../scenes/MainPage/reducer';
+import projectPageReducer, { projectPageState } from '../scenes/ProjectPage/reducer';
 import userProfileReducer, { initialState as userProfileInitialState } from '../scenes/UserPage/reducer';
 import authReducer, { authState } from './auth';
 import categoriesReducer, { initialState as categoriesInitialState } from './categies';
@@ -13,7 +14,9 @@ const initialState: StoreState = {
   auth: authState,
   project: projectInitialState,
   users: usersInitialState,
-  categories: categoriesInitialState
+  categories: categoriesInitialState,
+  projectPage: projectPageState,
+  authentication: authenticationInitialState
 };
 
 const rootReducer = combineReducers({
@@ -22,7 +25,10 @@ const rootReducer = combineReducers({
   auth: authReducer,
   project: projectReduser,
   users: usersReducer,
-  categories: categoriesReducer
+  categories: categoriesReducer,
+  projectPage: projectPageReducer,
+  transactions: transactionsReducer,
+  authentication: authenticationReducer
 });
 
 export { initialState, rootReducer };

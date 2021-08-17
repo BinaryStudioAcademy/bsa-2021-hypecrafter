@@ -4,6 +4,7 @@ import { Routes, StorageKeys } from '../../common/enums';
 import { useAction, useTypedSelector } from '../../hooks';
 import CreateProject from '../../scenes/CreateProject';
 import MainPage from '../../scenes/MainPage';
+import ProjectPage from '../../scenes/ProjectPage';
 import TrendsPage from '../../scenes/TrendsPage';
 import FundsPage from '../../scenes/Wallet/FundsPage';
 import Header from '../Header';
@@ -63,9 +64,15 @@ const Routing = () => {
         />
         <PublicRoute
           restricted={false}
-          path="/trends"
+          path={Routes.TRENDS}
           exact
           component={TrendsPage}
+        />
+        <PublicRoute
+          restricted={false}
+          path={Routes.PROJECTS + Routes.ID}
+          exact
+          component={ProjectPage}
         />
         <PublicRoute
           restricted={false}

@@ -90,6 +90,13 @@
     "Set an achievable goal that covers what you need to complete your project.":"Поставте досяжну мету, яка охоплює те, що вам потрібно для завершення вашого проекту.",
     "Campaign Goal":"Визначимо мету",
     "Finally":"Останні штрихи",
-    "Your location can be a key factor for the investor in your favor.":"Ваше місце розташування може стати ключовим фактором для інвестора у вашу користь"
+    "Your location can be a key factor for the investor in your favor.":"Ваше місце розташування може стати ключовим фактором для інвестора у вашу користь",
+    "Switch to": "Перейти на {{lang}}",
+    "Have an account?": "Уже маєте акаунт?",
+    "Log in": "Увійти",
+    "Load more":"Показати більше транзакцій",
+    "Loading...":"Завантаження...",
+    "Pledge project":"Підтримка проекту",
+    "Balance replenishment":"Поповнення рахунку"
   }
 }

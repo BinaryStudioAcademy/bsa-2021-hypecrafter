@@ -1,12 +1,12 @@
 import { FC } from 'react';
 import { Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import classes from './styles.module.scss';
-import Fund from '../Fund';
-import CustomFund from '../CustomFund';
 import coinImg from '../../../assets/HypeCoin.png';
+import { Routes } from '../../../common/enums';
 import { useLocalization } from '../../../providers/localization';
-import Button from '../../../components/Button';
+import CustomFund from '../CustomFund';
+import Fund from '../Fund';
+import classes from './styles.module.scss';
 
 const FundsPage: FC = () => {
   const { t } = useLocalization();
@@ -57,8 +57,8 @@ const FundsPage: FC = () => {
                 </span>
               </div>
             </div>
-            <Button type="submit">{t('Account details')}</Button>
-            <Button type="submit">{t('Transactions list')}</Button>
+            <Link to={Routes.HOME}>{t('Account details')}</Link>
+            <Link to={Routes.TRANSACTIONS}>{t('Transactions list')}</Link>
           </div>
         </div>
       </div>
