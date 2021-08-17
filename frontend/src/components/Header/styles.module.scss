@@ -84,8 +84,7 @@
   margin-left: 11px;
 }
 .header_profile_avatar {
-  margin-right: 10px;
-  cursor: pointer;
+  margin-right: 11px;
 }
 .header_profile_down {
   font-size: 16px;
@@ -107,7 +106,7 @@
   right: 3px;
 }
 .header_hypeCoin {
-  margin: 0px 11px;
+  margin: 0 0 0 15px;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -198,12 +197,6 @@
   align-items: center;
 }
 
-.desktop_profile {
-  z-index: 20;
-  position: relative;
-  cursor: pointer;
-}
-
 .desktop_menu_profile {
   position: absolute;
   top: 2rem;
@@ -256,6 +249,7 @@
 
 .desktop_profile_drop {
   width: 7rem;
+  margin-right: 0;
 }
 
 .desktop_project_menu_list {
@@ -264,6 +258,18 @@
   left: -0.8rem;
   z-index: 50;
   @include color-style;
+}
+
+.desktop_profile {
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  text-decoration: none;
+
+  a {
+    margin-right: -1.6rem;
+  }
 }
 
 @media (max-width: 1230px) {
@@ -295,7 +301,11 @@
 
   .header_right {
     width: 100%;
-    padding-right: 0.6rem;
+  }
+
+  .desktop_header_user_menu {
+    width: 13rem;
+    margin-right: -0.7rem;
   }
 }
 
@@ -443,9 +453,10 @@
   display: flex;
   justify-content: flex-end;
   flex-direction: row;
+  text-decoration: none;
 
-  a {
-    margin-right: -1.6rem;
+  .mobile_profile_avatar {
+    margin-right: 0;
   }
 }
 

@@ -237,11 +237,16 @@ const Header = () => {
               <FontAwesomeIcon icon={faBell} className={classes.header_natification_bell} />
               {true && <FontAwesomeIcon icon={faCircle} className={classes.header_natification_new} />}
             </div>
-            <Avatar
-              width={35}
-              userName="Hype Coin"
-              className={classes.header_profile_avatar}
-            />
+            <NavLink
+              to={Routes.PROFILE}
+              className={classes.desktop_profile}
+            >
+              <Avatar
+                width={35}
+                userName="Hype Coin"
+                className={classes.header_profile_avatar}
+              />
+            </NavLink>
           </Nav>
         </div>
       </div>
@@ -423,15 +428,16 @@ const Header = () => {
               className={classes.mobile_notification_new}
             />
           </div>
-          <div className={classes.mobile_profile}>
-            <Nav.Link>
-              <Avatar
-                width={35}
-                userName="Hype Coin"
-                className={classes.header_profile_avatar}
-              />
-            </Nav.Link>
-          </div>
+          <NavLink
+            to={Routes.PROFILE}
+            className={classes.mobile_profile}
+          >
+            <Avatar
+              width={35}
+              userName="Hype Coin"
+              className={classes.mobile_profile_avatar}
+            />
+          </NavLink>
         </Navbar>
       </div>
     </>
