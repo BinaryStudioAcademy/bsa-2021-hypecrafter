@@ -1,0 +1,69 @@
+@import '../../../styles/vars';
+@import '../../../styles/fonts';
+@import '../../../styles/mixins';
+
+.breadcrumbs {
+  padding-top: 24px;
+  color: rgb(122, 122, 122);
+  font-size: $font-size-small;
+  a {
+    text-decoration: none;
+    color: $color-root-text-grey;
+    &:hover {
+      color: $color-root-text;
+    }
+  }
+}
+.wallet-header {
+  padding-bottom: 350px;
+  max-width: $breakpoint-xl;
+}
+.wallet-header-title {
+  font-size: $font-size-title;
+  padding-top: 8px;
+}
+.transaction-table-wrp {
+  margin: 0 auto;
+  width: $breakpoint-lg !important;
+  table {
+    thead {
+      background-color: $color-root-table-header-background;
+      th {
+        @include text-md;
+        height: 50px;
+        padding-left: 10px;
+      }
+    }
+    tbody {
+      tr {
+        height: 50px;
+        td{
+          overflow:hidden;
+          white-space:nowrap;
+          text-overflow: ellipsis;
+          vertical-align:middle;
+          padding-left: 10px;
+          img {
+            width: $font-size-text !important;
+            min-width: $font-size-text !important;
+            margin-left: 3px;
+            margin-bottom: 2px;
+          }
+          @include text-md;
+      }
+      }
+      tr:nth-child(odd) {
+        background-color: $color-root-table-odd-background;
+      }
+      tr:nth-child(even) {
+        background-color: $color-root-table-even-background;
+      }
+    }
+  }
+}
+.pagination-wrp{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0px;
+}

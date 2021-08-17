@@ -1,7 +1,8 @@
 import queryString from 'query-string';
-import { HttpHeader, HttpMethod, HttpStatusCode, StorageKeys } from '../common/enums';
+import { HttpHeader, HttpMethod, HttpStatusCode } from '../common/enums';
 import { RequestArgs } from '../common/types';
 import { env } from '../env';
+import { getAccessToken } from './localStorage';
 
 const refreshToken = async () => {
   // TODO...
@@ -16,7 +17,7 @@ const logout = async () => {
 };
 
 const getInitHeaders = (
-  hasContent = true,
+  hasContent = false,
   contentType = 'application/json'
 ) => {
   const headers: HeadersInit = new Headers();
@@ -24,7 +25,7 @@ const getInitHeaders = (
     headers.set(HttpHeader.CONTENT_TYPE, contentType);
   }
 
-  const token = localStorage.getItem(StorageKeys.ACCESS_TOKEN);
+  const token = getAccessToken();
   if (token) {
     headers.set(HttpHeader.AUTHORIZATION, `Bearer ${token}`);
   }

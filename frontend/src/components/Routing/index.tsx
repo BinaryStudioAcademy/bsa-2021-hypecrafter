@@ -1,18 +1,20 @@
 import { useEffect } from 'react';
 import { Redirect, Switch, useLocation } from 'react-router-dom';
-import { Routes, StorageKeys } from '../../common/enums';
+import { Routes } from '../../common/enums';
+import { getAccessToken } from '../../helpers/localStorage';
 import { useAction, useTypedSelector } from '../../hooks';
+import LoginPage from '../../scenes/Auth/LoginPage';
+import SignupPage from '../../scenes/Auth/SignupPage';
 import MainPage from '../../scenes/MainPage';
 import ProjectPage from '../../scenes/ProjectPage';
 import TrendsPage from '../../scenes/TrendsPage';
 import FundsPage from '../../scenes/Wallet/FundsPage';
+import Transactions from '../../scenes/Wallet/Transactions';
 import Header from '../Header';
 import LoaderWrapper from '../LoaderWrapper';
-import LoginPage from '../LoginPage';
 import PageNotFound from '../PageNotFound';
 import PrivateRoute from '../PrivateRoute';
 import PublicRoute from '../PublicRoute';
-import SignupPage from '../SignupPage';
 
 const routesWitoutHeader = [Routes.LOGIN, Routes.SIGNUP];
 
@@ -24,7 +26,7 @@ const Routing = () => {
   }));
   const { pathname } = useLocation();
   const { user, isLoading } = authStore;
-  const hasToken = Boolean(localStorage.getItem(StorageKeys.ACCESS_TOKEN));
+  const hasToken = Boolean(getAccessToken());
 
   useEffect(() => {
     if (hasToken) {
@@ -55,6 +57,7 @@ const Routing = () => {
           component={SignupPage}
         />
         <PrivateRoute exact path={Routes.ADDFUNDS} component={FundsPage} />
+        <PrivateRoute exact path={Routes.TRANSACTIONS} component={Transactions} />
         <PublicRoute
           restricted={false}
           path={Routes.TRENDS}
