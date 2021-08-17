@@ -10,5 +10,6 @@ export enum Routes {
   TRENDS = '/trends',
   PROJECTS_CREATE = '/projects/create',
   PROFILE = '/profile',
-  NOTFOUND = '/page-not-found'
+  NOTFOUND = '/page-not-found',
+  ID = '/:id'
 }

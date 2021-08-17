@@ -6,6 +6,7 @@ import { useAction, useTypedSelector } from '../../hooks';
 import LoginPage from '../../scenes/Auth/LoginPage';
 import SignupPage from '../../scenes/Auth/SignupPage';
 import MainPage from '../../scenes/MainPage';
+import ProjectPage from '../../scenes/ProjectPage';
 import TrendsPage from '../../scenes/TrendsPage';
 import FundsPage from '../../scenes/Wallet/FundsPage';
 import Transactions from '../../scenes/Wallet/Transactions';
@@ -59,9 +60,15 @@ const Routing = () => {
         <PrivateRoute exact path={Routes.TRANSACTIONS} component={Transactions} />
         <PublicRoute
           restricted={false}
-          path="/trends"
+          path={Routes.TRENDS}
           exact
           component={TrendsPage}
+        />
+        <PublicRoute
+          restricted={false}
+          path={Routes.PROJECTS + Routes.ID}
+          exact
+          component={ProjectPage}
         />
         <PublicRoute
           restricted={false}
