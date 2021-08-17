@@ -3,7 +3,6 @@ import Button from '../../../../components/Button';
 import Input from '../../../../components/Input';
 import LoaderWrapper from '../../../../components/LoaderWrapper';
 import Select from '../../../../components/Select';
-import SelectExample from '../../../../components/SelectExample';
 import { useAction, useTypedSelector } from '../../../../hooks';
 import { useLocalization } from '../../../../providers/localization';
 import { CurrentPage, ProjectKeys } from '../../enums';
@@ -15,10 +14,11 @@ interface Props {
   currentPage: CurrentPage,
   onChangeValue: (name: ProjectKeys, value: string) => void
   name: string,
-  description:string
+  description: string,
+  category:string
 }
 
-const Basic: FC<Props> = ({ changePage, currentPage, onChangeValue, name, description }) => {
+const Basic: FC<Props> = ({ changePage, currentPage, onChangeValue, name, description, category }) => {
   const { t } = useLocalization();
   const handleBack = () => changePage(currentPage - 1);
   const handleNext = () => changePage(currentPage + 1);
@@ -40,10 +40,11 @@ const Basic: FC<Props> = ({ changePage, currentPage, onChangeValue, name, descri
         value={name}
       />
       <Select
-        options={categories.map(category => ({ text: category.name, value: category.id }))}
+        options={categories.map(cat => ({ text: cat.name, value: cat.id }))}
         label={t('Pick a project category to connect with a specific community.')}
         defaultText="-"
-        onSelectChange={value => onChangeValue(ProjectKeys.NAME, value)}
+        onSelectChange={value => onChangeValue(ProjectKeys.CATEGORY, value)}
+        defaultValue={category}
       />
       <Input
         type="textarea"
@@ -51,7 +52,6 @@ const Basic: FC<Props> = ({ changePage, currentPage, onChangeValue, name, descri
         onChange={e => onChangeValue(ProjectKeys.DESCRIPTION, e.target.value)}
         value={description}
       />
-      <SelectExample />
     </div>
   );
   const footer = (

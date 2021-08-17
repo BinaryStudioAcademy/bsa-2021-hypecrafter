@@ -1,5 +1,5 @@
 import { createRoutine } from 'redux-saga-routines';
-import { Project } from '../../common/types/project';
+import { CreateProject as Project } from './types/project';
 
 export enum ProjectActions {
   SAVE_PROJECT = 'PROJECT/SAVE'

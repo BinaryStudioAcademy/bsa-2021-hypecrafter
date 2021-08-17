@@ -1,4 +1,7 @@
 export enum ProjectKeys {
   NAME = 'name',
-  DESCRIPTION = 'description'
+  DESCRIPTION = 'description',
+  CATEGORY = 'category',
+  CONTENT = 'content',
+  GOAL = 'goal'
 }

@@ -1,8 +1,8 @@
 import { Action } from 'redux';
 import { all, call, put, takeEvery } from 'redux-saga/effects';
-import { Project } from '../../common/types';
 import { createProject } from '../../services/project';
 import { createProjectAction } from './actions';
+import { CreateProject as Project } from './types/project';
 
 interface ProjectAction extends Action {
   payload: string

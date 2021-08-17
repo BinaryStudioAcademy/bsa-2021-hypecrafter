@@ -1,20 +1,20 @@
 import { Routes } from '../../common/enums';
-import { Project } from '../../common/types';
 import { createReducer } from '../../helpers';
 import type {
   CreateProjectFailureActionType,
   CreateProjectSuccessActionType
 } from './actions';
 import { createProjectAction } from './actions';
+import { CreateProject } from './types/project';
 
 export interface ProjectState{
   isLoading: boolean;
-  project: Project;
+  project: CreateProject;
   error: string;
   currentPage: Routes;
 }
 
-const newProject: Project = {
+const newProject: CreateProject = {
   id: '',
   category: '',
   description: '',
@@ -29,7 +29,8 @@ const newProject: Project = {
   region: '',
   totalInteractionTime: 0,
   startDate: '',
-  finishDate: ''
+  finishDate: '',
+  content: ''
 };
 
 export const initialState: ProjectState = {
