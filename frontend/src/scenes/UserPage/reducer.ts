@@ -1,7 +1,7 @@
 import { UserProfile } from '../../common/types';
 import { createReducer } from '../../helpers';
+import type { FetchUserProfileFailureActionType, FetchUserProfileSuccessActionType } from './actions';
 import { fetchUserProfileAction } from './actions';
-import type { FetchUserProfileSuccessActionType, FetchUserProfileFailureActionType } from './actions';
 
 export interface UserProfileState {
   isLoading: boolean;

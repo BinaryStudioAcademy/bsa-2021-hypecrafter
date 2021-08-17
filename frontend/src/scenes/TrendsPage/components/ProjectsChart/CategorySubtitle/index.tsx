@@ -1,6 +1,6 @@
-import { FC } from 'react';
 import classnames from 'classnames';
-import { Category } from '../../../interfaces';
+import { FC } from 'react';
+import { Category } from '../../../../../common/types';
 import Button from '../../../../../components/Button';
 import classes from './style.module.scss';
 
