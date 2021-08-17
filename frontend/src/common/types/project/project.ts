@@ -12,8 +12,8 @@ export interface Project {
   minutesToRead: number;
   region: string;
   totalInteractionTime: number;
-  startDate: string;
-  finishDate: string;
+  startDate: Date;
+  finishDate: Date;
 }
 
 export interface ProjectPage extends Project {
@@ -27,4 +27,5 @@ export interface ProjectPage extends Project {
   facebookUrl?: string;
   dribbleUrl?: string;
   finishDate: Date;
+
 }

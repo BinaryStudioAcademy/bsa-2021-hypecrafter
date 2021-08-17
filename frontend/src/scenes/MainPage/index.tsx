@@ -80,7 +80,7 @@ const MainPage: FC = () => {
           <div className={classes.category}>{t('Popular startups')}</div>
           <div className={classes.cards}>
             <LoaderWrapper isLoading={isStartupsLoading}>
-              {popularStartups.map((project: Project) => (
+              {popularStartups?.map((project: Project) => (
                 <ProjectCard
                   key={project.id}
                   to={`/projects/${project.id}`}
