@@ -29,11 +29,11 @@ const Transactions: FC = () => {
     if (isLoading) {
       return (
         <Spinner animation="border" role="status" variant="secondary">
-          <span className="visually-hidden">Loading...</span>
+          <span className="visually-hidden">{t('Loading...')}</span>
         </Spinner>
       );
     }
-    return (<Button onClick={updatePage} variant="secondary">Load more</Button>);
+    return (<Button onClick={updatePage} variant="secondary">{t('Load more')}</Button>);
   }, [isLast, isLoading]);
   const columns: Column<PageRow>[] = useMemo(
     () => getColumns(t),

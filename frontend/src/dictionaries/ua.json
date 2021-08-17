@@ -76,6 +76,10 @@
     "PAGE NOT FOUND": "Сторінку не знайдено",
     "Switch to": "Перейти на {{lang}}",
     "Have an account?": "Уже маєте акаунт?",
-    "Log in": "Увійти"
+    "Log in": "Увійти",
+    "Load more":"Показати більше транзакцій",
+    "Loading...":"Завантаження...",
+    "Pledge project":"Підтримка проекту",
+    "Balance replenishment":"Поповнення рахунку"
   }
 }

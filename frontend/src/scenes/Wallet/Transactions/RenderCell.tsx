@@ -35,6 +35,12 @@ const RenderCell: FC<RenderCellProps> = (cellProps: RenderCellProps) => {
           <img src={coinImg} alt="Coin" />
         </td>
       );
+    case t('Type'):
+      return (
+        <td {...props}>
+          {t(cell.value)}
+        </td>
+      );
     case t('Date'): {
       if (selectedLanguage === 'ua') {
         return (
