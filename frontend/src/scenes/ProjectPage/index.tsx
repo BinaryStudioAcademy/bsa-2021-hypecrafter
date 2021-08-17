@@ -27,6 +27,7 @@ function ProjectPage() {
 
   useEffect(() => {
     fetchProject(id);
+    fetchProject('2808acdc-e4c8-4d67-85b9-ee91d09942bb');
   }, []);
 
   return (
