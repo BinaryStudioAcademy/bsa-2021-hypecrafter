@@ -26,7 +26,7 @@ function* watchTransactionsPageRequest() {
   yield takeEvery(fetchTransactionsPageAction.TRIGGER, fetchTransactionsPage);
 }
 
-export default function* TransactionsPageSaga() {
+export default function* transactionsPageSaga() {
   yield all([
     watchTransactionsPageRequest()
   ]);
