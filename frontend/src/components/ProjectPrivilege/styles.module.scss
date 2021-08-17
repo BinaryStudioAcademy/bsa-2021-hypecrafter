@@ -1,0 +1,73 @@
+@import './../../styles/fonts', './../../styles/vars';
+
+.wrapper {
+  width: 423px;
+  min-height: 533px;
+  padding: 20px 35px;
+  background: $color-root-block-background;
+  border-radius: 3px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  font-size: 24px;
+}
+
+.title {
+  font-family: $font-roboto700;
+  font-size: 28px;
+  margin-left: 3px;
+}
+
+.value_wrapper {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 18px;
+  margin-top: 8px;
+  span {
+    font-size: 36px;
+    margin-right: 4px;
+    font-family: $font-roboto700;
+  }
+  img {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+.or_more {
+  font-family: $font-roboto300;
+}
+
+.content {
+  width: 353px;
+  height: 180px;
+}
+
+.includes_title {
+  font-family: $font-roboto500;
+}
+
+.includes_ul {
+  margin: 8px 0 0 3px;
+}
+
+.backers {
+  margin-top: 24px;
+  padding: 4px 9px;
+  background: $color-root-grey;
+  color: rgba(250, 251, 255, 0.5);
+  border-radius: 4px;
+}
