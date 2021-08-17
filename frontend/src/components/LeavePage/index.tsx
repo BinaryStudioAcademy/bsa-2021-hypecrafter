@@ -2,7 +2,7 @@ import { FC, useState } from 'react';
 import { Prompt } from 'react-router-dom';
 import ModalWindow from '../ModalWindow';
 
-interface IUseLeavePage {
+interface UseLeavePage {
   isBlocking?: boolean,
   message?: string
 }
@@ -26,7 +26,7 @@ interface IUseLeavePage {
   *  ```
   */
 
-const LeavePage: FC<IUseLeavePage> = ({
+const LeavePage: FC<UseLeavePage> = ({
   isBlocking = true,
   message = 'You must completely create a project.'
 }) => {
