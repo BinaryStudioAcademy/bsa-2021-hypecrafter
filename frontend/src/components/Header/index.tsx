@@ -25,19 +25,21 @@ const Header = () => {
   const [isMobileMenu, setMobileMenu] = useState(false);
   const [isProjectsMenu, setProjectsMenu] = useState(false);
   const [isProfileMenu, setProfileMenu] = useState(false);
-  const [isHideOnScroll, setHideOnScroll] = useState(false);
+  const [isVisibleOnScroll, setVisibleOnScroll] = useState(false);
   const { isMobile } = useWindowResize();
 
   const handleProfileMenuForMobile = () => {
+    if (!isVisibleOnScroll) return;
     if (!isProfileMenu) {
-      setMobileMenu(false);
       setProjectsMenu(false);
+      if (!isMobile) setMobileMenu(false);
     }
 
     setProfileMenu(!isProfileMenu);
   };
 
   const handleMenuForMobile = () => {
+    if (!isVisibleOnScroll) return;
     if (isMobileMenu && isProjectsMenu) {
       setProjectsMenu(false);
     }
@@ -50,6 +52,7 @@ const Header = () => {
   };
 
   const handleProjectsMenuForMobile = () => {
+    if (!isVisibleOnScroll) return;
     if (!isProjectsMenu) {
       setProfileMenu(false);
     }
@@ -61,14 +64,14 @@ const Header = () => {
   };
 
   const scrollDownCallback = () => {
-    setHideOnScroll(false);
+    setVisibleOnScroll(false);
     setProfileMenu(false);
     setMobileMenu(false);
     setProjectsMenu(false);
   };
 
   const scrollUpCallback = () => {
-    setHideOnScroll(true);
+    setVisibleOnScroll(true);
   };
 
   useScroll(
@@ -85,7 +88,7 @@ const Header = () => {
         className={`
           ${classes.header}
           ${isMobile ? classes.hide : classes.desktop_visible}
-          ${isHideOnScroll ? classes.mobile_hide_on_scroll : ''}
+          ${isVisibleOnScroll ? classes.mobile_hide_on_scroll : ''}
         `}
       >
         <div className={classes.header_left}>
@@ -124,7 +127,7 @@ const Header = () => {
                 className={`
                   ${classes.desktop_project_menu_list}
                   ${isProjectsMenu ? classes.visible : classes.hide}
-                  ${isHideOnScroll ? classes.mobile_hide_on_scroll : ''}
+                  ${isVisibleOnScroll ? classes.mobile_hide_on_scroll : ''}
                 `}
               >
                 <NavLink
@@ -154,40 +157,29 @@ const Header = () => {
             >
               Trends
             </NavLink>
-          </Nav>
-        </div>
-        <div className={classes.header_right}>
-          <div className={classes.header_search}>
-            <FontAwesomeIcon icon={faSearch} className={classes.header_search_icon} />
-            <Input type="search" value={text} placeholder="Search..." onChange={handleSearch} />
-          </div>
-          <Nav
-            className={classes.desktop_header_user_menu}
-          >
-            <div className={classes.header_hypeCoin}>
-              <Link to={Routes.ADDFUNDS}><img src={hypeCoin} alt="HypeCoin" /></Link>
-              <Link to={Routes.ADDFUNDS}>1500</Link>
-            </div>
-            <div className={classes.header_natification}>
-              <FontAwesomeIcon icon={faBell} className={classes.header_natification_bell} />
-              {true && <FontAwesomeIcon icon={faCircle} className={classes.header_natification_new} />}
-            </div>
-            <div className={classes.desktop_profile}>
+            <div
+              className={classes.mobile_menu_projects}
+            >
               <Nav.Link
+                className={classes.desktop_profile_drop}
                 onClick={handleProfileMenuForMobile}
                 onTouchStart={handleProfileMenuForMobile}
               >
-                <Avatar
-                  width={35}
-                  userName="Hype Coin"
-                  className={classes.header_profile_avatar}
+                Localization
+                <FontAwesomeIcon
+                  icon={faCaretRight}
+                  className={isProfileMenu ? classes.visible : classes.hide}
+                />
+                <FontAwesomeIcon
+                  icon={faCaretDown}
+                  className={isProfileMenu ? classes.hide : classes.visible}
                 />
               </Nav.Link>
               <div
                 className={`
                 ${classes.desktop_menu_profile}
                 ${isProfileMenu ? classes.visible : classes.hide}
-                ${isHideOnScroll ? classes.mobile_hide_on_scroll : ''}
+                ${isVisibleOnScroll ? classes.mobile_hide_on_scroll : ''}
               `}
               >
                 <NavLink
@@ -229,6 +221,29 @@ const Header = () => {
             </div>
           </Nav>
         </div>
+        <div className={classes.header_right}>
+          <div className={classes.header_search}>
+            <FontAwesomeIcon icon={faSearch} className={classes.header_search_icon} />
+            <Input type="search" value={text} placeholder="Search..." onChange={handleSearch} />
+          </div>
+          <Nav
+            className={classes.desktop_header_user_menu}
+          >
+            <div className={classes.header_hypeCoin}>
+              <Link to={Routes.ADDFUNDS}><img src={hypeCoin} alt="HypeCoin" /></Link>
+              <Link to={Routes.ADDFUNDS}>1500</Link>
+            </div>
+            <div className={classes.header_natification}>
+              <FontAwesomeIcon icon={faBell} className={classes.header_natification_bell} />
+              {true && <FontAwesomeIcon icon={faCircle} className={classes.header_natification_new} />}
+            </div>
+            <Avatar
+              width={35}
+              userName="Hype Coin"
+              className={classes.header_profile_avatar}
+            />
+          </Nav>
+        </div>
       </div>
       <div className={isMobile ? classes.visible : classes.hide}>
         <Navbar
@@ -236,7 +251,7 @@ const Header = () => {
           variant="dark"
           className={`
             ${classes.mobile_navigation}
-            ${isHideOnScroll ? classes.mobile_hide_on_scroll : ''}
+            ${isVisibleOnScroll ? classes.mobile_hide_on_scroll : ''}
           `}
         >
           <div className={classes.mobile_search}>
@@ -259,7 +274,7 @@ const Header = () => {
             <Nav className={`
                 ${classes.mobile_menu_list}
                 ${isMobileMenu ? classes.visible : classes.hide}
-                ${isHideOnScroll ? classes.mobile_hide_on_scroll : ''}
+                ${isVisibleOnScroll ? classes.mobile_hide_on_scroll : ''}
               `}
             >
               <NavLink
@@ -293,7 +308,7 @@ const Header = () => {
                   className={`
                   ${classes.mobile_project_menu_list}
                   ${isProjectsMenu ? classes.visible : classes.hide}
-                  ${isHideOnScroll ? classes.mobile_hide_on_scroll : ''}
+                  ${isVisibleOnScroll ? classes.mobile_hide_on_scroll : ''}
                     `}
                 >
                   <NavLink
@@ -318,10 +333,75 @@ const Header = () => {
               </div>
               <NavLink
                 to={Routes.TRENDS}
-                className={classes.mobile_menu_item}
+                className={`
+                  ${classes.mobile_menu_item}
+                  ${classes.line_both}
+                `}
               >
                 Trends
               </NavLink>
+              <div
+                className={classes.mobile_menu_projects}
+              >
+                <Nav.Link
+                  className={classes.mobile_projects_drop}
+                  onClick={handleProfileMenuForMobile}
+                  onTouchStart={handleProfileMenuForMobile}
+                >
+                  Localization
+                  <FontAwesomeIcon
+                    icon={faCaretRight}
+                    className={isProfileMenu ? classes.visible : classes.hide}
+                  />
+                  <FontAwesomeIcon
+                    icon={faCaretDown}
+                    className={isProfileMenu ? classes.hide : classes.visible}
+                  />
+                </Nav.Link>
+                <div
+                  className={`
+                  ${classes.mobile_profile_menu_list}
+                  ${isProfileMenu ? classes.visible : classes.hide}
+                  ${isVisibleOnScroll ? classes.mobile_hide_on_scroll : ''}
+                    `}
+                >
+                  <NavLink
+                    to={Routes.PROFILE}
+                    className={classes.mobile_menu_item}
+                  >
+                    View account
+                  </NavLink>
+                  <NavLink
+                    to={Routes.PROFILE}
+                    className={classes.mobile_menu_item}
+                  >
+                    Edit profile
+                  </NavLink>
+                  <div
+                    className={`
+                  ${classes.mobile_menu_item}
+                  ${classes.line_both}
+                `}
+                  >
+                    <LanguageSwitcher />
+                  </div>
+                  <NavLink
+                    to={Routes.PROJECTS_CREATE}
+                    className={`
+                  ${classes.mobile_menu_item}
+                  ${classes.line_both}
+                `}
+                  >
+                    Create project
+                  </NavLink>
+                  <NavLink
+                    to={Routes.LOGOUT}
+                    className={classes.mobile_menu_item}
+                  >
+                    Log out
+                  </NavLink>
+                </div>
+              </div>
             </Nav>
           </div>
           <NavLink to={Routes.HOME} className={classes.mobile_logo}>
@@ -343,64 +423,14 @@ const Header = () => {
               className={classes.mobile_notification_new}
             />
           </div>
-          <div
-            className={`
-              ${classes.mobile_profile}
-              ${isHideOnScroll ? classes.mobile_hide_on_scroll : ''}
-            `}
-          >
-            <Nav.Link
-              onClick={handleProfileMenuForMobile}
-              onTouchStart={handleProfileMenuForMobile}
-            >
+          <div className={classes.mobile_profile}>
+            <Nav.Link>
               <Avatar
                 width={35}
                 userName="Hype Coin"
                 className={classes.header_profile_avatar}
               />
             </Nav.Link>
-            <div
-              className={`
-                ${classes.mobile_menu_profile}
-                ${isProfileMenu ? classes.visible : classes.hide}
-              `}
-            >
-              <NavLink
-                to={Routes.PROFILE}
-                className={classes.mobile_menu_item}
-              >
-                View account
-              </NavLink>
-              <NavLink
-                to={Routes.PROFILE}
-                className={classes.mobile_menu_item}
-              >
-                Edit profile
-              </NavLink>
-              <div
-                className={`
-                  ${classes.mobile_menu_item}
-                  ${classes.line_both}
-                `}
-              >
-                <LanguageSwitcher />
-              </div>
-              <NavLink
-                to={Routes.PROJECTS_CREATE}
-                className={`
-                  ${classes.mobile_menu_item}
-                  ${classes.line_both}
-                `}
-              >
-                Create project
-              </NavLink>
-              <NavLink
-                to={Routes.LOGOUT}
-                className={classes.mobile_menu_item}
-              >
-                Log out
-              </NavLink>
-            </div>
           </div>
         </Navbar>
       </div>
