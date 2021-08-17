@@ -2,6 +2,7 @@ import { createConnection } from 'typeorm';
 import { log } from '../../helpers/logger';
 import AlertsSettingsSeeder from './alertsSettingsSeeder';
 import CategorySeeder from './categorySeeder';
+import CommentSeeder from './commentSeeder';
 import DonateSeeder from './donateSeeder';
 import DonatorsPrivilegeSeeder from './donatorsPrivilegeSeeder';
 import FaqSeeder from './faqSeeder';
@@ -25,5 +26,6 @@ createConnection()
     await DonateSeeder.execute();
     await FaqSeeder.execute();
     await ProjectDonatorsPrivilegesSeeder.execute();
+    await CommentSeeder.execute();
   })
   .catch(log);

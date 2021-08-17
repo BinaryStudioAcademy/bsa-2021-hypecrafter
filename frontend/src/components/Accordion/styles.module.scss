@@ -1,0 +1,71 @@
+@import './../../styles/vars';
+
+.main {
+  border: 1px solid $color-root-turquoise;
+  margin-bottom: 5px;
+}
+
+.item {
+  border: 0px;
+  :global(.accordion-item:last-of-type) {
+    border-radius: 0%;
+  }
+  &:last-of-type {
+    border-radius: 0%;
+    :global(.accordion-button) {
+      background-color: $color-root-background;
+      border-radius: 0%;
+    }
+    :global(.accordion-button.collapsed) {
+      background-color: $color-root-background;
+      border-radius: 0%;
+    }
+    :global(.accordion-collapse) {
+      background-color: $color-root-background;
+      border-radius: 0%;
+    }
+  }
+  &:first-of-type {
+    border-radius: 0%;
+    :global(.accordion-button) {
+      background-color: $color-root-background;
+      border-radius: 0%;
+    }
+    :global(.accordion-button.collapsed) {
+      background-color: $color-root-background;
+      border-radius: 0%;
+    }
+  }
+}
+
+.body,
+.header button {
+  color: #fff;
+  background: $color-root-background;
+  border-radius: 0%;
+}
+
+.body {
+  border-top: 1px solid $color-root-turquoise;
+}
+
+.header {
+  border: none;
+  :global(.accordion-button:not(.collapsed)) {
+    background-color: $color-root-background;
+    color: #fff;
+    border-radius: 0%;
+  }
+  :global(.accordion-button) {
+    background-color: $color-root-background;
+    border-radius: 0%;
+  }
+  :global(.accordion-button:focus) {
+    border: none;
+    box-shadow: none;
+  }
+  :global(.accordion-button::after) {
+    filter: invert(57%) sepia(94%) saturate(2339%) hue-rotate(173deg)
+      brightness(98%) contrast(93%);
+  }
+}

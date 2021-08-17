@@ -8,6 +8,6 @@ export const createProject = async (body:any) => {
 
 export const getProject = async (id: string) => {
   const project: Project = await api.get({ url: `projects/${id}` });
-  console.log(project);
+
   return project;
 };

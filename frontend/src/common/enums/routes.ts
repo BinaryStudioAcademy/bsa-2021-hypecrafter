@@ -10,5 +10,6 @@ export enum Routes {
   PROJECTS_CREATE = '/projects/create',
   PROFILE = '/profile',
   NOTFOUND = '/page-not-found',
+  EXAMPLES = '/examples',
   ID = '/:id'
 }
