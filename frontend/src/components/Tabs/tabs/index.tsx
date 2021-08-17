@@ -1,14 +1,31 @@
-import { FC } from 'react';
-import { Nav } from 'react-bootstrap';
-import TabsItem from '../tab-item';
-import classes from './styles.module.scss';
+import { FC, ReactElement, useState } from 'react';
+import TabTitle from '../TabTitle';
+import classes from '../styles.module.scss';
 
-const Tabs: FC = ({ children, ...rest }) => (
-  <Nav className={classes.tabs} {...rest}>
-    {children}
-  </Nav>
-);
+type TabsProps = {
+  children: ReactElement[];
+};
 
-export default Object.assign(Tabs, {
-  Item: TabsItem
-});
+const Tabs: FC<TabsProps> = ({ children }) => {
+  const [selectedTab, setSelectedTab] = useState(0);
+
+  return (
+    <div>
+      <ul className={classes['tabs-container']}>
+        {children.map((item, index) => (
+          <TabTitle
+            // eslint-disable-next-line react/no-array-index-key
+            key={index}
+            index={index}
+            title={item.props.title}
+            setSelectedTab={setSelectedTab}
+            selectedTab={selectedTab}
+          />
+        ))}
+      </ul>
+      {children[selectedTab]}
+    </div>
+  );
+};
+
+export default Tabs;
