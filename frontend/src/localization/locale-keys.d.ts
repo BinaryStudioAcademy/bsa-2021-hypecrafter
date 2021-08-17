@@ -79,4 +79,13 @@ declare type LocaleKeys =
   | 'Describe what you’ll be creating.'
   | 'Go back'
   | 'Continue'
-  | 'First, let’s get you set up.';
+  | 'First, let’s get you set up.'
+  | 'Tell potential contributors more about your campaign.'
+  | 'Provide details that will motivate people to contribute.'
+  | 'A good pitch is compelling, informative, and easy to digest.'
+  | 'Set up a story'
+  | 'Before we start...'
+  | 'I agree with privacy consent'
+  | 'Agreement'
+  | 'Set an achievable goal that covers what you need to complete your project.'
+  | 'Campaign Goal';
