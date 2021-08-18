@@ -5,6 +5,7 @@ import { ChangeEvent, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import hypeCoin from '../../assets/HypeCoin.png';
 import { Routes } from '../../common/enums';
+import { removeAccessToken, removeRefreshToken } from '../../helpers/localStorage';
 import Avatar from '../Avatar';
 import Input from '../Input';
 import Link from '../Link';
@@ -18,6 +19,11 @@ const Header = () => {
 
   const handleSearch = (e: ChangeEvent<HTMLInputElement>) => {
     setText(e.target.value);
+  };
+
+  const handleLogOut = () => {
+    removeAccessToken();
+    removeRefreshToken();
   };
 
   return (
@@ -79,12 +85,10 @@ const Header = () => {
               <LanguageSwitcher />
               <div className={classes.menu_line} />
               <Link to={Routes.PROJECTS_CREATE}>Create project</Link>
-              <div className={classes.menu_line} />
-              <Link to={Routes.LOGOUT}>Log out</Link>
+              <Link to={Routes.LOGOUT} onClick={handleLogOut}>Log out</Link>
             </div>
           )}
         </Popover>
-
       </div>
     </div>
   );

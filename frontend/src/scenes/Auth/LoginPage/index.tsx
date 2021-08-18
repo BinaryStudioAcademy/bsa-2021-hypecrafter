@@ -25,9 +25,9 @@ const LoginPage: FC = () => {
     isLoading,
     error
   }));
-  const { refreshToken } = store;
+  const { refreshToken, error } = store;
 
-  const { register, handleSubmit, formState: { errors } } = useForm<FormData>();
+  const { register, handleSubmit, setError, formState: { errors } } = useForm<FormData>();
   const { t, changeLanguage, selectedLanguage } = useLocalization();
 
   const onSubmit: SubmitHandler<FormData> = (data: LoginData) => {
@@ -44,6 +44,15 @@ const LoginPage: FC = () => {
       history.push('/');
     }
   }, [refreshToken]);
+
+  useEffect(() => {
+    if (error) {
+      setError('email', {
+        type: 'manual',
+        message: 'Email or password is invalid'
+      });
+    }
+  }, [error]);
 
   return (
     <div className={classes.root}>
