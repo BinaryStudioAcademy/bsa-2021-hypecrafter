@@ -1,12 +1,12 @@
+import { faThumbsDown, faThumbsUp } from '@fortawesome/free-regular-svg-icons';
+import { faThumbsDown as faThumbsDownFilled, faThumbsUp as faThumbsUpFilled } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FunctionComponent, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faThumbsUp, faThumbsDown } from '@fortawesome/free-regular-svg-icons';
-import { faThumbsUp as faThumbsUpFilled, faThumbsDown as faThumbsDownFilled } from '@fortawesome/free-solid-svg-icons';
-import ProgressBarComponent from '../ProgressBar';
 import { calcDaysToGo, calcDonationProgress } from '../../helpers/project';
-import classes from './styles.module.scss';
 import Button from '../Button';
+import ProgressBarComponent from '../ProgressBar';
+import classes from './styles.module.scss';
 
 interface ProjectInfoProps {
   donated: number;
@@ -57,7 +57,7 @@ const ProjectInfo: FunctionComponent<ProjectInfoProps> = ({
         </Col>
         <Col xs={4}>
           <div className={classes['info-block-entity']}>
-            <p className={classes['info-days-amount']}>{daysToGo}</p>
+            <p className={classes['info-days-amount']}>{daysToGo < 0 ? 'Ended' : daysToGo}</p>
             <p className={classes['info-days']}>Days to go</p>
           </div>
         </Col>

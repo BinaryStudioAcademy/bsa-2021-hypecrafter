@@ -1,5 +1,5 @@
 import { Project } from '../../common/types';
-import { mapProjects } from '../../data/mappers/mapProjects';
+import { mapProjects } from '../../data/mappers';
 import { ProjectRepository } from '../../data/repositories';
 
 export default class ProjectService {
@@ -12,6 +12,7 @@ export default class ProjectService {
   public async getPopularAndRecommended() {
     const popular: Project[] = await this.#projectRepository.getPopular();
     const recommended: Project[] = await this.#projectRepository.getRecommended();
+
     return {
       popular: mapProjects(popular),
       recommended: mapProjects(recommended)
@@ -19,8 +20,9 @@ export default class ProjectService {
   }
 
   public async getById(id: string) {
-    const project = await this.#projectRepository.getById(id);
-
-    return project[0]; // rewrite when error handling middleware works
+    const project = (await this.#projectRepository.getById(id))[0];
+    project.bakersAmount = Math.max(0, project.bakersAmount);
+    project.donated = Math.max(0, project.donated);
+    return project; // rewrite when error handling middleware works
   }
 }
