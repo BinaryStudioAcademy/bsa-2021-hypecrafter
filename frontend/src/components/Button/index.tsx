@@ -16,7 +16,6 @@ interface Props extends ButtonProps {
   iconPosition?: 'left' | 'right';
   icon?: string | ReactNode;
   to?: string;
-  id?: string;
 }
 
 const defaultProps: Props = {
@@ -31,8 +30,7 @@ const defaultProps: Props = {
   shape: 'rectangle',
   iconPosition: 'left',
   icon: null,
-  to: undefined,
-  id: ''
+  to: undefined
 };
 
 const Button: FunctionComponent<Props> = (props: Props) => {
@@ -48,8 +46,7 @@ const Button: FunctionComponent<Props> = (props: Props) => {
     shape,
     iconPosition,
     icon,
-    to,
-    id
+    to
   } = props;
 
   const buttonClass = classnames(className, {
@@ -66,7 +63,6 @@ const Button: FunctionComponent<Props> = (props: Props) => {
 
   return (
     <ButtonRB
-      id={id}
       style={iconPosition === 'right' ? buttonImgRightStyle : {}}
       className={buttonClass}
       onClick={onClick}
