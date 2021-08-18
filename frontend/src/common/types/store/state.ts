@@ -4,7 +4,8 @@ import { ProjectState } from '../../../scenes/CreateProject/reducer';
 import { MainPageState } from '../../../scenes/MainPage/reducer';
 import { ProjectPageState } from '../../../scenes/ProjectPage/reducer';
 import { UserProfileState } from '../../../scenes/UserPage/reducer';
-import { PageState } from '../../../scenes/Wallet/Transactions/reducer';
+import { PaymentState } from '../../../scenes/Wallet/FundsPage/reducer';
+import { TransactionsState } from '../../../scenes/Wallet/Transactions/reducer';
 
 export interface StoreState {
   mainPage: MainPageState;
@@ -12,6 +13,7 @@ export interface StoreState {
   auth: AuthState;
   project: ProjectState;
   projectPage: ProjectPageState;
-  transactions: PageState
+  transactions: TransactionsState
   authentication: AuthenticationState;
+  payment: PaymentState
 }

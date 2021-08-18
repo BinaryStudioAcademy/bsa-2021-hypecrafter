@@ -1,14 +1,16 @@
 import { ChangeEvent, FC, FormEvent, useState } from 'react';
 import { Form } from 'react-bootstrap';
-import Button from '../../../components/Button';
-import { useLocalization } from '../../../providers/localization';
+import Button from '../../../../../components/Button';
+import { useAction } from '../../../../../hooks';
+import { useLocalization } from '../../../../../providers/localization';
 import classes from './styles.module.scss';
 
 const CustomFund: FC = () => {
   const { t } = useLocalization();
   const [price, setPrice] = useState('5');
+  const { setFundAction } = useAction();
   const onSubmit = (event: FormEvent) => {
-    console.log(price);
+    setFundAction(parseInt(price, 10), true);
     event.preventDefault();
   };
   const onInput = (event: ChangeEvent<HTMLInputElement>) => {

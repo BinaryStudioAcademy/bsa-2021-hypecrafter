@@ -3,6 +3,7 @@ export { createProjectAction } from '../scenes/CreateProject/actions';
 export { fetchPopularAndRecommendedProjectsAction, fetchTopics } from '../scenes/MainPage/actions';
 export { fetchProject } from '../scenes/ProjectPage/actions';
 export { fetchUserProfileAction } from '../scenes/UserPage/actions';
+export { setFundAction } from '../scenes/Wallet/FundsPage/actions';
 export { fetchTransactionsPageAction } from '../scenes/Wallet/Transactions/actions';
 export { authFetchUserAction } from './auth';
 

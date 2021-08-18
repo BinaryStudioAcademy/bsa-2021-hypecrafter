@@ -3,21 +3,21 @@ import { createReducer } from '../../../helpers';
 import type { FetchTransactionsActionSucces } from './actions';
 import { fetchTransactionsPageAction } from './actions';
 
-export interface PageState {
+export interface TransactionsState {
   isLoading: boolean;
   isLast: boolean;
   page: PageRow[];
   lastPage: number;
 }
 
-export const initialState: PageState = {
+export const initialState: TransactionsState = {
   isLoading: true,
   isLast: false,
   page: [],
   lastPage: 0
 };
 
-export const transactionsReducer = createReducer<PageState>(initialState, {
+export const transactionsReducer = createReducer<TransactionsState>(initialState, {
   [fetchTransactionsPageAction.TRIGGER](state) {
     return {
       ...state,

@@ -5,6 +5,7 @@ import projectReduser, { initialState as projectInitialState } from '../scenes/C
 import mainPageReducer, { mainPageState } from '../scenes/MainPage/reducer';
 import projectPageReducer, { projectPageState } from '../scenes/ProjectPage/reducer';
 import userProfileReducer, { initialState as userProfileInitialState } from '../scenes/UserPage/reducer';
+import paymentReducer, { initialState as paymentInitialState } from '../scenes/Wallet/FundsPage/reducer';
 import transactionsReducer, { initialState as transactionsInitialState } from '../scenes/Wallet/Transactions/reducer';
 import authReducer, { authState } from './auth';
 
@@ -15,7 +16,8 @@ const initialState: StoreState = {
   auth: authState,
   project: projectInitialState,
   projectPage: projectPageState,
-  authentication: authenticationInitialState
+  authentication: authenticationInitialState,
+  payment: paymentInitialState
 };
 
 const rootReducer = combineReducers({
@@ -25,7 +27,8 @@ const rootReducer = combineReducers({
   project: projectReduser,
   projectPage: projectPageReducer,
   transactions: transactionsReducer,
-  authentication: authenticationReducer
+  authentication: authenticationReducer,
+  payment: paymentReducer
 });
 
 export { initialState, rootReducer };
