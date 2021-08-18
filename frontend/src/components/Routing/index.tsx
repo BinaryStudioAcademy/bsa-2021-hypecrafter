@@ -5,6 +5,7 @@ import { getAccessToken } from '../../helpers/localStorage';
 import { useAction, useTypedSelector } from '../../hooks';
 import LoginPage from '../../scenes/Auth/LoginPage';
 import SignupPage from '../../scenes/Auth/SignupPage';
+import CreateProject from '../../scenes/CreateProject';
 import MainPage from '../../scenes/MainPage';
 import ProjectPage from '../../scenes/ProjectPage';
 import Projects from '../../scenes/Projects';
@@ -66,6 +67,12 @@ const Routing = () => {
         />
         <PrivateRoute exact path={Routes.ADDFUNDS} component={FundsPage} />
         <PrivateRoute exact path={Routes.TRANSACTIONS} component={Transactions} />
+        <PublicRoute
+          restricted={false}
+          exact
+          path={Routes.PROJECTS_CREATE}
+          component={CreateProject}
+        />
         <PublicRoute
           restricted={false}
           path={Routes.TRENDS}
