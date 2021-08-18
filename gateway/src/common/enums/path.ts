@@ -3,8 +3,8 @@ export enum Path {
   User = '/users',
   Auth = '/auth',
   Notification = '/notifications',
-  Project = '/projects',
   Payment = '/payment',
+  Project = '/projects',
   Tag = '/tags',
   Category = '/categories'
 }

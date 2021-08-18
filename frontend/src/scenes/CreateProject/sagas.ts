@@ -1,15 +1,11 @@
-import { Action } from 'redux';
-import { all, call, put, takeEvery } from 'redux-saga/effects';
+import { call, put, takeEvery, all } from 'redux-saga/effects';
 import { createProject } from '../../services/project';
 import { createProjectAction } from './actions';
-import { CreateProject as Project } from './types/project';
+import { Project } from '../../common/types';
 
-interface ProjectAction extends Action {
-  payload: string
-}
-function* createProjectRequest(action:ProjectAction) {
+function* createProjectRequest() {
   try {
-    const response: Project = yield call(createProject, action.payload);
+    const response: Project = yield call(createProject);
     yield put(createProjectAction.success(response));
   } catch (error) {
     yield put(createProjectAction.failure(error));
