@@ -88,8 +88,8 @@ export class ProjectRepository extends Repository<Project> {
     return this.getProjectsByOrder('project."updatedAt"');
   }
 
-  public getById(id: string): Promise<MyProject[]> {
-    return this.createQueryBuilder('project')
+  public async getById(id: string): Promise<MyProject> {
+    const project = await this.createQueryBuilder('project')
       .select(`
         project."id",
         project."imageUrl",
@@ -186,5 +186,6 @@ export class ProjectRepository extends Repository<Project> {
         .groupBy('"projectId"'), 'tg', 'tg."projectId" = project.id')
       .where(`project."id" = '${id}'`)
       .execute();
+    return project[0];
   }
 }

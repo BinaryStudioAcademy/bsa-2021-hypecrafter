@@ -79,12 +79,16 @@ declare type LocaleKeys =
  | 'Log in'
  | 'Load more'
  | 'Loading...'
- | 'Balance replenishment'
  | 'Pledge project'
+ | 'Balance replenishment'
  | 'Projects'
  | 'Trends'
  | 'Search...'
  | 'View account'
  | 'Edit profile'
  | 'Create project'
- | 'Log out';
+ | 'Log out'
+ | 'Backers'
+ | 'Donated'
+ | 'Ended'
+ | 'Days to go';

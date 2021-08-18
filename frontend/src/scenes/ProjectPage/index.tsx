@@ -8,6 +8,7 @@ import Comments from './components/Comments';
 import FAQ from './components/FAQ';
 import Header from './components/Header';
 import Story from './components/Story';
+import classes from './styles.module.scss';
 
 const ProjectPage: FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -27,7 +28,7 @@ const ProjectPage: FC = () => {
 
   return (
     <LoaderWrapper isLoading={isLoading} variant='page'>
-      <Container>
+      <Container className={classes.container}>
         <Row>
           <Header project={project} />
         </Row>
