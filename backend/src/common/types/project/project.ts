@@ -6,4 +6,5 @@ export interface Project {
   tags: string[];
   goal: number;
   donated: number;
+  bakersAmount: number;
 }

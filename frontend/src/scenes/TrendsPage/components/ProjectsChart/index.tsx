@@ -1,33 +1,39 @@
-import { ChartOptions } from 'chart.js';
-import { FC, useState } from 'react';
-import Chart, { ChartType, DataItem } from '../../../../components/Chart';
-import { Category } from '../../interfaces';
+import { FC, useEffect, useState } from 'react';
+import { Category } from '../../../../common/types';
+import Chart from '../../../../components/Chart';
+import { useAction, useTypedSelector } from '../../../../hooks';
+import { getProjectsOptions } from '../../options';
 import CategorySubtitle from './CategorySubtitle';
 import classes from './style.module.scss';
 
-interface ChartProps {
-  type: ChartType;
-  labels: string[];
-  dataSets: DataItem[];
-  options?: ChartOptions;
-}
-
 interface PopularProjectsChartProps {
-  defaultParams: ChartProps;
   categories: Category[];
   t: CallableFunction;
 }
 
 const PopularProjectsChart: FC<PopularProjectsChartProps> = ({
-  defaultParams,
   categories,
   t
 }) => {
-  const [selectedItem, setSelectedItem] = useState(categories[0]);
+  const { fetchPopularProjectsByCategory, setSelectedCategoryAction } = useAction();
+
+  const { projects, selectedCategory } = useTypedSelector(({ trendsPage }) => ({
+    projects: trendsPage.projects,
+    selectedCategory: trendsPage.selectedCategory
+  }));
+
+  const [defaultParams, setDefaultParams] = useState(
+    getProjectsOptions(projects)
+  );
 
   const onCategoryClick = (item: Category) => {
-    setSelectedItem(item);
+    setSelectedCategoryAction(item);
+    fetchPopularProjectsByCategory(item.name);
   };
+
+  useEffect(() => {
+    setDefaultParams(getProjectsOptions(projects));
+  }, [projects]);
 
   return (
     <section className={classes.item}>
@@ -36,14 +42,18 @@ const PopularProjectsChart: FC<PopularProjectsChartProps> = ({
         {categories.map((el: Category) => (
           <CategorySubtitle
             key={el.id}
-            isSelected={el.id === selectedItem.id}
+            isSelected={el.id === selectedCategory?.id}
             item={el}
             onCategoryClick={onCategoryClick}
           />
         ))}
       </div>
       <div className={classes['text-wrapper']}>
-        <p className={classes.text}>{selectedItem.name}</p>
+        <p className={classes.text}>
+          {projects.length > 0
+            ? selectedCategory?.name
+            : t('No projects')}
+        </p>
         <div className={classes['bottom-chart-wrapper']}>
           <Chart
             type={defaultParams.type}

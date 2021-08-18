@@ -1,6 +1,10 @@
 @import '../../styles/vars';
 @import '../../styles/fonts';
 
+.container {
+  margin-top: 130px;
+}
+
 .project-header {
   height: 420px;
 
@@ -42,4 +46,8 @@
 hr.horizontal-line {
   background: linear-gradient(90deg, #894eed 0%, #28abf2 100%);
   height: 5px;
+}
+
+.faqs {
+  width: 80%;
 }
