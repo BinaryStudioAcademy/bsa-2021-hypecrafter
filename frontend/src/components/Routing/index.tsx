@@ -8,6 +8,7 @@ import SignupPage from '../../scenes/Auth/SignupPage';
 import CreateProject from '../../scenes/CreateProject';
 import MainPage from '../../scenes/MainPage';
 import ProjectPage from '../../scenes/ProjectPage';
+import Projects from '../../scenes/Projects';
 import TrendsPage from '../../scenes/TrendsPage';
 import FundsPage from '../../scenes/Wallet/FundsPage';
 import Transactions from '../../scenes/Wallet/Transactions';
@@ -57,6 +58,12 @@ const Routing = () => {
           path={Routes.SIGNUP}
           exact
           component={SignupPage}
+        />
+        <PublicRoute
+          restricted={false}
+          path={Routes.PROJECTS}
+          exact
+          component={Projects}
         />
         <PrivateRoute exact path={Routes.ADDFUNDS} component={FundsPage} />
         <PrivateRoute exact path={Routes.TRANSACTIONS} component={Transactions} />

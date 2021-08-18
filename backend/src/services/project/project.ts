@@ -1,8 +1,8 @@
-
+import { ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
 import { Project } from '../../common/types';
 import { Chat, Project as CreateProject, Team } from '../../data/entities';
-import { ChatRepository, ProjectRepository, TeamRepository } from '../../data/repositories';
 import { mapProjects } from '../../data/mappers';
+import { ChatRepository, ProjectRepository, TeamRepository } from '../../data/repositories';
 
 export default class ProjectService {
   readonly #projectRepository: ProjectRepository;
@@ -38,6 +38,11 @@ export default class ProjectService {
     this.#chatRepository.save(body.team.chats.map(chat => ({ ...new Chat(), ...chat, team })));
     project.team = team;
     return project;
+  }
+
+  public async getBySortAndFilter({ sort, filter }: { sort: ProjectsSort, filter: ProjectsFilter }) {
+    const projects = await this.#projectRepository.getBySortAndFilter({ sort, filter });
+    return projects;
   }
 
   public async getById(id: string) {

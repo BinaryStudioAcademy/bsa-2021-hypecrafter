@@ -12,7 +12,6 @@
     "or": "or",
     "Sign In with Google": "Sign In with Google",
     "Password is too short (minimum is 6 characters)": "Password is too short (minimum is 6 characters)",
-
     "Do you have a good ...": "Do you have a good and well thought-out idea and are you ready to conquer the peaks on your own to make your dream come true? But sometimes, alone, the difficult path from concept to finished product is not easy at all. HypeCrafter will lend a helping hand, and more than one!",
     "Create Project": "Create Project",
     "Help Project": "Help Project",
@@ -20,7 +19,6 @@
     "Recommended for you": "Recommended for you",
     "Interesting topics": "Interesting topics",
     "faithful assistant": "faithful assistant",
-
     "Add": "Add",
     "Add funds": "Add funds",
     "Custom fund": "Custom fund",
@@ -42,7 +40,6 @@
     "Change": "Change",
     "Balance": "Balance",
     "Transactions list": "Transactions list",
-
     "Create account": "Create account",
     "Personal details": "Personal details",
     "First name": "First name",
@@ -69,13 +66,11 @@
     "First name is too short": "First name is too short",
     "Last name is too short": "Last name is too short",
     "Phone number is invalid": "Phone number is invalid",
-
     "France": "France",
     "Poland": "Poland",
     "Switzerland": "Switzerland",
     "Ukraine": "Ukraine",
     "United Kingdom": "United Kingdom",
-
     "Popular tags": "Popular tags",
     "Popular projects": "Popular projects",
     "No projects": "No projects",
@@ -103,8 +98,15 @@
     "Agreement":"Do you have a good and well thought-out idea and are you ready to conquer the peaks on your own to make your dream come true? But sometimes, alone, the difficult path from concept to finished product is not easy at all. HypeCrafter will lend a helping hand, and more than one! ",
     "Set an achievable goal that covers what you need to complete your project.":"Set an achievable goal that covers what you need to complete your project.",
     "Campaign Goal":"Campaign Goal",
+    "Sort by": "Sort by",
+    "Filter by": "Filter by",
+    "All": "All",
+    "Favorite": "Favorite",
+    "Invested": "Invested",
+    "Own": "Own",
+    "Name": "Name",
+    "projects found": "projects found",
     "Switch to": "Switch to {{lang}}",
-
     "Have an account?": "Have an account?",
     "Log in": "Log in",
 
@@ -115,11 +117,11 @@
     "I agree":"I agree",
     "We will notify this person":"We will notify this person",
     "Pick a members to add they to team.":"Pick a members to add they to team.",
-    "Load more": "Load more",
-    "Loading...": "Loading...",
-    "Pledge project": "Pledge project",
-    "Balance replenishment": "Balance replenishment",
-
+    "There are no projects that match these search parameters": "There are no projects that match these search parameters",
+    "Load more":"Load more",
+    "Loading...":"Loading...",
+    "Pledge project":"Pledge project",
+    "Balance replenishment":"Balance replenishment",
     "Projects": "Projects",
     "Trends": "Trends",
     "Search...": "Search...",
@@ -127,7 +129,6 @@
     "Edit profile": "Edit profile",
     "Create project": "Create project",
     "Log out": "Log out",
-
     "Backers": "Backers",
     "Donated": "Donated",
     "Ended": "Ended",
