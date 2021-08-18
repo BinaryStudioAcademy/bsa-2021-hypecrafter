@@ -96,7 +96,7 @@ declare type LocaleKeys =
  | 'Total'
  | 'Balance'
  | 'Type'
- | 'Items';
+ | 'Items'
  | 'Backers'
  | 'Donated'
  | 'Ended'
