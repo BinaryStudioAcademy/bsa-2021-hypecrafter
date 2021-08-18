@@ -100,4 +100,5 @@ declare type LocaleKeys =
  | 'Backers'
  | 'Donated'
  | 'Ended'
- | 'Days to go';
+ | 'Days to go'
+ | 'posted';

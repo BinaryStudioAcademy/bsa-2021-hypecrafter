@@ -87,10 +87,10 @@
     "Have an account?": "Have an account?",
     "Log in": "Log in",
     "There are no projects that match these search parameters": "There are no projects that match these search parameters",
-    "Load more":"Load more",
-    "Loading...":"Loading...",
-    "Pledge project":"Pledge project",
-    "Balance replenishment":"Balance replenishment",
+    "Load more": "Load more",
+    "Loading...": "Loading...",
+    "Pledge project": "Pledge project",
+    "Balance replenishment": "Balance replenishment",
     "Projects": "Projects",
     "Trends": "Trends",
     "Search...": "Search...",
@@ -101,6 +101,7 @@
     "Backers": "Backers",
     "Donated": "Donated",
     "Ended": "Ended",
-    "Days to go": "Days to go"
+    "Days to go": "Days to go",
+    "posted": "posted"
   }
 }
