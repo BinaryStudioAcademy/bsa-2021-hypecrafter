@@ -66,6 +66,7 @@ declare type LocaleKeys =
  | 'United Kingdom'
  | 'Popular tags'
  | 'Popular projects'
+ | 'No projects'
  | 'PAGE NOT FOUND'
  | 'Switch to'
  | 'Have an account?'

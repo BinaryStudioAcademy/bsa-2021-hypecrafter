@@ -12,12 +12,14 @@ const DatePickerInput: React.FC<DatePickerProps> = ({ daySetter }) => {
   };
 
   return (
-    <DayPickerInput
-      classNames={styles}
-      placeholder="DD/MM/YYYY"
-      format="DD/MM/YYYY"
-      onDayChange={handleDayChange}
-    />
+    <div className="datepicker">
+      <DayPickerInput
+        classNames={styles}
+        placeholder="DD/MM/YYYY"
+        format="DD/MM/YYYY"
+        onDayChange={handleDayChange}
+      />
+    </div>
   );
 };
 

@@ -7,6 +7,16 @@ interface GetProjectsProps {
   filter: ProjectsFilter;
 }
 
+export const getPopularProjectsByCategory = async (category: string) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const projects = await api.get({
+    url: 'projects/popular',
+    params: {
+      category
+    }
+  });
+};
+
 export const getProjects = async ({ sort, filter }: GetProjectsProps): Promise<Project[]> => {
   const projects: Project[] = await api.get({ url: 'projects', params: { sort, filter } });
   return projects;

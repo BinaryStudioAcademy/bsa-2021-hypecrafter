@@ -10,6 +10,11 @@ export default class ProjectService {
     this.#projectRepository = projectRepository;
   }
 
+  public async getPopularProjectsByCategory(category: string) {
+    const popular = await this.#projectRepository.getPopularProjectsByCategory(category);
+    return popular;
+  }
+
   public async getPopularAndRecommended() {
     const popular: Project[] = await this.#projectRepository.getPopular();
     const recommended: Project[] = await this.#projectRepository.getRecommended();

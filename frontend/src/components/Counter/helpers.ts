@@ -24,11 +24,11 @@ function animateCounterDown(
   setIsChanging(true);
 
   if (current > value + 100) {
-    changeInTimeout(setCurrent)(current, 7, 4, 'down');
+    changeInTimeout(setCurrent)(current, 210, 4, 'down');
   } else if (current < value + 100 && current > value + 30) {
-    changeInTimeout(setCurrent)(current, 9, 15, 'down');
+    changeInTimeout(setCurrent)(current, 15, 15, 'down');
   } else if (current > value) {
-    changeInTimeout(setCurrent)(current, 3, 30, 'down');
+    changeInTimeout(setCurrent)(current, 1, 30, 'down');
   }
 
   if (current <= value) {
@@ -46,11 +46,11 @@ const animateCounterUp = (
   setIsChanging(true);
 
   if (current < value - 100) {
-    changeInTimeout(setCurrent)(current, 7, 4, 'up');
+    changeInTimeout(setCurrent)(current, 210, 4, 'up');
   } else if (current > value - 100 && current < value - 30) {
-    changeInTimeout(setCurrent)(current, 9, 15, 'up');
+    changeInTimeout(setCurrent)(current, 15, 15, 'up');
   } else if (current < value) {
-    changeInTimeout(setCurrent)(current, 3, 30, 'up');
+    changeInTimeout(setCurrent)(current, 1, 30, 'up');
   }
 
   if (current >= value) {

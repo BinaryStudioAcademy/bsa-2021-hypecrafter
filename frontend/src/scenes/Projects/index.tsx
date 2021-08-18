@@ -18,7 +18,7 @@ const Projects = () => {
   }, [modificators]);
 
   return (
-    <Container>
+    <Container className={classes['projects-page']}>
       <Row>
         <Col lg={3}>
           <Filters />

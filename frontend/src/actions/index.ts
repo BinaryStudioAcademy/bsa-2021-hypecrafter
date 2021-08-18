@@ -7,6 +7,12 @@ export {
   filterProjectsAction,
   sortProjectsAction
 } from '../scenes/Projects/actions';
+export {
+  fetchCategories,
+  fetchPopularProjectsByCategory,
+  fetchPopularTagsAction,
+  setSelectedCategoryAction
+} from '../scenes/TrendsPage/actions';
 export { fetchUserProfileAction } from '../scenes/UserPage/actions';
 export { fetchTransactionsPageAction } from '../scenes/Wallet/Transactions/actions';
 export { authFetchUserAction } from './auth';
