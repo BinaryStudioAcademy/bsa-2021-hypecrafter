@@ -1,0 +1,23 @@
+@import '../../styles/vars';
+@import '../../styles/mixins';
+
+.tabs-container {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+
+  .tab-title {
+    @include reset-button;
+    font-size: $font-size-large;
+    font-weight: $font-weight-bold;
+    color: $color-root-text;
+    padding: 1px 10px 1px 0;
+  }
+
+  .tab-title-selected {
+    background: $color-root-turquoise-gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

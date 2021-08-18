@@ -1,8 +1,8 @@
-import { FunctionComponent, MouseEvent, useState } from 'react';
-import { Col, Nav, Row } from 'react-bootstrap';
+import { FunctionComponent } from 'react';
+import { Col, Row } from 'react-bootstrap';
 import Card from '../../../components/Card';
 import ProjectCard from '../../../components/ProjectCard';
-import { Tabs } from '../../../components/Tabs';
+import { Tab, Tabs } from '../../../components/Tabs';
 import { calcDonationProgress } from '../../../helpers/project';
 import { Achievement, Activity, Project } from '../interfaces';
 import classes from '../styles.module.scss';
@@ -78,11 +78,6 @@ const Body: FunctionComponent<BodyProps> = ({
   achievements,
   activities
 }) => {
-  const tabs = ['Projects', 'Achievements'];
-  const [selectedTab, setSelectedTab] = useState('Projects');
-
-  const handleTabChange = (e: MouseEvent<HTMLElement>) => setSelectedTab((e.target as HTMLInputElement).innerText);
-
   const renderActivitiesList = () => activities.map((activity) => (
     <div className={classes['activity-container']} key={activity.id}>
       {activity.name}
@@ -95,15 +90,13 @@ const Body: FunctionComponent<BodyProps> = ({
       <Row>
         <Col xs={12} lg={8}>
           <Tabs>
-            <Tabs.Item {...selectedTab === tabs[0] && { selected: true }}>
-              <Nav.Link onClick={handleTabChange}>{tabs[0]}</Nav.Link>
-            </Tabs.Item>
-            <Tabs.Item {...selectedTab === tabs[1] && { selected: true }}>
-              <Nav.Link onClick={handleTabChange}>{tabs[1]}</Nav.Link>
-            </Tabs.Item>
+            <Tab title='Projects'>
+              <CardsGrid projects={projects} achievements={achievements} target='Projects' />
+            </Tab>
+            <Tab title='Achievements'>
+              <CardsGrid projects={projects} achievements={achievements} target='Achievements' />
+            </Tab>
           </Tabs>
-
-          <CardsGrid projects={projects} achievements={achievements} target={selectedTab} />
         </Col>
         <Col xs={12} lg={4}>
           <h3 className={classes['activity-header']}>Activity</h3>

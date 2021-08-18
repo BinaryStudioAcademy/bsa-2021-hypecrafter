@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FunctionComponent } from 'react';
 import { Col, Container, Image, Row } from 'react-bootstrap';
 import { ProjectPage } from '../../../common/types';
+import ProjectInfo from '../../../components/ProjectInfo';
 import classes from '../styles.module.scss';
 
 interface HeaderProps {
@@ -15,19 +16,20 @@ const Header: FunctionComponent<HeaderProps> = ({ project }) => {
   const {
     name,
     description,
-    // category,
+    category,
     imageUrl,
     // tags,
-    // goal,
-    // donated,
-    // likes,
-    // dislikes,
+    goal,
+    donated,
+    bakersAmount,
+    likes,
+    dislikes,
     // FAQ,
     instagramUrl,
     facebookUrl,
     dribbleUrl,
+    finishDate,
   } = project;
-
   // const [isFavorite, setFavorite] = useState(false);
 
   return (
@@ -38,15 +40,18 @@ const Header: FunctionComponent<HeaderProps> = ({ project }) => {
         </Col>
         <Col xs={12} lg={7}>
           <Row>
-            <Col xs={10} lg={10}>
+            <p className={classes['project-category']}>{category}</p>
+          </Row>
+          <Row>
+            <Col xs={11} lg={11}>
               <h3 className={classes['project-name']}>{name}</h3>
             </Col>
-            <Col xs={2} lg={2}>
+            <Col xs={1} lg={1}>
               <FontAwesomeIcon icon={faBookmarkEmpty} size="2x" />
             </Col>
           </Row>
           <Row>
-            <Col xs={10} lg={10}>
+            <Col xs={11} lg={11}>
               <p className={classes['project-description']}>{description}</p>
             </Col>
           </Row>
@@ -69,6 +74,16 @@ const Header: FunctionComponent<HeaderProps> = ({ project }) => {
                 <FontAwesomeIcon icon={faDribbble} size="2x" />
               </a>
               )}
+          </Row>
+          <Row>
+            <ProjectInfo
+              donated={donated}
+              goal={goal}
+              likes={likes}
+              dislikes={dislikes}
+              bakersAmount={bakersAmount}
+              finishDate={finishDate}
+            />
           </Row>
         </Col>
       </Row>
