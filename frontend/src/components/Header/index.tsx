@@ -10,6 +10,7 @@ import Avatar from '../Avatar';
 import Input from '../Input';
 import Link from '../Link';
 import Logo from '../Logo';
+import OpenUserModal from '../OpenUserModalOption';
 import Popover from '../Popover';
 import LanguageSwitcher from '../SwitchLanguageOption/LanguageSwitcher';
 import classes from './styles.module.scss';
@@ -76,7 +77,7 @@ const Header = () => {
         >
           {() => (
             <div className={classes.menu_user}>
-              <Link to={Routes.PROFILE}>{t('View account')}</Link>
+              <OpenUserModal />
               <Link to={Routes.PROFILE}>{t('Edit profile')}</Link>
               <div className={classes.menu_line} />
               <LanguageSwitcher />
