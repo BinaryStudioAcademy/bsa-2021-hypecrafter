@@ -212,7 +212,7 @@
   position: absolute;
   top: 3.3rem;
   right: -0.4rem;
-  width: 12rem;
+  width: 14rem;
   cursor: pointer;
   @include color-style;
 }
@@ -260,7 +260,8 @@
 .desktop_project_menu_list {
   position: absolute;
   top: 2rem;
-  left: -0.8rem;
+  left: -0.7rem;
+  width: 9rem;
   z-index: 50;
   @include color-style;
 }
@@ -442,7 +443,7 @@
   position: absolute;
   top: 3.3rem;
   right: -0.1rem;
-  width: 9rem;
+  width: 14rem;
   cursor: pointer;
   @include color-style;
 }
@@ -494,6 +495,7 @@
   position: absolute;
   top: 1rem;
   left: 8rem;
+  width: 7rem;
   @include color-style;
 }
 
