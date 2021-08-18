@@ -26,7 +26,7 @@ interface CommentProps {
   labelBackgroundColor?: string;
 }
 
-const Commentup: FC<CommentProps> = ({
+const Comment: FC<CommentProps> = ({
   comment: {
     author: {
       firstName,
@@ -96,4 +96,4 @@ const Commentup: FC<CommentProps> = ({
   );
 };
 
-export default Commentup;
+export default Comment;
