@@ -1,4 +1,4 @@
-
+import { ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
 import { Project } from '../../common/types';
 import { mapProjects } from '../../data/mappers';
 import { ProjectRepository } from '../../data/repositories';
@@ -23,6 +23,11 @@ export default class ProjectService {
       popular: mapProjects(popular),
       recommended: mapProjects(recommended)
     };
+  }
+
+  public async getBySortAndFilter({ sort, filter }: { sort: ProjectsSort, filter: ProjectsFilter }) {
+    const projects = await this.#projectRepository.getBySortAndFilter({ sort, filter });
+    return projects;
   }
 
   public async getById(id: string) {
