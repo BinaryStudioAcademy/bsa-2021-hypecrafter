@@ -24,7 +24,7 @@ const Header = () => {
   const [isMobileMenu, setMobileMenu] = useState(false);
   const [isProjectsMenu, setProjectsMenu] = useState(false);
   const [isProfileMenu, setProfileMenu] = useState(false);
-  const [isHideOnScroll, setHideOnScroll] = useState(false);
+  const [isVisibleOnScroll, setVisibleOnScroll] = useState(false);
   const { isMobile } = useWindowResize();
 
   const handleProfileMenuForMobile = () => {
@@ -60,11 +60,11 @@ const Header = () => {
   };
 
   const scrollDownCallback = () => {
-    setHideOnScroll(false);
+    setVisibleOnScroll(false);
   };
 
   const scrollUpCallback = () => {
-    setHideOnScroll(true);
+    setVisibleOnScroll(true);
   };
 
   useScroll(
@@ -81,7 +81,7 @@ const Header = () => {
         className={`
           ${classes.header}
           ${isMobile ? classes.hide : classes.desktop_visible}
-          ${isHideOnScroll ? classes.mobile_hide_on_scroll : ''}
+          ${isVisibleOnScroll ? classes.mobile_hide_on_scroll : ''}
         `}
       >
         <div className={classes.header_left}>
@@ -120,7 +120,8 @@ const Header = () => {
                 className={`
                   ${classes.desktop_project_menu_list}
                   ${isProjectsMenu ? classes.visible : classes.hide}
-                    `}
+                  ${isVisibleOnScroll ? classes.mobile_hide_on_scroll : ''}
+                `}
               >
                 <NavLink
                   to={Routes.PROJECTS}
@@ -185,6 +186,7 @@ const Header = () => {
                 className={`
                 ${classes.desktop_menu_profile}
                 ${isProfileMenu ? classes.visible : classes.hide}
+                ${isVisibleOnScroll ? classes.mobile_hide_on_scroll : ''}
               `}
               >
                 <NavLink
@@ -233,7 +235,7 @@ const Header = () => {
           variant="dark"
           className={`
           ${classes.mobile_navigation}
-          ${isHideOnScroll ? classes.mobile_hide_on_scroll : ''}
+          ${isVisibleOnScroll ? classes.mobile_hide_on_scroll : ''}
         `}
         >
           <div className={classes.mobile_search}>
@@ -253,9 +255,11 @@ const Header = () => {
               onClick={handleMenuForMobile}
               onTouchStart={handleMenuForMobile}
             />
-            <Nav className={`
+            <Nav
+              className={`
                 ${classes.mobile_menu_list}
                 ${isMobileMenu ? classes.visible : classes.hide}
+                ${isVisibleOnScroll ? classes.mobile_hide_on_scroll : ''}
               `}
             >
               <NavLink
@@ -287,9 +291,10 @@ const Header = () => {
                 </Nav.Link>
                 <div
                   className={`
-                  ${classes.mobile_project_menu_list}
-                  ${isProjectsMenu ? classes.visible : classes.hide}
-                    `}
+                    ${classes.mobile_project_menu_list}
+                    ${isProjectsMenu ? classes.visible : classes.hide}
+                    ${isVisibleOnScroll ? classes.mobile_hide_on_scroll : ''}
+                  `}
                 >
                   <NavLink
                     to={Routes.PROJECTS}
@@ -353,6 +358,7 @@ const Header = () => {
               className={`
                 ${classes.mobile_menu_profile}
                 ${isProfileMenu ? classes.visible : classes.hide}
+                ${isVisibleOnScroll ? classes.mobile_hide_on_scroll : ''}
               `}
             >
               <NavLink
