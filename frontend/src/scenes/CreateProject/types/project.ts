@@ -1,3 +1,5 @@
+import { Team } from './team';
+
 export interface CreateProject{
   id?: string;
   name: string;
@@ -6,6 +8,7 @@ export interface CreateProject{
   content: string;
   goal: number;
   region: string;
+  team: Team;
 
   imageUrl?: string;
   tags?: string[];

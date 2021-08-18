@@ -1,12 +1,18 @@
 import { Project } from '../../common/types';
-import { Project as CreateProject } from '../../data/entities';
-import { ProjectRepository } from '../../data/repositories';
+import { Chat, Project as CreateProject, Team } from '../../data/entities';
+import { ChatRepository, ProjectRepository, TeamRepository } from '../../data/repositories';
 
 export default class ProjectService {
   readonly #projectRepository: ProjectRepository;
 
-  constructor(projectRepository: ProjectRepository) {
+  readonly #teamRepository: TeamRepository;
+
+  readonly #chatRepository: ChatRepository;
+
+  constructor(projectRepository: ProjectRepository, teamRepository: TeamRepository, chatRepository: ChatRepository) {
     this.#projectRepository = projectRepository;
+    this.#teamRepository = teamRepository;
+    this.#chatRepository = chatRepository;
   }
 
   public async getPopularAndRecommended() {
@@ -20,6 +26,11 @@ export default class ProjectService {
 
   public async createProject(body: CreateProject) {
     const project = await this.#projectRepository.save({ ...new CreateProject(), ...body });
+    const team = await this.#teamRepository.save({ ...new Team(), ...body.team, project });
+    body.team.chats.forEach(chat => {
+      this.#chatRepository.save({ ...new Chat(), ...chat, team });
+    });
+    project.team = team;
     return project;
   }
 

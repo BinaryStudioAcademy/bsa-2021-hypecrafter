@@ -103,4 +103,8 @@ declare type LocaleKeys =
  | 'Pledge project'
  | 'Finally'
  | 'Your location can be a key factor for the investor in your favor.'
- | 'Decide on the terms for which you want to collect the above amount';
+ | 'Decide on the terms for which you want to collect the above amount'
+ | 'Add member'
+ | 'I agree'
+ | 'We will notify this person'
+ | 'Pick a members to add they to team.';

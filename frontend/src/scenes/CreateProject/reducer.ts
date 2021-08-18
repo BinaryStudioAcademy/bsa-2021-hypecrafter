@@ -30,7 +30,8 @@ const newProject: CreateProject = {
   totalInteractionTime: 0,
   startDate: new Date(),
   finishDate: new Date(),
-  content: ''
+  content: '',
+  team: { name: '', chats: [] }
 };
 
 export const initialState: ProjectState = {

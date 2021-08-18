@@ -6,5 +6,6 @@ export enum ProjectKeys {
   GOAL = 'goal',
   REGION = 'region',
   START_DATE = 'startDate',
-  FINISH_DATE = 'finishDate'
+  FINISH_DATE = 'finishDate',
+  TEAM = 'team'
 }
