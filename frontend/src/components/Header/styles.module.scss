@@ -59,6 +59,10 @@
   text-decoration: none;
   color: $color-root-text !important;
 
+  &:first-child {
+    margin-left: 70px;
+  }
+
   &:hover,
   &:active,
   &:visited {
@@ -76,7 +80,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-right: -0.6rem;
 }
 .header_profile {
   display: flex;
@@ -85,7 +88,7 @@
   margin-left: 11px;
 }
 .header_profile_avatar {
-  margin-right: 11px;
+  margin-right: 10px;
 }
 .header_profile_down {
   font-size: 16px;
@@ -107,7 +110,7 @@
   right: 3px;
 }
 .header_hypeCoin {
-  margin: 0 0 0 15px;
+  margin: 0px 11px;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -198,10 +201,17 @@
   align-items: center;
 }
 
+.desktop_profile {
+  z-index: 20;
+  position: relative;
+  cursor: pointer;
+  margin-right: -1.6rem;
+}
+
 .desktop_menu_profile {
   position: absolute;
-  top: 2rem;
-  left: -0.8rem;
+  top: 3.3rem;
+  right: -0.4rem;
   width: 12rem;
   cursor: pointer;
   @include color-style;
@@ -228,7 +238,6 @@
   }
 }
 
-.desktop_profile_drop,
 .desktop_projects_drop {
   display: inline;
   margin: 0px 20px;
@@ -248,11 +257,6 @@
   }
 }
 
-.desktop_profile_drop {
-  width: 7rem;
-  margin-right: 0;
-}
-
 .desktop_project_menu_list {
   position: absolute;
   top: 2rem;
@@ -261,19 +265,7 @@
   @include color-style;
 }
 
-.desktop_profile {
-  cursor: pointer;
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: row;
-  text-decoration: none;
-
-  a {
-    margin-right: -1.6rem;
-  }
-}
-
-@media (max-width: 1230px) {
+@media (max-width: 1160px) {
   .header_left {
     flex-direction: column;
     align-items: flex-start;
@@ -285,7 +277,7 @@
   }
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 925px) {
   .header {
     flex-direction: column;
     justify-content: space-around;
@@ -304,15 +296,8 @@
     width: 100%;
   }
 
-  .desktop_header_user_menu {
-    width: 13rem;
-    margin-right: -0.7rem;
-  }
-}
-
-@media (max-width: 780px) {
-  .header {
-    padding: 0px 20px;
+  .desktop_trends {
+    margin-right: 0;
   }
 }
 
@@ -451,21 +436,22 @@
   grid-column-end: profile-finish;
   position: relative;
   cursor: pointer;
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: row;
-  text-decoration: none;
+}
 
-  .mobile_profile_avatar {
-    margin-right: 0;
-  }
+.mobile_menu_profile {
+  position: absolute;
+  top: 3.3rem;
+  right: -0.1rem;
+  width: 9rem;
+  cursor: pointer;
+  @include color-style;
 }
 
 .mobile_menu_list {
   position: absolute;
   top: 3rem;
   left: 0;
-  width: 10rem;
+  width: 8rem;
   z-index: 10;
   @include color-style;
 }
@@ -504,16 +490,11 @@
   @include color-style;
 }
 
-.mobile_profile_menu_list,
 .mobile_project_menu_list {
   position: absolute;
   top: 1rem;
-  left: 10rem;
+  left: 8rem;
   @include color-style;
-}
-
-.mobile_profile_menu_list {
-  width: 10rem;
 }
 
 .mobile_hide_on_scroll {
@@ -537,24 +518,6 @@
   }
 }
 
-@media (max-width: 350px) {
-  .mobile_projects_menu_drop {
-    display: block !important;
-    position: static !important;
-    @include line_bottom;
-  }
-
-  .mobile_profile_menu_list,
-  .mobile_project_menu_list {
-    position: static;
-    width: 10rem !important;
-  }
-
-  .mobile_project_menu_list {
-    @include line_bottom;
-  }
-}
-
 @media (max-width: 310px) {
   .mobile_navigation {
     grid-template-columns: [start] 4% [hamburger-menu-start] 0.2rem [logo-shift] 3.8rem [hamburger-menu-finish] 1fr [notification-start] 2.5rem [notification-finish] 0.5rem [profile-start] 3rem [profile-finish] 4% [finish];
@@ -563,6 +526,28 @@
 
   .mobile_hypeCoin {
     display: none;
+  }
+
+  .mobile_projects_menu_drop {
+    display: block !important;
+    position: static !important;
+  }
+
+  .mobile_projects_drop::after {
+    content: " ";
+    top: 2.45rem;
+    left: 1rem;
+    right: 1rem;
+    position: absolute;
+    height: 1px;
+    border-bottom: 1px solid $color-root-text;
+  }
+
+  .mobile_project_menu_list {
+    position: static;
+    width: 8rem !important;
+
+    @include line_bottom;
   }
 }
 
