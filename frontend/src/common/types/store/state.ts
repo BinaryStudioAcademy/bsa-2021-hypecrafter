@@ -1,9 +1,11 @@
 import { AuthState } from '../../../reducers/auth';
+import { AuthenticationState } from '../../../scenes/Auth/reducer';
 import { ProjectState } from '../../../scenes/CreateProject/reducer';
 import { MainPageState } from '../../../scenes/MainPage/reducer';
+import { ProjectPageState } from '../../../scenes/ProjectPage/reducer';
 import { ProjectsState } from '../../../scenes/Projects/reducer';
-import { RegistrationState } from '../../../scenes/SignupPage/reducer';
 import { UserProfileState } from '../../../scenes/UserPage/reducer';
+import { PageState } from '../../../scenes/Wallet/Transactions/reducer';
 
 export interface StoreState {
   mainPage: MainPageState;
@@ -11,5 +13,7 @@ export interface StoreState {
   auth: AuthState;
   project: ProjectState;
   projects: ProjectsState;
-  registration: RegistrationState;
+  projectPage: ProjectPageState;
+  transactions: PageState
+  authentication: AuthenticationState;
 }

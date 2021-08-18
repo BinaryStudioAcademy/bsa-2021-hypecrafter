@@ -33,6 +33,12 @@
     "YOUR HYPECRAFTER ACCOUNT": "YOUR HYPECRAFTER ACCOUNT",
     "Current Wallet balance": "Current Wallet balance",
     "Account details": "Account details",
+    "Date":"Date",
+    "Items":"Items",
+    "Type":"Type",
+    "Total":"Total",
+    "Change":"Change",
+    "Balance":"Balance",
     "Transactions list": "Transactions list",
     "Create account": "Create account",
     "Personal details": "Personal details",
@@ -75,11 +81,14 @@
     "Invested": "Invested",
     "Own": "Own",
     "Name": "Name",
-    "Date": "Date",
     "projects found": "projects found",
     "Switch to": "Switch to {{lang}}",
     "Have an account?": "Have an account?",
     "Log in": "Log in",
-    "There are no projects that match these search parameters": "There are no projects that match these search parameters"
+    "There are no projects that match these search parameters": "There are no projects that match these search parameters",
+    "Load more":"Load more",
+    "Loading...":"Loading...",
+    "Pledge project":"Pledge project",
+    "Balance replenishment":"Balance replenishment"
   }
 }

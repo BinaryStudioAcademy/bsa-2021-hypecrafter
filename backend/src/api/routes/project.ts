@@ -9,6 +9,7 @@ const init = ({ projectService }: Services, path: string) => (app: MicroMq) => a
   .get(path, wrap<Empty, Project, { sort: ProjectsSort; filter: ProjectsFilter }, Empty>((req) => {
     return projectService.getBySortAndFilter({ sort: req.query.sort, filter: req.query.filter });
   }))
-  .get(`${path}/popular-and-recommended`, wrap(() => projectService.getPopularAndRecommended()));
+  .get(`${path}/popular-and-recommended`, wrap(() => projectService.getPopularAndRecommended()))
+  .get(`${path}/:id`, wrap<Empty, Project, { id: string }, Empty>((req) => projectService.getById(req.params.id)));
 
 export default init;

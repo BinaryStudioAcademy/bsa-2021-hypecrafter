@@ -79,4 +79,8 @@ declare type LocaleKeys =
   | 'Name'
   | 'Date'
   | 'projects found'
-  | 'There are no projects that match these search parameters';
+  | 'There are no projects that match these search parameters'
+  | 'Load more'
+  | 'Loading...'
+  | 'Balance replenishment'
+  | 'Pledge project';;

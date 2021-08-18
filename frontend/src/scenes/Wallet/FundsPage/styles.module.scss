@@ -19,6 +19,10 @@
 .wallet-header-title {
   font-size: $font-size-title;
   padding-top: 8px;
+}
+
+
+.wallet-header-title{
   strong {
     background-image: $color-root-turquoise-gradient;
     background-size: 100%;
@@ -59,10 +63,12 @@
           }
         }
       }
-      button{
+      a{
         margin: 4px 0px;
         border-width: 0px;
         color:#ddd;
+        padding: 7px 15px;
+        text-decoration: none;
         background:$color-root-grey !important;
         &:hover{
           color:white;

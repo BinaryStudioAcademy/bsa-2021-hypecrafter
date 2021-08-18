@@ -3,7 +3,7 @@ export interface Project {
   name: string;
   description: string;
   category: string;
-  tags: string;
+  tags: string[];
   goal: number;
   donated: number;
 }

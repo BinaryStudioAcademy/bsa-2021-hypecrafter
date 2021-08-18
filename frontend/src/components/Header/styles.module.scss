@@ -72,11 +72,12 @@
     display: flex;
     align-items: center;
     cursor: pointer;
-    > img{
-        height: 24px;
-        margin-right: 5px;
-    }
-    > span{
+    > a{
+        > img{
+            height: 24px;
+            margin-right: 5px;
+        }
+        color:$color-root-text;
         font-size: 16px;
         font-family: $font-roboto700;
         margin-top: 2px;
