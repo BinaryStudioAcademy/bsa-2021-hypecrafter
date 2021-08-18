@@ -77,9 +77,9 @@ const Header: FunctionComponent<HeaderProps> = ({ project }) => {
             <ProjectInfo
               donated={donated}
               goal={goal}
-              bakersAmount={bakersAmount}
               likes={likes}
               dislikes={dislikes}
+              bakersAmount={bakersAmount}
               finishDate={finishDate}
             />
           </Row>
