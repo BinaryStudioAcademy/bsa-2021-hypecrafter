@@ -9,12 +9,14 @@ export enum TrendsPageActions {
   FETCH_POPULAR_PROJECTS_BY_CATEGORY = 'PROJECTS/FETCH_POPULAR_PROJECTS_BY_CATEGORY'
 }
 
-export const setSelectedCategoryAction = (category: Category) => ({
-  type: TrendsPageActions.SET_SELECTED_CATEGORY,
-  payload: {
-    ...category
+export const setSelectedCategoryAction = createRoutine(
+  TrendsPageActions.SET_SELECTED_CATEGORY,
+  {
+    trigger: (category: Category) => category,
+    success: (category: Category) => category,
+    failure: (error: string) => error
   }
-});
+);
 
 export const fetchPopularTagsAction = createRoutine(
   TrendsPageActions.FETCH_POPULAR_TAGS,
@@ -43,8 +45,9 @@ export const fetchPopularProjectsByCategory = createRoutine(
   }
 );
 
-export type SetSelectedCategoryActionType =
-  typeof TrendsPageActions.SET_SELECTED_CATEGORY;
+export type SetSelectedCategoryActionTypeSuccessActionType = ReturnType<
+  typeof fetchPopularProjectsByCategory.success
+>;
 
 export type FetchPopularProjectsByCategoryTriggerActionType = ReturnType<
   typeof fetchPopularProjectsByCategory.trigger

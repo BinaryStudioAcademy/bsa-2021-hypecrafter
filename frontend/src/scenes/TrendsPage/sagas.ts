@@ -16,6 +16,10 @@ interface TrendsPageAction extends Action {
   payload: string;
 }
 
+interface TrendsPageSetCategoryAction extends Action {
+  payload: Category;
+}
+
 function* fetchPopularTagsRequest() {
   try {
     const response: TagWithQuantity[] = yield call(getPopularTags);
@@ -70,10 +74,26 @@ function* watchFetchPopularProjectsByCategoryRequest() {
   );
 }
 
+function* setSelectedCategoryRequest(action: TrendsPageSetCategoryAction) {
+  try {
+    yield put(setSelectedCategoryAction.success(action.payload));
+  } catch (error) {
+    yield put(setSelectedCategoryAction.failure(error as string));
+  }
+}
+
+function* watchsetSelectedCategoryRequest() {
+  yield takeEvery(
+    setSelectedCategoryAction.TRIGGER,
+    setSelectedCategoryRequest
+  );
+}
+
 export default function* trendsPageSaga() {
   yield all([
     watchFetchPopularTagsRequest(),
     watchFetchCategoriesRequest(),
-    watchFetchPopularProjectsByCategoryRequest()
+    watchFetchPopularProjectsByCategoryRequest(),
+    watchsetSelectedCategoryRequest()
   ]);
 }

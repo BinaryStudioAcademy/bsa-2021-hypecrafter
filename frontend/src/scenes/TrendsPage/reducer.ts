@@ -9,7 +9,7 @@ import {
   fetchCategories,
   fetchPopularProjectsByCategory,
   fetchPopularTagsAction,
-  TrendsPageActions
+  setSelectedCategoryAction
 } from './actions';
 import { ProjectItem, TagWithQuantity } from './interfaces';
 
@@ -97,10 +97,22 @@ export const trendsPageReducer = createReducer<TrendsPageState>(
         isLoadingBottom: true
       };
     },
-    [TrendsPageActions.SET_SELECTED_CATEGORY](state, action) {
+    [setSelectedCategoryAction.SUCCESS](state, action) {
       return {
         ...state,
         selectedCategory: action.payload
+      };
+    },
+    [setSelectedCategoryAction.TRIGGER](state) {
+      return {
+        ...state,
+        isLoadingBottom: true
+      };
+    },
+    [setSelectedCategoryAction.FAILURE](state) {
+      return {
+        ...state,
+        isLoadingBottom: false
       };
     }
   }
