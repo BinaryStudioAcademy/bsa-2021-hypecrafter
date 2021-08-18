@@ -6,6 +6,7 @@ import CardExample from '../CardExample';
 import Chart from '../Chart';
 import defaultProps from '../Chart/utils';
 import ExampleCounter from '../Counter/ExampleCounter';
+import DatePickerInput from '../DatePicker';
 import Input from '../Input';
 import InputExample from '../InputExample';
 import ModalWindow from '../ModalWindow';
@@ -19,15 +20,16 @@ function Main() {
   const [show, setShow] = useState(true);
   return (
     <div>
-      <Input type="number" />
-      <ExampleCounter />
-      <TabsExample />
+      <DatePickerInput daySetter={(day) => console.log(day)} />
       <Chart
         type="line"
         labels={defaultProps.data.labels}
         dataSets={defaultProps.data.datasets}
       />
       <PopoverExample />
+      <Input type="number" />
+      <ExampleCounter />
+      <TabsExample />
       <ModalWindow
         show={show}
         title="User Page"

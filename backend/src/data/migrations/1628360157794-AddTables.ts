@@ -32,7 +32,7 @@ export class AddTables1628360157794 implements MigrationInterface {
     await queryRunner.query('ALTER TABLE "donate" DROP COLUMN "amount"');
     await queryRunner.query('ALTER TABLE "donate" ADD "amount" numeric NOT NULL');
     await queryRunner.query('ALTER TABLE "user_profile" DROP COLUMN "balance"');
-    await queryRunner.query('ALTER TABLE "user_profile" ADD "balance" numeric NOT NULL');
+    await queryRunner.query('ALTER TABLE "user_profile" ADD "balance" numeric NOT NULL DEFAULT 0');
     await queryRunner.query('ALTER TABLE "user_project" ADD CONSTRAINT "FK_b88a18e4faeea3bce60d70a4ae3" FOREIGN KEY ("userId") REFERENCES "user_profile"("id") ON DELETE NO ACTION ON UPDATE NO ACTION');
     await queryRunner.query('ALTER TABLE "user_project" ADD CONSTRAINT "FK_cb5415b5e54f476329451212e9b" FOREIGN KEY ("projectId") REFERENCES "project"("id") ON DELETE NO ACTION ON UPDATE NO ACTION');
     await queryRunner.query('ALTER TABLE "project_tag" ADD CONSTRAINT "FK_d22558732b873ca528a9583112e" FOREIGN KEY ("tagId") REFERENCES "tag"("id") ON DELETE NO ACTION ON UPDATE NO ACTION');

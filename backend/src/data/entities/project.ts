@@ -1,20 +1,16 @@
 import {
-  Entity,
-  Column,
-  OneToMany,
-  ManyToOne,
-  OneToOne,
-  JoinColumn
+  Column, Entity, JoinColumn, ManyToOne, OneToMany, OneToOne
 } from 'typeorm';
+import { ProjectDonatorsPrivilege } from '.';
 import { AbstractEntity } from './abstract';
 import { Category } from './category';
 import { Comment } from './comment';
 import { Donate } from './donate';
-import { UserProject } from './userProject';
+import { FAQ } from './faq';
 import { ProjectTag } from './projectTag';
 import { Team } from './team';
-import { FAQ } from './faq';
 import { UserProfile } from './userProfile';
+import { UserProject } from './userProject';
 
 @Entity()
 export class Project extends AbstractEntity {
@@ -54,6 +50,18 @@ export class Project extends AbstractEntity {
   @Column({ type: 'text' })
   region: string;
 
+  @Column({ type: 'text', nullable: true })
+  imageUrl: string;
+
+  @Column({ type: 'text', nullable: true })
+  instagramUrl: string;
+
+  @Column({ type: 'text', nullable: true })
+  facebookUrl: string;
+
+  @Column({ type: 'text', nullable: true })
+  dribbleUrl: string;
+
   @OneToOne(() => Team, team => team.project)
   @JoinColumn()
   team: Team;
@@ -75,6 +83,9 @@ export class Project extends AbstractEntity {
 
   @ManyToOne(() => Category, category => category.projects)
   category: Category;
+
+  @OneToMany(() => ProjectDonatorsPrivilege, projectDonatorsPrivilege => projectDonatorsPrivilege.project)
+  projectDonatorsPrivileges: ProjectDonatorsPrivilege[];
 
   @ManyToOne(() => UserProfile, userProfile => userProfile.projects)
   author: UserProfile;

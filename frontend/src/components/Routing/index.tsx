@@ -1,16 +1,22 @@
 import { useEffect } from 'react';
-import { Switch, useLocation } from 'react-router-dom';
-import { Routes, StorageKeys } from '../../common/enums';
+import { Redirect, Switch, useLocation } from 'react-router-dom';
+import { Routes } from '../../common/enums';
+import { getAccessToken } from '../../helpers/localStorage';
 import { useAction, useTypedSelector } from '../../hooks';
+import LoginPage from '../../scenes/Auth/LoginPage';
+import SignupPage from '../../scenes/Auth/SignupPage';
 import MainPage from '../../scenes/MainPage';
+import ProjectPage from '../../scenes/ProjectPage';
 import TrendsPage from '../../scenes/TrendsPage';
 import FundsPage from '../../scenes/Wallet/FundsPage';
+import Transactions from '../../scenes/Wallet/Transactions';
 import Header from '../Header';
 import LoaderWrapper from '../LoaderWrapper';
-import LoginPage from '../LoginPage';
+import Main from '../Main';
+
+import PageNotFound from '../PageNotFound';
 import PrivateRoute from '../PrivateRoute';
 import PublicRoute from '../PublicRoute';
-import SignupPage from '../SignupPage';
 
 const routesWitoutHeader = [Routes.LOGIN, Routes.SIGNUP];
 
@@ -21,9 +27,8 @@ const Routing = () => {
     isLoading
   }));
   const { pathname } = useLocation();
-
   const { user, isLoading } = authStore;
-  const hasToken = Boolean(localStorage.getItem(StorageKeys.ACCESS_TOKEN));
+  const hasToken = Boolean(getAccessToken());
 
   useEffect(() => {
     if (hasToken) {
@@ -32,7 +37,7 @@ const Routing = () => {
   }, [authFetchUserAction]);
 
   return (
-    <LoaderWrapper isLoading={isLoading || (!user && hasToken)} variant='page'>
+    <LoaderWrapper isLoading={isLoading || (!user && hasToken)} variant="page">
       {!routesWitoutHeader.includes(pathname as Routes) && <Header />}
       <Switch>
         <PublicRoute
@@ -54,12 +59,32 @@ const Routing = () => {
           component={SignupPage}
         />
         <PrivateRoute exact path={Routes.ADDFUNDS} component={FundsPage} />
+        <PrivateRoute exact path={Routes.TRANSACTIONS} component={Transactions} />
         <PublicRoute
           restricted={false}
-          path="/trends"
+          path={Routes.TRENDS}
           exact
           component={TrendsPage}
         />
+        <PublicRoute
+          restricted={false}
+          path={Routes.PROJECTS + Routes.ID}
+          exact
+          component={ProjectPage}
+        />
+        <PublicRoute
+          restricted={false}
+          path={Routes.NOTFOUND}
+          exact
+          component={PageNotFound}
+        />
+        <PublicRoute
+          restricted={false}
+          path={Routes.EXAMPLES}
+          exact
+          component={Main}
+        />
+        <Redirect from="*" to={Routes.NOTFOUND} />
       </Switch>
     </LoaderWrapper>
   );
