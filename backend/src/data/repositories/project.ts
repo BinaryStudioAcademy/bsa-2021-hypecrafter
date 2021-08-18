@@ -1,4 +1,5 @@
 import { EntityRepository, Repository } from 'typeorm';
+import { Project as MyProject } from '../../common/types';
 import { Project } from '../entities/project';
 
 @EntityRepository(Project)
@@ -47,7 +48,7 @@ export class ProjectRepository extends Repository<Project> {
     return this.getProjectsByOrder('project."updatedAt"');
   }
 
-  public getById(id: string) {
+  public getById(id: string): Promise<MyProject[]> {
     return this.createQueryBuilder('project')
       .select(`
         project."id",
@@ -55,7 +56,7 @@ export class ProjectRepository extends Repository<Project> {
         project."instagramUrl",
         project."facebookUrl",
         project."dribbleUrl",
-        project.content as story,
+        project.content AS story,
         "FAQ",
         donated,
         description,
@@ -67,7 +68,8 @@ export class ProjectRepository extends Repository<Project> {
         "bakersAmount",
         likes,
         dislikes,
-        privileges
+        privileges,
+        "projectComments"
       `)
       .leftJoin(subQuery => subQuery
         .select(`
@@ -90,6 +92,7 @@ export class ProjectRepository extends Repository<Project> {
         .select(`
           jsonb_agg(
             jsonb_build_object(
+              'id', id,
               'question', question,
               'answer', answer 
             )
@@ -112,6 +115,26 @@ export class ProjectRepository extends Repository<Project> {
         .leftJoin('project.projectDonatorsPrivileges', 'projectDonatorsPrivileges')
         .leftJoin('projectDonatorsPrivileges.donatorsPrivilege', 'donatorsPrivilege')
         .groupBy('"projectId"'), 'dp', 'dp."projectId" = project.id')
+      .leftJoin(subQuery => subQuery
+        .select(`
+              jsonb_agg(
+                jsonb_build_object(
+                  'author', jsonb_build_object(
+                      'firstName', "commentAuthor"."firstName",
+                      'lastName', "commentAuthor"."lastName"
+                    ),
+                  'message', comments.message,
+                  'createdAt', comments."createdAt",
+                  'updatedAt', comments."updatedAt",
+                  'parentCommentId', comments."parentCommentId"
+                )
+              ) AS "projectComments",
+              "projectId"
+            `)
+        .from(Project, 'project')
+        .leftJoin('project.comments', 'comments')
+        .leftJoin('comments.author', 'commentAuthor')
+        .groupBy('"projectId"'), 'cp', 'cp."projectId" = project.id')
       .leftJoin(subQuery => subQuery
         .select(`
           array_agg(tag.name) AS "tags",

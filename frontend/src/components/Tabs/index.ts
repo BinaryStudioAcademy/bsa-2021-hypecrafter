@@ -1,4 +1,4 @@
-import TabItem from './tab-item';
+import Tab from './Tab';
 import Tabs from './tabs';
 
-export { Tabs, TabItem };
+export { Tabs, Tab };

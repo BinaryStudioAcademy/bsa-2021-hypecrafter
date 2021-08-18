@@ -12,6 +12,7 @@ import { NavLink } from 'react-router-dom';
 import { useWindowResize, useScroll } from '../../hooks';
 import hypeCoin from '../../assets/HypeCoin.png';
 import { Routes } from '../../common/enums';
+import { useLocalization } from '../../providers/localization';
 import Avatar from '../Avatar';
 import Input from '../Input';
 import Link from '../Link';
@@ -20,6 +21,7 @@ import LanguageSwitcher from '../SwitchLanguageOption/LanguageSwitcher';
 import classes from './styles.module.scss';
 
 const Header = () => {
+  const { t } = useLocalization();
   const [text, setText] = useState('');
   const [isMobileMenu, setMobileMenu] = useState(false);
   const [isProjectsMenu, setProjectsMenu] = useState(false);
@@ -96,7 +98,7 @@ const Header = () => {
               activeClassName={classes.header_menu_item_active}
               to={Routes.HOME}
             >
-              Home
+              {t('Home')}
             </NavLink>
             <div
               className={classes.mobile_menu_projects}
@@ -106,7 +108,7 @@ const Header = () => {
                 onClick={handleProjectsMenuForMobile}
                 onTouchStart={handleProjectsMenuForMobile}
               >
-                Projects
+                {t('Projects')}
                 <FontAwesomeIcon
                   icon={faCaretRight}
                   className={isProjectsMenu ? classes.visible : classes.hide}
@@ -127,19 +129,19 @@ const Header = () => {
                   to={Routes.PROJECTS}
                   className={classes.desktop_menu_item}
                 >
-                  Project_1
+                  {t('Projects')} 1
                 </NavLink>
                 <NavLink
                   to={Routes.PROJECTS}
                   className={classes.desktop_menu_item}
                 >
-                  Project_2
+                  {t('Projects')} 2
                 </NavLink>
                 <NavLink
                   to={Routes.PROJECTS}
                   className={classes.desktop_menu_item}
                 >
-                  Project_3
+                  {t('Projects')} 3
                 </NavLink>
               </div>
             </div>
@@ -151,14 +153,14 @@ const Header = () => {
               activeClassName={classes.header_menu_item_active}
               to={Routes.TRENDS}
             >
-              Trends
+              {t('Trends')}
             </NavLink>
           </Nav>
         </div>
         <div className={classes.header_right}>
           <div className={classes.header_search}>
             <FontAwesomeIcon icon={faSearch} className={classes.header_search_icon} />
-            <Input type="search" value={text} placeholder="Search..." onChange={handleSearch} />
+            <Input type="search" value={text} placeholder={t('Search...')} onChange={handleSearch} />
           </div>
           <Nav
             className={classes.desktop_header_user_menu}
@@ -193,13 +195,13 @@ const Header = () => {
                   to={Routes.PROFILE}
                   className={classes.desktop_menu_item}
                 >
-                  View account
+                  {t('View account')}
                 </NavLink>
                 <NavLink
                   to={Routes.PROFILE}
                   className={classes.desktop_menu_item}
                 >
-                  Edit profile
+                  {t('Edit profile')}
                 </NavLink>
                 <div
                   className={`
@@ -216,13 +218,13 @@ const Header = () => {
                   ${classes.line_both_desktop}
                 `}
                 >
-                  Create project
+                  {t('Create project')}
                 </NavLink>
                 <NavLink
                   to={Routes.LOGOUT}
                   className={classes.desktop_menu_item}
                 >
-                  Log out
+                  {t('Log out')}
                 </NavLink>
               </div>
             </div>
@@ -246,7 +248,7 @@ const Header = () => {
             <Input
               type="search"
               value={text}
-              placeholder="Search..."
+              placeholder={t('Search...')}
               onChange={handleSearch}
             />
           </div>
@@ -266,7 +268,7 @@ const Header = () => {
                 to={Routes.HOME}
                 className={classes.mobile_menu_item}
               >
-                Home
+                {t('Home')}
               </NavLink>
               <div
                 className={classes.mobile_menu_projects}
@@ -279,7 +281,7 @@ const Header = () => {
                   onClick={handleProjectsMenuForMobile}
                   onTouchStart={handleProjectsMenuForMobile}
                 >
-                  Projects
+                  {t('Projects')}
                   <FontAwesomeIcon
                     icon={faCaretRight}
                     className={isProjectsMenu ? classes.visible : classes.hide}
@@ -300,19 +302,19 @@ const Header = () => {
                     to={Routes.PROJECTS}
                     className={classes.mobile_menu_item}
                   >
-                    Project_1
+                    {t('Projects')} 1
                   </NavLink>
                   <NavLink
                     to={Routes.PROJECTS}
                     className={classes.mobile_menu_item}
                   >
-                    Project_2
+                    {t('Projects')} 2
                   </NavLink>
                   <NavLink
                     to={Routes.PROJECTS}
                     className={classes.mobile_menu_item}
                   >
-                    Project_3
+                    {t('Projects')} 3
                   </NavLink>
                 </div>
               </div>
@@ -320,7 +322,7 @@ const Header = () => {
                 to={Routes.TRENDS}
                 className={classes.mobile_menu_item}
               >
-                Trends
+                {t('Trends')}
               </NavLink>
             </Nav>
           </div>
@@ -365,13 +367,13 @@ const Header = () => {
                 to={Routes.PROFILE}
                 className={classes.mobile_menu_item}
               >
-                View account
+                {t('View account')}
               </NavLink>
               <NavLink
                 to={Routes.PROFILE}
                 className={classes.mobile_menu_item}
               >
-                Edit profile
+                {t('Edit profile')}
               </NavLink>
               <div
                 className={`
@@ -388,13 +390,13 @@ const Header = () => {
                   ${classes.line_both}
                 `}
               >
-                Create project
+                {t('Create project')}
               </NavLink>
               <NavLink
                 to={Routes.LOGOUT}
                 className={classes.mobile_menu_item}
               >
-                Log out
+                {t('Log out')}
               </NavLink>
             </div>
           </div>

@@ -1,0 +1,48 @@
+@import '../../styles/vars';
+
+.datepicker {
+  div {
+    input {
+      background-color: transparent;
+      color: $color-root-text;
+      border: 1px solid $color-root-text;
+      border-radius: 1px;
+      outline: none;
+
+      font-family: 'Roboto400';
+
+      font-size: 14px;
+      width: 282px;
+      height: 45px;
+      padding: 6px 12px;
+
+      & + div {
+        width: 282px;
+        margin: none;
+        position: absolute;
+        z-index: 100;
+        background: $color-root-modal-background;
+      }
+    }
+  }
+}
+
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside):hover {
+  background-color: $color-root-grey;
+}
+
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) {
+  position: relative;
+
+  background-color: $color-root-grey;
+  color: $color-root-turquoise;
+}
+.DayPicker:not(.DayPicker--interactionDisabled)
+  .DayPicker-Day:not(.DayPicker-Day--disabled):not(.DayPicker-Day--selected):not(.DayPicker-Day--outside):hover {
+  background-color: $color-root-grey;
+  color: #fff;
+}
+
+.DayPicker-Day--today {
+  color: $color-root-turquoise;
+}
