@@ -29,12 +29,14 @@ const ProjectInfo: FunctionComponent<ProjectInfoProps> = ({
   const [disliked, setDisliked] = useState(false);
 
   const handleLike = () => {
-    if (!disliked) setLiked(!liked);
+    if (disliked) setDisliked(!disliked);
+    setLiked(!liked);
     console.log('like action');
   };
 
   const handleDislike = () => {
-    if (!liked) setDisliked(!disliked);
+    if (liked) setLiked(!liked);
+    setDisliked(!disliked);
     console.log('dislike action');
   };
 
