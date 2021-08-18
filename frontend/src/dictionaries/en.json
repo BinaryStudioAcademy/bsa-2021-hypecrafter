@@ -79,6 +79,7 @@
     "projects found": "projects found",
     "Switch to": "Switch to {{lang}}",
     "Have an account?": "Have an account?",
-    "Log in": "Log in"
+    "Log in": "Log in",
+    "There are no projects that match these search parameters": "There are no projects that match these search parameters"
   }
 }

@@ -17,6 +17,7 @@
     "i18next": "^20.3.5",
     "i18next-browser-languagedetector": "^6.1.2",
     "query-string": "^4.3.4",
+    "hypecrafter-shared": "file:../shared/build",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.0-beta.4",
     "react-chartjs-2": "^3.0.4",

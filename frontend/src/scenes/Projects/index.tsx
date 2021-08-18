@@ -1,20 +1,21 @@
 import { useEffect } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import { Routes } from '../../common/enums';
+import { Project } from '../../common/types';
 import ProjectCard from '../../components/ProjectCard';
 import { useAction, useTypedSelector } from '../../hooks';
-import { Project } from './common/types';
+import { useLocalization } from '../../providers/localization';
 import Filters from './components/Filters';
-import mockProjects from './projects.json';
 import classes from './styles.module.scss';
 
 const Projects = () => {
-  // eslint-disable-next-line @typescript-eslint/no-shadow
-  const projects = useTypedSelector(({ projects: { projects } }) => projects);
-  const { getProjectsAction } = useAction();
+  const { projects, modificators } = useTypedSelector((state) => state.projects);
+  const { fetchProjectsAction } = useAction();
+  const { t } = useLocalization();
 
   useEffect(() => {
-    getProjectsAction(mockProjects);
-  }, []);
+    fetchProjectsAction(modificators);
+  }, [modificators]);
 
   return (
     <Container>
@@ -27,17 +28,22 @@ const Projects = () => {
           <Container className={classes['projects-wrapper']}>
             {projects.map((project: Project) => (
               <ProjectCard
-                key={project.ID}
-                to={`/projects/${project.ID}`}
-                category={project.Category}
-                tags={['Bike', 'Speed', 'Mile']} // update later
-                name={project.Name}
-                description={project.Description}
-                goal={project.Goal}
-                percent={30} // update later / how to get value?
-                image="https://source.unsplash.com/random/800x600" // update later / how to get value?
+                key={project.id}
+                to={`${Routes.LOGIN}/${project.id}`}
+                category={project.category}
+                tags={project.tags}
+                name={project.name}
+                description={project.description}
+                goal={project.goal}
+                percent={(project.donated * 100) / project.goal}
+                image={project.imageUrl}
               />
             ))}
+            {!projects.length && (
+              <Container className={classes['error-wrapper']}>
+                {t('There are no projects that match these search parameters')}
+              </Container>
+            )}
           </Container>
         </Col>
       </Row>

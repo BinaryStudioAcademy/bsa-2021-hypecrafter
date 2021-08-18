@@ -1,65 +1,76 @@
+import {
+  ProjectsFilter,
+  ProjectsSort
+} from 'hypecrafter-shared/enums';
+import { Project } from '../../common/types';
 import { createReducer } from '../../helpers';
 import {
+  fetchProjectsAction,
+  FetchProjectsFailureActionType,
+  FetchProjectsSuccessActionType,
   filterProjectsAction,
   FilterProjectsActionType,
-  getProjectsAction,
-  GetProjectsActionType,
   sortProjectsAction,
   SortProjectsActionType
 } from './actions';
-import { FilterValues, SortValues } from './common/enums';
-import { Project } from './common/types';
 
 export interface ProjectsState {
-  allProjects: Project[];
   projects: Project[];
+  modificators: {
+    sort: ProjectsSort;
+    filter: ProjectsFilter;
+  };
+  isLoading: boolean;
+  error: string;
 }
 
 export const initialState: ProjectsState = {
-  allProjects: [],
   projects: [],
+  modificators: {
+    sort: ProjectsSort.NAME,
+    filter: ProjectsFilter.ALL,
+  },
+  isLoading: false,
+  error: '',
 };
 
 export const projectsReducer = createReducer<ProjectsState>(initialState, {
-  [getProjectsAction.TRIGGER](state, action: GetProjectsActionType) {
+  [fetchProjectsAction.TRIGGER](state) {
     return {
       ...state,
-      allProjects: action.payload,
+      isLoading: true,
+    };
+  },
+  [fetchProjectsAction.SUCCESS](state, action: FetchProjectsSuccessActionType) {
+    return {
+      ...state,
+      isLoading: false,
       projects: action.payload,
+    };
+  },
+  [fetchProjectsAction.FAILURE](state, action: FetchProjectsFailureActionType) {
+    return {
+      ...state,
+      isLoading: false,
+      error: action.payload,
     };
   },
   [sortProjectsAction.TRIGGER](state, action: SortProjectsActionType) {
     return {
       ...state,
-      projects: [...state.allProjects].sort((projectA, projectB) => {
-        switch (action.payload) {
-          case SortValues.NAME:
-            return projectA.Name >= projectB.Name ? 1 : -1;
-          case SortValues.DATE:
-            return new Date(projectA.CreatedAt) >= new Date(projectB.CreatedAt) ? 1 : -1;
-          default:
-            return 0;
-        }
-      }),
+      modificators: {
+        ...state.modificators,
+        sort: action.payload,
+      },
     };
   },
   [filterProjectsAction.TRIGGER](state, action: FilterProjectsActionType) {
     return {
       ...state,
-      projects: state.allProjects.filter((project) => {
-        switch (action.payload) {
-          case FilterValues.FAVORITE:
-            return project.isFavorite;
-          case FilterValues.INVESTED:
-            return project.isInvested;
-          case FilterValues.OWN:
-            return project.isOwn;
-          case FilterValues.ALL:
-            return true;
-          default:
-            return true;
-        }
-      }),
+      modificators: {
+        ...state.modificators,
+        filter: action.payload,
+      },
     };
   },
 });

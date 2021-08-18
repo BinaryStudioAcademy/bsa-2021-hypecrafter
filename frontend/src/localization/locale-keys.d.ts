@@ -78,4 +78,5 @@ declare type LocaleKeys =
   | 'Own'
   | 'Name'
   | 'Date'
-  | 'projects found';
+  | 'projects found'
+  | 'There are no projects that match these search parameters';

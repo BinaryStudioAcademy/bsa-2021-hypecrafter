@@ -79,6 +79,7 @@
     "projects found": "проектів знайдено",
     "Switch to": "Перейти на {{lang}}",
     "Have an account?": "Уже маєте акаунт?",
-    "Log in": "Увійти"
+    "Log in": "Увійти",
+    "There are no projects that match these search parameters": "Не знайдено проектів, які відповідали б цим параметрам пошуку"
   }
 }
