@@ -5,6 +5,7 @@ import { ChangeEvent, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import hypeCoin from '../../assets/HypeCoin.png';
 import { Routes } from '../../common/enums';
+import { removeTokens } from '../../helpers/localStorage';
 import { useLocalization } from '../../providers/localization';
 import Avatar from '../Avatar';
 import Input from '../Input';
@@ -21,6 +22,9 @@ const Header = () => {
     setText(e.target.value);
   };
 
+  const handleLogOut = () => {
+    removeTokens();
+  };
   const { t } = useLocalization();
 
   return (
@@ -83,11 +87,10 @@ const Header = () => {
               <div className={classes.menu_line} />
               <Link to={Routes.PROJECTS_CREATE}>{t('Create project')}</Link>
               <div className={classes.menu_line} />
-              <Link to={Routes.LOGOUT}>{t('Log out')}</Link>
+              <Link to={Routes.LOGOUT} onClick={handleLogOut}>{t('Log out')}</Link>
             </div>
           )}
         </Popover>
-
       </div>
     </div>
   );
