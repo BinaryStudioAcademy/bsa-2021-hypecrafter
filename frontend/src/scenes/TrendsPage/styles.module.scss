@@ -1,13 +1,14 @@
 @import '../../styles/vars';
 @import '../../styles/mixins';
 
-.container {
+.trends-container {
   display: flex;
   flex-direction: column;
 }
 
 .wrapper {
   background-color: $color-root-background;
+  margin-top: 130px;
 }
 
 

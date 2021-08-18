@@ -4,6 +4,10 @@ import authenticationReducer, { initialState as authenticationInitialState } fro
 import projectReduser, { initialState as projectInitialState } from '../scenes/CreateProject/reducer';
 import mainPageReducer, { mainPageState } from '../scenes/MainPage/reducer';
 import projectPageReducer, { projectPageState } from '../scenes/ProjectPage/reducer';
+import projectsReducer, { initialState as projectsInitialState } from '../scenes/Projects/reducer';
+import trendsPageReducer, {
+  trendsPageState
+} from '../scenes/TrendsPage/reducer';
 import userProfileReducer, { initialState as userProfileInitialState } from '../scenes/UserPage/reducer';
 import paymentReducer, { initialState as paymentInitialState } from '../scenes/Wallet/FundsPage/reducer';
 import transactionsReducer, { initialState as transactionsInitialState } from '../scenes/Wallet/Transactions/reducer';
@@ -15,6 +19,8 @@ const initialState: StoreState = {
   userProfile: userProfileInitialState,
   auth: authState,
   project: projectInitialState,
+  projects: projectsInitialState,
+  trendsPage: trendsPageState,
   projectPage: projectPageState,
   authentication: authenticationInitialState,
   payment: paymentInitialState
@@ -22,9 +28,11 @@ const initialState: StoreState = {
 
 const rootReducer = combineReducers({
   mainPage: mainPageReducer,
+  trendsPage: trendsPageReducer,
   userProfile: userProfileReducer,
   auth: authReducer,
   project: projectReduser,
+  projects: projectsReducer,
   projectPage: projectPageReducer,
   transactions: transactionsReducer,
   authentication: authenticationReducer,

@@ -1,0 +1,21 @@
+.projects-page {
+  margin-top: 7rem;
+}
+
+.projects-wrapper {
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+
+  & > a {
+    flex: 0 0 100%;
+  }
+}
+
+.error-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}

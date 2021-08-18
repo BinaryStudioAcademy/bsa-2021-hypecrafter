@@ -16,6 +16,7 @@
     "react/display-name": "off",
     "no-underscore-dangle": "off",
     "import/no-named-as-default": "off",
+    "import/no-named-as-default-member": "off",
     "react/react-in-jsx-scope": "off",
     "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
     "no-multiple-empty-lines": ["error", { "max": 1 }],

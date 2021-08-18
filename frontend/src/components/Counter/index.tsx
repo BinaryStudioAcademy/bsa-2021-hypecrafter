@@ -13,13 +13,14 @@ const Counter = React.memo(({ value }: { value: number }) => {
     } else {
       animateCounterUp(current, value, setCurrent, setIsChanging);
     }
+    console.log(isChanging, current);
   }, [current, value]);
 
   return (
     <div className={classes.counter}>
       <div>Rating</div>
       <div className={isChanging ? classes.changing : classes.value}>
-        {formate(current, 2)}
+        {formate(current, 1)}
       </div>
     </div>
   );
