@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FunctionComponent } from 'react';
 import { Col, Container, Image, Row } from 'react-bootstrap';
 import { ProjectPage } from '../../../common/types';
+import ProjectInfo from '../../../components/ProjectInfo';
 import classes from '../styles.module.scss';
 
 interface HeaderProps {
@@ -18,14 +19,16 @@ const Header: FunctionComponent<HeaderProps> = ({ project }) => {
     // category,
     imageUrl,
     // tags,
-    // goal,
-    // donated,
-    // likes,
-    // dislikes,
+    goal,
+    donated,
+    bakersAmount,
+    likes,
+    dislikes,
     // FAQ,
     instagramUrl,
     facebookUrl,
     dribbleUrl,
+    finishDate
   } = project;
 
   // const [isFavorite, setFavorite] = useState(false);
@@ -70,6 +73,14 @@ const Header: FunctionComponent<HeaderProps> = ({ project }) => {
               </a>
               )}
           </Row>
+          <ProjectInfo
+            donated={donated}
+            goal={goal}
+            bakersAmount={bakersAmount}
+            likes={likes}
+            dislikes={dislikes}
+            finishDate={finishDate}
+          />
         </Col>
       </Row>
     </Container>
