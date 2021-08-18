@@ -6,7 +6,7 @@ interface Props extends FormGroupProps {
   label?: string;
   defaultText?: string;
   options: Array<{ text: string; value: string }>;
-  onSelectChange:(value:string)=>void
+  onSelectChange?:(value:string)=>void
 }
 
 const Select = forwardRef<HTMLSelectElement, Props>(({
@@ -23,7 +23,7 @@ const Select = forwardRef<HTMLSelectElement, Props>(({
       {...restFormGroupProps}
       className={classes['select-field']}
       as='select'
-      onChange={e => onSelectChange(e.target.value)}
+      onChange={e => onSelectChange && onSelectChange(e.target.value)}
     >
       {defaultText && <option className={classes['select-option']} value="">{defaultText}</option>}
       {options.map((option) => (

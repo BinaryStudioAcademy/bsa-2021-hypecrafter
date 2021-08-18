@@ -1,7 +1,7 @@
 import { Project } from '../../common/types';
 import { Chat, Project as CreateProject, Team } from '../../data/entities';
-import { ChatRepository, ProjectRepository, TeamRepository } from '../../data/repositories';
 import { mapProjects } from '../../data/mappers/mapProjects';
+import { ChatRepository, ProjectRepository, TeamRepository } from '../../data/repositories';
 
 export default class ProjectService {
   readonly #projectRepository: ProjectRepository;
@@ -28,9 +28,7 @@ export default class ProjectService {
   public async createProject(body: CreateProject) {
     const project = await this.#projectRepository.save({ ...new CreateProject(), ...body });
     const team = await this.#teamRepository.save({ ...new Team(), ...body.team, project });
-    body.team.chats.forEach(chat => {
-      this.#chatRepository.save({ ...new Chat(), ...chat, team });
-    });
+    this.#chatRepository.save(body.team.chats.map(chat => ({ ...new Chat(), ...chat, team })));
     project.team = team;
     return project;
   }

@@ -14,7 +14,7 @@ interface ProjectInfoProps {
   bakersAmount: number;
   likes: number;
   dislikes: number;
-  finishDate: string;
+  finishDate: Date;
 }
 
 const ProjectInfo: FunctionComponent<ProjectInfoProps> = ({

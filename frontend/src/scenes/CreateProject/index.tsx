@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
 import LoaderWrapper from '../../components/LoaderWrapper';
 import { useAction, useTypedSelector } from '../../hooks';
 import Basic from './components/Basic';
@@ -29,12 +28,10 @@ const CreateProject = () => {
     minutesToRead: 0,
     totalInteractionTime: 0
   };
-  const dispatch = useDispatch();
   const [currentPage, setCurrentPage] = useState(CurrentPage.BEFORE_START);
-
   const [newProject, setNewProject] = useState(initProject);
   const { createProjectAction } = useAction();
-  const createProject = (project:Project) => dispatch(createProjectAction(project));
+  const createProject = (project:Project) => createProjectAction(project);
   const store = useTypedSelector(({ project: { project, isLoading } }) => ({
     project,
     isLoading
