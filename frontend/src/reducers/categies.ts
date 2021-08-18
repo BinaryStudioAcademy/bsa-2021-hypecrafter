@@ -3,12 +3,12 @@ import type {
   GetCategoriesFailureActionType,
   GetCategoriesSuccessActionType
 } from '../actions/categories';
-import { Categories } from '../common/types';
+import { Category } from '../common/types';
 import { createReducer } from '../helpers';
 
 export interface CategoriesState{
   isLoading: boolean;
-  categories: Categories[];
+  categories: Category[];
   error: string;
 }
 

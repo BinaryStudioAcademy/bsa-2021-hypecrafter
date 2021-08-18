@@ -1,12 +1,12 @@
 import { createRoutine } from 'redux-saga-routines';
-import { Categories } from '../common/types';
+import { Category } from '../common/types';
 
 export enum CategoriesActions {
   GET_CATEGORIES = 'CATEGORIES'
 }
 export const getCategoriesAction = createRoutine(CategoriesActions.GET_CATEGORIES, {
   trigger: () => undefined,
-  success: (categories: Categories[]) => categories,
+  success: (categories: Category[]) => categories,
   failure: (error: string) => error
 });
 
