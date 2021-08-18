@@ -38,7 +38,7 @@ function ProjectPage() {
               <Story />
             </Tab>
             <Tab title="FAQ">
-              <FAQ />
+              <FAQ faqs={project.FAQ} />
             </Tab>
             <Tab title="Comments">
               <Comments />
