@@ -5,7 +5,7 @@ import { ChangeEvent, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import hypeCoin from '../../assets/HypeCoin.png';
 import { Routes } from '../../common/enums';
-import { removeAccessToken, removeRefreshToken } from '../../helpers/localStorage';
+import { removeTokens } from '../../helpers/localStorage';
 import { useLocalization } from '../../providers/localization';
 import Avatar from '../Avatar';
 import Input from '../Input';
@@ -23,8 +23,7 @@ const Header = () => {
   };
 
   const handleLogOut = () => {
-    removeAccessToken();
-    removeRefreshToken();
+    removeTokens();
   };
   const { t } = useLocalization();
 

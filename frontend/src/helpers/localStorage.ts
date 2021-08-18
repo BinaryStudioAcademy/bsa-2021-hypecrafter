@@ -10,14 +10,15 @@ const setRefreshToken = setToLocalStorage(StorageKeys.REFRESH_TOKEN);
 const getAccessToken = () => getFromLocalStorage(StorageKeys.ACCESS_TOKEN);
 const getRefreshToken = () => getFromLocalStorage(StorageKeys.REFRESH_TOKEN);
 
-const removeAccessToken = () => removeFromLocalStorage(StorageKeys.ACCESS_TOKEN);
-const removeRefreshToken = () => removeFromLocalStorage(StorageKeys.REFRESH_TOKEN);
+const removeTokens = () => {
+  removeFromLocalStorage(StorageKeys.ACCESS_TOKEN);
+  removeFromLocalStorage(StorageKeys.REFRESH_TOKEN);
+};
 
 export {
   setAccessToken,
   setRefreshToken,
   getAccessToken,
   getRefreshToken,
-  removeAccessToken,
-  removeRefreshToken
+  removeTokens
 };
