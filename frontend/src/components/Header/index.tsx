@@ -1,4 +1,3 @@
-/* eslint-disable react/button-has-type */
 import { faBell } from '@fortawesome/free-regular-svg-icons';
 import {
   faCaretDown,
