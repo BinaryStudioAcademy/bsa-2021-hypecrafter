@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Redirect, Switch, useLocation } from 'react-router-dom';
 import { Routes } from '../../common/enums';
 import { getAccessToken } from '../../helpers/localStorage';
@@ -9,11 +9,13 @@ import MainPage from '../../scenes/MainPage';
 import ProjectPage from '../../scenes/ProjectPage';
 import Projects from '../../scenes/Projects';
 import TrendsPage from '../../scenes/TrendsPage';
+import UserPage from '../../scenes/UserPage';
 import FundsPage from '../../scenes/Wallet/FundsPage';
 import Transactions from '../../scenes/Wallet/Transactions';
 import Header from '../Header';
 import LoaderWrapper from '../LoaderWrapper';
 import Main from '../Main';
+import ModalWindow from '../ModalWindow';
 import PageNotFound from '../PageNotFound';
 import PrivateRoute from '../PrivateRoute';
 import PublicRoute from '../PublicRoute';
@@ -21,24 +23,45 @@ import PublicRoute from '../PublicRoute';
 const routesWitoutHeader = [Routes.LOGIN, Routes.SIGNUP];
 
 const Routing = () => {
-  const { authFetchUserAction } = useAction();
+  const { authFetchUserAction, closeModalAction } = useAction();
   const authStore = useTypedSelector(({ auth: { user, isLoading } }) => ({
     user,
     isLoading
   }));
+  const userProfileStore = useTypedSelector(({ userProfile: { id } }) => ({
+    id
+  }));
   const { pathname } = useLocation();
   const { user, isLoading } = authStore;
+  const { id } = userProfileStore;
   const hasToken = Boolean(getAccessToken());
+  const [showModal, setShowModal] = useState(false);
+
+  const closeModalHandler = () => {
+    setShowModal(false);
+    closeModalAction();
+  };
 
   useEffect(() => {
     if (hasToken) {
       authFetchUserAction();
+      if (id !== '') {
+        setShowModal(true);
+      }
     }
-  }, [authFetchUserAction]);
+  }, [authFetchUserAction, id]);
 
   return (
     <LoaderWrapper isLoading={isLoading || (!user && hasToken)} variant="page">
       {!routesWitoutHeader.includes(pathname as Routes) && <Header />}
+      <ModalWindow
+        show={showModal}
+        title="User Page"
+        body={<UserPage />}
+        size="extra-wide"
+        centered={false}
+        onHide={closeModalHandler}
+      />
       <Switch>
         <PublicRoute
           restricted={false}
