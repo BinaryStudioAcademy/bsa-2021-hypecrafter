@@ -4,20 +4,24 @@ import styles from './style.scss';
 
 interface DatePickerProps {
   daySetter: (day: Date) => void;
+  value?:Date
 }
 
-const DatePickerInput: React.FC<DatePickerProps> = ({ daySetter }) => {
+const DatePickerInput: React.FC<DatePickerProps> = ({ daySetter, value }) => {
   const handleDayChange = (selectedDay: Date) => {
     daySetter(selectedDay);
   };
 
   return (
-    <DayPickerInput
-      classNames={styles}
-      placeholder="DD/MM/YYYY"
-      format="DD/MM/YYYY"
-      onDayChange={handleDayChange}
-    />
+    <div className="datepicker">
+      <DayPickerInput
+        classNames={styles}
+        placeholder="DD/MM/YYYY"
+        format="DD/MM/YYYY"
+        onDayChange={handleDayChange}
+        value={value}
+      />
+    </div>
   );
 };
 

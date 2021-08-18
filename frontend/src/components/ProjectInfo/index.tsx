@@ -1,12 +1,13 @@
+import { faThumbsDown, faThumbsUp } from '@fortawesome/free-regular-svg-icons';
+import { faThumbsDown as faThumbsDownFilled, faThumbsUp as faThumbsUpFilled } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FunctionComponent, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faThumbsUp, faThumbsDown } from '@fortawesome/free-regular-svg-icons';
-import { faThumbsUp as faThumbsUpFilled, faThumbsDown as faThumbsDownFilled } from '@fortawesome/free-solid-svg-icons';
-import ProgressBarComponent from '../ProgressBar';
 import { calcDaysToGo, calcDonationProgress } from '../../helpers/project';
-import classes from './styles.module.scss';
+import { useLocalization } from '../../providers/localization';
 import Button from '../Button';
+import ProgressBarComponent from '../ProgressBar';
+import classes from './styles.module.scss';
 
 interface ProjectInfoProps {
   donated: number;
@@ -14,7 +15,7 @@ interface ProjectInfoProps {
   bakersAmount: number;
   likes: number;
   dislikes: number;
-  finishDate: string;
+  finishDate: Date;
 }
 
 const ProjectInfo: FunctionComponent<ProjectInfoProps> = ({
@@ -27,14 +28,17 @@ const ProjectInfo: FunctionComponent<ProjectInfoProps> = ({
 }) => {
   const [liked, setLiked] = useState(false);
   const [disliked, setDisliked] = useState(false);
+  const { t } = useLocalization();
 
   const handleLike = () => {
-    if (!disliked) setLiked(!liked);
+    if (disliked) setDisliked(!disliked);
+    setLiked(!liked);
     console.log('like action');
   };
 
   const handleDislike = () => {
-    if (!liked) setDisliked(!disliked);
+    if (liked) setLiked(!liked);
+    setDisliked(!disliked);
     console.log('dislike action');
   };
 
@@ -46,19 +50,19 @@ const ProjectInfo: FunctionComponent<ProjectInfoProps> = ({
         <Col xs={4}>
           <div className={classes['info-block-entity']}>
             <p className={classes['info-backers-amount']}>{bakersAmount}</p>
-            <p className={classes['info-backers']}>Backers</p>
+            <p className={classes['info-backers']}>{t('Backers')}</p>
           </div>
         </Col>
         <Col xs={4}>
           <div className={classes['info-block-entity']}>
             <p className={classes['info-goal-amount']}>{donated}</p>
-            <p className={classes['info-goal']}>Donated</p>
+            <p className={classes['info-goal']}>{t('Donated')}</p>
           </div>
         </Col>
         <Col xs={4}>
           <div className={classes['info-block-entity']}>
-            <p className={classes['info-days-amount']}>{daysToGo}</p>
-            <p className={classes['info-days']}>Days to go</p>
+            <p className={classes['info-days-amount']}>{daysToGo < 0 ? t('Ended') : daysToGo}</p>
+            <p className={classes['info-days']}>{t('Days to go')}</p>
           </div>
         </Col>
       </Row>

@@ -1,8 +1,31 @@
+import { ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
 import { Project } from '../common/types';
 import { api } from '../helpers/http';
 
-export const getPopularAndRecommendedProjects = async () => {
-  const projects: { recommended: Project[], popular: Project[] } = await api.get({ url: 'projects' });
+interface GetProjectsProps {
+  sort: ProjectsSort;
+  filter: ProjectsFilter;
+}
 
+export const getPopularProjectsByCategory = async (category: string) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const projects = await api.get({
+    url: 'projects/popular',
+    params: {
+      category
+    }
+  });
+};
+
+export const getProjects = async ({ sort, filter }: GetProjectsProps): Promise<Project[]> => {
+  const projects: Project[] = await api.get({ url: 'projects', params: { sort, filter } });
+  return projects;
+};
+
+export const getPopularAndRecommendedProjects = async () => {
+  const projects: {
+    recommended: Project[];
+    popular: Project[]
+  } = await api.get({ url: 'projects/popular-and-recommended' });
   return projects;
 };

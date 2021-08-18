@@ -1,0 +1,80 @@
+@import './../../styles/fonts', './../../styles/vars';
+
+$component-width: 323px;
+$component-height: 433px;
+$default-font-size: 14px;
+$title-font-size: 18px;
+$value-font-size: 28px;
+$img-size: 24px;
+
+.wrapper {
+  width: $component-width;
+  min-height: $component-height;
+  padding: 20px 35px;
+  background: $color-root-block-background;
+  border-radius: 3px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  font-size: $default-font-size;
+}
+
+.title {
+  font-family: $font-roboto700;
+  font-size: $title-font-size;
+  margin-left: 3px;
+}
+
+.value_wrapper {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 18px;
+  margin-top: 8px;
+  span {
+    font-size: $value-font-size;
+    margin-right: 4px;
+    font-family: $font-roboto700;
+  }
+  img {
+    width: $img-size;
+    height: $img-size;
+  }
+}
+
+.or_more {
+  font-family: $font-roboto300;
+  margin-top: 4px;
+}
+
+.content {
+  height: 180px;
+}
+
+.includes_title {
+  font-family: $font-roboto500;
+}
+
+.includes_ul {
+  margin: 8px 0 0 3px;
+}
+
+.backers {
+  margin-top: 24px;
+  padding: 4px 9px;
+  background: $color-root-grey;
+  color: rgba(250, 251, 255, 0.5);
+  border-radius: 4px;
+}

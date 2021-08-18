@@ -5,15 +5,16 @@ import { getAccessToken } from '../../helpers/localStorage';
 import { useAction, useTypedSelector } from '../../hooks';
 import LoginPage from '../../scenes/Auth/LoginPage';
 import SignupPage from '../../scenes/Auth/SignupPage';
+import CreateProject from '../../scenes/CreateProject';
 import MainPage from '../../scenes/MainPage';
 import ProjectPage from '../../scenes/ProjectPage';
+import Projects from '../../scenes/Projects';
 import TrendsPage from '../../scenes/TrendsPage';
 import FundsPage from '../../scenes/Wallet/FundsPage';
 import Transactions from '../../scenes/Wallet/Transactions';
 import Header from '../Header';
 import LoaderWrapper from '../LoaderWrapper';
 import Main from '../Main';
-
 import PageNotFound from '../PageNotFound';
 import PrivateRoute from '../PrivateRoute';
 import PublicRoute from '../PublicRoute';
@@ -58,8 +59,20 @@ const Routing = () => {
           exact
           component={SignupPage}
         />
+        <PublicRoute
+          restricted={false}
+          path={Routes.PROJECTS}
+          exact
+          component={Projects}
+        />
         <PrivateRoute exact path={Routes.ADDFUNDS} component={FundsPage} />
         <PrivateRoute exact path={Routes.TRANSACTIONS} component={Transactions} />
+        <PublicRoute
+          restricted={false}
+          exact
+          path={Routes.PROJECTS_CREATE}
+          component={CreateProject}
+        />
         <PublicRoute
           restricted={false}
           path={Routes.TRENDS}
