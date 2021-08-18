@@ -35,12 +35,12 @@
     "YOUR HYPECRAFTER ACCOUNT": "YOUR HYPECRAFTER ACCOUNT",
     "Current Wallet balance": "Current Wallet balance",
     "Account details": "Account details",
-    "Date":"Date",
-    "Items":"Items",
-    "Type":"Type",
-    "Total":"Total",
-    "Change":"Change",
-    "Balance":"Balance",
+    "Date": "Date",
+    "Items": "Items",
+    "Type": "Type",
+    "Total": "Total",
+    "Change": "Change",
+    "Balance": "Balance",
     "Transactions list": "Transactions list",
 
     "Create account": "Create account",
@@ -85,10 +85,10 @@
     "Have an account?": "Have an account?",
     "Log in": "Log in",
 
-    "Load more":"Load more",
-    "Loading...":"Loading...",
-    "Pledge project":"Pledge project",
-    "Balance replenishment":"Balance replenishment",
+    "Load more": "Load more",
+    "Loading...": "Loading...",
+    "Pledge project": "Pledge project",
+    "Balance replenishment": "Balance replenishment",
 
     "Projects": "Projects",
     "Trends": "Trends",
@@ -96,6 +96,11 @@
     "View account": "View account",
     "Edit profile": "Edit profile",
     "Create project": "Create project",
-    "Log out": "Log out"
+    "Log out": "Log out",
+
+    "Backers": "Backers",
+    "Donated": "Donated",
+    "Ended": "Ended",
+    "Days to go": "Days to go"
   }
 }

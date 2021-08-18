@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FunctionComponent, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { calcDaysToGo, calcDonationProgress } from '../../helpers/project';
+import { useLocalization } from '../../providers/localization';
 import Button from '../Button';
 import ProgressBarComponent from '../ProgressBar';
 import classes from './styles.module.scss';
@@ -27,6 +28,7 @@ const ProjectInfo: FunctionComponent<ProjectInfoProps> = ({
 }) => {
   const [liked, setLiked] = useState(false);
   const [disliked, setDisliked] = useState(false);
+  const { t } = useLocalization();
 
   const handleLike = () => {
     if (disliked) setDisliked(!disliked);
@@ -48,19 +50,19 @@ const ProjectInfo: FunctionComponent<ProjectInfoProps> = ({
         <Col xs={4}>
           <div className={classes['info-block-entity']}>
             <p className={classes['info-backers-amount']}>{bakersAmount}</p>
-            <p className={classes['info-backers']}>Backers</p>
+            <p className={classes['info-backers']}>{t('Backers')}</p>
           </div>
         </Col>
         <Col xs={4}>
           <div className={classes['info-block-entity']}>
             <p className={classes['info-goal-amount']}>{donated}</p>
-            <p className={classes['info-goal']}>Donated</p>
+            <p className={classes['info-goal']}>{t('Donated')}</p>
           </div>
         </Col>
         <Col xs={4}>
           <div className={classes['info-block-entity']}>
-            <p className={classes['info-days-amount']}>{daysToGo < 0 ? 'Ended' : daysToGo}</p>
-            <p className={classes['info-days']}>Days to go</p>
+            <p className={classes['info-days-amount']}>{daysToGo < 0 ? t('Ended') : daysToGo}</p>
+            <p className={classes['info-days']}>{t('Days to go')}</p>
           </div>
         </Col>
       </Row>

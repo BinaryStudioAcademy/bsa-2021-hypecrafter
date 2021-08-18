@@ -20,7 +20,7 @@ export default class ProjectService {
   }
 
   public async getById(id: string) {
-    const project = (await this.#projectRepository.getById(id))[0];
+    const project = await this.#projectRepository.getById(id);
     project.bakersAmount = Math.max(0, project.bakersAmount);
     project.donated = Math.max(0, project.donated);
     return project; // rewrite when error handling middleware works
