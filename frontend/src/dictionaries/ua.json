@@ -108,6 +108,13 @@
     "Add member":"Додайте членів команди",
     "I agree":"Погоджуюсь",
     "We will notify this person":"Ми проінформуємо команду про приєднання до проекту",
-    "Pick a members to add they to team.":"Оберіть члена команди і додайте його то переліку"
+    "Pick a members to add they to team.":"Оберіть члена команди і додайте його то переліку",
+    "Projects": "Проекти",
+    "Trends": "Тренди",
+    "Search...": "Пошук...",
+    "View account": "Переглянути акаунт",
+    "Edit profile": "Редагувати профіль",
+    "Create project": "Створити проект",
+    "Log out": "Вийти"
   }
 }

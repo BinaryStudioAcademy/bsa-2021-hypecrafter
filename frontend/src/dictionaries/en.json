@@ -117,6 +117,14 @@
     "Add member":"Add member",
     "I agree":"I agree",
     "We will notify this person":"We will notify this person",
-    "Pick a members to add they to team.":"Pick a members to add they to team."
+    "Pick a members to add they to team.":"Pick a members to add they to team.",
+
+    "Projects": "Projects",
+    "Trends": "Trends",
+    "Search...": "Search...",
+    "View account": "View account",
+    "Edit profile": "Edit profile",
+    "Create project": "Create project",
+    "Log out": "Log out"
   }
 }

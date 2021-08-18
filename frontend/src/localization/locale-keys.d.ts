@@ -107,4 +107,11 @@ declare type LocaleKeys =
  | 'Add member'
  | 'I agree'
  | 'We will notify this person'
- | 'Pick a members to add they to team.';
+ | 'Pick a members to add they to team.'
+ | 'Projects'
+ | 'Trends'
+ | 'Search...'
+ | 'View account'
+ | 'Edit profile'
+ | 'Create project'
+ | 'Log out';
