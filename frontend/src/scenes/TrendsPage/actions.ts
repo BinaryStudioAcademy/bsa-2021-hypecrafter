@@ -1,6 +1,6 @@
 import { createRoutine } from 'redux-saga-routines';
-import { Category, Tag } from '../../common/types';
-import { ProjectItem } from './interfaces';
+import { Category } from '../../common/types';
+import { ProjectItem, TagWithQuantity } from './interfaces';
 
 export enum TrendsPageActions {
   FETCH_POPULAR_TAGS = 'TAGS/FETCH_POPULAR_TAGS',
@@ -20,7 +20,7 @@ export const fetchPopularTagsAction = createRoutine(
   TrendsPageActions.FETCH_POPULAR_TAGS,
   {
     trigger: () => undefined,
-    success: (tags: Tag[]) => tags,
+    success: (tags: TagWithQuantity[]) => tags,
     failure: (error: string) => error
   }
 );

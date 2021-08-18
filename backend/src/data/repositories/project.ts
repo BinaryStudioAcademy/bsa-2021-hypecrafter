@@ -17,18 +17,8 @@ export class ProjectRepository extends Repository<Project> {
         project."id",
         goal,
         category.name AS "category",
-        array_to_string(array_agg(tag.name),', ') AS "tags"
-      `)
-      .leftJoin('project.donates', 'donate')
-      .leftJoin('project.category', 'category')
-      .leftJoin('project.projectTags', 'projectTags')
-      .leftJoin('projectTags.tag', 'tag')
-      .groupBy(
-        `
-        project."id", 
         array_agg(tag.name) AS "tags"
-      `
-      )
+      `)
       .leftJoin(subQuery => subQuery
         .select(`
           SUM(amount) AS donated,

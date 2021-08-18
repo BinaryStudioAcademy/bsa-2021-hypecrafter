@@ -1,14 +1,14 @@
 /* eslint-disable */
 import { ActiveElement, ChartEvent, Tick } from 'chart.js';
-import { Tag } from '../../../common/types';
 import { ChartType } from '../../../components/Chart';
 import {
   blueColorsReverse,
   setBorderColorGradient
 } from '../../../components/Chart/helpers';
 import { getSortedArray, сutWord } from '../../../helpers';
+import { TagWithQuantity } from '../interfaces';
 
-const getDefaultOptions = (data: Tag[]) => ({
+const getDefaultOptions = (data: TagWithQuantity[]) => ({
   responsive: true,
   maintainAspectRatio: false,
   onClick: (event: ChartEvent, elements: ActiveElement[]) => {
@@ -47,7 +47,7 @@ const getDefaultOptions = (data: Tag[]) => ({
   }
 });
 
-const getDefaultData = (data: Tag[]) => {
+const getDefaultData = (data: TagWithQuantity[]) => {
   getSortedArray(data, 'quantity');
   return {
     labels: data.map((item) => item.name),
@@ -65,7 +65,7 @@ const getDefaultData = (data: Tag[]) => {
 
 const type: ChartType = 'bar';
 
-const defaultProps = (items: Tag[]) => {
+const defaultProps = (items: TagWithQuantity[]) => {
   const data = getDefaultData(items);
   const options = getDefaultOptions(items);
 

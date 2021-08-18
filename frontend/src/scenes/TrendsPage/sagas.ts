@@ -1,6 +1,6 @@
 import { Action } from 'redux';
 import { all, call, put, takeEvery } from 'redux-saga/effects';
-import { Category, Tag } from '../../common/types';
+import { Category } from '../../common/types';
 import { getCategories } from '../../services/categories';
 import { getPopularProjectsByCategory } from '../../services/projects';
 import { getPopularTags } from '../../services/tags';
@@ -10,7 +10,7 @@ import {
   fetchPopularTagsAction,
   setSelectedCategoryAction
 } from './actions';
-import { ProjectItem } from './interfaces';
+import { ProjectItem, TagWithQuantity } from './interfaces';
 
 interface TrendsPageAction extends Action {
   payload: string;
@@ -18,7 +18,7 @@ interface TrendsPageAction extends Action {
 
 function* fetchPopularTagsRequest() {
   try {
-    const response: Tag[] = yield call(getPopularTags);
+    const response: TagWithQuantity[] = yield call(getPopularTags);
     yield put(fetchPopularTagsAction.success(response));
   } catch (error) {
     yield put(fetchPopularTagsAction.failure(error as string));

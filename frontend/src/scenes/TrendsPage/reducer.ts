@@ -1,4 +1,4 @@
-import { Category, Tag } from '../../common/types';
+import { Category } from '../../common/types';
 import { createReducer } from '../../helpers';
 import type {
   FetchCategoriesSuccessActionType,
@@ -11,12 +11,12 @@ import {
   fetchPopularTagsAction,
   TrendsPageActions
 } from './actions';
-import { ProjectItem } from './interfaces';
+import { ProjectItem, TagWithQuantity } from './interfaces';
 
 export interface TrendsPageState {
   isLoadingTop: boolean;
   isLoadingBottom: boolean;
-  tags: Tag[];
+  tags: TagWithQuantity[];
   categories: Category[];
   selectedCategory: Category | null;
   projects: ProjectItem[];
