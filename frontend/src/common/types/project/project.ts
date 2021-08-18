@@ -14,7 +14,7 @@ export interface ProjectPage extends Project {
   likes: number;
   dislikes: number;
   bakersAmount: number;
-  FAQ: { question: string, answer: string }[];
+  FAQ: { id: string, question: string, answer: string }[];
   story: string;
   privileges: { amount: number, privilege: string }[];
   instagramUrl?: string;

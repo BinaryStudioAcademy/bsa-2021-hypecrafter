@@ -1,3 +1,4 @@
+
 import { Project } from '../../common/types';
 import { mapProjects } from '../../data/mappers/mapProjects';
 import { ProjectRepository } from '../../data/repositories';
@@ -7,6 +8,11 @@ export default class ProjectService {
 
   constructor(projectRepository: ProjectRepository) {
     this.#projectRepository = projectRepository;
+  }
+
+  public async getPopularProjectsByCategory(category: string) {
+    const popular = await this.#projectRepository.getPopularProjectsByCategory(category);
+    return popular;
   }
 
   public async getPopularAndRecommended() {

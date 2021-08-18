@@ -12,6 +12,7 @@ import { NavLink } from 'react-router-dom';
 import { useWindowResize, useScroll } from '../../hooks';
 import hypeCoin from '../../assets/HypeCoin.png';
 import { Routes } from '../../common/enums';
+import { removeTokens } from '../../helpers/localStorage';
 import { useLocalization } from '../../providers/localization';
 import Avatar from '../Avatar';
 import Input from '../Input';
@@ -76,6 +77,9 @@ const Header = () => {
       scrollUpCallback
     }
   );
+  const handleLogOut = () => {
+    removeTokens();
+  };
 
   return (
     <>
@@ -223,6 +227,7 @@ const Header = () => {
                 <NavLink
                   to={Routes.LOGOUT}
                   className={classes.desktop_menu_item}
+                  onClick={handleLogOut}
                 >
                   {t('Log out')}
                 </NavLink>
@@ -395,6 +400,7 @@ const Header = () => {
               <NavLink
                 to={Routes.LOGOUT}
                 className={classes.mobile_menu_item}
+                onClick={handleLogOut}
               >
                 {t('Log out')}
               </NavLink>
