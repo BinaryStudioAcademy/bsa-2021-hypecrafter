@@ -83,8 +83,8 @@ declare type LocaleKeys =
  | 'There are no projects that match these search parameters'
  | 'Load more'
  | 'Loading...'
- | 'Balance replenishment'
  | 'Pledge project'
+ | 'Balance replenishment'
  | 'Projects'
  | 'Trends'
  | 'Search...'
@@ -97,3 +97,7 @@ declare type LocaleKeys =
  | 'Balance'
  | 'Type'
  | 'Items';
+ | 'Backers'
+ | 'Donated'
+ | 'Ended'
+ | 'Days to go';
