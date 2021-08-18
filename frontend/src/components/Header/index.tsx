@@ -194,12 +194,13 @@ const Header = () => {
                 ${isVisibleOnScroll ? classes.mobile_hide_on_scroll : ''}
               `}
               >
-                <NavLink
-                  to={Routes.PROFILE}
-                  className={classes.desktop_menu_item}
+                <div
+                  className={`
+                  ${classes.desktop_menu_item}
+                `}
                 >
-                  {t('View account')}
-                </NavLink>
+                  <OpenUserModal />
+                </div>
                 <NavLink
                   to={Routes.PROFILE}
                   className={classes.desktop_menu_item}
@@ -367,7 +368,13 @@ const Header = () => {
                 ${isVisibleOnScroll ? classes.mobile_hide_on_scroll : ''}
               `}
             >
-              <OpenUserModal />
+              <div
+                className={`
+                  ${classes.mobile_menu_item}
+                `}
+              >
+                <OpenUserModal />
+              </div>
               <NavLink
                 to={Routes.PROFILE}
                 className={classes.mobile_menu_item}
