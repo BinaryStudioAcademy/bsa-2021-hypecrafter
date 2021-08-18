@@ -92,7 +92,7 @@ export class ProjectRepository extends Repository<Project> {
         .select(`
           jsonb_agg(
             jsonb_build_object(
-              'id', id,
+              'id', faq.id,
               'question', question,
               'answer', answer 
             )

@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { FC, useEffect } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import LoaderWrapper from '../../components/LoaderWrapper';
@@ -9,7 +9,7 @@ import FAQ from './components/FAQ';
 import Header from './components/Header';
 import Story from './components/Story';
 
-function ProjectPage() {
+const ProjectPage: FC = () => {
   const { id } = useParams<{ id: string }>();
   const { fetchProject } = useAction();
   const { project, isLoading } = useTypedSelector(
@@ -23,7 +23,6 @@ function ProjectPage() {
 
   useEffect(() => {
     fetchProject(id);
-    fetchProject('2808acdc-e4c8-4d67-85b9-ee91d09942bb');
   }, []);
 
   return (
@@ -38,7 +37,7 @@ function ProjectPage() {
               <Story />
             </Tab>
             <Tab title="FAQ">
-              <FAQ />
+              <FAQ faqs={project.FAQ} />
             </Tab>
             <Tab title="Comments">
               <Comments />
@@ -48,6 +47,6 @@ function ProjectPage() {
       </Container>
     </LoaderWrapper>
   );
-}
+};
 
 export default ProjectPage;
