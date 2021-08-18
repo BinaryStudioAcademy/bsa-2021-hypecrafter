@@ -71,7 +71,8 @@ export class ProjectRepository extends Repository<Project> {
         "bakersAmount",
         likes,
         dislikes,
-        privileges
+        privileges,
+        "projectComments"
       `)
       .leftJoin(subQuery => subQuery
         .select(`
@@ -117,6 +118,26 @@ export class ProjectRepository extends Repository<Project> {
         .leftJoin('project.projectDonatorsPrivileges', 'projectDonatorsPrivileges')
         .leftJoin('projectDonatorsPrivileges.donatorsPrivilege', 'donatorsPrivilege')
         .groupBy('"projectId"'), 'dp', 'dp."projectId" = project.id')
+      .leftJoin(subQuery => subQuery
+        .select(`
+              jsonb_agg(
+                jsonb_build_object(
+                  'author', jsonb_build_object(
+                      'firstName', "commentAuthor"."firstName",
+                      'lastName', "commentAuthor"."lastName"
+                    ),
+                  'message', comments.message,
+                  'createdAt', comments."createdAt",
+                  'updatedAt', comments."updatedAt",
+                  'parentCommentId', comments."parentCommentId"
+                )
+              ) AS "projectComments",
+              "projectId"
+            `)
+        .from(Project, 'project')
+        .leftJoin('project.comments', 'comments')
+        .leftJoin('comments.author', 'commentAuthor')
+        .groupBy('"projectId"'), 'cp', 'cp."projectId" = project.id')
       .leftJoin(subQuery => subQuery
         .select(`
           array_agg(tag.name) AS "tags",

@@ -89,6 +89,13 @@
     "Load more":"Показати більше транзакцій",
     "Loading...":"Завантаження...",
     "Pledge project":"Підтримка проекту",
-    "Balance replenishment":"Поповнення рахунку"
+    "Balance replenishment":"Поповнення рахунку",
+    "Projects": "Проекти",
+    "Trends": "Тренди",
+    "Search...": "Пошук...",
+    "View account": "Переглянути акаунт",
+    "Edit profile": "Редагувати профіль",
+    "Create project": "Створити проект",
+    "Log out": "Вийти"
   }
 }

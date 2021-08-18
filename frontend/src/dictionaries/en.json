@@ -89,6 +89,14 @@
     "Load more":"Load more",
     "Loading...":"Loading...",
     "Pledge project":"Pledge project",
-    "Balance replenishment":"Balance replenishment"
+    "Balance replenishment":"Balance replenishment",
+
+    "Projects": "Projects",
+    "Trends": "Trends",
+    "Search...": "Search...",
+    "View account": "View account",
+    "Edit profile": "Edit profile",
+    "Create project": "Create project",
+    "Log out": "Log out"
   }
 }
