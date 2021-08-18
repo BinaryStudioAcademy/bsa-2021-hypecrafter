@@ -1,4 +1,5 @@
 import { Project } from '../../common/types';
+import { mapProjects } from '../../data/mappers/mapProjects';
 import { ProjectRepository } from '../../data/repositories';
 
 export default class ProjectService {
@@ -12,13 +13,14 @@ export default class ProjectService {
     const popular: Project[] = await this.#projectRepository.getPopular();
     const recommended: Project[] = await this.#projectRepository.getRecommended();
     return {
-      popular,
-      recommended
+      popular: mapProjects(popular),
+      recommended: mapProjects(recommended)
     };
   }
 
   public async getById(id: string) {
     const project = await this.#projectRepository.getById(id);
+
     return project[0]; // rewrite when error handling middleware works
   }
 }
