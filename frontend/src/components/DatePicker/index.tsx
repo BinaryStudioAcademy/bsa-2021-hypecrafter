@@ -4,10 +4,9 @@ import styles from './style.scss';
 
 interface DatePickerProps {
   daySetter: (day: Date) => void;
-  value?:Date
 }
 
-const DatePickerInput: React.FC<DatePickerProps> = ({ daySetter, value }) => {
+const DatePickerInput: React.FC<DatePickerProps> = ({ daySetter }) => {
   const handleDayChange = (selectedDay: Date) => {
     daySetter(selectedDay);
   };
@@ -19,7 +18,6 @@ const DatePickerInput: React.FC<DatePickerProps> = ({ daySetter, value }) => {
         placeholder="DD/MM/YYYY"
         format="DD/MM/YYYY"
         onDayChange={handleDayChange}
-        value={value}
       />
     </div>
   );
