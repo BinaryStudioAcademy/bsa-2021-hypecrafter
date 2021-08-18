@@ -3,8 +3,8 @@ import { Project } from 'hypecrafter-shared/enums';
 
 const init = () => {
   const router = Router();
-  return router
-    .get(['/'], (_, res: Response) => res.delegate(Project.BACKEND));
+
+  return router.get(['/', '/popular'], (_, res: Response) => res.delegate(Project.BACKEND));
 };
 
 export default init;

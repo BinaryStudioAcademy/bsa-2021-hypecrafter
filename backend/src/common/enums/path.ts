@@ -3,5 +3,6 @@ export enum Path {
   Register = '/auth/register',
   Topic = '/topics',
   Project = '/projects',
-  Categories = '/categories'
+  Tag = '/tags',
+  Category = '/categories'
 }

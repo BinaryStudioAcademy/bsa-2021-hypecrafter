@@ -35,12 +35,12 @@
     "YOUR HYPECRAFTER ACCOUNT": "YOUR HYPECRAFTER ACCOUNT",
     "Current Wallet balance": "Current Wallet balance",
     "Account details": "Account details",
-    "Date":"Date",
-    "Items":"Items",
-    "Type":"Type",
-    "Total":"Total",
-    "Change":"Change",
-    "Balance":"Balance",
+    "Date": "Date",
+    "Items": "Items",
+    "Type": "Type",
+    "Total": "Total",
+    "Change": "Change",
+    "Balance": "Balance",
     "Transactions list": "Transactions list",
 
     "Create account": "Create account",
@@ -78,6 +78,7 @@
 
     "Popular tags": "Popular tags",
     "Popular projects": "Popular projects",
+    "No projects": "No projects",
     "PAGE NOT FOUND": "PAGE NOT FOUND",
 
     "Basic":"Basic",
@@ -107,10 +108,6 @@
     "Have an account?": "Have an account?",
     "Log in": "Log in",
 
-    "Load more":"Load more",
-    "Loading...":"Loading...",
-    "Pledge project":"Pledge project",
-    "Balance replenishment":"Balance replenishment",
     "Finally":"Finally",
     "Your location can be a key factor for the investor in your favor.":"Your location can be a key factor for the investor in your favor.",
     "Decide on the terms for which you want to collect the above amount":"Decide on the terms for which you want to collect the above amount",
@@ -118,6 +115,10 @@
     "I agree":"I agree",
     "We will notify this person":"We will notify this person",
     "Pick a members to add they to team.":"Pick a members to add they to team.",
+    "Load more": "Load more",
+    "Loading...": "Loading...",
+    "Pledge project": "Pledge project",
+    "Balance replenishment": "Balance replenishment",
 
     "Projects": "Projects",
     "Trends": "Trends",
@@ -125,6 +126,11 @@
     "View account": "View account",
     "Edit profile": "Edit profile",
     "Create project": "Create project",
-    "Log out": "Log out"
+    "Log out": "Log out",
+
+    "Backers": "Backers",
+    "Donated": "Donated",
+    "Ended": "Ended",
+    "Days to go": "Days to go"
   }
 }

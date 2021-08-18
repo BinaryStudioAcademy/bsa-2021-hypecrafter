@@ -1,130 +1,566 @@
-@import '../../styles/vars';
-@import '../../styles/fonts.scss';
+@import "../../styles/vars";
+@import "../../styles/fonts.scss";
+@import "../../styles/_mixins.scss";
 
-.header{
-    height: 105px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 60px;
+/* General */
+.visible {
+  display: block;
 }
-.header_left{
-    display: flex;
-    align-items: center;
+
+.desktop_visible {
+  display: flex;
 }
-.logo{
-    height: 26px;
-    margin-right: 40px;
+
+.hide {
+  display: none !important;
 }
-.header_menu_item{
-    margin: 0px 20px;
-    background: none!important;
-    box-shadow: none!important;
-    font-size: 18px;
-    font-family: $font-roboto500;
-    color: $color-root-text;
-    text-decoration: none;
-    &:first-child{
-        margin-left: 70px;
-    }
+
+@mixin color-style {
+  background-color: $color-menu-start-background;
+  color: $color-root-text !important;
+  blur: 0;
 }
-.header_menu_item_active{
-    color: $color-root-turquoise!important;
+
+@mixin mobile-menu-hoover {
+  @include hoover($color-menu-finish-background);
 }
-.header_menu_item_down{
-    margin-left: 8px;
-    margin-right: 0px;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  height: 105px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 60px;
+  @include color-style;
+  transition: blur 1s;
+  transition: background-color 1s;
 }
-.header_right{
-    display: flex;
-    align-items: center;
+.header_left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 4px;
 }
-.header_profile{
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    margin-left: 11px;
+.logo {
+  height: 26px;
+  margin-right: 40px;
 }
-.header_profile_avatar{
-    margin-right: 10px;
+.header_menu_item {
+  margin: 0px 20px;
+  background: none !important;
+  box-shadow: none !important;
+  font-size: 1.1rem;
+  font-family: $font-roboto500;
+  text-decoration: none;
+  color: $color-root-text !important;
+
+  &:first-child {
+    margin-left: 70px;
+  }
+
+  &:hover,
+  &:active,
+  &:visited {
+    color: $color-root-text !important;
+  }
 }
-.header_profile_down{
+.header_menu_item_active {
+  color: $color-root-turquoise !important;
+}
+.header_menu_item_down {
+  margin-left: 8px;
+  margin-right: 0px;
+}
+.header_right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header_profile {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 11px;
+}
+.header_profile_avatar {
+  margin-right: 10px;
+}
+.header_profile_down {
+  font-size: 16px;
+  color: $color-root-text;
+}
+.header_natification {
+  cursor: pointer;
+  margin: 0px 11px;
+  position: relative;
+}
+.header_natification_bell {
+  font-size: 24px;
+  transform: rotate(-30deg);
+}
+.header_natification_new {
+  font-size: 8px;
+  position: absolute;
+  color: $color-root-turquoise;
+  right: 3px;
+}
+.header_hypeCoin {
+  margin: 0px 11px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  img {
+    height: 24px;
+    margin-right: 5px;
+  }
+  a {
+    font-size: 16px;
+    font-family: $font-roboto700;
+    color: $color-root-text !important;
+    margin-top: 2px;
+  }
+}
+
+.header_search {
+  margin: 0px 11px 0 0;
+  position: relative;
+  input {
+    font-size: 12px;
+    width: 282px;
+    height: 45px;
+    padding-left: 48px;
+  }
+}
+.header_search_icon {
+  cursor: pointer;
+  position: absolute;
+  font-size: 20px;
+  top: 12px;
+  left: 16px;
+  z-index: 1;
+}
+.menu_user_container {
+  margin-top: 8px;
+  margin-left: 30px;
+}
+.menu_user {
+  display: flex;
+  flex-direction: column;
+  min-width: 122px;
+  a {
     font-size: 16px;
     color: $color-root-text;
-}
-.header_natification{
-    cursor: pointer;
-    margin: 0px 11px;
-    position: relative;
-}
-.header_natification_bell{
-    font-size: 24px;
-    transform: rotate(-30deg)
-}
-.header_natification_new{
-    font-size: 8px;
-    position: absolute;
-    color: $color-root-turquoise;
-    right: 3px;
-}
-.header_hypeCoin{
-    margin: 0px 11px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    > a{
-        > img{
-            height: 24px;
-            margin-right: 5px;
-        }
-        color:$color-root-text;
-        font-size: 16px;
-        font-family: $font-roboto700;
-        margin-top: 2px;
+    padding: 10px 0px;
+    &:first-child {
+      padding-top: 0px;
     }
+    &:last-child {
+      padding-bottom: 0px;
+    }
+  }
+}
+.menu_line {
+  margin: 5px 0px;
+  width: 100%;
+  height: 1px;
+  background-color: $color-root-grey;
 }
 
-.header_search{
-    margin: 0px 11px;
-    position: relative;
-    input{
-        font-size: 12px;
-        width: 282px;
-        height: 45px;
-        padding-left: 48px;
-    }
+/* For desktop */
+.line_both_desktop {
+  position: relative;
+  &::before {
+    content: " ";
+    top: 0;
+    left: 2rem;
+    right: 2rem;
+    position: absolute;
+    height: 1px;
+    border-bottom: 1px solid $color-root-text;
+  }
+
+  &::after {
+    content: " ";
+    top: 2.5rem;
+    left: 2rem;
+    right: 2rem;
+    position: absolute;
+    height: 1px;
+    border-bottom: 1px solid $color-root-text;
+  }
 }
-.header_search_icon{
+
+.desktop_header_user_menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.desktop_profile {
+  z-index: 20;
+  position: relative;
+  cursor: pointer;
+  margin-right: -1.6rem;
+}
+
+.desktop_menu_profile {
+  position: absolute;
+  top: 3.3rem;
+  right: -0.4rem;
+  width: 14rem;
+  cursor: pointer;
+  @include color-style;
+}
+
+.desktop_menu_item {
+  width: 100%;
+  height: 2.5rem;
+  text-decoration: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 !important;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+  font-size: 1rem;
+  color: $color-root-text;
+  @include mobile-menu-hoover;
+
+  &:hover,
+  &:active,
+  &:visited {
+    @include color-style;
+  }
+}
+
+.desktop_projects_drop {
+  display: inline;
+  margin: 0px 20px;
+  width: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  text-decoration: none;
+  font-size: 1.1rem;
+
+  &:link,
+  &:hover,
+  &:active,
+  &:visited {
+    color: $color-root-text;
+  }
+}
+
+.desktop_project_menu_list {
+  position: absolute;
+  top: 2rem;
+  left: -0.7rem;
+  width: 9rem;
+  z-index: 50;
+  @include color-style;
+}
+
+@media (max-width: 1160px) {
+  .header_left {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 4rem;
+  }
+
+  .header_menu_item:first-child {
+    margin-left: -3px;
+  }
+}
+
+@media (max-width: 925px) {
+  .header {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  .header_left {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 2rem;
+    width: 100%;
+  }
+
+  .header_right {
+    width: 100%;
+  }
+
+  .desktop_trends {
+    margin-right: 0;
+  }
+}
+
+/* For mobile */
+@mixin line_bottom {
+  &:last-child::after {
+    content: " ";
+    bottom: 0;
+    left: 1rem;
+    right: 1rem;
+    position: absolute;
+    height: 1px;
+    border-bottom: 1px solid $color-root-text;
+  }
+}
+
+.line_both {
+  position: relative;
+  &::before {
+    content: " ";
+    top: 0;
+    left: 1rem;
+    right: 1rem;
+    position: absolute;
+    height: 1px;
+    border-bottom: 1px solid $color-root-text;
+  }
+
+  &::after {
+    content: " ";
+    top: 2.5rem;
+    left: 1rem;
+    right: 1rem;
+    position: absolute;
+    height: 1px;
+    border-bottom: 1px solid $color-root-text;
+  }
+}
+
+.mobile_navigation {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8rem;
+  z-index: 10;
+  @include color-style;
+
+  display: grid;
+  grid-template-columns: [start] 2% [hamburger-menu-start] 4rem [hamburger-menu-finish] 1.4rem [logo-start] 1fr [logo-finish] 0.5rem [hypeCoin-start] 5rem [hypeCoin-finish] 0.5rem [notification-start] 2.5rem [notification-finish] 0.5rem [profile-start] 3rem [profile-finish] 2% [finish];
+  grid-template-rows: [start] 2% [search-start] 46% [search-finish] 4% [menu-start] 46% [menu-finish] 2% [finish];
+  transition: blur 1s;
+  transition: background-color 1s;
+}
+
+.mobile_search {
+  grid-row-start: search-start;
+  grid-row-end: search-finish;
+  grid-column-start: hamburger-menu-start;
+  grid-column-end: profile-finish;
+  position: relative;
+
+  input {
+    font-size: 1.5em;
+    width: 100%;
+    height: 45px;
+    padding-left: 48px;
+  }
+
+  .mobile_search_icon {
     cursor: pointer;
     position: absolute;
-    font-size: 20px;
-    top: 12px;
-    left: 16px;
+    font-size: 1.5rem;
+    top: 0.7rem;
+    left: 0.5rem;
     z-index: 1;
+  }
 }
-.menu_user_container{
-    margin-top: 8px;
-    margin-left: 30px;
+
+.mobile_menu_projects {
+  position: relative;
 }
-.menu_user{
-    display: flex;
-    flex-direction: column;
-    min-width: 122px;
-    a{
-        font-size: 16px;
-        color: $color-root-text ;
-        padding: 10px 0px;
-        &:first-child{
-            padding-top: 0px;
-        }
-        &:last-child{
-            padding-bottom: 0px;
-        }
-    }
+
+.mobile_hamburger_menu {
+  grid-row-start: menu-start;
+  grid-row-end: menu-finish;
+  grid-column-start: hamburger-menu-start;
+  grid-column-end: hamburger-menu-finish;
+  position: relative;
 }
-.menu_line{
-    margin: 5px 0px;
-    width: 100%;
+
+.mobile_logo {
+  grid-row-start: menu-start;
+  grid-row-end: menu-finish;
+  grid-column-start: logo-start;
+  grid-column-end: logo-finish;
+  padding-left: 2px;
+}
+
+.mobile_hypeCoin {
+  grid-row-start: menu-start;
+  grid-row-end: menu-finish;
+  grid-column-start: hypeCoin-start;
+  grid-column-end: hypeCoin-finish;
+}
+
+.mobile_notification {
+  grid-row-start: menu-start;
+  grid-row-end: menu-finish;
+  grid-column-start: notification-start;
+  grid-column-end: notification-finish;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  .mobile_notification_bell {
+    font-size: 2em;
+    transform: rotate(-30deg);
+  }
+
+  .mobile_notification_new {
+    font-size: 0.5em;
+    position: absolute;
+    color: $color-root-turquoise;
+    left: 3.5em;
+    top: 0.5em;
+  }
+}
+
+.mobile_profile {
+  grid-row-start: menu-start;
+  grid-row-end: menu-finish;
+  grid-column-start: profile-start;
+  grid-column-end: profile-finish;
+  position: relative;
+  cursor: pointer;
+}
+
+.mobile_menu_profile {
+  position: absolute;
+  top: 3.3rem;
+  right: -0.1rem;
+  width: 14rem;
+  cursor: pointer;
+  @include color-style;
+}
+
+.mobile_menu_list {
+  position: absolute;
+  top: 3rem;
+  left: 0;
+  width: 8rem;
+  z-index: 10;
+  @include color-style;
+}
+
+.mobile_menu_item {
+  width: 100%;
+  height: 2.5rem;
+  text-decoration: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  font-size: 1rem;
+  color: $color-root-text;
+  @include mobile-menu-hoover;
+
+  &:hover,
+  &:active,
+  &:visited {
+    @include color-style;
+  }
+}
+
+.mobile_projects_drop {
+  margin: 0;
+  padding: 0 1rem !important;
+  width: 100%;
+  height: 2.5rem !important;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include mobile-menu-hoover;
+  @include color-style;
+}
+
+.mobile_project_menu_list {
+  position: absolute;
+  top: 1rem;
+  left: 8rem;
+  width: 7rem;
+  @include color-style;
+}
+
+.mobile_hide_on_scroll {
+  background-color: $color-menu-finish-background !important;
+  color: $color-root-text !important;
+  backdrop-filter: blur(6px);
+}
+
+@media (max-width: 510px) {
+  .mobile_navigation {
+    height: 10rem;
+    grid-template-columns: [start] 2% [hamburger-menu-start] 0.2rem [logo-shift] 3.8rem [hamburger-menu-finish] 1fr [hypeCoin-start] 5rem [hypeCoin-finish] 0.5rem [notification-start] 2.5rem [notification-finish] 0.5rem [profile-start] 3rem [profile-finish] 2% [finish];
+    grid-template-rows: [start] 2% [logo-start] 23% [logo-finish] 3% [search-start] 33% [search-finish] 3% [menu-start] 34% [menu-finish] 2% [finish];
+  }
+
+  .mobile_logo {
+    grid-row-start: logo-start;
+    grid-row-end: logo-finish;
+    grid-column-start: logo-shift;
+    grid-column-end: profile-finish;
+  }
+}
+
+@media (max-width: 310px) {
+  .mobile_navigation {
+    grid-template-columns: [start] 4% [hamburger-menu-start] 0.2rem [logo-shift] 3.8rem [hamburger-menu-finish] 1fr [notification-start] 2.5rem [notification-finish] 0.5rem [profile-start] 3rem [profile-finish] 4% [finish];
+    grid-template-rows: [start] 2% [logo-start] 23% [logo-finish] 3% [search-start] 33% [search-finish] 3% [menu-start] 36% [menu-finish] 2% [finish];
+  }
+
+  .mobile_hypeCoin {
+    display: none;
+  }
+
+  .mobile_projects_menu_drop {
+    display: block !important;
+    position: static !important;
+  }
+
+  .mobile_projects_drop::after {
+    content: " ";
+    top: 2.45rem;
+    left: 1rem;
+    right: 1rem;
+    position: absolute;
     height: 1px;
-    background-color: $color-root-grey;
+    border-bottom: 1px solid $color-root-text;
+  }
+
+  .mobile_project_menu_list {
+    position: static;
+    width: 8rem !important;
+
+    @include line_bottom;
+  }
+}
+
+@media (max-width: 220px) {
+  .mobile_navigation {
+    height: 8rem;
+    grid-template-columns: [start] 4% [hamburger-menu-start] 0.2rem [logo-shift] 3.8rem [hamburger-menu-finish] 1fr [notification-start] 2.5rem [notification-finish] 0.5rem [profile-start] 3rem [profile-finish] 4% [finish];
+    grid-template-rows: [start] 2% [search-start] 46% [search-finish] 4% [menu-start] 46% [menu-finish] 2% [finish];
+  }
+
+  .mobile_logo {
+    display: none;
+  }
 }

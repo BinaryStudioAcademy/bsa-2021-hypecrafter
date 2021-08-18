@@ -1,7 +1,8 @@
+
 import { Project } from '../../common/types';
 import { Chat, Project as CreateProject, Team } from '../../data/entities';
-import { mapProjects } from '../../data/mappers/mapProjects';
 import { ChatRepository, ProjectRepository, TeamRepository } from '../../data/repositories';
+import { mapProjects } from '../../data/mappers';
 
 export default class ProjectService {
   readonly #projectRepository: ProjectRepository;
@@ -16,9 +17,15 @@ export default class ProjectService {
     this.#chatRepository = chatRepository;
   }
 
+  public async getPopularProjectsByCategory(category: string) {
+    const popular = await this.#projectRepository.getPopularProjectsByCategory(category);
+    return popular;
+  }
+
   public async getPopularAndRecommended() {
     const popular: Project[] = await this.#projectRepository.getPopular();
     const recommended: Project[] = await this.#projectRepository.getRecommended();
+
     return {
       popular: mapProjects(popular),
       recommended: mapProjects(recommended)
@@ -35,7 +42,8 @@ export default class ProjectService {
 
   public async getById(id: string) {
     const project = await this.#projectRepository.getById(id);
-
-    return project[0]; // rewrite when error handling middleware works
+    project.bakersAmount = Math.max(0, project.bakersAmount);
+    project.donated = Math.max(0, project.donated);
+    return project; // rewrite when error handling middleware works
   }
 }

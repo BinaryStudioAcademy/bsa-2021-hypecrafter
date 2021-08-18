@@ -4,8 +4,9 @@ export enum Path {
   Auth = '/auth',
   Notification = '/notifications',
   Project = '/projects',
-  Category = '/categories',
   Payment = '/payment',
+  Tag = '/tags',
+  Category = '/categories'
 }
 
 export enum AuthApiPath {

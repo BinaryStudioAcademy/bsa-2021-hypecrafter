@@ -1,13 +1,14 @@
 import { CategoryRepository } from '../../data/repositories';
 
-export default class UserService {
-  readonly #categoryRepository: CategoryRepository;
+export default class CategoryService {
+  readonly #categoryepository: CategoryRepository;
 
-  constructor(categoryRepository: CategoryRepository) {
-    this.#categoryRepository = categoryRepository;
+  constructor(categoryepository: CategoryRepository) {
+    this.#categoryepository = categoryepository;
   }
 
-  public getAll() {
-    return this.#categoryRepository.getAll();
+  public async getAll() {
+    const popular = await this.#categoryepository.getAll();
+    return popular;
   }
 }
