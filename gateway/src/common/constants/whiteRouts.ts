@@ -8,6 +8,7 @@ const WHITE_ROUTES = [
   '/users/:id',
   '/topics',
   '/projects',
+  '/projects/popular-and-recommended',
   '/tags',
   '/categories',
   '/projects/popular',
