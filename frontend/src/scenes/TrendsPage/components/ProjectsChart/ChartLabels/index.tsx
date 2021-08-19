@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { Row } from 'react-bootstrap';
 import { randomBrightColor } from '../../../../../helpers';
 import { ProjectItem } from '../../../interfaces';
 import Label from './Label';
@@ -11,11 +12,11 @@ interface ChartLabelsProps {
 const ChartLabels: FC<ChartLabelsProps> = ({ projects }) => {
   const colors = randomBrightColor(projects.length);
   return (
-    <div className={classes['chart-labels']}>
+    <Row className={classes['chart-labels']}>
       {projects.map((el, i) => (
         <Label key={el.id} project={el} color={colors[i]} />
       ))}
-    </div>
+    </Row>
   );
 };
 
