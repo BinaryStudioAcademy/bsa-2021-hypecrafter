@@ -23,7 +23,7 @@ const BeforeStart: FC<Props> = ({ changePage, currentPage }) => {
     <div>
       <p className={classes.text}>{t('Agreement') + t('Agreement') + t('Agreement') + t('Agreement') + t('Agreement')}
       </p>
-      <Checkbox label={t('I agree with privacy consent')} value={checked} onChange={handleChange} />
+      <Checkbox label={t('I agree with privacy consent')} value={checked} onChange={handleChange} id="agreePrivacy" />
     </div>
   );
   const footer = (

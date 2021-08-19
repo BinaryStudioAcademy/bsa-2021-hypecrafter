@@ -5,18 +5,19 @@ import classes from './styles.module.scss';
 interface Props{
   label: string,
   value: boolean,
-  onChange:()=>void
+  onChange: () => void,
+  id:string
 }
 
-const Checkbox: FC<Props> = ({ label, value, onChange }) => (
+const Checkbox: FC<Props> = ({ label, value, onChange, id }) => (
   <InputGroup className={classes.checkbox}>
     <input
-      id="checkbox"
+      id={id}
       type="checkbox"
       checked={value}
       onChange={onChange}
     />
-    {label && <FormLabel htmlFor="chackbox" className={classes.label}> {label} </FormLabel>}
+    {label && <FormLabel htmlFor={id} className={classes.label}> {label} </FormLabel>}
   </InputGroup>
 );
 export default Checkbox;

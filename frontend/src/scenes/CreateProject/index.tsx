@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { CreateProject as Project } from '../../common/types';
 import LoaderWrapper from '../../components/LoaderWrapper';
 import { useAction, useTypedSelector } from '../../hooks';
 import Basic from './components/Basic';
@@ -8,7 +9,6 @@ import Settings from './components/Settings';
 import Story from './components/Story';
 import Team from './components/Team';
 import { CurrentPage, ProjectKeys } from './enums';
-import { CreateProject as Project } from './types/project';
 
 // import classes from './styles.module.scss';
 
@@ -22,11 +22,7 @@ const CreateProject = () => {
     region: '',
     team: { name: '', chats: [] },
     imageUrl: '',
-    tags: [],
-    url: '',
-    totalViews: 0,
-    minutesToRead: 0,
-    totalInteractionTime: 0
+    tags: []
   };
   const [currentPage, setCurrentPage] = useState(CurrentPage.BEFORE_START);
   const [newProject, setNewProject] = useState(initProject);

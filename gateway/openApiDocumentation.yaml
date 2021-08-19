@@ -70,7 +70,7 @@ paths:
                     type: string
                     example: "Timed out"
   /projects:
-    put:
+    post:
       tags:
         - Project
       summary: Create a project.
