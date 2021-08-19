@@ -1,3 +1,4 @@
+import classnames from 'classnames';
 import { FC } from 'react';
 import { Col } from 'react-bootstrap';
 import { сutWord } from '../../../../../../helpers';
@@ -10,7 +11,7 @@ interface LabelProps {
 }
 
 const Label: FC<LabelProps> = ({ project, color }) => (
-  <Col className={classes.item}>
+  <Col className={classnames(classes.item, 'justify-content-center')}>
     <div className={classes['color-wrapper']}>
       <div style={{ background: color }} className={classes['color-box']} />
     </div>
