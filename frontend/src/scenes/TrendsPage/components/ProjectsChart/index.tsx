@@ -49,11 +49,11 @@ const PopularProjectsChart: FC<PopularProjectsChartProps> = ({
           />
         ))}
       </div>
-      <div className={classes['text-wrapper']}>
-        <p className={classes.text}>
-          {projects.length > 0 ? selectedCategory?.name : t('No projects')}
-        </p>
-        <div className={classes['bottom-chart-wrapper']}>
+      <div className={classes['bottom-chart-wrapper']}>
+        <div className={classes['text-wrapper']}>
+          <p className={classes.text}>
+            {projects.length > 0 ? selectedCategory?.name : t('No projects')}
+          </p>
           <Chart
             type={defaultParams.type}
             labels={defaultParams.labels}
