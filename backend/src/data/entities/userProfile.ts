@@ -45,6 +45,9 @@ export class UserProfile extends AbstractEntity {
   @Column({ nullable: true })
   birthday: string;
 
+  @Column({ type: 'text', nullable: true })
+  imageUrl: string;
+
   @Column({ nullable: true })
   instagramUrl: string;
 

@@ -120,8 +120,11 @@ export class ProjectRepository extends Repository<Project> {
               jsonb_agg(
                 jsonb_build_object(
                   'author', jsonb_build_object(
+                      'id', "commentAuthor"."id",
                       'firstName', "commentAuthor"."firstName",
-                      'lastName', "commentAuthor"."lastName"
+                      'lastName', "commentAuthor"."lastName",
+                      'avatar', "commentAuthor"."imageUrl",
+                      'isBacker', CASE WHEN "dnu"."userId" IS NULL THEN false ELSE true END
                     ),
                   'message', comments.message,
                   'createdAt', comments."createdAt",
@@ -129,12 +132,13 @@ export class ProjectRepository extends Repository<Project> {
                   'parentCommentId', comments."parentCommentId"
                 )
               ) AS "projectComments",
-              "projectId"
+              project.id as "projectId"
             `)
         .from(Project, 'project')
         .leftJoin('project.comments', 'comments')
         .leftJoin('comments.author', 'commentAuthor')
-        .groupBy('"projectId"'), 'cp', 'cp."projectId" = project.id')
+        .leftJoin('donate', 'dnu', '"dnu"."projectId"=project."id" AND "dnu"."userId"="commentAuthor"."id"')
+        .groupBy('project.id'), 'cp', 'cp."projectId" = project.id')
       .leftJoin(subQuery => subQuery
         .select(`
           array_agg(tag.name) AS "tags",
