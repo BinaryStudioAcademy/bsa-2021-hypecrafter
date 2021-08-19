@@ -55,7 +55,7 @@ const Filters = () => {
           options={[
             { value: ProjectsFilter.ALL, text: t('All') },
             { value: ProjectsFilter.FAVORITE, text: t('Favorite') },
-            // { value: ProjectsFilter.INVESTED, text: t('Invested') }, // todo
+            { value: ProjectsFilter.INVESTED, text: t('Invested') },
             { value: ProjectsFilter.OWN, text: t('Own') },
           ]}
           {...register('filter', { required: true })}
