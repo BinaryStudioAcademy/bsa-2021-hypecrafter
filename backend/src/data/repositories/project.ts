@@ -133,7 +133,7 @@ export class ProjectRepository extends Repository<Project> {
                   'parentCommentId', comments."parentCommentId"
                 )
               ) AS "projectComments",
-              project.id as "projectId"
+              project.id AS "projectId"
             `)
         .from(Project, 'project')
         .leftJoin('project.comments', 'comments')
