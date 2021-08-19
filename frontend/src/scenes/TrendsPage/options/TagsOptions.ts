@@ -1,4 +1,3 @@
-/* eslint-disable */
 import { ActiveElement, ChartEvent, Tick } from 'chart.js';
 import { ChartType } from '../../../components/Chart';
 import {
@@ -29,7 +28,7 @@ const getDefaultOptions = (data: TagWithQuantity[]) => ({
       },
       ticks: {
         color: 'white',
-        callback: (value: string | number, index: number, ticks: Tick[]) => сutWord(data[index].name, 10)
+        callback: (value: string | number, index: number, _ticks: Tick[]) => сutWord(data[index].name, 10)
       }
     },
     y: {
@@ -40,7 +39,7 @@ const getDefaultOptions = (data: TagWithQuantity[]) => ({
       },
       ticks: {
         color: 'grey',
-        callback: (value: string | number, index: number, ticks: Tick[]) => `${value} projects`,
+        callback: (value: string | number, _index: number, _ticks: Tick[]) => `${value} projects`,
         stepSize: 1
       }
     }

@@ -1,4 +1,3 @@
-/* eslint-disable */
 import { ChartType } from '../../../components/Chart';
 import { randomBrightColor } from '../../../helpers';
 import { ProjectItem } from '../interfaces';
