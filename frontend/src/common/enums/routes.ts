@@ -12,5 +12,6 @@ export enum Routes {
   PROFILE = '/profile',
   NOTFOUND = '/page-not-found',
   EXAMPLES = '/examples',
+  PAYMENT = '/payment',
   ID = '/:id'
 }

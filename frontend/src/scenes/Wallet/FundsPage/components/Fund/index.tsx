@@ -1,5 +1,7 @@
 import { FC } from 'react';
+import { useHistory } from 'react-router-dom';
 import coinImg from '../../../../../assets/HypeCoin.png';
+import { Routes } from '../../../../../common/enums';
 import Button from '../../../../../components/Button';
 import { useAction } from '../../../../../hooks';
 import { useLocalization } from '../../../../../providers/localization';
@@ -12,6 +14,11 @@ const Fund: FC<FundProps> = (props) => {
   const { t } = useLocalization();
   const { price } = props;
   const { setFundAction } = useAction();
+  const history = useHistory();
+  const onClick = () => {
+    setFundAction(price, false);
+    history.push(Routes.PAYMENT);
+  };
   return (
     <div className={classes['wrp-fund-body']}>
       <div className={classes['fund-body']}>
@@ -26,7 +33,7 @@ const Fund: FC<FundProps> = (props) => {
             {` ${price}`}
             <img src={coinImg} alt="Coin" />
           </span>
-          <Button className={classes['add-funds-btn']} type="submit" onClick={() => setFundAction(price, false)}>
+          <Button className={classes['add-funds-btn']} type="submit" onClick={onClick}>
             {t('Add funds')}
           </Button>
         </div>

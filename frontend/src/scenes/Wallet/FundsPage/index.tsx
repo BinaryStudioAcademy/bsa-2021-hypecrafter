@@ -12,14 +12,14 @@ const FundsPage: FC = () => {
   const { t } = useLocalization();
   return (
     <Container fluid="sm">
+      <div className={classes.breadcrumbs}>
+        <Link to={Routes.HOME}> {t('Home')}</Link>
+        {' > '}
+        <Link to="/account">{t('Account')}</Link>
+        {' > '}
+        <span>{t('Add funds to your Wallet')}</span>
+      </div>
       <div className={classes['wallet-header']}>
-        <div className={classes.breadcrumbs}>
-          <Link to={Routes.HOME}> {t('Home')}</Link>
-          {' > '}
-          <Link to="/account">{t('Account')}</Link>
-          {' > '}
-          <span>{t('Add funds to your Wallet')}</span>
-        </div>
         <h2 className={classes['wallet-header-title']}>
           {t('ADD FUNDS TO YOUR')} <strong>HYPECRAFTER</strong>{' '}
           {t('WALLET')}
