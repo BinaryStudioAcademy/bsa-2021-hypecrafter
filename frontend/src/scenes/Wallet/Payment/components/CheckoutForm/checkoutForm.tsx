@@ -1,82 +1,46 @@
-import {
-  CardElement
-} from '@stripe/react-stripe-js';
-import { useEffect, useState } from 'react';
+import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
+import { FormEvent } from 'react';
+import classes from './styles.module.scss';
 
 export default function CheckoutForm() {
-  const [succeeded] = useState(false);
-  const [error] = useState(null);
-  const [processing] = useState('');
-  const [disabled] = useState(true);
-  const [clientSecret, setClientSecret] = useState('');
-  // const stripe = useStripe();
-  // const elements = useElements();
-  console.log(clientSecret);
-  useEffect(() => {
-    // Create PaymentIntent as soon as the page loads
-    window
-      .fetch('/create-payment-intent', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ items: [{ id: 'xl-tshirt' }] })
-      })
-      .then(res => res.json())
-      .then(data => {
-        setClientSecret(data.clientSecret);
-      });
-  }, []);
+  const stripe = useStripe();
+  const elements = useElements();
 
-  const cardStyle = {
-    style: {
-      base: {
-        color: '#32325d',
-        fontFamily: 'Arial, sans-serif',
-        fontSmoothing: 'antialiased',
-        fontSize: '16px',
-        '::placeholder': {
-          color: '#32325d'
-        }
-      },
-      invalid: {
-        color: '#fa755a',
-        iconColor: '#fa755a'
+  const handleSubmit = async (event: FormEvent) => {
+    // Block native form submission.
+    event.preventDefault();
+
+    if (!stripe || !elements) {
+      // Stripe.js has not loaded yet. Make sure to disable
+      // form submission until Stripe.js has loaded.
+      return;
+    }
+
+    // Get a reference to a mounted CardElement. Elements knows how
+    // to find your CardElement because there can only ever be one of
+    // each type of element.
+    const cardElement = elements.getElement(CardElement);
+
+    // Use your card Element with other Stripe.js APIs
+    if (cardElement) {
+      const { error, paymentMethod } = await stripe.createPaymentMethod({
+        type: 'card',
+        card: cardElement
+      });
+      if (error) {
+        console.log('[error]', error);
+      } else {
+        console.log('[PaymentMethod]', paymentMethod);
       }
     }
   };
+
   return (
-    <form id="payment-form">
-      <CardElement id="card-element" options={cardStyle} />
-      <button
-        disabled={Boolean(processing || disabled || succeeded)}
-        type="submit"
-        id="submit"
-      >
-        <span id="button-text">
-          {processing ? (
-            <div className="spinner" id="spinner" />
-          ) : (
-            'Pay now'
-          )}
-        </span>
+    <form className={classes['card-form']} onSubmit={handleSubmit}>
+      <CardElement onChange />
+      <button type="submit" disabled={!stripe}>
+        Pay
       </button>
-      {/* Show any error that happens when processing the payment */}
-      {error && (
-        <div className="card-error" role="alert">
-          {error}
-        </div>
-      )}
-      {/* Show a success message upon completion */}
-      <p className={succeeded ? 'result-message' : 'result-message hidden'}>
-        Payment succeeded, see the result in your
-        <a
-          href="https://dashboard.stripe.com/test/payments"
-        >
-          {' '}
-          Stripe dashboard.
-        </a> Refresh the page to pay again.
-      </p>
     </form>
   );
 }

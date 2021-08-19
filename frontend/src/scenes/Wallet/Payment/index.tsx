@@ -6,7 +6,7 @@ import { MIN_AMOUNT_FUND } from '../../../common/constans/payment';
 import { Routes } from '../../../common/enums';
 import { useTypedSelector } from '../../../hooks';
 import { useLocalization } from '../../../providers/localization';
-import PaymentForm from './components/paymentForm';
+import PaymentForm from './components/paymentMenu';
 import classes from './styles.module.scss';
 
 const Payment: FC = () => {
@@ -29,19 +29,21 @@ const Payment: FC = () => {
       </div>
       <h1 className={classes['payment-title']}>{t('Payment')}</h1>
       <h2 className={classes['selected-fund-title']}>{t('Selected fund')}:</h2>
-      <div className={classes['selected-fund-wrp']}>
-        <div className={classes['selected-fund']}>
-          <h2>
-            {isCustom ? 'Custom fund' : 'Basic fund'}
-          </h2>
-          <div className={classes['fund-amount']}>
-            <span className={classes['fund-amount-title']}>Amount: </span>
-            <span className={classes['fund-amount-value']}>{amount}</span>
-            <img src={coinImg} alt="Coin" />
+      <div className={classes['payment-main-content']}>
+        <div className={classes['selected-fund-wrp']}>
+          <div className={classes['selected-fund']}>
+            <h2>
+              {isCustom ? 'Custom fund' : 'Basic fund'}
+            </h2>
+            <div className={classes['fund-amount']}>
+              <span className={classes['fund-amount-title']}>Amount: </span>
+              <span className={classes['fund-amount-value']}>{amount}</span>
+              <img src={coinImg} alt="Coin" />
+            </div>
           </div>
         </div>
+        <PaymentForm />
       </div>
-      <PaymentForm />
     </Container>
   );
 };
