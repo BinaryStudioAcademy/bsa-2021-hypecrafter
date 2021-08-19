@@ -26,9 +26,7 @@ const newProject: Project = {
   totalViews: 0,
   minutesToRead: 0,
   region: '',
-  totalInteractionTime: 0,
-  startDate: new Date(),
-  finishDate: new Date()
+  totalInteractionTime: 0
 };
 
 export const initialState: ProjectState = {
