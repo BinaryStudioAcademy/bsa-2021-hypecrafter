@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { FormLabel, InputGroup } from 'react-bootstrap';
 import classes from './styles.module.scss';
 
 interface Props{
@@ -8,13 +9,14 @@ interface Props{
 }
 
 const Checkbox: FC<Props> = ({ label, value, onChange }) => (
-  <label className={classes.checkbox}>
+  <InputGroup className={classes.checkbox}>
     <input
+      id="checkbox"
       type="checkbox"
       checked={value}
       onChange={onChange}
     />
-    <label>{label}</label>
-  </label>
+    {label && <FormLabel htmlFor="chackbox" className={classes.label}> {label} </FormLabel>}
+  </InputGroup>
 );
 export default Checkbox;

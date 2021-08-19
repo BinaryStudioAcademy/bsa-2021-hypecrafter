@@ -1,5 +1,5 @@
 export interface Project {
-  id?: string | undefined;
+  id: string;
   name: string;
   description: string;
   category?: string;
