@@ -110,7 +110,7 @@ export class ProjectRepository extends Repository<Project> {
               )
             ) AS "privileges",
             "projectId"
-          `)
+          `) // bakersAmount
         .from(Project, 'project')
         .leftJoin('project.projectDonatorsPrivileges', 'projectDonatorsPrivileges')
         .leftJoin('projectDonatorsPrivileges.donatorsPrivilege', 'donatorsPrivilege')
@@ -124,7 +124,8 @@ export class ProjectRepository extends Repository<Project> {
                       'firstName', "commentAuthor"."firstName",
                       'lastName', "commentAuthor"."lastName",
                       'avatar', "commentAuthor"."imageUrl",
-                      'isBacker', CASE WHEN "dnu"."userId" IS NULL THEN false ELSE true END
+                      'isBacker', CASE WHEN "userDonates"."userId" IS NULL THEN false ELSE true END,
+                      'isOwner', CASE WHEN tu."userId" IS NULL THEN false ELSE true END
                     ),
                   'message', comments.message,
                   'createdAt', comments."createdAt",
@@ -137,7 +138,9 @@ export class ProjectRepository extends Repository<Project> {
         .from(Project, 'project')
         .leftJoin('project.comments', 'comments')
         .leftJoin('comments.author', 'commentAuthor')
-        .leftJoin('donate', 'dnu', '"dnu"."projectId"=project."id" AND "dnu"."userId"="commentAuthor"."id"')
+        .leftJoin('donate', 'userDonates', '"userDonates"."projectId"=project."id" AND "userDonates"."userId"="commentAuthor"."id"')
+        .leftJoin('project.team', 'team')
+        .leftJoin('team_users', 'tu', 'tu."teamId"=team."id" AND "tu"."userId"="commentAuthor"."id"')
         .groupBy('project.id'), 'cp', 'cp."projectId" = project.id')
       .leftJoin(subQuery => subQuery
         .select(`
