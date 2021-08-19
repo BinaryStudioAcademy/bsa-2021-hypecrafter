@@ -5,6 +5,7 @@ import Gateway from 'micromq/gateway';
 import path from 'path';
 import swaggerUI, { JsonObject } from 'swagger-ui-express';
 import YAML from 'yamljs';
+import { BLACK_ROUTES } from '../../common/constants/blackRoutes';
 import { WHITE_ROUTES } from '../../common/constants/whiteRouts';
 import { env } from '../../env';
 import { Services } from '../../services';
@@ -25,7 +26,7 @@ export const initMiddlewares = (app: Express, _services: Services) => {
     rabbit,
   });
   app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
-  app.use('/', authorization(WHITE_ROUTES));
+  app.use('/', authorization(WHITE_ROUTES, BLACK_ROUTES));
   app.use(cors());
   app.use(logger);
   app.use(json());
