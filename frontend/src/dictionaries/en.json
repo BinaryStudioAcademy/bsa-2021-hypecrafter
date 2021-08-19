@@ -103,6 +103,8 @@
     "Ended": "Ended",
     "Days to go": "Days to go",
     "posted": "posted",
-    "language": "en"
+    "language": "en",
+    "OWNER": "OWNER",
+    "BACKER": "BACKER"
   }
 }

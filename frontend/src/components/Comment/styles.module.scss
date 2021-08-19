@@ -41,8 +41,15 @@
   border-radius: 0.4rem;
   padding-left: 1.2rem;
   padding-right: 1.5rem;
+}
+
+.backer {
   background-color: $color-badge-backer-background;
   color: $color-root-block-background;
+}
+
+.owner {
+  background-color: $color-badge-owner-background;
 }
 
 .date {
@@ -61,9 +68,14 @@
 @media (max-width: 330px) {
   .name {
     flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
+  .badge {
+    margin-left: 0;
   }
 
   .date {
-    margin-left: 0.9rem;
+    margin-left: 0;
   }
 }

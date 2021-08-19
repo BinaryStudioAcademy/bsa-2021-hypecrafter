@@ -102,4 +102,6 @@ declare type LocaleKeys =
  | 'Ended'
  | 'Days to go'
  | 'posted'
- | 'language';
+ | 'language'
+ | 'OWNER'
+ | 'BACKER';
