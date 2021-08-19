@@ -1,16 +1,22 @@
 import { UserProfile } from '../../common/types';
 import { createReducer } from '../../helpers';
-import type { FetchUserProfileFailureActionType, FetchUserProfileSuccessActionType } from './actions';
-import { fetchUserProfileAction } from './actions';
+import type {
+  FetchUserProfileFailureActionType,
+  FetchUserProfileSuccessActionType,
+  OpenModalTriggerActionType
+} from './actions';
+import { closeModalAction, fetchUserProfileAction, openModalAction } from './actions';
 
 export interface UserProfileState {
   isLoading: boolean;
+  id: string;
   item: UserProfile | undefined;
   error: string;
 }
 
 export const initialState: UserProfileState = {
   isLoading: false,
+  id: '',
   item: undefined,
   error: ''
 };
@@ -34,6 +40,18 @@ export const userProfileReducer = createReducer<UserProfileState>(initialState, 
       ...state,
       isLoading: false,
       error: action.payload
+    };
+  },
+  [openModalAction.TRIGGER](state, action: OpenModalTriggerActionType) {
+    return {
+      ...state,
+      id: action.payload
+    };
+  },
+  [closeModalAction.TRIGGER](state) {
+    return {
+      ...state,
+      id: ''
     };
   }
 });

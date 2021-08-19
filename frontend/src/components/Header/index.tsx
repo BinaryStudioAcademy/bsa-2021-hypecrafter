@@ -1,23 +1,22 @@
 import { faBell } from '@fortawesome/free-regular-svg-icons';
 import {
-  faCaretDown,
-  faCircle,
-  faSearch,
-  faCaretRight
+  faCaretDown, faCaretRight, faCircle,
+  faSearch
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ChangeEvent, useState } from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
-import { useWindowResize, useScroll } from '../../hooks';
 import hypeCoin from '../../assets/HypeCoin.png';
 import { Routes } from '../../common/enums';
 import { removeTokens } from '../../helpers/localStorage';
+import { useScroll, useWindowResize } from '../../hooks';
 import { useLocalization } from '../../providers/localization';
 import Avatar from '../Avatar';
 import Input from '../Input';
 import Link from '../Link';
 import Logo from '../Logo';
+import OpenUserModal from '../OpenUserModalOption';
 import LanguageSwitcher from '../SwitchLanguageOption/LanguageSwitcher';
 import classes from './styles.module.scss';
 
@@ -195,12 +194,13 @@ const Header = () => {
                 ${isVisibleOnScroll ? classes.mobile_hide_on_scroll : ''}
               `}
               >
-                <NavLink
-                  to={Routes.PROFILE}
-                  className={classes.desktop_menu_item}
+                <div
+                  className={`
+                  ${classes.desktop_menu_item}
+                `}
                 >
-                  {t('View account')}
-                </NavLink>
+                  <OpenUserModal />
+                </div>
                 <NavLink
                   to={Routes.PROFILE}
                   className={classes.desktop_menu_item}
@@ -368,12 +368,13 @@ const Header = () => {
                 ${isVisibleOnScroll ? classes.mobile_hide_on_scroll : ''}
               `}
             >
-              <NavLink
-                to={Routes.PROFILE}
-                className={classes.mobile_menu_item}
+              <div
+                className={`
+                  ${classes.mobile_menu_item}
+                `}
               >
-                {t('View account')}
-              </NavLink>
+                <OpenUserModal />
+              </div>
               <NavLink
                 to={Routes.PROFILE}
                 className={classes.mobile_menu_item}
