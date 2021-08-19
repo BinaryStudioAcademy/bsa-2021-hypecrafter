@@ -13,18 +13,12 @@
   margin-bottom: 50px;
 }
 
-.bottom-chart-wrapper {
-  position: relative;
-  height: 400px;
-  width: 300px;
-  margin: 0 auto;
-}
-
 .text-wrapper {
   position: relative;
 }
 
 .text {
+  display: none;
   @include heading-md;
   position: absolute;
   top: 50%;

@@ -60,8 +60,7 @@ const PopularProjectsChart: FC<PopularProjectsChartProps> = ({
             labels={defaultParams.labels}
             dataSets={defaultParams.dataSets}
             options={defaultParams.options}
-            height="400px"
-            width="300px"
+            height="500px"
           />
         </div>
       </div>

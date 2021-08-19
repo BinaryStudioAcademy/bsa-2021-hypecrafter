@@ -29,7 +29,7 @@ const getDefaultOptions = (data: TagWithQuantity[]) => ({
       },
       ticks: {
         color: 'white',
-        callback: (value: string | number, index: number, ticks: Tick[]) => сutWord(data[index].name, 6)
+        callback: (value: string | number, index: number, ticks: Tick[]) => сutWord(data[index].name, 10)
       }
     },
     y: {
@@ -53,7 +53,7 @@ const getDefaultData = (data: TagWithQuantity[]) => {
     labels: data.map((item) => item.name),
     datasets: [
       {
-        label: 'Tags',
+        label: 'projects',
         data: data.map((item) => item.quantity),
         fill: false,
         backgroundColor: setBorderColorGradient(blueColorsReverse),
