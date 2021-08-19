@@ -1,0 +1,35 @@
+@import '../../../../../../styles/vars';
+@import '../../../../../../styles/mixins';
+
+.item {
+  width: 200px;
+  height: 35px;
+  display: flex;
+  margin-right: 30px;
+  border: solid;
+  align-items: flex-start;
+}
+
+.color-wrapper {
+  margin: auto 0;
+  width: 50px;
+}
+
+.color-box {
+  height: 15px;
+  width: 30px;
+  margin: 0 10px;
+}
+
+.name {
+  @include heading-s;
+  font-size: 12px;
+  margin: 0;
+  overflow: hidden;
+}
+
+.data {
+  @include text-s;
+  font-size: $font-size-small;
+  color: $color-root-text-grey;
+}

@@ -4,6 +4,7 @@ import Chart from '../../../../components/Chart';
 import { useAction, useTypedSelector } from '../../../../hooks';
 import { getProjectsOptions } from '../../options';
 import CategorySubtitle from './CategorySubtitle';
+import ChartLabels from './ChartLabels';
 import classes from './style.module.scss';
 
 interface PopularProjectsChartProps {
@@ -50,9 +51,7 @@ const PopularProjectsChart: FC<PopularProjectsChartProps> = ({
       </div>
       <div className={classes['text-wrapper']}>
         <p className={classes.text}>
-          {projects.length > 0
-            ? selectedCategory?.name
-            : t('No projects')}
+          {projects.length > 0 ? selectedCategory?.name : t('No projects')}
         </p>
         <div className={classes['bottom-chart-wrapper']}>
           <Chart
@@ -60,9 +59,11 @@ const PopularProjectsChart: FC<PopularProjectsChartProps> = ({
             labels={defaultParams.labels}
             dataSets={defaultParams.dataSets}
             options={defaultParams.options}
-            height="500px"
+            height="400px"
+            width="300px"
           />
         </div>
+        <ChartLabels projects={projects} />
       </div>
     </section>
   );

@@ -19,7 +19,7 @@
     "start:notification": "cd notification && npm run start",
     "start:payment": "cd payment && npm run start",
     "start": "concurrently -k -p \"{name}: {time}\" -n \"FRONTEND,GATEWAY,BACKEND,NOTIFICATION,PAYMENT\" \"npm:start:frontend\" \"npm:start:gateway\" \"npm:start:backend\" \"npm:start:notification\" \"npm:start:payment\"",
-    "start:custom": "concurrently -k -p \"{name}: {time}\" -n \"FRONTEND,GATEWAY,BACKEND\" \"npm:start:frontend\" \"npm:start:gateway\" \"npm:start:backend\"",
+    "start:custom": "concurrently -k -p \"{name}: {time}\" -n \"GATEWAY,BACKEND\" \"npm:start:gateway\" \"npm:start:backend\"",
     "migrate:backend": "cd backend && npm run migrate",
     "migrate:gateway": "cd gateway && npm run migrate",
     "migrate:payment": "cd payment && npm run migrate",
