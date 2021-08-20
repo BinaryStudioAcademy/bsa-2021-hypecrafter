@@ -3,9 +3,9 @@ import { HttpStatusCode } from '../../../../shared/build/enums';
 import { RefreshToken } from '../../data/entities/refreshToken';
 import { RefreshTokenRepository } from '../../data/repositories/refreshToken';
 import { UserRepository } from '../../data/repositories/user';
-import { createToken } from '../../helpers/createToken';
 import { encrypt } from '../../helpers/crypt';
 import { CustomError } from '../../helpers/customError';
+import { createToken } from '../../helpers/tokens';
 
 export default class AuthService {
   readonly #refreshTokenRepository: RefreshTokenRepository;
