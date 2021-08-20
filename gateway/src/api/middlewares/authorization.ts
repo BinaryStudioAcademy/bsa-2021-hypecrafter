@@ -1,15 +1,9 @@
-import { RequestHandler } from 'express';
-import { validateUuid } from '../../helpers/uuid';
+import { NextFunction, Request, Response } from 'express';
+import { isRouteInWhiteList } from '../../helpers/whiteList';
 import { jwt as jwtMiddleware } from './jwt';
 
-const authorization = (routesWhiteList: Array<string> = []): RequestHandler => (
-  (req, res, next) => (routesWhiteList.some(route => {
-    if (route.includes('/:id')) {
-      return validateUuid(route, req.path);
-    }
-    return route === req.path;
-  })
-    ? next()
-    : jwtMiddleware(req, res, next)));
+const authorization = (req: Request, res: Response, next: NextFunction) => ((isRouteInWhiteList(req.path))
+  ? next()
+  : jwtMiddleware(req, res, next));
 
 export { authorization };

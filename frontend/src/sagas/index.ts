@@ -8,6 +8,8 @@ import trendsPageSaga from '../scenes/TrendsPage/sagas';
 import userProfileSaga from '../scenes/UserPage/sagas';
 import transactionsPageSaga from '../scenes/Wallet/Transactions/sagas';
 import authSaga from './auth';
+import categoriesSaga from './categories';
+import usersSaga from './users';
 
 export default function* rootSaga() {
   yield all([
@@ -15,6 +17,8 @@ export default function* rootSaga() {
     userProfileSaga(),
     authSaga(),
     projectSaga(),
+    usersSaga(),
+    categoriesSaga(),
     projectsSaga(),
     trendsPageSaga(),
     projectPageSaga(),

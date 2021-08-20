@@ -1,10 +1,11 @@
-import { Router, Response } from 'express';
+import { Response, Router } from 'express';
 import { Project } from 'hypecrafter-shared/enums';
 
 const init = () => {
   const router = Router();
-
-  return router.get(['/', '/:id'], (_, res: Response) => res.delegate(Project.BACKEND));
+  return router
+    .get(['/', '/:id'], (_, res: Response) => res.delegate(Project.BACKEND))
+    .post(['/'], (_, res: Response) => res.delegate(Project.BACKEND));
 };
 
 export default init;
