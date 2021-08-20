@@ -49,7 +49,7 @@ export class ProjectRepository extends Repository<Project> {
     return this.createQueryBuilder('project')
       .select(
         `
-        amount AS donated,
+        donated,
         description,
         project.name AS "name",
         project."id",
@@ -59,13 +59,18 @@ export class ProjectRepository extends Repository<Project> {
         project."totalViews" AS "views"
       `
       )
-      .leftJoin('project.donates', 'donate')
+      .leftJoin(subQuery => subQuery
+        .select(`
+          SUM(amount) AS donated,
+          "projectId"
+        `)
+        .from('donate', 'donate')
+        .groupBy('"projectId"'), 'dn', 'dn."projectId" = project.id')
       .leftJoin('project.category', 'category')
       .leftJoin('project.projectTags', 'projectTags')
       .leftJoin('projectTags.tag', 'tag')
       .groupBy(
         `
-        project."id",
         donated,
         description,
         project.name,
