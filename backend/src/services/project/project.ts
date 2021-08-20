@@ -1,8 +1,7 @@
 import { ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
 import { Project } from '../../common/types';
 import { Chat, Project as CreateProject, Team } from '../../data/entities';
-import { mapProjects } from '../../data/mappers';
-import { mapPrivileges } from '../../data/mappers/mapPrivileges';
+import { mapPrivileges, mapProjects } from '../../data/mappers';
 import { ChatRepository, ProjectRepository, TeamRepository } from '../../data/repositories';
 
 export default class ProjectService {

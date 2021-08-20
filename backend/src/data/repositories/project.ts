@@ -182,6 +182,7 @@ export class ProjectRepository extends Repository<Project> {
           .groupBy('dua."projectId"'), 'ud', 'ud."projectId" = project.id')
         .leftJoin('project.projectDonatorsPrivileges', 'projectDonatorsPrivileges')
         .leftJoin('projectDonatorsPrivileges.donatorsPrivilege', 'donatorsPrivilege')
+        .where('privilege IS NOT NULL AND amount IS NOT NULL')
         .groupBy('project.id,"bakersDonation"'), 'dp', 'dp."projectId" = project.id')
       .leftJoin(subQuery => subQuery
         .select(`
