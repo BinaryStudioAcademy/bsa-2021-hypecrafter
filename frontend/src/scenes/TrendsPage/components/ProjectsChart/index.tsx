@@ -4,6 +4,7 @@ import Chart from '../../../../components/Chart';
 import { useAction, useTypedSelector } from '../../../../hooks';
 import { getProjectsOptions } from '../../options';
 import CategorySubtitle from './CategorySubtitle';
+import ChartLabels from './ChartLabels';
 import classes from './style.module.scss';
 
 interface PopularProjectsChartProps {
@@ -48,13 +49,11 @@ const PopularProjectsChart: FC<PopularProjectsChartProps> = ({
           />
         ))}
       </div>
-      <div className={classes['text-wrapper']}>
-        <p className={classes.text}>
-          {projects.length > 0
-            ? selectedCategory?.name
-            : t('No projects')}
-        </p>
-        <div className={classes['bottom-chart-wrapper']}>
+      <div className={classes['bottom-chart-wrapper']}>
+        <div className={classes['text-wrapper']}>
+          <p className={classes.text}>
+            {projects.length > 0 ? selectedCategory?.name : t('No projects')}
+          </p>
           <Chart
             type={defaultParams.type}
             labels={defaultParams.labels}
@@ -64,6 +63,7 @@ const PopularProjectsChart: FC<PopularProjectsChartProps> = ({
             width="300px"
           />
         </div>
+        <ChartLabels projects={projects} t={t} />
       </div>
     </section>
   );
