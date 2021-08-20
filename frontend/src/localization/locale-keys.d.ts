@@ -132,5 +132,9 @@ declare type LocaleKeys =
  | 'Donated'
  | 'Ended'
  | 'Days to go'
+ | 'posted'
+ | 'language'
+ | 'OWNER'
+ | 'BACKER'
  | 'views'
  | 'projects';
