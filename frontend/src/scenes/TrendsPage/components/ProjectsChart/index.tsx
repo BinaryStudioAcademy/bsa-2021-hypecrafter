@@ -63,7 +63,7 @@ const PopularProjectsChart: FC<PopularProjectsChartProps> = ({
             width="300px"
           />
         </div>
-        <ChartLabels projects={projects} />
+        <ChartLabels projects={projects} t={t} />
       </div>
     </section>
   );
