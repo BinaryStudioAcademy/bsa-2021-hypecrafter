@@ -159,7 +159,7 @@ export class ProjectRepository extends Repository<Project> {
               )
             ) AS "privileges",
             "bakersDonation",
-            project.id as "projectId"
+            project.id AS "projectId"
           `)
         .from(Project, 'project')
         .leftJoin(subQuery => subQuery
@@ -265,8 +265,8 @@ export class ProjectRepository extends Repository<Project> {
         .from(Project, 'project')
         .leftJoin('project.userProjects', 'userProject')
         .where(`"userProject"."userId" = ${userId}`),
-      'up',
-      'up."projectId" = project.id');
+        'up',
+        'up."projectId" = project.id');
     }
 
     if (filter) {
