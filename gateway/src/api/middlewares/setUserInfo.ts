@@ -7,7 +7,7 @@ export const setUserInfo = (
   next: NextFunction
 ) => {
   if (!isRouteInWhiteList(req.path)) {
-    const { userId } = req.user as any;
+    const { userId } = req.user;
     req.headers.userId = userId;
   }
   next();
