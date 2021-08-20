@@ -69,7 +69,8 @@ export class ProjectRepository extends Repository<Project> {
         likes,
         dislikes,
         privileges,
-        "projectComments"
+        "projectComments",
+        "bakersDonation"
       `)
       .leftJoin(subQuery => subQuery
         .select(`
@@ -104,17 +105,36 @@ export class ProjectRepository extends Repository<Project> {
       .leftJoin(subQuery => subQuery
         .select(`
             jsonb_agg(
-              jsonb_build_object(
+              DISTINCT jsonb_build_object(
                 'privilege', privilege,
                 'amount', amount
               )
             ) AS "privileges",
-            "projectId"
-          `) // bakersAmount
+            "bakersDonation",
+            project.id as "projectId"
+          `)
         .from(Project, 'project')
+        .leftJoin(subQuery => subQuery
+          .select(`
+            array_agg(dua."userAmount") AS "bakersDonation", 
+            dua."projectId"
+          `)
+          .from(subQuery => subQuery
+            .select(`
+              SUM(amount) AS "userAmount",
+              "userId", 
+              "projectId"
+            `)
+            .from('donate', 'donate')
+            .groupBy(`
+              "userId", 
+              "projectId"
+            `), "dua"
+          )
+          .groupBy('dua."projectId"'), 'ud', 'ud."projectId" = project.id')
         .leftJoin('project.projectDonatorsPrivileges', 'projectDonatorsPrivileges')
         .leftJoin('projectDonatorsPrivileges.donatorsPrivilege', 'donatorsPrivilege')
-        .groupBy('"projectId"'), 'dp', 'dp."projectId" = project.id')
+        .groupBy('project.id,"bakersDonation"'), 'dp', 'dp."projectId" = project.id')
       .leftJoin(subQuery => subQuery
         .select(`
               jsonb_agg(

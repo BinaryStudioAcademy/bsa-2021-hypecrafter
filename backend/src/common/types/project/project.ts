@@ -7,4 +7,6 @@ export interface Project {
   goal: number;
   donated: number;
   bakersAmount: number;
+  privileges: { amount: number, privilege: string }[];
+  bakersDonation: number[];
 }

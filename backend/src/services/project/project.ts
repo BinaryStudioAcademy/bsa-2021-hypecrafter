@@ -1,5 +1,6 @@
 import { Project } from '../../common/types';
 import { mapProjects } from '../../data/mappers';
+import { mapPrivileges } from '../../data/mappers/mapPrivileges';
 import { ProjectRepository } from '../../data/repositories';
 
 export default class ProjectService {
@@ -23,6 +24,7 @@ export default class ProjectService {
     const project = await this.#projectRepository.getById(id);
     project.bakersAmount = Math.max(0, project.bakersAmount);
     project.donated = Math.max(0, project.donated);
+    project.privileges = mapPrivileges(project.privileges, project.bakersDonation);
     return project; // rewrite when error handling middleware works
   }
 }
