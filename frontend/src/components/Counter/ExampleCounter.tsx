@@ -8,14 +8,14 @@ const ExampleCounter = () => {
     setInputValue(event?.target?.value);
   };
   const onClickHandler = () => {
-    setCounterValue(Number(inputValue) || 4000);
+    setCounterValue(Number(inputValue));
   };
 
   return (
     <div>
       <input type="text" value={inputValue} onChange={onChangeinput} />
       <input type="button" value="Change" onClick={onClickHandler} />
-      <Counter value={counterValue} />
+      <Counter to={counterValue} label="example" />
     </div>
   );
 };

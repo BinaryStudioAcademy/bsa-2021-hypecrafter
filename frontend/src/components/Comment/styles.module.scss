@@ -1,0 +1,81 @@
+@import "../../styles/vars";
+@import "../../styles/fonts.scss";
+@import "../../styles/_mixins.scss";
+
+.comment {
+  margin-top: 150px;
+  padding: 1.1rem;
+  background-color: $color-root-block-background;
+  color: $color-root-text;
+  font-size: $font-size-text;
+}
+
+.header {
+  display: flex;
+  justify-content: start;
+  align-items: stretch;
+  font-family: $font-roboto400;
+}
+
+.user_avatar {
+  background-position: center center !important;
+}
+
+.metadata {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-left: 0.7rem;
+}
+
+.name {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: large;
+}
+
+.badge {
+  margin-left: 1rem;
+  border-radius: 0.4rem;
+  padding-left: 1.2rem;
+  padding-right: 1.5rem;
+}
+
+.backer {
+  background-color: $color-badge-backer-background;
+  color: $color-root-block-background;
+}
+
+.owner {
+  background-color: $color-badge-owner-background;
+}
+
+.date {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: smaller;
+  color: $color-root-text-grey;
+}
+
+.body {
+  font-family: $font-roboto300;
+  margin-top: 0.7rem;
+}
+
+@media (max-width: 330px) {
+  .name {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
+  .badge {
+    margin-left: 0;
+  }
+
+  .date {
+    margin-left: 0;
+  }
+}

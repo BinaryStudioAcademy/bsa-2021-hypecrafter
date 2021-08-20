@@ -27,7 +27,7 @@ const TrendsPage: FC = () => {
     fetchCategories();
   }, []);
 
-  const defaultParams = getTagsOptions(popularTags);
+  const defaultParams = getTagsOptions(popularTags, t);
 
   return (
     <div className={classes.wrapper}>

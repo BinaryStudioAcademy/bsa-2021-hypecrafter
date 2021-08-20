@@ -11,6 +11,7 @@ import { Services } from '../../services';
 import { authorization } from './authorization';
 import { handleError } from './error-handler';
 import { logger } from './logger';
+import { setUserInfo } from './setUserInfo';
 
 const swaggerPath = path.resolve(
   __dirname,
@@ -26,6 +27,7 @@ export const initMiddlewares = (app: Express, _services: Services) => {
   });
   app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
   app.use('/', authorization(BLACK_ROUTES));
+  app.use('/', setUserInfo);
   app.use(cors());
   app.use(logger);
   app.use(json());

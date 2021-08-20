@@ -1,7 +1,8 @@
-import { Entity, OneToOne, OneToMany, Column, JoinColumn } from 'typeorm';
+import { Column, Entity, JoinColumn, OneToMany, OneToOne } from 'typeorm';
 import { AbstractEntity } from './abstract';
-import { Project } from './project';
 import { Chat } from './chat';
+import { Project } from './project';
+import { TeamUsers } from './teamUsers';
 
 @Entity()
 export class Team extends AbstractEntity {
@@ -14,5 +15,8 @@ export class Team extends AbstractEntity {
 
   @OneToMany(() => Chat, chat => chat.team)
   chats: Chat[];
+
+  @OneToMany(() => TeamUsers, teamUsers => teamUsers.team)
+  teamUsers: TeamUsers[];
 }
 
