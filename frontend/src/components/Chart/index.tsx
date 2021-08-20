@@ -50,7 +50,7 @@ const Chart: React.FC<ChartProps> = ({
   defaults.font.size = fontSize;
 
   return (
-    <div style={{ width, height }}>
+    <div style={{ width, height, margin: '0 auto' }}>
       <ChartComponent
         type={type}
         data={{
