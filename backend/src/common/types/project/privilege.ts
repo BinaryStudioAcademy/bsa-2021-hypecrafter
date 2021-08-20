@@ -3,7 +3,3 @@ export interface Privilege {
   privilege: string;
 }
 
-export interface PrivilegeWithBakersAmount extends Privilege {
-  bakersAmount: number;
-}
-
