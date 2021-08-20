@@ -1,4 +1,5 @@
 import { ActiveElement, ChartEvent, Tick } from 'chart.js';
+import { TagNameMaxLength } from '../../../common/constans';
 import { ChartType } from '../../../components/Chart';
 import {
   blueColorsReverse,
@@ -28,7 +29,7 @@ const getDefaultOptions = (data: TagWithQuantity[]) => ({
       },
       ticks: {
         color: 'white',
-        callback: (value: string | number, index: number, _ticks: Tick[]) => сutWord(data[index].name, 10)
+        callback: (value: string | number, index: number, _ticks: Tick[]) => сutWord(data[index].name, TagNameMaxLength)
       }
     },
     y: {
