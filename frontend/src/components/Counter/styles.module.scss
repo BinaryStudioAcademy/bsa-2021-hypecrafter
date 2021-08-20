@@ -1,11 +1,12 @@
 @import '../../styles/vars';
+@import '../../styles/mixins';
 @import '../../styles/fonts.scss';
 
-// $color-root-block-background - block color
-
 .counter {
-  width: 190px;
-  height: 170px;
+  @include heading-xl;
+
+  width: 170px;
+  height: 160px;
   background: $color-root-block-background;
   border-radius: 6px;
 
@@ -13,13 +14,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: $font-roboto700;
-  font-size: 28px;
 }
 
 .value {
-  font-size: 52px;
+  font-size: $font-size-hyper-text;
   background: $color-root-turquoise-gradient;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

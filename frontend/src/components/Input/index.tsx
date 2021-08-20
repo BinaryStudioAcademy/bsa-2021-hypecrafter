@@ -32,6 +32,7 @@ const Input = forwardRef<HTMLInputElement, Props>(({
           placeholder={placeholder}
           id="input"
           className={classes['input-field']}
+          as={type === 'textarea' ? 'textarea' : 'input'}
           step={step}
           {...restInputProps}
         />
@@ -44,7 +45,7 @@ const Input = forwardRef<HTMLInputElement, Props>(({
             >
               <FontAwesomeIcon icon={showPassword ? faEye : faEyeSlash} />
             </button>
-          ) }
+          )}
       </div>
       {type !== 'search' && (
       <div className={classes['error-message-container']}>

@@ -31,7 +31,6 @@ const Header: FunctionComponent<HeaderProps> = ({ project }) => {
     finishDate,
   } = project;
   // const [isFavorite, setFavorite] = useState(false);
-
   return (
     <Container className={classes['project-header']}>
       <Row>
