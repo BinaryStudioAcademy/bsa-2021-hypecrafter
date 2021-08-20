@@ -1,12 +1,14 @@
-import { ActiveElement, ChartEvent } from 'chart.js';
+import { ActiveElement, ChartEvent, Tick } from 'chart.js';
+import { TagNameMaxLength } from '../../../common/constans';
 import { ChartType } from '../../../components/Chart';
 import {
-  blueColorsReverse, setBorderColorGradient
+  blueColorsReverse,
+  setBorderColorGradient
 } from '../../../components/Chart/helpers';
-import { getSortedArray } from '../../../helpers';
-import { TagItem } from '../interfaces';
+import { getSortedArray, сutWord } from '../../../helpers';
+import { TagWithQuantity } from '../interfaces';
 
-const getDefaultOptions = (data: TagItem[]) => ({
+const getDefaultOptions = (data: TagWithQuantity[], t: CallableFunction) => ({
   responsive: true,
   maintainAspectRatio: false,
   onClick: (event: ChartEvent, elements: ActiveElement[]) => {
@@ -26,7 +28,8 @@ const getDefaultOptions = (data: TagItem[]) => ({
         display: false
       },
       ticks: {
-        color: 'white'
+        color: 'white',
+        callback: (value: string | number, index: number, _ticks: Tick[]) => сutWord(data[index].name, TagNameMaxLength)
       }
     },
     y: {
@@ -36,19 +39,21 @@ const getDefaultOptions = (data: TagItem[]) => ({
         color: 'rgba(10,236,236, 0.15)'
       },
       ticks: {
-        color: 'grey'
+        color: 'grey',
+        callback: (value: string | number, _index: number, _ticks: Tick[]) => `${value} ${t('projects')}`,
+        stepSize: 1
       }
     }
   }
 });
 
-const getDefaultData = (data: TagItem[]) => {
+const getDefaultData = (data: TagWithQuantity[], t: CallableFunction) => {
   getSortedArray(data, 'quantity');
   return {
     labels: data.map((item) => item.name),
     datasets: [
       {
-        label: 'Tags',
+        label: t('projects'),
         data: data.map((item) => item.quantity),
         fill: false,
         backgroundColor: setBorderColorGradient(blueColorsReverse),
@@ -60,9 +65,9 @@ const getDefaultData = (data: TagItem[]) => {
 
 const type: ChartType = 'bar';
 
-const defaultProps = (items: TagItem[]) => {
-  const data = getDefaultData(items);
-  const options = getDefaultOptions(items);
+const defaultProps = (items: TagWithQuantity[], t: CallableFunction) => {
+  const data = getDefaultData(items, t);
+  const options = getDefaultOptions(items, t);
 
   return {
     type,

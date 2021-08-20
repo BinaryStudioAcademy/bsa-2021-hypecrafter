@@ -8,24 +8,19 @@ $color-root-table-even-background: #23272c;
 $color-root-table-header-background: #222933;
 
 $color-root-turquoise: #0aecec;
-$color-root-turquoise-gradient: linear-gradient(
-  90deg,
-  #17e5e8 0%,
-  #27aaf2 100%
-);
+$color-root-turquoise-gradient: linear-gradient(90deg, #17e5e8 0%, #27aaf2 100%);
 $color-root-text: #fafbff;
 $color-root-text-grey: rgba(250, 251, 255, 0.5);
 $color-error: red;
-$color-primary-button: linear-gradient(
-  90deg,
-  #14e7e7 0%,
-  #3bcaf9 61.98%,
-  #25a8f1 100%
-);
+$color-primary-button: linear-gradient(90deg, #14e7e7 0%, #3bcaf9 61.98%, #25a8f1 100%);
 $color-base-border: 1px solid #3a3a3a;
 $color-glitch-red: rgba(255, 0, 0, 0.44);
 $color-glitch-green: rgba(0, 255, 0, 0.44);
 $color-glitch-blue: rgba(0, 0, 255, 0.44);
+$color-menu-finish-background: rgb(12 12 14 / 71%);
+$color-menu-start-background: rgb(12 12 14 / 0);
+$color-badge-backer-background: #a859c0;
+$color-badge-owner-background: #0062ff;
 
 $font-size-mini: 10px;
 $font-size-small: 12px;

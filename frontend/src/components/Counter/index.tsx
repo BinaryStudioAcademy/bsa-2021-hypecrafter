@@ -1,28 +1,24 @@
-import React, { useEffect, useState } from 'react';
-import { animateCounterDown, animateCounterUp, formate } from './helpers';
+import CountTo from 'react-count-to';
+import { usePrevious } from '../../hooks';
+import { formate } from './helpers';
 import classes from './styles.module.scss';
 
-const Counter = React.memo(({ value }: { value: number }) => {
-  const [current, setCurrent] = useState(0);
-  const [isChanging, setIsChanging] = useState(false);
-  const isCurrentBiger = current > value;
+interface Props {
+  to: number;
+  label: string;
+}
 
-  useEffect(() => {
-    if (isCurrentBiger) {
-      animateCounterDown(current, value, setCurrent, setIsChanging);
-    } else {
-      animateCounterUp(current, value, setCurrent, setIsChanging);
-    }
-  }, [current, value]);
+const Counter = ({ to, label }: Props) => {
+  const from = usePrevious(to);
 
   return (
     <div className={classes.counter}>
-      <div>Rating</div>
-      <div className={isChanging ? classes.changing : classes.value}>
-        {formate(current, 2)}
-      </div>
+      <div>{label}</div>
+      <CountTo from={from} to={to} speed={1234}>
+        {(value: number) => <div className={classes.value}>{formate(value, 1)}</div>}
+      </CountTo>
     </div>
   );
-});
+};
 
 export default Counter;

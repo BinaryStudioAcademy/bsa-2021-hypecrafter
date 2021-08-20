@@ -1,11 +1,11 @@
+import { Routes } from '../../common/enums';
 import { Project } from '../../common/types';
 import { createReducer } from '../../helpers';
-import { createProjectAction } from './actions';
 import type {
-  CreateProjectSuccessActionType,
-  CreateProjectFailureActionType
+  CreateProjectFailureActionType,
+  CreateProjectSuccessActionType
 } from './actions';
-import { Routes } from '../../common/enums';
+import { createProjectAction } from './actions';
 
 export interface ProjectState{
   isLoading: boolean;
@@ -18,12 +18,15 @@ const newProject: Project = {
   id: '',
   category: '',
   description: '',
-  donated: 0,
   goal: 0,
   imageUrl: '',
   name: '',
   tags: [],
-  url: ''
+  donated: 0,
+  totalViews: 0,
+  minutesToRead: 0,
+  region: '',
+  totalInteractionTime: 0
 };
 
 export const initialState: ProjectState = {
