@@ -30,7 +30,7 @@ export class UserProfile extends AbstractEntity {
   @Column({ type: 'numeric', default: 0 })
   rating: number;
 
-  @Column()
+  @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
   lastLoginDate: Date;
 
   @Column({ nullable: true })
