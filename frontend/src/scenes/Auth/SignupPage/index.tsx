@@ -14,7 +14,7 @@ import classes from './styles.module.scss';
 
 const SignupPage: FunctionComponent = () => {
   const history = useHistory();
-  const { registerUserAction } = useAction();
+  const { registerUserAction, googleAuthAction } = useAction();
   const store = useTypedSelector(({ authentication: { tokens, isLoading, error } }) => ({
     accessToken: tokens?.accessToken,
     refreshToken: tokens?.refreshToken,
@@ -33,6 +33,10 @@ const SignupPage: FunctionComponent = () => {
     registerUserAction(data);
   };
 
+  const handleSignupWithGoogle = () => {
+    googleAuthAction();
+  };
+
   const [currentPage, setCurrentPage] = useState(Pages.MAIN_FORM);
   const [mainFormInfo, setMainFormInfo] = useState({
     firstName: '',
@@ -49,6 +53,7 @@ const SignupPage: FunctionComponent = () => {
         setCurrentPage={setCurrentPage}
         mainFormInfo={mainFormInfo}
         setMainFormInfo={setMainFormInfo}
+        onSignupWithGoogle={handleSignupWithGoogle}
         t={t}
       />
     ),

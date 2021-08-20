@@ -1,4 +1,4 @@
-import { FunctionComponent, MouseEventHandler } from 'react';
+import { FunctionComponent } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import { Routes } from '../../../../common/enums';
@@ -20,12 +20,14 @@ interface MainFormProps {
   setMainFormInfo: React.Dispatch<React.SetStateAction<MainFormData>>;
   mainFormInfo: MainFormData;
   t: CallableFunction;
+  onSignupWithGoogle: () => void;
 }
 
 const MainForm: FunctionComponent<MainFormProps> = ({
   setCurrentPage,
   setMainFormInfo,
   mainFormInfo,
+  onSignupWithGoogle,
   t
 }: MainFormProps) => {
   const {
@@ -36,11 +38,6 @@ const MainForm: FunctionComponent<MainFormProps> = ({
 
   const onSubmit: SubmitHandler<MainFormData> = () => {
     setCurrentPage(Pages.ADDITIONAL_FORM);
-  };
-
-  const dummySignUpWithGoogleHandler: MouseEventHandler<HTMLButtonElement> = () => {
-    // eslint-disable-next-line no-console
-    console.log('Sign Up with Google');
   };
 
   const handleChange = (field: string, value: string) => {
@@ -121,7 +118,7 @@ const MainForm: FunctionComponent<MainFormProps> = ({
       <hr className={classesAuth['horizontal-ruler']} />
       <Button
         className={classesAuth['google-button']}
-        onClick={dummySignUpWithGoogleHandler}
+        onClick={onSignupWithGoogle}
       >
         {t('Sign Up with Google')}
       </Button>
