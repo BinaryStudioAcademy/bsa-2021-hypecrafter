@@ -8,7 +8,7 @@ import {
 import { getSortedArray, сutWord } from '../../../helpers';
 import { TagWithQuantity } from '../interfaces';
 
-const getDefaultOptions = (data: TagWithQuantity[]) => ({
+const getDefaultOptions = (data: TagWithQuantity[], t: CallableFunction) => ({
   responsive: true,
   maintainAspectRatio: false,
   onClick: (event: ChartEvent, elements: ActiveElement[]) => {
@@ -40,20 +40,20 @@ const getDefaultOptions = (data: TagWithQuantity[]) => ({
       },
       ticks: {
         color: 'grey',
-        callback: (value: string | number, _index: number, _ticks: Tick[]) => `${value} projects`,
+        callback: (value: string | number, _index: number, _ticks: Tick[]) => `${value} ${t('projects')}`,
         stepSize: 1
       }
     }
   }
 });
 
-const getDefaultData = (data: TagWithQuantity[]) => {
+const getDefaultData = (data: TagWithQuantity[], t: CallableFunction) => {
   getSortedArray(data, 'quantity');
   return {
     labels: data.map((item) => item.name),
     datasets: [
       {
-        label: 'projects',
+        label: t('projects'),
         data: data.map((item) => item.quantity),
         fill: false,
         backgroundColor: setBorderColorGradient(blueColorsReverse),
@@ -65,9 +65,9 @@ const getDefaultData = (data: TagWithQuantity[]) => {
 
 const type: ChartType = 'bar';
 
-const defaultProps = (items: TagWithQuantity[]) => {
-  const data = getDefaultData(items);
-  const options = getDefaultOptions(items);
+const defaultProps = (items: TagWithQuantity[], t: CallableFunction) => {
+  const data = getDefaultData(items, t);
+  const options = getDefaultOptions(items, t);
 
   return {
     type,
