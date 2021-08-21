@@ -26,7 +26,7 @@ const init = ({ paymentService }: Services, path: string) => (app: MicroMq) => a
   wrap< Empty, { clientSecret: string }, { amount: number }, Empty>(async (req) => {
     const { amount } = req.body;
     const paymentIntent = await stripe.paymentIntents.create({
-      amount,
+      amount: amount * 100,
       currency: 'usd',
       payment_method_types: ['card']
     });

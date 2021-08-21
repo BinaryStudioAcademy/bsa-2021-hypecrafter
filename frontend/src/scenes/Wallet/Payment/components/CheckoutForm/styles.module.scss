@@ -1,6 +1,15 @@
 @import '../../../../../styles/vars';
 
-.card-form{
-  width: 300px;
-  max-width: 300px;
+.card-element-wrp{
+  margin-top: 30px;
+  background-color: rgb(211, 211, 211);
+  padding: 10px;
+  border-radius: 10px;
+}
+.btn-pay-wrp{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  min-height: 80px;
 }

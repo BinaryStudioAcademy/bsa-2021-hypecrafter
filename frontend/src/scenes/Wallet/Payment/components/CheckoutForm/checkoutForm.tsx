@@ -4,8 +4,10 @@ import {
 import { StripeCardElementChangeEvent } from '@stripe/stripe-js';
 import React, { FormEvent, useEffect, useState } from 'react';
 import { ClientSecretData } from '../../../../../common/types/payment';
+import Button from '../../../../../components/Button';
 import { useTypedSelector } from '../../../../../hooks';
 import { getClientSecret } from '../../../../../services/payment';
+import classes from './styles.module.scss';
 
 export default function CheckoutForm() {
   const [succeeded, setSucceeded] = useState(false);
@@ -19,14 +21,16 @@ export default function CheckoutForm() {
   useEffect(() => {
     const params: ClientSecretData = { amount: amount.toString() };
     getClientSecret(params).then(secret => setClientSecret(secret));
+    console.log('auuuuuu!');
   }, []);
   const cardStyle = {
+    hidePostalCode: true,
     style: {
       base: {
         color: '#32325d',
         fontFamily: 'Courier, monospace',
         fontSmoothing: 'antialiased',
-        fontSize: '16px',
+        fontSize: '20px',
         '::placeholder': {
           color: '#32325d'
         }
@@ -35,8 +39,7 @@ export default function CheckoutForm() {
         color: '#fa755a',
         iconColor: '#fa755a'
       }
-    },
-    'data-locale': 'language'
+    }
   };
   const handleChange = async (event: StripeCardElementChangeEvent) => {
     // Listen for changes in the CardElement
@@ -68,36 +71,32 @@ export default function CheckoutForm() {
   };
   return (
     <form id="payment-form" onSubmit={handleSubmit}>
-      <CardElement id="card-element" options={cardStyle} onChange={handleChange} />
-      <button
-        disabled={Boolean(processing || disabled || succeeded)}
-        type="submit"
-        id="submit"
-      >
-        <span id="button-text">
-          {processing ? (
-            <div className="spinner" id="spinner" />
-          ) : (
-            'Pay now'
-          )}
-        </span>
-      </button>
+      <div className={classes['card-element-wrp']}>
+        <CardElement id="card-element" options={cardStyle} onChange={handleChange} />
+      </div>
+      <div className={classes['btn-pay-wrp']}>
+        <Button
+          disabled={Boolean(processing || disabled || succeeded)}
+          type="submit"
+          id="submit"
+        >
+          <span id="button-text">
+            {processing ? (
+              'Load...'
+            ) : (
+              'Pay now'
+            )}
+          </span>
+        </Button>
+      </div>
       {/* Show any error that happens when processing the payment */}
       {error && (
         <div className="card-error" role="alert">
           {error}
         </div>
       )}
-      {/* Show a success message upon completion */}
-      <p className={succeeded ? 'result-message' : 'result-message hidden'}>
-        Payment succeeded, see the result in your
-        <a
-          href="https://dashboard.stripe.com/test/payments"
-        >
-          {' '}
-          Stripe dashboard.
-        </a> Refresh the page to pay again.
-      </p>
+      {succeeded ? (<p>Your balance has been successfully replenished</p>) : false}
+
     </form>
   );
 }

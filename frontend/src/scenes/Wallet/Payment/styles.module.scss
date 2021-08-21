@@ -9,7 +9,10 @@
   padding-bottom: 10px;
 }
 .payment-main-content{
+  margin-top: 20px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   .selected-fund-wrp{
     border-radius: 20px;
     width: 400px;
@@ -52,6 +55,11 @@
         }
       }
     }
+  }
+  .payment-form-wrp{
+    display: flex;
+    flex-grow: 2;
+    justify-content: center;
   }
 }
 .breadcrumbs {

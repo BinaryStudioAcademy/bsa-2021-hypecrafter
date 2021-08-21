@@ -42,7 +42,9 @@ const Payment: FC = () => {
             </div>
           </div>
         </div>
-        <PaymentForm />
+        <div className={classes['payment-form-wrp']}>
+          <PaymentForm />
+        </div>
       </div>
     </Container>
   );
