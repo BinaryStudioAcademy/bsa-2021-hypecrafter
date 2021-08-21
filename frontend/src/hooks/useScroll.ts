@@ -1,7 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
 
+enum Directions {
+  Up = 'up',
+  Down = 'down',
+  None = 'none'
+}
+
 export function useScroll(
-  scrollTopLimit: number,
+  scrollSizeLimit: number,
   callbacks: {
     scrollDownCallback: () => void;
     scrollUpCallback: () => void;
@@ -10,45 +16,34 @@ export function useScroll(
     scrollUpCallback: () => {},
   }
 ) {
+  const getOffsetSize = () => window.scrollY;
+  const [scrollSize, setScrollSize] = useState(getOffsetSize());
+  const [scrollDirection, setScrollDirection] = useState<Directions>(Directions.None);
+  const [prevScrollDirection, setPrevScrollDirection] = useState<Directions>(Directions.None);
   const { scrollDownCallback, scrollUpCallback } = callbacks;
-  const [bodyOffset, setBodyOffset] = useState(document.body.getBoundingClientRect());
-  const [scrollTop, setScrollTop] = useState(bodyOffset.top);
-  const [scrollDirection, setScrollDirection] = useState<'up' | 'down' | null>(null);
 
   const stateRef = useRef({
-    prevScrollTop: scrollTop,
-    callbackBlockers: {
-      overLimit: false,
-      underLimit: false,
-    },
+    prevScrollSize: scrollSize,
+    callbackBlocker: false,
   });
 
   const scrollHandler = () => {
-    setBodyOffset(document.body.getBoundingClientRect());
-    setScrollTop(-bodyOffset.top);
-    setScrollDirection(stateRef.current.prevScrollTop > -bodyOffset.top ? 'up' : 'down');
-    stateRef.current.prevScrollTop = -bodyOffset.top;
+    setScrollSize(getOffsetSize());
+    setPrevScrollDirection(scrollDirection);
+    setScrollDirection(stateRef.current.prevScrollSize > getOffsetSize() ? Directions.Up : Directions.Down);
+    stateRef.current.prevScrollSize = getOffsetSize();
 
-    if (
-      scrollTop >= scrollTopLimit
-      && !stateRef.current.callbackBlockers.underLimit
-      && scrollDirection === 'down'
-    ) {
-      scrollDownCallback();
-      stateRef.current.callbackBlockers = {
-        overLimit: false,
-        underLimit: true,
-      };
-    } else if (
-      scrollTop <= scrollTopLimit
-      && !stateRef.current.callbackBlockers.overLimit
-      && scrollDirection === 'up'
-    ) {
+    if (prevScrollDirection === scrollDirection) {
+      return;
+    }
+
+    if (scrollSize <= scrollSizeLimit) {
+      setPrevScrollDirection(Directions.None);
       scrollUpCallback();
-      stateRef.current.callbackBlockers = {
-        overLimit: true,
-        underLimit: false,
-      };
+    } else if (scrollDirection === Directions.Up) {
+      scrollUpCallback();
+    } else if (scrollDirection === Directions.Down) {
+      scrollDownCallback();
     }
   };
 

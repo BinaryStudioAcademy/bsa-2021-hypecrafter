@@ -26,7 +26,7 @@ const Header = () => {
   const [isMobileMenu, setMobileMenu] = useState(false);
   const [isProjectsMenu, setProjectsMenu] = useState(false);
   const [isProfileMenu, setProfileMenu] = useState(false);
-  const [isVisibleOnScroll, setVisibleOnScroll] = useState(false);
+  const [isVisibleOnScroll, setVisibleOnScroll] = useState(true);
   const { isMobile } = useWindowResize();
 
   const handleProfileMenuForMobile = () => {
@@ -70,7 +70,7 @@ const Header = () => {
   };
 
   useScroll(
-    30,
+    80,
     {
       scrollDownCallback,
       scrollUpCallback
