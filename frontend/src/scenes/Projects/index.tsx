@@ -1,21 +1,45 @@
+import { ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
 import { useEffect } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Routes } from '../../common/enums';
 import { Project } from '../../common/types';
 import ProjectCard from '../../components/ProjectCard';
+import { getEnumKeyByEnumValue } from '../../helpers/enum';
 import { useAction, useTypedSelector } from '../../hooks';
-import { useLocalization } from '../../providers/localization';
+import { useQuery } from '../../hooks/useQuery';
 import Filters from './components/Filters';
 import classes from './styles.module.scss';
 
 const Projects = () => {
   const { projects, modificators } = useTypedSelector((state) => state.projects);
-  const { fetchProjectsAction } = useAction();
-  const { t } = useLocalization();
+  const {
+    fetchProjectsAction,
+    sortProjectsAction,
+    filterProjectsAction
+  } = useAction();
+  const query = useQuery();
 
   useEffect(() => {
     fetchProjectsAction(modificators);
   }, [modificators]);
+
+  useEffect(() => {
+    const sortQuery = query.get('sort');
+    if (sortQuery) {
+      const sortValue = getEnumKeyByEnumValue(ProjectsSort, sortQuery);
+      if (sortValue) {
+        sortProjectsAction(ProjectsSort[sortValue]);
+      }
+    }
+
+    const filterQuery = query.get('filter');
+    if (filterQuery) {
+      const filterValue = getEnumKeyByEnumValue(ProjectsFilter, filterQuery);
+      if (filterValue) {
+        filterProjectsAction(ProjectsFilter[filterValue]);
+      }
+    }
+  }, []);
 
   return (
     <Container className={classes['projects-page']}>
@@ -39,11 +63,6 @@ const Projects = () => {
                 image={project.imageUrl}
               />
             ))}
-            {!projects.length && (
-              <Container className={classes['error-wrapper']}>
-                {t('There are no projects that match these search parameters')}
-              </Container>
-            )}
           </Container>
         </Col>
       </Row>
