@@ -1,4 +1,4 @@
-@import '../../../styles/mixins', '../../../styles/vars';
+@import "../../../styles/mixins", "../../../styles/vars";
 
 .register-cta {
   margin: 10px 0 40px;
@@ -33,8 +33,8 @@
   font-size: $font-size-akcent;
 }
 
-.form-title:not(.chosen) {
-  filter: blur(1px);
+.form-title.chosen {
+  text-decoration: underline;
 }
 
 .detail-form-control,
