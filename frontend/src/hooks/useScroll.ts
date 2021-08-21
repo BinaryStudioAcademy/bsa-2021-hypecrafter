@@ -1,50 +1,40 @@
-import { useEffect, useRef, useState } from 'react';
-
-enum Directions {
-  Up = 'up',
-  Down = 'down',
-  None = 'none'
-}
+import { useEffect, useRef } from 'react';
 
 export function useScroll(
   scrollSizeLimit: number,
   callbacks: {
-    scrollDownCallback: () => void;
-    scrollUpCallback: () => void;
+    scrollOverLimitCallback: () => void;
+    scrollUnderLimitCallback: () => void;
   } = {
-    scrollDownCallback: () => {},
-    scrollUpCallback: () => {},
+    scrollOverLimitCallback: () => {},
+    scrollUnderLimitCallback: () => {},
   }
 ) {
+  const { scrollOverLimitCallback, scrollUnderLimitCallback } = callbacks;
   const getOffsetSize = () => window.scrollY;
-  const [scrollSize, setScrollSize] = useState(getOffsetSize());
-  const [scrollDirection, setScrollDirection] = useState<Directions>(Directions.None);
-  const [prevScrollDirection, setPrevScrollDirection] = useState<Directions>(Directions.None);
-  const { scrollDownCallback, scrollUpCallback } = callbacks;
 
-  const stateRef = useRef({
-    prevScrollSize: scrollSize,
-    callbackBlocker: false,
-  });
+  const state = useRef({
+    prevScrollSize: getOffsetSize(),
+    scrollSize: getOffsetSize(),
+  }).current;
 
   const scrollHandler = () => {
-    setScrollSize(getOffsetSize());
-    setPrevScrollDirection(scrollDirection);
-    setScrollDirection(stateRef.current.prevScrollSize > getOffsetSize() ? Directions.Up : Directions.Down);
-    stateRef.current.prevScrollSize = getOffsetSize();
+    state.scrollSize = getOffsetSize();
 
-    if (prevScrollDirection === scrollDirection) {
+    const minScrollSize = Math.min(state.prevScrollSize, state.scrollSize);
+    const maxScrollSize = Math.max(state.prevScrollSize, state.scrollSize);
+
+    if (!(scrollSizeLimit >= minScrollSize && scrollSizeLimit <= maxScrollSize)) {
       return;
     }
 
-    if (scrollSize <= scrollSizeLimit) {
-      setPrevScrollDirection(Directions.None);
-      scrollUpCallback();
-    } else if (scrollDirection === Directions.Up) {
-      scrollUpCallback();
-    } else if (scrollDirection === Directions.Down) {
-      scrollDownCallback();
+    if (state.scrollSize <= scrollSizeLimit) {
+      scrollOverLimitCallback();
+    } else {
+      scrollUnderLimitCallback();
     }
+
+    state.prevScrollSize = getOffsetSize();
   };
 
   useEffect(() => {
@@ -52,5 +42,5 @@ export function useScroll(
     return () => {
       window.removeEventListener('scroll', scrollHandler);
     };
-  });
+  }, []);
 }

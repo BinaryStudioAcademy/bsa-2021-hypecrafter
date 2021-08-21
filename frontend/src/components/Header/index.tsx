@@ -26,7 +26,7 @@ const Header = () => {
   const [isMobileMenu, setMobileMenu] = useState(false);
   const [isProjectsMenu, setProjectsMenu] = useState(false);
   const [isProfileMenu, setProfileMenu] = useState(false);
-  const [isVisibleOnScroll, setVisibleOnScroll] = useState(true);
+  const [isVisibleOnScroll, setVisibleOnScroll] = useState(false);
   const { isMobile } = useWindowResize();
 
   const handleProfileMenuForMobile = () => {
@@ -61,21 +61,11 @@ const Header = () => {
     setText(e.target.value);
   };
 
-  const scrollDownCallback = () => {
-    setVisibleOnScroll(false);
-  };
+  const scrollOverLimitCallback = () => setVisibleOnScroll(false);
+  const scrollUnderLimitCallback = () => setVisibleOnScroll(true);
 
-  const scrollUpCallback = () => {
-    setVisibleOnScroll(true);
-  };
+  useScroll(30, { scrollOverLimitCallback, scrollUnderLimitCallback });
 
-  useScroll(
-    80,
-    {
-      scrollDownCallback,
-      scrollUpCallback
-    }
-  );
   const handleLogOut = () => {
     removeTokens();
   };
