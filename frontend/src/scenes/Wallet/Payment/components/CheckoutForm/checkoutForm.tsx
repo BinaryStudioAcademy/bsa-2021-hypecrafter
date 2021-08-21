@@ -3,29 +3,22 @@ import {
 } from '@stripe/react-stripe-js';
 import { StripeCardElementChangeEvent } from '@stripe/stripe-js';
 import React, { FormEvent, useEffect, useState } from 'react';
+import { useAction, useTypedSelector } from '../../../../../hooks';
 
 export default function CheckoutForm() {
   const [succeeded, setSucceeded] = useState(false);
   const [error, setError] = useState('');
   const [processing, setProcessing] = useState(false);
   const [disabled, setDisabled] = useState(true);
-  const [clientSecret, setClientSecret] = useState('');
+  const [clientSecret] = useState('');
   const stripe = useStripe();
   const elements = useElements();
+  const { amount } = useTypedSelector(({ payment }) => payment);
+  const { fetchClientSecretAction } = useAction();
+
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
-    window
-      .fetch('/create-payment-intent', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ items: [{ id: 'xl-tshirt' }] })
-      })
-      .then(res => res.json())
-      .then(data => {
-        setClientSecret(data.clientSecret);
-      });
+    fetchClientSecretAction(amount);
   }, []);
   const cardStyle = {
     style: {

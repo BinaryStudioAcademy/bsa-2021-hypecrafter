@@ -9,7 +9,7 @@ import trendsPageReducer, {
   trendsPageState
 } from '../scenes/TrendsPage/reducer';
 import userProfileReducer, { initialState as userProfileInitialState } from '../scenes/UserPage/reducer';
-import paymentReducer, { initialState as paymentInitialState } from '../scenes/Wallet/FundsPage/reducer';
+import paymentReducer, { initialState as paymentInitialState } from '../scenes/Wallet/Payment/reducer';
 import transactionsReducer, { initialState as transactionsInitialState } from '../scenes/Wallet/Transactions/reducer';
 import authReducer, { authState } from './auth';
 

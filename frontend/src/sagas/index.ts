@@ -6,6 +6,7 @@ import projectPageSaga from '../scenes/ProjectPage/sagas';
 import projectsSaga from '../scenes/Projects/sagas';
 import trendsPageSaga from '../scenes/TrendsPage/sagas';
 import userProfileSaga from '../scenes/UserPage/sagas';
+import clientSecretSaga from '../scenes/Wallet/Payment/sagas';
 import transactionsPageSaga from '../scenes/Wallet/Transactions/sagas';
 import authSaga from './auth';
 
@@ -19,6 +20,7 @@ export default function* rootSaga() {
     trendsPageSaga(),
     projectPageSaga(),
     transactionsPageSaga(),
-    authenticationSaga()
+    authenticationSaga(),
+    clientSecretSaga()
   ]);
 }

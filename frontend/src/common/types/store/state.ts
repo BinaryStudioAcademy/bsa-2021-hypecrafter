@@ -6,7 +6,7 @@ import { ProjectPageState } from '../../../scenes/ProjectPage/reducer';
 import { ProjectsState } from '../../../scenes/Projects/reducer';
 import { TrendsPageState } from '../../../scenes/TrendsPage/reducer';
 import { UserProfileState } from '../../../scenes/UserPage/reducer';
-import { PaymentState } from '../../../scenes/Wallet/FundsPage/reducer';
+import { PaymentState } from '../../../scenes/Wallet/Payment/reducer';
 import { TransactionsState } from '../../../scenes/Wallet/Transactions/reducer';
 
 export interface StoreState {

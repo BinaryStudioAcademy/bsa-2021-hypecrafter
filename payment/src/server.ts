@@ -13,5 +13,5 @@ const app = new MicroMq({
 });
 
 createConnection().then(() => {
-  initRoutes(app).start();
+  initRoutes(app)?.start();
 }).catch((e) => log(e));
