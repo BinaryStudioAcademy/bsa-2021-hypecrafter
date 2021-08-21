@@ -14,7 +14,7 @@ export {
   setSelectedCategoryAction
 } from '../scenes/TrendsPage/actions';
 export { closeModalAction, fetchUserProfileAction, openModalAction } from '../scenes/UserPage/actions';
-export { fetchClientSecretAction, setFundAction } from '../scenes/Wallet/Payment/actions';
+export { setFundAction } from '../scenes/Wallet/Payment/actions';
 export { fetchTransactionsPageAction } from '../scenes/Wallet/Transactions/actions';
 export { authFetchUserAction } from './auth';
 

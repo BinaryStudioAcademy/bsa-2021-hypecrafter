@@ -15,7 +15,8 @@ const WHITE_ROUTES = [
   '/projects/:id',
   '/api-docs',
   '/payment/:id/:page',
-  '/payment/create-payment-intent'
+  '/payment/create-payment-intent',
+  '/payment/webhook'
 ];
 
 export { WHITE_ROUTES };

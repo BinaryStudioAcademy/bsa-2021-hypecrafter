@@ -3,22 +3,22 @@ import {
 } from '@stripe/react-stripe-js';
 import { StripeCardElementChangeEvent } from '@stripe/stripe-js';
 import React, { FormEvent, useEffect, useState } from 'react';
-import { useAction, useTypedSelector } from '../../../../../hooks';
+import { ClientSecretData } from '../../../../../common/types/payment';
+import { useTypedSelector } from '../../../../../hooks';
+import { getClientSecret } from '../../../../../services/payment';
 
 export default function CheckoutForm() {
   const [succeeded, setSucceeded] = useState(false);
   const [error, setError] = useState('');
   const [processing, setProcessing] = useState(false);
   const [disabled, setDisabled] = useState(true);
-  const [clientSecret] = useState('');
+  const [clientSecret, setClientSecret] = useState('');
   const stripe = useStripe();
   const elements = useElements();
   const { amount } = useTypedSelector(({ payment }) => payment);
-  const { fetchClientSecretAction } = useAction();
-
   useEffect(() => {
-    // Create PaymentIntent as soon as the page loads
-    fetchClientSecretAction(amount);
+    const params: ClientSecretData = { amount: amount.toString() };
+    getClientSecret(params).then(secret => setClientSecret(secret));
   }, []);
   const cardStyle = {
     style: {
@@ -49,6 +49,7 @@ export default function CheckoutForm() {
     const card = elements?.getElement(CardElement);
     setProcessing(true);
     if (stripe && card) {
+      console.log(card);
       const payload = await stripe.confirmCardPayment(clientSecret, {
         payment_method: {
           card
@@ -58,6 +59,7 @@ export default function CheckoutForm() {
         setError(`Payment failed ${payload.error.message}`);
         setProcessing(false);
       } else {
+        console.log(payload);
         setError('');
         setProcessing(false);
         setSucceeded(true);
