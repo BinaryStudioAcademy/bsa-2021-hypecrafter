@@ -1,7 +1,6 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export function useScroll(
-  scrollTopLimit: number,
   callbacks: {
     scrollDownCallback: () => void;
     scrollUpCallback: () => void;
@@ -10,46 +9,38 @@ export function useScroll(
     scrollUpCallback: () => {},
   }
 ) {
-  const { scrollDownCallback, scrollUpCallback } = callbacks;
-  const [bodyOffset, setBodyOffset] = useState(document.body.getBoundingClientRect());
-  const [scrollTop, setScrollTop] = useState(bodyOffset.top);
-  const [scrollDirection, setScrollDirection] = useState<'up' | 'down' | null>(null);
+  const deadZone = 5;
+  const topDeadZone = 10;
+  enum ScrollCallback {
+    ScrollDownCallback = 'ScrollDownCallback',
+    ScrollUpCallback = 'ScrollUpCallback'
+  }
 
-  const stateRef = useRef({
-    prevScrollTop: scrollTop,
-    callbackBlockers: {
-      overLimit: false,
-      underLimit: false,
-    },
-  });
+  const { scrollDownCallback, scrollUpCallback } = callbacks;
+  const [previousScrollTop, setPreviousScrollTop] = useState(window.pageYOffset);
+  const [lastScrollCallback, setLastScrollCallback] = useState('');
+
+  const conditionForDownHandler = (scrollTop: number) => (
+    scrollTop > previousScrollTop && lastScrollCallback !== ScrollCallback.ScrollDownCallback
+  );
+
+  const conditionForUpHandler = (scrollTop: number) => (
+    scrollTop < topDeadZone && scrollTop < previousScrollTop && lastScrollCallback !== ScrollCallback.ScrollUpCallback
+  );
 
   const scrollHandler = () => {
-    setBodyOffset(document.body.getBoundingClientRect());
-    setScrollTop(-bodyOffset.top);
-    setScrollDirection(stateRef.current.prevScrollTop > -bodyOffset.top ? 'up' : 'down');
-    stateRef.current.prevScrollTop = -bodyOffset.top;
+    const scrollTop = window.pageYOffset;
 
-    if (
-      scrollTop >= scrollTopLimit
-      && !stateRef.current.callbackBlockers.underLimit
-      && scrollDirection === 'down'
-    ) {
+    if (Math.abs(scrollTop - previousScrollTop) < deadZone) return;
+
+    if (conditionForDownHandler(scrollTop)) {
       scrollDownCallback();
-      stateRef.current.callbackBlockers = {
-        overLimit: false,
-        underLimit: true,
-      };
-    } else if (
-      scrollTop <= scrollTopLimit
-      && !stateRef.current.callbackBlockers.overLimit
-      && scrollDirection === 'up'
-    ) {
+      setLastScrollCallback(ScrollCallback.ScrollDownCallback);
+    } else if (conditionForUpHandler(scrollTop)) {
       scrollUpCallback();
-      stateRef.current.callbackBlockers = {
-        overLimit: true,
-        underLimit: false,
-      };
+      setLastScrollCallback(ScrollCallback.ScrollUpCallback);
     }
+    setPreviousScrollTop(scrollTop);
   };
 
   useEffect(() => {
