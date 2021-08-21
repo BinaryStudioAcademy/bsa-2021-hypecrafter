@@ -1,57 +1,56 @@
-@import '../../../../styles/vars';
-@import '../../../../styles/fonts.scss';
+@import "../../../../styles/vars";
+@import "../../../../styles/fonts.scss";
 
-$width_panel:200px;
+$width_panel: 200px;
 
-.root{
+.root {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  margin-top: 10rem;
+  header {
+    font-size: $font-size-hyper-text;
+    font-family: $font-roboto700;
+    margin-left: $width_panel;
+  }
+  .layout_base {
+    width: 100%;
+    max-width: 1100px;
+  }
+  aside {
+    width: $width_panel;
+    padding: 0 15px;
+    min-height: 100%;
+  }
+  .menu {
+    background: $color-root-block-background;
+    border-radius: 5px;
+    height: 100%;
+    padding: 10px;
+    button {
+      background: none;
+      width: 100%;
+      &:focus {
+        box-shadow: none !important;
+        background: none;
+      }
+      &:hover {
+        background: $color-root-modal-background;
+      }
+    }
+    .activePage {
+      border: 1px solid $color-root-text;
+    }
+  }
+  section {
     display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
-    margin-top: 105px;
-    header{
-        font-size: $font-size-hyper-text;
-        font-family: $font-roboto700;
-        margin-left: $width_panel;
-    }
-    .layout_base{
-        width: 100%;
-        max-width: 1100px;
-    }
-    aside{
-        width: $width_panel;
-        padding: 0 15px;
-        min-height: 100%;
-    }
-    .menu{
-        background: $color-root-block-background;
-        border-radius: 5px;
-        height: 100%;
-        padding: 10px;
-        button{
-            background: none;
-            width: 100%;
-            &:focus{
-                box-shadow: none!important;
-                background: none;
-            }
-            &:hover{
-                background: $color-root-modal-background;
-            }
-        }
-        .activePage{
-            border: 1px solid $color-root-text;
-        }
-    }
-    section{
-        display: flex;
-    }
-    article{
-        width: calc(100% - 2 * #{$width_panel});
-    }
-    footer{
-        margin-top: 10px;
-        padding-top: 10px;
-        border-top: 1px solid $color-root-text;
-    }
+  }
+  article {
+    width: calc(100% - 2 * #{$width_panel});
+  }
+  footer {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid $color-root-text;
+  }
 }
-
