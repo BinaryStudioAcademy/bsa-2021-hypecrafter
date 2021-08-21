@@ -12,6 +12,8 @@ import { initServices } from './services';
 const { port, environment } = env.app;
 const app = express();
 app.use(cors());
+app.use(express.json({ limit: '15mb' }));
+app.use(express.urlencoded({ limit: '15mb' }));
 createConnection().then(() => {
   try {
     const repositories = initRepositories();

@@ -19,6 +19,7 @@ export class ProjectRepository extends Repository<Project> {
         project.name AS "name",
         project."id",
         goal,
+        project.imageUrl,
         category.name AS "category",
         array_agg(tag.name) AS "tags"
       `)
@@ -38,6 +39,7 @@ export class ProjectRepository extends Repository<Project> {
         project.name,
         project."id",
         goal,
+        project.imageUrl,
         category.name
       `)
       .orderBy(order, 'DESC')

@@ -93,6 +93,7 @@ const CreateProject = () => {
             region={newProject.region}
             currentPage={currentPage}
             onChangeValue={handleChangeValue}
+            imageUrl={newProject.imageUrl}
           />
         );
       case CurrentPage.END:
