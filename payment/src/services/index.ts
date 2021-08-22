@@ -1,13 +1,17 @@
 import { getCustomRepository } from 'typeorm';
-import { TransactionHistoryRepository } from '../data/repositories';
-import PaymentService from './payment';
+import { BalanceRepository, TransactionHistoryRepository } from '../data/repositories';
+import BalanceService from './balance';
+import TransactionHistoryService from './transaction';
 
 export function initServices() {
   return {
-    paymentService: new PaymentService(getCustomRepository(TransactionHistoryRepository))
+    transactionHistoryService: new TransactionHistoryService(getCustomRepository(TransactionHistoryRepository)),
+    balanceService: new BalanceService(getCustomRepository(BalanceRepository))
   };
 }
 
 export interface Services {
-  paymentService: PaymentService
+  transactionHistoryService: TransactionHistoryService,
+  balanceService: BalanceService
 }
+

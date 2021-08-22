@@ -1,6 +1,6 @@
 import { TransactionHistoryRepository } from '../../data/repositories';
 
-export default class TransactionService {
+export default class TransactionHistoryService {
   readonly #transactionHistoryRepository: TransactionHistoryRepository;
 
   constructor(transactionHistoryRepository: TransactionHistoryRepository) {
