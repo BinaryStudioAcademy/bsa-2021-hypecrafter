@@ -7,4 +7,5 @@ export interface Project {
   goal: number;
   donated: number;
   bakersAmount: number;
+  imageUrl: string;
 }

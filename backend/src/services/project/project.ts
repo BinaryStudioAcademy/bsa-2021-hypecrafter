@@ -40,7 +40,7 @@ export default class ProjectService {
   }
 
   public async getBySortAndFilter({ sort, filter }: { sort: ProjectsSort, filter: ProjectsFilter }) {
-    const projects = await this.#projectRepository.getBySortAndFilter({ sort, filter });
+    const projects:Project[] = await this.#projectRepository.getBySortAndFilter({ sort, filter });
     return projects;
   }
 

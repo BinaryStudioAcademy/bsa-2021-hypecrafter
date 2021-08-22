@@ -209,6 +209,7 @@ export class ProjectRepository extends Repository<Project> {
         description,
         project.name AS "name",
         project."id",
+        project."imageUrl",
         goal,
         category.name AS "category",
         tags,
