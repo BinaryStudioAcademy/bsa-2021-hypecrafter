@@ -11,7 +11,7 @@ export function useScroll(
   }
 ) {
   const { scrollOverLimitCallback, scrollUnderLimitCallback } = callbacks;
-  const getOffsetSize = () => window.scrollY;
+  const getOffsetSize = () => window.pageYOffset;
 
   const state = useRef({
     prevScrollSize: getOffsetSize(),
