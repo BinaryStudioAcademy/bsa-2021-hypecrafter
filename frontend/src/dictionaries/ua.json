@@ -1,7 +1,7 @@
 {
   "translation": {
     "Press on me": "Натисни на мене",
-    "Sign In": "Увійти",
+    "Log In": "Увійти",
     "Sign Up": "Реєстрація",
     "Email": "Електронна адреса",
     "Password": "Пароль",
@@ -27,6 +27,7 @@
     "Add funds to your Wallet": "Додайте кошти до свого гаманця",
     "ADD FUNDS TO YOUR": "ДОДАЙТЕ КОШТИ ДО СВОГО",
     "WALLET": "ГАМАНЦЯ",
+    "Wallet": "Гаманець",
     "ADD FUNDS TO YOUR WALLET": "ДОДАЙТЕ КОШТИ ДО СВОГО ГАМАНЦЯ",
     "Funds in your HypeCrafter Wallet may be used for help of any project you are interested in on HypeCrafter.": "Кошти у вашому гаманці HypeCrafter можуть бути використані для допомоги у будь-якому цікавому для вас проекті на HypeCrafter.",
     "You’ll have a chance to review your order before it’s placed.": "Ви зможете переглянути та виправити своє замовлення перед оплатою.",
@@ -39,6 +40,7 @@
     "Total": "Усього",
     "Change": "Зміна",
     "Balance": "Залишок",
+    "Transactions": "Транзакції",
     "Transactions list": "Список транзакцій",
     "Create account": "Створення акаунту",
     "Personal details": "Особиста інформація",
@@ -135,6 +137,7 @@
     "OWNER": "ВЛАСНИК",
     "BACKER": "СПОНСОР",
     "views": "переглядів",
-    "projects": "проектів"
+    "projects": "проектів",
+    "The page you were looking for doesn’t exist (404)": "Сторінка, яку ви шукали, не існує (404)"
   }
 }

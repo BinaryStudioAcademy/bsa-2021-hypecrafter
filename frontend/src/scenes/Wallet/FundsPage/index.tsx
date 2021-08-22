@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { Container } from 'react-bootstrap';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import coinImg from '../../../assets/HypeCoin.png';
 import { Routes } from '../../../common/enums';
@@ -12,6 +13,10 @@ const FundsPage: FC = () => {
   const { t } = useLocalization();
   return (
     <Container fluid="sm">
+      <Helmet>
+        <title>{`${t('Wallet')} - HypeCrafter`}</title>
+      </Helmet>
+
       <div className={classes['wallet-header']}>
         <div className={classes.breadcrumbs}>
           <Link to={Routes.HOME}> {t('Home')}</Link>

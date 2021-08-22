@@ -1,7 +1,7 @@
 {
   "translation": {
     "Press on me": "Press on me",
-    "Sign In": "Sign In",
+    "Log In": "Log In",
     "Sign Up": "Sign Up",
     "Email": "Email",
     "Password": "Password",
@@ -27,6 +27,7 @@
     "Add funds to your Wallet": "Add funds to your Wallet",
     "ADD FUNDS TO YOUR": "ADD FUNDS TO YOUR",
     "WALLET": "WALLET",
+    "Wallet": "Wallet",
     "ADD FUNDS TO YOUR WALLET": "ADD FUNDS TO YOUR WALLET",
     "Funds in your HypeCrafter Wallet may be used for help of any project you are interested in on HypeCrafter.": "Funds in your HypeCrafter Wallet may be used for help of any project you are interested in on HypeCrafter.",
     "You’ll have a chance to review your order before it’s placed.": "You’ll have a chance to review your order before it’s placed.",
@@ -39,6 +40,7 @@
     "Total": "Total",
     "Change": "Change",
     "Balance": "Balance",
+    "Transactions": "Transactions",
     "Transactions list": "Transactions list",
     "Create account": "Create account",
     "Personal details": "Personal details",
@@ -135,6 +137,7 @@
     "OWNER": "OWNER",
     "BACKER": "BACKER",
     "views": "views",
-    "projects": "projects"
+    "projects": "projects",
+    "The page you were looking for doesn’t exist (404)": "The page you were looking for doesn’t exist (404)"
   }
 }

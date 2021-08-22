@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import { Helmet } from 'react-helmet';
 import { Routes } from '../../common/enums';
 import { Project } from '../../common/types';
 import ProjectCard from '../../components/ProjectCard';
@@ -19,6 +20,10 @@ const Projects = () => {
 
   return (
     <Container className={classes['projects-page']}>
+      <Helmet>
+        <title>{`${t('Projects')} - HypeCrafter`}</title>
+      </Helmet>
+
       <Row>
         <Col lg={3}>
           <Filters />

@@ -1,4 +1,5 @@
 import { FC, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import { Project } from '../../common/types';
 import Button from '../../components/Button';
 import Chart from '../../components/Chart';
@@ -56,6 +57,10 @@ const MainPage: FC = () => {
 
   return (
     <div className={classes.root}>
+      <Helmet>
+        <title>HypeCrafter</title>
+      </Helmet>
+
       <section className={classes.main}>
         <div className={classes['main-text']}>
           <div className={classes['main-logo-text']}>

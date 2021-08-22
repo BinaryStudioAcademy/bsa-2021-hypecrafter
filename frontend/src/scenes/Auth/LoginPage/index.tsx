@@ -1,4 +1,5 @@
 import { FC, MouseEventHandler, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { Link, useHistory } from 'react-router-dom';
 import logo from '../../../assets/HypeCrafter.svg';
@@ -56,13 +57,17 @@ const LoginPage: FC = () => {
 
   return (
     <div className={classes.root}>
+      <Helmet>
+        <title>{`${t('Log In')} - HypeCrafter`}</title>
+      </Helmet>
+
       <div className={classes.hero}>
         <img className={classes.logo} src={logo} alt="logo" />
       </div>
 
       <div className={classes.content}>
         <form className={classes.form} onSubmit={handleSubmit(onSubmit)}>
-          <h2 className={classes.title}>{t('Sign In')}</h2>
+          <h2 className={classes.title}>{t('Log In')}</h2>
 
           <div className={classes['register-cta']}>
             {t('Don’t have an account?')} <Link to={Routes.SIGNUP}>{t('Sign Up')}</Link>
@@ -96,7 +101,7 @@ const LoginPage: FC = () => {
             className={classes['sign-in-button']}
             type="submit"
           >
-            {t('Sign In')}
+            {t('Log In')}
           </Button>
 
           <div className={classes['horizontal-ruler-text']}><div>{t('or')}</div></div>

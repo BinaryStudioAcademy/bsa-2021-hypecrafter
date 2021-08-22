@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import { FunctionComponent, useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
 import { Link, useHistory } from 'react-router-dom';
 import logo from '../../../assets/HypeCrafter.svg';
 import { Routes } from '../../../common/enums';
@@ -64,6 +65,10 @@ const SignupPage: FunctionComponent = () => {
 
   return (
     <div className={classesAuth.root}>
+      <Helmet>
+        <title>{`${t('Sign Up')} - HypeCrafter`}</title>
+      </Helmet>
+
       <div className={classesAuth.hero}>
         <img className={classesAuth.logo} src={logo} alt="logo" />
       </div>
@@ -72,7 +77,7 @@ const SignupPage: FunctionComponent = () => {
           <h2 className={classesAuth.title}>{t('Sign Up')}</h2>
           <div className={classes['register-cta']}>
             {t('Have an account?')}{' '}
-            <Link to={Routes.LOGIN}>{t('Log in')}</Link>
+            <Link to={Routes.LOGIN}>{t('Log In')}</Link>
           </div>
           <div className={classes['form-titles-wrapper']}>
             <h4

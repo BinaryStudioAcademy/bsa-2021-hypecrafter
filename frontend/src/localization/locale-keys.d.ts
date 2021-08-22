@@ -1,6 +1,6 @@
 declare type LocaleKeys =
  | 'Press on me'
- | 'Sign In'
+ | 'Log In'
  | 'Sign Up'
  | 'Email'
  | 'Password'
@@ -26,6 +26,7 @@ declare type LocaleKeys =
  | 'Add funds to your Wallet'
  | 'ADD FUNDS TO YOUR'
  | 'WALLET'
+ | 'Wallet'
  | 'ADD FUNDS TO YOUR WALLET'
  | 'Funds in your HypeCrafter Wallet may be used for help of any project you are interested in on HypeCrafter.'
  | 'You’ll have a chance to review your order before it’s placed.'
@@ -38,6 +39,7 @@ declare type LocaleKeys =
  | 'Total'
  | 'Change'
  | 'Balance'
+ | 'Transactions'
  | 'Transactions list'
  | 'Create account'
  | 'Personal details'
@@ -97,7 +99,6 @@ declare type LocaleKeys =
  | 'Campaign Goal'
  | 'Switch to'
  | 'Have an account?'
- | 'Log in'
  | 'Sort by'
  | 'Filter by'
  | 'All'
@@ -137,4 +138,5 @@ declare type LocaleKeys =
  | 'OWNER'
  | 'BACKER'
  | 'views'
- | 'projects';
+ | 'projects'
+ | 'The page you were looking for doesn’t exist (404)';

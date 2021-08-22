@@ -1,5 +1,6 @@
 import { FC, useCallback, useEffect, useMemo } from 'react';
 import { Spinner } from 'react-bootstrap';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { Column, useTable } from 'react-table';
 import { Routes } from '../../../common/enums';
@@ -44,6 +45,10 @@ const Transactions: FC = () => {
   );
   return (
     <div className={classes['transaction-table-wrp']}>
+      <Helmet>
+        <title>{`${t('Transactions')} - HypeCrafter`}</title>
+      </Helmet>
+
       <div className={classes.breadcrumbs}>
         <Link to={Routes.HOME}> {t('Home')}</Link>
         {' > '}
