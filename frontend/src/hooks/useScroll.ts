@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { getOffsetSize } from '../helpers/scroll';
 
 export function useScroll(
   scrollSizeLimit: number,
@@ -11,7 +12,6 @@ export function useScroll(
   }
 ) {
   const { scrollOverLimitCallback, scrollUnderLimitCallback } = callbacks;
-  const getOffsetSize = () => window.pageYOffset;
 
   const state = useRef({
     prevScrollSize: getOffsetSize(),
