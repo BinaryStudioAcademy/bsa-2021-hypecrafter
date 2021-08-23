@@ -1,22 +1,30 @@
+import { ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
 import { useEffect } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Routes } from '../../common/enums';
 import { Project } from '../../common/types';
 import ProjectCard from '../../components/ProjectCard';
 import Seo from '../../components/Seo';
-import { useAction, useTypedSelector } from '../../hooks';
-import { useLocalization } from '../../providers/localization';
+import { runActionWithValueOfEnum } from '../../helpers';
+import { useAction, useQuery, useTypedSelector } from '../../hooks';
 import Filters from './components/Filters';
 import classes from './styles.module.scss';
 
 const Projects = () => {
   const { projects, modificators } = useTypedSelector((state) => state.projects);
-  const { fetchProjectsAction } = useAction();
-  const { t } = useLocalization();
+  const { fetchProjectsAction, sortProjectsAction, filterProjectsAction } = useAction();
+  const query = useQuery();
 
   useEffect(() => {
     fetchProjectsAction(modificators);
   }, [modificators]);
+
+  useEffect(() => {
+    const sortParam = query.get('sort');
+    const filterParam = query.get('filter');
+    runActionWithValueOfEnum(sortParam, ProjectsSort, sortProjectsAction);
+    runActionWithValueOfEnum(filterParam, ProjectsFilter, filterProjectsAction);
+  }, []);
 
   return (
     <Container className={classes['projects-page']}>
@@ -45,11 +53,6 @@ const Projects = () => {
                 image={project.imageUrl}
               />
             ))}
-            {!projects.length && (
-              <Container className={classes['error-wrapper']}>
-                {t('There are no projects that match these search parameters')}
-              </Container>
-            )}
           </Container>
         </Col>
       </Row>

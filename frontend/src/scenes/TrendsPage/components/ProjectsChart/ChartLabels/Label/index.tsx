@@ -1,4 +1,3 @@
-import classnames from 'classnames';
 import { FC } from 'react';
 import { Col } from 'react-bootstrap';
 import { ProjectNameMaxLength } from '../../../../../../common/constans';
@@ -13,7 +12,7 @@ interface LabelProps {
 }
 
 const Label: FC<LabelProps> = ({ project, color, t }) => (
-  <Col className={classnames(classes.item, 'justify-content-center')}>
+  <Col className={classes.item}>
     <div className={classes['color-wrapper']}>
       <div style={{ background: color }} className={classes['color-box']} />
     </div>
