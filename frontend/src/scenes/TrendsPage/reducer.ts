@@ -14,8 +14,7 @@ import {
 import { ProjectItem, TagWithQuantity } from './interfaces';
 
 export interface TrendsPageState {
-  isLoadingTop: boolean;
-  isLoadingBottom: boolean;
+  isLoading: boolean;
   tags: TagWithQuantity[];
   categories: Category[];
   selectedCategory: Category | null;
@@ -23,8 +22,7 @@ export interface TrendsPageState {
 }
 
 export const trendsPageState: TrendsPageState = {
-  isLoadingTop: false,
-  isLoadingBottom: false,
+  isLoading: false,
   tags: [],
   categories: [],
   selectedCategory: null,
@@ -37,7 +35,7 @@ export const trendsPageReducer = createReducer<TrendsPageState>(
     [fetchPopularTagsAction.TRIGGER](state) {
       return {
         ...state,
-        isLoadingTop: true
+        isLoading: true
       };
     },
     [fetchPopularTagsAction.SUCCESS](
@@ -46,33 +44,32 @@ export const trendsPageReducer = createReducer<TrendsPageState>(
     ) {
       return {
         ...state,
-        isLoadingTop: false,
         tags: action.payload
       };
     },
     [fetchPopularTagsAction.FAILURE](state) {
       return {
         ...state,
-        isLoadingTop: false
+        isLoading: false
       };
     },
     [fetchCategories.TRIGGER](state) {
       return {
         ...state,
-        isLoadingBottom: true
+        isLoading: true
       };
     },
     [fetchCategories.SUCCESS](state, action: FetchCategoriesSuccessActionType) {
       return {
         ...state,
-        isLoadingBottom: false,
+        isLoading: false,
         categories: action.payload
       };
     },
     [fetchCategories.FAILURE](state) {
       return {
         ...state,
-        isLoadingBottom: false
+        isLoading: false
       };
     },
     [fetchPopularProjectsByCategory.SUCCESS](
@@ -81,20 +78,20 @@ export const trendsPageReducer = createReducer<TrendsPageState>(
     ) {
       return {
         ...state,
-        isLoadingBottom: false,
+        isLoading: false,
         projects: action.payload
       };
     },
     [fetchPopularProjectsByCategory.FAILURE](state) {
       return {
         ...state,
-        isLoadingBottom: false
+        isLoading: false
       };
     },
     [fetchPopularProjectsByCategory.TRIGGER](state) {
       return {
         ...state,
-        isLoadingBottom: true
+        isLoading: true
       };
     },
     [setSelectedCategoryAction.SUCCESS](state, action) {
@@ -106,13 +103,13 @@ export const trendsPageReducer = createReducer<TrendsPageState>(
     [setSelectedCategoryAction.TRIGGER](state) {
       return {
         ...state,
-        isLoadingBottom: true
+        isLoading: true
       };
     },
     [setSelectedCategoryAction.FAILURE](state) {
       return {
         ...state,
-        isLoadingBottom: false
+        isLoading: false
       };
     }
   }

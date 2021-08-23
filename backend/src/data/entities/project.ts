@@ -38,13 +38,13 @@ export class Project extends AbstractEntity {
   @Column()
   finishDate: Date;
 
-  @Column({ type: 'int' })
+  @Column({ type: 'int', default: 0 })
   totalViews: number;
 
-  @Column({ type: 'real' })
+  @Column({ type: 'real', default: 0 })
   minutesToRead: number;
 
-  @Column({ type: 'real' })
+  @Column({ type: 'real', default: 0 })
   totalInteractionTime: number;
 
   @Column({ type: 'text' })

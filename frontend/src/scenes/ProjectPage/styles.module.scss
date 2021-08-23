@@ -8,6 +8,11 @@
 .project-header {
   height: 420px;
 
+  @media (max-width: $breakpoint-lg) {
+    height: auto;
+    margin-bottom: 25px;
+  }
+
   .project-image {
     object-fit: cover;
     width: 100%;
