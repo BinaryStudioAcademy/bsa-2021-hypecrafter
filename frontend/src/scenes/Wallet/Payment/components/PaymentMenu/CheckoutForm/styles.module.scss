@@ -1,4 +1,4 @@
-@import '../../../../../styles/vars';
+@import '../../../../../../styles/vars';
 
 .card-element-wrp{
   margin-top: 30px;
@@ -6,10 +6,17 @@
   padding: 10px;
   border-radius: 10px;
 }
+.card-payment-error{
+  color: $color-error;
+  font-size: $font-size-text;
+}
 .btn-pay-wrp{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80px;
+  height: 40px;
   min-height: 80px;
+  button{
+    margin-top: 20px;  
+  }
 }

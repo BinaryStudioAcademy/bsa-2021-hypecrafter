@@ -1,10 +1,9 @@
-@import '../../../../styles/vars';
+@import '../../../../../styles/vars';
 
 .payment-form-block{
   border-radius: 15px;
   width: 550px;
   min-width: 550px;
-  height: 200px;
-  padding: 10px 10px 30px 10px;
+  padding: 15px 15px 30px 15px;
   background-color: $color-root-block-background;
 }

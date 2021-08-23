@@ -3,11 +3,12 @@ import {
 } from '@stripe/react-stripe-js';
 import { StripeCardElementChangeEvent } from '@stripe/stripe-js';
 import React, { FormEvent, useEffect, useState } from 'react';
-import { ClientSecretData } from '../../../../../common/types/payment';
-import Button from '../../../../../components/Button';
-import { useTypedSelector } from '../../../../../hooks';
-import { getClientSecret } from '../../../../../services/payment';
+import { ClientSecretData } from '../../../../../../common/types/payment';
+import Button from '../../../../../../components/Button';
+import { useTypedSelector } from '../../../../../../hooks';
+import { getClientSecret } from '../../../../../../services/payment';
 import classes from './styles.module.scss';
+import { cardOption } from './utils';
 
 export default function CheckoutForm() {
   const [succeeded, setSucceeded] = useState(false);
@@ -21,29 +22,8 @@ export default function CheckoutForm() {
   useEffect(() => {
     const params: ClientSecretData = { amount: amount.toString() };
     getClientSecret(params).then(secret => setClientSecret(secret));
-    console.log('auuuuuu!');
   }, []);
-  const cardStyle = {
-    hidePostalCode: true,
-    style: {
-      base: {
-        color: '#32325d',
-        fontFamily: 'Courier, monospace',
-        fontSmoothing: 'antialiased',
-        fontSize: '20px',
-        '::placeholder': {
-          color: '#32325d'
-        }
-      },
-      invalid: {
-        color: '#fa755a',
-        iconColor: '#fa755a'
-      }
-    }
-  };
   const handleChange = async (event: StripeCardElementChangeEvent) => {
-    // Listen for changes in the CardElement
-    // and display any errors as the customer types their card details
     setDisabled(event.empty);
     setError(event.error ? event.error.message : '');
   };
@@ -52,7 +32,6 @@ export default function CheckoutForm() {
     const card = elements?.getElement(CardElement);
     setProcessing(true);
     if (stripe && card) {
-      console.log(card);
       const payload = await stripe.confirmCardPayment(clientSecret, {
         payment_method: {
           card
@@ -62,7 +41,6 @@ export default function CheckoutForm() {
         setError(`Payment failed ${payload.error.message}`);
         setProcessing(false);
       } else {
-        console.log(payload);
         setError('');
         setProcessing(false);
         setSucceeded(true);
@@ -72,11 +50,12 @@ export default function CheckoutForm() {
   return (
     <form id="payment-form" onSubmit={handleSubmit}>
       <div className={classes['card-element-wrp']}>
-        <CardElement id="card-element" options={cardStyle} onChange={handleChange} />
+        <CardElement id="card-element" options={cardOption} onChange={handleChange} />
       </div>
       <div className={classes['btn-pay-wrp']}>
         <Button
-          disabled={Boolean(processing || disabled || succeeded)}
+          disable={Boolean(processing || disabled || succeeded)}
+          loading={processing}
           type="submit"
           id="submit"
         >
@@ -84,16 +63,16 @@ export default function CheckoutForm() {
             {processing ? (
               'Load...'
             ) : (
-              'Pay now'
+              'Pay'
             )}
           </span>
         </Button>
       </div>
       {/* Show any error that happens when processing the payment */}
       {error && (
-        <div className="card-error" role="alert">
+        <span className={classes['card-payment-error']} role="alert">
           {error}
-        </div>
+        </span>
       )}
       {succeeded ? (<p>Your balance has been successfully replenished</p>) : false}
 

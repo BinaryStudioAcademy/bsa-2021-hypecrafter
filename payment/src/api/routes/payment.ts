@@ -10,13 +10,7 @@ const stripe = new Stripe(key, {
   apiVersion: '2020-08-27',
 });
 
-// stripe.webhookEndpoints.create({
-//   url: 'http://localhost:3001/webhook',
-//   enabled_events: [
-//     'charge.failed',
-//     'charge.succeeded',
-//   ],
-// }).then(res => console.log(res));
+const endpointSecret = 'whsec_AEOtiS8j2Tj8G1lSgtG8GjsWI6IxjMHh';
 
 const init = ({ paymentService }: Services, path: string) => (app: MicroMq) => app.get(
   `${path}/:userId/:page`,
@@ -35,25 +29,27 @@ const init = ({ paymentService }: Services, path: string) => (app: MicroMq) => a
       clientSecret: paymentIntent.client_secret
     });
   }))
-  .post(`${path}/webhook`, wrap< Empty, { status: number }, { type: string, data: { object: Stripe.PaymentIntent } }
-  , Empty>(async req => {
-    const event = req.body;
-    // Handle the event
-    switch (event.type) {
-      case 'payment_intent.succeeded':
-        console.log(`PaymentIntent for ${event.data.object.amount} was successful!`);
-        // Then define and call a method to handle the successful payment intent.
-        // handlePaymentIntentSucceeded(paymentIntent);
-        break;
-      case 'payment_method.attached':
-        console.log(event.data.object);
-        // Then define and call a method to handle the successful attachment of a PaymentMethod.
-        // handlePaymentMethodAttached(paymentMethod);
-        break;
-      default:
-        // Unexpected event type
-        console.log(`Unhandled event type ${event.type}.`);
+  .post(`${path}/webhook`, wrap< Empty, { status: number }, Stripe.Event, Empty>(async req => {
+    const payloadString = JSON.stringify(req.body, null, 2);
+
+    const header = stripe.webhooks.generateTestHeaderString({
+      payload: payloadString,
+      secret: endpointSecret,
+    });
+    try {
+      const event: Stripe.Event = stripe.webhooks.constructEvent(payloadString, header, endpointSecret);
+      const payload = event.data.object as Stripe.PaymentIntent;
+      switch (event.type) {
+        case 'payment_intent.succeeded':
+          console.log(`PaymentIntent for ${payload.amount} was successful!`);
+          break;
+        default:
+          console.log(`Unhandled event type ${event.type}.`);
+      }
+      return { status: 200 };
+    } catch (err) {
+      console.log(`Webhook Error: ${err.message}`);
+      throw err;
     }
-    return { status: 200 };
   }));
 export default init;
