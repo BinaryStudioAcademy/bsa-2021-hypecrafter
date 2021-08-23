@@ -27,7 +27,6 @@ const getInitHeaders = (
 
   const token = getAccessToken();
   if (token) {
-    console.log(token);
     headers.set(HttpHeader.AUTHORIZATION, `Bearer ${token}`);
   }
 

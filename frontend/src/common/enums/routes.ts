@@ -13,5 +13,6 @@ export enum Routes {
   NOTFOUND = '/page-not-found',
   EXAMPLES = '/examples',
   PAYMENT = '/payment',
+  PAYMENT_SUCCESS = '/payment-success',
   ID = '/:id'
 }

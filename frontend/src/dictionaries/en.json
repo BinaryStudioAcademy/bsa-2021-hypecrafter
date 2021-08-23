@@ -103,6 +103,13 @@
     "Ended": "Ended",
     "Days to go": "Days to go",
     "Payment": "Payment",
-    "Selected fund": "Selected fund"
+    "Selected fund": "Selected fund",
+
+    "Load...": "Load...",
+    "Congratulation!": "Congratulation!",
+    "Payment transaction was successful": "Payment transaction was successful",
+    "Basic fund":"Basic fund",
+    "Amount":"Amount",
+    "Return to Main Page":"Return to Main Page"
   }
 }

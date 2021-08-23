@@ -102,4 +102,10 @@ declare type LocaleKeys =
  | 'Ended'
  | 'Days to go'
  | 'Payment'
- | 'Selected fund';
+ | 'Selected fund'
+ | 'Load...'
+ | 'Congratulation!'
+ | 'Payment transaction was successful'
+ | 'Basic fund'
+ | 'Amount'
+ | 'Return to Main Page';

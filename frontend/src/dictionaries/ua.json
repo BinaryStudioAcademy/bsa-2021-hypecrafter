@@ -21,7 +21,7 @@
     "faithful assistant": "вірний помічник",
     "Add": "Додати",
     "Add funds": "Додати кошти",
-    "Custom fund": "Свій вибір",
+    "Custom fund": "Користувацький",
     "Home": "Головна",
     "Account": "Акаунт",
     "Add funds to your Wallet": "Додайте кошти до свого гаманця",
@@ -103,6 +103,13 @@
     "Ended": "Закінчено",
     "Days to go": "Залишилось днів",
     "Payment": "Оплата",
-    "Selected fund": "Вибрані кошти"
+    "Selected fund": "Вибрані кошти",
+
+    "Load...": "Завантаження...",
+    "Congratulation!": "Вітаємо!",
+    "Payment transaction was successful": "Платіжна транзакція пройшла успішно",
+    "Basic fund":"Базовий",
+    "Amount":"Кількість",
+    "Return to Main Page":"Повернутися до Головної Сторінки"
   }
 }

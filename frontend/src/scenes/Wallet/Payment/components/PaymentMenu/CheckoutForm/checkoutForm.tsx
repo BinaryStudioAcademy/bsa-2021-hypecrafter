@@ -3,6 +3,8 @@ import {
 } from '@stripe/react-stripe-js';
 import { StripeCardElementChangeEvent } from '@stripe/stripe-js';
 import React, { FormEvent, useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
+import { Routes } from '../../../../../../common/enums';
 import { ClientSecretData } from '../../../../../../common/types/payment';
 import Button from '../../../../../../components/Button';
 import { useTypedSelector } from '../../../../../../hooks';
@@ -16,6 +18,7 @@ export default function CheckoutForm() {
   const [processing, setProcessing] = useState(false);
   const [disabled, setDisabled] = useState(true);
   const [clientSecret, setClientSecret] = useState('');
+  const history = useHistory();
   const stripe = useStripe();
   const elements = useElements();
   const { amount } = useTypedSelector(({ payment }) => payment);
@@ -47,6 +50,9 @@ export default function CheckoutForm() {
       }
     }
   };
+  useEffect(() => {
+    if (succeeded) { history.push(Routes.PAYMENT_SUCCESS); }
+  }, [succeeded]);
   return (
     <form id="payment-form" onSubmit={handleSubmit}>
       <div className={classes['card-element-wrp']}>
@@ -54,7 +60,7 @@ export default function CheckoutForm() {
       </div>
       <div className={classes['btn-pay-wrp']}>
         <Button
-          disable={Boolean(processing || disabled || succeeded)}
+          disable={Boolean(processing || disabled)}
           loading={processing}
           type="submit"
           id="submit"
@@ -74,7 +80,6 @@ export default function CheckoutForm() {
           {error}
         </span>
       )}
-      {succeeded ? (<p>Your balance has been successfully replenished</p>) : false}
 
     </form>
   );
