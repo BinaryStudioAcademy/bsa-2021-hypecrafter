@@ -48,6 +48,22 @@
   }
 }
 
+.tag-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag-item {
+  margin: 0px 10px 10px 0px;
+}
+
+.privilege-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  align-items: center;
+}
+
 hr.horizontal-line {
   background: linear-gradient(90deg, #894eed 0%, #28abf2 100%);
   height: 5px;

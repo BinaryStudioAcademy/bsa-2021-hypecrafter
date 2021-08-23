@@ -35,7 +35,7 @@ const ProjectPage: FC = () => {
         <Row>
           <Tabs>
             <Tab title="Story">
-              <Story />
+              <Story story={project.story} privileges={project.privileges} tags={project.tags} />
             </Tab>
             <Tab title="FAQ">
               <FAQ faqs={project.FAQ} />
