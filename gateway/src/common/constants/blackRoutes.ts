@@ -12,20 +12,3 @@ const BLACK_ROUTES = [
 ];
 
 export { BLACK_ROUTES };
-
-// const WHITE_ROUTES = [
-//   '/auth/login',
-//   '/white-rout',
-//   '/auth/token',
-//   '/auth/register',
-//   '/users',
-//   '/users/:id',
-//   '/topics',
-//   '/projects',
-//   '/projects/popular-and-recommended',
-//   '/tags',
-//   '/categories',
-//   '/projects/popular',
-//   '/projects/:id',
-//   '/api-docs'
-// ];
