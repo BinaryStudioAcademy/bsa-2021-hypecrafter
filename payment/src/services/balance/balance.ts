@@ -10,4 +10,8 @@ export default class BalanceService {
   public createNewBalance(userId: string) {
     return this.#balanceRepository.createNewBalance(userId);
   }
+
+  public replenishmentBalance(userId: string, amount: number) {
+    return this.#balanceRepository.replenishmentBalance(userId, amount);
+  }
 }

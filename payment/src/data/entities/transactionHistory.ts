@@ -3,10 +3,10 @@ import { AbstractEntity } from './abstract';
 
 @Entity()
 export class TransactionHistory extends AbstractEntity {
-  @Column({ type: 'money' })
+  @Column({ type: 'numeric' })
   public total: number;
 
-  @Column({ type: 'money' })
+  @Column({ type: 'numeric' })
   public balance: number;
 
   @Column()
