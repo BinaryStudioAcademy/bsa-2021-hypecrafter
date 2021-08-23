@@ -51,20 +51,10 @@ const Header = () => {
     setText(e.target.value);
   };
 
-  const scrollDownCallback = () => {
-    setVisibleOnScroll(true);
-  };
+  const scrollOverLimitCallback = () => setVisibleOnScroll(false);
+  const scrollUnderLimitCallback = () => setVisibleOnScroll(true);
 
-  const scrollUpCallback = () => {
-    setVisibleOnScroll(false);
-  };
-
-  useScroll(
-    {
-      scrollDownCallback,
-      scrollUpCallback
-    }
-  );
+  useScroll(30, { scrollOverLimitCallback, scrollUnderLimitCallback });
 
   const handleLogOut = () => {
     removeTokens();

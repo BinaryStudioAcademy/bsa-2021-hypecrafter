@@ -1,46 +1,40 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef } from 'react';
+import { getOffsetSize } from '../helpers/scroll';
 
 export function useScroll(
+  scrollSizeLimit: number,
   callbacks: {
-    scrollDownCallback: () => void;
-    scrollUpCallback: () => void;
+    scrollOverLimitCallback: () => void;
+    scrollUnderLimitCallback: () => void;
   } = {
-    scrollDownCallback: () => {},
-    scrollUpCallback: () => {},
+    scrollOverLimitCallback: () => {},
+    scrollUnderLimitCallback: () => {},
   }
 ) {
-  const deadZone = 5;
-  const topDeadZone = 10;
-  enum ScrollCallback {
-    ScrollDownCallback = 'ScrollDownCallback',
-    ScrollUpCallback = 'ScrollUpCallback'
-  }
+  const { scrollOverLimitCallback, scrollUnderLimitCallback } = callbacks;
 
-  const { scrollDownCallback, scrollUpCallback } = callbacks;
-  const [previousScrollTop, setPreviousScrollTop] = useState(window.pageYOffset);
-  const [lastScrollCallback, setLastScrollCallback] = useState('');
-
-  const conditionForDownHandler = (scrollTop: number) => (
-    scrollTop > previousScrollTop && lastScrollCallback !== ScrollCallback.ScrollDownCallback
-  );
-
-  const conditionForUpHandler = (scrollTop: number) => (
-    scrollTop < topDeadZone && scrollTop < previousScrollTop && lastScrollCallback !== ScrollCallback.ScrollUpCallback
-  );
+  const state = useRef({
+    prevScrollSize: getOffsetSize(),
+    scrollSize: getOffsetSize(),
+  }).current;
 
   const scrollHandler = () => {
-    const scrollTop = window.pageYOffset;
+    state.scrollSize = getOffsetSize();
 
-    if (Math.abs(scrollTop - previousScrollTop) < deadZone) return;
+    const minScrollSize = Math.min(state.prevScrollSize, state.scrollSize);
+    const maxScrollSize = Math.max(state.prevScrollSize, state.scrollSize);
 
-    if (conditionForDownHandler(scrollTop)) {
-      scrollDownCallback();
-      setLastScrollCallback(ScrollCallback.ScrollDownCallback);
-    } else if (conditionForUpHandler(scrollTop)) {
-      scrollUpCallback();
-      setLastScrollCallback(ScrollCallback.ScrollUpCallback);
+    if (!(scrollSizeLimit >= minScrollSize && scrollSizeLimit <= maxScrollSize)) {
+      return;
     }
-    setPreviousScrollTop(scrollTop);
+
+    if (state.scrollSize <= scrollSizeLimit) {
+      scrollOverLimitCallback();
+    } else {
+      scrollUnderLimitCallback();
+    }
+
+    state.prevScrollSize = getOffsetSize();
   };
 
   useEffect(() => {
@@ -48,5 +42,5 @@ export function useScroll(
     return () => {
       window.removeEventListener('scroll', scrollHandler);
     };
-  });
+  }, []);
 }
