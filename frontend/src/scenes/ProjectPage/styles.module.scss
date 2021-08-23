@@ -1,5 +1,6 @@
 @import '../../styles/vars';
 @import '../../styles/fonts';
+@import '../../styles/mixins';
 
 .container {
   margin-top: 130px;
@@ -48,20 +49,26 @@
   }
 }
 
-.tag-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-}
+.project-story {
+  .tag-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-.tag-item {
-  margin: 0px 10px 10px 0px;
-}
+  .tag-item {
+    margin: 0px 10px 10px 0px;
+  }
 
-.privilege-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  align-items: center;
+  .privilege-title {
+    @include heading-xl;
+    margin: 20px 0px;
+  }
+
+  .privilege-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
 }
 
 hr.horizontal-line {
