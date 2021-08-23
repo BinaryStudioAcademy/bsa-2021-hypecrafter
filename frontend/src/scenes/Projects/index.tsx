@@ -5,8 +5,7 @@ import { Routes } from '../../common/enums';
 import { Project } from '../../common/types';
 import ProjectCard from '../../components/ProjectCard';
 import { getEnumKeyByEnumValue } from '../../helpers/enum';
-import { useAction, useTypedSelector } from '../../hooks';
-import { useQuery } from '../../hooks/useQuery';
+import { useAction, useQuery, useTypedSelector } from '../../hooks';
 import Filters from './components/Filters';
 import classes from './styles.module.scss';
 
