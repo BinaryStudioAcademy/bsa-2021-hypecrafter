@@ -26,15 +26,17 @@ interface AdditionalFormProps {
 
 const AdditionalForm: FunctionComponent<AdditionalFormProps> = ({
   setCurrentPage,
-  mainFormInfo,
+  // mainFormInfo,
   t,
-  onSignup
+  // onSignup
 }: AdditionalFormProps) => {
   const { control, register, handleSubmit } = useForm<AdditionalFormData>();
 
   const onSubmit: SubmitHandler<AdditionalFormData> = (data) => {
-    setCurrentPage(Pages.ADDITIONAL_FORM);
-    onSignup({ ...mainFormInfo, ...data } as SignupData);
+    // setCurrentPage(Pages.ADDITIONAL_FORM);
+    console.log(data);
+
+    // onSignup({ ...mainFormInfo, ...data } as SignupData);
   };
 
   const handleBackButtonClick = () => {
@@ -49,9 +51,12 @@ const AdditionalForm: FunctionComponent<AdditionalFormProps> = ({
         <Controller
           control={control}
           name='birthday'
-          render={({ field }) => (
+          // eslint-disable-next-line @typescript-eslint/no-unused-vars
+          render={({ field: { onChange, value } }) => (
             <DatePickerInput
-              daySetter={(date) => field.onChange(date)}
+              daySetter={(date) => onChange(date)}
+              // onBlur={onBlur}
+              value={value}
             />
           )}
         />
