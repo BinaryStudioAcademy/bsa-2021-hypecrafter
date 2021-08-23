@@ -9,7 +9,6 @@ export * from './donatorsPrivilege';
 export * from './faq';
 export * from './message';
 export * from './project';
-export * from './projectDonatorsPrivilege';
 export * from './projectTag';
 export * from './tag';
 export * from './team';
