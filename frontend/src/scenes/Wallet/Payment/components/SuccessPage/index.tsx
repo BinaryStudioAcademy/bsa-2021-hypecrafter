@@ -15,8 +15,8 @@ const SuccessPage: FC = () => {
   return (
     <div className={classes['root-payment-success']}>
       <div className={classes.confetti}>
-        <ConfettiExplosion particleCount={25} />
-        <ConfettiExplosion particleCount={25} />
+        <ConfettiExplosion particleCount={25} particleSize={15} />
+        <ConfettiExplosion particleCount={25} particleSize={15} />
       </div>
       <h1><span className={classes['payment-success-title']}>Congratulation!</span></h1>
       <h2 className={classes['payment-success-about']}>
