@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { Helmet } from 'react-helmet';
 import { Routes } from '../../common/enums';
 import { Project } from '../../common/types';
 import ProjectCard from '../../components/ProjectCard';
+import Seo from '../../components/Seo';
 import { useAction, useTypedSelector } from '../../hooks';
 import { useLocalization } from '../../providers/localization';
 import Filters from './components/Filters';
@@ -20,9 +20,10 @@ const Projects = () => {
 
   return (
     <Container className={classes['projects-page']}>
-      <Helmet>
-        <title>{`${t('Projects')} - HypeCrafter`}</title>
-      </Helmet>
+      <Seo
+        title={`${t('Projects')} - HypeCrafter`}
+        description=""
+      />
 
       <Row>
         <Col lg={3}>

@@ -139,4 +139,5 @@ declare type LocaleKeys =
  | 'BACKER'
  | 'views'
  | 'projects'
+ | 'Page not found'
  | 'The page you were looking for doesn’t exist (404)';

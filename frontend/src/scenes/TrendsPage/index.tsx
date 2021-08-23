@@ -1,7 +1,7 @@
 import { FC, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
-import { Helmet } from 'react-helmet';
 import LoaderWrapper from '../../components/LoaderWrapper';
+import Seo from '../../components/Seo';
 import { useAction, useTypedSelector } from '../../hooks';
 import { useLocalization } from '../../providers/localization';
 import { ProjectsChart, TagsChart } from './components';
@@ -32,9 +32,10 @@ const TrendsPage: FC = () => {
 
   return (
     <div className={classes.wrapper}>
-      <Helmet>
-        <title>{`${t('Trends')} - HypeCrafter`}</title>
-      </Helmet>
+      <Seo
+        title={`${t('Trends')} - HypeCrafter`}
+        description=""
+      />
 
       <Container className={classes['trends-container']}>
         <LoaderWrapper isLoading={isLoadingTop} variant='page'>

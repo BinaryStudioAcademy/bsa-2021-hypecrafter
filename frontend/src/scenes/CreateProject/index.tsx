@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { Helmet } from 'react-helmet';
 import { CreateProject as Project } from '../../common/types';
 import LoaderWrapper from '../../components/LoaderWrapper';
+import Seo from '../../components/Seo';
 import { useAction, useTypedSelector } from '../../hooks';
 import { useLocalization } from '../../providers/localization';
 import Basic from './components/Basic';
@@ -113,9 +113,10 @@ const CreateProject = () => {
   };
   return (
     <LoaderWrapper isLoading={isLoading}>
-      <Helmet>
-        <title>{`${t('Create project')} - HypeCrafter`}</title>
-      </Helmet>
+      <Seo
+        title={`${t('Create project')} - HypeCrafter`}
+        description=""
+      />
 
       {getView()}
     </LoaderWrapper>

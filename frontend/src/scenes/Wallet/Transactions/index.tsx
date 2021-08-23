@@ -1,11 +1,11 @@
 import { FC, useCallback, useEffect, useMemo } from 'react';
 import { Spinner } from 'react-bootstrap';
-import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { Column, useTable } from 'react-table';
 import { Routes } from '../../../common/enums';
 import { PageRow } from '../../../common/types';
 import Button from '../../../components/Button';
+import Seo from '../../../components/Seo';
 import { useAction, useTypedSelector } from '../../../hooks';
 import { useLocalization } from '../../../providers/localization';
 import RenderCell from './RenderCell';
@@ -45,9 +45,10 @@ const Transactions: FC = () => {
   );
   return (
     <div className={classes['transaction-table-wrp']}>
-      <Helmet>
-        <title>{`${t('Transactions')} - HypeCrafter`}</title>
-      </Helmet>
+      <Seo
+        title={`${t('Transactions')} - HypeCrafter`}
+        description=""
+      />
 
       <div className={classes.breadcrumbs}>
         <Link to={Routes.HOME}> {t('Home')}</Link>

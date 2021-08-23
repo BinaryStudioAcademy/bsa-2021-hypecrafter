@@ -1,11 +1,11 @@
 import classNames from 'classnames';
 import { FunctionComponent, useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet';
 import { Link, useHistory } from 'react-router-dom';
 import logo from '../../../assets/HypeCrafter.svg';
 import { Routes } from '../../../common/enums';
 import { Pages } from '../../../common/enums/signupForms';
 import { SignupData } from '../../../common/types/signup';
+import Seo from '../../../components/Seo';
 import { useAction, useTypedSelector } from '../../../hooks';
 import { useLocalization } from '../../../providers/localization';
 import classesAuth from '../styles.module.scss';
@@ -65,9 +65,10 @@ const SignupPage: FunctionComponent = () => {
 
   return (
     <div className={classesAuth.root}>
-      <Helmet>
-        <title>{`${t('Sign Up')} - HypeCrafter`}</title>
-      </Helmet>
+      <Seo
+        title={`${t('Sign Up')} - HypeCrafter`}
+        description=""
+      />
 
       <div className={classesAuth.hero}>
         <img className={classesAuth.logo} src={logo} alt="logo" />

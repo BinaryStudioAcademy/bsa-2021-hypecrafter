@@ -1,5 +1,4 @@
 import { FC, MouseEventHandler, useEffect } from 'react';
-import { Helmet } from 'react-helmet';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { Link, useHistory } from 'react-router-dom';
 import logo from '../../../assets/HypeCrafter.svg';
@@ -7,6 +6,7 @@ import { Languages, Routes } from '../../../common/enums';
 import { LoginData } from '../../../common/types/login';
 import Button from '../../../components/Button';
 import Input from '../../../components/Input';
+import Seo from '../../../components/Seo';
 import { useAction, useTypedSelector } from '../../../hooks';
 import { useLocalization } from '../../../providers/localization';
 import classes from '../styles.module.scss';
@@ -57,9 +57,10 @@ const LoginPage: FC = () => {
 
   return (
     <div className={classes.root}>
-      <Helmet>
-        <title>{`${t('Log In')} - HypeCrafter`}</title>
-      </Helmet>
+      <Seo
+        title={`${t('Log In')} - HypeCrafter`}
+        description=""
+      />
 
       <div className={classes.hero}>
         <img className={classes.logo} src={logo} alt="logo" />

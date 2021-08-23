@@ -1,10 +1,10 @@
 import { FC, useEffect } from 'react';
-import { Helmet } from 'react-helmet';
 import { Project } from '../../common/types';
 import Button from '../../components/Button';
 import Chart from '../../components/Chart';
 import LoaderWrapper from '../../components/LoaderWrapper';
 import ProjectCard from '../../components/ProjectCard';
+import Seo from '../../components/Seo';
 import { calcDonationProgress } from '../../helpers/project';
 import { useTypedSelector } from '../../hooks';
 import { useAction } from '../../hooks/useAction';
@@ -57,9 +57,10 @@ const MainPage: FC = () => {
 
   return (
     <div className={classes.root}>
-      <Helmet>
-        <title>HypeCrafter</title>
-      </Helmet>
+      <Seo
+        title="HypeCrafter"
+        description=""
+      />
 
       <section className={classes.main}>
         <div className={classes['main-text']}>
