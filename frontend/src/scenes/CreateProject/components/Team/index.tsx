@@ -59,7 +59,7 @@ const Team: FC<Props> = ({ changePage, currentPage, team, onChangeValue }) => {
           options={users.map(user => ({ text: `${user.lastName} ${user.firstName} (${user.email})`, value: user.id }))}
           label={t('Pick a members to add they to team.')}
           defaultText="-"
-          onSelectChange={value => setUser(value)}
+          onChange={e => setUser(e.target.value)}
         />
         <Button onClick={addMember} className={classes.addMember}>{t('Add')}</Button>
       </div>
