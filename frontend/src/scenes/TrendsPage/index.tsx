@@ -13,13 +13,11 @@ const TrendsPage: FC = () => {
   const {
     tags: popularTags,
     categories,
-    isLoadingBottom,
-    isLoadingTop
+    isLoading
   } = useTypedSelector(({ trendsPage }) => ({
     tags: trendsPage.tags,
     categories: trendsPage.categories,
-    isLoadingBottom: trendsPage.isLoadingBottom,
-    isLoadingTop: trendsPage.isLoadingTop
+    isLoading: trendsPage.isLoading
   }));
 
   useEffect(() => {
@@ -27,15 +25,13 @@ const TrendsPage: FC = () => {
     fetchCategories();
   }, []);
 
-  const defaultParams = getTagsOptions(popularTags);
+  const defaultParams = getTagsOptions(popularTags, t);
 
   return (
     <div className={classes.wrapper}>
       <Container className={classes['trends-container']}>
-        <LoaderWrapper isLoading={isLoadingTop} variant='page'>
+        <LoaderWrapper isLoading={isLoading} variant="page">
           <TagsChart defaultParams={defaultParams} t={t} />
-        </LoaderWrapper>
-        <LoaderWrapper isLoading={isLoadingBottom} variant='page'>
           <ProjectsChart categories={categories} t={t} />
         </LoaderWrapper>
       </Container>

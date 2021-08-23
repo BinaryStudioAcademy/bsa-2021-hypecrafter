@@ -119,7 +119,8 @@ export class ProjectRepository extends Repository<Project> {
         likes,
         dislikes,
         privileges,
-        "projectComments"
+        "projectComments",
+        "bakersDonation"
       `)
       .leftJoin(subQuery => subQuery
         .select(`
@@ -154,24 +155,47 @@ export class ProjectRepository extends Repository<Project> {
       .leftJoin(subQuery => subQuery
         .select(`
             jsonb_agg(
-              jsonb_build_object(
+              DISTINCT jsonb_build_object(
                 'privilege', privilege,
                 'amount', amount
               )
             ) AS "privileges",
-            "projectId"
+            "bakersDonation",
+            project.id AS "projectId"
           `)
         .from(Project, 'project')
-        .leftJoin('project.projectDonatorsPrivileges', 'projectDonatorsPrivileges')
-        .leftJoin('projectDonatorsPrivileges.donatorsPrivilege', 'donatorsPrivilege')
-        .groupBy('"projectId"'), 'dp', 'dp."projectId" = project.id')
+        .leftJoin(subQuery => subQuery
+          .select(`
+            array_agg(dua."userAmount") AS "bakersDonation", 
+            dua."projectId"
+          `)
+          .from(subQuery => subQuery
+            .select(`
+              SUM(amount) AS "userAmount",
+              "userId", 
+              "projectId"
+            `)
+            .from('donate', 'donate')
+            .groupBy(`
+              "userId", 
+              "projectId"
+            `), "dua"
+          )
+          .groupBy('dua."projectId"'), 'ud', 'ud."projectId" = project.id')
+        .leftJoin('project.projectDonatorsPrivileges', 'donatorsPrivilege')
+        .where('privilege IS NOT NULL AND amount IS NOT NULL')
+        .groupBy('project.id,"bakersDonation"'), 'dp', 'dp."projectId" = project.id')
       .leftJoin(subQuery => subQuery
         .select(`
               jsonb_agg(
                 jsonb_build_object(
                   'author', jsonb_build_object(
+                      'id', "commentAuthor"."id",
                       'firstName', "commentAuthor"."firstName",
-                      'lastName', "commentAuthor"."lastName"
+                      'lastName', "commentAuthor"."lastName",
+                      'avatar', "commentAuthor"."imageUrl",
+                      'isBacker', CASE WHEN "userDonates"."userId" IS NULL THEN false ELSE true END,
+                      'isOwner', CASE WHEN tu."userId" IS NULL THEN false ELSE true END
                     ),
                   'message', comments.message,
                   'createdAt', comments."createdAt",
@@ -179,12 +203,15 @@ export class ProjectRepository extends Repository<Project> {
                   'parentCommentId', comments."parentCommentId"
                 )
               ) AS "projectComments",
-              "projectId"
+              project.id AS "projectId"
             `)
         .from(Project, 'project')
         .leftJoin('project.comments', 'comments')
         .leftJoin('comments.author', 'commentAuthor')
-        .groupBy('"projectId"'), 'cp', 'cp."projectId" = project.id')
+        .leftJoin('donate', 'userDonates', '"userDonates"."projectId"=project."id" AND "userDonates"."userId"="commentAuthor"."id"')
+        .leftJoin('project.team', 'team')
+        .leftJoin('team_users', 'tu', 'tu."teamId"=team."id" AND "tu"."userId"="commentAuthor"."id"')
+        .groupBy('project.id'), 'cp', 'cp."projectId" = project.id')
       .leftJoin(subQuery => subQuery
         .select(`
           array_agg(tag.name) AS "tags",
@@ -241,8 +268,8 @@ export class ProjectRepository extends Repository<Project> {
         .from(Project, 'project')
         .leftJoin('project.userProjects', 'userProject')
         .where(`"userProject"."userId" = ${userId}`),
-      'up',
-      'up."projectId" = project.id');
+        'up',
+        'up."projectId" = project.id');
     }
 
     if (filter) {

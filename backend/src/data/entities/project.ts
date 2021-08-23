@@ -1,11 +1,11 @@
 import {
   Column, Entity, JoinColumn, ManyToOne, OneToMany, OneToOne
 } from 'typeorm';
-import { ProjectDonatorsPrivilege } from '.';
 import { AbstractEntity } from './abstract';
 import { Category } from './category';
 import { Comment } from './comment';
 import { Donate } from './donate';
+import { DonatorsPrivilege } from './donatorsPrivilege';
 import { FAQ } from './faq';
 import { ProjectTag } from './projectTag';
 import { Team } from './team';
@@ -84,8 +84,8 @@ export class Project extends AbstractEntity {
   @ManyToOne(() => Category, category => category.projects)
   category: Category;
 
-  @OneToMany(() => ProjectDonatorsPrivilege, projectDonatorsPrivilege => projectDonatorsPrivilege.project)
-  projectDonatorsPrivileges: ProjectDonatorsPrivilege[];
+  @OneToMany(() => DonatorsPrivilege, projectDonatorsPrivilege => projectDonatorsPrivilege.projectId)
+  projectDonatorsPrivileges: DonatorsPrivilege[];
 
   @ManyToOne(() => UserProfile, userProfile => userProfile.projects)
   author: UserProfile;

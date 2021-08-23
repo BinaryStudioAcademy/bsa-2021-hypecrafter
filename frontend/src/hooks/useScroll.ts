@@ -1,55 +1,40 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
+import { getOffsetSize } from '../helpers/scroll';
 
 export function useScroll(
-  scrollTopLimit: number,
+  scrollSizeLimit: number,
   callbacks: {
-    scrollDownCallback: () => void;
-    scrollUpCallback: () => void;
+    scrollOverLimitCallback: () => void;
+    scrollUnderLimitCallback: () => void;
   } = {
-    scrollDownCallback: () => {},
-    scrollUpCallback: () => {},
+    scrollOverLimitCallback: () => {},
+    scrollUnderLimitCallback: () => {},
   }
 ) {
-  const { scrollDownCallback, scrollUpCallback } = callbacks;
-  const [bodyOffset, setBodyOffset] = useState(document.body.getBoundingClientRect());
-  const [scrollTop, setScrollTop] = useState(bodyOffset.top);
-  const [scrollDirection, setScrollDirection] = useState<'up' | 'down' | null>(null);
+  const { scrollOverLimitCallback, scrollUnderLimitCallback } = callbacks;
 
-  const stateRef = useRef({
-    prevScrollTop: scrollTop,
-    callbackBlockers: {
-      overLimit: false,
-      underLimit: false,
-    },
-  });
+  const state = useRef({
+    prevScrollSize: getOffsetSize(),
+    scrollSize: getOffsetSize(),
+  }).current;
 
   const scrollHandler = () => {
-    setBodyOffset(document.body.getBoundingClientRect());
-    setScrollTop(-bodyOffset.top);
-    setScrollDirection(stateRef.current.prevScrollTop > -bodyOffset.top ? 'up' : 'down');
-    stateRef.current.prevScrollTop = -bodyOffset.top;
+    state.scrollSize = getOffsetSize();
 
-    if (
-      scrollTop >= scrollTopLimit
-      && !stateRef.current.callbackBlockers.underLimit
-      && scrollDirection === 'down'
-    ) {
-      scrollDownCallback();
-      stateRef.current.callbackBlockers = {
-        overLimit: false,
-        underLimit: true,
-      };
-    } else if (
-      scrollTop <= scrollTopLimit
-      && !stateRef.current.callbackBlockers.overLimit
-      && scrollDirection === 'up'
-    ) {
-      scrollUpCallback();
-      stateRef.current.callbackBlockers = {
-        overLimit: true,
-        underLimit: false,
-      };
+    const minScrollSize = Math.min(state.prevScrollSize, state.scrollSize);
+    const maxScrollSize = Math.max(state.prevScrollSize, state.scrollSize);
+
+    if (!(scrollSizeLimit >= minScrollSize && scrollSizeLimit <= maxScrollSize)) {
+      return;
     }
+
+    if (state.scrollSize <= scrollSizeLimit) {
+      scrollOverLimitCallback();
+    } else {
+      scrollUnderLimitCallback();
+    }
+
+    state.prevScrollSize = getOffsetSize();
   };
 
   useEffect(() => {
@@ -57,5 +42,5 @@ export function useScroll(
     return () => {
       window.removeEventListener('scroll', scrollHandler);
     };
-  });
+  }, []);
 }
