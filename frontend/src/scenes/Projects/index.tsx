@@ -4,18 +4,14 @@ import { Col, Container, Row } from 'react-bootstrap';
 import { Routes } from '../../common/enums';
 import { Project } from '../../common/types';
 import ProjectCard from '../../components/ProjectCard';
-import { getEnumKeyByEnumValue } from '../../helpers/enum';
+import { runActionWithValueOfEnum } from '../../helpers';
 import { useAction, useQuery, useTypedSelector } from '../../hooks';
 import Filters from './components/Filters';
 import classes from './styles.module.scss';
 
 const Projects = () => {
   const { projects, modificators } = useTypedSelector((state) => state.projects);
-  const {
-    fetchProjectsAction,
-    sortProjectsAction,
-    filterProjectsAction
-  } = useAction();
+  const { fetchProjectsAction, sortProjectsAction, filterProjectsAction } = useAction();
   const query = useQuery();
 
   useEffect(() => {
@@ -23,21 +19,10 @@ const Projects = () => {
   }, [modificators]);
 
   useEffect(() => {
-    const sortQuery = query.get('sort');
-    if (sortQuery) {
-      const sortValue = getEnumKeyByEnumValue(ProjectsSort, sortQuery);
-      if (sortValue) {
-        sortProjectsAction(ProjectsSort[sortValue]);
-      }
-    }
-
-    const filterQuery = query.get('filter');
-    if (filterQuery) {
-      const filterValue = getEnumKeyByEnumValue(ProjectsFilter, filterQuery);
-      if (filterValue) {
-        filterProjectsAction(ProjectsFilter[filterValue]);
-      }
-    }
+    const sortParam = query.get('sort');
+    const filterParam = query.get('filter');
+    runActionWithValueOfEnum(sortParam, ProjectsSort, sortProjectsAction);
+    runActionWithValueOfEnum(filterParam, ProjectsFilter, filterProjectsAction);
   }, []);
 
   return (
