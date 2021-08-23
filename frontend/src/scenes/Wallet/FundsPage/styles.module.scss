@@ -48,11 +48,11 @@
       .wallet-balance-block {
         display: flex;
         justify-content: space-between;
-        
+
         align-items: flex-end;
         h3{
           color:#eee;
-          font-size: $font-size-akcent;
+          font-size: $font-size-aсcent;
         }
         .wallet-balance {
           span{
@@ -84,7 +84,7 @@
 }
 .addfunds-header {
   color: $color-root-turquoise;
-  font-size: $font-size-akcent;
+  font-size: $font-size-aсcent;
 }
 
 .addfunds-about {
@@ -98,7 +98,7 @@
     flex-direction: column-reverse;
     .wallet-info-block{
       h2{
-        font-size: $font-size-akcent;
+        font-size: $font-size-aсcent;
       }
       min-width: 0px;
       margin:10px 0px;
