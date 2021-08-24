@@ -45,11 +45,17 @@ export default class ProjectService {
     return projects;
   }
 
-  public async getById(id: string) {
-    const project = await this.#projectRepository.getById(id);
+  public async getById(id: string, userId: string) {
+    const project = await this.#projectRepository.getById(id, userId);
     project.bakersAmount = Math.max(0, project.bakersAmount);
     project.donated = Math.max(0, project.donated);
     project.privileges = mapPrivileges(project.privileges, project.bakersDonation);
     return project; // rewrite when error handling middleware works
+  }
+
+  public async setReaction({ isLiked, projectId }: { isLiked: boolean, projectId: string }, userId: string) {
+    await this.#projectRepository.setReaction(isLiked, userId, projectId);
+
+    return this.getById(projectId, userId);
   }
 }

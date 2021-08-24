@@ -1,7 +1,7 @@
 import { ProjectPage } from '../../common/types';
 import { createReducer } from '../../helpers';
-import type { FetchProjectSuccessActionType } from './actions';
-import { fetchProject } from './actions';
+import type { FetchProjectSuccessActionType, SetReactionSuccessActionType } from './actions';
+import { fetchProject, setReaction } from './actions';
 
 export interface ProjectPageState {
   isLoading: boolean;
@@ -21,6 +21,13 @@ const projectPageReducer = createReducer<ProjectPageState>(projectPageState, {
     };
   },
   [fetchProject.SUCCESS](state, action: FetchProjectSuccessActionType) {
+    return {
+      ...state,
+      isLoading: false,
+      project: action.payload
+    };
+  },
+  [setReaction.SUCCESS](state, action: SetReactionSuccessActionType) {
     return {
       ...state,
       isLoading: false,

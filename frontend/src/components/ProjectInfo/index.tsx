@@ -4,12 +4,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FunctionComponent, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { calcDaysToGo, calcDonationProgress } from '../../helpers/project';
+import { useAction } from '../../hooks';
 import { useLocalization } from '../../providers/localization';
 import Button from '../Button';
 import ProgressBarComponent from '../ProgressBar';
 import classes from './styles.module.scss';
 
 interface ProjectInfoProps {
+  id: string;
   donated: number;
   goal: number;
   bakersAmount: number;
@@ -19,6 +21,7 @@ interface ProjectInfoProps {
 }
 
 const ProjectInfo: FunctionComponent<ProjectInfoProps> = ({
+  id,
   donated,
   goal,
   bakersAmount,
@@ -28,18 +31,27 @@ const ProjectInfo: FunctionComponent<ProjectInfoProps> = ({
 }) => {
   const [liked, setLiked] = useState(false);
   const [disliked, setDisliked] = useState(false);
+  const { setReaction } = useAction();
   const { t } = useLocalization();
 
   const handleLike = () => {
     if (disliked) setDisliked(!disliked);
     setLiked(!liked);
-    console.log('like action');
+    if (!disliked && liked) {
+      setReaction({ isLiked: null, projectId: id });
+    } else {
+      setReaction({ isLiked: true, projectId: id });
+    }
   };
 
   const handleDislike = () => {
     if (liked) setLiked(!liked);
     setDisliked(!disliked);
-    console.log('dislike action');
+    if (disliked && !liked) {
+      setReaction({ isLiked: null, projectId: id });
+    } else {
+      setReaction({ isLiked: false, projectId: id });
+    }
   };
 
   const daysToGo = calcDaysToGo(finishDate);

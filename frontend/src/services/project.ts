@@ -11,3 +11,9 @@ export const getProject = async (id: string) => {
 
   return project;
 };
+
+export const setReaction = async (body: any) => {
+  const project: Project = await api.post({ url: 'projects/like', params: body });
+
+  return project;
+};

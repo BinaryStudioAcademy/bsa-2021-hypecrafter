@@ -14,6 +14,7 @@ interface HeaderProps {
 
 const Header: FunctionComponent<HeaderProps> = ({ project }) => {
   const {
+    id,
     name,
     description,
     category,
@@ -57,9 +58,9 @@ const Header: FunctionComponent<HeaderProps> = ({ project }) => {
           <Row className={classes['project-social-links-container']}>
             {instagramUrl
               && (
-              <a href={instagramUrl} target="_blank" rel="noreferrer">
-                <FontAwesomeIcon icon={faInstagram} size="2x" />
-              </a>
+                <a href={instagramUrl} target="_blank" rel="noreferrer">
+                  <FontAwesomeIcon icon={faInstagram} size="2x" />
+                </a>
               )}
             {facebookUrl
               && (
@@ -69,13 +70,14 @@ const Header: FunctionComponent<HeaderProps> = ({ project }) => {
               )}
             {dribbleUrl
               && (
-              <a href={dribbleUrl} target="_blank" rel="noreferrer">
-                <FontAwesomeIcon icon={faDribbble} size="2x" />
-              </a>
+                <a href={dribbleUrl} target="_blank" rel="noreferrer">
+                  <FontAwesomeIcon icon={faDribbble} size="2x" />
+                </a>
               )}
           </Row>
           <Row>
             <ProjectInfo
+              id={id}
               donated={donated}
               goal={goal}
               likes={likes}
