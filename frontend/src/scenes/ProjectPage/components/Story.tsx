@@ -15,16 +15,15 @@ const Story: FC<StoryProps> = ({ story, privileges, tags }) => (
   <Row className={classes['project-story']}>
     <Col xs={12} lg={8} xl={9}>
       {story}
-      Some text.
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industrys standard dummy text ever since the
-      1500s, when an unknown printer took a galley of type and scrambled it to
-      make a type specimen book. It has survived not only five centuries, but
-      also the leap into electronic typesetting, remaining essentially
-      unchanged. It was popularised in the 1960s with the release of Letraset
-      sheets containing Lorem Ipsum passages, and more recently with desktop
-      publishing software like Aldus PageMaker including versions of Lorem
-      Ipsum.s
+      Some text. Lorem Ipsum is simply dummy text of the printing and
+      typesetting industry. Lorem Ipsum has been the industrys standard dummy
+      text ever since the 1500s, when an unknown printer took a galley of type
+      and scrambled it to make a type specimen book. It has survived not only
+      five centuries, but also the leap into electronic typesetting, remaining
+      essentially unchanged. It was popularised in the 1960s with the release of
+      Letraset sheets containing Lorem Ipsum passages, and more recently with
+      desktop publishing software like Aldus PageMaker including versions of
+      Lorem Ipsum.s
     </Col>
     <Col xs={12} lg={4} xl={3}>
       <div className={classes['tag-wrapper']}>
@@ -42,10 +41,7 @@ const Story: FC<StoryProps> = ({ story, privileges, tags }) => (
             md={6}
             lg={12}
             key={el.amount}
-            className={classnames(
-              classes['privilege-item'],
-              'justify-content-center'
-            )}
+            className={classnames(classes['privilege-item'])}
           >
             <ProjectPrivilege
               value={3}
