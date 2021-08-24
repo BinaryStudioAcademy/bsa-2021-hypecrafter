@@ -3,9 +3,8 @@
 @import "../../styles/_mixins.scss";
 
 .comment {
-  margin-top: 150px;
   padding: 1.1rem;
-  background-color: $color-root-block-background;
+  background-color: $color-root-background;
   color: $color-root-text;
   font-size: $font-size-text;
 }
