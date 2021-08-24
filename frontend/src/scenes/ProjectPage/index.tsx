@@ -13,21 +13,17 @@ import classes from './styles.module.scss';
 const ProjectPage: FC = () => {
   const { id } = useParams<{ id: string }>();
   const { fetchProject } = useAction();
-  const { project, isLoading } = useTypedSelector(
-    (
-      { projectPage }
-    ) => ({
-      project: projectPage.project,
-      isLoading: projectPage.isLoading,
-    })
-  );
+  const { project, isLoading } = useTypedSelector(({ projectPage }) => ({
+    project: projectPage.project,
+    isLoading: projectPage.isLoading
+  }));
 
   useEffect(() => {
     fetchProject(id);
   }, []);
 
   return (
-    <LoaderWrapper isLoading={isLoading} variant='page'>
+    <LoaderWrapper isLoading={isLoading} variant="page">
       <Container className={classes.container}>
         <Row>
           <Header project={project} />
@@ -35,13 +31,17 @@ const ProjectPage: FC = () => {
         <Row>
           <Tabs>
             <Tab title="Story">
-              <Story story={project.story} privileges={project.privileges} tags={project.tags} />
+              <Story
+                story={project.story}
+                privileges={project.privileges}
+                tags={project.tags}
+              />
             </Tab>
             <Tab title="FAQ">
               <FAQ faqs={project.FAQ} />
             </Tab>
             <Tab title="Comments">
-              <Comments />
+              <Comments comments={project.projectComments} />
             </Tab>
           </Tabs>
         </Row>

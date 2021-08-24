@@ -1,3 +1,5 @@
+import { Comment } from '../comment';
+
 export interface Project {
   id: string;
   name: string;
@@ -25,4 +27,5 @@ export interface ProjectPage extends Project {
   facebookUrl?: string;
   dribbleUrl?: string;
   finishDate: string;
+  projectComments: Comment[];
 }
