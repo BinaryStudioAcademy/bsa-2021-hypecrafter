@@ -17,16 +17,14 @@ const MainPage: FC = () => {
   const {
     popular: popularStartups,
     recommended: recommendedStartups,
-    isLoading: isStartupsLoading, topics } = useTypedSelector(
-    (
-      { mainPage }
-    ) => ({
-      popular: mainPage.popular,
-      recommended: mainPage.recommended,
-      isLoading: mainPage.isLoading,
-      topics: mainPage.topics
-    })
-  );
+    isLoading: isStartupsLoading,
+    topics,
+  } = useTypedSelector(({ mainPage }) => ({
+    popular: mainPage.popular,
+    recommended: mainPage.recommended,
+    isLoading: mainPage.isLoading,
+    topics: mainPage.topics,
+  }));
   useEffect(() => {
     fetchPopularAndRecommendedProjectsAction();
     fetchTopics();
@@ -35,7 +33,7 @@ const MainPage: FC = () => {
   const renderChart = () => {
     const labels: string[] = [];
     const data: number[] = [];
-    topics.forEach(topic => {
+    topics.forEach((topic) => {
       labels.push(topic.name);
       data.push(topic.sum);
     });
@@ -60,9 +58,8 @@ const MainPage: FC = () => {
         <div className={classes['main-text']}>
           <div className={classes['main-logo-text']}>
             <div>
-              <span className={classes.logo}>
-                HypeCrafter
-              </span> {t('faithful assistant')}
+              <span className={classes.logo}>HypeCrafter</span>{' '}
+              {t('faithful assistant')}
             </div>
           </div>
           <div className={classes['logo-text']}>
@@ -70,7 +67,9 @@ const MainPage: FC = () => {
           </div>
           <div className={classes.buttons}>
             <Button type="button">{t('Create Project')}</Button>
-            <Button type="button" variant="primary" outline>{t('Help Project')}</Button>
+            <Button type="button" variant="primary" outline>
+              {t('Help Project')}
+            </Button>
           </div>
         </div>
         <div className={classes['main-bg']} />
@@ -90,7 +89,10 @@ const MainPage: FC = () => {
                   description={project.description}
                   goal={project.goal}
                   percent={calcDonationProgress(project.donated, project.goal)}
-                  image="https://source.unsplash.com/random/800x600"
+                  image={
+                    project.imageUrl
+                    || 'https://source.unsplash.com/random/800x600'
+                  }
                 />
               ))}
             </LoaderWrapper>
@@ -110,7 +112,10 @@ const MainPage: FC = () => {
                   description={project.description}
                   goal={project.goal}
                   percent={calcDonationProgress(project.donated, project.goal)}
-                  image="https://source.unsplash.com/random/800x600"
+                  image={
+                    project.imageUrl
+                    || 'https://source.unsplash.com/random/800x600'
+                  }
                 />
               ))}
             </LoaderWrapper>
@@ -118,9 +123,7 @@ const MainPage: FC = () => {
         </section>
         <section>
           <div className={classes.category}>{t('Interesting topics')}</div>
-          <div className={classes.chart}>
-            {topics && renderChart()}
-          </div>
+          <div className={classes.chart}>{topics && renderChart()}</div>
         </section>
       </div>
     </div>
