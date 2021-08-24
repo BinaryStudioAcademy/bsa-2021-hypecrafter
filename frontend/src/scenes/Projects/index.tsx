@@ -4,6 +4,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import { Routes } from '../../common/enums';
 import { Project } from '../../common/types';
 import ProjectCard from '../../components/ProjectCard';
+import Seo from '../../components/Seo';
 import { runActionWithValueOfEnum } from '../../helpers';
 import { useAction, useQuery, useTypedSelector } from '../../hooks';
 import Filters from './components/Filters';
@@ -27,6 +28,11 @@ const Projects = () => {
 
   return (
     <Container className={classes['projects-page']}>
+      <Seo
+        title={`${t('Projects')} - HypeCrafter`}
+        description=""
+      />
+
       <Row>
         <Col lg={3}>
           <Filters />
