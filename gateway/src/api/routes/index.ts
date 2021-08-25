@@ -23,7 +23,7 @@ const initRoutes = (services: Services) => {
   router.use(Path.Project, projectRouter());
   router.use(Path.Tag, tagRouter());
   router.use(Path.Category, categoryRouter());
-  router.use('*', (_req, res) => {
+  router.use('/*', (_req, res) => {
     res.status(404).sendFile(path.resolve('src/common/errorPages/404.html'));
   });
   
