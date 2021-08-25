@@ -3,7 +3,9 @@ import { Redirect } from 'react-router-dom';
 import { Routes } from '../../common/enums';
 import { CreateProject as Project } from '../../common/types';
 import LoaderWrapper from '../../components/LoaderWrapper';
+import Seo from '../../components/Seo';
 import { useAction, useTypedSelector } from '../../hooks';
+import { useLocalization } from '../../providers/localization';
 import Basic from './components/Basic';
 import BeforeStart from './components/BeforeStart';
 import Funding from './components/Funding';
@@ -29,6 +31,7 @@ const CreateProject = () => {
   const [currentPage, setCurrentPage] = useState(CurrentPage.BEFORE_START);
   const [newProject, setNewProject] = useState(initProject);
   const { createProjectAction } = useAction();
+  const { t } = useLocalization();
   const store = useTypedSelector(({ project: { project, isLoading } }) => ({
     project,
     isLoading
@@ -116,6 +119,11 @@ const CreateProject = () => {
   };
   return (
     <LoaderWrapper isLoading={isLoading}>
+      <Seo
+        title={`${t('Create project')} - HypeCrafter`}
+        description=""
+      />
+
       {getView()}
     </LoaderWrapper>
   );

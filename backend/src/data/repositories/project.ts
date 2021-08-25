@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-shadow */
 /* eslint-disable class-methods-use-this */
 /* eslint-disable default-case */
 import { ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
@@ -166,21 +167,20 @@ export class ProjectRepository extends Repository<Project> {
         .from(Project, 'project')
         .leftJoin(subQuery => subQuery
           .select(`
-            array_agg(dua."userAmount") AS "bakersDonation", 
+            array_agg(dua."userAmount") AS "bakersDonation",
             dua."projectId"
           `)
           .from(subQuery => subQuery
             .select(`
               SUM(amount) AS "userAmount",
-              "userId", 
+              "userId",
               "projectId"
             `)
             .from('donate', 'donate')
             .groupBy(`
-              "userId", 
+              "userId",
               "projectId"
-            `), "dua"
-          )
+            `), 'dua')
           .groupBy('dua."projectId"'), 'ud', 'ud."projectId" = project.id')
         .leftJoin('project.projectDonatorsPrivileges', 'donatorsPrivilege')
         .where('privilege IS NOT NULL AND amount IS NOT NULL')
@@ -208,7 +208,11 @@ export class ProjectRepository extends Repository<Project> {
         .from(Project, 'project')
         .leftJoin('project.comments', 'comments')
         .leftJoin('comments.author', 'commentAuthor')
-        .leftJoin('donate', 'userDonates', '"userDonates"."projectId"=project."id" AND "userDonates"."userId"="commentAuthor"."id"')
+        .leftJoin(
+          'donate',
+          'userDonates',
+          '"userDonates"."projectId"=project."id" AND "userDonates"."userId"="commentAuthor"."id"'
+        )
         .leftJoin('project.team', 'team')
         .leftJoin('team_users', 'tu', 'tu."teamId"=team."id" AND "tu"."userId"="commentAuthor"."id"')
         .groupBy('project.id'), 'cp', 'cp."projectId" = project.id')
@@ -232,7 +236,7 @@ export class ProjectRepository extends Repository<Project> {
     const filterCondition = this.getFilterCondition(filter, userId);
     const query = this.createQueryBuilder('project')
       .select(`
-        amount AS donated,
+        donated,
         description,
         project.name AS "name",
         project."id",
@@ -240,9 +244,16 @@ export class ProjectRepository extends Repository<Project> {
         goal,
         category.name AS "category",
         tags,
-        up."isFavorite"
+        CASE WHEN up."isFavorite" IS NULL THEN false ELSE true END AS "isFavorite",
+        CASE WHEN dnu."projectId" IS NULL THEN false ELSE true END AS "isDonated"
       `)
-      .leftJoin('project.donates', 'donate')
+      .leftJoin(subQuery => subQuery
+        .select(`
+          SUM(amount) AS donated,
+          "projectId"
+        `)
+        .from('donate', 'donate')
+        .groupBy('"projectId"'), 'dn', 'dn."projectId" = project.id')
       .leftJoin('project.category', 'category')
       .leftJoin(
         (subQuery) => subQuery
@@ -268,8 +279,14 @@ export class ProjectRepository extends Repository<Project> {
         .from(Project, 'project')
         .leftJoin('project.userProjects', 'userProject')
         .where(`"userProject"."userId" = ${userId}`),
-        'up',
-        'up."projectId" = project.id');
+      'up',
+      'up."projectId" = project.id')
+        .leftJoin(subQuery => subQuery
+          .select('DISTINCT "projectId"')
+          .from('donate', 'donate')
+          .where(`donate."userId" = ${userId}`),
+        'dnu',
+        'dnu."projectId" = project.id');
     }
 
     if (filter) {
@@ -299,9 +316,9 @@ export class ProjectRepository extends Repository<Project> {
       case ProjectsFilter.ALL:
         return 'project."id" IS NOT NULL';
       case ProjectsFilter.FAVORITE:
-        return 'up."isFavorite" = true';
+        return '"isFavorite" = true';
       case ProjectsFilter.INVESTED:
-        return 'project."id" IS NOT NULL'; // todo
+        return 'dnu."projectId" IS NOT NULL';
       case ProjectsFilter.OWN:
         return `up."userId" = ${userId}`;
     }

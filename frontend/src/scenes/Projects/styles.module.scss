@@ -1,5 +1,16 @@
+@import "../../styles/vars";
+
 .projects-page {
-  margin-top: 11rem;
+  margin-top: 7rem;
+  margin-bottom: 1rem;
+
+  @media (max-width: 699px) {
+    margin-top: 8.5rem;
+  }
+
+  @media (max-width: 510px) {
+    margin-top: 10.5rem;
+  }
 }
 
 .projects-wrapper {
