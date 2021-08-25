@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { Comment } from '../../../common/types';
 import Buttom from '../../../components/Button';
@@ -8,26 +8,30 @@ import classes from '../styles.module.scss';
 
 interface CommentsProps {
   comments: Comment[];
+  projectId: string;
 }
 
 const Comments: FC<CommentsProps> = ({ comments }) => {
+  const [text, setText] = useState('');
+
   const handleClick = () => {
-    console.log('Data');
+    console.log(text);
   };
 
   return (
     <Col>
       <Row>
         {comments.map((el) => (
-          <CommentComponent
-            key={`${el.message} + ${el.createdAt}`}
-            comment={el}
-          />
+          <CommentComponent key={el.id} comment={el} />
         ))}
       </Row>
       <Row className={classes['comment-input-wrapper']}>
         <Col xs={6}>
-          <Input placeholder="Write your comment..." />
+          <Input
+            value={text}
+            onChange={(ev) => setText(ev.target.value)}
+            placeholder="Write your comment..."
+          />
         </Col>
         <Col xs={1}>
           <Buttom

@@ -3,6 +3,7 @@ import MicroMq from 'micromq';
 import { Path } from '../../common/enums';
 import { Services } from '../../services';
 import categoryRouter from './category';
+import commentRouter from './comment';
 import projectRouter from './project';
 import registerRouter from './registration';
 import tagRouter from './tag';
@@ -15,7 +16,8 @@ const initRoutes = (app: MicroMq, services: Services) => _.flow([
   projectRouter(services, Path.Project),
   registerRouter(services, Path.Register),
   tagRouter(services, Path.Tag),
-  categoryRouter(services, Path.Category)
+  categoryRouter(services, Path.Category),
+  commentRouter(services, Path.Comment)
 ])(app);
 
 export default initRoutes;

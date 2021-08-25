@@ -41,7 +41,7 @@ const ProjectPage: FC = () => {
               <FAQ faqs={project.FAQ} />
             </Tab>
             <Tab title="Comments">
-              <Comments comments={project.projectComments} />
+              <Comments comments={project.projectComments} projectId={id} />
             </Tab>
           </Tabs>
         </Row>

@@ -177,8 +177,7 @@ export class ProjectRepository extends Repository<Project> {
             .groupBy(`
               "userId", 
               "projectId"
-            `), "dua"
-          )
+            `), 'dua')
           .groupBy('dua."projectId"'), 'ud', 'ud."projectId" = project.id')
         .leftJoin('project.projectDonatorsPrivileges', 'projectDonatorsPrivileges')
         .leftJoin('projectDonatorsPrivileges.donatorsPrivilege', 'donatorsPrivilege')
@@ -196,6 +195,7 @@ export class ProjectRepository extends Repository<Project> {
                       'isBacker', CASE WHEN "userDonates"."userId" IS NULL THEN false ELSE true END,
                       'isOwner', CASE WHEN tu."userId" IS NULL THEN false ELSE true END
                     ),
+                  'id', comments.id,
                   'message', comments.message,
                   'createdAt', comments."createdAt",
                   'updatedAt', comments."updatedAt",
@@ -266,8 +266,8 @@ export class ProjectRepository extends Repository<Project> {
         .from(Project, 'project')
         .leftJoin('project.userProjects', 'userProject')
         .where(`"userProject"."userId" = ${userId}`),
-        'up',
-        'up."projectId" = project.id');
+      'up',
+      'up."projectId" = project.id');
     }
 
     if (filter) {

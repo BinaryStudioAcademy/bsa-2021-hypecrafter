@@ -1,7 +1,7 @@
 import { ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
 import MicroMq from 'micromq';
-import { Project as CreateProject } from '../../data/entities';
 import { Project, ProjectItem } from '../../common/types';
+import { Project as CreateProject } from '../../data/entities';
 import { wrap } from '../../helpers';
 import { Services } from '../../services';
 

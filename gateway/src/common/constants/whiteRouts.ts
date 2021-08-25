@@ -14,7 +14,8 @@ const WHITE_ROUTES = [
   '/projects/popular',
   '/projects/:id',
   '/api-docs',
-  '/payment/:id/:page'
+  '/payment/:id/:page',
+  '/comments'
 ];
 
 export { WHITE_ROUTES };
