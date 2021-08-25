@@ -33,15 +33,14 @@ export default class ProjectService {
   }
 
   public async createProject(body: CreateProject) {
-    const project = await this.#projectRepository.save({ ...new CreateProject(), ...body });
+    const project:CreateProject = await this.#projectRepository.save({ ...body });
     const team = await this.#teamRepository.save({ ...new Team(), ...body.team, project });
     this.#chatRepository.save(body.team.chats.map(chat => ({ ...new Chat(), ...chat, team })));
-    project.team = team;
     return project;
   }
 
   public async getBySortAndFilter({ sort, filter }: { sort: ProjectsSort, filter: ProjectsFilter }) {
-    const projects = await this.#projectRepository.getBySortAndFilter({ sort, filter });
+    const projects:Project[] = await this.#projectRepository.getBySortAndFilter({ sort, filter });
     return projects;
   }
 

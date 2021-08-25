@@ -1,4 +1,5 @@
-import { forwardRef } from 'react';
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import { ChangeEvent, forwardRef } from 'react';
 import { Form, FormGroupProps } from 'react-bootstrap';
 import classes from './styles.module.scss';
 
@@ -6,14 +7,14 @@ interface Props extends FormGroupProps {
   label?: string;
   defaultText?: string;
   options: Array<{ text: string; value: string }>;
-  onSelectChange?:(value:string)=>void
+  onChange?: (e: ChangeEvent<HTMLSelectElement>) => void
 }
 
 const Select = forwardRef<HTMLSelectElement, Props>(({
   label,
   defaultText,
   options,
-  onSelectChange,
+  onChange,
   ...restFormGroupProps
 }, ref) => (
   <Form.Group className={classes['select-container']}>
@@ -22,8 +23,8 @@ const Select = forwardRef<HTMLSelectElement, Props>(({
       ref={ref}
       {...restFormGroupProps}
       className={classes['select-field']}
+      onChange={onChange as any}
       as='select'
-      onChange={e => onSelectChange && onSelectChange(e.target.value)}
     >
       {defaultText && <option className={classes['select-option']} value="">{defaultText}</option>}
       {options.map((option) => (

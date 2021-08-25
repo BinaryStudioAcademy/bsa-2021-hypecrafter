@@ -7,5 +7,6 @@ export enum ProjectKeys {
   REGION = 'region',
   START_DATE = 'startDate',
   FINISH_DATE = 'finishDate',
-  TEAM = 'team'
+  TEAM = 'team',
+  IMAGE_URL = 'imageUrl'
 }
