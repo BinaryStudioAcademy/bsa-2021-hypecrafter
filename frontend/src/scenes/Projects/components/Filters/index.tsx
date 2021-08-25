@@ -63,6 +63,8 @@ const Filters = () => {
           options={[
             { value: ProjectsSort.NAME, text: t('Name') },
             { value: ProjectsSort.DATE, text: t('Date') },
+            { value: ProjectsSort.POPULAR, text: t('Popular') },
+            { value: ProjectsSort.RECOMMENDED, text: t('Recommended') },
           ]}
           {...register('sort', { required: true })}
         />

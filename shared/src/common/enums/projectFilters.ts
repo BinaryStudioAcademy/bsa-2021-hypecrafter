@@ -7,6 +7,8 @@ enum Common {
 export enum ProjectsSort {
   NAME = 'name',
   DATE = 'date',
+  RECOMMENDED = 'recommended',
+  POPULAR = 'popular',
 }
 
 export enum ProjectsFilter {

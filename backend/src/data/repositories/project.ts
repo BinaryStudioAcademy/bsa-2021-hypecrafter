@@ -307,6 +307,10 @@ export class ProjectRepository extends Repository<Project> {
         return 'project."name"';
       case ProjectsSort.DATE:
         return 'project."createdAt"';
+      case ProjectsSort.POPULAR:
+        return 'project."totalInteractionTime"/project."totalViews"/project."minutesToRead"';
+      case ProjectsSort.RECOMMENDED:
+        return 'RANDOM()';
     }
   }
 

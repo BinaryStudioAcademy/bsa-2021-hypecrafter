@@ -156,4 +156,6 @@ declare type LocaleKeys =
  | 'Publishing'
  | 'Technology'
  | 'Theater'
+ | 'Popular'
+ | 'Recommended'
  | 'The page you were looking for doesn’t exist (404)';
