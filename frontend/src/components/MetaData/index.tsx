@@ -1,12 +1,12 @@
 import { Helmet } from 'react-helmet';
+import { useLocalization } from '../../providers/localization';
 
 const MetaData = () => {
+  const { t } = useLocalization();
+
   const siteName = 'HypeCrafter';
-  const title = 'It\'s faithful assistant';
-  const siteDescription = `Do you have a good and well thought-out idea and
-    are you ready to conquer the peaks alone to make your dream come true?
-    But sometimes, alone, the difficult path from concept to finished product
-    is not easy at all. HypeCrafter will lend a helping hand, and more than one!`;
+  const title = t('Social title');
+  const siteDescription = t('Agreement');
   const logoLink = 'http://hypecrafter2-env.eba-n3gbu5mb.us-west-2.elasticbeanstalk.com/HypeCoin.png';
   const link = 'http://hypecrafter2-env.eba-n3gbu5mb.us-west-2.elasticbeanstalk.com';
 
