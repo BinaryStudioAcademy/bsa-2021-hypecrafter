@@ -1,8 +1,11 @@
 import { ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
 import { Project } from '../../common/types';
-import { Chat, Project as CreateProject, Team } from '../../data/entities';
+import { Chat, Project as CreateProject, ProjectTag, Tag, Team } from '../../data/entities';
 import { mapPrivileges, mapProjects } from '../../data/mappers';
-import { ChatRepository, ProjectRepository, TeamRepository } from '../../data/repositories';
+import {
+  ChatRepository, ProjectRepository, ProjectTagRepository,
+  TagRepository, TeamRepository
+} from '../../data/repositories';
 
 export default class ProjectService {
   readonly #projectRepository: ProjectRepository;
@@ -11,10 +14,17 @@ export default class ProjectService {
 
   readonly #chatRepository: ChatRepository;
 
-  constructor(projectRepository: ProjectRepository, teamRepository: TeamRepository, chatRepository: ChatRepository) {
+  readonly #projectTagRepository: ProjectTagRepository;
+
+  readonly #tagRepository: TagRepository;
+
+  constructor(projectRepository: ProjectRepository, teamRepository: TeamRepository,
+    chatRepository: ChatRepository, projectTagRepository: ProjectTagRepository, tagRepository: TagRepository) {
     this.#projectRepository = projectRepository;
     this.#teamRepository = teamRepository;
     this.#chatRepository = chatRepository;
+    this.#projectTagRepository = projectTagRepository;
+    this.#tagRepository = tagRepository;
   }
 
   public async getPopularProjectsByCategory(category: string) {
@@ -36,6 +46,10 @@ export default class ProjectService {
     const project:CreateProject = await this.#projectRepository.save({ ...body });
     const team = await this.#teamRepository.save({ ...new Team(), ...body.team, project });
     this.#chatRepository.save(body.team.chats.map(chat => ({ ...new Chat(), ...chat, team })));
+    const listTags = await this.#tagRepository.save(body.projectTags.map(
+      _tag => ({ ...new Tag(), name: _tag.tag.name })
+    ));
+    this.#projectTagRepository.save(listTags.map(_tag => ({ ...new ProjectTag(), tag: _tag, project })));
     return project;
   }
 
