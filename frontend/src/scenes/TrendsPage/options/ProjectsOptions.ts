@@ -1,5 +1,6 @@
+import { ProjectNameMaxLength } from '../../../common/constans';
 import { ChartType } from '../../../components/Chart';
-import { randomBrightColor } from '../../../helpers';
+import { randomBrightColor, сutWord } from '../../../helpers';
 import { ProjectItem } from '../interfaces';
 
 const defaultOptions = {
@@ -18,7 +19,7 @@ const defaultOptions = {
 };
 
 const getDefaultData = (data: ProjectItem[]) => ({
-  labels: data.map((el) => el.name),
+  labels: data.map((el) => сutWord(el.name, ProjectNameMaxLength)),
   datasets: [
     {
       label: 'Projects',
