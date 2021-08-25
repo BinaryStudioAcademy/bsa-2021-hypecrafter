@@ -3,11 +3,17 @@ import { ProjectPage } from '../../common/types';
 
 export enum ProjectsActions {
   FETCH_PROJECT = 'PROJECTS/GET_PROJECT',
-  SET_REACTION = 'PROJECTS/SET_REACTION'
+  SET_REACTION = 'PROJECTS/SET_REACTION',
+  SET_WATCH = 'PROJECTS/SET_WATCH'
 }
 
 interface SetReactionTriggerActionPropsType {
   isLiked: boolean | null;
+  projectId: string;
+}
+
+interface SetWatchTriggerActionPropsType {
+  isWatched: boolean | null;
   projectId: string;
 }
 
@@ -28,7 +34,16 @@ export const setReaction = createRoutine(ProjectsActions
   trigger: ({ isLiked, projectId }: SetReactionTriggerActionPropsType) => ({
     isLiked, projectId
   }),
-  success: (project: ProjectPage) => project,
+  success: (mark: string | null, likes: string, dislikes: string) => ({ mark, likes, dislikes }),
+  failure: (error: string) => error
+});
+
+export const setWatch = createRoutine(ProjectsActions
+  .SET_WATCH, {
+  trigger: ({ isWatched, projectId }: SetWatchTriggerActionPropsType) => ({
+    isWatched, projectId
+  }),
+  success: (isWatched: boolean) => isWatched,
   failure: (error: string) => error
 });
 
@@ -37,3 +52,6 @@ export type FetchProjectSuccessActionType =
 
 export type SetReactionSuccessActionType =
   ReturnType<typeof setReaction.success>;
+
+export type SetWatchSuccessActionType =
+  ReturnType<typeof setWatch.success>;

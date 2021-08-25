@@ -122,7 +122,7 @@ export class ProjectRepository extends Repository<Project> {
       "bakersDonation"
     `;
     if (userId) {
-      selectQuery += ', upm.mark';
+      selectQuery += ', upm.mark, upm."isWatched"';
     }
     const projectQuery = this.createQueryBuilder('project')
       .select(selectQuery)
@@ -233,6 +233,7 @@ export class ProjectRepository extends Repository<Project> {
         .leftJoin(subQuery => subQuery
           .select(`
           mark,
+          "isWatched",
           "projectId"
         `)
           .from('user_project', 'user_project')
@@ -278,6 +279,52 @@ export class ProjectRepository extends Repository<Project> {
       };
     }
     return Object.assign(new UserProject(), newUserProject).save();
+  }
+
+  public async setWatch(isWatched: boolean, userId: string, projectId: string) {
+    const userProject = await getRepository(UserProject)
+      .createQueryBuilder('userProject')
+      .select(`
+        id
+      `)
+      .where(`"userId"='${userId}' AND "projectId"='${projectId}'`)
+      .getRawOne();
+
+    const project = await getRepository(Project).findOne({ id: projectId });
+    const user = await getRepository(UserProfile).findOne({ id: userId });
+    let newUserProject;
+    if (userProject) {
+      newUserProject = {
+        ...new UserProject(),
+        project,
+        user,
+        isWatched,
+        id: userProject.id
+      };
+    } else {
+      newUserProject = {
+        ...new UserProject(),
+        project,
+        user,
+        isWatched
+      };
+    }
+    return Object.assign(new UserProject(), newUserProject).save();
+  }
+
+  public getLikesAndDislikesAmount(projectId: string) {
+    return this.createQueryBuilder('project')
+      .select('likes,dislikes')
+      .leftJoin(subQuery => subQuery
+        .select(`
+        SUM(CASE user_project.mark WHEN 'like' THEN 1 ELSE 0 END) AS likes,
+        SUM(CASE user_project.mark WHEN 'dislike' THEN 1 ELSE 0 END) AS dislikes,
+        "projectId"
+      `)
+        .from('user_project', 'user_project')
+        .groupBy('"projectId"'), 'up', 'up."projectId" = project.id')
+      .where(`project."id" = '${projectId}'`)
+      .getRawOne();
   }
 
   public getBySortAndFilter({ sort, filter, }: { sort: ProjectsSort; filter: ProjectsFilter; }) {

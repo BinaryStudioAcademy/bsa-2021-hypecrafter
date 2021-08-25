@@ -56,7 +56,15 @@ export default class ProjectService {
 
   public async setReaction({ isLiked, projectId }: { isLiked: boolean, projectId: string }, userId: string) {
     await this.#projectRepository.setReaction(isLiked, userId, projectId);
+    const likesAndDislikes:
+    { likes: string, dislikes: string } = await this.#projectRepository.getLikesAndDislikesAmount(projectId);
 
-    return this.getById(projectId, userId);
+    return likesAndDislikes;
+  }
+
+  public async setWatch({ isWatched, projectId }: { isWatched: boolean, projectId: string }, userId: string) {
+    await this.#projectRepository.setWatch(isWatched, userId, projectId);
+
+    return { mess: 'Projected was wached or unwached' };
   }
 }

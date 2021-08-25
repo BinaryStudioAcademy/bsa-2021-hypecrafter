@@ -3,6 +3,7 @@ import { faThumbsDown as faThumbsDownFilled, faThumbsUp as faThumbsUpFilled } fr
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FunctionComponent } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import { Mark } from '../../common/enums';
 import { calcDaysToGo, calcDonationProgress } from '../../helpers/project';
 import { useAction } from '../../hooks';
 import { useLocalization } from '../../providers/localization';
@@ -35,11 +36,11 @@ const ProjectInfo: FunctionComponent<ProjectInfoProps> = ({
   const { t } = useLocalization();
 
   const handleLike = () => {
-    setReaction({ isLiked: mark === 'like' ? null : true, projectId: id });
+    setReaction({ isLiked: mark === Mark.LIKE ? null : true, projectId: id });
   };
 
   const handleDislike = () => {
-    setReaction({ isLiked: mark === 'dislike' ? null : false, projectId: id });
+    setReaction({ isLiked: mark === Mark.DISLIKE ? null : false, projectId: id });
   };
 
   const daysToGo = calcDaysToGo(finishDate);

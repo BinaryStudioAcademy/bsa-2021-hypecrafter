@@ -1,7 +1,7 @@
 export { loginAction, registerUserAction } from '../scenes/Auth/actions';
 export { createProjectAction } from '../scenes/CreateProject/actions';
 export { fetchPopularAndRecommendedProjectsAction, fetchTopics } from '../scenes/MainPage/actions';
-export { fetchProject, setReaction } from '../scenes/ProjectPage/actions';
+export { fetchProject, setReaction, setWatch } from '../scenes/ProjectPage/actions';
 export {
   fetchProjectsAction,
   filterProjectsAction,

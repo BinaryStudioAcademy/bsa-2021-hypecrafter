@@ -18,8 +18,14 @@ const init = ({ projectService }: Services, path: string) => (app: MicroMq) => a
   )
   .post(
     `${path}/like`,
-    wrap<Empty, Project, { isLiked: boolean, projectId: string }, Empty>(
+    wrap<Empty, { likes: string, dislikes: string }, { isLiked: boolean, projectId: string }, Empty>(
       (req) => projectService.setReaction(req.body, req.headers.userId as string)
+    )
+  )
+  .post(
+    `${path}/watch`,
+    wrap<Empty, { mess: string }, { isWatched: boolean, projectId: string }, Empty>(
+      (req) => projectService.setWatch(req.body, req.headers.userId as string)
     )
   )
   .get(`${path}/:id`, wrap<Empty, Project, { id: string, userId: string | undefined }, Empty>(

@@ -1,7 +1,8 @@
+import { Mark } from '../../common/enums';
 import { ProjectPage } from '../../common/types';
 import { createReducer } from '../../helpers';
-import type { FetchProjectSuccessActionType, SetReactionSuccessActionType } from './actions';
-import { fetchProject, setReaction } from './actions';
+import type { FetchProjectSuccessActionType, SetReactionSuccessActionType, SetWatchSuccessActionType } from './actions';
+import { fetchProject, setReaction, setWatch } from './actions';
 
 export interface ProjectPageState {
   isLoading: boolean;
@@ -27,11 +28,30 @@ const projectPageReducer = createReducer<ProjectPageState>(projectPageState, {
       project: action.payload
     };
   },
-  [setReaction.SUCCESS](state, action: SetReactionSuccessActionType) {
+  [setWatch.SUCCESS](state, action: SetWatchSuccessActionType) {
     return {
       ...state,
       isLoading: false,
-      project: action.payload
+      project: {
+        ...state.project,
+        isWatched: action.payload
+      }
+    };
+  },
+  [setReaction.SUCCESS](state, action: SetReactionSuccessActionType) {
+    const { mark, likes, dislikes } = action.payload;
+    let projectMark;
+
+    if (mark === null) {
+      projectMark = mark;
+    } else {
+      projectMark = mark ? Mark.LIKE : Mark.DISLIKE;
+    }
+
+    return {
+      ...state,
+      isLoading: false,
+      project: { ...state.project, mark: projectMark, likes: Number(likes), dislikes: Number(dislikes) }
     };
   },
   [fetchProject.FAILURE](state) {
