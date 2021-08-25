@@ -4,6 +4,7 @@ import { Comment } from '../../../common/types';
 import Buttom from '../../../components/Button';
 import CommentComponent from '../../../components/Comment';
 import Input from '../../../components/Input';
+import { useAction } from '../../../hooks';
 import classes from '../styles.module.scss';
 
 interface CommentsProps {
@@ -11,11 +12,18 @@ interface CommentsProps {
   projectId: string;
 }
 
-const Comments: FC<CommentsProps> = ({ comments }) => {
+const Comments: FC<CommentsProps> = ({ comments, projectId }) => {
+  const { addComment } = useAction();
+
   const [text, setText] = useState('');
 
   const handleClick = () => {
-    console.log(text);
+    addComment({
+      message: text,
+      project: projectId,
+      author: 'ac7a5b8f-7fc4-4d1e-81c9-1a9c49c9b529'
+    });
+    setText('');
   };
 
   return (
