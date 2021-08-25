@@ -8,5 +8,6 @@ export enum ProjectKeys {
   START_DATE = 'startDate',
   FINISH_DATE = 'finishDate',
   TEAM = 'team',
-  IMAGE_URL = 'imageUrl'
+  IMAGE_URL = 'imageUrl',
+  PROJECT_TAGS = 'projectTags'
 }

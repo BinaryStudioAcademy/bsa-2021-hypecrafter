@@ -26,7 +26,7 @@ const CreateProject = () => {
     region: '',
     team: { name: '', chats: [] },
     imageUrl: '',
-    tags: []
+    projectTags: []
   };
   const [currentPage, setCurrentPage] = useState(CurrentPage.BEFORE_START);
   const [newProject, setNewProject] = useState(initProject);
@@ -98,6 +98,7 @@ const CreateProject = () => {
             currentPage={currentPage}
             onChangeValue={handleChangeValue}
             imageUrl={newProject.imageUrl}
+            tags={newProject.projectTags}
           />
         );
       case CurrentPage.END:
@@ -110,6 +111,7 @@ const CreateProject = () => {
               currentPage={currentPage}
               onChangeValue={handleChangeValue}
               imageUrl={newProject.imageUrl}
+              tags={newProject.projectTags}
             />
           </div>
         );

@@ -1,4 +1,7 @@
-import { FC } from 'react';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FC, useState } from 'react';
+import { CreateProjectTag } from '../../../../common/types';
 import Button from '../../../../components/Button';
 import ImageUpload from '../../../../components/ImageUpload';
 import Input from '../../../../components/Input';
@@ -10,15 +13,28 @@ import classes from './styles.module.scss';
 interface Props {
   changePage: (currentPage: CurrentPage) => void
   currentPage: CurrentPage,
-  onChangeValue: (name: ProjectKeys, value: string) => void
+  onChangeValue: (name: ProjectKeys, value: any) => void
   region: string,
-  imageUrl?:string,
+  imageUrl?: string,
+  tags:CreateProjectTag[]
 }
 
-const Settings: FC<Props> = ({ changePage, currentPage, onChangeValue, region, imageUrl }) => {
+const Settings: FC<Props> = ({ changePage, currentPage, onChangeValue, region, imageUrl, tags }) => {
   const { t } = useLocalization();
   const handleBack = () => changePage(currentPage - 1);
   const handleNext = () => changePage(CurrentPage.END);
+  const [tag, setTag] = useState('');
+  const addTag = () => {
+    if (tags.indexOf({ tag: { name: tag } }) === -1) {
+      tags.push({ tag: { name: tag } });
+      onChangeValue(ProjectKeys.PROJECT_TAGS, tags);
+      setTag('');
+    }
+  };
+  const deleteTag = (tagToDelete:string) => {
+    const listTags = tags.filter(_tag => _tag.tag.name !== tagToDelete);
+    onChangeValue(ProjectKeys.PROJECT_TAGS, listTags);
+  };
   const body = (
     <div>
       <Input
@@ -33,6 +49,27 @@ const Settings: FC<Props> = ({ changePage, currentPage, onChangeValue, region, i
         label="Atach image"
         onFileChange={file => onChangeValue(ProjectKeys.IMAGE_URL, file)}
       />
+      <div className={classes.tagControl}>
+        <Input
+          type="text"
+          label={t('Your location can be a key factor for the investor in your favor.')}
+          onChange={e => setTag(e.target.value)}
+          value={tag}
+        />
+        <Button onClick={addTag} className={classes.addTag}>{t('Add')}</Button>
+      </div>
+      <div className={classes.listTags}>{tags.map(_tag => (
+        <Button
+          className={classes.tag}
+          key={_tag.tag.name}
+          id={_tag.tag.name}
+          onClick={() => deleteTag(_tag.tag.name)}
+        >
+          {`${_tag.tag.name}`}
+          <FontAwesomeIcon icon={faTimes} />
+        </Button>
+      ))}
+      </div>
     </div>
   );
   const footer = (
