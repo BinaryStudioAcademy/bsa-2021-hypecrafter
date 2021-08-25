@@ -16,6 +16,20 @@ const init = ({ projectService }: Services, path: string) => (app: MicroMq) => a
     wrap<Empty, ProjectItem, { category: string }, Empty>((req) => projectService
       .getPopularProjectsByCategory(req.query.category))
   )
-  .get(`${path}/:id`, wrap<Empty, Project, { id: string }, Empty>((req) => projectService.getById(req.params.id)));
+  .post(
+    `${path}/like`,
+    wrap<Empty, { likes: string, dislikes: string }, { isLiked: boolean, projectId: string }, Empty>(
+      (req) => projectService.setReaction(req.body, req.headers.userId as string)
+    )
+  )
+  .post(
+    `${path}/watch`,
+    wrap<Empty, { mess: string }, { isWatched: boolean, projectId: string }, Empty>(
+      (req) => projectService.setWatch(req.body, req.headers.userId as string)
+    )
+  )
+  .get(`${path}/:id`, wrap<Empty, Project, { id: string, userId: string | undefined }, Empty>(
+    (req) => projectService.getById(req.params.id, req.query.userId)
+  ));
 
 export default init;

@@ -44,11 +44,26 @@ export default class ProjectService {
     return projects;
   }
 
-  public async getById(id: string) {
-    const project = await this.#projectRepository.getById(id);
+  public async getById(id: string, userId: string | undefined) {
+    const project = await this.#projectRepository.getById(id, userId);
     project.bakersAmount = Math.max(0, project.bakersAmount);
     project.donated = Math.max(0, project.donated);
     project.privileges = mapPrivileges(project.privileges, project.bakersDonation);
+
     return project; // rewrite when error handling middleware works
+  }
+
+  public async setReaction({ isLiked, projectId }: { isLiked: boolean, projectId: string }, userId: string) {
+    await this.#projectRepository.setReaction(isLiked, userId, projectId);
+    const likesAndDislikes:
+    { likes: string, dislikes: string } = await this.#projectRepository.getLikesAndDislikesAmount(projectId);
+
+    return likesAndDislikes;
+  }
+
+  public async setWatch({ isWatched, projectId }: { isWatched: boolean, projectId: string }, userId: string) {
+    await this.#projectRepository.setWatch(isWatched, userId, projectId);
+
+    return { mess: 'Projected was wached or unwached' };
   }
 }

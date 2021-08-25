@@ -1,4 +1,4 @@
-import { Router } from 'express';
+import { Response, Router } from 'express';
 import { HttpStatusCode, Project } from 'hypecrafter-shared/enums';
 import { AuthApiPath } from '../../common/enums';
 import { Tokens } from '../../common/types/registration';
@@ -13,6 +13,7 @@ const init = (services: Services) => {
   const router = Router();
 
   return router
+    .get([AuthApiPath.CurrentUser], (_, res: Response) => res.delegate(Project.BACKEND))
     .post(
       AuthApiPath.Login,
       authenticationMiddleware,
@@ -23,7 +24,6 @@ const init = (services: Services) => {
       Empty
       >((req) => {
         const userId: string = (req.user as User).id;
-        console.log(userId);
         const userAgentInfo: string = req.headers['user-agent'];
         const result = services.authService.loginUser(userId, userAgentInfo);
         return Promise.resolve(result);

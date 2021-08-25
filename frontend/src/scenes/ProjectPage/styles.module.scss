@@ -25,6 +25,13 @@
     text-overflow: ellipsis;
   }
 
+  .watch-container {
+    button {
+      background: none;
+      border: none;
+    }
+  }
+
   .project-category {
     color: $color-root-turquoise;
     font-size: $font-size-aсcent;

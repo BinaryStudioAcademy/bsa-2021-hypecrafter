@@ -2,9 +2,11 @@
 /* eslint-disable class-methods-use-this */
 /* eslint-disable default-case */
 import { ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
-import { EntityRepository, Repository } from 'typeorm';
+import { isNull } from 'lodash';
+import { EntityRepository, getRepository, Repository } from 'typeorm';
+import { Mark } from '../../common/enums';
 import { Project as MyProject } from '../../common/types';
-import { Project } from '../entities/project';
+import { Project, UserProfile, UserProject } from '../entities';
 
 @EntityRepository(Project)
 export class ProjectRepository extends Repository<Project> {
@@ -50,8 +52,7 @@ export class ProjectRepository extends Repository<Project> {
 
   public getPopularProjectsByCategory(category: string) {
     return this.createQueryBuilder('project')
-      .select(
-        `
+      .select(`
         donated,
         description,
         project.name AS "name",
@@ -60,8 +61,7 @@ export class ProjectRepository extends Repository<Project> {
         category.name AS "category",
         array_to_string(array_agg(tag.name),', ') AS "tags",
         project."totalViews" AS "views"
-      `
-      )
+      `)
       .leftJoin(subQuery => subQuery
         .select(`
           SUM(amount) AS donated,
@@ -72,8 +72,7 @@ export class ProjectRepository extends Repository<Project> {
       .leftJoin('project.category', 'category')
       .leftJoin('project.projectTags', 'projectTags')
       .leftJoin('projectTags.tag', 'tag')
-      .groupBy(
-        `
+      .groupBy(`
         donated,
         description,
         project.name,
@@ -81,8 +80,7 @@ export class ProjectRepository extends Repository<Project> {
         goal,
         category.name,
         views
-      `
-      )
+      `)
       .where(`"category"."name"='${category}'`)
       .orderBy('"views"', 'DESC')
       .limit(this.#chartProjectLimit)
@@ -99,30 +97,34 @@ export class ProjectRepository extends Repository<Project> {
     return this.getProjectsByOrder('project."updatedAt"');
   }
 
-  public async getById(id: string): Promise<MyProject> {
-    const project = await this.createQueryBuilder('project')
-      .select(`
-        project."id",
-        project."imageUrl",
-        project."instagramUrl",
-        project."facebookUrl",
-        project."dribbleUrl",
-        project.content AS story,
-        "FAQ",
-        donated,
-        description,
-        category.name AS "category",
-        project.name,
-        project."finishDate",
-        goal,
-        tags,
-        "bakersAmount",
-        likes,
-        dislikes,
-        privileges,
-        "projectComments",
-        "bakersDonation"
-      `)
+  public async getById(id: string, userId: string | undefined): Promise<MyProject> {
+    let selectQuery = `
+      project."id",
+      project."imageUrl",
+      project."instagramUrl",
+      project."facebookUrl",
+      project."dribbleUrl",
+      project.content AS story,
+      "FAQ",
+      donated,
+      description,
+      category.name AS "category",
+      project.name,
+      project."finishDate",
+      goal,
+      tags,
+      "bakersAmount",
+      likes,
+      dislikes,
+      privileges,
+      "projectComments",
+      "bakersDonation"
+    `;
+    if (userId) {
+      selectQuery += ', upm.mark, upm."isWatched"';
+    }
+    const projectQuery = this.createQueryBuilder('project')
+      .select(selectQuery)
       .leftJoin(subQuery => subQuery
         .select(`
           SUM(amount) AS donated,
@@ -165,12 +167,12 @@ export class ProjectRepository extends Repository<Project> {
             project.id AS "projectId"
           `)
         .from(Project, 'project')
-        .leftJoin(subQuery => subQuery
+        .leftJoin(subQuery1 => subQuery1
           .select(`
             array_agg(dua."userAmount") AS "bakersDonation",
             dua."projectId"
           `)
-          .from(subQuery => subQuery
+          .from(subQuery2 => subQuery2
             .select(`
               SUM(amount) AS "userAmount",
               "userId",
@@ -225,9 +227,105 @@ export class ProjectRepository extends Repository<Project> {
         .leftJoin('project.projectTags', 'projectTags')
         .leftJoin('projectTags.tag', 'tag')
         .groupBy('"projectId"'), 'tg', 'tg."projectId" = project.id')
-      .where(`project."id" = '${id}'`)
-      .execute();
-    return project[0];
+      .where(`project."id" = '${id}'`);
+
+    if (userId) {
+      projectQuery
+        .leftJoin(subQuery => subQuery
+          .select(`
+            mark,
+            "isWatched",
+            "projectId"
+          `)
+          .from('user_project', 'user_project')
+          .where(`"projectId" = '${id}' AND "userId" = '${userId}'`), 'upm', 'upm."projectId" = project.id');
+    }
+    const project = await projectQuery.getRawOne();
+
+    return project;
+  }
+
+  public async setReaction(isLiked: boolean, userId: string, projectId: string) {
+    const userProject = await getRepository(UserProject)
+      .createQueryBuilder('userProject')
+      .select(`
+        id
+      `)
+      .where(`"userId"='${userId}' AND "projectId"='${projectId}'`)
+      .getRawOne();
+
+    const project = await getRepository(Project).findOne({ id: projectId });
+    const user = await getRepository(UserProfile).findOne({ id: userId });
+    let mark;
+    if (isNull(isLiked)) {
+      mark = isLiked;
+    } else {
+      mark = isLiked ? Mark.like : Mark.dislike;
+    }
+    let newUserProject;
+    if (userProject) {
+      newUserProject = {
+        ...new UserProject(),
+        project,
+        user,
+        mark,
+        id: userProject.id
+      };
+    } else {
+      newUserProject = {
+        ...new UserProject(),
+        project,
+        user,
+        mark
+      };
+    }
+    return Object.assign(new UserProject(), newUserProject).save();
+  }
+
+  public async setWatch(isWatched: boolean, userId: string, projectId: string) {
+    const userProject = await getRepository(UserProject)
+      .createQueryBuilder('userProject')
+      .select(`
+        id
+      `)
+      .where(`"userId"='${userId}' AND "projectId"='${projectId}'`)
+      .getRawOne();
+
+    const project = await getRepository(Project).findOne({ id: projectId });
+    const user = await getRepository(UserProfile).findOne({ id: userId });
+    let newUserProject;
+    if (userProject) {
+      newUserProject = {
+        ...new UserProject(),
+        project,
+        user,
+        isWatched,
+        id: userProject.id
+      };
+    } else {
+      newUserProject = {
+        ...new UserProject(),
+        project,
+        user,
+        isWatched
+      };
+    }
+    return Object.assign(new UserProject(), newUserProject).save();
+  }
+
+  public getLikesAndDislikesAmount(projectId: string) {
+    return this.createQueryBuilder('project')
+      .select('likes,dislikes')
+      .leftJoin(subQuery => subQuery
+        .select(`
+          SUM(CASE user_project.mark WHEN 'like' THEN 1 ELSE 0 END) AS likes,
+          SUM(CASE user_project.mark WHEN 'dislike' THEN 1 ELSE 0 END) AS dislikes,
+          "projectId"
+        `)
+        .from('user_project', 'user_project')
+        .groupBy('"projectId"'), 'up', 'up."projectId" = project.id')
+      .where(`project."id" = '${projectId}'`)
+      .getRawOne();
   }
 
   public getBySortAndFilter({ sort, filter, }: { sort: ProjectsSort; filter: ProjectsFilter; }) {
