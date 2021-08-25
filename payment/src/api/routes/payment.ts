@@ -1,16 +1,16 @@
 import MicroMq from 'micromq';
 import Stripe from 'stripe';
 import { Page } from '../../common/types';
+import { env } from '../../env';
 import { wrap } from '../../helpers';
 import { Services } from '../../services';
 
-let key = 'sk_test_51JQgGgGRFB1tFI4ionmL4tsEBhzwKUbF4SkfFtQJFzkz';
-key += 'YGvbt4wV2NvBHW885jeZjrPoW0hNmZOFyOi7LSQuNi2U00oB8x5kPf';
+const key = env.app.payment.private_key;
 const stripe = new Stripe(key, {
   apiVersion: '2020-08-27',
 });
 
-const endpointSecret = 'whsec_AEOtiS8j2Tj8G1lSgtG8GjsWI6IxjMHh';
+const endpointSecret = env.app.payment.webhook_key;
 
 const init = ({ paymentService }: Services, path: string) => (app: MicroMq) => app.get(
   `${path}/:userId/:page`,

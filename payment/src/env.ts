@@ -9,6 +9,11 @@ export const env = {
     environment: getEnv('NODE_ENV'),
     rabbit: {
       url: getEnv('RABBIT_URL') || 'amqp://localhost'
+    },
+    payment:
+    {
+      private_key: getEnv('PAYMENT_PRIVATE_KEY'),
+      webhook_key: getEnv('PAYMENT_WEBHOOK_KEY')
     }
   }
 };

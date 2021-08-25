@@ -12,5 +12,8 @@ export const env = {
   },
   sentry: {
     dsn: getEnv('SENTRY_DSN')
+  },
+  payment: {
+    key: getEnv('REACT_APP_PAYMENT_KEY')
   }
 };

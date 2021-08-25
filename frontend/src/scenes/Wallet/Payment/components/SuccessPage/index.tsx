@@ -1,12 +1,15 @@
 import ConfettiExplosion from '@reonomy/react-confetti-explosion';
 import { FC } from 'react';
 import { Button } from 'react-bootstrap';
+import { useHistory } from 'react-router-dom';
+import { Routes } from '../../../../../common/enums';
 import { useTypedSelector } from '../../../../../hooks';
 import { useLocalization } from '../../../../../providers/localization';
 import SelectedFund from '../SelectedFund';
 import classes from './styles.module.scss';
 
 const SuccessPage: FC = () => {
+  const history = useHistory();
   const { isCustom, amount } = useTypedSelector(
     (
       { payment }
@@ -24,7 +27,9 @@ const SuccessPage: FC = () => {
         <span>{t('Payment transaction was successful')}</span>
       </h2>
       <SelectedFund isCustom={isCustom} amount={amount} />
-      <Button className={classes['btn-return-success-payment']}>{t('Return to Main Page')}</Button>
+      <Button className={classes['btn-return-success-payment']} onClick={() => history.push(Routes.HOME)}>
+        {t('Return to Main Page')}
+      </Button>
     </div>
   );
 };
