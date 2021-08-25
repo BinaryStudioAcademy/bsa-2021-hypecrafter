@@ -7,6 +7,7 @@ import { Routes } from '../../../common/enums';
 import { LoginData } from '../../../common/types/login';
 import Button from '../../../components/Button';
 import Input from '../../../components/Input';
+import Seo from '../../../components/Seo';
 import { env } from '../../../env';
 import { useAction, useTypedSelector } from '../../../hooks';
 import { useLocalization } from '../../../providers/localization';
@@ -65,13 +66,18 @@ const LoginPage: FC = () => {
 
   return (
     <div className={classes.root}>
+      <Seo
+        title={`${t('Log In')} - HypeCrafter`}
+        description=""
+      />
+
       <div className={classes.hero}>
         <img className={classes.logo} src={logo} alt="logo" />
       </div>
 
       <div className={classes.content}>
         <form className={classes.form} onSubmit={handleSubmit(onSubmit)}>
-          <h2 className={classes.title}>{t('Sign In')}</h2>
+          <h2 className={classes.title}>{t('Log In')}</h2>
 
           <div className={classes['register-cta']}>
             {t('Don’t have an account?')}{' '}
@@ -102,8 +108,11 @@ const LoginPage: FC = () => {
             })}
           />
 
-          <Button className={classes['sign-in-button']} type="submit">
-            {t('Sign In')}
+          <Button
+            className={classes['sign-in-button']}
+            type="submit"
+          >
+            {t('Log In')}
           </Button>
 
           <div className={classes['horizontal-ruler-text']}>

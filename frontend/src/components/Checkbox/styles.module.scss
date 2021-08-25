@@ -1,0 +1,18 @@
+.checkbox{
+    display: flex;
+    align-items: center;
+    input{
+        height: 15px;
+        width: 15px;
+        margin-right: 10px;
+    }
+    input:checked + label:after{
+        content: none;
+    }
+    .form-label{
+        margin-bottom: 0;
+    }
+    .label{
+        margin-bottom: 0;
+    }
+}

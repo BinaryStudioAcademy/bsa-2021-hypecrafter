@@ -51,7 +51,7 @@ const AdditionalForm: FunctionComponent<AdditionalFormProps> = ({
           name='birthday'
           render={({ field }) => (
             <DatePickerInput
-              daySetter={(date) => field.onChange(date)}
+              daySetter={date => field.onChange(date)}
             />
           )}
         />
