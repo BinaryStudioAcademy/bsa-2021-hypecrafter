@@ -1,4 +1,5 @@
-import { NextFunction, Request, Response } from 'express';
+import { RequestHandler } from 'express';
+import { validateUuid } from '../../helpers/uuid';
 import { jwt as jwtMiddleware } from './jwt';
 
 const authorization =
