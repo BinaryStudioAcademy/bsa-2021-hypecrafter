@@ -22,8 +22,8 @@ const init = ({ projectService }: Services, path: string) => (app: MicroMq) => a
       (req) => projectService.setReaction(req.body, req.headers.userId as string)
     )
   )
-  .get(`${path}/:id`, wrap<Empty, Project, { id: string }, Empty>(
-    (req) => projectService.getById(req.params.id, req.headers.userId as string)
+  .get(`${path}/:id`, wrap<Empty, Project, { id: string, userId: string | undefined }, Empty>(
+    (req) => projectService.getById(req.params.id, req.query.userId)
   ));
 
 export default init;

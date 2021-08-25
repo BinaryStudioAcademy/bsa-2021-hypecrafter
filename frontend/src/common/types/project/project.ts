@@ -25,4 +25,5 @@ export interface ProjectPage extends Project {
   facebookUrl?: string;
   dribbleUrl?: string;
   finishDate: string;
+  mark?: string | null;
 }

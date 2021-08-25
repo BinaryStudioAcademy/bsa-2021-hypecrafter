@@ -30,6 +30,7 @@ const Header: FunctionComponent<HeaderProps> = ({ project }) => {
     facebookUrl,
     dribbleUrl,
     finishDate,
+    mark
   } = project;
   // const [isFavorite, setFavorite] = useState(false);
   return (
@@ -84,6 +85,7 @@ const Header: FunctionComponent<HeaderProps> = ({ project }) => {
               dislikes={dislikes}
               bakersAmount={bakersAmount}
               finishDate={finishDate}
+              mark={mark}
             />
           </Row>
         </Col>

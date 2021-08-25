@@ -11,9 +11,14 @@ interface SetReactionTriggerActionPropsType {
   projectId: string;
 }
 
+interface FetchProjectTriggerActionPropsType {
+  id: string;
+  userId: string | undefined;
+}
+
 export const fetchProject = createRoutine(ProjectsActions
   .FETCH_PROJECT, {
-  trigger: (id: string) => id,
+  trigger: ({ id, userId }: FetchProjectTriggerActionPropsType) => ({ id, userId }),
   success: (project: ProjectPage) => project,
   failure: (error: string) => error
 });

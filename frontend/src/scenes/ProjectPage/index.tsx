@@ -24,8 +24,7 @@ const ProjectPage: FC = () => {
   );
 
   useEffect(() => {
-    console.log(userId);
-    fetchProject(id);
+    fetchProject({ id, userId });
   }, []);
 
   return (

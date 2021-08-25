@@ -45,11 +45,12 @@ export default class ProjectService {
     return projects;
   }
 
-  public async getById(id: string, userId: string) {
+  public async getById(id: string, userId: string | undefined) {
     const project = await this.#projectRepository.getById(id, userId);
     project.bakersAmount = Math.max(0, project.bakersAmount);
     project.donated = Math.max(0, project.donated);
     project.privileges = mapPrivileges(project.privileges, project.bakersDonation);
+
     return project; // rewrite when error handling middleware works
   }
 

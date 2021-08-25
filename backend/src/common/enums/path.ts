@@ -4,5 +4,6 @@ export enum Path {
   Topic = '/topics',
   Project = '/projects',
   Tag = '/tags',
-  Category = '/categories'
+  Category = '/categories',
+  Auth = '/auth'
 }
