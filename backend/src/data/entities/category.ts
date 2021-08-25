@@ -1,6 +1,6 @@
-import { Entity, Column, OneToMany } from 'typeorm';
+import { CategoryType } from 'hypecrafter-shared/enums';
+import { Column, Entity, OneToMany } from 'typeorm';
 import { AbstractEntity } from './abstract';
-import { CategoryType } from '../../common/enums';
 import { Project } from './project';
 
 @Entity()
