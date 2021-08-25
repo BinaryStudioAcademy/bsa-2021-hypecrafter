@@ -52,8 +52,7 @@ export class ProjectRepository extends Repository<Project> {
 
   public getPopularProjectsByCategory(category: string) {
     return this.createQueryBuilder('project')
-      .select(
-        `
+      .select(`
         donated,
         description,
         project.name AS "name",
@@ -62,8 +61,7 @@ export class ProjectRepository extends Repository<Project> {
         category.name AS "category",
         array_to_string(array_agg(tag.name),', ') AS "tags",
         project."totalViews" AS "views"
-      `
-      )
+      `)
       .leftJoin(subQuery => subQuery
         .select(`
           SUM(amount) AS donated,
@@ -74,8 +72,7 @@ export class ProjectRepository extends Repository<Project> {
       .leftJoin('project.category', 'category')
       .leftJoin('project.projectTags', 'projectTags')
       .leftJoin('projectTags.tag', 'tag')
-      .groupBy(
-        `
+      .groupBy(`
         donated,
         description,
         project.name,
@@ -83,8 +80,7 @@ export class ProjectRepository extends Repository<Project> {
         goal,
         category.name,
         views
-      `
-      )
+      `)
       .where(`"category"."name"='${category}'`)
       .orderBy('"views"', 'DESC')
       .limit(this.#chartProjectLimit)
@@ -237,10 +233,10 @@ export class ProjectRepository extends Repository<Project> {
       projectQuery
         .leftJoin(subQuery => subQuery
           .select(`
-          mark,
-          "isWatched",
-          "projectId"
-        `)
+            mark,
+            "isWatched",
+            "projectId"
+          `)
           .from('user_project', 'user_project')
           .where(`"projectId" = '${id}' AND "userId" = '${userId}'`), 'upm', 'upm."projectId" = project.id');
     }
@@ -322,10 +318,10 @@ export class ProjectRepository extends Repository<Project> {
       .select('likes,dislikes')
       .leftJoin(subQuery => subQuery
         .select(`
-        SUM(CASE user_project.mark WHEN 'like' THEN 1 ELSE 0 END) AS likes,
-        SUM(CASE user_project.mark WHEN 'dislike' THEN 1 ELSE 0 END) AS dislikes,
-        "projectId"
-      `)
+          SUM(CASE user_project.mark WHEN 'like' THEN 1 ELSE 0 END) AS likes,
+          SUM(CASE user_project.mark WHEN 'dislike' THEN 1 ELSE 0 END) AS dislikes,
+          "projectId"
+        `)
         .from('user_project', 'user_project')
         .groupBy('"projectId"'), 'up', 'up."projectId" = project.id')
       .where(`project."id" = '${projectId}'`)
