@@ -37,9 +37,9 @@ function* watchLoginRequest() {
   yield takeEvery(loginAction.TRIGGER, loginRequest);
 }
 
-function* googleAuthRequest() {
+function* googleAuthRequest(action: Action) {
   try {
-    const response: Tokens = yield call(googleAuth);
+    const response: Tokens = yield call(googleAuth, action.payload);
     setAccessToken(response.accessToken);
     setRefreshToken(response.refreshToken);
     yield put(googleAuthAction.success(response));

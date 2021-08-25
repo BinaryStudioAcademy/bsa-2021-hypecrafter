@@ -12,5 +12,8 @@ export const env = {
   },
   sentry: {
     dsn: getEnv('SENTRY_DSN')
+  },
+  auth: {
+    googleClientId: getEnv('REACT_APP_GOOGLE_CLIENT_ID')
   }
 };

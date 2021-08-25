@@ -10,6 +10,7 @@ const WHITE_ROUTES = [
   '/projects',
   '/projects/popular-and-recommended',
   '/tags',
+  '/auth/google',
   '/categories',
   '/projects/popular',
   '/projects/:id',

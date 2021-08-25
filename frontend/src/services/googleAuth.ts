@@ -1,8 +1,9 @@
 import { api } from '../helpers';
 
-export const googleAuth = async () => {
-  const result = await api.get({
-    url: 'auth/google'
+export const googleAuth = async (token: string) => {
+  const result = await api.post({
+    url: 'auth/google/',
+    params: { token }
   });
   return result;
 };

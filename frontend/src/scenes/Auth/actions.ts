@@ -15,7 +15,7 @@ export const registerUserAction = createRoutine(AuthenticationActions.REGISTER_U
 });
 
 export const googleAuthAction = createRoutine(AuthenticationActions.GOOGLE, {
-  trigger: () => undefined,
+  trigger: (token: string) => token,
   success: (tokens: Tokens) => tokens,
   failure: (error: string) => error
 });
@@ -34,6 +34,6 @@ export type LoginActionType = ReturnType<typeof loginAction.trigger>;
 export type LoginSuccessActionType = ReturnType<typeof loginAction.success>;
 export type LoginFailureActionType = ReturnType<typeof loginAction.failure>;
 
-export type GoogleAuthActionType = ReturnType<typeof loginAction.trigger>;
-export type GoogleAuthSuccessActionType = ReturnType<typeof loginAction.success>;
-export type GoogleAuthFailureActionType = ReturnType<typeof loginAction.failure>;
+export type GoogleAuthActionType = ReturnType<typeof googleAuthAction.trigger>;
+export type GoogleAuthSuccessActionType = ReturnType<typeof googleAuthAction.success>;
+export type GoogleAuthFailureActionType = ReturnType<typeof googleAuthAction.failure>;

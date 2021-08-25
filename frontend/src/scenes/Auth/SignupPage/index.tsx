@@ -33,8 +33,9 @@ const SignupPage: FunctionComponent = () => {
     registerUserAction(data);
   };
 
-  const handleSignupWithGoogle = () => {
-    googleAuthAction();
+  const handleSignupWithGoogle = async (googleData: any) => {
+    const token: string = googleData.tokenId;
+    googleAuthAction(token);
   };
 
   const [currentPage, setCurrentPage] = useState(Pages.MAIN_FORM);
