@@ -9,6 +9,8 @@ import {
   fetchProjectsAction,
   FetchProjectsFailureActionType,
   FetchProjectsSuccessActionType,
+  filterCategoryProjectsAction,
+  FilterCategoryProjectsActionType,
   filterProjectsAction,
   FilterProjectsActionType,
   sortProjectsAction,
@@ -73,6 +75,15 @@ export const projectsReducer = createReducer<ProjectsState>(initialState, {
       modificators: {
         ...state.modificators,
         filter: action.payload,
+      },
+    };
+  },
+  [filterCategoryProjectsAction.TRIGGER](state, action: FilterCategoryProjectsActionType) {
+    return {
+      ...state,
+      modificators: {
+        ...state.modificators,
+        category: action.payload,
       },
     };
   },

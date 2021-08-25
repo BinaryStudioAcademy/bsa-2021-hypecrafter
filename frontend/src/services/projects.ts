@@ -1,10 +1,11 @@
-import { ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
+import { ProjectsCategories, ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
 import { Project } from '../common/types';
 import { api } from '../helpers/http';
 
 interface GetProjectsProps {
   sort: ProjectsSort;
   filter: ProjectsFilter;
+  category: ProjectsCategories;
 }
 
 export const getPopularProjectsByCategory = async (category: string) => {
@@ -18,8 +19,8 @@ export const getPopularProjectsByCategory = async (category: string) => {
   return projects;
 };
 
-export const getProjects = async ({ sort, filter }: GetProjectsProps): Promise<Project[]> => {
-  const projects: Project[] = await api.get({ url: 'projects', params: { sort, filter } });
+export const getProjects = async ({ sort, filter, category }: GetProjectsProps): Promise<Project[]> => {
+  const projects: Project[] = await api.get({ url: 'projects', params: { sort, filter, category } });
   return projects;
 };
 

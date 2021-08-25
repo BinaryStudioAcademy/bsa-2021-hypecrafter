@@ -20,7 +20,7 @@ interface FilterFormData {
 
 const Filters = () => {
   const { t } = useLocalization();
-  const { filterProjectsAction, sortProjectsAction } = useAction();
+  const { filterCategoryProjectsAction, filterProjectsAction, sortProjectsAction } = useAction();
   const {
     sort: sortValue,
     filter: filterValue,
@@ -48,6 +48,10 @@ const Filters = () => {
 
     if (filterValue !== formState.filter) {
       filterProjectsAction(formState.filter);
+    }
+
+    if (categoryValue !== formState.category) {
+      filterCategoryProjectsAction(formState.category);
     }
   };
 
