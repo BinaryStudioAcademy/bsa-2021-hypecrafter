@@ -1,4 +1,5 @@
 import { OAuth2Client } from 'google-auth-library';
+import { HttpStatusCode } from 'hypecrafter-shared/enums';
 import { env } from '../env';
 import { CustomError } from './customError';
 
@@ -29,6 +30,6 @@ export const getGoogleInfo = async (token: string) => {
       googleId
     };
   } catch {
-    throw new CustomError(403, 'Invalid credentials');
+    throw new CustomError(HttpStatusCode.BAD_REQUEST, 'Invalid credentials');
   }
 };

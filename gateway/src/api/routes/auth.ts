@@ -21,23 +21,21 @@ const init = (services: Services) => {
       const userAgentInfo: string = req.headers['user-agent'];
 
       const user = await services.authService.getUserByGoogleId(googleId);
-      let userId: string;
-      let tokens: Tokens;
       if (!user) {
         const newUser = await services.authService.registerUserWithGoogle(
           email,
           googleId
         );
-        userId = newUser.id;
-        tokens = services.authService.loginUser(userId, userAgentInfo);
+        const newUserId = newUser.id;
+        const newUserTokens = services.authService.loginUser(newUserId, userAgentInfo);
         req.body = {
           data: { email, googleId, firstName, lastName, region },
-          tokens,
+          tokens: newUserTokens
         };
         res.delegate(Project.BACKEND);
       } else {
-        userId = user.id;
-        tokens = services.authService.loginUser(userId, userAgentInfo);
+        const userId = user.id;
+        const tokens = services.authService.loginUser(userId, userAgentInfo);
         res.json(tokens);
       }
     })

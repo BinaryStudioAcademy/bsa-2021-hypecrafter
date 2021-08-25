@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import { FunctionComponent, useEffect, useState } from 'react';
+import { GoogleLoginResponse, GoogleLoginResponseOffline } from 'react-google-login';
 import { Link, useHistory } from 'react-router-dom';
 import logo from '../../../assets/HypeCrafter.svg';
 import { Routes } from '../../../common/enums';
@@ -34,8 +35,8 @@ const SignupPage: FunctionComponent = () => {
     registerUserAction(data);
   };
 
-  const handleSignupWithGoogle = async (googleData: any) => {
-    const token: string = googleData.tokenId;
+  const handleSignupWithGoogle = (googleData: GoogleLoginResponse | GoogleLoginResponseOffline) => {
+    const token: string = (googleData as GoogleLoginResponse).tokenId;
     googleAuthAction(token);
   };
 

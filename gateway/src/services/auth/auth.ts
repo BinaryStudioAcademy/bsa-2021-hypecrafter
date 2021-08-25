@@ -68,7 +68,7 @@ export default class AuthService {
     googleId: string
   ) {
     if (await this.#userRepository.getByEmail(email)) {
-      throw new CustomError(400, 'Email is already taken');
+      throw new CustomError(HttpStatusCode.BAD_REQUEST, 'Email is already taken');
     }
     const passwordHash: string = await encrypt(googleId);
     const newUser = await this.#userRepository.createUser({

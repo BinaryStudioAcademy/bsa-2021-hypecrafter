@@ -1,5 +1,5 @@
 import { FC, useEffect } from 'react';
-import { GoogleLogin } from 'react-google-login';
+import { GoogleLogin, GoogleLoginResponse, GoogleLoginResponseOffline } from 'react-google-login';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { Link, useHistory } from 'react-router-dom';
 import logo from '../../../assets/HypeCrafter.svg';
@@ -27,7 +27,7 @@ const LoginPage: FC = () => {
       accessToken: tokens?.accessToken,
       refreshToken: tokens?.refreshToken,
       isLoading,
-      error,
+      error
     })
   );
   const { refreshToken, error } = store;
@@ -36,7 +36,7 @@ const LoginPage: FC = () => {
     register,
     handleSubmit,
     setError,
-    formState: { errors },
+    formState: { errors }
   } = useForm<FormData>();
   const { t } = useLocalization();
 
@@ -54,13 +54,13 @@ const LoginPage: FC = () => {
     if (error) {
       setError('email', {
         type: 'manual',
-        message: 'Email or password is invalid',
+        message: 'Email or password is invalid'
       });
     }
   }, [error]);
 
-  const handleLoginWithGoogle = async (googleData: any) => {
-    const token: string = googleData.tokenId;
+  const handleLoginWithGoogle = (googleData: GoogleLoginResponse | GoogleLoginResponseOffline) => {
+    const token: string = (googleData as GoogleLoginResponse).tokenId;
     googleAuthAction(token);
   };
 
@@ -103,8 +103,8 @@ const LoginPage: FC = () => {
               required: true,
               minLength: {
                 value: 6,
-                message: t('Password is too short (minimum is 6 characters)'),
-              },
+                message: t('Password is too short (minimum is 6 characters)')
+              }
             })}
           />
 
