@@ -1,4 +1,5 @@
 import {
+  ProjectsCategories,
   ProjectsFilter,
   ProjectsSort
 } from 'hypecrafter-shared/enums';
@@ -14,6 +15,7 @@ import classes from './styles.module.scss';
 interface FilterFormData {
   sort: ProjectsSort;
   filter: ProjectsFilter;
+  category: ProjectsCategories;
 }
 
 const Filters = () => {
@@ -21,10 +23,15 @@ const Filters = () => {
   const { filterProjectsAction, sortProjectsAction } = useAction();
   const {
     sort: sortValue,
-    filter: filterValue
+    filter: filterValue,
+    category: categoryValue,
   } = useTypedSelector((state) => state.projects.modificators);
   const { register, getValues, setValue } = useForm<FilterFormData>({
-    defaultValues: { filter: filterValue, sort: sortValue },
+    defaultValues: {
+      filter: filterValue,
+      sort: sortValue,
+      category: categoryValue,
+    },
   });
 
   useEffect(() => {
@@ -64,6 +71,28 @@ const Filters = () => {
             { value: ProjectsFilter.OWN, text: t('Own') },
           ]}
           {...register('filter', { required: true })}
+        />
+        <Select
+          label={t('Category')}
+          options={[
+            { value: ProjectsCategories.ALL, text: t('All') },
+            { value: ProjectsCategories.Art, text: t('Art') },
+            { value: ProjectsCategories.Comics, text: t('Comics') },
+            { value: ProjectsCategories.Crafts, text: t('Crafts') },
+            { value: ProjectsCategories.Dance, text: t('Dance') },
+            { value: ProjectsCategories.Design, text: t('Design') },
+            { value: ProjectsCategories.Fashion, text: t('Fashion') },
+            { value: ProjectsCategories.FilmAndVideo, text: t('Film and Video'), },
+            { value: ProjectsCategories.Food, text: t('Food') },
+            { value: ProjectsCategories.Games, text: t('Games') },
+            { value: ProjectsCategories.Journalism, text: t('Journalism') },
+            { value: ProjectsCategories.Music, text: t('Music') },
+            { value: ProjectsCategories.Photography, text: t('Photography') },
+            { value: ProjectsCategories.Publishing, text: t('Publishing') },
+            { value: ProjectsCategories.Technology, text: t('Technology') },
+            { value: ProjectsCategories.Theater, text: t('Theater') },
+          ]}
+          {...register('category', { required: true })}
         />
       </Form>
       <Statistic />

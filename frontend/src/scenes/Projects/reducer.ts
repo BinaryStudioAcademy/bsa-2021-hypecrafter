@@ -1,4 +1,5 @@
 import {
+  ProjectsCategories,
   ProjectsFilter,
   ProjectsSort
 } from 'hypecrafter-shared/enums';
@@ -19,6 +20,7 @@ export interface ProjectsState {
   modificators: {
     sort: ProjectsSort;
     filter: ProjectsFilter;
+    category: ProjectsCategories;
   };
   isLoading: boolean;
   error: string;
@@ -29,6 +31,7 @@ export const initialState: ProjectsState = {
   modificators: {
     sort: ProjectsSort.NAME,
     filter: ProjectsFilter.ALL,
+    category: ProjectsCategories.ALL,
   },
   isLoading: false,
   error: '',

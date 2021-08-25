@@ -139,6 +139,22 @@
     "views": "переглядів",
     "projects": "проектів",
     "Page not found": "Сторінку не знайдено",
+    "Category": "Категорія",
+    "Art": "Мистецтво",
+    "Comics": "Комікси",
+    "Crafts": "Ремесла",
+    "Dance": "Танці",
+    "Design": "Дизайн",
+    "Fashion": "Мода",
+    "Film and Video": "Фільми та Відео",
+    "Food": "Їжа",
+    "Games": "Ігри",
+    "Journalism": "Журналізм",
+    "Music": "Музика",
+    "Photography": "Фото",
+    "Publishing": "Видавнича справа",
+    "Technology": "Технології",
+    "Theater": "Театр",
     "The page you were looking for doesn’t exist (404)": "Сторінка, яку ви шукали, не існує (404)"
   }
 }
