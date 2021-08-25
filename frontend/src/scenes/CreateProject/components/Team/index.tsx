@@ -1,6 +1,7 @@
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FC, useEffect, useState } from 'react';
+import { CreateProjectTeam } from '../../../../common/types';
 import Button from '../../../../components/Button';
 import Checkbox from '../../../../components/Checkbox';
 import LoaderWrapper from '../../../../components/LoaderWrapper';
@@ -8,14 +9,13 @@ import Select from '../../../../components/Select';
 import { useAction, useTypedSelector } from '../../../../hooks';
 import { useLocalization } from '../../../../providers/localization';
 import { CurrentPage, ProjectKeys } from '../../enums';
-import { Team as TeamType } from '../../types/team';
 import Layout from '../Layout';
 import classes from './styles.module.scss';
 
 interface Props {
   changePage: (currentPage: CurrentPage) => void
   currentPage: CurrentPage,
-  team: TeamType,
+  team: CreateProjectTeam,
   onChangeValue: (name: ProjectKeys, value: any) => void,
 }
 
@@ -59,7 +59,7 @@ const Team: FC<Props> = ({ changePage, currentPage, team, onChangeValue }) => {
           options={users.map(user => ({ text: `${user.lastName} ${user.firstName} (${user.email})`, value: user.id }))}
           label={t('Pick a members to add they to team.')}
           defaultText="-"
-          onSelectChange={value => setUser(value)}
+          onChange={e => setUser(e.target.value)}
         />
         <Button onClick={addMember} className={classes.addMember}>{t('Add')}</Button>
       </div>
@@ -76,7 +76,7 @@ const Team: FC<Props> = ({ changePage, currentPage, team, onChangeValue }) => {
       ))}
       </div>
       <p>{t('We will notify this person')}</p>
-      <Checkbox value={checked} onChange={handleChange} label={t('I agree')} />
+      <Checkbox value={checked} onChange={handleChange} label={t('I agree')} id="applyNotifyPerson" />
     </div>
   );
   const footer = (

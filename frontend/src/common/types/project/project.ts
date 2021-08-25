@@ -1,5 +1,5 @@
 export interface Project {
-  id?: string | undefined;
+  id: string;
   name: string;
   description: string;
   category?: string;
@@ -12,8 +12,6 @@ export interface Project {
   minutesToRead: number;
   region: string;
   totalInteractionTime: number;
-  startDate: Date;
-  finishDate: Date;
 }
 
 export interface ProjectPage extends Project {
@@ -26,5 +24,5 @@ export interface ProjectPage extends Project {
   instagramUrl?: string;
   facebookUrl?: string;
   dribbleUrl?: string;
-  finishDate: Date;
+  finishDate: string;
 }

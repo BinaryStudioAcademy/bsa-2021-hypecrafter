@@ -1,12 +1,12 @@
 import { createRoutine } from 'redux-saga-routines';
-import { CreateProject as Project } from './types/project';
+import { Project, CreateProject } from '../../common/types';
 
 export enum ProjectActions {
   SAVE_PROJECT = 'PROJECT/SAVE'
 }
 
 export const createProjectAction = createRoutine(ProjectActions.SAVE_PROJECT, {
-  trigger: (project: Project) => project,
+  trigger: (project: CreateProject) => project,
   success: (project: Project) => project,
   failure: (error: string) => error
 });

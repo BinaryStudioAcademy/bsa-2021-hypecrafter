@@ -1,6 +1,9 @@
 import { useState } from 'react';
+import { CreateProject as Project } from '../../common/types';
 import LoaderWrapper from '../../components/LoaderWrapper';
+import Seo from '../../components/Seo';
 import { useAction, useTypedSelector } from '../../hooks';
+import { useLocalization } from '../../providers/localization';
 import Basic from './components/Basic';
 import BeforeStart from './components/BeforeStart';
 import Funding from './components/Funding';
@@ -8,7 +11,6 @@ import Settings from './components/Settings';
 import Story from './components/Story';
 import Team from './components/Team';
 import { CurrentPage, ProjectKeys } from './enums';
-import { CreateProject as Project } from './types/project';
 
 // import classes from './styles.module.scss';
 
@@ -22,15 +24,12 @@ const CreateProject = () => {
     region: '',
     team: { name: '', chats: [] },
     imageUrl: '',
-    tags: [],
-    url: '',
-    totalViews: 0,
-    minutesToRead: 0,
-    totalInteractionTime: 0
+    tags: []
   };
   const [currentPage, setCurrentPage] = useState(CurrentPage.BEFORE_START);
   const [newProject, setNewProject] = useState(initProject);
   const { createProjectAction } = useAction();
+  const { t } = useLocalization();
   const createProject = (project:Project) => createProjectAction(project);
   const store = useTypedSelector(({ project: { project, isLoading } }) => ({
     project,
@@ -97,6 +96,7 @@ const CreateProject = () => {
             region={newProject.region}
             currentPage={currentPage}
             onChangeValue={handleChangeValue}
+            imageUrl={newProject.imageUrl}
           />
         );
       case CurrentPage.END:
@@ -114,6 +114,11 @@ const CreateProject = () => {
   };
   return (
     <LoaderWrapper isLoading={isLoading}>
+      <Seo
+        title={`${t('Create project')} - HypeCrafter`}
+        description=""
+      />
+
       {getView()}
     </LoaderWrapper>
   );

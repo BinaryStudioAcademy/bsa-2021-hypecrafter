@@ -1,20 +1,8 @@
-@import "../../styles/vars";
-@import "../../styles/fonts.scss";
-@import "../../styles/_mixins.scss";
+@import '../../styles/vars';
+@import '../../styles/fonts.scss';
+@import '../../styles/_mixins.scss';
 
 /* General */
-.visible {
-  display: block;
-}
-
-.desktop_visible {
-  display: flex;
-}
-
-.hide {
-  display: none !important;
-}
-
 @mixin color-style {
   background-color: $color-menu-start-background;
   color: $color-root-text !important;
@@ -57,7 +45,6 @@
   font-size: 1.1rem;
   font-family: $font-roboto500;
   text-decoration: none;
-  color: $color-root-text !important;
 
   &:first-child {
     margin-left: 70px;
@@ -68,14 +55,15 @@
   &:visited {
     color: $color-root-text !important;
   }
+
+  &:active {
+    color: $color-root-turquoise !important;
+  }
 }
 .header_menu_item_active {
   color: $color-root-turquoise !important;
 }
-.header_menu_item_down {
-  margin-left: 8px;
-  margin-right: 0px;
-}
+
 .header_right {
   display: flex;
   align-items: center;
@@ -89,10 +77,6 @@
 }
 .header_profile_avatar {
   margin-right: 10px;
-}
-.header_profile_down {
-  font-size: 16px;
-  color: $color-root-text;
 }
 .header_natification {
   cursor: pointer;
@@ -144,38 +128,12 @@
   left: 16px;
   z-index: 1;
 }
-.menu_user_container {
-  margin-top: 8px;
-  margin-left: 30px;
-}
-.menu_user {
-  display: flex;
-  flex-direction: column;
-  min-width: 122px;
-  a {
-    font-size: 16px;
-    color: $color-root-text;
-    padding: 10px 0px;
-    &:first-child {
-      padding-top: 0px;
-    }
-    &:last-child {
-      padding-bottom: 0px;
-    }
-  }
-}
-.menu_line {
-  margin: 5px 0px;
-  width: 100%;
-  height: 1px;
-  background-color: $color-root-grey;
-}
 
 /* For desktop */
 .line_both_desktop {
   position: relative;
   &::before {
-    content: " ";
+    content: ' ';
     top: 0;
     left: 2rem;
     right: 2rem;
@@ -185,7 +143,7 @@
   }
 
   &::after {
-    content: " ";
+    content: ' ';
     top: 2.5rem;
     left: 2rem;
     right: 2rem;
@@ -210,9 +168,10 @@
 
 .desktop_menu_profile {
   position: absolute;
-  top: 3.3rem;
+  z-index: 20;
+  top: 4.9rem;
   right: -0.4rem;
-  width: 14rem;
+  white-space: nowrap;
   cursor: pointer;
   @include color-style;
 }
@@ -220,6 +179,7 @@
 .desktop_menu_item {
   width: 100%;
   height: 2.5rem;
+  white-space: nowrap;
   text-decoration: none;
   display: flex;
   justify-content: flex-start;
@@ -228,42 +188,14 @@
   padding-left: 2rem !important;
   padding-right: 2rem !important;
   font-size: 1rem;
-  color: $color-root-text;
+  color: $color-root-text !important;
   @include mobile-menu-hoover;
 
   &:hover,
   &:active,
   &:visited {
-    @include color-style;
+    color: $color-root-text !important;
   }
-}
-
-.desktop_projects_drop {
-  display: inline;
-  margin: 0px 20px;
-  width: 5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0;
-  text-decoration: none;
-  font-size: 1.1rem;
-
-  &:link,
-  &:hover,
-  &:active,
-  &:visited {
-    color: $color-root-text;
-  }
-}
-
-.desktop_project_menu_list {
-  position: absolute;
-  top: 2rem;
-  left: -0.7rem;
-  width: 9rem;
-  z-index: 50;
-  @include color-style;
 }
 
 @media (max-width: 1160px) {
@@ -300,12 +232,16 @@
   .desktop_trends {
     margin-right: 0;
   }
+
+  .desktop_menu_profile {
+    top: 3.5rem;
+  }
 }
 
 /* For mobile */
 @mixin line_bottom {
   &:last-child::after {
-    content: " ";
+    content: '';
     bottom: 0;
     left: 1rem;
     right: 1rem;
@@ -317,8 +253,9 @@
 
 .line_both {
   position: relative;
+  color: $color-root-text !important;
   &::before {
-    content: " ";
+    content: ' ';
     top: 0;
     left: 1rem;
     right: 1rem;
@@ -328,7 +265,7 @@
   }
 
   &::after {
-    content: " ";
+    content: '';
     top: 2.5rem;
     left: 1rem;
     right: 1rem;
@@ -348,7 +285,7 @@
   @include color-style;
 
   display: grid;
-  grid-template-columns: [start] 2% [hamburger-menu-start] 4rem [hamburger-menu-finish] 1.4rem [logo-start] 1fr [logo-finish] 0.5rem [hypeCoin-start] 5rem [hypeCoin-finish] 0.5rem [notification-start] 2.5rem [notification-finish] 0.5rem [profile-start] 3rem [profile-finish] 2% [finish];
+  grid-template-columns: [start] 2% [hamburger-menu-start] 4rem [hamburger-menu-finish] 1.4rem [logo-start] 1fr [logo-finish] 0.5rem [hypeCoin-start] 5rem [hypeCoin-finish] 0.5rem [notification-start] 2.5rem [notification-finish] 0.4rem [profile-start] 3rem [profile-finish] 2% [finish];
   grid-template-rows: [start] 2% [search-start] 46% [search-finish] 4% [menu-start] 46% [menu-finish] 2% [finish];
   transition: blur 1s;
   transition: background-color 1s;
@@ -437,30 +374,37 @@
   grid-column-end: profile-finish;
   position: relative;
   cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  a {
+    padding-left: 0.8rem;
+  }
 }
 
 .mobile_menu_profile {
   position: absolute;
-  top: 3.3rem;
+  white-space: nowrap;
+  top: 3.8rem;
   right: -0.1rem;
-  width: 14rem;
   cursor: pointer;
-  @include color-style;
 }
 
 .mobile_menu_list {
   position: absolute;
-  top: 3rem;
+  top: 3.5rem;
   left: 0;
-  width: 8rem;
+  white-space: nowrap;
   z-index: 10;
-  @include color-style;
+  color: $color-root-text !important;
 }
 
 .mobile_menu_item {
   width: 100%;
   height: 2.5rem;
   text-decoration: none;
+  white-space: nowrap;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -468,41 +412,14 @@
   padding-left: 1rem !important;
   padding-right: 1rem !important;
   font-size: 1rem;
-  color: $color-root-text;
+  color: $color-root-text !important;
   @include mobile-menu-hoover;
 
   &:hover,
   &:active,
   &:visited {
-    @include color-style;
+    color: $color-root-text !important;
   }
-}
-
-.mobile_projects_drop {
-  margin: 0;
-  padding: 0 1rem !important;
-  width: 100%;
-  height: 2.5rem !important;
-  font-size: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  @include mobile-menu-hoover;
-  @include color-style;
-}
-
-.mobile_project_menu_list {
-  position: absolute;
-  top: 1rem;
-  left: 8rem;
-  width: 7rem;
-  @include color-style;
-}
-
-.mobile_hide_on_scroll {
-  background-color: $color-menu-finish-background !important;
-  color: $color-root-text !important;
-  backdrop-filter: blur(6px);
 }
 
 @media (max-width: 510px) {
@@ -517,6 +434,10 @@
     grid-row-end: logo-finish;
     grid-column-start: logo-shift;
     grid-column-end: profile-finish;
+  }
+
+  .mobile_menu_list {
+    top: 3.45rem;
   }
 }
 
@@ -535,21 +456,12 @@
     position: static !important;
   }
 
-  .mobile_projects_drop::after {
-    content: " ";
-    top: 2.45rem;
-    left: 1rem;
-    right: 1rem;
-    position: absolute;
-    height: 1px;
-    border-bottom: 1px solid $color-root-text;
+  .mobile_menu_profile {
+    top: 3.7rem;
   }
 
-  .mobile_project_menu_list {
-    position: static;
-    width: 8rem !important;
-
-    @include line_bottom;
+  .mobile_menu_list {
+    top: 3.36rem;
   }
 }
 
@@ -562,5 +474,56 @@
 
   .mobile_logo {
     display: none;
+  }
+
+  .mobile_menu_profile {
+    top: 3.85rem;
+  }
+
+  .mobile_menu_list {
+    top: 3.5rem;
+  }
+}
+
+/* General */
+.visible {
+  display: grid;
+
+  .mobile_navigation,
+  .mobile_menu_list,
+  .mobile_menu_profile {
+    display: block;
+  }
+}
+
+.desktop_visible {
+  display: flex;
+
+  .desktop_menu_profile {
+    display: block;
+  }
+}
+
+.hide {
+  display: none !important;
+
+  .desktop_menu_profile,
+  .desktop_menu_item,
+  .mobile_menu_list,
+  .mobile_menu_profile,
+  .mobile_menu_item {
+    display: none !important;
+  }
+}
+
+.visible_on_scroll {
+  .header,
+  .desktop_menu_profile,
+  .mobile_navigation,
+  .mobile_menu_list,
+  .mobile_menu_profile {
+    background-color: $color-menu-finish-background !important;
+    color: $color-root-text !important;
+    backdrop-filter: blur(6px) !important;
   }
 }

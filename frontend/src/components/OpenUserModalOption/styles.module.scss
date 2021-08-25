@@ -1,0 +1,9 @@
+@import '../../styles/mixins';
+@import '../../styles/vars';
+
+.open-modal-btn {
+  @include reset-button;
+  font-size: 16px;
+  color: $color-root-text;
+  text-align: start;
+}

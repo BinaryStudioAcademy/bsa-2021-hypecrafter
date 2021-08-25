@@ -4,10 +4,15 @@
     input{
         height: 15px;
         width: 15px;
-        margin-right: 5px;
+        margin-right: 10px;
     }
     input:checked + label:after{
         content: none;
-        background-color: red;
+    }
+    .form-label{
+        margin-bottom: 0;
+    }
+    .label{
+        margin-bottom: 0;
     }
 }

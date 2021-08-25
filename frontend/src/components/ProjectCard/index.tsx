@@ -6,29 +6,29 @@ import classes from './styles.module.scss';
 
 type Props = {
   to: string,
-  category: string;
   tags: string[] | string; // temp
   name: string;
   description: string;
   goal: number;
   percent: number;
+  category?: string;
   image?: string;
   rounded?: boolean;
 };
 
 const ProjectCard: FC<Props> = ({
   to,
-  category,
   tags,
   name,
   description,
   goal,
   percent,
+  category,
   image = 'https://dummyimage.com/600x400/000/fff.jpg&text=+',
   rounded = false
 }) => (
   <CardWithLink to={to} image={image} rounded={rounded}>
-    <div className={classes.category}>{category}</div>
+    {category && <div className={classes.category}>{category}</div>}
     <div className={classes.title}>{name}</div>
     <div className={classes.description}>{description}</div>
 
@@ -38,7 +38,7 @@ const ProjectCard: FC<Props> = ({
         : <Tag text={tags} />}
     </div>
 
-    <ProgressBar goal={goal} percent={percent} />
+    <ProgressBar goal={Math.floor(goal)} percent={Math.floor(percent)} />
   </CardWithLink>
 );
 
