@@ -30,7 +30,7 @@ const getDefaultOptions = (t: CallableFunction) => ({
       },
       ticks: {
         color: 'grey',
-        callback: (value: string | number, _index: number, _ticks: Tick[]) => `${value} ${t('projects')}`,
+        callback: (value: string | number, _index: number, _ticks: Tick[]) => `${value} ${t('money')}`,
         stepSize: 10
       }
     }

@@ -32,6 +32,30 @@ const Statistics: FC<StatisticsProps> = ({ t }) => {
     {
       data: 40,
       date: 'fdsafsd'
+    },
+    {
+      data: 30,
+      date: 'fdsafsd'
+    },
+    {
+      data: 14,
+      date: 'fdsafsd'
+    },
+    {
+      data: 45,
+      date: 'fdsafsd'
+    },
+    {
+      data: 19,
+      date: 'fdsafsd'
+    },
+    {
+      data: 27,
+      date: 'fdsafsd'
+    },
+    {
+      data: 40,
+      date: 'fdsafsd'
     }
   ];
 
