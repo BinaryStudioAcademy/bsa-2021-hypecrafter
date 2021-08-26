@@ -13,9 +13,8 @@ const init = ({ userService }: Services, path: string) => (app: MicroMq) => {
   app.action('replenishment', async (meta, res) => {
     const payload = meta as MetaReplenishment;
     const userProfile = await userService.replenishment(payload.id, payload.amount);
-    console.log(1);
     if (userProfile) {
-      res.json({ ok: true });
+      res.json({ ok: true, balance: userProfile.balance });
     }
     res.json({ ok: false });
   });

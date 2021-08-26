@@ -1,5 +1,5 @@
 import { EntityRepository, Repository } from 'typeorm';
-import { paginationStep } from '../../common/types';
+import { paginationStep, Transaction } from '../../common/types';
 import { TransactionHistory } from '../entities/transactionHistory';
 
 @EntityRepository(TransactionHistory)
@@ -14,6 +14,16 @@ export class TransactionHistoryRepository extends Repository<TransactionHistory>
 
   public getById(id: string) {
     return this.findOne({ id });
+  }
+
+  public setTransaction(transaction: Transaction) {
+    const newTransaction = new TransactionHistory();
+    newTransaction.balance = transaction.balance;
+    newTransaction.item = transaction.item;
+    newTransaction.total = transaction.total;
+    newTransaction.type = transaction.type;
+    newTransaction.userId = transaction.userId;
+    return this.save(newTransaction);
   }
 
   public async getByUserId(userId: string, pageNum: number) {

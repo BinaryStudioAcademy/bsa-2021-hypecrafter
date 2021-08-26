@@ -1,3 +1,4 @@
+import { Transaction } from '../../common/types';
 import { TransactionHistoryRepository } from '../../data/repositories';
 
 export default class TransactionService {
@@ -13,6 +14,10 @@ export default class TransactionService {
 
   public getById(id: string) {
     return this.#transactionHistoryRepository.getById(id);
+  }
+
+  public setTransaction(transaction: Transaction) {
+    return this.#transactionHistoryRepository.setTransaction(transaction);
   }
 
   public getByUserId(userId: string, pageNum: number) {

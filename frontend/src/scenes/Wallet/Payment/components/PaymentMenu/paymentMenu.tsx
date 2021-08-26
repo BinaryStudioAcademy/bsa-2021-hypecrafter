@@ -7,8 +7,8 @@ import classes from './styles.module.scss';
 // recreating the Stripe object on every render.
 // loadStripe is initialized with a fake API key.
 // Sign in to see examples pre-filled with your key.
-const promise = loadStripe(env.payment.key || '', { locale: 'en' });
 export default function PaymentForm() {
+  const promise = loadStripe(env.payment.key || '', { locale: 'en' });
   return (
     <div className={classes['payment-form-block']}>
       <Elements stripe={promise}>

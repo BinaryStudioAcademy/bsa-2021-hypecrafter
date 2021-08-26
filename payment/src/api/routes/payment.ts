@@ -13,9 +13,12 @@ const stripe = new Stripe(key, {
 const endpointSecret = env.app.payment.webhook_key;
 
 const init = ({ paymentService }: Services, path: string) => (app: MicroMq) => app.get(
-  `${path}/:userId/:page`,
-  wrap<Empty, Page, { page: string, userId: string }, Empty>((req) => paymentService
-    .getByUserId(req.params.userId, req.params.page))
+  `${path}/:page`,
+  wrap<Empty, Page, { page: string }, Empty>((req) => {
+    console.log('()()()()()()()');
+    return paymentService
+      .getByUserId(req.headers.userId?.toString(), req.params.page);
+  })
 ).post(`${path}/create-payment-intent`,
   wrap< Empty, { clientSecret: string }, { amount: number }, Empty>(async (req) => {
     const { amount } = req.body;
@@ -47,12 +50,20 @@ const init = ({ paymentService }: Services, path: string) => (app: MicroMq) => a
             server: {
               action: 'replenishment',
               meta: {
-                id: payload.metadata.id,
+                id: payload.metadata.userId,
                 amount: payload.amount / 100,
               },
             }
-          }) as { response: { ok: boolean } };
-          console.log(response);
+          }) as { response: { ok: boolean, balance: number } };
+          if (response.ok) {
+            paymentService.setTransaction({
+              balance: response.balance,
+              item: 'Balance replenishment',
+              type: 'Custom Fund',
+              total: payload.amount / 100,
+              userId: payload.metadata.userId
+            });
+          }
           break;
         }
         default:

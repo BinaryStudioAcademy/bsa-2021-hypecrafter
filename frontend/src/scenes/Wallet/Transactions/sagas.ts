@@ -6,15 +6,14 @@ import { fetchTransactionsPageAction } from './actions';
 
 interface TransactionAction extends Action {
   payload: {
-    userId: string;
     lastPage: number
   }
 }
 
 function* fetchTransactionsPage(action: TransactionAction) {
   try {
-    const { userId, lastPage } = action.payload;
-    const transactionsPage: TransactionsPage = yield call(getPage, userId, lastPage + 1);
+    const { lastPage } = action.payload;
+    const transactionsPage: TransactionsPage = yield call(getPage, lastPage + 1);
     yield put(fetchTransactionsPageAction.success(transactionsPage));
   } catch (error) {
     console.log(error.message);
