@@ -1,10 +1,12 @@
 import { Tokens } from '../../common/types/signup';
 import { createReducer } from '../../helpers';
 import type {
-  LoginFailureActionType, LoginSuccessActionType, RegisterUserFailureActionType,
+  FacebookAuthFailureActionType, FacebookAuthSuccessActionType, LoginFailureActionType,
+  LoginSuccessActionType,
+  RegisterUserFailureActionType,
   RegisterUserSuccessActionType
 } from './actions';
-import { loginAction, registerUserAction } from './actions';
+import { facebookAuthAction, loginAction, registerUserAction } from './actions';
 
 export interface AuthenticationState {
   isLoading: boolean;
@@ -53,6 +55,26 @@ export const authenticationReducer = createReducer<AuthenticationState>(initialS
     };
   },
   [loginAction.FAILURE](state, action: LoginFailureActionType) {
+    return {
+      ...state,
+      isLoading: false,
+      error: action.payload
+    };
+  },
+  [facebookAuthAction.TRIGGER](state) {
+    return {
+      ...state,
+      isLoading: true
+    };
+  },
+  [facebookAuthAction.SUCCESS](state, action: FacebookAuthSuccessActionType) {
+    return {
+      ...state,
+      isLoading: false,
+      tokens: action.payload
+    };
+  },
+  [facebookAuthAction.FAILURE](state, action: FacebookAuthFailureActionType) {
     return {
       ...state,
       isLoading: false,

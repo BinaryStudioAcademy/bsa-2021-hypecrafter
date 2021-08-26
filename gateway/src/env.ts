@@ -14,5 +14,11 @@ export const env = {
   jwt: {
     secret: getEnv('SECRET_KEY'),
     expiresIn: '24h'
+  },
+  auth: {
+    facebook: {
+      appId: getEnv('FACEBOOK_APP_ID'),
+      secret: getEnv('FACEBOOK_APP_SECRET')
+    }
   }
 };

@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import { FunctionComponent, useEffect, useState } from 'react';
+import { ReactFacebookLoginInfo } from 'react-facebook-login-typed';
 import { Link, useHistory } from 'react-router-dom';
 import logo from '../../../assets/HypeCrafter.svg';
 import { Routes } from '../../../common/enums';
@@ -15,7 +16,7 @@ import classes from './styles.module.scss';
 
 const SignupPage: FunctionComponent = () => {
   const history = useHistory();
-  const { registerUserAction } = useAction();
+  const { registerUserAction, facebookAuthAction } = useAction();
   const store = useTypedSelector(({ authentication: { tokens, isLoading, error } }) => ({
     accessToken: tokens?.accessToken,
     refreshToken: tokens?.refreshToken,
@@ -32,6 +33,12 @@ const SignupPage: FunctionComponent = () => {
 
   const handleSignup = (data: SignupData) => {
     registerUserAction(data);
+  };
+
+  const handleSignupWithFacebook = (data: ReactFacebookLoginInfo) => {
+    console.log(data);
+    const { accessToken } = data;
+    facebookAuthAction(accessToken);
   };
 
   const [currentPage, setCurrentPage] = useState(Pages.MAIN_FORM);
@@ -51,6 +58,7 @@ const SignupPage: FunctionComponent = () => {
         mainFormInfo={mainFormInfo}
         setMainFormInfo={setMainFormInfo}
         t={t}
+        onSignupWithFacebook={handleSignupWithFacebook}
       />
     ),
     [Pages.ADDITIONAL_FORM]: (

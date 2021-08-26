@@ -142,4 +142,6 @@ declare type LocaleKeys =
  | 'Page not found'
  | 'The page you were looking for doesn’t exist (404)'
  | 'Social title'
- | 'Site locale';
+ | 'Site locale'
+ | 'Sign In with Facebook'
+ | 'Sign Up with Facebook';

@@ -15,7 +15,11 @@ export class UserRepository extends Repository<User> {
     return this.findOne({ email });
   }
 
-  createUser(data: { email: string; passwordHash: string }) {
+  getByFacebookId(facebookId: string) {
+    return this.findOne({ facebookId });
+  }
+
+  createUser(data: { email: string; passwordHash: string; facebookId?: string, googleId?: string }) {
     const newUser: User = Object.assign(new User(), data);
     return this.save(newUser);
   }

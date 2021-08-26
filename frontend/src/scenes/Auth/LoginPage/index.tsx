@@ -1,4 +1,5 @@
 import { FC, MouseEventHandler, useEffect } from 'react';
+import FacebookLogin, { ReactFacebookLoginInfo } from 'react-facebook-login-typed';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { Link, useHistory } from 'react-router-dom';
 import logo from '../../../assets/HypeCrafter.svg';
@@ -7,6 +8,7 @@ import { LoginData } from '../../../common/types/login';
 import Button from '../../../components/Button';
 import Input from '../../../components/Input';
 import Seo from '../../../components/Seo';
+import { env } from '../../../env';
 import { useAction, useTypedSelector } from '../../../hooks';
 import { useLocalization } from '../../../providers/localization';
 import classes from '../styles.module.scss';
@@ -18,7 +20,9 @@ type FormData = {
 
 const LoginPage: FC = () => {
   const history = useHistory();
-  const { loginAction } = useAction();
+  const { loginAction, facebookAuthAction } = useAction();
+
+  console.log(env.auth.facebookClientId);
 
   const store = useTypedSelector(({ authentication: { tokens, isLoading, error } }) => ({
     accessToken: tokens?.accessToken,
@@ -38,6 +42,11 @@ const LoginPage: FC = () => {
   const dummySignInWithGoogleHandler: MouseEventHandler<HTMLButtonElement> = () => {
     console.log('Sign In with Google');
     changeLanguage(selectedLanguage === Languages.UA ? Languages.EN : Languages.UA); // temp, for translations test
+  };
+
+  const handleLoginWithFacebook = (data: ReactFacebookLoginInfo) => {
+    const { accessToken } = data;
+    facebookAuthAction(accessToken);
   };
 
   useEffect(() => {
@@ -114,6 +123,19 @@ const LoginPage: FC = () => {
           >
             {t('Sign In with Google')}
           </Button>
+
+          <FacebookLogin
+            appId={env.auth.facebookClientId as string}
+            callback={handleLoginWithFacebook}
+            render={renderProps => (
+              <Button
+                className={classes['google-button']}
+                onClick={renderProps.onClick}
+              >
+                {t('Sign In with Facebook')}
+              </Button>
+            )}
+          />
         </form>
       </div>
     </div>

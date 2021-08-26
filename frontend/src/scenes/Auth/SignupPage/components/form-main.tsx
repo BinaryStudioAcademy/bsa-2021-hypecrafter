@@ -1,10 +1,12 @@
 import { FunctionComponent, MouseEventHandler } from 'react';
+import FacebookLogin, { ReactFacebookLoginInfo } from 'react-facebook-login-typed';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import { Routes } from '../../../../common/enums';
 import { Pages } from '../../../../common/enums/signupForms';
 import Button from '../../../../components/Button';
 import Input from '../../../../components/Input';
+import { env } from '../../../../env';
 import classesAuth from '../../styles.module.scss';
 import classes from '../styles.module.scss';
 
@@ -20,13 +22,15 @@ interface MainFormProps {
   setMainFormInfo: React.Dispatch<React.SetStateAction<MainFormData>>;
   mainFormInfo: MainFormData;
   t: CallableFunction;
+  onSignupWithFacebook: (data: ReactFacebookLoginInfo) => void;
 }
 
 const MainForm: FunctionComponent<MainFormProps> = ({
   setCurrentPage,
   setMainFormInfo,
   mainFormInfo,
-  t
+  t,
+  onSignupWithFacebook
 }: MainFormProps) => {
   const {
     register,
@@ -125,6 +129,18 @@ const MainForm: FunctionComponent<MainFormProps> = ({
       >
         {t('Sign Up with Google')}
       </Button>
+      <FacebookLogin
+        appId={env.auth.facebookClientId as string}
+        callback={onSignupWithFacebook}
+        render={renderProps => (
+          <Button
+            className={classesAuth['google-button']}
+            onClick={renderProps.onClick}
+          >
+            {t('Sign Up with Facebook')}
+          </Button>
+        )}
+      />
     </form>
   );
 };

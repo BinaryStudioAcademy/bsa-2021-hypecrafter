@@ -12,5 +12,8 @@ export const env = {
   },
   sentry: {
     dsn: getEnv('SENTRY_DSN')
+  },
+  auth: {
+    facebookClientId: getEnv('REACT_APP_FACEBOOK_CLIENT_ID')
   }
 };

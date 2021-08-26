@@ -1,4 +1,4 @@
-import { Router } from 'express';
+import { Request, Response, Router } from 'express';
 import { HttpStatusCode, Project } from 'hypecrafter-shared/enums';
 import { AuthApiPath } from '../../common/enums';
 import { Tokens } from '../../common/types/registration';
@@ -7,12 +7,39 @@ import { CustomError } from '../../helpers/customError';
 import { wrap } from '../../helpers/request';
 import { Services } from '../../services/index';
 import { authentication as authenticationMiddleware } from '../middlewares/authentication';
+import { facebook } from '../middlewares/facebook';
 import { registration as registrationMiddleware } from '../middlewares/registration';
 
 const init = (services: Services) => {
   const router = Router();
 
   return router
+    .post(
+      AuthApiPath.Facebook,
+      facebook,
+      async (req: Request, res: Response) => {
+        const { facebookId, firstName, lastName, email } = req.user as any;
+        const userAgentInfo: string = req.headers['user-agent'];
+        const user = await services.authService.getUserByFacebookId(facebookId);
+        if (!user) {
+          const newUser = await services.authService.registerUserWithFacebook(
+            email,
+            facebookId
+          );
+          const newUserId = newUser.id;
+          const newUserTokens = services.authService.loginUser(newUserId, userAgentInfo);
+          req.body = {
+            data: { email, facebookId, firstName, lastName },
+            tokens: newUserTokens
+          };
+          res.delegate(Project.BACKEND);
+        } else {
+          const userId = user.id;
+          const tokens = services.authService.loginUser(userId, userAgentInfo);
+          res.json(tokens);
+        }
+      }
+    )
     .post(
       AuthApiPath.Login,
       authenticationMiddleware,
@@ -23,7 +50,6 @@ const init = (services: Services) => {
       Empty
       >((req) => {
         const userId: string = (req.user as User).id;
-        console.log(userId);
         const userAgentInfo: string = req.headers['user-agent'];
         const result = services.authService.loginUser(userId, userAgentInfo);
         return Promise.resolve(result);
