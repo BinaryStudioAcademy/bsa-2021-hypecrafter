@@ -75,7 +75,7 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile, isEditing, setEdi
           <div className={classes['user-info']}>
             <div className={classes['user-name']}>
               {isEditing
-                ? <Input value={`${editFirstName} ${editLastName}`} onChange={editNameHandler} />
+                ? <Input id='name' value={`${editFirstName} ${editLastName}`} onChange={editNameHandler} />
                 : (
                   <div>
                     {`${firstName} ${lastName}`}
@@ -87,12 +87,12 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile, isEditing, setEdi
             </div>
             <div className={classes['user-email']}>
               {isEditing
-                ? <Input value={email} disabled />
+                ? <Input id='email' value={email} disabled />
                 : <p>{email}</p>}
             </div>
             <div>
               {isEditing
-                ? <Input value={editRegion} onChange={editRegionHandler} />
+                ? <Input id='region' value={editRegion} onChange={editRegionHandler} />
                 : (
                   <>
                     <FontAwesomeIcon icon={faMapMarkerAlt} />
