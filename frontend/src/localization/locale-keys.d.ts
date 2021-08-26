@@ -142,4 +142,6 @@ declare type LocaleKeys =
  | 'Page not found'
  | 'The page you were looking for doesn’t exist (404)'
  | 'Tags help when searching to give the user exactly those projects that interest him'
- | 'Atach image';
+ | 'Atach image'
+ | 'Social title'
+ | 'Site locale';
