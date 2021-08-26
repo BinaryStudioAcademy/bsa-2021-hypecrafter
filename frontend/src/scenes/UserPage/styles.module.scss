@@ -34,10 +34,14 @@
       }
     }
 
-    .user-spec {
+    .user-email {
       font-family: $font-roboto300;
-      font-size: 20px;
+      font-size: $font-size-large;
       margin-bottom: 5px;
+
+      input {
+        background-color: rgba($color: #888, $alpha: 0.3);
+      }
     }
 
     .user-city {

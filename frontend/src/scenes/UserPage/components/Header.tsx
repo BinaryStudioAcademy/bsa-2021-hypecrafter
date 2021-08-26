@@ -19,6 +19,7 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile, editing, setEditi
   const {
     firstName,
     lastName,
+    email,
     region,
     description,
     rating,
@@ -63,10 +64,10 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile, editing, setEditi
                   </div>
                 )}
             </div>
-            <div className={classes['user-spec']}>
+            <div className={classes['user-email']}>
               {editing
-                ? <Input value='Specialty' />
-                : <p>Specialty</p>}
+                ? <Input value={email} disabled />
+                : <p>{email}</p>}
             </div>
             <div>
               {editing
