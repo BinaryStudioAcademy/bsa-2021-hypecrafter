@@ -17,7 +17,8 @@ export {
   closeModalAction,
   fetchUserProfileAction,
   openModalAction,
-  setEditingAction
+  setEditingAction,
+  updateUserProfileAction
 } from '../scenes/UserPage/actions';
 export { fetchTransactionsPageAction } from '../scenes/Wallet/Transactions/actions';
 export { authFetchUserAction } from './auth';

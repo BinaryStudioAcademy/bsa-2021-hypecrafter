@@ -11,7 +11,7 @@ const UserPage = () => {
     isLoading,
     isEditing
   }));
-  const { fetchUserProfileAction, setEditingAction } = useAction();
+  const { fetchUserProfileAction, setEditingAction, updateUserProfileAction } = useAction();
 
   const { userProfile, isLoading, isEditing } = store;
 
@@ -106,7 +106,15 @@ const UserPage = () => {
     <Container>
       <LoaderWrapper isLoading={isLoading}>
         <Row>
-          {!!userProfile && <Header userProfile={userProfile} isEditing={isEditing} setEditing={setEditingAction} />}
+          {!!userProfile
+          && (
+          <Header
+            userProfile={userProfile}
+            isEditing={isEditing}
+            setEditing={setEditingAction}
+            updateUser={updateUserProfileAction}
+          />
+          )}
         </Row>
         <Row>
           {!isEditing && <Body projects={projects} achievements={achievements} activities={activities} /> }

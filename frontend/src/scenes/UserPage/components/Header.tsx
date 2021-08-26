@@ -14,9 +14,10 @@ interface HeaderProps {
   userProfile: UserProfile;
   isEditing: boolean;
   setEditing: (value: boolean) => void;
+  updateUser: (updatedUser: UserProfile) => void;
 }
 
-const Header: FunctionComponent<HeaderProps> = ({ userProfile, isEditing, setEditing }) => {
+const Header: FunctionComponent<HeaderProps> = ({ userProfile, isEditing, setEditing, updateUser }) => {
   const {
     firstName,
     lastName,
@@ -35,7 +36,23 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile, isEditing, setEdi
   const [editRegion, setEditRegion] = useState(region);
   const [editDescription, setEditDescription] = useState(description);
 
-  const editHandler = () => setEditing(!isEditing);
+  const updatedUserProfile = {
+    ...userProfile,
+    firstName: editFirstName,
+    lastName: editLastName,
+    region: editRegion,
+    description: editDescription
+  };
+
+  const enableEditHandler = () => setEditing(true);
+  const cancelEditHandler = () => {
+    setEditing(false);
+    setEditFirstName(firstName);
+    setEditLastName(lastName);
+    setEditRegion(region);
+    setEditDescription(description);
+  };
+  const submitEditHandler = () => updateUser(updatedUserProfile);
 
   const editNameHandler = (e: ChangeEvent<HTMLInputElement>) => {
     const fullName = e.currentTarget.value.split(' ');
@@ -59,7 +76,7 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile, isEditing, setEdi
                 : (
                   <div>
                     {`${firstName} ${lastName}`}
-                    <button type='button' className={classes['user-edit-btn']} onClick={editHandler}>
+                    <button type='button' className={classes['user-edit-btn']} onClick={enableEditHandler}>
                       <FontAwesomeIcon icon={faUserEdit} className={classes['user-edit-icon']} />
                     </button>
                   </div>
@@ -121,8 +138,8 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile, isEditing, setEdi
       <Row>
         {isEditing && (
           <div className={classes['edit-submit-btns']}>
-            <Button type="button" variant="primary" outline onClick={() => setEditing(false)}>{t('Cancel')}</Button>
-            <Button type="button" variant="primary" onClick={() => console.log('edit action')}>
+            <Button type="button" variant="primary" outline onClick={cancelEditHandler}>{t('Cancel')}</Button>
+            <Button type="button" variant="primary" onClick={submitEditHandler}>
               {t('Edit')}
             </Button>
           </div>

@@ -4,13 +4,15 @@ import type {
   FetchUserProfileFailureActionType,
   FetchUserProfileSuccessActionType,
   OpenModalTriggerActionType,
-  SetEditingTriggerActionType
+  SetEditingTriggerActionType,
+  UpdateUserProfileTriggerActionType
 } from './actions';
 import {
   closeModalAction,
   fetchUserProfileAction,
   openModalAction,
-  setEditingAction
+  setEditingAction,
+  updateUserProfileAction
 } from './actions';
 
 export interface UserProfileState {
@@ -68,6 +70,12 @@ export const userProfileReducer = createReducer<UserProfileState>(initialState, 
       isEditing: action.payload
     };
   },
+  [updateUserProfileAction.TRIGGER](state, action: UpdateUserProfileTriggerActionType) {
+    return {
+      ...state,
+      item: action.payload
+    };
+  }
 });
 
 export default userProfileReducer;
