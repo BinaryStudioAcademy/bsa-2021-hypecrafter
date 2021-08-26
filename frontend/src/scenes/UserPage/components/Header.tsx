@@ -52,7 +52,10 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile, isEditing, setEdi
     setEditRegion(region);
     setEditDescription(description);
   };
-  const submitEditHandler = () => updateUser(updatedUserProfile);
+  const submitEditHandler = () => {
+    setEditing(false);
+    updateUser(updatedUserProfile);
+  };
 
   const editNameHandler = (e: ChangeEvent<HTMLInputElement>) => {
     const fullName = e.currentTarget.value.split(' ');
