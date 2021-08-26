@@ -1,12 +1,15 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
+import Button from '../../components/Button';
 import LoaderWrapper from '../../components/LoaderWrapper';
 import { useAction, useTypedSelector } from '../../hooks';
+import { useLocalization } from '../../providers/localization';
 import Body from './components/Body';
 import Header from './components/Header';
-import './styles.module.scss';
+import classes from './styles.module.scss';
 
 const UserPage = () => {
+  const { t } = useLocalization();
   const store = useTypedSelector(({ userProfile: { item, isLoading } }) => ({
     userProfile: item,
     isLoading
@@ -14,6 +17,8 @@ const UserPage = () => {
   const { fetchUserProfileAction } = useAction();
 
   const { userProfile, isLoading } = store;
+
+  const [editing, setEditing] = useState(false);
 
   useEffect(() => {
     fetchUserProfileAction('ac7a5b8f-7fc4-4d1e-81c9-1a9c49c9b529');
@@ -106,10 +111,19 @@ const UserPage = () => {
     <Container>
       <LoaderWrapper isLoading={isLoading}>
         <Row>
-          {!!userProfile && <Header userProfile={userProfile} />}
+          {!!userProfile && <Header userProfile={userProfile} editing={editing} setEditing={setEditing} />}
         </Row>
         <Row>
-          <Body projects={projects} achievements={achievements} activities={activities} />
+          {editing
+            ? (
+              <div className={classes['edit-submit-btns']}>
+                <Button type="button" variant="primary" outline onClick={() => setEditing(false)}>{t('Cancel')}</Button>
+                <Button type="button" variant="primary" onClick={() => console.log('edit action')}>
+                  {t('Edit')}
+                </Button>
+              </div>
+            )
+            : <Body projects={projects} achievements={achievements} activities={activities} /> }
         </Row>
       </LoaderWrapper>
     </Container>

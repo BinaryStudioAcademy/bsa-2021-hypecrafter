@@ -1,16 +1,19 @@
 import { faDribbble, faFacebookSquare, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkerAlt, faUserEdit } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FunctionComponent } from 'react';
 import { Col, Container, Image, Row } from 'react-bootstrap';
 import { UserProfile } from '../../../common/types';
+import Input from '../../../components/Input';
 import classes from '../styles.module.scss';
 
 interface HeaderProps {
   userProfile: UserProfile;
+  editing: boolean;
+  setEditing: (value: boolean) => void;
 }
 
-const Header: FunctionComponent<HeaderProps> = ({ userProfile }) => {
+const Header: FunctionComponent<HeaderProps> = ({ userProfile, editing, setEditing }) => {
   const {
     firstName,
     lastName,
@@ -22,19 +25,42 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile }) => {
     dribbleUrl
   } = userProfile;
 
+  const editHandler = () => setEditing(!editing);
+
   return (
     <Container className={classes['header-container']}>
       <Row className="align-items-md-end">
-        <Col md={12} lg={3} xl={2} className="text-center">
+        <Col md={12} lg={3} xl={2} className={`text-center ${classes['avatar-column']}`}>
           <Image src="https://source.unsplash.com/800x600/?portrait" roundedCircle className={classes['user-avatar']} />
         </Col>
         <Col md={12} lg={5} xl={4} className="text-md-left">
           <div className={classes['user-info']}>
-            <p className={classes['user-name']}>{`${firstName} ${lastName}`}</p>
-            <p className={classes['user-spec']}>Specialty</p>
+            <div className={classes['user-name']}>
+              {editing
+                ? <Input value={`${firstName} ${lastName}`} />
+                : (
+                  <div>
+                    {`${firstName} ${lastName}`}
+                    <button type='button' className={classes['user-edit-btn']} onClick={editHandler}>
+                      <FontAwesomeIcon icon={faUserEdit} className={classes['user-edit-icon']} />
+                    </button>
+                  </div>
+                )}
+            </div>
+            <div className={classes['user-spec']}>
+              {editing
+                ? <Input value='Specialty' />
+                : <p>`Specialty`</p>}
+            </div>
             <div>
-              <FontAwesomeIcon icon={faMapMarkerAlt} />
-              <span className={classes['user-city']}>{region}</span>
+              {editing
+                ? <Input value={region} />
+                : (
+                  <>
+                    <FontAwesomeIcon icon={faMapMarkerAlt} />
+                    <span className={classes['user-city']}>{region}</span>
+                  </>
+                )}
             </div>
             <div className={classes['user-links']}>
               {instagramUrl
@@ -59,18 +85,20 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile }) => {
           </div>
         </Col>
         <Col md={12} xl={4} lg={{ order: 'last' }}>
-          <div className={classes['user-about-me']}>
+          <div className={`${classes['user-about-me']} ${editing && classes.editing}`}>
             <h3>About Me</h3>
-            <p>
-              {description}
-            </p>
+            {editing
+              ? <Input type='textarea' value={description} />
+              : <p>{description}</p>}
           </div>
         </Col>
         <Col md={12} lg={4} xl={2}>
-          <div className={classes['user-rating']}>
-            <h3>Rating</h3>
-            <span>{rating}</span>
-          </div>
+          {!editing && (
+            <div className={classes['user-rating']}>
+              <h3>Rating</h3>
+              <span>{rating}</span>
+            </div>
+          )}
         </Col>
       </Row>
     </Container>

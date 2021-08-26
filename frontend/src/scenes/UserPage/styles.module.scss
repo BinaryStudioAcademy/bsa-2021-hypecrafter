@@ -1,8 +1,13 @@
 @import '../../styles/vars';
 @import '../../styles/fonts';
+@import '../../styles/mixins';
 
 .header-container {
   margin: 1.5rem 0;
+
+  .avatar-column {
+    margin-bottom: auto;
+  }
 
   .user-avatar {
     width: 190px;
@@ -17,6 +22,16 @@
     .user-name {
       font-family: $font-roboto500;
       font-size: 28px;
+    }
+
+    .user-edit-btn {
+      @include reset-button;
+      color: $color-root-text;
+      margin-left: 8px;
+
+      .user-edit-icon {
+        padding-bottom: 3px;
+      }
     }
 
     .user-spec {
@@ -71,6 +86,15 @@
     }
   }
 
+  .user-about-me.editing {
+    height: 300px;
+
+    textarea {
+      height: 220px;
+      resize: none;
+    }
+  }
+
   .user-rating {
     width: 170px;
     height: 150px;
@@ -117,6 +141,16 @@
       margin-left: auto;
       margin-right: auto;
     }
+  }
+}
+
+.edit-submit-btns {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+
+  Button {
+    margin-left: 10px;
   }
 }
 
