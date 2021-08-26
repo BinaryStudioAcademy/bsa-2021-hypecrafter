@@ -1,7 +1,7 @@
 import { faDribbble, faFacebookSquare, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faMapMarkerAlt, faUserEdit } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { FunctionComponent } from 'react';
+import { ChangeEvent, FunctionComponent, useState } from 'react';
 import { Col, Container, Image, Row } from 'react-bootstrap';
 import { UserProfile } from '../../../common/types';
 import Counter from '../../../components/Counter';
@@ -28,7 +28,20 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile, editing, setEditi
   } = userProfile;
   const { t } = useLocalization();
 
+  const [editFirstName, setEditFirstName] = useState(firstName);
+  const [editLastName, setEditLastName] = useState(lastName);
+  const [editRegion, setEditRegion] = useState(region);
+  const [editDescription, setEditDescription] = useState(description);
+
   const editHandler = () => setEditing(!editing);
+
+  const editNameHandler = (e: ChangeEvent<HTMLInputElement>) => {
+    const fullName = e.currentTarget.value.split(' ');
+    setEditFirstName(fullName[0]);
+    setEditLastName(fullName[1]);
+  };
+  const editRegionHandler = (e: ChangeEvent<HTMLInputElement>) => setEditRegion(e.currentTarget.value);
+  const editDescriptionHandler = (e: ChangeEvent<HTMLInputElement>) => setEditDescription(e.currentTarget.value);
 
   return (
     <Container className={classes['header-container']}>
@@ -40,7 +53,7 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile, editing, setEditi
           <div className={classes['user-info']}>
             <div className={classes['user-name']}>
               {editing
-                ? <Input value={`${firstName} ${lastName}`} />
+                ? <Input value={`${editFirstName} ${editLastName}`} onChange={editNameHandler} />
                 : (
                   <div>
                     {`${firstName} ${lastName}`}
@@ -57,7 +70,7 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile, editing, setEditi
             </div>
             <div>
               {editing
-                ? <Input value={region} />
+                ? <Input value={editRegion} onChange={editRegionHandler} />
                 : (
                   <>
                     <FontAwesomeIcon icon={faMapMarkerAlt} />
@@ -91,7 +104,7 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile, editing, setEditi
           <div className={`${classes['user-about-me']} ${editing && classes.editing}`}>
             <h3>About Me</h3>
             {editing
-              ? <Input type='textarea' value={description} />
+              ? <Input type='textarea' value={editDescription} onChange={editDescriptionHandler} />
               : <p>{description}</p>}
           </div>
         </Col>
