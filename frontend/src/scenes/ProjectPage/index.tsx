@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import LoaderWrapper from '../../components/LoaderWrapper';
 import { Tab, Tabs } from '../../components/Tabs';
 import { useAction, useTypedSelector } from '../../hooks';
+import { useLocalization } from '../../providers/localization';
 import Comments from './components/Comments';
 import FAQ from './components/FAQ';
 import Header from './components/Header';
@@ -13,6 +14,7 @@ import classes from './styles.module.scss';
 
 const ProjectPage: FC = () => {
   const { id } = useParams<{ id: string }>();
+  const { t } = useLocalization();
   const { fetchProject } = useAction();
   const { project, isLoading } = useTypedSelector(
     (
@@ -45,7 +47,7 @@ const ProjectPage: FC = () => {
               <Comments />
             </Tab>
             <Tab title="Statistics">
-              <Statistics />
+              <Statistics t={t} />
             </Tab>
           </Tabs>
         </Row>
