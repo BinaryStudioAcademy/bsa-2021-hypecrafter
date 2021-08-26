@@ -103,9 +103,9 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile, isEditing, setEdi
             <div className={classes['user-links']}>
               {instagramUrl
                 && (
-                <a href={instagramUrl} target="_blank" rel="noreferrer">
-                  <FontAwesomeIcon icon={faInstagram} size="2x" />
-                </a>
+                  <a href={instagramUrl} target="_blank" rel="noreferrer">
+                    <FontAwesomeIcon icon={faInstagram} size="2x" />
+                  </a>
                 )}
               {facebookUrl
                 && (
@@ -115,9 +115,9 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile, isEditing, setEdi
                 )}
               {dribbleUrl
                 && (
-                <a href={dribbleUrl} target="_blank" rel="noreferrer">
-                  <FontAwesomeIcon icon={faDribbble} size="2x" />
-                </a>
+                  <a href={dribbleUrl} target="_blank" rel="noreferrer">
+                    <FontAwesomeIcon icon={faDribbble} size="2x" />
+                  </a>
                 )}
             </div>
           </div>
@@ -143,7 +143,7 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile, isEditing, setEdi
           <div className={classes['edit-submit-btns']}>
             <Button type="button" variant="primary" outline onClick={cancelEditHandler}>{t('Cancel')}</Button>
             <Button type="button" variant="primary" onClick={submitEditHandler}>
-              {t('Edit')}
+              {t('Update')}
             </Button>
           </div>
         )}

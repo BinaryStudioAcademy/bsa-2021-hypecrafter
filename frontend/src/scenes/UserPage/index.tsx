@@ -107,17 +107,17 @@ const UserPage = () => {
       <LoaderWrapper isLoading={isLoading}>
         <Row>
           {!!userProfile
-          && (
-          <Header
-            userProfile={userProfile}
-            isEditing={isEditing}
-            setEditing={setEditingAction}
-            updateUser={updateUserProfileAction}
-          />
-          )}
+            && (
+              <Header
+                userProfile={userProfile}
+                isEditing={isEditing}
+                setEditing={setEditingAction}
+                updateUser={updateUserProfileAction}
+              />
+            )}
         </Row>
         <Row>
-          {!isEditing && <Body projects={projects} achievements={achievements} activities={activities} /> }
+          {!isEditing && <Body projects={projects} achievements={achievements} activities={activities} />}
         </Row>
       </LoaderWrapper>
     </Container>

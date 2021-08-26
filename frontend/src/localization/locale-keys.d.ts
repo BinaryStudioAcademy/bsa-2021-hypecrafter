@@ -143,4 +143,5 @@ declare type LocaleKeys =
  | 'Cancel'
  | 'Edit'
  | 'Rating'
- | 'Site locale';
+ | 'Site locale'
+ | 'Update';

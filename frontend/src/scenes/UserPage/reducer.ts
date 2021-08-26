@@ -5,7 +5,8 @@ import type {
   FetchUserProfileSuccessActionType,
   OpenModalTriggerActionType,
   SetEditingTriggerActionType,
-  UpdateUserProfileTriggerActionType
+  UpdateUserProfileSuccessActionType,
+  UpdateUserProfileFailureActionType
 } from './actions';
 import {
   closeModalAction,
@@ -70,12 +71,26 @@ export const userProfileReducer = createReducer<UserProfileState>(initialState, 
       isEditing: action.payload
     };
   },
-  [updateUserProfileAction.TRIGGER](state, action: UpdateUserProfileTriggerActionType) {
+  [updateUserProfileAction.TRIGGER](state) {
     return {
       ...state,
+      isLoading: true
+    };
+  },
+  [updateUserProfileAction.SUCCESS](state, action: UpdateUserProfileSuccessActionType) {
+    return {
+      ...state,
+      isLoading: false,
       item: action.payload
     };
-  }
+  },
+  [updateUserProfileAction.FAILURE](state, action: UpdateUserProfileFailureActionType) {
+    return {
+      ...state,
+      isLoading: false,
+      error: action.payload
+    };
+  },
 });
 
 export default userProfileReducer;

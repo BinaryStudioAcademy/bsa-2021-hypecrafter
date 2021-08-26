@@ -28,7 +28,9 @@ export const setEditingAction = createRoutine(UsersProfileActions.SET_EDIT_STATE
 });
 
 export const updateUserProfileAction = createRoutine(UsersProfileActions.UPDATE_USER, {
-  trigger: (userProfile: UserProfile) => userProfile
+  trigger: (userProfile: UserProfile) => userProfile,
+  success: (userProfile: UserProfile) => userProfile,
+  failure: (error: string) => error
 });
 
 export type FetchUserProfileTriggerActionType = ReturnType<typeof fetchUserProfileAction.trigger>;
@@ -37,3 +39,5 @@ export type FetchUserProfileFailureActionType = ReturnType<typeof fetchUserProfi
 export type OpenModalTriggerActionType = ReturnType<typeof openModalAction.trigger>;
 export type SetEditingTriggerActionType = ReturnType<typeof setEditingAction.trigger>;
 export type UpdateUserProfileTriggerActionType = ReturnType<typeof updateUserProfileAction.trigger>;
+export type UpdateUserProfileSuccessActionType = ReturnType<typeof updateUserProfileAction.success>;
+export type UpdateUserProfileFailureActionType = ReturnType<typeof updateUserProfileAction.failure>;
