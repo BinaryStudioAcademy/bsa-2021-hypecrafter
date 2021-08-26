@@ -3,6 +3,8 @@ import FacebookLogin, { ReactFacebookLoginInfo } from 'react-facebook-login-type
 import { GoogleLogin, GoogleLoginResponse, GoogleLoginResponseOffline } from 'react-google-login';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { Link, useHistory } from 'react-router-dom';
+import facebookIcon from '../../../assets/facebook-icons.png';
+import googleIcon from '../../../assets/google-logo.png';
 import logo from '../../../assets/HypeCrafter.svg';
 import { Routes } from '../../../common/enums';
 import { LoginData } from '../../../common/types/login';
@@ -126,32 +128,52 @@ const LoginPage: FC = () => {
           </div>
           <hr className={classes['horizontal-ruler']} />
 
-          <FacebookLogin
-            appId={env.auth.facebookClientId as string}
-            callback={handleLoginWithFacebook}
-            onFailure={() => {}}
-            render={renderProps => (
-              <Button
-                className={classes['google-button']}
-                onClick={renderProps.onClick}
-              >
-                {t('Sign In with Facebook')}
-              </Button>
-            )}
-          />
-          <GoogleLogin
-            render={(renderProps) => (
-              <Button
-                onClick={renderProps.onClick}
-                className={classes['google-button']}
-              >
-                {t('Sign In with Google')}
-              </Button>
-            )}
-            clientId={env.auth.googleClientId as string}
-            onSuccess={handleLoginWithGoogle}
-            cookiePolicy="single_host_origin"
-          />
+          <div className={classes['social-media-auth-button-wrapper']}>
+            <GoogleLogin
+              render={(renderProps) => (
+                <Button
+                  icon={
+                  (
+                    <img
+                      src={googleIcon}
+                      alt="facebook"
+                    />
+                  )
+                }
+                  iconPosition='right'
+                  onClick={renderProps.onClick}
+                  className={classes['google-button']}
+                >
+                  Google
+                </Button>
+              )}
+              clientId={env.auth.googleClientId as string}
+              onSuccess={handleLoginWithGoogle}
+              cookiePolicy="single_host_origin"
+            />
+            <FacebookLogin
+              appId={env.auth.facebookClientId as string}
+              callback={handleLoginWithFacebook}
+              onFailure={() => {}}
+              render={renderProps => (
+                <Button
+                  icon={
+                    (
+                      <img
+                        src={facebookIcon}
+                        alt="facebook"
+                      />
+                    )
+                  }
+                  iconPosition='right'
+                  className={classes['google-button']}
+                  onClick={renderProps.onClick}
+                >
+                  Facebook
+                </Button>
+              )}
+            />
+          </div>
         </form>
       </div>
     </div>
