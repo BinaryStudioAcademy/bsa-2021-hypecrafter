@@ -13,10 +13,13 @@ interface FetchProjectsTriggerActionPropsType {
   sort: ProjectsSort;
   filter: ProjectsFilter;
   category: ProjectsCategories;
+  userId?: string;
 }
 
 export const fetchProjectsAction = createRoutine(ProjectActions.FETCH_PROJECTS, {
-  trigger: ({ sort, filter, category }: FetchProjectsTriggerActionPropsType) => ({ sort, filter, category }),
+  trigger: ({ sort, filter, category, userId }: FetchProjectsTriggerActionPropsType) => (
+    { sort, filter, category, userId }
+  ),
   success: (projects: Project[]) => projects,
   failure: (error: string) => error,
 });

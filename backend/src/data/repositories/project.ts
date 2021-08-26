@@ -328,10 +328,11 @@ export class ProjectRepository extends Repository<Project> {
       .getRawOne();
   }
 
-  public getBySortAndFilter({ sort, filter, }: { sort: ProjectsSort; filter: ProjectsFilter; }) {
-    const userId = "'ac7a5b8f-7fc4-4d1e-81c9-1a9c49c9b529'"; // hardcoded data
-    const orderBy = this.getOrderBy(sort);
-    const filterCondition = this.getFilterCondition(filter, userId);
+  public getBySortAndFilter({ sort, filter, userId }: {
+    sort: ProjectsSort;
+    filter: ProjectsFilter;
+    userId?: string;
+  }) {
     const query = this.createQueryBuilder('project')
       .select(`
         donated,
@@ -341,9 +342,11 @@ export class ProjectRepository extends Repository<Project> {
         project."imageUrl",
         goal,
         category.name AS "category",
-        tags,
+        tags
+        ${userId ? `,
         CASE WHEN up."isFavorite" IS NULL THEN false ELSE true END AS "isFavorite",
         CASE WHEN dnu."projectId" IS NULL THEN false ELSE true END AS "isDonated"
+        ` : ''}
       `)
       .leftJoin(subQuery => subQuery
         .select(`
@@ -376,22 +379,24 @@ export class ProjectRepository extends Repository<Project> {
         `)
         .from(Project, 'project')
         .leftJoin('project.userProjects', 'userProject')
-        .where(`"userProject"."userId" = ${userId}`),
+        .where(`"userProject"."userId" = '${userId}'`),
       'up',
       'up."projectId" = project.id')
         .leftJoin(subQuery => subQuery
           .select('DISTINCT "projectId"')
           .from('donate', 'donate')
-          .where(`donate."userId" = ${userId}`),
+          .where(`donate."userId" = '${userId}'`),
         'dnu',
         'dnu."projectId" = project.id');
     }
 
-    if (filter) {
+    if (filter && userId) {
+      const filterCondition = this.getFilterCondition(filter, userId);
       query.where(filterCondition);
     }
 
     if (sort) {
+      const orderBy = this.getOrderBy(sort);
       query.orderBy(orderBy);
     }
 
@@ -422,7 +427,7 @@ export class ProjectRepository extends Repository<Project> {
       case ProjectsFilter.INVESTED:
         return 'dnu."projectId" IS NOT NULL';
       case ProjectsFilter.OWN:
-        return `up."userId" = ${userId}`;
+        return `up."userId" = '${userId}'`;
     }
   }
 }

@@ -7,7 +7,7 @@ import { ChangeEventHandler, useEffect } from 'react';
 import { Container, Form } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import Select from '../../../../components/Select';
-import { useAction, useTypedSelector } from '../../../../hooks';
+import { useAction, useAuth, useTypedSelector } from '../../../../hooks';
 import { useLocalization } from '../../../../providers/localization';
 import Statistic from '../Statistic';
 import classes from './styles.module.scss';
@@ -19,6 +19,7 @@ interface FilterFormData {
 }
 
 const Filters = () => {
+  const { id: userId } = useAuth();
   const { t } = useLocalization();
   const { filterCategoryProjectsAction, filterProjectsAction, sortProjectsAction } = useAction();
   const {
@@ -68,6 +69,7 @@ const Filters = () => {
           ]}
           {...register('sort', { required: true })}
         />
+        {!!userId && (
         <Select
           label={t('Filter by')}
           options={[
@@ -78,6 +80,7 @@ const Filters = () => {
           ]}
           {...register('filter', { required: true })}
         />
+        )}
         <Select
           label={t('Category')}
           options={[
