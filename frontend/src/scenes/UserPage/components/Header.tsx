@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ChangeEvent, FunctionComponent, useState } from 'react';
 import { Col, Container, Image, Row } from 'react-bootstrap';
 import { UserProfile } from '../../../common/types';
+import Button from '../../../components/Button';
 import Counter from '../../../components/Counter';
 import Input from '../../../components/Input';
 import { useLocalization } from '../../../providers/localization';
@@ -11,11 +12,11 @@ import classes from '../styles.module.scss';
 
 interface HeaderProps {
   userProfile: UserProfile;
-  editing: boolean;
+  isEditing: boolean;
   setEditing: (value: boolean) => void;
 }
 
-const Header: FunctionComponent<HeaderProps> = ({ userProfile, editing, setEditing }) => {
+const Header: FunctionComponent<HeaderProps> = ({ userProfile, isEditing, setEditing }) => {
   const {
     firstName,
     lastName,
@@ -34,7 +35,7 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile, editing, setEditi
   const [editRegion, setEditRegion] = useState(region);
   const [editDescription, setEditDescription] = useState(description);
 
-  const editHandler = () => setEditing(!editing);
+  const editHandler = () => setEditing(!isEditing);
 
   const editNameHandler = (e: ChangeEvent<HTMLInputElement>) => {
     const fullName = e.currentTarget.value.split(' ');
@@ -53,7 +54,7 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile, editing, setEditi
         <Col md={12} lg={5} xl={4} className="text-md-left">
           <div className={classes['user-info']}>
             <div className={classes['user-name']}>
-              {editing
+              {isEditing
                 ? <Input value={`${editFirstName} ${editLastName}`} onChange={editNameHandler} />
                 : (
                   <div>
@@ -65,12 +66,12 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile, editing, setEditi
                 )}
             </div>
             <div className={classes['user-email']}>
-              {editing
+              {isEditing
                 ? <Input value={email} disabled />
                 : <p>{email}</p>}
             </div>
             <div>
-              {editing
+              {isEditing
                 ? <Input value={editRegion} onChange={editRegionHandler} />
                 : (
                   <>
@@ -102,20 +103,30 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile, editing, setEditi
           </div>
         </Col>
         <Col md={12} xl={4} lg={{ order: 'last' }}>
-          <div className={`${classes['user-about-me']} ${editing && classes.editing}`}>
+          <div className={`${classes['user-about-me']} ${isEditing && classes.editing}`}>
             <h3>About Me</h3>
-            {editing
+            {isEditing
               ? <Input type='textarea' value={editDescription} onChange={editDescriptionHandler} />
               : <p>{description}</p>}
           </div>
         </Col>
         <Col md={12} lg={4} xl={2}>
-          {!editing && (
+          {!isEditing && (
             <div className={classes['user-rating']}>
               <Counter to={Number(rating)} label={t('Rating')} />
             </div>
           )}
         </Col>
+      </Row>
+      <Row>
+        {isEditing && (
+          <div className={classes['edit-submit-btns']}>
+            <Button type="button" variant="primary" outline onClick={() => setEditing(false)}>{t('Cancel')}</Button>
+            <Button type="button" variant="primary" onClick={() => console.log('edit action')}>
+              {t('Edit')}
+            </Button>
+          </div>
+        )}
       </Row>
     </Container>
   );

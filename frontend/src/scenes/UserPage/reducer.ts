@@ -3,14 +3,21 @@ import { createReducer } from '../../helpers';
 import type {
   FetchUserProfileFailureActionType,
   FetchUserProfileSuccessActionType,
-  OpenModalTriggerActionType
+  OpenModalTriggerActionType,
+  SetEditingTriggerActionType
 } from './actions';
-import { closeModalAction, fetchUserProfileAction, openModalAction } from './actions';
+import {
+  closeModalAction,
+  fetchUserProfileAction,
+  openModalAction,
+  setEditingAction
+} from './actions';
 
 export interface UserProfileState {
   isLoading: boolean;
   id: string;
   item: UserProfile | undefined;
+  isEditing: boolean;
   error: string;
 }
 
@@ -18,6 +25,7 @@ export const initialState: UserProfileState = {
   isLoading: false,
   id: '',
   item: undefined,
+  isEditing: false,
   error: ''
 };
 
@@ -53,7 +61,13 @@ export const userProfileReducer = createReducer<UserProfileState>(initialState, 
       ...state,
       id: ''
     };
-  }
+  },
+  [setEditingAction.TRIGGER](state, action: SetEditingTriggerActionType) {
+    return {
+      ...state,
+      isEditing: action.payload
+    };
+  },
 });
 
 export default userProfileReducer;

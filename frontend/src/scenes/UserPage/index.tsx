@@ -1,24 +1,19 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Container, Row } from 'react-bootstrap';
-import Button from '../../components/Button';
 import LoaderWrapper from '../../components/LoaderWrapper';
 import { useAction, useTypedSelector } from '../../hooks';
-import { useLocalization } from '../../providers/localization';
 import Body from './components/Body';
 import Header from './components/Header';
-import classes from './styles.module.scss';
 
 const UserPage = () => {
-  const { t } = useLocalization();
-  const store = useTypedSelector(({ userProfile: { item, isLoading } }) => ({
+  const store = useTypedSelector(({ userProfile: { item, isLoading, isEditing } }) => ({
     userProfile: item,
-    isLoading
+    isLoading,
+    isEditing
   }));
-  const { fetchUserProfileAction } = useAction();
+  const { fetchUserProfileAction, setEditingAction } = useAction();
 
-  const { userProfile, isLoading } = store;
-
-  const [editing, setEditing] = useState(false);
+  const { userProfile, isLoading, isEditing } = store;
 
   useEffect(() => {
     fetchUserProfileAction('ac7a5b8f-7fc4-4d1e-81c9-1a9c49c9b529');
@@ -111,19 +106,10 @@ const UserPage = () => {
     <Container>
       <LoaderWrapper isLoading={isLoading}>
         <Row>
-          {!!userProfile && <Header userProfile={userProfile} editing={editing} setEditing={setEditing} />}
+          {!!userProfile && <Header userProfile={userProfile} isEditing={isEditing} setEditing={setEditingAction} />}
         </Row>
         <Row>
-          {editing
-            ? (
-              <div className={classes['edit-submit-btns']}>
-                <Button type="button" variant="primary" outline onClick={() => setEditing(false)}>{t('Cancel')}</Button>
-                <Button type="button" variant="primary" onClick={() => console.log('edit action')}>
-                  {t('Edit')}
-                </Button>
-              </div>
-            )
-            : <Body projects={projects} achievements={achievements} activities={activities} /> }
+          {!isEditing && <Body projects={projects} achievements={achievements} activities={activities} /> }
         </Row>
       </LoaderWrapper>
     </Container>
