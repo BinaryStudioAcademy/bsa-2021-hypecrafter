@@ -25,7 +25,7 @@ export default function CheckoutForm() {
   useEffect(() => {
     const params: ClientSecretData = { amount: amount.toString() };
     getClientSecret(params).then(secret => { setClientSecret(secret); });
-  });
+  }, []);
   const handleChange = async (event: StripeCardElementChangeEvent) => {
     setDisabled(event.empty);
     setError(event.error ? event.error.message : '');
