@@ -5,6 +5,7 @@ import { FunctionComponent } from 'react';
 import { Col, Container, Image, Row } from 'react-bootstrap';
 import { UserProfile } from '../../../common/types';
 import Input from '../../../components/Input';
+import { useLocalization } from '../../../providers/localization';
 import classes from '../styles.module.scss';
 
 interface HeaderProps {
@@ -24,6 +25,7 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile, editing, setEditi
     facebookUrl,
     dribbleUrl
   } = userProfile;
+  const { t } = useLocalization();
 
   const editHandler = () => setEditing(!editing);
 
@@ -50,7 +52,7 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile, editing, setEditi
             <div className={classes['user-spec']}>
               {editing
                 ? <Input value='Specialty' />
-                : <p>`Specialty`</p>}
+                : <p>Specialty</p>}
             </div>
             <div>
               {editing
@@ -95,7 +97,7 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile, editing, setEditi
         <Col md={12} lg={4} xl={2}>
           {!editing && (
             <div className={classes['user-rating']}>
-              <h3>Rating</h3>
+              <h3>{t('Rating')}</h3>
               <span>{rating}</span>
             </div>
           )}

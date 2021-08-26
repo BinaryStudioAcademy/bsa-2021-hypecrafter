@@ -142,4 +142,5 @@ declare type LocaleKeys =
  | 'Social title'
  | 'Cancel'
  | 'Edit'
+ | 'Rating'
  | 'Site locale';
