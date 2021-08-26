@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { Router } from 'express';
 import { HttpStatusCode, Project } from 'hypecrafter-shared/enums';
 import { AuthApiPath } from '../../common/enums';
