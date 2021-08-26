@@ -7,6 +7,7 @@ import { useAction, useTypedSelector } from '../../hooks';
 import Comments from './components/Comments';
 import FAQ from './components/FAQ';
 import Header from './components/Header';
+import Statistics from './components/Statistics';
 import Story from './components/Story';
 import classes from './styles.module.scss';
 
@@ -42,6 +43,9 @@ const ProjectPage: FC = () => {
             </Tab>
             <Tab title="Comments">
               <Comments />
+            </Tab>
+            <Tab title="Statistics">
+              <Statistics />
             </Tab>
           </Tabs>
         </Row>
