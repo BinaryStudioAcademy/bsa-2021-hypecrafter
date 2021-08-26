@@ -5,11 +5,18 @@ import { SignupData, Tokens } from '../../common/types/signup';
 export enum AuthenticationActions {
   REGISTER_USER = 'AUTHENTICATION/REGISTER_USER',
   LOGIN = 'AUTHENTICATION/LOGIN',
-  FACEBOOK = 'AUTHENTICATION/FACEBOOK'
+  FACEBOOK = 'AUTHENTICATION/FACEBOOK',
+  GOOGLE = 'AUTHENTICATION/GOOGLE'
 }
 
 export const registerUserAction = createRoutine(AuthenticationActions.REGISTER_USER, {
   trigger: (data: SignupData) => data,
+  success: (tokens: Tokens) => tokens,
+  failure: (error: string) => error
+});
+
+export const googleAuthAction = createRoutine(AuthenticationActions.GOOGLE, {
+  trigger: (token: string) => token,
   success: (tokens: Tokens) => tokens,
   failure: (error: string) => error
 });
@@ -37,3 +44,7 @@ export type LoginFailureActionType = ReturnType<typeof loginAction.failure>;
 export type FacebookAuthActionType = ReturnType<typeof facebookAuthAction.trigger>;
 export type FacebookAuthSuccessActionType = ReturnType<typeof facebookAuthAction.success>;
 export type FacebookAuthFailureActionType = ReturnType<typeof facebookAuthAction.failure>;
+
+export type GoogleAuthActionType = ReturnType<typeof googleAuthAction.trigger>;
+export type GoogleAuthSuccessActionType = ReturnType<typeof googleAuthAction.success>;
+export type GoogleAuthFailureActionType = ReturnType<typeof googleAuthAction.failure>;

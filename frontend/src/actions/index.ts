@@ -1,4 +1,4 @@
-export { facebookAuthAction, loginAction, registerUserAction } from '../scenes/Auth/actions';
+export { facebookAuthAction, googleAuthAction, loginAction, registerUserAction } from '../scenes/Auth/actions';
 export { createProjectAction } from '../scenes/CreateProject/actions';
 export { fetchPopularAndRecommendedProjectsAction, fetchTopics } from '../scenes/MainPage/actions';
 export { fetchProject } from '../scenes/ProjectPage/actions';

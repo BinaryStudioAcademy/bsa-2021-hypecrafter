@@ -4,6 +4,7 @@ import { AuthApiPath } from '../../common/enums';
 import { Tokens } from '../../common/types/registration';
 import { User } from '../../data/entities/user';
 import { CustomError } from '../../helpers/customError';
+import { getGoogleInfo } from '../../helpers/getGoogleInfo';
 import { wrap } from '../../helpers/request';
 import { Services } from '../../services/index';
 import { authentication as authenticationMiddleware } from '../middlewares/authentication';
@@ -14,6 +15,31 @@ const init = (services: Services) => {
   const router = Router();
 
   return router
+    .post(AuthApiPath.Google, async (req, res) => {
+      const { token } = req.body;
+      const data = await getGoogleInfo(token);
+      const { email, googleId, firstName, lastName, region } = data;
+      const userAgentInfo: string = req.headers['user-agent'];
+
+      const user = await services.authService.getUserByGoogleId(googleId);
+      if (!user) {
+        const newUser = await services.authService.registerUserWithGoogle(
+          email,
+          googleId
+        );
+        const newUserId = newUser.id;
+        const newUserTokens = services.authService.loginUser(newUserId, userAgentInfo);
+        req.body = {
+          data: { email, googleId, firstName, lastName, region },
+          tokens: newUserTokens
+        };
+        res.delegate(Project.BACKEND);
+      } else {
+        const userId = user.id;
+        const tokens = services.authService.loginUser(userId, userAgentInfo);
+        res.json(tokens);
+      }
+    })
     .post(
       AuthApiPath.Facebook,
       facebook,
@@ -43,12 +69,7 @@ const init = (services: Services) => {
     .post(
       AuthApiPath.Login,
       authenticationMiddleware,
-      wrap<
-      Empty,
-      Tokens,
-      { id: string },
-      Empty
-      >((req) => {
+      wrap<Empty, Tokens, { id: string }, Empty>((req) => {
         const userId: string = (req.user as User).id;
         const userAgentInfo: string = req.headers['user-agent'];
         const result = services.authService.loginUser(userId, userAgentInfo);
@@ -93,7 +114,10 @@ const init = (services: Services) => {
         );
         const userId: string = newUser.id;
         const userAgentInfo: string = req.headers['user-agent'];
-        const tokens: Tokens = services.authService.loginUser(userId, userAgentInfo);
+        const tokens: Tokens = services.authService.loginUser(
+          userId,
+          userAgentInfo
+        );
         req.body = { data: req.body, tokens };
         res.delegate(Project.BACKEND);
       } catch {

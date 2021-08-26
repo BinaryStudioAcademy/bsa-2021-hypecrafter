@@ -19,6 +19,7 @@ export const env = {
     facebook: {
       appId: getEnv('FACEBOOK_APP_ID'),
       secret: getEnv('FACEBOOK_APP_SECRET')
-    }
+    },
+    googleClientId: getEnv('GOOGLE_CLIENT_ID')
   }
 };

@@ -14,6 +14,7 @@ export const env = {
     dsn: getEnv('SENTRY_DSN')
   },
   auth: {
-    facebookClientId: getEnv('REACT_APP_FACEBOOK_CLIENT_ID')
+    facebookClientId: getEnv('REACT_APP_FACEBOOK_CLIENT_ID'),
+    googleClientId: getEnv('REACT_APP_GOOGLE_CLIENT_ID')
   }
 };

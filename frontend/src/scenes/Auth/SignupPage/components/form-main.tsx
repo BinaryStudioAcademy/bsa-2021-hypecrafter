@@ -1,5 +1,6 @@
-import { FunctionComponent, MouseEventHandler } from 'react';
+import { FunctionComponent } from 'react';
 import FacebookLogin, { ReactFacebookLoginInfo } from 'react-facebook-login-typed';
+import { GoogleLogin, GoogleLoginResponse, GoogleLoginResponseOffline } from 'react-google-login';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import { Routes } from '../../../../common/enums';
@@ -23,6 +24,7 @@ interface MainFormProps {
   mainFormInfo: MainFormData;
   t: CallableFunction;
   onSignupWithFacebook: (data: ReactFacebookLoginInfo) => void;
+  onSignupWithGoogle: (data: GoogleLoginResponse | GoogleLoginResponseOffline) => void;
 }
 
 const MainForm: FunctionComponent<MainFormProps> = ({
@@ -30,7 +32,8 @@ const MainForm: FunctionComponent<MainFormProps> = ({
   setMainFormInfo,
   mainFormInfo,
   t,
-  onSignupWithFacebook
+  onSignupWithFacebook,
+  onSignupWithGoogle
 }: MainFormProps) => {
   const {
     register,
@@ -40,11 +43,6 @@ const MainForm: FunctionComponent<MainFormProps> = ({
 
   const onSubmit: SubmitHandler<MainFormData> = () => {
     setCurrentPage(Pages.ADDITIONAL_FORM);
-  };
-
-  const dummySignUpWithGoogleHandler: MouseEventHandler<HTMLButtonElement> = () => {
-    // eslint-disable-next-line no-console
-    console.log('Sign Up with Google');
   };
 
   const handleChange = (field: string, value: string) => {
@@ -123,15 +121,23 @@ const MainForm: FunctionComponent<MainFormProps> = ({
         <div>{t('or')}</div>
       </div>
       <hr className={classesAuth['horizontal-ruler']} />
-      <Button
-        className={classesAuth['google-button']}
-        onClick={dummySignUpWithGoogleHandler}
-      >
-        {t('Sign Up with Google')}
-      </Button>
+      <GoogleLogin
+        render={(renderProps) => (
+          <Button
+            onClick={renderProps.onClick}
+            className={classesAuth['google-button']}
+          >
+            {t('Sign Up with Google')}
+          </Button>
+        )}
+        clientId={env.auth.googleClientId as string}
+        onSuccess={onSignupWithGoogle}
+        cookiePolicy="single_host_origin"
+      />
       <FacebookLogin
         appId={env.auth.facebookClientId as string}
         callback={onSignupWithFacebook}
+        onFailure={() => {}}
         render={renderProps => (
           <Button
             className={classesAuth['google-button']}

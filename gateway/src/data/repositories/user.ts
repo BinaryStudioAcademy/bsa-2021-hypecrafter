@@ -23,4 +23,8 @@ export class UserRepository extends Repository<User> {
     const newUser: User = Object.assign(new User(), data);
     return this.save(newUser);
   }
+
+  getByGoogleId(googleId: string) {
+    return this.findOne({ googleId });
+  }
 }
