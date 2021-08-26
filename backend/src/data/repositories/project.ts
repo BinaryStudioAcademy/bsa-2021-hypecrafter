@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-shadow */
 /* eslint-disable class-methods-use-this */
 /* eslint-disable default-case */
-import { ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
+import { ProjectsCategories, ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
 import { isNull } from 'lodash';
 import { EntityRepository, getRepository, Repository } from 'typeorm';
 import { Mark } from '../../common/enums';
@@ -328,9 +328,10 @@ export class ProjectRepository extends Repository<Project> {
       .getRawOne();
   }
 
-  public getBySortAndFilter({ sort, filter, userId }: {
+  public getBySortAndFilter({ sort, filter, category, userId }: {
     sort: ProjectsSort;
     filter: ProjectsFilter;
+    category: ProjectsCategories;
     userId?: string;
   }) {
     const query = this.createQueryBuilder('project')
@@ -390,15 +391,16 @@ export class ProjectRepository extends Repository<Project> {
         'dnu."projectId" = project.id');
     }
 
-    if (filter && userId) {
+    const categoryCondition = this.getCategoryFilterCondition(category);
+    query.where(categoryCondition);
+
+    if (userId) {
       const filterCondition = this.getFilterCondition(filter, userId);
-      query.where(filterCondition);
+      query.andWhere(filterCondition);
     }
 
-    if (sort) {
-      const orderBy = this.getOrderBy(sort);
-      query.orderBy(orderBy);
-    }
+    const orderBy = this.getOrderBy(sort);
+    query.orderBy(orderBy);
 
     return query.execute();
   }
@@ -428,6 +430,16 @@ export class ProjectRepository extends Repository<Project> {
         return 'dnu."projectId" IS NOT NULL';
       case ProjectsFilter.OWN:
         return `up."userId" = '${userId}'`;
+    }
+  }
+
+  // eslint-disable-next-line consistent-return
+  private getCategoryFilterCondition(category: ProjectsCategories) {
+    switch (category) {
+      case ProjectsCategories.ALL:
+        return 'project."id" IS NOT NULL';
+      default:
+        return `category.name = '${category}'`;
     }
   }
 }

@@ -1,4 +1,4 @@
-import { ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
+import { ProjectsCategories, ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
 import MicroMq from 'micromq';
 import { Project, ProjectItem } from '../../common/types';
 import { Project as CreateProject } from '../../data/entities';
@@ -9,12 +9,14 @@ const init = ({ projectService }: Services, path: string) => (app: MicroMq) => a
   .post(path, wrap<Empty, CreateProject, CreateProject, Empty>((req) => projectService.createProject(req.body)))
   .get(path, wrap<Empty, Project[], {
     sort: ProjectsSort;
-    filter: ProjectsFilter,
-    userId: string | undefined
+    filter: ProjectsFilter;
+    category: ProjectsCategories;
+    userId?: string;
   }, Empty>(
     (req) => projectService.getBySortAndFilter({
       sort: req.query.sort,
       filter: req.query.filter,
+      category: req.query.category,
       userId: req.query.userId,
     })
   ))
