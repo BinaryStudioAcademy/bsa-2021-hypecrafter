@@ -6,7 +6,6 @@ import { env } from './env';
 import { log } from './helpers/logger';
 
 const { rabbit } = env.app;
-console.log(env.app.payment);
 const app = new MicroMq({
   name: Project.PAYMENT,
   rabbit,

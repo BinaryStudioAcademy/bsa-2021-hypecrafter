@@ -11,10 +11,13 @@ const init = ({ userService }: Services, path: string) => (app: MicroMq) => {
     .get(path, wrap(() => userService.getAll()))
     .get(`${path}/:id`, wrap<Empty, UserProfile, { id: string }, Empty>((req) => userService.getById(req.params.id)));
   app.action('replenishment', async (meta, res) => {
-    console.log(meta);
     const payload = meta as MetaReplenishment;
-    await userService.replenishment(payload.id, payload.amount);
-    res.status(200);
+    const userProfile = await userService.replenishment(payload.id, payload.amount);
+    console.log(1);
+    if (userProfile) {
+      res.json({ ok: true });
+    }
+    res.json({ ok: false });
   });
   return app;
 };

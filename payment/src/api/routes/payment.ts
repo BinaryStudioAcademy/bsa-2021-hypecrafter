@@ -22,7 +22,10 @@ const init = ({ paymentService }: Services, path: string) => (app: MicroMq) => a
     const paymentIntent = await stripe.paymentIntents.create({
       amount: amount * 100,
       currency: 'usd',
-      payment_method_types: ['card']
+      payment_method_types: ['card'],
+      metadata: {
+        userId: req.headers.userId.toString()
+      }
     });
     return ({
       clientSecret: paymentIntent.client_secret
@@ -30,7 +33,6 @@ const init = ({ paymentService }: Services, path: string) => (app: MicroMq) => a
   }))
   .post(`${path}/webhook`, wrap< Empty, { status: number }, Stripe.Event, Empty>(async req => {
     const payloadString = JSON.stringify(req.body, null, 2);
-
     const header = stripe.webhooks.generateTestHeaderString({
       payload: payloadString,
       secret: endpointSecret,
@@ -39,18 +41,20 @@ const init = ({ paymentService }: Services, path: string) => (app: MicroMq) => a
       const event: Stripe.Event = stripe.webhooks.constructEvent(payloadString, header, endpointSecret);
       const payload = event.data.object as Stripe.PaymentIntent;
       switch (event.type) {
-        case 'payment_intent.succeeded':
+        case 'payment_intent.succeeded': {
           console.log(`PaymentIntent for ${payload.amount / 100}$ was successful!`);
-          app.ask('backend', {
+          const { response } = await app.ask('backend', {
             server: {
               action: 'replenishment',
               meta: {
-                id: 'ac7a5b8f-7fc4-4d1e-81c9-1a9c49c9b529',
-                amount: payload.amount,
+                id: payload.metadata.id,
+                amount: payload.amount / 100,
               },
             }
-          });
+          }) as { response: { ok: boolean } };
+          console.log(response);
           break;
+        }
         default:
           console.log(`Unhandled event type ${event.type}.`);
       }

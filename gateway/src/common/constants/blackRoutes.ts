@@ -6,6 +6,7 @@ const BLACK_ROUTES = [
   '/auth/token/reject',
   '/payment',
   '/payment/:id/:page',
+  '/payment/create-payment-intent',
   '/reset-password',
   '/projects/create',
   '/profile'
