@@ -14,8 +14,11 @@ export class UserRepository extends Repository<UserProfile> {
 
   public async replenishmentBalance(id: string, amount: number) {
     const userProfile = await this.findOne({ id });
-    userProfile.balance = amount + +userProfile.balance;
-    return this.save(userProfile);
+    if (userProfile) {
+      userProfile.balance = amount + +userProfile.balance;
+      this.save(userProfile);
+    }
+    return userProfile;
   }
 
   public createUser(data: RegisterData) {

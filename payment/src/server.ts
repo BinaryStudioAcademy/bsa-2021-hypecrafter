@@ -9,9 +9,9 @@ const { rabbit } = env.app;
 console.log(env.app.payment);
 const app = new MicroMq({
   name: Project.PAYMENT,
-  rabbit
+  rabbit,
+  microservices: [Project.BACKEND]
 });
-
 createConnection().then(() => {
   initRoutes(app)?.start();
 }).catch((e) => log(e));

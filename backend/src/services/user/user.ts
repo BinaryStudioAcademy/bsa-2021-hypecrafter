@@ -33,4 +33,8 @@ export default class UserService {
   public createUser(data: RegisterData) {
     return this.#userRepository.createUser(data);
   }
+
+  public replenishment(id:string, amount: number) {
+    return this.#userRepository.replenishmentBalance(id, amount);
+  }
 }

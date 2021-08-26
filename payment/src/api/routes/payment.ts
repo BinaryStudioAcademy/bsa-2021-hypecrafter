@@ -24,7 +24,6 @@ const init = ({ paymentService }: Services, path: string) => (app: MicroMq) => a
       currency: 'usd',
       payment_method_types: ['card']
     });
-    console.log(paymentIntent.client_secret);
     return ({
       clientSecret: paymentIntent.client_secret
     });
@@ -41,7 +40,16 @@ const init = ({ paymentService }: Services, path: string) => (app: MicroMq) => a
       const payload = event.data.object as Stripe.PaymentIntent;
       switch (event.type) {
         case 'payment_intent.succeeded':
-          console.log(`PaymentIntent for ${payload.amount} was successful!`);
+          console.log(`PaymentIntent for ${payload.amount / 100}$ was successful!`);
+          app.ask('backend', {
+            server: {
+              action: 'replenishment',
+              meta: {
+                id: 'ac7a5b8f-7fc4-4d1e-81c9-1a9c49c9b529',
+                amount: payload.amount,
+              },
+            }
+          });
           break;
         default:
           console.log(`Unhandled event type ${event.type}.`);
