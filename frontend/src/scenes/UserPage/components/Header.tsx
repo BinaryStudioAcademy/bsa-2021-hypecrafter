@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FunctionComponent } from 'react';
 import { Col, Container, Image, Row } from 'react-bootstrap';
 import { UserProfile } from '../../../common/types';
+import Counter from '../../../components/Counter';
 import Input from '../../../components/Input';
 import { useLocalization } from '../../../providers/localization';
 import classes from '../styles.module.scss';
@@ -97,8 +98,7 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile, editing, setEditi
         <Col md={12} lg={4} xl={2}>
           {!editing && (
             <div className={classes['user-rating']}>
-              <h3>{t('Rating')}</h3>
-              <span>{rating}</span>
+              <Counter to={Number(rating)} label={t('Rating')} />
             </div>
           )}
         </Col>
