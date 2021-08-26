@@ -15,9 +15,22 @@
   }
 
   .tab-title-selected {
-    background: $color-root-turquoise-gradient;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    .tab-info{
+      .title{
+        background: $color-root-turquoise-gradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+
+  .tab-info{
+    display: flex;
+    .amount{
+      font-size: 10px;
+      font-weight: normal;
+      color: $color-root-turquoise;
+    }
   }
 }

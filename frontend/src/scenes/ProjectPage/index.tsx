@@ -38,10 +38,10 @@ const ProjectPage: FC = () => {
             <Tab title="Story">
               <Story />
             </Tab>
-            <Tab title="FAQ">
+            <Tab title="FAQ" amount={project.FAQ.length}>
               <FAQ faqs={project.FAQ} />
             </Tab>
-            <Tab title="Comments">
+            <Tab title="Comments" amount={project.projectComments.length}>
               <Comments />
             </Tab>
           </Tabs>
