@@ -13,7 +13,7 @@ import classes from './styles.module.scss';
 const ProjectPage: FC = () => {
   const { id } = useParams<{ id: string }>();
   const { fetchProject } = useAction();
-  const { id: userId } = useAuth();
+  const { id: userId, isAuthorized } = useAuth();
   const { project, isLoading } = useTypedSelector(
     (
       { projectPage }
@@ -31,7 +31,7 @@ const ProjectPage: FC = () => {
     <LoaderWrapper isLoading={isLoading} variant='page'>
       <Container className={classes.container}>
         <Row>
-          <Header project={project} />
+          <Header project={project} isAuthorized={isAuthorized} />
         </Row>
         <Row>
           <Tabs>

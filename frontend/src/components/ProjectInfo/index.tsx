@@ -20,6 +20,7 @@ interface ProjectInfoProps {
   dislikes: number;
   finishDate: string;
   mark: string | null | undefined;
+  isAuthorized: boolean;
 }
 
 const ProjectInfo: FunctionComponent<ProjectInfoProps> = ({
@@ -30,7 +31,8 @@ const ProjectInfo: FunctionComponent<ProjectInfoProps> = ({
   likes,
   dislikes,
   finishDate,
-  mark
+  mark,
+  isAuthorized
 }) => {
   const { setReaction } = useAction();
   const { t } = useLocalization();
@@ -72,7 +74,7 @@ const ProjectInfo: FunctionComponent<ProjectInfoProps> = ({
       </Row>
       <Row className={classes['info-block-footer']}>
         <div className={classes['likes-container']}>
-          <button type='button' onClick={handleLike}>
+          <button type='button' onClick={handleLike} disabled={!isAuthorized}>
             {mark === 'like'
               ? (<FontAwesomeIcon icon={faThumbsUpFilled} size='2x' />)
               : (<FontAwesomeIcon icon={faThumbsUp} size='2x' />)}
@@ -80,7 +82,7 @@ const ProjectInfo: FunctionComponent<ProjectInfoProps> = ({
           <span className={classes['likes-amount']}>{likes}</span>
         </div>
         <div className={classes['dislikes-container']}>
-          <button type='button' onClick={handleDislike}>
+          <button type='button' onClick={handleDislike} disabled={!isAuthorized}>
             {mark === 'dislike'
               ? (<FontAwesomeIcon icon={faThumbsDownFilled} size='2x' />)
               : (<FontAwesomeIcon icon={faThumbsDown} size='2x' />)}
