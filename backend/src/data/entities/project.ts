@@ -1,11 +1,11 @@
 import {
   Column, Entity, JoinColumn, ManyToOne, OneToMany, OneToOne
 } from 'typeorm';
-import { ProjectDonatorsPrivilege } from '.';
 import { AbstractEntity } from './abstract';
 import { Category } from './category';
 import { Comment } from './comment';
 import { Donate } from './donate';
+import { DonatorsPrivilege } from './donatorsPrivilege';
 import { FAQ } from './faq';
 import { ProjectTag } from './projectTag';
 import { Team } from './team';
@@ -38,13 +38,13 @@ export class Project extends AbstractEntity {
   @Column()
   finishDate: Date;
 
-  @Column({ type: 'int' })
+  @Column({ type: 'int', default: 1 })
   totalViews: number;
 
-  @Column({ type: 'real' })
+  @Column({ type: 'real', default: 1 })
   minutesToRead: number;
 
-  @Column({ type: 'real' })
+  @Column({ type: 'real', default: 1 })
   totalInteractionTime: number;
 
   @Column({ type: 'text' })
@@ -84,8 +84,8 @@ export class Project extends AbstractEntity {
   @ManyToOne(() => Category, category => category.projects)
   category: Category;
 
-  @OneToMany(() => ProjectDonatorsPrivilege, projectDonatorsPrivilege => projectDonatorsPrivilege.project)
-  projectDonatorsPrivileges: ProjectDonatorsPrivilege[];
+  @OneToMany(() => DonatorsPrivilege, projectDonatorsPrivilege => projectDonatorsPrivilege.projectId)
+  projectDonatorsPrivileges: DonatorsPrivilege[];
 
   @ManyToOne(() => UserProfile, userProfile => userProfile.projects)
   author: UserProfile;

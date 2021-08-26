@@ -3,6 +3,7 @@ import { Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import coinImg from '../../../assets/HypeCoin.png';
 import { Routes } from '../../../common/enums';
+import Seo from '../../../components/Seo';
 import { useLocalization } from '../../../providers/localization';
 import CustomFund from './components/CustomFund';
 import Fund from './components/Fund';
@@ -12,13 +13,11 @@ const FundsPage: FC = () => {
   const { t } = useLocalization();
   return (
     <Container fluid="sm">
-      <div className={classes.breadcrumbs}>
-        <Link to={Routes.HOME}> {t('Home')}</Link>
-        {' > '}
-        <Link to="/account">{t('Account')}</Link>
-        {' > '}
-        <span>{t('Add funds to your Wallet')}</span>
-      </div>
+      <Seo
+        title={`${t('Wallet')} - HypeCrafter`}
+        description=""
+      />
+
       <div className={classes['wallet-header']}>
         <h2 className={classes['wallet-header-title']}>
           {t('ADD FUNDS TO YOUR')} <strong>HYPECRAFTER</strong>{' '}

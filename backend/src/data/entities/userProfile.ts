@@ -7,6 +7,7 @@ import { Donate } from './donate';
 import { Message } from './message';
 import { Project } from './project';
 import { Tag } from './tag';
+import { TeamUsers } from './teamUsers';
 import { UserAchievement } from './userAchievement';
 import { UserProject } from './userProject';
 
@@ -30,7 +31,7 @@ export class UserProfile extends AbstractEntity {
   @Column({ type: 'numeric', default: 0 })
   rating: number;
 
-  @Column()
+  @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
   lastLoginDate: Date;
 
   @Column({ nullable: true })
@@ -44,6 +45,9 @@ export class UserProfile extends AbstractEntity {
 
   @Column({ nullable: true })
   birthday: string;
+
+  @Column({ type: 'text', nullable: true })
+  imageUrl: string;
 
   @Column({ nullable: true })
   instagramUrl: string;
@@ -81,4 +85,7 @@ export class UserProfile extends AbstractEntity {
 
   @OneToMany(() => Project, project => project.author)
   projects: Project[];
+
+  @OneToMany(() => TeamUsers, teamUsers => teamUsers.team)
+  teamUsers: TeamUsers[];
 }

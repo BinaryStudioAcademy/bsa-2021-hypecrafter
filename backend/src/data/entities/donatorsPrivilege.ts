@@ -1,18 +1,21 @@
-import { Entity, Column, OneToMany } from 'typeorm';
+import { Column, Entity, OneToMany } from 'typeorm';
 import { AbstractEntity } from './abstract';
-import { ProjectDonatorsPrivilege } from './projectDonatorsPrivilege';
+import { Project } from './project';
 
 @Entity()
 export class DonatorsPrivilege extends AbstractEntity {
   @Column({ type: 'text' })
-  privilege: string;
+  title: string;
+
+  @Column({ type: 'text' })
+  content: string;
+
+  @Column('text', { array: true })
+  includes: string[];
 
   @Column({ type: 'numeric' })
   amount: number;
 
-  @OneToMany(
-    () => ProjectDonatorsPrivilege,
-    projectDonatorsPrivilege => projectDonatorsPrivilege.donatorsPrivilege
-  )
-  projectDonatorsPrivileges: ProjectDonatorsPrivilege[];
+  @OneToMany(() => Project, (project: Project) => project.id)
+  projectId: number;
 }

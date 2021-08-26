@@ -38,7 +38,7 @@ const ProjectCard: FC<Props> = ({
         : <Tag text={tags} />}
     </div>
 
-    <ProgressBar goal={goal} percent={percent} />
+    <ProgressBar goal={Math.floor(goal)} percent={Math.floor(percent)} />
   </CardWithLink>
 );
 

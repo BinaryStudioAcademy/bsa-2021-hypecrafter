@@ -17,4 +17,6 @@ export { closeModalAction, fetchUserProfileAction, openModalAction } from '../sc
 export { setFundAction } from '../scenes/Wallet/Payment/actions';
 export { fetchTransactionsPageAction } from '../scenes/Wallet/Transactions/actions';
 export { authFetchUserAction } from './auth';
+export { getUsersAction } from './users';
+export { getCategoriesAction } from './categories';
 

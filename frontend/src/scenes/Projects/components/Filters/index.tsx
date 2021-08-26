@@ -2,7 +2,7 @@ import {
   ProjectsFilter,
   ProjectsSort
 } from 'hypecrafter-shared/enums';
-import { ChangeEventHandler } from 'react';
+import { ChangeEventHandler, useEffect } from 'react';
 import { Container, Form } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import Select from '../../../../components/Select';
@@ -23,9 +23,14 @@ const Filters = () => {
     sort: sortValue,
     filter: filterValue
   } = useTypedSelector((state) => state.projects.modificators);
-  const { register, getValues } = useForm<FilterFormData>({
+  const { register, getValues, setValue } = useForm<FilterFormData>({
     defaultValues: { filter: filterValue, sort: sortValue },
   });
+
+  useEffect(() => {
+    setValue('sort', sortValue);
+    setValue('filter', filterValue);
+  }, [sortValue, filterValue]);
 
   const onChange: ChangeEventHandler<HTMLFormElement> = () => {
     const formState = getValues();
@@ -55,7 +60,7 @@ const Filters = () => {
           options={[
             { value: ProjectsFilter.ALL, text: t('All') },
             { value: ProjectsFilter.FAVORITE, text: t('Favorite') },
-            // { value: ProjectsFilter.INVESTED, text: t('Invested') }, // todo
+            { value: ProjectsFilter.INVESTED, text: t('Invested') },
             { value: ProjectsFilter.OWN, text: t('Own') },
           ]}
           {...register('filter', { required: true })}

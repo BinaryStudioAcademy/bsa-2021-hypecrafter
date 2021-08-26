@@ -1,13 +1,20 @@
 import { ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
 import { Project } from '../../common/types';
-import { mapProjects } from '../../data/mappers';
-import { ProjectRepository } from '../../data/repositories';
+import { Chat, Project as CreateProject, Team } from '../../data/entities';
+import { mapPrivileges, mapProjects } from '../../data/mappers';
+import { ChatRepository, ProjectRepository, TeamRepository } from '../../data/repositories';
 
 export default class ProjectService {
   readonly #projectRepository: ProjectRepository;
 
-  constructor(projectRepository: ProjectRepository) {
+  readonly #teamRepository: TeamRepository;
+
+  readonly #chatRepository: ChatRepository;
+
+  constructor(projectRepository: ProjectRepository, teamRepository: TeamRepository, chatRepository: ChatRepository) {
     this.#projectRepository = projectRepository;
+    this.#teamRepository = teamRepository;
+    this.#chatRepository = chatRepository;
   }
 
   public async getPopularProjectsByCategory(category: string) {
@@ -25,8 +32,15 @@ export default class ProjectService {
     };
   }
 
+  public async createProject(body: CreateProject) {
+    const project:CreateProject = await this.#projectRepository.save({ ...body });
+    const team = await this.#teamRepository.save({ ...new Team(), ...body.team, project });
+    this.#chatRepository.save(body.team.chats.map(chat => ({ ...new Chat(), ...chat, team })));
+    return project;
+  }
+
   public async getBySortAndFilter({ sort, filter }: { sort: ProjectsSort, filter: ProjectsFilter }) {
-    const projects = await this.#projectRepository.getBySortAndFilter({ sort, filter });
+    const projects:Project[] = await this.#projectRepository.getBySortAndFilter({ sort, filter });
     return projects;
   }
 
@@ -34,6 +48,7 @@ export default class ProjectService {
     const project = await this.#projectRepository.getById(id);
     project.bakersAmount = Math.max(0, project.bakersAmount);
     project.donated = Math.max(0, project.donated);
+    project.privileges = mapPrivileges(project.privileges, project.bakersDonation);
     return project; // rewrite when error handling middleware works
   }
 }

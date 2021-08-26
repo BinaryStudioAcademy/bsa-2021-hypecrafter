@@ -34,6 +34,11 @@ declare namespace Express {
   export interface Response {
     delegate(name: string): any;
   }
+  export interface Request {
+    user: {
+      userId?: string;
+    }
+  }
 }
 
 declare type Empty = Record<string, never>;
