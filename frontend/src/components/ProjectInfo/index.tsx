@@ -75,7 +75,7 @@ const ProjectInfo: FunctionComponent<ProjectInfoProps> = ({
       <Row className={classes['info-block-footer']}>
         <div className={classes['likes-container']}>
           <button type='button' onClick={handleLike} disabled={!isAuthorized}>
-            {mark === 'like'
+            {mark === Mark.LIKE
               ? (<FontAwesomeIcon icon={faThumbsUpFilled} size='2x' />)
               : (<FontAwesomeIcon icon={faThumbsUp} size='2x' />)}
           </button>
@@ -83,7 +83,7 @@ const ProjectInfo: FunctionComponent<ProjectInfoProps> = ({
         </div>
         <div className={classes['dislikes-container']}>
           <button type='button' onClick={handleDislike} disabled={!isAuthorized}>
-            {mark === 'dislike'
+            {mark === Mark.DISLIKE
               ? (<FontAwesomeIcon icon={faThumbsDownFilled} size='2x' />)
               : (<FontAwesomeIcon icon={faThumbsDown} size='2x' />)}
           </button>

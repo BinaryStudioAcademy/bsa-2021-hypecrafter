@@ -34,7 +34,7 @@ export const setReaction = createRoutine(ProjectsActions
   trigger: ({ isLiked, projectId }: SetReactionTriggerActionPropsType) => ({
     isLiked, projectId
   }),
-  success: (mark: string | null, likes: string, dislikes: string) => ({ mark, likes, dislikes }),
+  success: (mark: boolean | null, likes: number, dislikes: number) => ({ mark, likes, dislikes }),
   failure: (error: string) => error
 });
 

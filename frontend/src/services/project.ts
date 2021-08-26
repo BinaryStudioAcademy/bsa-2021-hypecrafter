@@ -13,7 +13,7 @@ export const getProject = async (body: any) => {
   return project;
 };
 
-export const setReaction = (body: any) => api.post({ url: 'projects/like', params: body });
+export const setReaction = (body: any) => api.post({ url: 'projects/reaction', params: body });
 
 export const setWatch = async (body: any) => {
   await api.post({ url: 'projects/watch', params: body });

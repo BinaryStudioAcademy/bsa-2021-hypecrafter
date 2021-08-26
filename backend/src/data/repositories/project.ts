@@ -5,7 +5,9 @@ import { ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
 import { isNull } from 'lodash';
 import { EntityRepository, getRepository, Repository } from 'typeorm';
 import { Mark } from '../../common/enums';
-import { Project as MyProject } from '../../common/types';
+import {
+  Project as MyProject
+} from '../../common/types';
 import { Project, UserProfile, UserProject } from '../entities';
 
 @EntityRepository(Project)
@@ -250,17 +252,15 @@ export class ProjectRepository extends Repository<Project> {
     return project;
   }
 
-  public async setReaction(isLiked: boolean, userId: string, projectId: string) {
+  public async setReaction(isLiked: boolean, user: UserProfile, project: Project) {
     const userProject = await getRepository(UserProject)
       .createQueryBuilder('userProject')
       .select(`
         id
       `)
-      .where(`"userId"='${userId}' AND "projectId"='${projectId}'`)
+      .where(`"userId"='${user.id}' AND "projectId"='${project.id}'`)
       .getRawOne();
 
-    const project = await getRepository(Project).findOne({ id: projectId });
-    const user = await getRepository(UserProfile).findOne({ id: userId });
     let mark;
     if (isNull(isLiked)) {
       mark = isLiked;
@@ -287,17 +287,15 @@ export class ProjectRepository extends Repository<Project> {
     return Object.assign(new UserProject(), newUserProject).save();
   }
 
-  public async setWatch(isWatched: boolean, userId: string, projectId: string) {
+  public async setWatch(isWatched: boolean, user: UserProfile, project: Project) {
     const userProject = await getRepository(UserProject)
       .createQueryBuilder('userProject')
       .select(`
         id
       `)
-      .where(`"userId"='${userId}' AND "projectId"='${projectId}'`)
+      .where(`"userId"='${user.id}' AND "projectId"='${project.id}'`)
       .getRawOne();
 
-    const project = await getRepository(Project).findOne({ id: projectId });
-    const user = await getRepository(UserProfile).findOne({ id: userId });
     let newUserProject;
     if (userProject) {
       newUserProject = {
