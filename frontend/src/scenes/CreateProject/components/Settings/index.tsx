@@ -46,13 +46,13 @@ const Settings: FC<Props> = ({ changePage, currentPage, onChangeValue, region, i
       {imageUrl && <img src={imageUrl} alt="Project" className={classes.projectImage} />}
       <ImageUpload
         id="umloadProgectImage"
-        label="Atach image"
+        label={t('Atach image')}
         onFileChange={file => onChangeValue(ProjectKeys.IMAGE_URL, file)}
       />
       <div className={classes.tagControl}>
         <Input
           type="text"
-          label={t('Your location can be a key factor for the investor in your favor.')}
+          label={t('Tags help when searching to give the user exactly those projects that interest him')}
           onChange={e => setTag(e.target.value)}
           value={tag}
         />

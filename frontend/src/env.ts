@@ -14,9 +14,9 @@ export const env = {
     dsn: getEnv('SENTRY_DSN')
   },
   aws: {
-    bucketName: getEnv('AWS_BUCKET_NAME'),
-    region: getEnv('AWS_REGION'),
-    accessKeyId: getEnv('AWS_ACCESS_KEY_ID'),
-    secretAccessKey: getEnv('AWS_SECRET_ACCESS_KEY')
+    bucketName: getEnv('REACT_APP_AWS_BUCKET_NAME'),
+    region: getEnv('REACT_APP_AWS_REGION'),
+    accessKeyId: getEnv('REACT_APP_AWS_ACCESS_KEY_ID'),
+    secretAccessKey: getEnv('REACT_APP_AWS_SECRET_ACCESS_KEY')
   }
 };

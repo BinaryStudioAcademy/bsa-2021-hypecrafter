@@ -11,7 +11,6 @@ interface Prors{
 const ImageUpload:FC<Prors> = ({ onFileChange, id, label }) => {
   const imageHandler = (files: any) => {
     const file = files[0];
-    console.log(env.aws);
     S3FileUpload.uploadFile(file, env.aws)
       .then((data:any) => { onFileChange(data.location); })
       .catch((err:any) => console.log(err));
