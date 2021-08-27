@@ -1,3 +1,5 @@
+import { Mark } from './mark';
+
 export interface Project {
   id: string;
   name: string;
@@ -25,4 +27,6 @@ export interface ProjectPage extends Project {
   facebookUrl?: string;
   dribbleUrl?: string;
   finishDate: string;
+  mark?: Mark | null;
+  isWatched: boolean;
 }

@@ -5,5 +5,6 @@ export enum Path {
   Project = '/projects',
   Tag = '/tags',
   Category = '/categories',
+  Auth = '/auth',
   googleAuth = '/auth/google'
 }

@@ -1,5 +1,4 @@
-/* eslint-disable no-console */
-import { Router } from 'express';
+import { Response, Router } from 'express';
 import { HttpStatusCode, Project } from 'hypecrafter-shared/enums';
 import { AuthApiPath } from '../../common/enums';
 import { Tokens } from '../../common/types/registration';
@@ -15,6 +14,7 @@ const init = (services: Services) => {
   const router = Router();
 
   return router
+    .get([AuthApiPath.CurrentUser], (_, res: Response) => res.delegate(Project.BACKEND))
     .post(AuthApiPath.Google, async (req, res) => {
       const { token } = req.body;
       const data = await getGoogleInfo(token);
