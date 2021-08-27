@@ -62,4 +62,24 @@ export default class AuthService {
     });
     return newUser;
   }
+
+  public async registerUserWithGoogle(
+    email: string,
+    googleId: string
+  ) {
+    if (await this.#userRepository.getByEmail(email)) {
+      throw new CustomError(HttpStatusCode.BAD_REQUEST, 'Email is already taken');
+    }
+    const passwordHash: string = await encrypt(googleId);
+    const newUser = await this.#userRepository.createUser({
+      email,
+      passwordHash,
+      googleId
+    });
+    return newUser;
+  }
+
+  public getUserByGoogleId(googleId: string) {
+    return this.#userRepository.getByGoogleId(googleId);
+  }
 }
