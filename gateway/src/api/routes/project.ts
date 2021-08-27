@@ -5,7 +5,7 @@ const init = () => {
   const router = Router();
   return router
     .get(['/', '/:id'], (_, res: Response) => res.delegate(Project.BACKEND))
-    .post(['/', '/like', '/watch'], (_, res: Response) => res.delegate(Project.BACKEND));
+    .post(['/', '/reaction', '/watch'], (_, res: Response) => res.delegate(Project.BACKEND));
 };
 
 export default init;

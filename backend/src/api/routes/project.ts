@@ -27,8 +27,8 @@ const init = ({ projectService }: Services, path: string) => (app: MicroMq) => a
       .getPopularProjectsByCategory(req.query.category))
   )
   .post(
-    `${path}/like`,
-    wrap<Empty, { likes: string, dislikes: string }, { isLiked: boolean, projectId: string }, Empty>(
+    `${path}/reaction`,
+    wrap<Empty, { likes: number, dislikes: number }, { isLiked: boolean, projectId: string }, Empty>(
       (req) => projectService.setReaction(req.body, req.headers.userId as string)
     )
   )

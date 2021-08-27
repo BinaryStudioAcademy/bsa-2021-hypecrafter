@@ -12,9 +12,10 @@ import classes from '../styles.module.scss';
 
 interface HeaderProps {
   project: ProjectPage;
+  isAuthorized: boolean;
 }
 
-const Header: FunctionComponent<HeaderProps> = ({ project }) => {
+const Header: FunctionComponent<HeaderProps> = ({ project, isAuthorized }) => {
   const {
     id,
     name,
@@ -58,7 +59,7 @@ const Header: FunctionComponent<HeaderProps> = ({ project }) => {
             </Col>
             <Col xs={1} lg={1}>
               <div className={classes['watch-container']}>
-                <button type='button' onClick={handleWatch}>
+                <button type='button' onClick={handleWatch} disabled={!isAuthorized}>
                   {isWatched
                     ? <FontAwesomeIcon icon={faBookmarkFilled} size="2x" color={projectPageColors.bookmark} />
                     : <FontAwesomeIcon icon={faBookmarkEmpty} size="2x" color={projectPageColors.bookmark} />}
@@ -101,6 +102,7 @@ const Header: FunctionComponent<HeaderProps> = ({ project }) => {
               bakersAmount={bakersAmount}
               finishDate={finishDate}
               mark={mark}
+              isAuthorized={isAuthorized}
             />
           </Row>
         </Col>

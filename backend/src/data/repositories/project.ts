@@ -5,7 +5,9 @@ import { ProjectsCategories, ProjectsFilter, ProjectsSort } from 'hypecrafter-sh
 import { isNull } from 'lodash';
 import { EntityRepository, getRepository, Repository } from 'typeorm';
 import { Mark } from '../../common/enums';
-import { Project as MyProject } from '../../common/types';
+import {
+  Project as MyProject
+} from '../../common/types';
 import { Project, UserProfile, UserProject } from '../entities';
 
 @EntityRepository(Project)
@@ -159,7 +161,9 @@ export class ProjectRepository extends Repository<Project> {
         .select(`
             jsonb_agg(
               DISTINCT jsonb_build_object(
-                'privilege', privilege,
+                'title', title,
+                'content', "donatorsPrivilege".content,
+                'includes', includes,
                 'amount', amount
               )
             ) AS "privileges",
@@ -184,8 +188,12 @@ export class ProjectRepository extends Repository<Project> {
               "projectId"
             `), 'dua')
           .groupBy('dua."projectId"'), 'ud', 'ud."projectId" = project.id')
-        .leftJoin('project.projectDonatorsPrivileges', 'donatorsPrivilege')
-        .where('privilege IS NOT NULL AND amount IS NOT NULL')
+        .leftJoin('donators_privilege', 'donatorsPrivilege', 'project.id = "donatorsPrivilege"."projectId"')
+        .where(`
+          title IS NOT NULL AND 
+          "donatorsPrivilege".content IS NOT NULL AND 
+          includes IS NOT NULL AND amount IS NOT NULL
+        `)
         .groupBy('project.id,"bakersDonation"'), 'dp', 'dp."projectId" = project.id')
       .leftJoin(subQuery => subQuery
         .select(`
@@ -213,14 +221,14 @@ export class ProjectRepository extends Repository<Project> {
         .leftJoin(
           'donate',
           'userDonates',
-          '"userDonates"."projectId"=project."id" AND "userDonates"."userId"="commentAuthor"."id"'
+          '"userDonates"."projectId" = project.id AND "userDonates"."userId" = "commentAuthor".id'
         )
         .leftJoin('project.team', 'team')
-        .leftJoin('team_users', 'tu', 'tu."teamId"=team."id" AND "tu"."userId"="commentAuthor"."id"')
+        .leftJoin('team_users', 'tu', 'tu."teamId" = team."id" AND tu."userId" = "commentAuthor".id')
         .groupBy('project.id'), 'cp', 'cp."projectId" = project.id')
       .leftJoin(subQuery => subQuery
         .select(`
-          array_agg(tag.name) AS "tags",
+          array_agg(tag.name) AS tags,
           "projectId"
         `)
         .from(Project, 'project')
@@ -245,17 +253,13 @@ export class ProjectRepository extends Repository<Project> {
     return project;
   }
 
-  public async setReaction(isLiked: boolean, userId: string, projectId: string) {
+  public async setReaction(isLiked: boolean, user: UserProfile, project: Project) {
     const userProject = await getRepository(UserProject)
       .createQueryBuilder('userProject')
-      .select(`
-        id
-      `)
-      .where(`"userId"='${userId}' AND "projectId"='${projectId}'`)
+      .select('id')
+      .where(`"userId" = '${user.id}' AND "projectId" = '${project.id}'`)
       .getRawOne();
 
-    const project = await getRepository(Project).findOne({ id: projectId });
-    const user = await getRepository(UserProfile).findOne({ id: userId });
     let mark;
     if (isNull(isLiked)) {
       mark = isLiked;
@@ -282,17 +286,13 @@ export class ProjectRepository extends Repository<Project> {
     return Object.assign(new UserProject(), newUserProject).save();
   }
 
-  public async setWatch(isWatched: boolean, userId: string, projectId: string) {
+  public async setWatch(isWatched: boolean, user: UserProfile, project: Project) {
     const userProject = await getRepository(UserProject)
       .createQueryBuilder('userProject')
-      .select(`
-        id
-      `)
-      .where(`"userId"='${userId}' AND "projectId"='${projectId}'`)
+      .select('id')
+      .where(`"userId" = '${user.id}' AND "projectId" = '${project.id}'`)
       .getRawOne();
 
-    const project = await getRepository(Project).findOne({ id: projectId });
-    const user = await getRepository(UserProfile).findOne({ id: userId });
     let newUserProject;
     if (userProject) {
       newUserProject = {

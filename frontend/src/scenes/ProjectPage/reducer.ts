@@ -1,5 +1,5 @@
-import { Mark } from '../../common/enums';
 import { ProjectPage } from '../../common/types';
+import { Mark as MarkType } from '../../common/types/project/mark';
 import { createReducer } from '../../helpers';
 import type { FetchProjectSuccessActionType, SetReactionSuccessActionType, SetWatchSuccessActionType } from './actions';
 import { fetchProject, setReaction, setWatch } from './actions';
@@ -40,18 +40,18 @@ const projectPageReducer = createReducer<ProjectPageState>(projectPageState, {
   },
   [setReaction.SUCCESS](state, action: SetReactionSuccessActionType) {
     const { mark, likes, dislikes } = action.payload;
-    let projectMark;
+    let projectMark: MarkType | null;
 
     if (mark === null) {
       projectMark = mark;
     } else {
-      projectMark = mark ? Mark.LIKE : Mark.DISLIKE;
+      projectMark = mark ? 'like' : 'dislike';
     }
 
     return {
       ...state,
       isLoading: false,
-      project: { ...state.project, mark: projectMark, likes: Number(likes), dislikes: Number(dislikes) }
+      project: { ...state.project, mark: projectMark, likes, dislikes }
     };
   },
   [fetchProject.FAILURE](state) {
