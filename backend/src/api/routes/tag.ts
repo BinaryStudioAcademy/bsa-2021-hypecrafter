@@ -3,6 +3,7 @@ import { wrap } from '../../helpers';
 import { Services } from '../../services';
 
 const init = ({ tagService }: Services, path: string) => (app: MicroMq) => app
-  .get(path, wrap(() => tagService.getPopular()));
+  .get(`${path}/popular`, wrap(() => tagService.getPopular()))
+  .get(path, wrap(() => tagService.getAll()));
 
 export default init;

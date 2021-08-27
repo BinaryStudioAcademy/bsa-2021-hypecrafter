@@ -1,11 +1,13 @@
 import { ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
 import { Project } from '../../common/types';
-import { Chat, Project as CreateProject, ProjectTag, Tag, Team } from '../../data/entities';
+import { Chat, Project as CreateProject, Team } from '../../data/entities';
 import { mapPrivileges, mapProjects } from '../../data/mappers';
 import {
   ChatRepository, ProjectRepository, ProjectTagRepository,
   TagRepository, TeamRepository
 } from '../../data/repositories';
+import ProjectTagService from '../projectTag';
+import TagService from '../tag';
 
 export default class ProjectService {
   readonly #projectRepository: ProjectRepository;
@@ -46,10 +48,10 @@ export default class ProjectService {
     const project:CreateProject = await this.#projectRepository.save({ ...body });
     const team = await this.#teamRepository.save({ ...new Team(), ...body.team, project });
     this.#chatRepository.save(body.team.chats.map(chat => ({ ...new Chat(), ...chat, team })));
-    const listTags = await this.#tagRepository.save(body.projectTags.map(
-      _tag => ({ ...new Tag(), name: _tag.tag.name })
-    ));
-    this.#projectTagRepository.save(listTags.map(_tag => ({ ...new ProjectTag(), tag: _tag, project })));
+    const listTags = await new TagService(this.#tagRepository).save(body.projectTags.map(projectTag => projectTag.tag));
+
+    await new ProjectTagService(this.#projectTagRepository)
+      .save(listTags.map(tag => ({ tag, project })));
     return project;
   }
 

@@ -1,11 +1,13 @@
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import ReactPlayer from 'react-player';
 import { CreateProjectTag } from '../../../../common/types';
 import Button from '../../../../components/Button';
 import ImageUpload from '../../../../components/ImageUpload';
 import Input from '../../../../components/Input';
+import LoaderWrapper from '../../../../components/LoaderWrapper';
+import { useAction, useTypedSelector } from '../../../../hooks';
 import { useLocalization } from '../../../../providers/localization';
 import { CurrentPage, ProjectKeys } from '../../enums';
 import Layout from '../Layout';
@@ -14,32 +16,55 @@ import classes from './styles.module.scss';
 interface Props {
   changePage: (currentPage: CurrentPage) => void
   currentPage: CurrentPage,
-  onChangeValue: (name: ProjectKeys, value: any) => void
+  onChangeValue: (name: ProjectKeys, value: string | CreateProjectTag[]) => void
   region: string,
   imageUrl?: string,
   videoUrl?: string,
-  tags:CreateProjectTag[]
+  newTags:CreateProjectTag[]
 }
 
-const Settings: FC<Props> = ({ changePage, currentPage, onChangeValue, region, imageUrl, videoUrl, tags }) => {
+const Settings: FC<Props> = ({ changePage, currentPage, onChangeValue, region, imageUrl, videoUrl, newTags }) => {
   const { t } = useLocalization();
   const handleBack = () => changePage(currentPage - 1);
   const handleNext = () => changePage(CurrentPage.END);
   const [tag, setTag] = useState('');
   const addTag = () => {
-    if (tags.indexOf({ tag: { name: tag } }) === -1) {
-      tags.push({ tag: { name: tag } });
-      onChangeValue(ProjectKeys.PROJECT_TAGS, tags);
+    if (newTags.indexOf({ tag: { name: tag } }) === -1) {
+      newTags.push({ tag: { name: tag } });
+      onChangeValue(ProjectKeys.PROJECT_TAGS, newTags);
       setTag('');
     }
   };
+  const store = useTypedSelector(({ tags: { tags, isLoading } }) => ({
+    tags,
+    isLoading
+  }));
+  const { tags, isLoading } = store;
+  const { getTagsAction } = useAction();
+  useEffect(() => {
+    getTagsAction();
+  }, [getTagsAction]);
   const deleteTag = (tagToDelete:string) => {
-    const listTags = tags.filter(_tag => _tag.tag.name !== tagToDelete);
+    const listTags = newTags.filter(_tag => _tag.tag.name !== tagToDelete);
     onChangeValue(ProjectKeys.PROJECT_TAGS, listTags);
   };
-  const [options, setOptions] = useState(
-    [{ text: 'dsdfsdf', value: 'ddfdsfsd' }, { text: 'dsdfsdfdjshf', value: 'ddfdsfsdsdfsd' }]
-  );
+  const [options, setOptions] = useState<Array<{ text:string, value:string }>>([]);
+  const createListTags = () => {
+    const filteredTags = tags.filter(existTag => existTag.name.indexOf(tag) !== -1);
+    return filteredTags.map(existTag => ({ text: existTag.name, value: existTag.id }));
+  };
+  const tagChanged = (value: string) => {
+    setTag(value);
+    setOptions(createListTags());
+  };
+  const addExistTag = (idTag: string) => {
+    setOptions([]);
+    const selectedTag = tags.find(existTag => existTag.id === idTag);
+    if (selectedTag && newTags.indexOf({ tag: { name: selectedTag.name } }) === -1) {
+      newTags.push({ tag: selectedTag });
+      onChangeValue(ProjectKeys.PROJECT_TAGS, newTags);
+    }
+  };
   const body = (
     <div>
       <Input
@@ -51,37 +76,39 @@ const Settings: FC<Props> = ({ changePage, currentPage, onChangeValue, region, i
       {imageUrl && <img src={imageUrl} alt="Project" className={classes.projectImage} />}
       <ImageUpload
         id="umloadProgectImage"
+        accept='image/*'
         label={t('Atach image')}
         onFileChange={file => onChangeValue(ProjectKeys.IMAGE_URL, file)}
       />
       {videoUrl && <ReactPlayer url={videoUrl} playing controls className={classes.projectImage} />}
       <ImageUpload
+        className={classes.addVideo}
+        accept='video/*'
         id="umloadProgectVideo"
-        label={t('Atach image')}
+        label={t('Atach video')}
         onFileChange={file => onChangeValue(ProjectKeys.VIDEO_URL, file)}
       />
       <div className={classes.tagControl}>
         <Input
           type="text"
           label={t('Tags help when searching to give the user exactly those projects that interest him')}
-          onChange={e => setTag(e.target.value)}
+          onChange={e => tagChanged(e.target.value)}
           value={tag}
-          onBlur={() => setOptions([])}
+          // onBlur={() => setOptions([])}
           options={options}
-          onFocus={() => setOptions(
-            [{ text: 'dsdfsdf', value: 'ddfdsfsd' }, { text: 'dsdfsdfdjshf', value: 'ddfdsfsdsdfsd' }]
-          )}
+          onFocus={() => setOptions(createListTags())}
+          selectOption={addExistTag}
         />
         <Button onClick={addTag} className={classes.addTag}>{t('Add')}</Button>
       </div>
-      <div className={classes.listTags}>{tags.map(_tag => (
+      <div className={classes.listTags}>{newTags.map(projectTag => (
         <Button
           className={classes.tag}
-          key={_tag.tag.name}
-          id={_tag.tag.name}
-          onClick={() => deleteTag(_tag.tag.name)}
+          key={projectTag.tag.name}
+          id={projectTag.tag.name}
+          onClick={() => deleteTag(projectTag.tag.name)}
         >
-          {`${_tag.tag.name}`}
+          {`${projectTag.tag.name}`}
           <FontAwesomeIcon icon={faTimes} />
         </Button>
       ))}
@@ -95,13 +122,15 @@ const Settings: FC<Props> = ({ changePage, currentPage, onChangeValue, region, i
     </div>
   );
   return (
-    <Layout
-      header={t('Finally')}
-      setCurrentPage={changePage}
-      body={body}
-      footer={footer}
-      currentPage={currentPage}
-    />
+    <LoaderWrapper isLoading={isLoading}>
+      <Layout
+        header={t('Finally')}
+        setCurrentPage={changePage}
+        body={body}
+        footer={footer}
+        currentPage={currentPage}
+      />
+    </LoaderWrapper>
   );
 };
 

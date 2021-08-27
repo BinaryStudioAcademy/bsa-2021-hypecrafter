@@ -12,6 +12,7 @@ import userProfileReducer, { initialState as userProfileInitialState } from '../
 import transactionsReducer, { initialState as transactionsInitialState } from '../scenes/Wallet/Transactions/reducer';
 import authReducer, { authState } from './auth';
 import categoriesReducer, { initialState as categoriesInitialState } from './categies';
+import { initialState as tagsInitialState, tagsReduser } from './tags';
 import usersReducer, { initialState as usersInitialState } from './users';
 
 const initialState: StoreState = {
@@ -25,7 +26,8 @@ const initialState: StoreState = {
   projects: projectsInitialState,
   trendsPage: trendsPageState,
   projectPage: projectPageState,
-  authentication: authenticationInitialState
+  authentication: authenticationInitialState,
+  tags: tagsInitialState
 };
 
 const rootReducer = combineReducers({
@@ -39,7 +41,8 @@ const rootReducer = combineReducers({
   projects: projectsReducer,
   projectPage: projectPageReducer,
   transactions: transactionsReducer,
-  authentication: authenticationReducer
+  authentication: authenticationReducer,
+  tags: tagsReduser
 });
 
 export { initialState, rootReducer };

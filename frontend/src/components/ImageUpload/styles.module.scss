@@ -1,0 +1,8 @@
+@import '../../styles/vars';
+.addFile{
+    background: $color-root-background;
+    border: 1px solid $color-root-text;
+    &:hover{
+        cursor: pointer;
+    }
+}

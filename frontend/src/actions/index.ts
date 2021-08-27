@@ -18,4 +18,5 @@ export { fetchTransactionsPageAction } from '../scenes/Wallet/Transactions/actio
 export { authFetchUserAction } from './auth';
 export { getUsersAction } from './users';
 export { getCategoriesAction } from './categories';
+export { getTagsAction } from './tags';
 

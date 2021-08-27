@@ -13,7 +13,7 @@ export function initServices(repositories: Repositories): Services {
       repositories.teamRepository, repositories.chatRepository,
       repositories.projectTagRepository, repositories.tagRepository),
     tagService: new TagService(repositories.tagRepository),
-    categoryService: new CategoryService(repositories.categoryRepository)
+    categoryService: new CategoryService(repositories.categoryRepository),
   };
 }
 

@@ -99,7 +99,7 @@ const CreateProject = () => {
             currentPage={currentPage}
             onChangeValue={handleChangeValue}
             imageUrl={newProject.imageUrl}
-            tags={newProject.projectTags}
+            newTags={newProject.projectTags}
             videoUrl={newProject.videoUrl}
           />
         );
@@ -114,7 +114,7 @@ const CreateProject = () => {
               onChangeValue={handleChangeValue}
               imageUrl={newProject.imageUrl}
               videoUrl={newProject.videoUrl}
-              tags={newProject.projectTags}
+              newTags={newProject.projectTags}
             />
           </div>
         );

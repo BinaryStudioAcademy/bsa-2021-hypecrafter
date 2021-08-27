@@ -51,7 +51,7 @@ const Input = forwardRef<HTMLInputElement, Props>(({
           )}
         {options && (
         <div className={classes.options}>
-            {options.map(option => (
+            {options.slice(0, 10).map(option => (
               <button
                 type="button"
                 key={option.value}
