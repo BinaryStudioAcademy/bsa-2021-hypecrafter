@@ -1,8 +1,9 @@
 import { createRoutine } from 'redux-saga-routines';
-import { ProjectPage } from '../../common/types';
+import { Comment, CreateComment, ProjectPage } from '../../common/types';
 
 export enum ProjectsActions {
   FETCH_PROJECT = 'PROJECTS/GET_PROJECT',
+  ADD_COMMENT = 'COMMENTS/ADD_COMMENT',
   SET_REACTION = 'PROJECTS/SET_REACTION',
   SET_WATCH = 'PROJECTS/SET_WATCH'
 }
@@ -29,6 +30,21 @@ export const fetchProject = createRoutine(ProjectsActions
   failure: (error: string) => error
 });
 
+export const addComment = createRoutine(ProjectsActions.ADD_COMMENT, {
+  trigger: (data: CreateComment) => data,
+  success: (comment: Comment) => comment,
+  failure: (error: string) => error
+});
+
+export type AddCommentTriggerActionType = ReturnType<typeof addComment.trigger>;
+
+export type AddCommentSuccessActionType = ReturnType<typeof addComment.success>;
+
+export type AddCommentFailureActionType = ReturnType<typeof addComment.failure>;
+
+export type FetchProjectTriggerActionType = ReturnType<
+  typeof fetchProject.trigger
+>;
 export const setReaction = createRoutine(ProjectsActions
   .SET_REACTION, {
   trigger: ({ isLiked, projectId }: SetReactionTriggerActionPropsType) => ({
@@ -47,9 +63,13 @@ export const setWatch = createRoutine(ProjectsActions
   failure: (error: string) => error
 });
 
-export type FetchProjectSuccessActionType =
-  ReturnType<typeof fetchProject.success>;
+export type FetchProjectSuccessActionType = ReturnType<
+  typeof fetchProject.success
+>;
 
+export type FetchProjectFailureActionType = ReturnType<
+  typeof fetchProject.failure
+>;
 export type SetReactionSuccessActionType =
   ReturnType<typeof setReaction.success>;
 

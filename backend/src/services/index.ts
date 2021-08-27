@@ -1,5 +1,6 @@
 import { Repositories } from '../data/repositories';
 import CategoryService from './category';
+import CommentService from './comment';
 import ProjectService from './project';
 import TagService from './tag';
 import TopicService from './topic';
@@ -16,7 +17,8 @@ export function initServices(repositories: Repositories): Services {
       repositories.userRepository
     ),
     tagService: new TagService(repositories.tagRepository),
-    categoryService: new CategoryService(repositories.categoryRepository)
+    categoryService: new CategoryService(repositories.categoryRepository),
+    commentService: new CommentService(repositories.commentRepository),
   };
 }
 
@@ -25,5 +27,6 @@ export type Services = {
   topicService: TopicService,
   projectService: ProjectService,
   tagService: TagService,
-  categoryService: CategoryService
+  categoryService: CategoryService,
+  commentService: CommentService
 };

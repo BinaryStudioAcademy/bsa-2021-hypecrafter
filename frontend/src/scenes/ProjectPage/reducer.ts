@@ -1,17 +1,23 @@
 import { ProjectPage } from '../../common/types';
 import { Mark as MarkType } from '../../common/types/project/mark';
 import { createReducer } from '../../helpers';
-import type { FetchProjectSuccessActionType, SetReactionSuccessActionType, SetWatchSuccessActionType } from './actions';
-import { fetchProject, setReaction, setWatch } from './actions';
+import type {
+  AddCommentSuccessActionType, FetchProjectSuccessActionType,
+  SetReactionSuccessActionType,
+  SetWatchSuccessActionType
+} from './actions';
+import { addComment, fetchProject, setReaction, setWatch } from './actions';
 
 export interface ProjectPageState {
   isLoading: boolean;
   project: ProjectPage;
+  isInputLoading: boolean;
 }
 
 export const projectPageState: ProjectPageState = {
   isLoading: false,
-  project: {} as ProjectPage
+  project: {} as ProjectPage,
+  isInputLoading: false
 };
 
 const projectPageReducer = createReducer<ProjectPageState>(projectPageState, {
@@ -58,6 +64,28 @@ const projectPageReducer = createReducer<ProjectPageState>(projectPageState, {
     return {
       ...state,
       isLoading: false
+    };
+  },
+  [addComment.TRIGGER](state) {
+    return {
+      ...state,
+      isInputLoading: true
+    };
+  },
+  [addComment.SUCCESS](state, action: AddCommentSuccessActionType) {
+    return {
+      ...state,
+      isInputLoading: false,
+      project: {
+        ...state.project,
+        projectComments: [...state.project.projectComments, action.payload]
+      }
+    };
+  },
+  [addComment.FAILURE](state) {
+    return {
+      ...state,
+      isInputLoading: false,
     };
   }
 });

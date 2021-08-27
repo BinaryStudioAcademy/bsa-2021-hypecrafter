@@ -1,3 +1,5 @@
+import { ProjectPrivilege } from '.';
+import { Comment } from '../comment';
 import { Mark } from './mark';
 
 export interface Project {
@@ -20,13 +22,14 @@ export interface ProjectPage extends Project {
   likes: number;
   dislikes: number;
   bakersAmount: number;
-  FAQ: { id: string, question: string, answer: string }[];
+  FAQ: { id: string; question: string; answer: string }[];
   story: string;
-  privileges: { amount: number, privilege: string }[];
+  privileges: ProjectPrivilege[];
   instagramUrl?: string;
   facebookUrl?: string;
   dribbleUrl?: string;
   finishDate: string;
+  projectComments: Comment[];
   mark?: Mark | null;
   isWatched: boolean;
 }
