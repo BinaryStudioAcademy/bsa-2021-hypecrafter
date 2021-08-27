@@ -24,7 +24,8 @@ export default class ProjectService {
   readonly #tagRepository: TagRepository;
 
   constructor(projectRepository: ProjectRepository, teamRepository: TeamRepository,
-    chatRepository: ChatRepository, projectTagRepository: ProjectTagRepository, tagRepository: TagRepository, userRepository: UserRepository) {
+    chatRepository: ChatRepository, projectTagRepository: ProjectTagRepository,
+    tagRepository: TagRepository, userRepository: UserRepository) {
     this.#projectRepository = projectRepository;
     this.#teamRepository = teamRepository;
     this.#chatRepository = chatRepository;
