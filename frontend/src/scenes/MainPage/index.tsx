@@ -1,4 +1,5 @@
 import { FC, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Project } from '../../common/types';
 import Button from '../../components/Button';
 import Chart from '../../components/Chart';
@@ -82,7 +83,9 @@ const MainPage: FC = () => {
       </section>
       <div className={classes.content}>
         <section>
-          <div className={classes.category}>{t('Popular startups')}</div>
+          <div className={classes.category}>
+            <Link to='/projects?sort=popular'>{t('Popular startups')}</Link>
+          </div>
           <div className={classes.cards}>
             <LoaderWrapper isLoading={isStartupsLoading}>
               {popularStartups?.map((project: Project) => (
@@ -105,7 +108,9 @@ const MainPage: FC = () => {
           </div>
         </section>
         <section>
-          <div className={classes.category}>{t('Recommended for you')}</div>
+          <div className={classes.category}>
+            <Link to='/projects?sort=recommended'>{t('Recommended for you')}</Link>
+          </div>
           <div className={classes.cards}>
             <LoaderWrapper isLoading={isStartupsLoading}>
               {recommendedStartups?.map((project: Project) => (
