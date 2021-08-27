@@ -1,10 +1,12 @@
-import { FunctionComponent, MouseEventHandler } from 'react';
+import { FunctionComponent } from 'react';
+import { GoogleLogin, GoogleLoginResponse, GoogleLoginResponseOffline } from 'react-google-login';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import { Routes } from '../../../../common/enums';
 import { Pages } from '../../../../common/enums/signupForms';
 import Button from '../../../../components/Button';
 import Input from '../../../../components/Input';
+import { env } from '../../../../env';
 import classesAuth from '../../styles.module.scss';
 import classes from '../styles.module.scss';
 
@@ -20,12 +22,14 @@ interface MainFormProps {
   setMainFormInfo: React.Dispatch<React.SetStateAction<MainFormData>>;
   mainFormInfo: MainFormData;
   t: CallableFunction;
+  onSignupWithGoogle: (data: GoogleLoginResponse | GoogleLoginResponseOffline) => void;
 }
 
 const MainForm: FunctionComponent<MainFormProps> = ({
   setCurrentPage,
   setMainFormInfo,
   mainFormInfo,
+  onSignupWithGoogle,
   t
 }: MainFormProps) => {
   const {
@@ -36,11 +40,6 @@ const MainForm: FunctionComponent<MainFormProps> = ({
 
   const onSubmit: SubmitHandler<MainFormData> = () => {
     setCurrentPage(Pages.ADDITIONAL_FORM);
-  };
-
-  const dummySignUpWithGoogleHandler: MouseEventHandler<HTMLButtonElement> = () => {
-    // eslint-disable-next-line no-console
-    console.log('Sign Up with Google');
   };
 
   const handleChange = (field: string, value: string) => {
@@ -119,12 +118,19 @@ const MainForm: FunctionComponent<MainFormProps> = ({
         <div>{t('or')}</div>
       </div>
       <hr className={classesAuth['horizontal-ruler']} />
-      <Button
-        className={classesAuth['google-button']}
-        onClick={dummySignUpWithGoogleHandler}
-      >
-        {t('Sign Up with Google')}
-      </Button>
+      <GoogleLogin
+        render={(renderProps) => (
+          <Button
+            onClick={renderProps.onClick}
+            className={classesAuth['google-button']}
+          >
+            {t('Sign Up with Google')}
+          </Button>
+        )}
+        clientId={env.auth.googleClientId as string}
+        onSuccess={onSignupWithGoogle}
+        cookiePolicy="single_host_origin"
+      />
     </form>
   );
 };
