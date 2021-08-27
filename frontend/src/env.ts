@@ -11,6 +11,9 @@ export const env = {
     url: getEnv('REACT_APP_SERVER_URL') || 'http://hypecrafter2-env.eba-n3gbu5mb.us-west-2.elasticbeanstalk.com/api'
   },
   sentry: {
-    dsn: getEnv('SENTRY_DSN')
+    dsn: getEnv('REACT_APP_SENTRY_DSN')
+  },
+  auth: {
+    googleClientId: getEnv('REACT_APP_GOOGLE_CLIENT_ID')
   }
 };

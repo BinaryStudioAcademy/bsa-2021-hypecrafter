@@ -1,10 +1,12 @@
 import { Tokens } from '../../common/types/signup';
 import { createReducer } from '../../helpers';
 import type {
-  LoginFailureActionType, LoginSuccessActionType, RegisterUserFailureActionType,
+  LoginFailureActionType,
+  LoginSuccessActionType,
+  RegisterUserFailureActionType,
   RegisterUserSuccessActionType
 } from './actions';
-import { loginAction, registerUserAction } from './actions';
+import { googleAuthAction, loginAction, registerUserAction } from './actions';
 
 export interface AuthenticationState {
   isLoading: boolean;
@@ -53,6 +55,26 @@ export const authenticationReducer = createReducer<AuthenticationState>(initialS
     };
   },
   [loginAction.FAILURE](state, action: LoginFailureActionType) {
+    return {
+      ...state,
+      isLoading: false,
+      error: action.payload
+    };
+  },
+  [googleAuthAction.TRIGGER](state) {
+    return {
+      ...state,
+      isLoading: true
+    };
+  },
+  [googleAuthAction.SUCCESS](state, action: LoginSuccessActionType) {
+    return {
+      ...state,
+      isLoading: false,
+      tokens: action.payload
+    };
+  },
+  [googleAuthAction.FAILURE](state, action: LoginFailureActionType) {
     return {
       ...state,
       isLoading: false,
