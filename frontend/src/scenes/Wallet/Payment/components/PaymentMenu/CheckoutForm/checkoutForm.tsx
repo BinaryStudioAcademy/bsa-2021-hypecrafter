@@ -8,6 +8,7 @@ import { Routes } from '../../../../../../common/enums';
 import { ClientSecretData } from '../../../../../../common/types/payment';
 import Button from '../../../../../../components/Button';
 import { useTypedSelector } from '../../../../../../hooks';
+import { useLocalization } from '../../../../../../providers/localization';
 import { getClientSecret } from '../../../../../../services/payment';
 import classes from './styles.module.scss';
 import { cardOption } from './utils';
@@ -21,6 +22,7 @@ export default function CheckoutForm() {
   const history = useHistory();
   const stripe = useStripe();
   const elements = useElements();
+  const { t } = useLocalization();
   const { amount } = useTypedSelector(({ payment }) => payment);
   useEffect(() => {
     const params: ClientSecretData = { amount: amount.toString() };
@@ -66,11 +68,9 @@ export default function CheckoutForm() {
           id="submit"
         >
           <span id="button-text">
-            {processing ? (
-              'Load...'
-            ) : (
-              'Pay'
-            )}
+            {t(processing
+              ? 'Load...'
+              : 'Pay')}
           </span>
         </Button>
       </div>
