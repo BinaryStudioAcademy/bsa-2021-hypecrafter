@@ -14,11 +14,8 @@ const endpointSecret = env.app.payment.webhook_key;
 
 const init = ({ paymentService }: Services, path: string) => (app: MicroMq) => app.get(
   `${path}/:page`,
-  wrap<Empty, Page, { page: string }, Empty>((req) => {
-    console.log('()()()()()()()');
-    return paymentService
-      .getByUserId(req.headers.userId?.toString(), req.params.page);
-  })
+  wrap<Empty, Page, { page: string }, Empty>((req) => paymentService
+    .getByUserId(req.headers.userId?.toString(), req.params.page))
 ).post(`${path}/create-payment-intent`,
   wrap< Empty, { clientSecret: string }, { amount: number }, Empty>(async (req) => {
     const { amount } = req.body;
@@ -63,8 +60,8 @@ const init = ({ paymentService }: Services, path: string) => (app: MicroMq) => a
             //   total: payload.amount / 100,
             //   userId: 'c7a6e4d5-3906-47aa-ac82-8b1211f470f7'
             // });
-            console.log(response);
           }
+          console.log(response);
           break;
         }
         default:
