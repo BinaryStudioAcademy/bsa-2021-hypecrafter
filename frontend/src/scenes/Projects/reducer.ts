@@ -1,4 +1,5 @@
 import {
+  ProjectsCategories,
   ProjectsFilter,
   ProjectsSort
 } from 'hypecrafter-shared/enums';
@@ -8,6 +9,8 @@ import {
   fetchProjectsAction,
   FetchProjectsFailureActionType,
   FetchProjectsSuccessActionType,
+  filterCategoryProjectsAction,
+  FilterCategoryProjectsActionType,
   filterProjectsAction,
   FilterProjectsActionType,
   sortProjectsAction,
@@ -19,6 +22,7 @@ export interface ProjectsState {
   modificators: {
     sort: ProjectsSort;
     filter: ProjectsFilter;
+    category: ProjectsCategories;
   };
   isLoading: boolean;
   error: string;
@@ -29,6 +33,7 @@ export const initialState: ProjectsState = {
   modificators: {
     sort: ProjectsSort.NAME,
     filter: ProjectsFilter.ALL,
+    category: ProjectsCategories.ALL,
   },
   isLoading: false,
   error: '',
@@ -70,6 +75,15 @@ export const projectsReducer = createReducer<ProjectsState>(initialState, {
       modificators: {
         ...state.modificators,
         filter: action.payload,
+      },
+    };
+  },
+  [filterCategoryProjectsAction.TRIGGER](state, action: FilterCategoryProjectsActionType) {
+    return {
+      ...state,
+      modificators: {
+        ...state.modificators,
+        category: action.payload,
       },
     };
   },

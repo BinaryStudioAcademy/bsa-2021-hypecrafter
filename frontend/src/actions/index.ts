@@ -4,6 +4,7 @@ export { fetchPopularAndRecommendedProjectsAction, fetchTopics } from '../scenes
 export { addComment, fetchProject, setReaction, setWatch } from '../scenes/ProjectPage/actions';
 export {
   fetchProjectsAction,
+  filterCategoryProjectsAction,
   filterProjectsAction,
   sortProjectsAction
 } from '../scenes/Projects/actions';
@@ -24,4 +25,3 @@ export { fetchTransactionsPageAction } from '../scenes/Wallet/Transactions/actio
 export { authFetchUserAction } from './auth';
 export { getCategoriesAction } from './categories';
 export { getUsersAction } from './users';
-
