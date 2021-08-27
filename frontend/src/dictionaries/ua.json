@@ -151,6 +151,7 @@
     "Payment transaction was successful": "Платіжна транзакція пройшла успішно",
     "Basic fund":"Базовий",
     "Amount":"Кількість",
-    "Return to Main Page":"Повернутися до Головної Сторінки"
+    "Return to Main Page":"Повернутися до Головної Сторінки",
+    "Pay":"Сплатити"
   }
 }

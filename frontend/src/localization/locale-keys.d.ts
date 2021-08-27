@@ -150,4 +150,5 @@ declare type LocaleKeys =
  | 'Payment transaction was successful'
  | 'Basic fund'
  | 'Amount'
- | 'Return to Main Page';
+ | 'Return to Main Page'
+ | 'Pay';
