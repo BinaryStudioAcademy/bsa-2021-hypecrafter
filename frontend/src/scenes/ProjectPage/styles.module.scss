@@ -26,6 +26,13 @@
     text-overflow: ellipsis;
   }
 
+  .watch-container {
+    button {
+      background: none;
+      border: none;
+    }
+  }
+
   .project-category {
     color: $color-root-turquoise;
     font-size: $font-size-aсcent;
@@ -82,6 +89,10 @@
 
 .comment-btn {
   height: 38px;
+}
+
+.statistics-wrapper {
+  color: red;
 }
 
 hr.horizontal-line {

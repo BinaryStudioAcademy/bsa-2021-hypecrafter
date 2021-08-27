@@ -1,15 +1,16 @@
-import { ChangeEvent, useState } from 'react';
 import { faBell } from '@fortawesome/free-regular-svg-icons';
 import { faCircle, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { ChangeEvent, useState } from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import hypeCoin from '../../assets/HypeCoin.png';
 import { Routes } from '../../common/enums';
-import { removeTokens } from '../../helpers/localStorage';
-import { useScroll, useWindowResize } from '../../hooks';
+import { useAuth, useScroll, useWindowResize } from '../../hooks';
 import { useLocalization } from '../../providers/localization';
+import { logout } from '../../services/logout';
 import Avatar from '../Avatar';
+import Button from '../Button';
 import Input from '../Input';
 import Link from '../Link';
 import Logo from '../Logo';
@@ -55,10 +56,6 @@ const Header = () => {
   const scrollUnderLimitCallback = () => setVisibleOnScroll(true);
 
   useScroll(30, { scrollOverLimitCallback, scrollUnderLimitCallback });
-
-  const handleLogOut = () => {
-    removeTokens();
-  };
 
   return (
     <div
@@ -106,73 +103,90 @@ const Header = () => {
             <FontAwesomeIcon icon={faSearch} className={classes.header_search_icon} />
             <Input type="search" value={text} placeholder={t('Search...')} onChange={handleSearch} />
           </div>
-          <Nav
-            className={classes.desktop_header_user_menu}
-          >
-            <div className={classes.header_hypeCoin}>
-              <Link to={Routes.ADDFUNDS}><img src={hypeCoin} alt="HypeCoin" /></Link>
-              <Link to={Routes.ADDFUNDS}>1500</Link>
-            </div>
-            <div className={classes.header_natification}>
-              <FontAwesomeIcon icon={faBell} className={classes.header_natification_bell} />
-              {true && <FontAwesomeIcon icon={faCircle} className={classes.header_natification_new} />}
-            </div>
-            <div className={classes.desktop_profile}>
-              <Nav.Link
-                onClick={handleProfileMenu}
+          {useAuth().isAuthorized
+            ? (
+              <Nav
+                className={classes.desktop_header_user_menu}
               >
-                <Avatar
-                  width={35}
-                  userName="Hype Coin"
-                  className={classes.header_profile_avatar}
-                />
-              </Nav.Link>
-              <div
-                className={`
-                  ${classes.desktop_menu_profile}
-                  ${isProfileMenu ? classes.visible : classes.hide}
-                `}
-              >
-                <div
-                  className={`
-                  ${classes.desktop_menu_item}
-                `}
-                >
-                  <OpenUserModal />
+                <div className={classes.header_hypeCoin}>
+                  <Link to={Routes.ADDFUNDS}><img src={hypeCoin} alt="HypeCoin" /></Link>
+                  <Link to={Routes.ADDFUNDS}>1500</Link>
                 </div>
-                <NavLink
-                  to={Routes.PROFILE}
-                  className={classes.desktop_menu_item}
-                >
-                  {t('Edit profile')}
-                </NavLink>
-                <div
-                  className={`
-                  ${classes.desktop_menu_item}
-                  ${classes.line_both_desktop}
-                `}
-                >
-                  <LanguageSwitcher />
+                <div className={classes.header_natification}>
+                  <FontAwesomeIcon icon={faBell} className={classes.header_natification_bell} />
+                  {true && <FontAwesomeIcon icon={faCircle} className={classes.header_natification_new} />}
                 </div>
-                <NavLink
-                  to={Routes.PROJECTS_CREATE}
-                  className={`
-                  ${classes.desktop_menu_item}
-                  ${classes.line_both_desktop}
-                `}
-                >
-                  {t('Create project')}
-                </NavLink>
-                <NavLink
-                  to={Routes.LOGOUT}
-                  className={classes.desktop_menu_item}
-                  onClick={handleLogOut}
-                >
-                  {t('Log out')}
-                </NavLink>
-              </div>
-            </div>
-          </Nav>
+                <div className={classes.desktop_profile}>
+                  <Nav.Link
+                    onClick={handleProfileMenu}
+                  >
+                    <Avatar
+                      width={35}
+                      userName="Hype Coin"
+                      className={classes.header_profile_avatar}
+                    />
+                  </Nav.Link>
+                  <div
+                    className={`
+                          ${classes.desktop_menu_profile}
+                          ${isProfileMenu ? classes.visible : classes.hide}
+                        `}
+                  >
+                    <div
+                      className={`
+                          ${classes.desktop_menu_item}
+                        `}
+                    >
+                      <OpenUserModal />
+                    </div>
+                    <NavLink
+                      to={Routes.PROFILE}
+                      className={classes.desktop_menu_item}
+                    >
+                      {t('Edit profile')}
+                    </NavLink>
+                    <div
+                      className={`
+                          ${classes.desktop_menu_item}
+                          ${classes.line_both_desktop}
+                        `}
+                    >
+                      <LanguageSwitcher />
+                    </div>
+                    <NavLink
+                      to={Routes.PROJECTS_CREATE}
+                      className={`
+                          ${classes.desktop_menu_item}
+                          ${classes.line_both_desktop}
+                        `}
+                    >
+                      {t('Create project')}
+                    </NavLink>
+                    <NavLink
+                      to={Routes.LOGIN}
+                      className={classes.desktop_menu_item}
+                      onClick={logout}
+                    >
+                      {t('Log out')}
+                    </NavLink>
+                  </div>
+                </div>
+              </Nav>
+            )
+            : (
+              <Nav className={classes['auth-buttons-wrapper']}>
+                <Button
+                  className={classes['auth-button']}
+                  to={Routes.LOGIN}
+                >{t('Log In')}
+                </Button>
+                <Button
+                  className={classes['auth-button']}
+                  to={Routes.SIGNUP}
+                >{t('Sign Up')}
+                </Button>
+              </Nav>
+            )}
         </div>
       </div>
       <Navbar
@@ -292,9 +306,9 @@ const Header = () => {
               {t('Create project')}
             </NavLink>
             <NavLink
-              to={Routes.LOGOUT}
+              to={Routes.LOGIN}
               className={classes.mobile_menu_item}
-              onClick={handleLogOut}
+              onClick={logout}
             >
               {t('Log out')}
             </NavLink>

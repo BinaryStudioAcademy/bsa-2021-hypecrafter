@@ -4,16 +4,16 @@ import LoaderWrapper from '../../components/LoaderWrapper';
 import { useAction, useTypedSelector } from '../../hooks';
 import Body from './components/Body';
 import Header from './components/Header';
-import './styles.module.scss';
 
 const UserPage = () => {
-  const store = useTypedSelector(({ userProfile: { item, isLoading } }) => ({
+  const store = useTypedSelector(({ userProfile: { item, isLoading, isEditing } }) => ({
     userProfile: item,
-    isLoading
+    isLoading,
+    isEditing
   }));
-  const { fetchUserProfileAction } = useAction();
+  const { fetchUserProfileAction, setEditingAction, updateUserProfileAction } = useAction();
 
-  const { userProfile, isLoading } = store;
+  const { userProfile, isLoading, isEditing } = store;
 
   useEffect(() => {
     fetchUserProfileAction('ac7a5b8f-7fc4-4d1e-81c9-1a9c49c9b529');
@@ -106,10 +106,18 @@ const UserPage = () => {
     <Container>
       <LoaderWrapper isLoading={isLoading}>
         <Row>
-          {!!userProfile && <Header userProfile={userProfile} />}
+          {!!userProfile
+            && (
+              <Header
+                userProfile={userProfile}
+                isEditing={isEditing}
+                setEditing={setEditingAction}
+                updateUser={updateUserProfileAction}
+              />
+            )}
         </Row>
         <Row>
-          <Body projects={projects} achievements={achievements} activities={activities} />
+          {!isEditing && <Body projects={projects} achievements={achievements} activities={activities} />}
         </Row>
       </LoaderWrapper>
     </Container>

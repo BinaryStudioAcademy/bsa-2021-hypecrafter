@@ -27,6 +27,7 @@ const initRoutes = (services: Services) => {
   router.use('*', (_req, res) => {
     res.status(404).sendFile(path.resolve('src/common/errorPages/404.html'));
   });
+
   return router;
 };
 

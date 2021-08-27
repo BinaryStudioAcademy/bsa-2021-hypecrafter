@@ -1,5 +1,6 @@
 import { ProjectPrivilege } from '.';
 import { Comment } from '../comment';
+import { Mark } from './mark';
 
 export interface Project {
   id: string;
@@ -29,4 +30,6 @@ export interface ProjectPage extends Project {
   dribbleUrl?: string;
   finishDate: string;
   projectComments: Comment[];
+  mark?: Mark | null;
+  isWatched: boolean;
 }
