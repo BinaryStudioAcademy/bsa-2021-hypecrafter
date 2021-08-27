@@ -26,6 +26,7 @@ const CreateProject = () => {
     region: '',
     team: { name: '', chats: [] },
     imageUrl: '',
+    videoUrl: '',
     projectTags: []
   };
   const [currentPage, setCurrentPage] = useState(CurrentPage.BEFORE_START);
@@ -99,6 +100,7 @@ const CreateProject = () => {
             onChangeValue={handleChangeValue}
             imageUrl={newProject.imageUrl}
             tags={newProject.projectTags}
+            videoUrl={newProject.videoUrl}
           />
         );
       case CurrentPage.END:
@@ -111,6 +113,7 @@ const CreateProject = () => {
               currentPage={currentPage}
               onChangeValue={handleChangeValue}
               imageUrl={newProject.imageUrl}
+              videoUrl={newProject.videoUrl}
               tags={newProject.projectTags}
             />
           </div>

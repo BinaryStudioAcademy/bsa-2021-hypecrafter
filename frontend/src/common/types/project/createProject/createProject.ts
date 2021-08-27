@@ -1,5 +1,5 @@
-import { CreateProjectTeam } from './team';
 import { CreateProjectTag } from './projectTag';
+import { CreateProjectTeam } from './team';
 
 export interface CreateProject{
   name: string;
@@ -11,6 +11,7 @@ export interface CreateProject{
   team: CreateProjectTeam;
 
   imageUrl?: string;
+  videoUrl?: string;
   projectTags: CreateProjectTag[];
 
   startDate?: Date;

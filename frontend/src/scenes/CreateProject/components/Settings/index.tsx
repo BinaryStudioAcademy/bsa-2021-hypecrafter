@@ -1,6 +1,7 @@
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FC, useState } from 'react';
+import ReactPlayer from 'react-player';
 import { CreateProjectTag } from '../../../../common/types';
 import Button from '../../../../components/Button';
 import ImageUpload from '../../../../components/ImageUpload';
@@ -16,10 +17,11 @@ interface Props {
   onChangeValue: (name: ProjectKeys, value: any) => void
   region: string,
   imageUrl?: string,
+  videoUrl?: string,
   tags:CreateProjectTag[]
 }
 
-const Settings: FC<Props> = ({ changePage, currentPage, onChangeValue, region, imageUrl, tags }) => {
+const Settings: FC<Props> = ({ changePage, currentPage, onChangeValue, region, imageUrl, videoUrl, tags }) => {
   const { t } = useLocalization();
   const handleBack = () => changePage(currentPage - 1);
   const handleNext = () => changePage(CurrentPage.END);
@@ -35,6 +37,9 @@ const Settings: FC<Props> = ({ changePage, currentPage, onChangeValue, region, i
     const listTags = tags.filter(_tag => _tag.tag.name !== tagToDelete);
     onChangeValue(ProjectKeys.PROJECT_TAGS, listTags);
   };
+  const [options, setOptions] = useState(
+    [{ text: 'dsdfsdf', value: 'ddfdsfsd' }, { text: 'dsdfsdfdjshf', value: 'ddfdsfsdsdfsd' }]
+  );
   const body = (
     <div>
       <Input
@@ -49,12 +54,23 @@ const Settings: FC<Props> = ({ changePage, currentPage, onChangeValue, region, i
         label={t('Atach image')}
         onFileChange={file => onChangeValue(ProjectKeys.IMAGE_URL, file)}
       />
+      {videoUrl && <ReactPlayer url={videoUrl} playing controls className={classes.projectImage} />}
+      <ImageUpload
+        id="umloadProgectVideo"
+        label={t('Atach image')}
+        onFileChange={file => onChangeValue(ProjectKeys.VIDEO_URL, file)}
+      />
       <div className={classes.tagControl}>
         <Input
           type="text"
           label={t('Tags help when searching to give the user exactly those projects that interest him')}
           onChange={e => setTag(e.target.value)}
           value={tag}
+          onBlur={() => setOptions([])}
+          options={options}
+          onFocus={() => setOptions(
+            [{ text: 'dsdfsdf', value: 'ddfdsfsd' }, { text: 'dsdfsdfdjshf', value: 'ddfdsfsdsdfsd' }]
+          )}
         />
         <Button onClick={addTag} className={classes.addTag}>{t('Add')}</Button>
       </div>

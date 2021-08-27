@@ -10,6 +10,8 @@ interface Props extends FormControlProps {
   label?: string;
   errorMessage?: string;
   step?: number;
+  options?: Array<{ text: string; value: string }>;
+  selectOption?: (value: string) => void,
 }
 
 const Input = forwardRef<HTMLInputElement, Props>(({
@@ -18,10 +20,11 @@ const Input = forwardRef<HTMLInputElement, Props>(({
   label,
   errorMessage,
   step = 2,
+  options,
+  selectOption,
   ...restInputProps
 }, ref) => {
   const [showPassword, setShowPassword] = useState(false);
-
   return (
     <InputGroup className={classes['input-container']}>
       {label && <FormLabel htmlFor="input" className={classes['input-label']}> {label} </FormLabel>}
@@ -46,6 +49,18 @@ const Input = forwardRef<HTMLInputElement, Props>(({
               <FontAwesomeIcon icon={showPassword ? faEye : faEyeSlash} />
             </button>
           )}
+        {options && (
+        <div className={classes.options}>
+            {options.map(option => (
+              <button
+                type="button"
+                key={option.value}
+                onClick={() => selectOption && selectOption(option.value)}
+              >{option.text}
+              </button>
+            ))}
+        </div>
+        )}
       </div>
       {type !== 'search' && (
       <div className={classes['error-message-container']}>
