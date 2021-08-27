@@ -14,5 +14,8 @@ export const env = {
   jwt: {
     secret: getEnv('SECRET_KEY'),
     expiresIn: '24h'
+  },
+  auth: {
+    googleClientId: getEnv('GOOGLE_CLIENT_ID')
   }
 };
