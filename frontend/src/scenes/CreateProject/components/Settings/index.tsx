@@ -80,7 +80,7 @@ const Settings: FC<Props> = ({ changePage, currentPage, onChangeValue, region, i
         label={t('Atach image')}
         onFileChange={file => onChangeValue(ProjectKeys.IMAGE_URL, file)}
       />
-      {videoUrl && <ReactPlayer url={videoUrl} playing controls className={classes.projectImage} />}
+      {videoUrl && <ReactPlayer url={videoUrl} playing controls className={classes.projectVideo} />}
       <ImageUpload
         className={classes.addVideo}
         accept='video/*'
