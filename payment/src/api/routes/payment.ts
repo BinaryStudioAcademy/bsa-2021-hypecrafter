@@ -56,23 +56,25 @@ const init = ({ paymentService }: Services, path: string) => (app: MicroMq) => a
             }
           }) as { response: { ok: boolean, balance: number } };
           if (response.ok) {
-            paymentService.setTransaction({
-              balance: response.balance,
-              item: 'Balance replenishment',
-              type: 'Custom Fund',
-              total: payload.amount / 100,
-              userId: payload.metadata.userId
-            });
+            // await paymentService.setTransaction({
+            //   balance: response.balance,
+            //   item: 'Balance replenishment',
+            //   type: 'Custom Fund',
+            //   total: payload.amount / 100,
+            //   userId: 'c7a6e4d5-3906-47aa-ac82-8b1211f470f7'
+            // });
+            console.log(response);
           }
           break;
         }
         default:
           console.log(`Unhandled event type ${event.type}.`);
       }
-      return { status: 200 };
     } catch (err) {
       console.log(`Webhook Error: ${err.message}`);
       throw err;
     }
+    console.log('return');
+    return { status: 200 };
   }));
 export default init;
