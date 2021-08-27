@@ -1,4 +1,4 @@
-import { CategoryType } from '../../common/enums';
+import { CategoryType } from 'hypecrafter-shared/enums';
 
 export const categories = [
   {

@@ -31,7 +31,7 @@ const ProjectPage: FC = () => {
   }, []);
 
   return (
-    <LoaderWrapper isLoading={isLoading} variant='page'>
+    <LoaderWrapper isLoading={isLoading} variant="page">
       <Container className={classes.container}>
         <Row>
           <Header project={project} isAuthorized={isAuthorized} />
@@ -39,13 +39,17 @@ const ProjectPage: FC = () => {
         <Row>
           <Tabs>
             <Tab title="Story">
-              <Story />
+              <Story
+                story={project.story}
+                privileges={project.privileges}
+                tags={project.tags}
+              />
             </Tab>
             <Tab title="FAQ" amount={project.FAQ?.length}>
               <FAQ faqs={project.FAQ} />
             </Tab>
             <Tab title="Comments" amount={project.projectComments?.length}>
-              <Comments />
+              <Comments comments={project.projectComments} projectId={id} />
             </Tab>
             <Tab title="Statistics">
               <Statistics t={t} />

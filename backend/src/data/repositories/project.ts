@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-shadow */
 /* eslint-disable class-methods-use-this */
 /* eslint-disable default-case */
-import { ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
+import { ProjectsCategories, ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
 import { isNull } from 'lodash';
 import { EntityRepository, getRepository, Repository } from 'typeorm';
 import { Mark } from '../../common/enums';
@@ -207,6 +207,7 @@ export class ProjectRepository extends Repository<Project> {
                       'isBacker', CASE WHEN "userDonates"."userId" IS NULL THEN false ELSE true END,
                       'isOwner', CASE WHEN tu."userId" IS NULL THEN false ELSE true END
                     ),
+                  'id', comments.id,
                   'message', comments.message,
                   'createdAt', comments."createdAt",
                   'updatedAt', comments."updatedAt",
@@ -218,11 +219,14 @@ export class ProjectRepository extends Repository<Project> {
         .from(Project, 'project')
         .leftJoin('project.comments', 'comments')
         .leftJoin('comments.author', 'commentAuthor')
-        .leftJoin(
-          'donate',
-          'userDonates',
-          '"userDonates"."projectId" = project.id AND "userDonates"."userId" = "commentAuthor".id'
-        )
+        .leftJoin(subQuery1 => subQuery1
+          .select(`
+            DISTINCT "userId",
+            "projectId"
+          `)
+          .from('donate', 'donate'),
+        'userDonates',
+        '"userDonates"."projectId"=project."id" AND "userDonates"."userId"="commentAuthor"."id"')
         .leftJoin('project.team', 'team')
         .leftJoin('team_users', 'tu', 'tu."teamId" = team."id" AND tu."userId" = "commentAuthor".id')
         .groupBy('project.id'), 'cp', 'cp."projectId" = project.id')
@@ -328,10 +332,12 @@ export class ProjectRepository extends Repository<Project> {
       .getRawOne();
   }
 
-  public getBySortAndFilter({ sort, filter, }: { sort: ProjectsSort; filter: ProjectsFilter; }) {
-    const userId = "'ac7a5b8f-7fc4-4d1e-81c9-1a9c49c9b529'"; // hardcoded data
-    const orderBy = this.getOrderBy(sort);
-    const filterCondition = this.getFilterCondition(filter, userId);
+  public getBySortAndFilter({ sort, filter, category, userId }: {
+    sort: ProjectsSort;
+    filter: ProjectsFilter;
+    category: ProjectsCategories;
+    userId?: string;
+  }) {
     const query = this.createQueryBuilder('project')
       .select(`
         donated,
@@ -341,9 +347,11 @@ export class ProjectRepository extends Repository<Project> {
         project."imageUrl",
         goal,
         category.name AS "category",
-        tags,
+        tags
+        ${userId ? `,
         CASE WHEN up."isFavorite" IS NULL THEN false ELSE true END AS "isFavorite",
         CASE WHEN dnu."projectId" IS NULL THEN false ELSE true END AS "isDonated"
+        ` : ''}
       `)
       .leftJoin(subQuery => subQuery
         .select(`
@@ -376,24 +384,27 @@ export class ProjectRepository extends Repository<Project> {
         `)
         .from(Project, 'project')
         .leftJoin('project.userProjects', 'userProject')
-        .where(`"userProject"."userId" = ${userId}`),
+        .where(`"userProject"."userId" = '${userId}'`),
       'up',
       'up."projectId" = project.id')
         .leftJoin(subQuery => subQuery
           .select('DISTINCT "projectId"')
           .from('donate', 'donate')
-          .where(`donate."userId" = ${userId}`),
+          .where(`donate."userId" = '${userId}'`),
         'dnu',
         'dnu."projectId" = project.id');
     }
 
-    if (filter) {
-      query.where(filterCondition);
+    const categoryCondition = this.getCategoryFilterCondition(category);
+    query.where(categoryCondition);
+
+    if (userId) {
+      const filterCondition = this.getFilterCondition(filter, userId);
+      query.andWhere(filterCondition);
     }
 
-    if (sort) {
-      query.orderBy(orderBy);
-    }
+    const orderBy = this.getOrderBy(sort);
+    query.orderBy(orderBy);
 
     return query.execute();
   }
@@ -405,6 +416,10 @@ export class ProjectRepository extends Repository<Project> {
         return 'project."name"';
       case ProjectsSort.DATE:
         return 'project."createdAt"';
+      case ProjectsSort.POPULAR:
+        return 'project."totalInteractionTime"/project."totalViews"/project."minutesToRead"';
+      case ProjectsSort.RECOMMENDED:
+        return 'RANDOM()';
     }
   }
 
@@ -418,7 +433,17 @@ export class ProjectRepository extends Repository<Project> {
       case ProjectsFilter.INVESTED:
         return 'dnu."projectId" IS NOT NULL';
       case ProjectsFilter.OWN:
-        return `up."userId" = ${userId}`;
+        return `up."userId" = '${userId}'`;
+    }
+  }
+
+  // eslint-disable-next-line consistent-return
+  private getCategoryFilterCondition(category: ProjectsCategories) {
+    switch (category) {
+      case ProjectsCategories.ALL:
+        return 'project."id" IS NOT NULL';
+      default:
+        return `category.name = '${category}'`;
     }
   }
 }

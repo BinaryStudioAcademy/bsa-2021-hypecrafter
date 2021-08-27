@@ -59,6 +59,41 @@
   }
 }
 
+.project-story {
+  .tag-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .tag-item {
+    margin: 0px 10px 10px 0px;
+  }
+
+  .privilege-title {
+    @include heading-xl;
+    margin: 20px 0px;
+  }
+
+  .privilege-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+}
+
+.comment-wrapper {
+  margin-bottom: 20px;
+}
+
+.comment-input-wrapper {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.comment-btn {
+  height: 38px;
+}
+
 .statistics-wrapper {
   color: red;
 }

@@ -8,7 +8,7 @@ $value-font-size: 28px;
 $img-size: 24px;
 
 .wrapper {
-  width: $component-width;
+  max-width: $component-width;
   min-height: $component-height;
   padding: 20px 35px;
   background: $color-root-block-background;
