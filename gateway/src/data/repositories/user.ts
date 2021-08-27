@@ -15,8 +15,12 @@ export class UserRepository extends Repository<User> {
     return this.findOne({ email });
   }
 
-  createUser(data: { email: string; passwordHash: string }) {
+  createUser(data: { email: string; passwordHash: string; googleId?: string }) {
     const newUser: User = Object.assign(new User(), data);
     return this.save(newUser);
+  }
+
+  getByGoogleId(googleId: string) {
+    return this.findOne({ googleId });
   }
 }

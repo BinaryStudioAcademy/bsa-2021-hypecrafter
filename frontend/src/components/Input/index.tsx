@@ -63,9 +63,9 @@ const Input = forwardRef<HTMLInputElement, Props>(({
         )}
       </div>
       {type !== 'search' && (
-      <div className={classes['error-message-container']}>
-        {errorMessage && <span className={classes['error-message']}> {errorMessage} </span>}
-      </div>
+        <div className={classes['error-message-container']}>
+          {errorMessage && <span className={classes['error-message']}> {errorMessage} </span>}
+        </div>
       )}
     </InputGroup>
   );
