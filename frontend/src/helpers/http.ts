@@ -47,7 +47,7 @@ const getOptions = (method: HttpMethod, { params }: RequestArgs) => {
 };
 
 const getUrlWithQuery = (
-  url: string, query?: Record<string, string>
+  url: string, query?: Record<string, any>
 ): string => `${url}${query ? `?${queryString.stringify(query)}` : ''}`;
 
 const getUrl = (method: HttpMethod, { url, params, config }: RequestArgs): string => {

@@ -3,14 +3,24 @@ import { createReducer } from '../../helpers';
 import type {
   FetchUserProfileFailureActionType,
   FetchUserProfileSuccessActionType,
-  OpenModalTriggerActionType
+  OpenModalTriggerActionType,
+  SetEditingTriggerActionType,
+  UpdateUserProfileSuccessActionType,
+  UpdateUserProfileFailureActionType
 } from './actions';
-import { closeModalAction, fetchUserProfileAction, openModalAction } from './actions';
+import {
+  closeModalAction,
+  fetchUserProfileAction,
+  openModalAction,
+  setEditingAction,
+  updateUserProfileAction
+} from './actions';
 
 export interface UserProfileState {
   isLoading: boolean;
   id: string;
   item: UserProfile | undefined;
+  isEditing: boolean;
   error: string;
 }
 
@@ -18,6 +28,7 @@ export const initialState: UserProfileState = {
   isLoading: false,
   id: '',
   item: undefined,
+  isEditing: false,
   error: ''
 };
 
@@ -53,7 +64,34 @@ export const userProfileReducer = createReducer<UserProfileState>(initialState, 
       ...state,
       id: ''
     };
-  }
+  },
+  [setEditingAction.TRIGGER](state, action: SetEditingTriggerActionType) {
+    return {
+      ...state,
+      isEditing: action.payload
+    };
+  },
+  [updateUserProfileAction.TRIGGER](state) {
+    return {
+      ...state,
+      isLoading: true,
+      isEditing: false
+    };
+  },
+  [updateUserProfileAction.SUCCESS](state, action: UpdateUserProfileSuccessActionType) {
+    return {
+      ...state,
+      isLoading: false,
+      item: action.payload
+    };
+  },
+  [updateUserProfileAction.FAILURE](state, action: UpdateUserProfileFailureActionType) {
+    return {
+      ...state,
+      isLoading: false,
+      error: action.payload
+    };
+  },
 });
 
 export default userProfileReducer;

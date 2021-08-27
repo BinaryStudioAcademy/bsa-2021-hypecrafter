@@ -1,7 +1,7 @@
 import { Action } from 'redux';
 import { all, call, put, takeEvery } from 'redux-saga/effects';
 import { ProjectPage } from '../../common/types';
-import { getProject, setReaction as setReactionServ, setWatch as setWatchServ } from '../../services/project';
+import { getProject, setReaction, setWatch } from '../../services/project';
 import {
   fetchProject as fetchProjectAction,
   setReaction as setReactionAction,
@@ -9,12 +9,15 @@ import {
 } from './actions';
 
 interface ProjectAction extends Action {
-  payload: string
+  payload:{
+    id: string;
+    userId: string;
+  }
 }
 
 interface ProjectReaction extends Action {
   payload: {
-    isLiked: string | null,
+    isLiked: boolean | null,
     projectId: string
   }
 }
@@ -26,7 +29,7 @@ interface ProjectWatch extends Action {
   }
 }
 
-interface ProjectReactionResponse { likes: string, dislikes: string }
+interface ProjectReactionResponse { likes: number, dislikes: number }
 
 function* fetchProject(action: ProjectAction) {
   try {
@@ -41,9 +44,9 @@ function* watchFetchTopics() {
   yield takeEvery(fetchProjectAction.TRIGGER, fetchProject);
 }
 
-function* setReaction(action: ProjectReaction) {
+function* setReactionRequest(action: ProjectReaction) {
   try {
-    const response: ProjectReactionResponse = yield call(setReactionServ, action.payload);
+    const response: ProjectReactionResponse = yield call(setReaction, action.payload);
     yield put(setReactionAction.success(action.payload.isLiked, response.likes, response.dislikes));
   } catch (error) {
     yield put(setReactionAction.failure(error as string));
@@ -51,12 +54,12 @@ function* setReaction(action: ProjectReaction) {
 }
 
 function* watchSetReaction() {
-  yield takeEvery(setReactionAction.TRIGGER, setReaction);
+  yield takeEvery(setReactionAction.TRIGGER, setReactionRequest);
 }
 
-function* setWatch(action: ProjectWatch) {
+function* setWatchRequest(action: ProjectWatch) {
   try {
-    yield call(setWatchServ, action.payload);
+    yield call(setWatch, action.payload);
     yield put(setWatchAction.success(action.payload.isWatched));
   } catch (error) {
     yield put(setWatchAction.failure(error as string));
@@ -64,7 +67,7 @@ function* setWatch(action: ProjectWatch) {
 }
 
 function* watchSetWatch() {
-  yield takeEvery(setWatchAction.TRIGGER, setWatch);
+  yield takeEvery(setWatchAction.TRIGGER, setWatchRequest);
 }
 
 export default function* projectPageSaga() {

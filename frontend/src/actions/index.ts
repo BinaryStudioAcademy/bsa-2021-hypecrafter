@@ -13,7 +13,13 @@ export {
   fetchPopularTagsAction,
   setSelectedCategoryAction
 } from '../scenes/TrendsPage/actions';
-export { closeModalAction, fetchUserProfileAction, openModalAction } from '../scenes/UserPage/actions';
+export {
+  closeModalAction,
+  fetchUserProfileAction,
+  openModalAction,
+  setEditingAction,
+  updateUserProfileAction
+} from '../scenes/UserPage/actions';
 export { fetchTransactionsPageAction } from '../scenes/Wallet/Transactions/actions';
 export { authFetchUserAction } from './auth';
 export { getCategoriesAction } from './categories';

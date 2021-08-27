@@ -1,4 +1,5 @@
 import { Comment } from '../comment';
+import { Mark } from './mark';
 
 export interface Project {
   id: string;
@@ -27,7 +28,7 @@ export interface ProjectPage extends Project {
   facebookUrl?: string;
   dribbleUrl?: string;
   finishDate: string;
-  mark?: string | null;
+  mark?: Mark | null;
   isWatched: boolean;
   projectComments: Comment[];
 }
