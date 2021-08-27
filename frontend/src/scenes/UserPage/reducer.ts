@@ -74,7 +74,8 @@ export const userProfileReducer = createReducer<UserProfileState>(initialState, 
   [updateUserProfileAction.TRIGGER](state) {
     return {
       ...state,
-      isLoading: true
+      isLoading: true,
+      isEditing: false
     };
   },
   [updateUserProfileAction.SUCCESS](state, action: UpdateUserProfileSuccessActionType) {
