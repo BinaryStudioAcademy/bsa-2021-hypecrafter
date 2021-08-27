@@ -43,26 +43,14 @@ const init = ({ paymentService }: Services, path: string) => (app: MicroMq) => a
       console.log(payload.metadata.userId);
       switch (event.type) {
         case 'payment_intent.succeeded': {
-          console.log(`PaymentIntent for ${payload.amount / 100}$ was successful!`);
-          const { response } = await app.ask('backend', {
-            server: {
-              action: 'replenishment',
-              meta: {
-                id: payload.metadata.userId,
-                amount: payload.amount / 100,
-              },
-            }
-          }) as { response: { ok: boolean, balance: number } };
-          if (response.ok) {
-            await paymentService.setTransaction({
-              balance: response.balance,
-              item: 'Balance replenishment',
-              type: 'Custom Fund',
-              total: payload.amount / 100,
-              userId: payload.metadata.userId
-            });
-          }
-          console.log(response);
+          await paymentService.setTransaction({
+            balance: payload.amount,
+            item: 'Balance replenishment',
+            type: 'Custom Fund',
+            total: payload.amount / 100,
+            userId: payload.metadata.userId
+          });
+          console.log(`Transaction record for ${payload.amount / 100}$ was successful!`);
           break;
         }
         default:
@@ -72,7 +60,6 @@ const init = ({ paymentService }: Services, path: string) => (app: MicroMq) => a
       console.log(`Webhook Error: ${err.message}`);
       throw err;
     }
-    console.log('return');
     return { status: 200 };
   }));
 export default init;
