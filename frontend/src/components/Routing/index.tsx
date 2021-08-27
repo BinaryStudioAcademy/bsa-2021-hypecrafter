@@ -16,11 +16,12 @@ import Transactions from '../../scenes/Wallet/Transactions';
 import Header from '../Header';
 import LoaderWrapper from '../LoaderWrapper';
 import Main from '../Main';
+import MetaData from '../MetaData';
 import ModalWindow from '../ModalWindow';
 import PageNotFound from '../PageNotFound';
 import PrivateRoute from '../PrivateRoute';
 import PublicRoute from '../PublicRoute';
-import MetaData from '../MetaData';
+import UserModal from '../UserModal';
 
 const routesWitoutHeader = [Routes.LOGIN, Routes.SIGNUP];
 
@@ -65,6 +66,11 @@ const Routing = () => {
           size="extra-wide"
           centered={false}
           onHide={closeModalHandler}
+        />
+        <PublicRoute
+          restricted={false}
+          path={Routes.HOME}
+          component={UserModal}
         />
         <Switch>
           <PublicRoute
