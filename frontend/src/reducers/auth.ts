@@ -1,7 +1,7 @@
 import type {
   AuthFetchUserSuccessActionType
 } from '../actions/auth';
-import { authFetchUserAction } from '../actions/auth';
+import { authFetchUserAction, authRemoveUserAction } from '../actions/auth';
 import { User } from '../common/types';
 import { createReducer } from '../helpers';
 
@@ -33,6 +33,12 @@ export const authReducer = createReducer<AuthState>(authState, {
     return {
       ...state,
       isLoading: false
+    };
+  },
+  [authRemoveUserAction.TRIGGER](state) {
+    return {
+      ...state,
+      user: null
     };
   }
 });
