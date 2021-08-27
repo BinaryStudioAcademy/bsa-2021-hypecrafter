@@ -1,5 +1,5 @@
 import { Entity, ManyToOne } from 'typeorm';
-import { Team, UserProfile } from './';
+import { Team, UserProfile } from '.';
 import { AbstractEntity } from './abstract';
 
 @Entity()

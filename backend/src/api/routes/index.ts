@@ -2,6 +2,7 @@ import _ from 'lodash';
 import MicroMq from 'micromq';
 import { Path } from '../../common/enums';
 import { Services } from '../../services';
+import authRouter from './auth';
 import categoryRouter from './category';
 import projectRouter from './project';
 import registerRouter from './registration';
@@ -14,8 +15,10 @@ const initRoutes = (app: MicroMq, services: Services) => _.flow([
   topicRouter(services, Path.Topic),
   projectRouter(services, Path.Project),
   registerRouter(services, Path.Register),
+  registerRouter(services, Path.googleAuth),
   tagRouter(services, Path.Tag),
-  categoryRouter(services, Path.Category)
+  categoryRouter(services, Path.Category),
+  authRouter(services, Path.Auth)
 ])(app);
 
 export default initRoutes;

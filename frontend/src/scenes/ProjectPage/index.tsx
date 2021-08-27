@@ -3,7 +3,7 @@ import { Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import LoaderWrapper from '../../components/LoaderWrapper';
 import { Tab, Tabs } from '../../components/Tabs';
-import { useAction, useTypedSelector } from '../../hooks';
+import { useAction, useAuth, useTypedSelector } from '../../hooks';
 import { useLocalization } from '../../providers/localization';
 import Comments from './components/Comments';
 import FAQ from './components/FAQ';
@@ -16,6 +16,7 @@ const ProjectPage: FC = () => {
   const { id } = useParams<{ id: string }>();
   const { t } = useLocalization();
   const { fetchProject } = useAction();
+  const { id: userId, isAuthorized } = useAuth();
   const { project, isLoading } = useTypedSelector(
     (
       { projectPage }
@@ -26,14 +27,14 @@ const ProjectPage: FC = () => {
   );
 
   useEffect(() => {
-    fetchProject(id);
+    fetchProject({ id, userId });
   }, []);
 
   return (
     <LoaderWrapper isLoading={isLoading} variant='page'>
       <Container className={classes.container}>
         <Row>
-          <Header project={project} />
+          <Header project={project} isAuthorized={isAuthorized} />
         </Row>
         <Row>
           <Tabs>
