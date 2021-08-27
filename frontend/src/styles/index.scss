@@ -1,12 +1,28 @@
 @import 'vars';
 @import 'fonts.scss';
 
+*{
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: lighten($color-menu-finish-background, 15%);
+    border-radius: 0.5em;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: lighten($color-menu-finish-background, 25%);
+  }
+  scrollbar-width: thin;
+  scrollbar-color: lighten($color-menu-finish-background, 15%) auto;
+}
+
 body {
   background: $color-root-background;
   color: $color-root-text;
   font-size: $font-size-text;
   margin: 0;
   font-family: $font-roboto400;
+  overflow-y: overlay;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -14,6 +30,7 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
 .jodit-container{
     color: black;
 }

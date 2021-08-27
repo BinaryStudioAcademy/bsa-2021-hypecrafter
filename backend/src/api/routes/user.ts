@@ -5,6 +5,9 @@ import { Services } from '../../services';
 
 const init = ({ userService }: Services, path: string) => (app: MicroMq) => app
   .get(path, wrap(() => userService.getAll()))
-  .get(`${path}/:id`, wrap<Empty, UserProfile, { id: string }, Empty>((req) => userService.getById(req.params.id)));
+  .get(`${path}/:id`, wrap<Empty, UserProfile, { id: string }, Empty>((req) => userService.getById(req.params.id)))
+  .put(`${path}/:id`, wrap<Empty, UserProfile, UserProfile, Empty>(req => (
+    userService.updateById({ id: req.params.id, data: req.body })
+  )));
 
 export default init;
