@@ -40,6 +40,7 @@ const init = ({ paymentService }: Services, path: string) => (app: MicroMq) => a
     try {
       const event: Stripe.Event = stripe.webhooks.constructEvent(payloadString, header, endpointSecret);
       const payload = event.data.object as Stripe.PaymentIntent;
+      console.log(payload.metadata.userId);
       switch (event.type) {
         case 'payment_intent.succeeded': {
           console.log(`PaymentIntent for ${payload.amount / 100}$ was successful!`);
@@ -53,13 +54,13 @@ const init = ({ paymentService }: Services, path: string) => (app: MicroMq) => a
             }
           }) as { response: { ok: boolean, balance: number } };
           if (response.ok) {
-            // await paymentService.setTransaction({
-            //   balance: response.balance,
-            //   item: 'Balance replenishment',
-            //   type: 'Custom Fund',
-            //   total: payload.amount / 100,
-            //   userId: 'c7a6e4d5-3906-47aa-ac82-8b1211f470f7'
-            // });
+            await paymentService.setTransaction({
+              balance: response.balance,
+              item: 'Balance replenishment',
+              type: 'Custom Fund',
+              total: payload.amount / 100,
+              userId: payload.metadata.userId
+            });
           }
           console.log(response);
           break;

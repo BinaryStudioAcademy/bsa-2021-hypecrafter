@@ -68,9 +68,9 @@ export default function CheckoutForm() {
           id="submit"
         >
           <span id="button-text">
-            {t(processing
-              ? 'Load...'
-              : 'Pay')}
+            {processing
+              ? t('Load...')
+              : t('Pay')}
           </span>
         </Button>
       </div>
