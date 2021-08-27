@@ -9,7 +9,10 @@ import {
 } from './actions';
 
 interface ProjectAction extends Action {
-  payload: string
+  payload:{
+    id: string;
+    userId: string;
+  }
 }
 
 interface ProjectReaction extends Action {
