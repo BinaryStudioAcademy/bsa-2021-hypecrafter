@@ -23,9 +23,6 @@ export {
 export { fetchTransactionsPageAction } from '../scenes/Wallet/Transactions/actions';
 export { authFetchUserAction } from './auth';
 export { getCategoriesAction } from './categories';
-<<<<<<< HEAD
 export { getTagsAction } from './tags';
-=======
 export { getUsersAction } from './users';
->>>>>>> develop
 
