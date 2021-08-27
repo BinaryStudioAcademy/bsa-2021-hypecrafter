@@ -527,3 +527,22 @@
     backdrop-filter: blur(6px) !important;
   }
 }
+
+.auth-buttons-wrapper {
+  width: 250px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 30px;
+}
+
+.auth-button {
+  padding: auto;;
+  margin: 0;
+  width: 45%;
+  font-size: $font-size-aсcent;
+  line-height: 19px;
+  background: $color-primary-button;
+  border: 1px solid $color-primary-button;
+}

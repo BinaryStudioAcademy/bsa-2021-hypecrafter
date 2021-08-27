@@ -8,7 +8,10 @@ const BLACK_ROUTES = [
   '/payment/:id/:page',
   '/reset-password',
   '/projects/create',
-  '/profile'
+  '/profile',
+  '/auth/current-user',
+  '/projects/reaction',
+  '/projects/watch'
 ];
 
 export { BLACK_ROUTES };

@@ -11,7 +11,8 @@ export function initServices(repositories: Repositories): Services {
     topicService: new TopicService(repositories.topicRepository),
     projectService: new ProjectService(repositories.projectRepository,
       repositories.teamRepository, repositories.chatRepository,
-      repositories.projectTagRepository, repositories.tagRepository),
+      repositories.projectTagRepository, repositories.tagRepository,
+      repositories.userRepository),
     tagService: new TagService(repositories.tagRepository),
     categoryService: new CategoryService(repositories.categoryRepository),
   };

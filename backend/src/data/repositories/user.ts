@@ -13,6 +13,13 @@ export class UserRepository extends Repository<UserProfile> {
     return this.findOne({ id });
   }
 
+  public getCurrentUser(id: string) {
+    return this.createQueryBuilder('user')
+      .select('"firstName", "lastName", id, "imageUrl"')
+      .where({ id })
+      .getRawOne();
+  }
+
   public createUser(data: RegisterData) {
     const newUserProfile = Object.assign(new UserProfile(), data);
     return this.save(newUserProfile);

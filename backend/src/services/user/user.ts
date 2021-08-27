@@ -20,6 +20,10 @@ export default class UserService {
     return this.#userRepository.getById(id);
   }
 
+  public getCurrentUser(id: string) {
+    return this.#userRepository.getCurrentUser(id);
+  }
+
   public async registerUser({ data, tokens }: RegisterReqBody) {
     try {
       console.log(9);
