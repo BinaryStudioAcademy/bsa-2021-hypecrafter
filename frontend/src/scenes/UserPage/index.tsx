@@ -1,11 +1,15 @@
-import { useEffect } from 'react';
+import { FC, useEffect } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import LoaderWrapper from '../../components/LoaderWrapper';
 import { useAction, useTypedSelector } from '../../hooks';
 import Body from './components/Body';
 import Header from './components/Header';
 
-const UserPage = () => {
+interface Props {
+  userId?: string
+}
+
+const UserPage: FC<Props> = ({ userId: id }) => {
   const store = useTypedSelector(({ userProfile: { item, isLoading, isEditing } }) => ({
     userProfile: item,
     isLoading,
@@ -15,9 +19,11 @@ const UserPage = () => {
 
   const { userProfile, isLoading, isEditing } = store;
 
+  const userId = id || 'ac7a5b8f-7fc4-4d1e-81c9-1a9c49c9b529';
   useEffect(() => {
-    fetchUserProfileAction('ac7a5b8f-7fc4-4d1e-81c9-1a9c49c9b529');
-  }, [fetchUserProfileAction]);
+    console.log(userId);
+    fetchUserProfileAction(userId);
+  }, [fetchUserProfileAction, userId]);
 
   // Mocked Data
   const projects = [

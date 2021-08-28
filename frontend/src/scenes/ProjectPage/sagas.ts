@@ -1,12 +1,17 @@
 import { Action } from 'redux';
 import { all, call, put, takeEvery } from 'redux-saga/effects';
-import { ProjectPage } from '../../common/types';
+import { Comment, CreateComment, ProjectPage } from '../../common/types';
+import { addComment } from '../../services/comment';
 import { getProject, setReaction, setWatch } from '../../services/project';
 import {
-  fetchProject as fetchProjectAction,
+  addComment as addCommentAction, fetchProject as fetchProjectAction,
   setReaction as setReactionAction,
   setWatch as setWatchAction
 } from './actions';
+
+interface AddCommentAction extends Action {
+  payload: CreateComment;
+}
 
 interface ProjectAction extends Action {
   payload:{
@@ -70,10 +75,24 @@ function* watchSetWatch() {
   yield takeEvery(setWatchAction.TRIGGER, setWatchRequest);
 }
 
+function* createComment(action: AddCommentAction) {
+  try {
+    const response: Comment = yield call(addComment, action.payload);
+    yield put(addCommentAction.success(response));
+  } catch (error) {
+    yield put(addCommentAction.failure(error as string));
+  }
+}
+
+function* watchCreateComment() {
+  yield takeEvery(addCommentAction.TRIGGER, createComment);
+}
+
 export default function* projectPageSaga() {
   yield all([
     watchFetchTopics(),
     watchSetReaction(),
-    watchSetWatch()
+    watchSetWatch(),
+    watchCreateComment()
   ]);
 }

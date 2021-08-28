@@ -4,6 +4,7 @@ import { Path } from '../../common/enums';
 import { Services } from '../../services';
 import authRouter from './auth';
 import categoryRouter from './category';
+import commentRouter from './comment';
 import notificationRouter from './notification';
 import paymentRouter from './payment';
 import projectRouter from './project';
@@ -22,6 +23,7 @@ const initRoutes = (services: Services) => {
   router.use(Path.Project, projectRouter());
   router.use(Path.Tag, tagRouter());
   router.use(Path.Category, categoryRouter());
+  router.use(Path.Comment, commentRouter());
   router.use('*', (_req, res) => {
     res.status(404).sendFile(path.resolve('src/common/errorPages/404.html'));
   });
