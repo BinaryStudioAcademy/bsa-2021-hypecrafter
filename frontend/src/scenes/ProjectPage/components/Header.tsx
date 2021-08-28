@@ -4,6 +4,7 @@ import { faBookmark as faBookmarkFilled } from '@fortawesome/free-solid-svg-icon
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FunctionComponent } from 'react';
 import { Col, Container, Image, Row } from 'react-bootstrap';
+import ReactPlayer from 'react-player';
 import { projectPageColors } from '../../../common/constans';
 import { ProjectPage } from '../../../common/types';
 import ProjectInfo from '../../../components/ProjectInfo';
@@ -22,6 +23,7 @@ const Header: FunctionComponent<HeaderProps> = ({ project, isAuthorized }) => {
     description,
     category,
     imageUrl,
+    videoUrl,
     // tags,
     goal,
     donated,
@@ -47,7 +49,16 @@ const Header: FunctionComponent<HeaderProps> = ({ project, isAuthorized }) => {
     <Container className={classes['project-header']}>
       <Row>
         <Col xs={12} lg={5}>
-          <Image src={imageUrl} className={classes['project-image']} />
+          {!videoUrl && <Image src={imageUrl} className={classes['project-image']} />}
+          {videoUrl && (
+          <ReactPlayer
+            controls
+            width="100%"
+            url={videoUrl}
+            post
+            config={{ file: { attributes: { poster: imageUrl } } }}
+          />
+          )}
         </Col>
         <Col xs={12} lg={7}>
           <Row>
