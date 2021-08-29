@@ -17,7 +17,7 @@ export const initRepositories = (): Repositories => ({
   teamRepository: getCustomRepository(TeamRepository),
   chatRepository: getCustomRepository(ChatRepository),
   tagRepository: getCustomRepository(TagRepository),
-  projectTagRepository: getCustomRepository(ProjectTagRepository)
+  projectTagRepository: getCustomRepository(ProjectTagRepository),
   commentRepository: getCustomRepository(CommentRepository)
 });
 
@@ -41,6 +41,6 @@ export {
   ChatRepository,
   TagRepository,
   CategoryRepository,
-  ProjectTagRepository
+  ProjectTagRepository,
   CommentRepository
 };
