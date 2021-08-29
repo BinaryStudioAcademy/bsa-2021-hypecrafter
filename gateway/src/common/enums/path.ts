@@ -6,7 +6,8 @@ export enum Path {
   Project = '/projects',
   Payment = '/payment',
   Tag = '/tags',
-  Category = '/categories'
+  Category = '/categories',
+  Comment = '/comments'
 }
 
 export enum AuthApiPath {
@@ -15,5 +16,6 @@ export enum AuthApiPath {
   TokenReject = '/token/reject',
   Register = '/register',
   Facebook = '/facebook',
+  CurrentUser = '/current-user',
   Google = '/google'
 }

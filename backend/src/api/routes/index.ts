@@ -2,7 +2,9 @@ import _ from 'lodash';
 import MicroMq from 'micromq';
 import { Path } from '../../common/enums';
 import { Services } from '../../services';
+import authRouter from './auth';
 import categoryRouter from './category';
+import commentRouter from './comment';
 import projectRouter from './project';
 import registerRouter from './registration';
 import tagRouter from './tag';
@@ -17,7 +19,9 @@ const initRoutes = (app: MicroMq, services: Services) => _.flow([
   registerRouter(services, Path.facebookAuth),
   registerRouter(services, Path.googleAuth),
   tagRouter(services, Path.Tag),
-  categoryRouter(services, Path.Category)
+  categoryRouter(services, Path.Category),
+  commentRouter(services, Path.Comment),
+  authRouter(services, Path.Auth)
 ])(app);
 
 export default initRoutes;
