@@ -6,7 +6,7 @@ import { Nav, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import hypeCoin from '../../assets/HypeCoin.png';
 import { Routes } from '../../common/enums';
-import { useAuth, useScroll, useWindowResize } from '../../hooks';
+import { useAuth, useScroll, useWindowResize, useBalance } from '../../hooks';
 import { useLocalization } from '../../providers/localization';
 import { logout } from '../../services/logout';
 import Avatar from '../Avatar';
@@ -26,6 +26,8 @@ const Header = () => {
   const [isProfileMenu, setProfileMenu] = useState(false);
   const [isVisibleOnScroll, setVisibleOnScroll] = useState(false);
   const { isMobile } = useWindowResize();
+
+  const { isBalance, balance } = useBalance();
 
   const handleProfileMenu = () => {
     if (!isProfileMenu) {
@@ -108,9 +110,14 @@ const Header = () => {
               <Nav
                 className={classes.desktop_header_user_menu}
               >
-                <div className={classes.header_hypeCoin}>
+                <div
+                  className={`
+                    ${classes.header_hypeCoin}
+                    ${isBalance ? '' : classes.hide}
+                  `}
+                >
                   <Link to={Routes.ADDFUNDS}><img src={hypeCoin} alt="HypeCoin" /></Link>
-                  <Link to={Routes.ADDFUNDS}>1500</Link>
+                  <Link to={Routes.ADDFUNDS}>{balance}</Link>
                 </div>
                 <div className={classes.header_natification}>
                   <FontAwesomeIcon icon={faBell} className={classes.header_natification_bell} />
@@ -246,10 +253,14 @@ const Header = () => {
           <Logo />
         </NavLink>
         <div
-          className={`${classes.header_hypeCoin} ${classes.mobile_hypeCoin}`}
+          className={`
+            ${classes.header_hypeCoin}
+            ${classes.mobile_hypeCoin}
+            ${isBalance ? '' : classes.hide}
+          `}
         >
           <img src={hypeCoin} alt="HypeCoin" />
-          <span>1500</span>
+          <span>{balance}</span>
         </div>
         <div className={classes.mobile_notification}>
           <FontAwesomeIcon

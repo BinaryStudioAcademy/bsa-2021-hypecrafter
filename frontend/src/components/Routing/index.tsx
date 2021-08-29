@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Redirect, Switch, useLocation } from 'react-router-dom';
 import { Routes } from '../../common/enums';
-import { getAccessToken } from '../../helpers/localStorage';
-import { useAction, useTypedSelector } from '../../hooks';
+import { useAction, useTypedSelector, useAuth } from '../../hooks';
 import LoginPage from '../../scenes/Auth/LoginPage';
 import SignupPage from '../../scenes/Auth/SignupPage';
 import CreateProject from '../../scenes/CreateProject';
@@ -27,17 +26,10 @@ const routesWitoutHeader = [Routes.LOGIN, Routes.SIGNUP];
 
 const Routing = () => {
   const { authFetchUserAction, closeModalAction } = useAction();
-  const authStore = useTypedSelector(({ auth: { user, isLoading } }) => ({
-    user,
-    isLoading
-  }));
-  const userProfileStore = useTypedSelector(({ userProfile: { id } }) => ({
-    id
-  }));
+  const { id, isLoading } = useTypedSelector(({ auth }) => auth);
+  const { tokens } = useTypedSelector(({ authentication }) => authentication);
   const { pathname } = useLocation();
-  const { user, isLoading } = authStore;
-  const { id } = userProfileStore;
-  const hasToken = Boolean(getAccessToken());
+  const { isAuthorized } = useAuth();
   const [showModal, setShowModal] = useState(false);
 
   const closeModalHandler = () => {
@@ -46,18 +38,14 @@ const Routing = () => {
   };
 
   useEffect(() => {
-    if (hasToken) {
-      authFetchUserAction();
-      if (id !== '') {
-        setShowModal(true);
-      }
-    }
-  }, [authFetchUserAction, id]);
+    if (!isAuthorized && tokens) authFetchUserAction();
+    if (id) setShowModal(true);
+  }, [authFetchUserAction, id, isAuthorized, tokens]);
 
   return (
     <>
       <MetaData />
-      <LoaderWrapper isLoading={isLoading || (!user && hasToken)} variant="page">
+      <LoaderWrapper isLoading={isLoading} variant="page">
         {!routesWitoutHeader.includes(pathname as Routes) && <Header />}
         <ModalWindow
           show={showModal}

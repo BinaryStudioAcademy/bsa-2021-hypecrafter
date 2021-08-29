@@ -14,14 +14,14 @@ export {
   fetchPopularTagsAction,
   setSelectedCategoryAction
 } from '../scenes/TrendsPage/actions';
+export { fetchUserProfileAction } from '../scenes/UserPage/actions';
+export { fetchTransactionsPageAction } from '../scenes/Wallet/Transactions/actions';
 export {
-  closeModalAction,
-  fetchUserProfileAction,
+  authFetchUserAction,
   openModalAction,
+  closeModalAction,
   setEditingAction,
   updateUserProfileAction
-} from '../scenes/UserPage/actions';
-export { fetchTransactionsPageAction } from '../scenes/Wallet/Transactions/actions';
-export { authFetchUserAction } from './auth';
+} from './auth';
 export { getCategoriesAction } from './categories';
 export { getUsersAction } from './users';

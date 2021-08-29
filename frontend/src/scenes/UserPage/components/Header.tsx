@@ -27,7 +27,8 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile, isEditing, setEdi
     rating,
     instagramUrl,
     facebookUrl,
-    dribbleUrl
+    dribbleUrl,
+    imageUrl
   } = userProfile;
   const { t } = useLocalization();
 
@@ -69,7 +70,11 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile, isEditing, setEdi
     <Container className={classes['header-container']}>
       <Row className="align-items-md-end">
         <Col md={12} lg={3} xl={2} className={`text-center ${classes['avatar-column']}`}>
-          <Image src="https://source.unsplash.com/800x600/?portrait" roundedCircle className={classes['user-avatar']} />
+          <Image
+            src={imageUrl || 'https://source.unsplash.com/800x600/?portrait'}
+            roundedCircle
+            className={classes['user-avatar']}
+          />
         </Col>
         <Col md={12} lg={5} xl={4} className="text-md-left">
           <div className={classes['user-info']}>
