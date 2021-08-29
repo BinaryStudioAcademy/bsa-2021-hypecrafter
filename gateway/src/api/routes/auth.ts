@@ -8,7 +8,7 @@ import { getGoogleInfo } from '../../helpers/getGoogleInfo';
 import { wrap } from '../../helpers/request';
 import { Services } from '../../services/index';
 import { authentication as authenticationMiddleware } from '../middlewares/authentication';
-import { facebook } from '../middlewares/facebook';
+import { facebookAuth } from '../middlewares/authFacebook';
 import { registration as registrationMiddleware } from '../middlewares/registration';
 
 const init = (services: Services) => {
@@ -43,9 +43,9 @@ const init = (services: Services) => {
     })
     .post(
       AuthApiPath.Facebook,
-      facebook,
+      facebookAuth,
       async (req: Request, res: Response) => {
-        const { facebookId, firstName, lastName, email } = req.user as any;
+        const { facebookId, firstName, lastName, email } = req.user;
         const userAgentInfo: string = req.headers['user-agent'];
         const user = await services.authService.getUserByFacebookId(facebookId);
         if (!user) {
@@ -71,7 +71,7 @@ const init = (services: Services) => {
       AuthApiPath.Login,
       authenticationMiddleware,
       wrap<Empty, Tokens, { id: string }, Empty>((req) => {
-        const userId: string = (req.user as User).id;
+        const { id: userId } = req.user;
         const userAgentInfo: string = req.headers['user-agent'];
         const result = services.authService.loginUser(userId, userAgentInfo);
         return Promise.resolve(result);

@@ -1,4 +1,5 @@
 import { EntityRepository, Repository } from 'typeorm';
+import { RegisterData } from '../../common/types/registration/registration';
 import { User } from '../entities/user';
 
 @EntityRepository(User)
@@ -19,7 +20,7 @@ export class UserRepository extends Repository<User> {
     return this.findOne({ facebookId });
   }
 
-  createUser(data: { email: string; passwordHash: string; facebookId?: string, googleId?: string }) {
+  createUser(data: RegisterData) {
     const newUser: User = Object.assign(new User(), data);
     return this.save(newUser);
   }

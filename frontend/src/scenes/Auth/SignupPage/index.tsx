@@ -37,7 +37,6 @@ const SignupPage: FunctionComponent = () => {
   };
 
   const handleSignupWithFacebook = (data: ReactFacebookLoginInfo) => {
-    console.log(data);
     const { accessToken } = data;
     facebookAuthAction(accessToken);
   };
