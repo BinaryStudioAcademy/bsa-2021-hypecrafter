@@ -20,13 +20,30 @@ export default class UserService {
     return this.#userRepository.getById(id);
   }
 
+  public getByEmail(email: string) {
+    try {
+      return this.#userRepository.getByEmail(email);
+    } catch {
+      throw new CustomError(
+        HttpStatusCode.INTERNAL_SERVER_ERROR,
+        'User is not found'
+      );
+    }
+  }
+
   public getCurrentUser(id: string) {
-    return this.#userRepository.getCurrentUser(id);
+    try {
+      return this.#userRepository.getById(id);
+    } catch {
+      throw new CustomError(
+        HttpStatusCode.INTERNAL_SERVER_ERROR,
+        'User not created'
+      );
+    }
   }
 
   public async registerUser({ data, tokens }: RegisterReqBody) {
     try {
-      console.log(9);
       await this.#userRepository.createUser(data);
       return tokens;
     } catch {

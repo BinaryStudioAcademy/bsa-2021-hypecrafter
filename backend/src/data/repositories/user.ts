@@ -13,11 +13,8 @@ export class UserRepository extends Repository<UserProfile> {
     return this.findOne({ id });
   }
 
-  public getCurrentUser(id: string) {
-    return this.createQueryBuilder('user')
-      .select('"firstName", "lastName", id, "imageUrl"')
-      .where({ id })
-      .getRawOne();
+  public getByEmail(email: string) {
+    return this.findOne({ email });
   }
 
   public createUser(data: RegisterData) {
@@ -27,6 +24,6 @@ export class UserRepository extends Repository<UserProfile> {
 
   public async updateUserById(id: string, data: InterfaceUserProfile) {
     await this.update(id, data);
-    return this.getById(id);
+    return { success: true };
   }
 }
