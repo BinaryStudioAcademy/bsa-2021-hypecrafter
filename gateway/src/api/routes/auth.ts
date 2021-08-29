@@ -1,4 +1,4 @@
-import { Response, Router } from 'express';
+import { Response, Router, Request } from 'express';
 import { HttpStatusCode, Project } from 'hypecrafter-shared/enums';
 import { AuthApiPath } from '../../common/enums';
 import { Tokens } from '../../common/types/registration';
@@ -9,12 +9,17 @@ import { wrap } from '../../helpers/request';
 import { Services } from '../../services/index';
 import { authentication as authenticationMiddleware } from '../middlewares/authentication';
 import { registration as registrationMiddleware } from '../middlewares/registration';
+import { saveReqBodyUserId } from '../middlewares/saveReqBodyUserId';
 
 const init = (services: Services) => {
   const router = Router();
 
   return router
-    .get([AuthApiPath.CurrentUser], (_, res: Response) => res.delegate(Project.BACKEND))
+    .get(
+      [AuthApiPath.CurrentUser],
+      saveReqBodyUserId,
+      (_: Request, res: Response) => res.delegate(Project.BACKEND)
+    )
     .post(AuthApiPath.Google, async (req, res) => {
       const { token } = req.body;
       const data = await getGoogleInfo(token);
