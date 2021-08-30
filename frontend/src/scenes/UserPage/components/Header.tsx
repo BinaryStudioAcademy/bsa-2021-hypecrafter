@@ -1,4 +1,4 @@
-import { faDribbble, faFacebookSquare, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faDribbble, faFacebookSquare, faInstagram, faPinterest, faBehance } from '@fortawesome/free-brands-svg-icons';
 import { faMapMarkerAlt, faUserEdit } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ChangeEvent, FunctionComponent, useState } from 'react';
@@ -27,7 +27,9 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile, isEditing, setEdi
     rating,
     instagramUrl,
     facebookUrl,
-    dribbleUrl
+    dribbleUrl,
+    pinterestUrl,
+    behanceUrl
   } = userProfile;
   const { t } = useLocalization();
 
