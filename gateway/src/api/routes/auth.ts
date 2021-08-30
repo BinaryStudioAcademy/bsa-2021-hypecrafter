@@ -9,7 +9,7 @@ import { wrap } from '../../helpers/request';
 import { Services } from '../../services/index';
 import { authentication as authenticationMiddleware } from '../middlewares/authentication';
 import { registration as registrationMiddleware } from '../middlewares/registration';
-import { saveReqBodyUserId } from '../middlewares/saveReqBodyUserId';
+import { saveReqBodyUserEmail } from '../middlewares/saveReqBodyUserEmail';
 
 const init = (services: Services) => {
   const router = Router();
@@ -17,7 +17,7 @@ const init = (services: Services) => {
   return router
     .get(
       [AuthApiPath.CurrentUser],
-      saveReqBodyUserId,
+      saveReqBodyUserEmail,
       (_: Request, res: Response) => res.delegate(Project.BACKEND)
     )
     .post(AuthApiPath.Google, async (req, res) => {
