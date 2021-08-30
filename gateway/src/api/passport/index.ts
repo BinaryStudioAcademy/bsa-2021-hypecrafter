@@ -1,5 +1,5 @@
+/* eslint-disable import/no-self-import */
 import { Express } from 'express';
-// eslint-disable-next-line import/no-self-import
 import passport from 'passport';
 import { ExtractJwt, Strategy as JwtStrategy } from 'passport-jwt';
 import { Strategy as LocalStrategy } from 'passport-local';
@@ -50,11 +50,14 @@ export function initPassport(app: Express, repositories: Repositories) {
     )
   );
 
-  passport.use(
-    new JwtStrategy(options, async (jwtPayload, done) => {
-      done(null, jwtPayload);
-    })
-  );
+  passport.use(new JwtStrategy(options, async ({ userId }: { userId: string }, done) => {
+    try {
+      const { email } = await repositories.userRepository.getById(userId);
+      return email ? done(null, { email }) : done({ status: 401, message: 'Token is invalid.' }, null);
+    } catch (err) {
+      return done(err);
+    }
+  }));
 
   app.use(passport.initialize());
 }
