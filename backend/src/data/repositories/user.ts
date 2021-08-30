@@ -13,6 +13,10 @@ export class UserRepository extends Repository<UserProfile> {
     return this.findOne({ id });
   }
 
+  public getByEmail(email: string) {
+    return this.findOne({ email });
+  }
+
   public getCurrentUser(id: string) {
     return this.createQueryBuilder('user')
       .select('"firstName", "lastName", id, "imageUrl"')
