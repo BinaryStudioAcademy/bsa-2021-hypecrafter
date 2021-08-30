@@ -106,7 +106,7 @@ const Header: FunctionComponent<HeaderProps> = ({ project, isAuthorized }) => {
             <ModalWindow
               show={showShareModal}
               title="Share"
-              body={<ShareProjectModal />}
+              body={<ShareProjectModal imageUrl={imageUrl} title={name} />}
               size="small"
               centered={false}
               onHide={() => setShowShareModal(false)}
