@@ -15,6 +15,7 @@
     "chart.js": "^3.5.0",
     "classnames": "^2.3.1",
     "dotenv": "^8.2.0",
+    "html-react-parser": "^1.2.8",
     "hypecrafter-shared": "file:../shared/build",
     "i18next": "^20.3.5",
     "i18next-browser-languagedetector": "^6.1.2",
