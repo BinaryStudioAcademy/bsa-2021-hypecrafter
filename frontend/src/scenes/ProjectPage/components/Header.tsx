@@ -1,11 +1,12 @@
 import { faDribbble, faFacebookSquare, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faBookmark as faBookmarkEmpty } from '@fortawesome/free-regular-svg-icons';
-import { faBookmark as faBookmarkFilled } from '@fortawesome/free-solid-svg-icons';
+import { faBookmark as faBookmarkFilled, faShare } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FunctionComponent } from 'react';
 import { Col, Container, Image, Row } from 'react-bootstrap';
 import { projectPageColors } from '../../../common/constans';
 import { ProjectPage } from '../../../common/types';
+import Button from '../../../components/Button';
 import ProjectInfo from '../../../components/ProjectInfo';
 import { useAction } from '../../../hooks';
 import classes from '../styles.module.scss';
@@ -91,6 +92,14 @@ const Header: FunctionComponent<HeaderProps> = ({ project, isAuthorized }) => {
                   <FontAwesomeIcon icon={faDribbble} size="2x" />
                 </a>
               )}
+            <Button
+              onClick={() => true}
+              type="button"
+              icon={<FontAwesomeIcon icon={faShare} />}
+              iconPosition="right"
+            >
+              <span>Share</span>
+            </Button>
           </Row>
           <Row>
             <ProjectInfo
