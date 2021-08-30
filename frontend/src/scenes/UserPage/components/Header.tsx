@@ -36,13 +36,19 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile, isEditing, setEdi
   const [editLastName, setEditLastName] = useState(lastName);
   const [editRegion, setEditRegion] = useState(region);
   const [editDescription, setEditDescription] = useState(description);
+  const [editInstagramUrl, setEditInstagramUrl] = useState(instagramUrl);
+  const [editFacebookUrl, setEditFacebookUrl] = useState(facebookUrl);
+  const [editDribbleUrl, setEditDribbleUrl] = useState(dribbleUrl);
 
   const updatedUserProfile = {
     ...userProfile,
     firstName: editFirstName,
     lastName: editLastName,
     region: editRegion,
-    description: editDescription
+    description: editDescription,
+    instagramUrl: editInstagramUrl,
+    facebookUrl: editFacebookUrl,
+    dribbleUrl: editDribbleUrl
   };
 
   const enableEditHandler = () => setEditing(true);
@@ -52,6 +58,9 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile, isEditing, setEdi
     setEditLastName(lastName);
     setEditRegion(region);
     setEditDescription(description);
+    setEditInstagramUrl(instagramUrl);
+    setEditFacebookUrl(facebookUrl);
+    setEditDribbleUrl(dribbleUrl);
   };
   const submitEditHandler = () => {
     setEditing(false);
@@ -65,6 +74,9 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile, isEditing, setEdi
   };
   const editRegionHandler = (e: ChangeEvent<HTMLInputElement>) => setEditRegion(e.currentTarget.value);
   const editDescriptionHandler = (e: ChangeEvent<HTMLInputElement>) => setEditDescription(e.currentTarget.value);
+  const editInstagramUrlHandler = (e: ChangeEvent<HTMLInputElement>) => setEditInstagramUrl(e.currentTarget.value);
+  const editFacebookUrlHandler = (e: ChangeEvent<HTMLInputElement>) => setEditFacebookUrl(e.currentTarget.value);
+  const editDribbleUrlHandler = (e: ChangeEvent<HTMLInputElement>) => setEditDribbleUrl(e.currentTarget.value);
 
   return (
     <Container className={classes['header-container']}>
@@ -80,7 +92,14 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile, isEditing, setEdi
           <div className={classes['user-info']}>
             <div className={classes['user-name']}>
               {isEditing
-                ? <Input id='name' value={`${editFirstName} ${editLastName}`} onChange={editNameHandler} />
+                ? (
+                  <Input
+                    id='name'
+                    label='Your Name'
+                    value={`${editFirstName} ${editLastName}`}
+                    onChange={editNameHandler}
+                  />
+                )
                 : (
                   <div>
                     {`${firstName} ${lastName}`}
@@ -92,12 +111,12 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile, isEditing, setEdi
             </div>
             <div className={classes['user-email']}>
               {isEditing
-                ? <Input id='email' value={email} disabled />
+                ? <Input id='email' label='Email' value={email} disabled />
                 : <p>{email}</p>}
             </div>
             <div>
               {isEditing
-                ? <Input id='region' value={editRegion} onChange={editRegionHandler} />
+                ? <Input id='region' label='Region' value={editRegion} onChange={editRegionHandler} />
                 : (
                   <>
                     <FontAwesomeIcon icon={faMapMarkerAlt} />
@@ -105,29 +124,58 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile, isEditing, setEdi
                   </>
                 )}
             </div>
-            <div className={classes['user-links']}>
-              {instagramUrl
-                && (
-                  <a href={instagramUrl} target="_blank" rel="noreferrer">
-                    <FontAwesomeIcon icon={faInstagram} size="2x" />
-                  </a>
-                )}
-              {facebookUrl
-                && (
-                  <a href={facebookUrl} target="_blank" rel="noreferrer">
-                    <FontAwesomeIcon icon={faFacebookSquare} size="2x" />
-                  </a>
-                )}
-              {dribbleUrl
-                && (
-                  <a href={dribbleUrl} target="_blank" rel="noreferrer">
-                    <FontAwesomeIcon icon={faDribbble} size="2x" />
-                  </a>
-                )}
-            </div>
+            {isEditing
+              ? (
+                <>
+                  <Input
+                    id='instagram'
+                    label='Instagram'
+                    placeholder='Instagram'
+                    value={editInstagramUrl}
+                    onChange={editInstagramUrlHandler}
+                  />
+                  <Input
+                    id='facebook'
+                    label='Facebook'
+                    placeholder='Facebook'
+                    value={editFacebookUrl}
+                    onChange={editFacebookUrlHandler}
+                  />
+                  <Input
+                    id='dribble'
+                    label='Dribble'
+                    placeholder='Dribble'
+                    value={editDribbleUrl}
+                    onChange={editDribbleUrlHandler}
+                  />
+                </>
+              )
+              : (
+                <div className={classes['user-links']}>
+                  {instagramUrl
+                    && (
+                      <a href={instagramUrl} target="_blank" rel="noreferrer">
+                        <FontAwesomeIcon icon={faInstagram} size="2x" />
+                      </a>
+                    )}
+                  {facebookUrl
+                    && (
+                      <a href={facebookUrl} target="_blank" rel="noreferrer">
+                        <FontAwesomeIcon icon={faFacebookSquare} size="2x" />
+                      </a>
+                    )}
+                  {dribbleUrl
+                    && (
+                      <a href={dribbleUrl} target="_blank" rel="noreferrer">
+                        <FontAwesomeIcon icon={faDribbble} size="2x" />
+                      </a>
+                    )}
+                </div>
+              )}
+
           </div>
         </Col>
-        <Col md={12} xl={4} lg={{ order: 'last' }}>
+        <Col md={12} xl={4} lg={{ order: 'last' }} className={`${isEditing && classes['column-editing']}`}>
           <div className={`${classes['user-about-me']} ${isEditing && classes.editing}`}>
             <h3>About Me</h3>
             {isEditing
