@@ -7,8 +7,7 @@ interface SuccessPageProps {
   isCustom: boolean;
   amount: number;
 }
-const SelectedFund: FC<SuccessPageProps> = (props) => {
-  const { isCustom, amount } = props;
+const SelectedFund: FC<SuccessPageProps> = ({ isCustom, amount }) => {
   const { t } = useLocalization();
   return (
     <div className={classes['selected-fund-wrp']}>
