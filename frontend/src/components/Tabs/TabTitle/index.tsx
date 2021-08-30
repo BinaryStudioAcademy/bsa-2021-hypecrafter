@@ -3,13 +3,13 @@ import classes from '../styles.module.scss';
 
 type TabTitleProps = {
   title: string;
-  amount?: number;
+  counter?: number;
   index: number;
   selectedTab: number;
   setSelectedTab: (index: number) => void;
 };
 
-const TabTitle: FC<TabTitleProps> = ({ title, amount, index, selectedTab, setSelectedTab, }) => {
+const TabTitle: FC<TabTitleProps> = ({ title, counter, index, selectedTab, setSelectedTab, }) => {
   const isSelected = selectedTab === index;
 
   const changeTabHandler = useCallback(() => {
@@ -25,7 +25,7 @@ const TabTitle: FC<TabTitleProps> = ({ title, amount, index, selectedTab, setSel
       >
         <div className={classes['tab-info']}>
           <div className={classes.title}>{title}</div>
-          { amount !== 0 && <div className={classes.amount}>{amount}</div> }
+          { counter !== 0 && <div className={classes.counter}>{counter}</div> }
         </div>
       </button>
     </li>

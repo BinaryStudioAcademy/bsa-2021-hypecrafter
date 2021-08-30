@@ -17,7 +17,7 @@ const Tabs: FC<TabsProps> = ({ children }) => {
             key={item.props.title}
             index={index}
             title={item.props.title}
-            amount={item.props.amount}
+            counter={item.props.counter}
             setSelectedTab={setSelectedTab}
             selectedTab={selectedTab}
           />

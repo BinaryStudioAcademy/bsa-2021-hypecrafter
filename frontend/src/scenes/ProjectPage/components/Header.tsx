@@ -63,7 +63,7 @@ const Header: FunctionComponent<HeaderProps> = ({ project, isAuthorized }) => {
                   type='button'
                   onClick={handleWatch}
                   disabled={!isAuthorized}
-                  className={classes[`disable-${!isAuthorized}`]}
+                  className={classes[`${!isAuthorized && 'disabled'}`]}
                 >
                   {isWatched
                     ? <FontAwesomeIcon icon={faBookmarkFilled} size="2x" color={projectPageColors.bookmark} />

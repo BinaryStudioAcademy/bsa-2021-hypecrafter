@@ -78,9 +78,9 @@ const ProjectInfo: FunctionComponent<ProjectInfoProps> = ({
             type='button'
             onClick={handleLike}
             disabled={!isAuthorized}
-            className={classes[`disable-${!isAuthorized}`]}
+            className={classes[`${!isAuthorized && 'disabled'}`]}
           >
-            {mark === 'like'
+            {mark === Mark.LIKE
               ? (<FontAwesomeIcon icon={faThumbsUpFilled} size='2x' />)
               : (<FontAwesomeIcon icon={faThumbsUp} size='2x' />)}
           </button>
@@ -91,9 +91,9 @@ const ProjectInfo: FunctionComponent<ProjectInfoProps> = ({
             type='button'
             onClick={handleDislike}
             disabled={!isAuthorized}
-            className={classes[`disable-${!isAuthorized}`]}
+            className={classes[`${!isAuthorized && 'disabled'}`]}
           >
-            {mark === 'dislike'
+            {mark === Mark.DISLIKE
               ? (<FontAwesomeIcon icon={faThumbsDownFilled} size='2x' />)
               : (<FontAwesomeIcon icon={faThumbsDown} size='2x' />)}
           </button>

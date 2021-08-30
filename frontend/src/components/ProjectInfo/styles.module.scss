@@ -67,7 +67,7 @@
         border: none;
       }
 
-      .disable-true{
+      .disabled{
         @include disable-button;
       }
     }
