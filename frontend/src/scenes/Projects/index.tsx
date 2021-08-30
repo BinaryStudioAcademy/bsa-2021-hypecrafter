@@ -6,19 +6,20 @@ import { Project } from '../../common/types';
 import ProjectCard from '../../components/ProjectCard';
 import Seo from '../../components/Seo';
 import { runActionWithValueOfEnum } from '../../helpers';
-import { useAction, useQuery, useTypedSelector } from '../../hooks';
+import { useAction, useAuth, useQuery, useTypedSelector } from '../../hooks';
 import { useLocalization } from '../../providers/localization';
 import Filters from './components/Filters';
 import classes from './styles.module.scss';
 
 const Projects = () => {
+  const { id: userId } = useAuth();
   const { projects, modificators } = useTypedSelector((state) => state.projects);
   const { fetchProjectsAction, sortProjectsAction, filterProjectsAction } = useAction();
   const query = useQuery();
   const { t } = useLocalization();
 
   useEffect(() => {
-    fetchProjectsAction(modificators);
+    fetchProjectsAction({ ...modificators, userId });
   }, [modificators]);
 
   useEffect(() => {

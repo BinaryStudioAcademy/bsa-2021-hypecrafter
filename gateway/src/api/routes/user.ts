@@ -4,9 +4,10 @@ import { Project } from 'hypecrafter-shared/enums';
 const init = () => {
   const router = Router();
 
-  router.get(['/', '/:id'], (_, res: Response) => res.delegate(Project.BACKEND));
-  router.post('/webhook', (_, res: Response) => res.delegate(Project.BACKEND));
-  return router;
+  return router
+    .get(['/', '/:id'], (_, res: Response) => res.delegate(Project.BACKEND))
+    .put(['/:id'], (_, res: Response) => res.delegate(Project.BACKEND))
+    .post('/webhook', (_, res: Response) => res.delegate(Project.BACKEND));
 };
 
 export default init;

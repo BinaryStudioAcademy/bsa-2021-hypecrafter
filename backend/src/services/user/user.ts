@@ -1,4 +1,6 @@
+/* eslint-disable no-console */
 import { HttpStatusCode } from '../../../../shared/build/enums';
+import { UserProfile } from '../../common/types';
 import { RegisterData, RegisterReqBody } from '../../common/types/registration/registration';
 import { UserRepository } from '../../data/repositories';
 import { CustomError } from '../../helpers/customError';
@@ -18,8 +20,13 @@ export default class UserService {
     return this.#userRepository.getById(id);
   }
 
+  public getCurrentUser(id: string) {
+    return this.#userRepository.getCurrentUser(id);
+  }
+
   public async registerUser({ data, tokens }: RegisterReqBody) {
     try {
+      console.log(9);
       await this.#userRepository.createUser(data);
       return tokens;
     } catch {
@@ -36,5 +43,17 @@ export default class UserService {
 
   public replenishment(id:string, amount: number) {
     return this.#userRepository.replenishmentBalance(id, amount);
+  }
+
+  public updateById({ id, data }:{ id: string, data: UserProfile }) {
+    try {
+      return this.#userRepository.updateUserById(id, data);
+    } catch {
+      throw new CustomError(
+        HttpStatusCode.INTERNAL_SERVER_ERROR,
+        'User not updated'
+      );
+    }
+  }
   }
 }

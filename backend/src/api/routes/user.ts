@@ -39,5 +39,9 @@ const init = ({ userService }: Services, path: string) => (app: MicroMq) => app
       throw err;
     }
     return { status: 200 };
-  }));
+  }))
+  .put(`${path}/:id`, wrap<Empty, UserProfile, UserProfile, Empty>(req => (
+    userService.updateById({ id: req.params.id, data: req.body })
+  )));
+
 export default init;

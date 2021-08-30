@@ -14,7 +14,8 @@ export class UserProject extends AbstractEntity {
 
   @Column({
     type: 'enum',
-    enum: Mark
+    enum: Mark,
+    nullable: true
   })
   mark: Mark;
 

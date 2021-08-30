@@ -1,4 +1,4 @@
-import { CategoryType } from '../../enums/category';
+import { CategoryType } from 'hypecrafter-shared/enums';
 
 export interface Topic {
   id: string;

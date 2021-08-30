@@ -1,4 +1,4 @@
-import { Column, Entity, OneToMany } from 'typeorm';
+import { Column, Entity, JoinColumn, OneToOne } from 'typeorm';
 import { AbstractEntity } from './abstract';
 import { Project } from './project';
 
@@ -16,6 +16,7 @@ export class DonatorsPrivilege extends AbstractEntity {
   @Column({ type: 'numeric' })
   amount: number;
 
-  @OneToMany(() => Project, (project: Project) => project.id)
-  projectId: number;
+  @OneToOne(() => Project, (project: Project) => project)
+  @JoinColumn()
+  project: Project;
 }

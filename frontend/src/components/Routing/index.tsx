@@ -23,6 +23,7 @@ import ModalWindow from '../ModalWindow';
 import PageNotFound from '../PageNotFound';
 import PrivateRoute from '../PrivateRoute';
 import PublicRoute from '../PublicRoute';
+import UserModal from '../UserModal';
 
 const routesWitoutHeader = [Routes.LOGIN, Routes.SIGNUP];
 
@@ -67,6 +68,11 @@ const Routing = () => {
           size="extra-wide"
           centered={false}
           onHide={closeModalHandler}
+        />
+        <PublicRoute
+          restricted={false}
+          path={Routes.HOME}
+          component={UserModal}
         />
         <Switch>
           <PublicRoute

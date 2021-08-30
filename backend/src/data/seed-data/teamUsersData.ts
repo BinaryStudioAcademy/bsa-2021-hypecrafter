@@ -88,4 +88,4 @@ export const teamUsers = [
     id: '58856fd3-e815-4408-9465-b128a120248e',
     userId: 'aa984f73-fadc-4d9a-8a9f-e0e50002f061'
   }
-]
+];
