@@ -1,7 +1,6 @@
 import queryString from 'query-string';
 import { HttpHeader, HttpMethod, HttpStatusCode } from '../common/enums';
 import { RequestArgs } from '../common/types';
-import { env } from '../env';
 import { getAccessToken } from './localStorage';
 
 const refreshToken = async () => {
@@ -59,7 +58,7 @@ const getUrl = (method: HttpMethod, { url, params, config }: RequestArgs): strin
     return url;
   }
 
-  const fullUrl = `${env.server.url}/${url}`;
+  const fullUrl = url;
 
   if (params && method === HttpMethod.GET) {
     return getUrlWithQuery(fullUrl, params);
