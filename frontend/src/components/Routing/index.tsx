@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Redirect, Switch, useLocation } from 'react-router-dom';
+import { getAccessToken } from '../../helpers/localStorage';
 import { Routes } from '../../common/enums';
 import { useAction, useTypedSelector, useAuth } from '../../hooks';
 import LoginPage from '../../scenes/Auth/LoginPage';
@@ -27,7 +28,7 @@ const routesWitoutHeader = [Routes.LOGIN, Routes.SIGNUP];
 const Routing = () => {
   const { authFetchUserAction, closeModalAction } = useAction();
   const { id, isLoading } = useTypedSelector(({ auth }) => auth);
-  const { tokens } = useTypedSelector(({ authentication }) => authentication);
+  const tokens = getAccessToken();
   const { pathname } = useLocation();
   const { isAuthorized } = useAuth();
   const [showModal, setShowModal] = useState(false);
