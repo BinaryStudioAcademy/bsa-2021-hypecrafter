@@ -17,12 +17,7 @@ export class TransactionHistoryRepository extends Repository<TransactionHistory>
   }
 
   public setTransaction(transaction: Transaction) {
-    const newTransaction = new TransactionHistory();
-    newTransaction.balance = transaction.balance;
-    newTransaction.item = transaction.item;
-    newTransaction.total = transaction.total;
-    newTransaction.type = transaction.type;
-    newTransaction.userId = transaction.userId;
+    const newTransaction = { ...new TransactionHistory(), ...transaction };
     return this.save(newTransaction);
   }
 

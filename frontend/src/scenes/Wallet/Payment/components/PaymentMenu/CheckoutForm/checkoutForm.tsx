@@ -25,10 +25,10 @@ export default function CheckoutForm() {
   const { t } = useLocalization();
   const { amount } = useTypedSelector(({ payment }) => payment);
   useEffect(() => {
-    const params: ClientSecretData = { amount: amount.toString() };
+    const params: ClientSecretData = { amount };
     getClientSecret(params).then(secret => { setClientSecret(secret); });
   }, []);
-  const handleChange = async (event: StripeCardElementChangeEvent) => {
+  const handleChange = (event: StripeCardElementChangeEvent) => {
     setDisabled(event.empty);
     setError(event.error ? event.error.message : '');
   };
@@ -74,7 +74,6 @@ export default function CheckoutForm() {
           </span>
         </Button>
       </div>
-      {/* Show any error that happens when processing the payment */}
       {error && (
         <span className={classes['card-payment-error']} role="alert">
           {error}

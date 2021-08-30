@@ -3,6 +3,7 @@ import { Form } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 import { Routes } from '../../../../../common/enums';
 import Button from '../../../../../components/Button';
+import Input from '../../../../../components/Input';
 import { useAction } from '../../../../../hooks';
 import { useLocalization } from '../../../../../providers/localization';
 import classes from './styles.module.scss';
@@ -25,13 +26,13 @@ const CustomFund: FC = () => {
       <Form className={classes['fund-body']} onSubmit={onSubmit}>
         <div className={classes['input-wrp']}>
           <h2> {t('Custom fund')}</h2>
-          <Form.Control
-            onInput={(event: ChangeEvent<HTMLInputElement>) => setPrice(event.target.value)}
+          <Input
+            type='number'
+            step={1}
             value={price}
-            type="number"
-            step="1"
-            min="1"
-            max="100000"
+            min={1}
+            max={100000}
+            onInput={(event: ChangeEvent<HTMLInputElement>) => setPrice(event.target.value)}
           />
         </div>
 

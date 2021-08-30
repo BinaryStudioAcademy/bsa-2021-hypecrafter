@@ -1,7 +1,7 @@
 import { createRoutine } from 'redux-saga-routines';
 
 export enum WalletActions {
-  SET_FUNDS = 'SET_FUNDS'
+  SET_FUNDS = 'WALLET/SET_FUNDS'
 }
 
 export const setFundAction = createRoutine(WalletActions.SET_FUNDS, {
