@@ -37,7 +37,6 @@ const init = ({ paymentService }: Services, path: string) => (app: MicroMq) => a
       switch (event.type) {
         case 'payment_intent.succeeded': {
           await paymentService.setTransaction({
-            balance: payload.amount,
             item: 'Balance replenishment',
             type: 'Custom Fund',
             total: payload.amount / 100,

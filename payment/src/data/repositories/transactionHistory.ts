@@ -25,7 +25,7 @@ export class TransactionHistoryRepository extends Repository<TransactionHistory>
     const skipNum = (pageNum - 1) * paginationStep;
     const count = await this.getCountByUserId(userId);
     const page = await this.createQueryBuilder('transactionHistory')
-      .select(['"createdAt"', 'item', 'type', 'total', 'balance'])
+      .select(['"createdAt"', 'item', 'type', 'total'])
       .where(`"userId" = '${userId}'`)
       .orderBy('"createdAt"', 'DESC')
       .skip(skipNum)

@@ -3,7 +3,6 @@ export interface Transaction {
   total: number;
   type: string;
   userId: string;
-  balance: number;
 }
 
 export const paginationStep = 5;
