@@ -2,7 +2,7 @@ import {
   CardElement, useElements, useStripe
 } from '@stripe/react-stripe-js';
 import { StripeCardElementChangeEvent } from '@stripe/stripe-js';
-import React, { FormEvent, useEffect, useState } from 'react';
+import React, { FormEvent, useEffect, useReducer } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Routes } from '../../../../../../common/enums';
 import { ClientSecretData } from '../../../../../../common/types/payment';
@@ -10,15 +10,20 @@ import Button from '../../../../../../components/Button';
 import { useTypedSelector } from '../../../../../../hooks';
 import { useLocalization } from '../../../../../../providers/localization';
 import { getClientSecret } from '../../../../../../services/payment';
+import { CheckoutFormActions, CheckoutFormReducer } from './reducer';
 import classes from './styles.module.scss';
 import { cardOption } from './utils';
 
+const initState = {
+  succeeded: false,
+  error: '',
+  processing: false,
+  disabled: true,
+  clientSecret: ''
+};
+
 export default function CheckoutForm() {
-  const [succeeded, setSucceeded] = useState(false);
-  const [error, setError] = useState('');
-  const [processing, setProcessing] = useState(false);
-  const [disabled, setDisabled] = useState(true);
-  const [clientSecret, setClientSecret] = useState('');
+  const [state, dispatch] = useReducer(CheckoutFormReducer, initState);
   const history = useHistory();
   const stripe = useStripe();
   const elements = useElements();
@@ -26,35 +31,35 @@ export default function CheckoutForm() {
   const { amount } = useTypedSelector(({ payment }) => payment);
   useEffect(() => {
     const params: ClientSecretData = { amount };
-    getClientSecret(params).then(secret => { setClientSecret(secret); });
+    getClientSecret(params).then(secret => { dispatch({ type: CheckoutFormActions.CLIENTSECRET, payload: secret }); });
   }, []);
   const handleChange = (event: StripeCardElementChangeEvent) => {
-    setDisabled(event.empty);
-    setError(event.error ? event.error.message : '');
+    dispatch({ type: CheckoutFormActions.DISABLED, payload: event.empty });
+    dispatch({ type: CheckoutFormActions.ERROR, payload: event.error ? event.error.message : '' });
   };
   const handleSubmit = async (ev: FormEvent) => {
     ev.preventDefault();
     const card = elements?.getElement(CardElement);
-    setProcessing(true);
+    dispatch({ type: CheckoutFormActions.PROCESSING, payload: true });
     if (stripe && card) {
-      const payload = await stripe.confirmCardPayment(clientSecret, {
+      const payload = await stripe.confirmCardPayment(state.clientSecret, {
         payment_method: {
           card
         }
       });
       if (payload.error) {
-        setError(`Payment failed ${payload.error.message}`);
-        setProcessing(false);
+        dispatch({ type: CheckoutFormActions.ERROR, payload: `Payment failed ${payload.error.message}` });
+        dispatch({ type: CheckoutFormActions.PROCESSING, payload: false });
       } else {
-        setError('');
-        setProcessing(false);
-        setSucceeded(true);
+        dispatch({ type: CheckoutFormActions.ERROR, payload: '' });
+        dispatch({ type: CheckoutFormActions.PROCESSING, payload: false });
+        dispatch({ type: CheckoutFormActions.SUCCEEDED, payload: true });
       }
     }
   };
   useEffect(() => {
-    if (succeeded) { history.push(Routes.PAYMENT_SUCCESS); }
-  }, [succeeded]);
+    if (state.succeeded) { history.push(Routes.PAYMENT_SUCCESS); }
+  }, [state.succeeded]);
   return (
     <form id="payment-form" onSubmit={handleSubmit}>
       <div className={classes['card-element-wrp']}>
@@ -62,21 +67,21 @@ export default function CheckoutForm() {
       </div>
       <div className={classes['btn-pay-wrp']}>
         <Button
-          disable={Boolean(processing || disabled)}
-          loading={processing}
+          disable={Boolean(state.processing || state.disabled)}
+          loading={state.processing}
           type="submit"
           id="submit"
         >
           <span id="button-text">
-            {processing
+            {state.processing
               ? t('Load...')
               : t('Pay')}
           </span>
         </Button>
       </div>
-      {error && (
+      {state.error && (
         <span className={classes['card-payment-error']} role="alert">
-          {error}
+          {state.error}
         </span>
       )}
 
