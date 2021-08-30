@@ -90,9 +90,9 @@
   a {
     text-decoration: none;
     color: $color-root-text;
-  }
-  a:hover {
-    color: $color-root-turquoise;
+    &:hover {
+      color: $color-root-turquoise;
+    }
   }
 }
 
