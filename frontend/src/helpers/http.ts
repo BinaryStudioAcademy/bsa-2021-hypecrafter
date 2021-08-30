@@ -1,13 +1,36 @@
+import { decode } from 'jsonwebtoken';
 import queryString from 'query-string';
 import { HttpHeader, HttpMethod, HttpStatusCode } from '../common/enums';
 import { RequestArgs } from '../common/types';
 import { env } from '../env';
-import { getAccessToken } from './localStorage';
+import { getAccessToken, getRefreshToken, setAccessToken } from './localStorage';
 
-const refreshToken = async () => {
-  // TODO...
-  const data = 'Some data';
-  return data;
+const fetchAccessToken = async () => {
+  const oldAccessToken = getAccessToken();
+  if (oldAccessToken) {
+    const decodedToken = decode(oldAccessToken);
+    const { userId } = decodedToken as { userId: string };
+    const refreshToken = getRefreshToken();
+    if (userId && refreshToken) {
+      const response = await fetch(`${env.server.url}/auth/token`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          userId,
+          refreshToken
+        })
+      });
+      if (response.status !== HttpStatusCode.UNAUTHORIZED) {
+        const result = await response.json();
+        const { accessToken: token } = result;
+        setAccessToken(token);
+        return token;
+      }
+    }
+  }
+  return null;
 };
 
 const logout = async () => {
@@ -75,9 +98,10 @@ const makeRequest = (method: HttpMethod) => async <T>(args: RequestArgs) => {
   let result = await fetch(url, options);
 
   if (result.status === HttpStatusCode.UNAUTHORIZED) {
-    const refreshTokenResponse = await refreshToken();
+    const accessTokenResponse = await fetchAccessToken();
 
-    if (refreshTokenResponse) {
+    if (accessTokenResponse) {
+      const options = getOptions(method, args);
       result = await fetch(url, options);
     } else {
       logout();
