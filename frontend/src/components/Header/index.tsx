@@ -59,6 +59,11 @@ const Header = () => {
 
   useScroll(30, { scrollOverLimitCallback, scrollUnderLimitCallback });
 
+  const handleHideProfileMenu = () => {
+    setProfileMenu(false);
+    setMobileMenu(false);
+  };
+
   return (
     <div
       className={isVisibleOnScroll ? classes.visible_on_scroll : ''}
@@ -70,7 +75,10 @@ const Header = () => {
         `}
       >
         <div className={classes.header_left}>
-          <Link to={Routes.HOME}>
+          <Link
+            to={Routes.HOME}
+            onClick={handleHideProfileMenu}
+          >
             <Logo />
           </Link>
           <Nav
@@ -80,12 +88,14 @@ const Header = () => {
               to={Routes.HOME}
               className={classes.header_menu_item}
               activeClassName={classes.header_menu_item_active}
+              onClick={handleHideProfileMenu}
             >
               {t('Home')}
             </NavLink>
             <NavLink
               to={Routes.PROJECTS}
               className={classes.header_menu_item}
+              onClick={handleHideProfileMenu}
             >
               {t('Projects')}
             </NavLink>
@@ -95,6 +105,7 @@ const Header = () => {
                 ${classes.desktop_trends}
               `}
               to={Routes.TRENDS}
+              onClick={handleHideProfileMenu}
             >
               {t('Trends')}
             </NavLink>
@@ -229,6 +240,7 @@ const Header = () => {
             <NavLink
               to={Routes.HOME}
               className={classes.mobile_menu_item}
+              onClick={handleHideProfileMenu}
             >
               {t('Home')}
             </NavLink>
@@ -236,20 +248,27 @@ const Header = () => {
               className={`
                   ${classes.line_both}
                   ${classes.mobile_menu_item}
+                  onClick={handleHideProfileMenu}
               `}
               to={Routes.PROJECTS}
+              onClick={handleHideProfileMenu}
             >
               {t('Projects')}
             </NavLink>
             <NavLink
               to={Routes.TRENDS}
               className={classes.mobile_menu_item}
+              onClick={handleHideProfileMenu}
             >
               {t('Trends')}
             </NavLink>
           </Nav>
         </div>
-        <NavLink to={Routes.HOME} className={classes.mobile_logo}>
+        <NavLink
+          to={Routes.HOME}
+          className={classes.mobile_logo}
+          onClick={handleHideProfileMenu}
+        >
           <Logo />
         </NavLink>
         <div
