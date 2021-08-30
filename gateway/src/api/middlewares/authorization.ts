@@ -6,7 +6,7 @@ import { jwt as jwtMiddleware } from './jwt';
 const authorization = (routesBlackList: string[] = []): RequestHandler => (req, res, next) => {
   function checkRouteList(route: string) {
     if (route.includes('/:id')) return validateUuid(route, req.path);
-    if (route.includes('/:page')) return validatePage(route, req.path);
+    if (route.includes('/:')) return validatePage(route, req.path);
     return route === req.path;
   }
 
