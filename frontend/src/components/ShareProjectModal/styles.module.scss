@@ -1,0 +1,38 @@
+@import '../../styles/vars';
+@import '../../styles/mixins';
+
+.social-links-container {
+  display: flex;
+  justify-content: center;
+}
+
+.clipboard-container {
+  justify-content: center;
+  margin-top: 20px;
+
+  .clipboard {
+    @include hoover($color-root-grey);
+    display: flex;
+    background: $color-root-grey;
+    max-width: 350px;
+    padding: 6px 8px 4px 8px;
+    border: $color-base-border;
+    border-radius: 4px;
+    font-size: $font-size-large;
+    color: $color-root-text;
+
+    span {
+      display: inline-block;
+      max-width: 280px;
+      margin-left: 8px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .clipboard-icon {
+      margin: 2px 6px 4px auto;
+      margin-left: auto;
+    }
+  }
+}

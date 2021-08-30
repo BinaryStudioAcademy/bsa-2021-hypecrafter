@@ -2,12 +2,14 @@ import { faDribbble, faFacebookSquare, faInstagram } from '@fortawesome/free-bra
 import { faBookmark as faBookmarkEmpty } from '@fortawesome/free-regular-svg-icons';
 import { faBookmark as faBookmarkFilled, faShare } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { FunctionComponent } from 'react';
+import { FunctionComponent, useState } from 'react';
 import { Col, Container, Image, Row } from 'react-bootstrap';
 import { projectPageColors } from '../../../common/constans';
 import { ProjectPage } from '../../../common/types';
 import Button from '../../../components/Button';
+import ModalWindow from '../../../components/ModalWindow';
 import ProjectInfo from '../../../components/ProjectInfo';
+import ShareProjectModal from '../../../components/ShareProjectModal';
 import { useAction } from '../../../hooks';
 import classes from '../styles.module.scss';
 
@@ -39,6 +41,7 @@ const Header: FunctionComponent<HeaderProps> = ({ project, isAuthorized }) => {
   } = project;
 
   const { setWatch } = useAction();
+  const [showShareModal, setShowShareModal] = useState(false);
 
   const handleWatch = () => {
     setWatch({ isWatched: !isWatched, projectId: id });
@@ -93,13 +96,21 @@ const Header: FunctionComponent<HeaderProps> = ({ project, isAuthorized }) => {
                 </a>
               )}
             <Button
-              onClick={() => true}
               type="button"
+              onClick={() => setShowShareModal(true)}
               icon={<FontAwesomeIcon icon={faShare} />}
               iconPosition="right"
             >
               <span>Share</span>
             </Button>
+            <ModalWindow
+              show={showShareModal}
+              title="Share"
+              body={<ShareProjectModal />}
+              size="small"
+              centered={false}
+              onHide={() => setShowShareModal(false)}
+            />
           </Row>
           <Row>
             <ProjectInfo
