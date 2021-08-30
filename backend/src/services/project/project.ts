@@ -4,8 +4,8 @@ import { Chat, Project as CreateProject, Team } from '../../data/entities';
 import { mapPrivileges, mapProjects } from '../../data/mappers';
 import { mapLikesAndDislikes } from '../../data/mappers/mapLikesAndDislikes';
 import {
-  ChatRepository, ProjectRepository, ProjectTagRepository,
-  TagRepository, TeamRepository, UserRepository
+  ChatRepository, ProjectRepository,
+  TeamRepository, UserRepository
 } from '../../data/repositories';
 import ProjectTagService from '../projectTag';
 import TagService from '../tag';
@@ -17,21 +17,21 @@ export default class ProjectService {
 
   readonly #chatRepository: ChatRepository;
 
-  readonly #projectTagRepository: ProjectTagRepository;
-
   readonly #userRepository: UserRepository;
 
-  readonly #tagRepository: TagRepository;
+  readonly #tagService: TagService;
+
+  readonly #projectTagService: ProjectTagService;
 
   constructor(projectRepository: ProjectRepository, teamRepository: TeamRepository,
-    chatRepository: ChatRepository, projectTagRepository: ProjectTagRepository,
-    tagRepository: TagRepository, userRepository: UserRepository) {
+    chatRepository: ChatRepository, userRepository: UserRepository,
+    tagService: TagService, projectTagService: ProjectTagService) {
     this.#projectRepository = projectRepository;
     this.#teamRepository = teamRepository;
     this.#chatRepository = chatRepository;
-    this.#projectTagRepository = projectTagRepository;
-    this.#tagRepository = tagRepository;
     this.#userRepository = userRepository;
+    this.#tagService = tagService;
+    this.#projectTagService = projectTagService;
   }
 
   public async getPopularProjectsByCategory(category: string) {
@@ -53,10 +53,8 @@ export default class ProjectService {
     const project: CreateProject = await this.#projectRepository.save({ ...body });
     const team = await this.#teamRepository.save({ ...new Team(), ...body.team, project });
     this.#chatRepository.save(body.team.chats.map(chat => ({ ...new Chat(), ...chat, team })));
-    const listTags = await new TagService(this.#tagRepository).save(body.projectTags.map(projectTag => projectTag.tag));
-
-    await new ProjectTagService(this.#projectTagRepository)
-      .save(listTags.map(tag => ({ tag, project })));
+    const listTags = await this.#tagService.save(body.projectTags.map(projectTag => projectTag.tag));
+    await this.#projectTagService.save(listTags.map(tag => ({ tag, project })));
     return project;
   }
 

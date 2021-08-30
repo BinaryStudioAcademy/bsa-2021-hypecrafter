@@ -11,6 +11,7 @@ interface Props extends FormControlProps {
   errorMessage?: string;
   step?: number;
   options?: Array<{ text: string; value: string }>;
+  countOptions?:number;
   selectOption?: (value: string) => void,
 }
 
@@ -21,6 +22,7 @@ const Input = forwardRef<HTMLInputElement, Props>(({
   errorMessage,
   step = 2,
   options,
+  countOptions = 10,
   selectOption,
   ...restInputProps
 }, ref) => {
@@ -51,7 +53,7 @@ const Input = forwardRef<HTMLInputElement, Props>(({
           )}
         {options && (
         <div className={classes.options}>
-            {options.slice(0, 10).map(option => (
+            {options.slice(0, countOptions).map(option => (
               <button
                 type="button"
                 key={option.value}

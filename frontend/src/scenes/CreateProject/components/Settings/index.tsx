@@ -14,41 +14,41 @@ import Layout from '../Layout';
 import classes from './styles.module.scss';
 
 interface Props {
-  changePage: (currentPage: CurrentPage) => void
   currentPage: CurrentPage,
-  onChangeValue: (name: ProjectKeys, value: string | CreateProjectTag[]) => void
   region: string,
   imageUrl?: string,
   videoUrl?: string,
-  newTags:CreateProjectTag[]
+  newTags: CreateProjectTag[],
+  changePage: (currentPage: CurrentPage) => void,
+  onChangeValue: (name: ProjectKeys, value: string | CreateProjectTag[]) => void,
 }
 
-const Settings: FC<Props> = ({ changePage, currentPage, onChangeValue, region, imageUrl, videoUrl, newTags }) => {
-  const { t } = useLocalization();
-  const handleBack = () => changePage(currentPage - 1);
-  const handleNext = () => changePage(CurrentPage.END);
+const Settings: FC<Props> = ({ currentPage, region, imageUrl, videoUrl, newTags, changePage, onChangeValue }) => {
   const [tag, setTag] = useState('');
-  const addTag = () => {
-    if (newTags.indexOf({ tag: { name: tag } }) === -1) {
-      newTags.push({ tag: { name: tag } });
-      onChangeValue(ProjectKeys.PROJECT_TAGS, newTags);
-      setTag('');
-    }
-  };
+  const [options, setOptions] = useState<Array<{ text:string, value:string }>>([]);
+  const { getTagsAction } = useAction();
+  useEffect(() => {
+    getTagsAction();
+  }, [getTagsAction]);
   const store = useTypedSelector(({ tags: { tags, isLoading } }) => ({
     tags,
     isLoading
   }));
   const { tags, isLoading } = store;
-  const { getTagsAction } = useAction();
-  useEffect(() => {
-    getTagsAction();
-  }, [getTagsAction]);
+  const { t } = useLocalization();
+
+  const handleBack = () => changePage(currentPage - 1);
+  const handleNext = () => changePage(CurrentPage.END);
+  const addTag = () => {
+    if (!newTags.find(newTag => newTag.tag.name === tag)) {
+      onChangeValue(ProjectKeys.PROJECT_TAGS, [...newTags, { tag: { name: tag } }]);
+      setTag('');
+    }
+  };
   const deleteTag = (tagToDelete:string) => {
     const listTags = newTags.filter(_tag => _tag.tag.name !== tagToDelete);
     onChangeValue(ProjectKeys.PROJECT_TAGS, listTags);
   };
-  const [options, setOptions] = useState<Array<{ text:string, value:string }>>([]);
   const createListTags = () => {
     const filteredTags = tags.filter(existTag => existTag.name.indexOf(tag) !== -1);
     return filteredTags.map(existTag => ({ text: existTag.name, value: existTag.id }));
@@ -94,7 +94,6 @@ const Settings: FC<Props> = ({ changePage, currentPage, onChangeValue, region, i
           label={t('Tags help when searching to give the user exactly those projects that interest him')}
           onChange={e => tagChanged(e.target.value)}
           value={tag}
-          // onBlur={() => setOptions([])}
           options={options}
           onFocus={() => setOptions(createListTags())}
           selectOption={addExistTag}
@@ -108,7 +107,7 @@ const Settings: FC<Props> = ({ changePage, currentPage, onChangeValue, region, i
           id={projectTag.tag.name}
           onClick={() => deleteTag(projectTag.tag.name)}
         >
-          {`${projectTag.tag.name}`}
+          {projectTag.tag.name}
           <FontAwesomeIcon icon={faTimes} />
         </Button>
       ))}
