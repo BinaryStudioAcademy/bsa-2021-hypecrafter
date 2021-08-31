@@ -13,6 +13,8 @@ interface Props extends FormControlProps {
   options?: Array<{ text: string; value: string }>;
   countOptions?:number;
   selectOption?: (value: string) => void,
+  min?: number;
+  max?: number;
 }
 
 const Input = forwardRef<HTMLInputElement, Props>(({
@@ -24,6 +26,8 @@ const Input = forwardRef<HTMLInputElement, Props>(({
   options,
   countOptions = 10,
   selectOption,
+  max,
+  min,
   ...restInputProps
 }, ref) => {
   const [showPassword, setShowPassword] = useState(false);
@@ -39,6 +43,8 @@ const Input = forwardRef<HTMLInputElement, Props>(({
           className={classes['input-field']}
           as={type === 'textarea' ? 'textarea' : 'input'}
           step={step}
+          min={min}
+          max={max}
           {...restInputProps}
         />
         {type === 'password'

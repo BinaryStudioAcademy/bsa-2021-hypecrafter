@@ -19,6 +19,9 @@ export const env = {
     accessKeyId: getEnv('REACT_APP_AWS_ACCESS_KEY_ID'),
     secretAccessKey: getEnv('REACT_APP_AWS_SECRET_ACCESS_KEY')
   },
+  payment: {
+    key: getEnv('REACT_APP_PAYMENT_KEY')
+  },
   auth: {
     googleClientId: getEnv('REACT_APP_GOOGLE_CLIENT_ID')
   }

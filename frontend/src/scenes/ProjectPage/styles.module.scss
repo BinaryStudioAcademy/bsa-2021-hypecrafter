@@ -48,10 +48,9 @@
       margin-right: 10px;
       background-color: $color-root-grey;
       color: $color-root-text;
-    }
-
-    a:hover {
+      &:hover {
       color: $color-root-turquoise;
+      }
     }
   }
 }
