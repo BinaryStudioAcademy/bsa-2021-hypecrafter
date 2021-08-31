@@ -207,6 +207,7 @@ export class ProjectRepository extends Repository<Project> {
                       'isBacker', CASE WHEN "userDonates"."userId" IS NULL THEN false ELSE true END,
                       'isOwner', CASE WHEN tu."userId" IS NULL THEN false ELSE true END
                     ),
+                  'id', comments.id,
                   'message', comments.message,
                   'createdAt', comments."createdAt",
                   'updatedAt', comments."updatedAt",
@@ -218,11 +219,14 @@ export class ProjectRepository extends Repository<Project> {
         .from(Project, 'project')
         .leftJoin('project.comments', 'comments')
         .leftJoin('comments.author', 'commentAuthor')
-        .leftJoin(
-          'donate',
-          'userDonates',
-          '"userDonates"."projectId" = project.id AND "userDonates"."userId" = "commentAuthor".id'
-        )
+        .leftJoin(subQuery1 => subQuery1
+          .select(`
+            DISTINCT "userId",
+            "projectId"
+          `)
+          .from('donate', 'donate'),
+        'userDonates',
+        '"userDonates"."projectId"=project."id" AND "userDonates"."userId"="commentAuthor"."id"')
         .leftJoin('project.team', 'team')
         .leftJoin('team_users', 'tu', 'tu."teamId" = team."id" AND tu."userId" = "commentAuthor".id')
         .groupBy('project.id'), 'cp', 'cp."projectId" = project.id')

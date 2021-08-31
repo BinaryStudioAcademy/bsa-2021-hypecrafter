@@ -10,6 +10,8 @@ interface Props extends FormControlProps {
   label?: string;
   errorMessage?: string;
   step?: number;
+  min?: number;
+  max?: number;
 }
 
 const Input = forwardRef<HTMLInputElement, Props>(({
@@ -18,6 +20,8 @@ const Input = forwardRef<HTMLInputElement, Props>(({
   label,
   errorMessage,
   step = 2,
+  max,
+  min,
   ...restInputProps
 }, ref) => {
   const [showPassword, setShowPassword] = useState(false);
@@ -34,6 +38,8 @@ const Input = forwardRef<HTMLInputElement, Props>(({
           className={classes['input-field']}
           as={type === 'textarea' ? 'textarea' : 'input'}
           step={step}
+          min={min}
+          max={max}
           {...restInputProps}
         />
         {type === 'password'

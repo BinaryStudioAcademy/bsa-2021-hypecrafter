@@ -166,6 +166,17 @@
     "Edit": "Edit",
     "Rating": "Rating",
     "Site locale": "en_US",
-    "Update": "Update"
+    "Update": "Update",
+
+    "Payment": "Payment",
+    "Selected fund": "Selected fund",
+
+    "Load...": "Load...",
+    "Congratulation!": "Congratulation!",
+    "Payment transaction was successful": "Payment transaction was successful",
+    "Basic fund":"Basic fund",
+    "Amount":"Amount",
+    "Return to Main Page":"Return to Main Page",
+    "Pay":"Pay"
   }
 }
