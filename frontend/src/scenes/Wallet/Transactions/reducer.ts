@@ -36,7 +36,6 @@ export const transactionsReducer = createReducer<TransactionsState>(initialState
     };
   },
   [clearTransactionsStateAction.TRIGGER]() {
-    console.log('))');
     return initialState;
   }
 });
