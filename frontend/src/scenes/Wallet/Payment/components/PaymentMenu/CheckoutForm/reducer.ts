@@ -8,10 +8,10 @@ export enum CheckoutFormActions {
 
 interface CheckoutFormAction {
   type: CheckoutFormActions;
-  payload: boolean | string;
+  payload: any;
 }
 
-interface CheckoutFormState {
+export interface CheckoutFormState {
   succeeded: boolean;
   error: string;
   processing: boolean;
@@ -19,33 +19,33 @@ interface CheckoutFormState {
   clientSecret: string;
 }
 
-export function CheckoutFormReducer(state: CheckoutFormState, action: CheckoutFormAction) {
+export function CheckoutFormReducer(state: CheckoutFormState, action: CheckoutFormAction):CheckoutFormState {
   const { type, payload } = action;
   switch (type) {
     case CheckoutFormActions.SUCCEEDED:
       return {
         ...state,
-        value: payload,
+        succeeded: payload,
       };
     case CheckoutFormActions.ERROR:
       return {
         ...state,
-        value: payload,
+        error: payload,
       };
     case CheckoutFormActions.PROCESSING:
       return {
         ...state,
-        value: payload,
+        processing: payload,
       };
     case CheckoutFormActions.DISABLED:
       return {
         ...state,
-        value: payload,
+        disabled: payload,
       };
     case CheckoutFormActions.CLIENTSECRET:
       return {
         ...state,
-        value: payload,
+        clientSecret: payload,
       };
     default:
       return state;
