@@ -1,20 +1,17 @@
 import { PageRow } from '../../../common/types';
 import { createReducer } from '../../../helpers';
-import type { FetchTransactionsActionSucces } from './actions';
-import { fetchTransactionsPageAction } from './actions';
+import { clearTransactionsStateAction, FetchTransactionsActionSucces, fetchTransactionsPageAction } from './actions';
 
 export interface TransactionsState {
   isLoading: boolean;
   isLast: boolean;
   page: PageRow[];
-  lastPage: number;
 }
 
 export const initialState: TransactionsState = {
   isLoading: true,
   isLast: false,
-  page: [],
-  lastPage: 0
+  page: []
 };
 
 export const transactionsReducer = createReducer<TransactionsState>(initialState, {
@@ -35,9 +32,12 @@ export const transactionsReducer = createReducer<TransactionsState>(initialState
       ...state,
       page: [...state.page, ...action.payload.page],
       isLoading: false,
-      isLast: action.payload.isLast,
-      lastPage: state.lastPage + 1
+      isLast: action.payload.isLast
     };
+  },
+  [clearTransactionsStateAction.TRIGGER]() {
+    console.log('))');
+    return initialState;
   }
 });
 
