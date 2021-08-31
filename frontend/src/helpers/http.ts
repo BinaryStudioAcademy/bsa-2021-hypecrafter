@@ -3,41 +3,8 @@ import queryString from 'query-string';
 import { HttpHeader, HttpMethod, HttpStatusCode } from '../common/enums';
 import { RequestArgs } from '../common/types';
 import { env } from '../env';
-import { getAccessToken, getRefreshToken, setAccessToken } from './localStorage';
-
-const fetchAccessToken = async () => {
-  const oldAccessToken = getAccessToken();
-  if (oldAccessToken) {
-    const decodedToken = decode(oldAccessToken);
-    const { userId } = decodedToken as { userId: string };
-    const refreshToken = getRefreshToken();
-    if (userId && refreshToken) {
-      const response = await fetch(`${env.server.url}/auth/token`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          userId,
-          refreshToken
-        })
-      });
-      if (response.status !== HttpStatusCode.UNAUTHORIZED) {
-        const result = await response.json();
-        const { accessToken: token } = result;
-        setAccessToken(token);
-        return token;
-      }
-    }
-  }
-  return null;
-};
-
-const logout = async () => {
-  // TODO...
-  const data = 'Some data';
-  return data;
-};
+import { removeUser } from '../reducers/removeUser';
+import { getAccessToken, getRefreshToken, removeTokens, setAccessToken } from './localStorage';
 
 const getInitHeaders = (
   hasContent = false,
@@ -89,6 +56,39 @@ const getUrl = (method: HttpMethod, { url, params, config }: RequestArgs): strin
   }
 
   return fullUrl;
+};
+
+export const logout = async () => {
+  const refreshToken = getRefreshToken();
+  if (refreshToken) {
+    const url = getUrl(HttpMethod.POST, { url: 'auth/token/reject' });
+    const options = getOptions(HttpMethod.POST, { url, params: { refreshToken } });
+    await fetch(url, options);
+  }
+  removeTokens();
+  removeUser();
+};
+
+const fetchAccessToken = async () => {
+  const oldAccessToken = getAccessToken();
+
+  if (oldAccessToken) {
+    const decodedToken = decode(oldAccessToken);
+    const userId = (decodedToken as { userId: string })?.userId;
+    const refreshToken = getRefreshToken();
+    if (userId && refreshToken) {
+      const url = getUrl(HttpMethod.POST, { url: 'auth/token' });
+      const options = getOptions(HttpMethod.POST, { url, params: { userId, refreshToken } });
+      const response = await fetch(url, options);
+      if (response.status !== HttpStatusCode.UNAUTHORIZED) {
+        const result = await response.json();
+        const { accessToken: token } = result;
+        setAccessToken(token);
+        return token;
+      }
+    }
+  }
+  return null;
 };
 
 const makeRequest = (method: HttpMethod) => async <T>(args: RequestArgs) => {
