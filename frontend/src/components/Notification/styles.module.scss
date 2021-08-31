@@ -1,0 +1,29 @@
+@import './../../styles/mixins', './../../styles/vars';
+
+.notification-card {
+  display: flex;
+  padding: 20px 15px;
+  border-top: 1px solid $color-root-text-grey;
+}
+
+.image-wrapper {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 30px;
+}
+
+.image {
+  height: 45px;
+}
+
+.text a {
+  color: $color-root-text;
+  font-weight: $font-weight-medium;
+}
+
+.date {
+  margin-top: 10px;
+  font-size: $font-size-small;
+}

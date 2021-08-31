@@ -1,0 +1,52 @@
+@import './../../styles/mixins', './../../styles/vars';
+
+.popover {
+  width: 350px;
+}
+
+.notification-popover-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.notifications-title {
+  font-size: $font-size-aсcent;
+  margin: 0;
+}
+
+.notification-popover-footer {
+  border-top: 1px solid $color-root-text-grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notification-popover-header,
+.notification-popover-footer {
+  padding: 10px 15px;
+}
+
+.menage-title {
+  display: inline-block;
+  margin-left: 5px;
+  font-size: $font-size-text;
+  color: $color-root-text;
+}
+
+.header_natification {
+  cursor: pointer;
+  margin: 0px 11px;
+  position: relative;
+}
+.header_natification_bell {
+  color: $color-root-text;
+  font-size: 24px;
+  transform: rotate(-30deg);
+}
+.header_natification_new {
+  font-size: 8px;
+  position: absolute;
+  color: $color-root-turquoise;
+  right: 3px;
+}

@@ -1,5 +1,5 @@
-import { faBell } from '@fortawesome/free-regular-svg-icons';
-import { faCircle, faSearch } from '@fortawesome/free-solid-svg-icons';
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ChangeEvent, useState } from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
@@ -14,6 +14,7 @@ import Button from '../Button';
 import Input from '../Input';
 import Link from '../Link';
 import Logo from '../Logo';
+import NotificationPopover from '../NotificationsPopover';
 import OpenUserModal from '../OpenUserModalOption';
 import LanguageSwitcher from '../SwitchLanguageOption/LanguageSwitcher';
 import classes from './styles.module.scss';
@@ -112,10 +113,13 @@ const Header = () => {
                   <Link to={Routes.ADDFUNDS}><img src={hypeCoin} alt="HypeCoin" /></Link>
                   <Link to={Routes.ADDFUNDS}>1500</Link>
                 </div>
-                <div className={classes.header_natification}>
-                  <FontAwesomeIcon icon={faBell} className={classes.header_natification_bell} />
-                  {true && <FontAwesomeIcon icon={faCircle} className={classes.header_natification_new} />}
-                </div>
+                <NotificationPopover notifications={[{
+                  image: 'https://klike.net/uploads/posts/2019-05/1556708032_1.jpg',
+                  text: <span><a href="#">User</a> commented your <a href="#">New Post</a></span>,
+                  date: '11 Aug, 2021',
+                  id: '1'
+                }]}
+                />
                 <div className={classes.desktop_profile}>
                   <Nav.Link
                     onClick={handleProfileMenu}
@@ -252,13 +256,12 @@ const Header = () => {
           <span>1500</span>
         </div>
         <div className={classes.mobile_notification}>
-          <FontAwesomeIcon
-            icon={faBell}
-            className={classes.mobile_notification_bell}
-          />
-          <FontAwesomeIcon
-            icon={faCircle}
-            className={classes.mobile_notification_new}
+          <NotificationPopover notifications={[{
+            image: 'https://klike.net/uploads/posts/2019-05/1556708032_1.jpg',
+            text: <span><a href="#">User</a> commented your <a href="#">New Post</a></span>,
+            date: '11 Aug, 2021',
+            id: '1'
+          }]}
           />
         </div>
         <div className={classes.mobile_profile}>
