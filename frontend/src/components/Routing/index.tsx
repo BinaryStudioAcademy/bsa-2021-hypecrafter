@@ -12,6 +12,8 @@ import Projects from '../../scenes/Projects';
 import TrendsPage from '../../scenes/TrendsPage';
 import UserPage from '../../scenes/UserPage';
 import FundsPage from '../../scenes/Wallet/FundsPage';
+import Payment from '../../scenes/Wallet/Payment';
+import SuccessPage from '../../scenes/Wallet/Payment/components/SuccessPage';
 import Transactions from '../../scenes/Wallet/Transactions';
 import Header from '../Header';
 import LoaderWrapper from '../LoaderWrapper';
@@ -99,6 +101,8 @@ const Routing = () => {
           />
           <PrivateRoute exact path={Routes.ADDFUNDS} component={FundsPage} />
           <PrivateRoute exact path={Routes.TRANSACTIONS} component={Transactions} />
+          <PrivateRoute exact path={Routes.PAYMENT} component={Payment} />
+          <PrivateRoute exact path={Routes.PAYMENT_SUCCESS} component={SuccessPage} />
           <PublicRoute
             restricted={false}
             exact

@@ -1,5 +1,5 @@
 import { EntityRepository, Repository } from 'typeorm';
-import { paginationStep } from '../../common/types';
+import { paginationStep, Transaction } from '../../common/types';
 import { TransactionHistory } from '../entities/transactionHistory';
 
 @EntityRepository(TransactionHistory)
@@ -16,12 +16,18 @@ export class TransactionHistoryRepository extends Repository<TransactionHistory>
     return this.findOne({ id });
   }
 
+  public setTransaction(transaction: Transaction) {
+    const newTransaction = { ...new TransactionHistory(), ...transaction };
+    return this.save(newTransaction);
+  }
+
   public async getByUserId(userId: string, pageNum: number) {
     const skipNum = (pageNum - 1) * paginationStep;
     const count = await this.getCountByUserId(userId);
     const page = await this.createQueryBuilder('transactionHistory')
-      .select(['"createdAt"', 'item', 'type', 'total', 'balance'])
-      .where(`"userId" = '${userId}'`).skip(skipNum)
+      .select(['"createdAt"', 'item', 'type', 'total'])
+      .orderBy('"createdAt"', 'DESC')
+      .skip(skipNum)
       .take(paginationStep)
       .getRawMany();
     const isLast: boolean = count <= pageNum * paginationStep;

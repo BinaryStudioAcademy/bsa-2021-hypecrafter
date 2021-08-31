@@ -6,9 +6,6 @@ export class TransactionHistory extends AbstractEntity {
   @Column({ type: 'money' })
   public total: number;
 
-  @Column({ type: 'money' })
-  public balance: number;
-
   @Column()
   public userId: string;
 
