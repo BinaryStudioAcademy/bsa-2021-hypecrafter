@@ -1,7 +1,7 @@
 @import '../../../styles/vars';
 
 .breadcrumbs {
-  padding-top: 24px;
+  margin-top: 110px;
   color: rgb(122, 122, 122);
   font-size: $font-size-small;
   a {
@@ -13,7 +13,6 @@
   }
 }
 .wallet-header {
-  margin-top: 90px;
   padding-bottom: 5px;
   max-width: $breakpoint-xl;
 }
@@ -107,4 +106,14 @@
 
 .hide {
   opacity: 0 !important;
+}
+@media screen and (max-width: 700px) {
+  .breadcrumbs {
+    margin-top: 130px;
+  }
+}
+@media screen and (max-width: 510px) {
+  .breadcrumbs {
+    margin-top: 165px;
+  }
 }

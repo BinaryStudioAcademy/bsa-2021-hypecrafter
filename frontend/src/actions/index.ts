@@ -8,6 +8,7 @@ export {
   filterProjectsAction,
   sortProjectsAction
 } from '../scenes/Projects/actions';
+
 export {
   fetchCategories,
   fetchPopularProjectsByCategory,
@@ -15,7 +16,7 @@ export {
   setSelectedCategoryAction
 } from '../scenes/TrendsPage/actions';
 export { fetchUserProfileAction } from '../scenes/UserPage/actions';
-export { fetchTransactionsPageAction } from '../scenes/Wallet/Transactions/actions';
+
 export {
   authFetchUserAction,
   openModalAction,
@@ -23,5 +24,9 @@ export {
   setEditingAction,
   updateUserProfileAction
 } from './auth';
+
+export { setFundAction } from '../scenes/Wallet/Payment/actions';
+export { clearTransactionsStateAction, fetchTransactionsPageAction } from '../scenes/Wallet/Transactions/actions';
 export { getCategoriesAction } from './categories';
 export { getUsersAction } from './users';
+

@@ -1,3 +1,3 @@
 import { api } from '../helpers';
 
-export const getPage = (userId: string, pageNum: number) => api.get({ url: `payment/${userId}/${pageNum}` });
+export const getPage = (pageNum: number) => api.get({ url: `payment/${pageNum}` });
