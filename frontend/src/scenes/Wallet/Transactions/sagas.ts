@@ -13,7 +13,7 @@ interface TransactionAction extends Action {
 function* fetchTransactionsPage(action: TransactionAction) {
   try {
     const { lastPage } = action.payload;
-    const transactionsPage: TransactionsPage = yield call(getPage, lastPage + 1);
+    const transactionsPage: TransactionsPage = yield call(getPage, lastPage);
     yield put(fetchTransactionsPageAction.success(transactionsPage));
   } catch (error) {
     console.log(error.message);
