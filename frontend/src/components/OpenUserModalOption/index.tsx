@@ -7,7 +7,7 @@ const OpenUserModal = () => {
   const { t } = useLocalization();
   const { id } = useAuth();
 
-  const clickHandler = () => id && openModalAction(id)
+  const clickHandler = () => id && openModalAction(id);
 
   return (
     <button type="button" className={classes['open-modal-btn']} onClick={clickHandler}>
