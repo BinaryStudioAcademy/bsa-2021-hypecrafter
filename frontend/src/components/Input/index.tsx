@@ -53,14 +53,14 @@ const Input = forwardRef<HTMLInputElement, Props>(({
           )}
         {options && (
         <div className={classes.options}>
-            {options.slice(0, countOptions).map(option => (
-              <button
-                type="button"
-                key={option.value}
-                onClick={() => selectOption && selectOption(option.value)}
-              >{option.text}
-              </button>
-            ))}
+          {options.slice(0, countOptions).map(option => (
+            <button
+              type="button"
+              key={option.value}
+              onClick={() => selectOption && selectOption(option.value)}
+            >{option.text}
+            </button>
+          ))}
         </div>
         )}
       </div>
