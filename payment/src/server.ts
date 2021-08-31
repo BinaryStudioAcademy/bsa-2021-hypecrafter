@@ -6,12 +6,11 @@ import { env } from './env';
 import { log } from './helpers/logger';
 
 const { rabbit } = env.app;
-
 const app = new MicroMq({
   name: Project.PAYMENT,
-  rabbit
+  rabbit,
+  microservices: [Project.BACKEND]
 });
-
 createConnection().then(() => {
-  initRoutes(app).start();
+  initRoutes(app)?.start();
 }).catch((e) => log(e));

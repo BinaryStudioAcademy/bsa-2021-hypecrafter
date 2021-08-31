@@ -1,4 +1,4 @@
-import { Request, Response, NextFunction } from 'express';
+import { NextFunction, Request, Response } from 'express';
 
 export const wrap = <P extends ParamsDictionary, ResBody = unknown, ReqBody = unknown, ReqQuery = Query>(
   handler: (req?: Request<P, ResBody, ReqBody, ReqQuery>) => Promise<ResBody>
