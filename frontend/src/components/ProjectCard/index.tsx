@@ -18,7 +18,7 @@ type Props = {
 
 const ProjectCard: FC<Props> = ({
   to,
-  tags,
+  tags = '',
   name,
   description,
   goal,
@@ -32,10 +32,17 @@ const ProjectCard: FC<Props> = ({
     <div className={classes.title}>{name}</div>
     <div className={classes.description}>{description}</div>
 
-    <div className={classes.tags}>
-      {(Array.isArray(tags))
-        ? tags.map(tag => <Tag key={tag} text={tag} />)
-        : <Tag text={tags} />}
+    <div
+      className={`
+        ${classes.tags}
+        ${!tags.length ? classes.hide : ''}
+      `}
+    >
+      {
+        Array.isArray(tags)
+          ? tags.map(tag => <Tag key={tag} text={tag} />)
+          : <Tag text={tags} />
+      }
     </div>
 
     <ProgressBar goal={Math.floor(goal)} percent={Math.floor(percent)} />
