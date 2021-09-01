@@ -92,6 +92,7 @@
 
   .user-about-me.editing {
     height: 300px;
+    margin-bottom: 460px;
 
     textarea {
       height: 220px;
@@ -183,4 +184,9 @@
 // Remove default styles
 p {
   margin: 0;
+}
+
+label {
+  font-size: $font-size-large;
+  font-weight: 300;
 }

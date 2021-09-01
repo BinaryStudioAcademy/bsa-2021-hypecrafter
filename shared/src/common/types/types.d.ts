@@ -19,6 +19,10 @@ declare module 'micromq' {
 
     delete: IRouterMatcher<any>;
 
+    action(name: string, handler: (meta: object,res: any)=>void):void;
+
+    ask(name: string, query: object): Promise<object>;
+
     start(): void;
   }
   export default MicroMq;

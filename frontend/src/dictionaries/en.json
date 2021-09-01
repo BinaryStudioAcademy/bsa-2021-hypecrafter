@@ -158,6 +158,9 @@
     "Popular": "Popular",
     "Recommended": "Recommended",
     "The page you were looking for doesn’t exist (404)": "The page you were looking for doesn’t exist (404)",
+    "Tags help when searching to give the user exactly those projects that interest him":"Tags help when searching to give the user exactly those projects that interest him",
+    "Atach image":"Atach image",
+    "Atach video":"Atach video",
     "Social title": "It's faithful assistant",
     "Site locale": "en_US",
     "Sign In with Facebook": "Sign In with Facebook",
@@ -166,6 +169,17 @@
     "Edit": "Edit",
     "Rating": "Rating",
     "Site locale": "en_US",
-    "Update": "Update"
+    "Update": "Update",
+
+    "Payment": "Payment",
+    "Selected fund": "Selected fund",
+
+    "Load...": "Load...",
+    "Congratulation!": "Congratulation!",
+    "Payment transaction was successful": "Payment transaction was successful",
+    "Basic fund":"Basic fund",
+    "Amount":"Amount",
+    "Return to Main Page":"Return to Main Page",
+    "Pay":"Pay"
   }
 }

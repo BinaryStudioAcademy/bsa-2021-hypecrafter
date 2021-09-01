@@ -3,7 +3,6 @@
 @import '../../../styles/mixins';
 
 .breadcrumbs {
-  padding-top: 24px;
   color: rgb(122, 122, 122);
   font-size: $font-size-small;
   a {
@@ -24,7 +23,7 @@
 }
 .transaction-table-wrp {
   margin: 0 auto;
-  margin-top: 90px;
+  margin-top: 110px;
   width: $breakpoint-lg !important;
   table {
     thead {
@@ -67,4 +66,14 @@
   justify-content: center;
   align-items: center;
   margin: 15px 0px;
+}
+@media screen and (max-width: 700px) {
+  .transaction-table-wrp{
+    margin-top: 130px;
+  }
+}
+@media screen and (max-width: 510px) {
+  .transaction-table-wrp{
+    margin-top: 160px;
+  }
 }
