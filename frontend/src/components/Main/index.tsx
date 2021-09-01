@@ -5,6 +5,7 @@ import ButtonExample from '../ButtonExample';
 import CardExample from '../CardExample';
 import Chart from '../Chart';
 import defaultProps from '../Chart/utils';
+import Chat from '../Chat';
 import ExampleCounter from '../Counter/ExampleCounter';
 import DatePickerInput from '../DatePicker';
 import Input from '../Input';
@@ -20,6 +21,8 @@ function Main() {
   const [show, setShow] = useState(true);
   return (
     <div>
+      <div style={{ width: '100%', height: '600px' }}>...</div>
+      <Chat />
       <ProjectPrivilege
         value={20}
         title="I am a title!"
