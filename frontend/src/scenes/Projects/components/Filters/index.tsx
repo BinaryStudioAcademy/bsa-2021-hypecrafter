@@ -52,8 +52,6 @@ const Filters = () => {
   const onChange = () => {
     const formState = getValues();
 
-    console.log(formState);
-
     if (sortValue !== formState.sort) {
       sortProjectsAction(formState.sort);
     }
