@@ -34,8 +34,6 @@
     "react-redux": "^7.2.4",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
-    "react-split": "^2.0.12",
-    "react-split-grid": "^1.0.3",
     "react-table": "^7.7.0",
     "redux": "^4.1.0",
     "redux-saga": "^1.1.3",
