@@ -23,7 +23,7 @@
     "i18next-browser-languagedetector": "^6.1.2",
     "jodit-react": "^1.1.1",
     "moment": "^2.29.1",
-    "query-string": "^4.3.4",
+    "query-string": "^7.0.1",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.0-beta.4",
     "react-chartjs-2": "^3.0.4",
