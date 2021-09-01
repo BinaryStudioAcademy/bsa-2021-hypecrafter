@@ -173,4 +173,13 @@ declare type LocaleKeys =
   | 'Enter new subparagraph'
   | 'What privileges can users have for a specific donation'
   | 'Privileges'
-  | 'Add privilege';
+  | 'Add privilege'
+  | 'Payment'
+  | 'Selected fund'
+  | 'Load...'
+  | 'Congratulation!'
+  | 'Payment transaction was successful'
+  | 'Basic fund'
+  | 'Amount'
+  | 'Return to Main Page'
+  | 'Pay';
