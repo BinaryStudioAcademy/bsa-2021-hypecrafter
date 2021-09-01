@@ -3,11 +3,10 @@ import { Mark as MarkType } from '../../common/types/project/mark';
 import { Statistics } from '../../common/types/project/statistics';
 import { createReducer } from '../../helpers';
 import type {
-  AddCommentSuccessActionType, FetchProjectSuccessActionType,
-  SetReactionSuccessActionType,
+  AddCommentSuccessActionType, FetchProjectSuccessActionType, FetchStatisticsSuccessActionType, SetReactionSuccessActionType,
   SetWatchSuccessActionType
 } from './actions';
-import { addComment, fetchProject, setReaction, setWatch } from './actions';
+import { addComment, fetchProject, fetchStatistics, setReaction, setWatch } from './actions';
 
 export interface ProjectPageState {
   isLoading: boolean;
@@ -89,6 +88,24 @@ const projectPageReducer = createReducer<ProjectPageState>(projectPageState, {
     return {
       ...state,
       isInputLoading: false,
+    };
+  },
+  [fetchStatistics.SUCCESS](state, action: FetchStatisticsSuccessActionType) {
+    return {
+      ...state,
+      statistics: action.payload
+    };
+  },
+  [fetchStatistics.TRIGGER](state) {
+    return {
+      ...state,
+      isLoading: true
+    };
+  },
+  [fetchStatistics.FAILURE](state) {
+    return {
+      ...state,
+      isLoading: false
     };
   }
 });
