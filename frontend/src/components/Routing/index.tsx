@@ -57,7 +57,7 @@ const Routing = () => {
   return (
     <>
       <MetaData />
-      <LoaderWrapper isLoading={isLoading || (!user && hasToken)} variant="page">
+      <LoaderWrapper isLoading={isLoading || (!!user && hasToken)} variant="page">
         {!routesWitoutHeader.includes(pathname as Routes) && <Header />}
         <ModalWindow
           show={showModal}

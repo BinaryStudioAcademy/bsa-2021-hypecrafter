@@ -1,16 +1,23 @@
 import { Action } from 'redux';
 import { all, call, put, takeEvery } from 'redux-saga/effects';
 import { Comment, CreateComment, ProjectPage } from '../../common/types';
+import { Statistics } from '../../common/types/project/statistics';
 import { addComment } from '../../services/comment';
-import { getProject, setReaction, setWatch } from '../../services/project';
+import { getProject, getProjectsStatistics, setReaction, setWatch } from '../../services/project';
 import {
-  addComment as addCommentAction, fetchProject as fetchProjectAction,
-  setReaction as setReactionAction,
+  addComment as addCommentAction,
+  fetchProject as fetchProjectAction, fetchStatistics as fetchStatisticsAction, setReaction as setReactionAction,
   setWatch as setWatchAction
 } from './actions';
 
 interface AddCommentAction extends Action {
   payload: CreateComment;
+}
+
+interface FetchStatisticsAction extends Action {
+  payload: {
+    id: string;
+  }
 }
 
 interface ProjectAction extends Action {
@@ -88,11 +95,25 @@ function* watchCreateComment() {
   yield takeEvery(addCommentAction.TRIGGER, createComment);
 }
 
+function* fetchStatistics(action: FetchStatisticsAction) {
+  try {
+    const response: Statistics = yield call(getProjectsStatistics, action.payload);
+    yield put(fetchStatisticsAction.success(response));
+  } catch (error) {
+    yield put(fetchStatisticsAction.failure(error as string));
+  }
+}
+
+function* watchFetchStatistics() {
+  yield takeEvery(fetchStatisticsAction.TRIGGER, fetchStatistics);
+}
+
 export default function* projectPageSaga() {
   yield all([
     watchFetchTopics(),
     watchSetReaction(),
     watchSetWatch(),
-    watchCreateComment()
+    watchCreateComment(),
+    watchFetchStatistics()
   ]);
 }

@@ -1,8 +1,10 @@
 import { createRoutine } from 'redux-saga-routines';
 import { Comment, CreateComment, ProjectPage } from '../../common/types';
+import { Statistics } from '../../common/types/project/statistics';
 
 export enum ProjectsActions {
   FETCH_PROJECT = 'PROJECTS/GET_PROJECT',
+  FETCH_STATISTICS = 'PROJECTS/FETCH_STATISTICS',
   ADD_COMMENT = 'COMMENTS/ADD_COMMENT',
   SET_REACTION = 'PROJECTS/SET_REACTION',
   SET_WATCH = 'PROJECTS/SET_WATCH'
@@ -35,6 +37,18 @@ export const addComment = createRoutine(ProjectsActions.ADD_COMMENT, {
   success: (comment: Comment) => comment,
   failure: (error: string) => error
 });
+
+export const fetchStatistics = createRoutine(ProjectsActions.FETCH_STATISTICS, {
+  trigger: (id: string) => id,
+  success: (statistics: Statistics) => statistics,
+  failure: (error: string) => error
+});
+
+export type FetchStatisticsTriggerActionType = ReturnType<typeof fetchStatistics.trigger>;
+
+export type FetchStatisticsSuccessActionType = ReturnType<typeof fetchStatistics.success>;
+
+export type FetchStatisticsFailureActionType = ReturnType<typeof fetchStatistics.failure>;
 
 export type AddCommentTriggerActionType = ReturnType<typeof addComment.trigger>;
 

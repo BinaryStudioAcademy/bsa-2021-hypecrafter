@@ -1,5 +1,6 @@
 import { ProjectPage } from '../../common/types';
 import { Mark as MarkType } from '../../common/types/project/mark';
+import { Statistics } from '../../common/types/project/statistics';
 import { createReducer } from '../../helpers';
 import type {
   AddCommentSuccessActionType, FetchProjectSuccessActionType,
@@ -12,12 +13,14 @@ export interface ProjectPageState {
   isLoading: boolean;
   project: ProjectPage;
   isInputLoading: boolean;
+  statistics: Statistics,
 }
 
 export const projectPageState: ProjectPageState = {
   isLoading: false,
   project: {} as ProjectPage,
-  isInputLoading: false
+  isInputLoading: false,
+  statistics: {} as Statistics,
 };
 
 const projectPageReducer = createReducer<ProjectPageState>(projectPageState, {
