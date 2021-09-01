@@ -31,6 +31,9 @@
       background: none;
       border: none;
     }
+    .disabled{
+      @include disable-button;
+    }
   }
 
   .project-category {
