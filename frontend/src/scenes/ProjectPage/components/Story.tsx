@@ -1,4 +1,5 @@
 import classnames from 'classnames';
+import Parser from 'html-react-parser';
 import { FC } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { ProjectPrivilege } from '../../../common/types';
@@ -15,7 +16,7 @@ interface StoryProps {
 const Story: FC<StoryProps> = ({ story, privileges = [], tags = [] }) => (
   <Row className={classes['project-story']}>
     <Col xs={12} lg={8} xl={9}>
-      {story}
+      {Parser(story || '')}
     </Col>
     <Col xs={12} lg={4} xl={3}>
       <div className={classes['tag-wrapper']}>

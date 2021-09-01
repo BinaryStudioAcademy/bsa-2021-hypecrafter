@@ -1,0 +1,88 @@
+@import '../../../styles/vars';
+.payment-title{
+  font-size: $font-size-title;
+  padding-top: 8px;
+}
+.selected-fund-title{
+  color: $color-root-turquoise;
+  font-size: $font-size-category;
+  padding-bottom: 10px;
+}
+.payment-main-content{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .selected-fund-wrp{
+    border-radius: 20px;
+    width: 400px;
+    min-width: 400px;
+    height: 250px;
+    min-height: 250px;
+    background: #12c2e9; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #f64f59,
+      #c471ed,
+      #12c2e9
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #f64f59,
+      #c471ed,
+      #12c2e9
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    .selected-fund{
+      border-radius: 20px;
+      display: flex;
+      background-color: rgba(0, 0, 0, 0.4);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      .fund-amount{
+        .fund-amount-title{
+          font-size: $font-size-title;
+        }
+        .fund-amount-value{
+          font-size: $font-size-title;
+        }
+        img{
+          width: $font-size-title;
+          padding-bottom: 15px;
+          margin-left: 2px;
+        }
+      }
+    }
+  }
+  .payment-form-wrp{
+    display: flex;
+    flex-grow: 2;
+    justify-content: center;
+  }
+}
+.breadcrumbs {
+  margin-top: 110px;
+  color: rgb(122, 122, 122);
+  font-size: $font-size-small;
+  a {
+    text-decoration: none;
+    color: $color-root-text-grey;
+    &:hover {
+      color: $color-root-text;
+    }
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}

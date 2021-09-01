@@ -63,6 +63,26 @@ export default class AuthService {
     return newUser;
   }
 
+  public getUserByFacebookId(googleId: string) {
+    return this.#userRepository.getByFacebookId(googleId);
+  }
+
+  public async registerUserWithFacebook(
+    email: string,
+    facebookId: string
+  ) {
+    if (await this.#userRepository.getByEmail(email)) {
+      throw new CustomError(HttpStatusCode.BAD_REQUEST, 'Email is already taken');
+    }
+    const passwordHash: string = await encrypt(facebookId);
+    const newUser = await this.#userRepository.createUser({
+      email,
+      passwordHash,
+      facebookId
+    });
+    return newUser;
+  }
+
   public async registerUserWithGoogle(
     email: string,
     googleId: string
