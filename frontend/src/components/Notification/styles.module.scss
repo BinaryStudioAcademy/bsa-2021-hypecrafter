@@ -3,7 +3,27 @@
 .notification-card {
   display: flex;
   padding: 20px 15px;
+  border-radius: 0;
+  font-size: $font-size-text;
+  width: 100%;
+  background-color: $color-root-block-background;
+  border: none;
   border-top: 1px solid $color-root-text-grey;
+}
+
+.notification-card:hover,
+.notification-card:active,
+.notification-card:focus,
+.notification-card:visited
+{
+  background-color: $color-root-block-background;
+  border: none;
+  border-top: 1px solid $color-root-text-grey;
+  box-shadow: none !important;
+}
+
+.notification-card.liked {
+  background-color: $color-root-grey;
 }
 
 .image-wrapper {
@@ -15,7 +35,13 @@
 }
 
 .image {
-  height: 45px;
+  font-size: $font-size-title;
+  color: $color-root-turquoise;
+  margin-right: 30px;
+}
+
+.text {
+  text-align: start;
 }
 
 .text a {
@@ -26,4 +52,10 @@
 .date {
   margin-top: 10px;
   font-size: $font-size-small;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }

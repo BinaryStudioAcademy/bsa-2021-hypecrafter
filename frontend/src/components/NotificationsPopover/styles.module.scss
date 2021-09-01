@@ -10,12 +10,17 @@
   justify-content: space-between;
 }
 
+.notification-popover-main {
+  max-height: 500px;
+  overflow: auto;
+}
+
 .notifications-title {
   font-size: $font-size-aсcent;
   margin: 0;
 }
 
-.notification-popover-footer {
+.no-notifications {
   border-top: 1px solid $color-root-text-grey;
   display: flex;
   align-items: center;
@@ -23,7 +28,7 @@
 }
 
 .notification-popover-header,
-.notification-popover-footer {
+.no-notifications {
   padding: 10px 15px;
 }
 
@@ -49,4 +54,13 @@
   position: absolute;
   color: $color-root-turquoise;
   right: 3px;
+}
+
+.load-more {
+  width: 100%;
+  background: $color-root-modal-background;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
 }

@@ -1,8 +1,19 @@
-import { ReactNode } from 'react';
+import { NotificationMessageTypes } from '../../enums/notifications';
 
-export interface Notification {
-  image: string;
-  text: ReactNode;
-  date: string;
+export interface NotificationData {
+  user?: NotificationLink;
+  project: NotificationLink;
+  messageDate: string;
+  donation?: number;
+}
+
+export interface NotificationType {
+  data: NotificationData;
+  type: NotificationMessageTypes;
   id?: string;
+}
+
+export interface NotificationLink {
+  name: string;
+  link: string;
 }

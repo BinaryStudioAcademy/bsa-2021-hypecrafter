@@ -1,9 +1,11 @@
 import { faBell } from '@fortawesome/free-regular-svg-icons';
 import { faCircle, faSlidersH } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Routes } from '../../common/enums';
-import { Notification as NotificationType } from '../../common/types/notification';
+import { NotificationType } from '../../common/types/notification';
+import Button from '../Button';
 import Notification from '../Notification';
 import Popover from '../Popover';
 import classes from './styles.module.scss';
@@ -14,6 +16,7 @@ interface Props {
 
 const NotificationPopover = (props: Props) => {
   const { notifications } = props;
+  const [unreadMessageCount, setUnreadMessageCount] = useState(notifications.length);
 
   return (
     <div>
@@ -21,7 +24,7 @@ const NotificationPopover = (props: Props) => {
         trigger={(
           <div className={classes.header_natification}>
             <FontAwesomeIcon icon={faBell} className={classes.header_natification_bell} />
-            { !!notifications.length
+            { !!unreadMessageCount
             && <FontAwesomeIcon icon={faCircle} className={classes.header_natification_new} />}
           </div>
         )}
@@ -50,19 +53,26 @@ const NotificationPopover = (props: Props) => {
             <div className={classes['notification-popover-main']}>
               {notifications.map((notification) => (
                 <Notification
-                  image={notification.image}
-                  text={notification.text}
-                  date={notification.date}
+                  data={notification.data}
+                  type={notification.type}
                   key={notification.id}
+                  setUnreadMessageCount={setUnreadMessageCount}
+                  unreadMessageCount={unreadMessageCount}
                 />
               ))}
             </div>
             {!notifications.length
-                        && (
-                        <div className={classes['notification-popover-footer']}>
-                          <span>No more notifications</span>
-                        </div>
-                        )}
+              && (
+              <div className={classes['no-notifications']}>
+                <span>No more notifications</span>
+              </div>
+              )}
+            {true
+              && (
+              <Button className={classes['load-more']}>
+                Load more
+              </Button>
+              )}
           </div>
         )}
       </Popover>
