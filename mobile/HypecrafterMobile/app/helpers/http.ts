@@ -4,6 +4,8 @@ import { RequestArgs } from '../common/types';
 import { env } from '../env';
 import { getAccessToken } from './localStorage';
 
+type HeadersInit = Headers | string[][] | Record<string, string>;
+
 const refreshToken = async () => {
   // TODO...
   const data = 'Some data';
