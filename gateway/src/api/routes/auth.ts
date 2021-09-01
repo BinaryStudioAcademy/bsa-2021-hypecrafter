@@ -119,7 +119,20 @@ const init = (services: Services) => {
           userId,
           userAgentInfo
         );
-        req.body = { data: req.body, tokens };
+
+        const { firstName, lastName, email, region, phoneNumber, gender } = req.body;
+        req.body = {
+          data: {
+            id: userId,
+            firstName,
+            lastName,
+            email,
+            region,
+            phoneNumber,
+            gender
+          },
+          tokens };
+
         res.delegate(Project.BACKEND);
       } catch {
         throw new CustomError(
