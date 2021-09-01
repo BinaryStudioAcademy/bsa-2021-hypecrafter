@@ -40,6 +40,7 @@
 
   .project-social-links-container {
     margin-left: 3px;
+    display: flex;
 
     a {
       padding: 5px 10px;
@@ -51,6 +52,13 @@
       &:hover {
       color: $color-root-turquoise;
       }
+    }
+
+    Button {
+      width: 100px;
+      margin-left: auto;
+      margin-right: 18px;
+      background: $color-root-grey;
     }
   }
 }
