@@ -20,7 +20,7 @@ const App = () => {
   return (
     <Provider store={store}>
       <MainNavigator
-        ref={navigatorRef => {
+        ref={(navigatorRef: any) => {
           NavigationService.setTopLevelNavigator(navigatorRef);
         }}
       />

@@ -2,7 +2,8 @@ import queryString from 'query-string';
 import { HttpHeader, HttpMethod, HttpStatusCode } from '../common/enums';
 import { RequestArgs } from '../common/types';
 import { env } from '../env';
-import { getAccessToken } from './localStorage';
+import Storage from '../storage';
+import { StorageKey } from './../common/constants/storageKey';
 
 type HeadersInit = Headers | string[][] | Record<string, string>;
 
@@ -27,7 +28,7 @@ const getInitHeaders = (
     headers.set(HttpHeader.CONTENT_TYPE, contentType);
   }
 
-  const token = getAccessToken();
+  const token = Storage.get(StorageKey);
   if (token) {
     headers.set(HttpHeader.AUTHORIZATION, `Bearer ${token}`);
   }
