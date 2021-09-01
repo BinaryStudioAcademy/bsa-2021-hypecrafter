@@ -1,4 +1,4 @@
-import { Response, Router, Request } from 'express';
+import { Request, Response, Router } from 'express';
 import { HttpStatusCode, Project } from 'hypecrafter-shared/enums';
 import { AuthApiPath } from '../../common/enums';
 import { Tokens } from '../../common/types/registration';
@@ -8,6 +8,7 @@ import { getGoogleInfo } from '../../helpers/getGoogleInfo';
 import { wrap } from '../../helpers/request';
 import { Services } from '../../services/index';
 import { authentication as authenticationMiddleware } from '../middlewares/authentication';
+import { facebookAuth } from '../middlewares/authFacebook';
 import { registration as registrationMiddleware } from '../middlewares/registration';
 import { saveReqBodyUserEmail } from '../middlewares/saveReqBodyUserEmail';
 
@@ -46,10 +47,36 @@ const init = (services: Services) => {
       }
     })
     .post(
+      AuthApiPath.Facebook,
+      facebookAuth,
+      async (req: Request, res: Response) => {
+        const { facebookId, firstName, lastName, email } = req.user;
+        const userAgentInfo: string = req.headers['user-agent'];
+        const user = await services.authService.getUserByFacebookId(facebookId);
+        if (!user) {
+          const newUser = await services.authService.registerUserWithFacebook(
+            email,
+            facebookId
+          );
+          const newUserId = newUser.id;
+          const newUserTokens = services.authService.loginUser(newUserId, userAgentInfo);
+          req.body = {
+            data: { email, facebookId, firstName, lastName },
+            tokens: newUserTokens
+          };
+          res.delegate(Project.BACKEND);
+        } else {
+          const userId = user.id;
+          const tokens = services.authService.loginUser(userId, userAgentInfo);
+          res.json(tokens);
+        }
+      }
+    )
+    .post(
       AuthApiPath.Login,
       authenticationMiddleware,
       wrap<Empty, Tokens, { id: string }, Empty>((req) => {
-        const userId: string = (req.user as User).id;
+        const { id: userId } = req.user;
         const userAgentInfo: string = req.headers['user-agent'];
         const result = services.authService.loginUser(userId, userAgentInfo);
         return Promise.resolve(result);
@@ -97,7 +124,20 @@ const init = (services: Services) => {
           userId,
           userAgentInfo
         );
-        req.body = { data: req.body, tokens };
+
+        const { firstName, lastName, email, region, phoneNumber, gender } = req.body;
+        req.body = {
+          data: {
+            id: userId,
+            firstName,
+            lastName,
+            email,
+            region,
+            phoneNumber,
+            gender
+          },
+          tokens };
+
         res.delegate(Project.BACKEND);
       } catch {
         throw new CustomError(

@@ -1,4 +1,4 @@
-export { googleAuthAction, loginAction, registerUserAction } from '../scenes/Auth/actions';
+export { facebookAuthAction, googleAuthAction, loginAction, registerUserAction } from '../scenes/Auth/actions';
 export { createProjectAction } from '../scenes/CreateProject/actions';
 export { fetchPopularAndRecommendedProjectsAction, fetchTopics } from '../scenes/MainPage/actions';
 export { addComment, fetchProject, setReaction, setWatch } from '../scenes/ProjectPage/actions';
@@ -28,5 +28,6 @@ export {
 export { setFundAction } from '../scenes/Wallet/Payment/actions';
 export { clearTransactionsStateAction, fetchTransactionsPageAction } from '../scenes/Wallet/Transactions/actions';
 export { getCategoriesAction } from './categories';
+export { getTagsAction } from './tags';
 export { getUsersAction } from './users';
 

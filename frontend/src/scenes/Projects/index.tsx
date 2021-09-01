@@ -46,7 +46,7 @@ const Projects = () => {
             {projects.map((project: Project) => (
               <ProjectCard
                 key={project.id}
-                to={`${Routes.LOGIN}/${project.id}`}
+                to={`${Routes.PROJECTS}/${project.id}`}
                 category={project.category}
                 tags={project.tags}
                 name={project.name}
