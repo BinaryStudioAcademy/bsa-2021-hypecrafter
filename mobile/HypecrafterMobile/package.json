@@ -28,6 +28,7 @@
     "@types/react-native": "^0.64.5",
     "@types/react-native-dotenv": "^0.2.0",
     "@types/react-test-renderer": "^16.9.2",
+    "@types/redux-persist": "^4.3.1",
     "@types/redux-saga-routines": "^3.1.2",
     "babel-jest": "^26.6.3",
     "eslint": "^7.14.0",
