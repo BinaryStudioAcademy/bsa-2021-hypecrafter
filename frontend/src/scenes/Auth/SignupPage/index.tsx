@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import { FunctionComponent, useEffect, useState } from 'react';
+import { ReactFacebookLoginInfo } from 'react-facebook-login-typed';
 import { GoogleLoginResponse, GoogleLoginResponseOffline } from 'react-google-login';
 import { Link, useHistory } from 'react-router-dom';
 import logo from '../../../assets/HypeCrafter.svg';
@@ -16,7 +17,7 @@ import classes from './styles.module.scss';
 
 const SignupPage: FunctionComponent = () => {
   const history = useHistory();
-  const { registerUserAction, googleAuthAction } = useAction();
+  const { registerUserAction, facebookAuthAction, googleAuthAction } = useAction();
   const store = useTypedSelector(({ authentication: { tokens, isLoading, error } }) => ({
     accessToken: tokens?.accessToken,
     refreshToken: tokens?.refreshToken,
@@ -33,6 +34,11 @@ const SignupPage: FunctionComponent = () => {
 
   const handleSignup = (data: SignupData) => {
     registerUserAction(data);
+  };
+
+  const handleSignupWithFacebook = (data: ReactFacebookLoginInfo) => {
+    const { accessToken } = data;
+    facebookAuthAction(accessToken);
   };
 
   const handleSignupWithGoogle = (googleData: GoogleLoginResponse | GoogleLoginResponseOffline) => {
@@ -58,6 +64,7 @@ const SignupPage: FunctionComponent = () => {
         setMainFormInfo={setMainFormInfo}
         onSignupWithGoogle={handleSignupWithGoogle}
         t={t}
+        onSignupWithFacebook={handleSignupWithFacebook}
       />
     ),
     [Pages.ADDITIONAL_FORM]: (

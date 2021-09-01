@@ -23,6 +23,7 @@ export const env = {
     key: getEnv('REACT_APP_PAYMENT_KEY')
   },
   auth: {
+    facebookClientId: getEnv('REACT_APP_FACEBOOK_CLIENT_ID'),
     googleClientId: getEnv('REACT_APP_GOOGLE_CLIENT_ID')
   }
 };

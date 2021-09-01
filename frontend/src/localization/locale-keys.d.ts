@@ -182,4 +182,6 @@ declare type LocaleKeys =
   | 'Basic fund'
   | 'Amount'
   | 'Return to Main Page'
-  | 'Pay';
+  | 'Pay'
+  | 'Sign In with Facebook'
+  | 'Sign Up with Facebook';
