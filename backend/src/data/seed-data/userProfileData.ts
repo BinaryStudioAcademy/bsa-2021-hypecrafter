@@ -17,7 +17,9 @@ export const userProfiles = [
       'Wed Jul 28 2021 16:17:48 GMT+0300 (Eastern European Summer Time)',
     region: 'Niue',
     imageUrl: 'https://source.unsplash.com/random/800x600',
-    dribbleUrl: 'https://dribbble.com/shots/16234093-Penguins-illustration'
+    dribbleUrl: 'https://dribbble.com/shots/16234093-Penguins-illustration',
+    pinterestUrl: 'pinterest.ru/buryatbogema/_created/',
+    behanceUrl: 'https://www.behance.net/NLDES'
   },
   {
     id: '4da2c9f3-ce90-4817-90d0-5116d57a5b14',
@@ -40,7 +42,8 @@ export const userProfiles = [
       'Wed Jul 28 2021 16:17:48 GMT+0300 (Eastern European Summer Time)',
     region: 'Bouvet Island',
     imageUrl: 'https://source.unsplash.com/random/800x600',
-    dribbleUrl: 'https://dribbble.com/shots/16234093-Penguins-illustration'
+    dribbleUrl: 'https://dribbble.com/shots/16234093-Penguins-illustration',
+    behanceUrl: 'https://www.behance.net/NLDES'
   },
   {
     id: '95e27387-bf47-46c1-b06d-db6a5629db54',
@@ -63,7 +66,8 @@ export const userProfiles = [
       'Wed Jul 28 2021 16:17:48 GMT+0300 (Eastern European Summer Time)',
     region: 'Bouvet Island',
     imageUrl: 'https://source.unsplash.com/random/800x600',
-    dribbleUrl: 'https://dribbble.com/shots/16234093-Penguins-illustration'
+    dribbleUrl: 'https://dribbble.com/shots/16234093-Penguins-illustration',
+    pinterestUrl: 'pinterest.ru/buryatbogema/_created/'
   },
   {
     id: 'aa984f73-fadc-4d9a-8a9f-e0e50002f061',
@@ -85,7 +89,9 @@ export const userProfiles = [
       'Wed Jul 28 2021 16:17:48 GMT+0300 (Eastern European Summer Time)',
     region: 'India',
     imageUrl: 'https://source.unsplash.com/random/800x600',
-    dribbleUrl: 'https://dribbble.com/shots/16234093-Penguins-illustration'
+    dribbleUrl: 'https://dribbble.com/shots/16234093-Penguins-illustration',
+    pinterestUrl: 'pinterest.ru/buryatbogema/_created/',
+    behanceUrl: 'https://www.behance.net/NLDES'
   },
   {
     id: 'd5906099-40f2-445b-842e-5bfd4caa7749',
@@ -107,7 +113,8 @@ export const userProfiles = [
       'Wed Jul 28 2021 16:17:48 GMT+0300 (Eastern European Summer Time)',
     region: 'New Caledonia',
     imageUrl: 'https://source.unsplash.com/random/800x600',
-    dribbleUrl: 'https://dribbble.com/shots/16234093-Penguins-illustration'
+    dribbleUrl: 'https://dribbble.com/shots/16234093-Penguins-illustration',
+    behanceUrl: 'https://www.behance.net/NLDES'
   },
   {
     id: 'c8bf2182-54a3-4464-9a50-0099ad0ab632',
@@ -148,6 +155,7 @@ export const userProfiles = [
       'Wed Jul 28 2021 16:17:48 GMT+0300 (Eastern European Summer Time)',
     region: 'Swaziland',
     imageUrl: 'https://source.unsplash.com/random/800x600',
-    dribbleUrl: 'https://dribbble.com/shots/16234093-Penguins-illustration'
+    dribbleUrl: 'https://dribbble.com/shots/16234093-Penguins-illustration',
+    pinterestUrl: 'pinterest.ru/buryatbogema/_created/'
   }
 ];
