@@ -1,10 +1,9 @@
-import { persistReducer } from 'redux-persist'; // It`s needed for below import to work properly
-import storage from 'redux-persist/lib/storage';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { StorageKeys } from '../common/enums/storage-keys';
 
-const setToLocalStorage = (field: string) => (value: string) => storage.setItem(field, value);
-const getFromLocalStorage = (field: string) => storage.getItem(field);
-const removeFromLocalStorage = (field: string) => storage.removeItem(field);
+const setToLocalStorage = (field: string) => (value: string) => AsyncStorage.setItem(field, value);
+const getFromLocalStorage = (field: string) => AsyncStorage.getItem(field);
+const removeFromLocalStorage = (field: string) => AsyncStorage.removeItem(field);
 
 const setAccessToken = setToLocalStorage(StorageKeys.ACCESS_TOKEN);
 const setRefreshToken = setToLocalStorage(StorageKeys.REFRESH_TOKEN);
