@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { Redirect } from 'react-router-dom';
+import { Routes } from '../../common/enums';
 import { CreateProject as Project } from '../../common/types';
 import LoaderWrapper from '../../components/LoaderWrapper';
 import Seo from '../../components/Seo';
@@ -24,23 +26,23 @@ const CreateProject = () => {
     region: '',
     team: { name: '', chats: [] },
     imageUrl: '',
-    tags: []
+    videoUrl: '',
+    projectTags: []
   };
   const [currentPage, setCurrentPage] = useState(CurrentPage.BEFORE_START);
   const [newProject, setNewProject] = useState(initProject);
   const { createProjectAction } = useAction();
   const { t } = useLocalization();
-  const createProject = (project:Project) => createProjectAction(project);
   const store = useTypedSelector(({ project: { project, isLoading } }) => ({
     project,
     isLoading
   }));
-  const { isLoading } = store;
+  const { project, isLoading } = store;
   const end = (page: CurrentPage) => {
     if (page === CurrentPage.END) {
-      const project = createProject(newProject);
-      console.log(project);
+      createProjectAction(newProject);
     }
+    setCurrentPage(page);
   };
   const handleChangeValue = (name: ProjectKeys, value: any) => {
     setNewProject({ ...newProject, [name]: value });
@@ -97,16 +99,24 @@ const CreateProject = () => {
             currentPage={currentPage}
             onChangeValue={handleChangeValue}
             imageUrl={newProject.imageUrl}
+            newTags={newProject.projectTags}
+            videoUrl={newProject.videoUrl}
           />
         );
       case CurrentPage.END:
         return (
-          <Settings
-            changePage={end}
-            region={newProject.region}
-            currentPage={currentPage}
-            onChangeValue={handleChangeValue}
-          />
+          <div>
+            {project.id && <Redirect to={`${Routes.PROJECTS}/${project.id}`} />}
+            <Settings
+              changePage={end}
+              region={newProject.region}
+              currentPage={currentPage}
+              onChangeValue={handleChangeValue}
+              imageUrl={newProject.imageUrl}
+              videoUrl={newProject.videoUrl}
+              newTags={newProject.projectTags}
+            />
+          </div>
         );
       default:
         return <BeforeStart changePage={setCurrentPage} currentPage={currentPage} />;

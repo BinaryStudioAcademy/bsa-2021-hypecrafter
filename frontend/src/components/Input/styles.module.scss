@@ -58,3 +58,24 @@ input[type='number']:hover::-webkit-inner-spin-button {
   height: 25px;
   margin: 4px;
 }
+.options{
+  position: absolute;
+  border-left: 1px solid $color-root-text;
+  border-right: 1px solid $color-root-text;
+  border-bottom: 1px solid $color-root-text;
+  width: 100%;
+  background: $color-root-background;
+  display: flex;
+  flex-direction: column;
+  button{
+    padding: 5px 10px;
+    cursor: pointer;
+    background: none;
+    text-align: left;
+    border: none;
+    color: $color-root-text;
+    &:hover{
+      background: $color-root-grey;
+    }
+  }
+}
