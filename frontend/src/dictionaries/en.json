@@ -166,6 +166,14 @@
     "Edit": "Edit",
     "Rating": "Rating",
     "Site locale": "en_US",
-    "Update": "Update"
+    "Update": "Update",
+    "How much the user must pay to get this option":"How much the user must pay to get this option",
+    "Privilege header":"Privilege header",
+    "Privilege description":"Privilege description",
+    "Subparagraphs":"Subparagraphs",
+    "Enter new subparagraph":"Enter new subparagraph",
+    "What privileges can users have for a specific donation":"How about privileges?",
+    "Privileges":"Privileges",
+    "Add privilege":"Add privilege"
   }
 }

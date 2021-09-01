@@ -4,7 +4,7 @@ export enum CurrentPage{
   STORY,
   TEAM,
   FUNDING,
-  BENEFITS,
+  PRIVILEGES,
   SETTINGS,
   END
 }

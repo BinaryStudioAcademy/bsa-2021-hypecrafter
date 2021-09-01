@@ -8,6 +8,7 @@ import { TagRepository } from './tag';
 import { TeamRepository } from './team';
 import { TopicRepository } from './topic';
 import { UserRepository } from './user';
+import { DonatorsPrivilegeRepository } from './donatorsPrivilege';
 
 export const initRepositories = (): Repositories => ({
   userRepository: getCustomRepository(UserRepository),
@@ -18,7 +19,8 @@ export const initRepositories = (): Repositories => ({
   chatRepository: getCustomRepository(ChatRepository),
   tagRepository: getCustomRepository(TagRepository),
   projectTagRepository: getCustomRepository(ProjectTagRepository),
-  commentRepository: getCustomRepository(CommentRepository)
+  commentRepository: getCustomRepository(CommentRepository),
+  donatorsPrivilegeRepository: getCustomRepository(DonatorsPrivilegeRepository)
 });
 
 export type Repositories = {
@@ -31,6 +33,7 @@ export type Repositories = {
   categoryRepository: CategoryRepository;
   projectTagRepository: ProjectTagRepository;
   commentRepository: CommentRepository;
+  donatorsPrivilegeRepository: DonatorsPrivilegeRepository;
 };
 
 export {
@@ -42,5 +45,6 @@ export {
   TagRepository,
   CategoryRepository,
   ProjectTagRepository,
-  CommentRepository
+  CommentRepository,
+  DonatorsPrivilegeRepository
 };

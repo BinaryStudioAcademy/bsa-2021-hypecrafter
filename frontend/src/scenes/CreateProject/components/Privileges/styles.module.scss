@@ -27,3 +27,19 @@
         }
     }
 }
+.addPrivilege{
+    margin-bottom: 20px;
+}
+.privilege{
+    position: relative;
+    background: $color-root-block-background;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.close{
+    background: none;
+    position: absolute;
+    right: 0;
+    top: 8px;
+}

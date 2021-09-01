@@ -166,6 +166,14 @@
     "Edit": "Змінити",
     "Rating": "Рейтинг",
     "Site locale": "ua_UA",
-    "Update": "Оновити"
+    "Update": "Оновити",
+    "How much the user must pay to get this option":"Яку суму має пожертувавати користувач, щоб отримати цю опцію",
+    "Privilege header":"Назва опції",
+    "Privilege description":"Опис опції",
+    "Subparagraphs":"Підпункти",
+    "Enter new subparagraph":"Додайте новий підпункт",
+    "What privileges can users have for a specific donation":"Як щодо винагороди?",
+    "Privileges":"Винагорода",
+    "Add privilege":"Додати винагороду"
   }
 }

@@ -9,6 +9,7 @@ import { useLocalization } from '../../providers/localization';
 import Basic from './components/Basic';
 import BeforeStart from './components/BeforeStart';
 import Funding from './components/Funding';
+import Privileges from './components/Privileges';
 import Settings from './components/Settings';
 import Story from './components/Story';
 import Team from './components/Team';
@@ -27,7 +28,8 @@ const CreateProject = () => {
     team: { name: '', chats: [] },
     imageUrl: '',
     videoUrl: '',
-    projectTags: []
+    projectTags: [],
+    donatorsPrivileges: []
   };
   const [currentPage, setCurrentPage] = useState(CurrentPage.BEFORE_START);
   const [newProject, setNewProject] = useState(initProject);
@@ -89,6 +91,15 @@ const CreateProject = () => {
             onChangeValue={handleChangeValue}
             startDate={newProject.startDate}
             finishDate={newProject.finishDate}
+          />
+        );
+      case CurrentPage.PRIVILEGES:
+        return (
+          <Privileges
+            changePage={setCurrentPage}
+            donatorsPrivileges={newProject.donatorsPrivileges}
+            currentPage={currentPage}
+            onChangeValue={handleChangeValue}
           />
         );
       case CurrentPage.SETTINGS:

@@ -1,5 +1,6 @@
 import { CreateProjectTag } from './projectTag';
 import { CreateProjectTeam } from './team';
+import { CreateProjectPrivilege } from './privilege';
 
 export interface CreateProject{
   name: string;
@@ -16,4 +17,6 @@ export interface CreateProject{
 
   startDate?: Date;
   finishDate?: Date;
+
+  donatorsPrivileges: CreateProjectPrivilege[];
 }
