@@ -7,7 +7,7 @@ export const setUserInfo = (
   next: NextFunction
 ) => {
   if (isRouteInBlackList(req.path)) {
-    const { userId } = req.user;
+    const { id: userId } = req.user;
     req.headers.userId = userId;
   }
   next();

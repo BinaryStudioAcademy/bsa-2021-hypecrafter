@@ -25,16 +25,21 @@
 
 .form-titles-wrapper {
   margin: -20px 0 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .form-title {
+  margin: 0;
   color: $color-root-turquoise;
   font-weight: bold;
-  font-size: $font-size-aсcent;
+  font-size: $font-size-text;
 }
 
 .form-title.chosen {
-  text-decoration: underline;
+  border-bottom: 2px solid $color-root-turquoise;
+  font-size: $font-size-aсcent;
 }
 
 .detail-form-control,
@@ -62,6 +67,6 @@
   margin-bottom: 24px;
 }
 
-.birth-form input {
+.birth-form div input {
   width: 100%;
 }

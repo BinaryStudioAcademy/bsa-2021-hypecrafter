@@ -1,12 +1,16 @@
 import { Tokens } from '../../common/types/signup';
 import { createReducer } from '../../helpers';
 import type {
+  FacebookAuthFailureActionType,
+  FacebookAuthSuccessActionType,
+  GoogleAuthFailureActionType,
+  GoogleAuthSuccessActionType,
   LoginFailureActionType,
   LoginSuccessActionType,
   RegisterUserFailureActionType,
   RegisterUserSuccessActionType
 } from './actions';
-import { googleAuthAction, loginAction, registerUserAction } from './actions';
+import { facebookAuthAction, googleAuthAction, loginAction, registerUserAction } from './actions';
 
 export interface AuthenticationState {
   isLoading: boolean;
@@ -67,14 +71,34 @@ export const authenticationReducer = createReducer<AuthenticationState>(initialS
       isLoading: true
     };
   },
-  [googleAuthAction.SUCCESS](state, action: LoginSuccessActionType) {
+  [googleAuthAction.SUCCESS](state, action: GoogleAuthSuccessActionType) {
     return {
       ...state,
       isLoading: false,
       tokens: action.payload
     };
   },
-  [googleAuthAction.FAILURE](state, action: LoginFailureActionType) {
+  [googleAuthAction.FAILURE](state, action: GoogleAuthFailureActionType) {
+    return {
+      ...state,
+      isLoading: false,
+      error: action.payload
+    };
+  },
+  [facebookAuthAction.TRIGGER](state) {
+    return {
+      ...state,
+      isLoading: true
+    };
+  },
+  [facebookAuthAction.SUCCESS](state, action: FacebookAuthSuccessActionType) {
+    return {
+      ...state,
+      isLoading: false,
+      tokens: action.payload
+    };
+  },
+  [facebookAuthAction.FAILURE](state, action: FacebookAuthFailureActionType) {
     return {
       ...state,
       isLoading: false,

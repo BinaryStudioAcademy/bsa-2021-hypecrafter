@@ -15,6 +15,7 @@ export enum AuthApiPath {
   Token = '/token',
   TokenReject = '/token/reject',
   Register = '/register',
+  Facebook = '/facebook',
   CurrentUser = '/current-user',
   Google = '/google'
 }
