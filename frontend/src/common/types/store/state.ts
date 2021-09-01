@@ -9,7 +9,8 @@ import { ProjectPageState } from '../../../scenes/ProjectPage/reducer';
 import { ProjectsState } from '../../../scenes/Projects/reducer';
 import { TrendsPageState } from '../../../scenes/TrendsPage/reducer';
 import { UserProfileState } from '../../../scenes/UserPage/reducer';
-import { PageState } from '../../../scenes/Wallet/Transactions/reducer';
+import { PaymentState } from '../../../scenes/Wallet/Payment/reducer';
+import { TransactionsState } from '../../../scenes/Wallet/Transactions/reducer';
 
 export interface StoreState {
   mainPage: MainPageState;
@@ -22,6 +23,7 @@ export interface StoreState {
   tags: TagsState;
   projects: ProjectsState;
   projectPage: ProjectPageState;
-  transactions: PageState
+  transactions: TransactionsState
   authentication: AuthenticationState;
+  payment: PaymentState
 }

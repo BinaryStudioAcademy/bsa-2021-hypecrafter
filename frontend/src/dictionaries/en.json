@@ -174,6 +174,17 @@
     "Enter new subparagraph":"Enter new subparagraph",
     "What privileges can users have for a specific donation":"How about privileges?",
     "Privileges":"Privileges",
-    "Add privilege":"Add privilege"
+    "Add privilege":"Add privilege",
+
+    "Payment": "Payment",
+    "Selected fund": "Selected fund",
+
+    "Load...": "Load...",
+    "Congratulation!": "Congratulation!",
+    "Payment transaction was successful": "Payment transaction was successful",
+    "Basic fund":"Basic fund",
+    "Amount":"Amount",
+    "Return to Main Page":"Return to Main Page",
+    "Pay":"Pay"
   }
 }

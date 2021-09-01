@@ -2,7 +2,8 @@ import { createRoutine } from 'redux-saga-routines';
 import { TransactionsPage } from '../../../common/types';
 
 export enum WalletActions {
-  GET_TRANSACTIONS = 'WALLET/GET_TRANSACTIONS'
+  GET_TRANSACTIONS = 'WALLET/GET_TRANSACTIONS',
+  CLEAR_TRANSACTIONS_STATE = 'WALLET/CLEAR_TRANSACTIONS_STATE'
 }
 
 export const fetchTransactionsPageAction = createRoutine(WalletActions.GET_TRANSACTIONS, {
@@ -10,6 +11,8 @@ export const fetchTransactionsPageAction = createRoutine(WalletActions.GET_TRANS
   request: () => undefined,
   success: (transactionPage: TransactionsPage) => transactionPage
 });
+
+export const clearTransactionsStateAction = createRoutine(WalletActions.CLEAR_TRANSACTIONS_STATE);
 
 export type FetchTransactionsActionTrigger = ReturnType<typeof fetchTransactionsPageAction.trigger>;
 export type FetchTransactionsActionRequest = ReturnType<typeof fetchTransactionsPageAction.request>;

@@ -9,6 +9,7 @@ import trendsPageReducer, {
   trendsPageState
 } from '../scenes/TrendsPage/reducer';
 import userProfileReducer, { initialState as userProfileInitialState } from '../scenes/UserPage/reducer';
+import paymentReducer, { initialState as paymentInitialState } from '../scenes/Wallet/Payment/reducer';
 import transactionsReducer, { initialState as transactionsInitialState } from '../scenes/Wallet/Transactions/reducer';
 import authReducer, { authState } from './auth';
 import categoriesReducer, { initialState as categoriesInitialState } from './categies';
@@ -27,7 +28,8 @@ const initialState: StoreState = {
   trendsPage: trendsPageState,
   projectPage: projectPageState,
   authentication: authenticationInitialState,
-  tags: tagsInitialState
+  tags: tagsInitialState,
+  payment: paymentInitialState
 };
 
 const rootReducer = combineReducers({
@@ -42,7 +44,8 @@ const rootReducer = combineReducers({
   projectPage: projectPageReducer,
   transactions: transactionsReducer,
   authentication: authenticationReducer,
-  tags: tagsReduser
+  tags: tagsReduser,
+  payment: paymentReducer
 });
 
 export { initialState, rootReducer };
