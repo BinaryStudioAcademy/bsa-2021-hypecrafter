@@ -1,5 +1,5 @@
 import { createStackNavigator } from 'react-navigation-stack';
-import LoginView from '../../components/LoginInView/LoginView';
+import LoginView from '../../components/LoginView/LoginView';
 
 const AuthNavigator = createStackNavigator(
   {
