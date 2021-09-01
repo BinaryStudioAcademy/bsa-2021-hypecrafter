@@ -24,4 +24,8 @@ export class TagRepository extends Repository<Tag> {
   public getPopular() {
     return this.getTagByOrder('quantity');
   }
+
+  public getAll() {
+    return this.find();
+  }
 }

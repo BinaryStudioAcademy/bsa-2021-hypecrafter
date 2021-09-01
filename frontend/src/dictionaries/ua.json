@@ -21,7 +21,7 @@
     "faithful assistant": "вірний помічник",
     "Add": "Додати",
     "Add funds": "Додати кошти",
-    "Custom fund": "Свій вибір",
+    "Custom fund": "Користувацький",
     "Home": "Головна",
     "Account": "Акаунт",
     "Add funds to your Wallet": "Додайте кошти до свого гаманця",
@@ -158,11 +158,28 @@
     "Popular": "Популярне",
     "Recommended": "Рекомендоване",
     "The page you were looking for doesn’t exist (404)": "Сторінка, яку ви шукали, не існує (404)",
+    "Tags help when searching to give the user exactly those projects that interest him":"Теги допомагають при пошуку видавати користувачеві саме ті проекти які його цікавлять",
+    "Atach image":"Додайте забраження",
+    "Atach video":"Завантажте відео",
     "Social title": "Це вірний помічник",
+    "Site locale": "ua_UA",
+    "Sign In with Facebook": "Увійти за допомогою Facebook",
+    "Sign Up with Facebook": "Зареєструватися за допомогою Facebook",
     "Cancel": "Відмінити",
     "Edit": "Змінити",
     "Rating": "Рейтинг",
     "Site locale": "ua_UA",
-    "Update": "Оновити"
+    "Update": "Оновити",
+
+    "Payment": "Оплата",
+    "Selected fund": "Вибрані кошти",
+
+    "Load...": "Завантаження...",
+    "Congratulation!": "Вітаємо!",
+    "Payment transaction was successful": "Платіжна транзакція пройшла успішно",
+    "Basic fund":"Базовий",
+    "Amount":"Кількість",
+    "Return to Main Page":"Повернутися до Головної Сторінки",
+    "Pay":"Сплатити"
   }
 }

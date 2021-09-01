@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ChangeEvent, useState } from 'react';
@@ -7,9 +6,9 @@ import { NavLink } from 'react-router-dom';
 import hypeCoin from '../../assets/HypeCoin.png';
 import { Routes } from '../../common/enums';
 import { NotificationMessageTypes } from '../../common/enums/notifications';
+import { logout } from '../../helpers/http';
 import { useAuth, useScroll, useWindowResize } from '../../hooks';
 import { useLocalization } from '../../providers/localization';
-import { logout } from '../../services/logout';
 import Avatar from '../Avatar';
 import Button from '../Button';
 import Input from '../Input';
