@@ -58,6 +58,12 @@ export class UserProfile extends AbstractEntity {
   @Column({ nullable: true })
   dribbleUrl: string;
 
+  @Column({ nullable: true })
+  pinterestUrl: string;
+
+  @Column({ nullable: true })
+  behanceUrl: string;
+
   @OneToOne(() => AlertsSettings, alertsSettings => alertsSettings.user)
   @JoinColumn()
   alertsSettings: AlertsSettings;
