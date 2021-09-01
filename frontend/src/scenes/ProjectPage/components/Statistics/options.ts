@@ -38,11 +38,11 @@ const getDefaultOptions = (t: CallableFunction) => ({
 });
 
 const getDefaultData = (data: any[], t: CallableFunction) => ({
-  labels: data.map((item) => item.date),
+  labels: data.map((item) => item.donated),
   datasets: [
     {
       label: t('projects'),
-      data: data.map((item) => item.data),
+      data: data.map((item) => item.donated),
       fill: false,
       borderColor: setBorderColorGradient(blueColorsReverse),
       backgroundColor: setBorderColorGradient(blueColorsReverse),

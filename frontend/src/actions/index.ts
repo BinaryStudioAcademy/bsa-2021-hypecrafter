@@ -1,7 +1,7 @@
 export { googleAuthAction, loginAction, registerUserAction } from '../scenes/Auth/actions';
 export { createProjectAction } from '../scenes/CreateProject/actions';
 export { fetchPopularAndRecommendedProjectsAction, fetchTopics } from '../scenes/MainPage/actions';
-export { addComment, fetchProject, setReaction, setWatch } from '../scenes/ProjectPage/actions';
+export { addComment, fetchProject, fetchStatistics, setReaction, setWatch } from '../scenes/ProjectPage/actions';
 export {
   fetchProjectsAction,
   filterCategoryProjectsAction,
@@ -25,3 +25,4 @@ export { fetchTransactionsPageAction } from '../scenes/Wallet/Transactions/actio
 export { authFetchUserAction } from './auth';
 export { getCategoriesAction } from './categories';
 export { getUsersAction } from './users';
+

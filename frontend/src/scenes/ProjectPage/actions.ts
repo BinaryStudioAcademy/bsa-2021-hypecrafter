@@ -1,3 +1,4 @@
+import { TimeInterval } from 'hypecrafter-shared/enums';
 import { createRoutine } from 'redux-saga-routines';
 import { Comment, CreateComment, ProjectPage } from '../../common/types';
 import { Statistics } from '../../common/types/project/statistics';
@@ -25,6 +26,11 @@ interface FetchProjectTriggerActionPropsType {
   userId: string | undefined;
 }
 
+interface FetchProjectStatisticsTriggerActionPropsType {
+  id: string;
+  timeInterval: TimeInterval;
+}
+
 export const fetchProject = createRoutine(ProjectsActions
   .FETCH_PROJECT, {
   trigger: ({ id, userId }: FetchProjectTriggerActionPropsType) => ({ id, userId }),
@@ -39,7 +45,10 @@ export const addComment = createRoutine(ProjectsActions.ADD_COMMENT, {
 });
 
 export const fetchStatistics = createRoutine(ProjectsActions.FETCH_STATISTICS, {
-  trigger: (id: string) => id,
+  trigger: ({
+    id,
+    timeInterval
+  }: FetchProjectStatisticsTriggerActionPropsType) => ({ id, timeInterval }),
   success: (statistics: Statistics) => statistics,
   failure: (error: string) => error
 });

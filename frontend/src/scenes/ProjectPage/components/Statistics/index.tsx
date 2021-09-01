@@ -1,65 +1,32 @@
-import { FC } from 'react';
+/* eslint-disable */
+import { TimeInterval } from 'hypecrafter-shared/enums';
+import { FC, useEffect, useState } from 'react';
 import Chart from '../../../../components/Chart';
+import { useAction, useTypedSelector } from '../../../../hooks';
 import classes from '../../styles.module.scss';
 import getStatisticsOption from './options';
 
 interface StatisticsProps {
   t: CallableFunction;
+  projectId: string;
 }
 
-const Statistics: FC<StatisticsProps> = ({ t }) => {
-  const data = [
-    {
-      data: 30,
-      date: 'fdsafsd'
-    },
-    {
-      data: 14,
-      date: 'fdsafsd'
-    },
-    {
-      data: 45,
-      date: 'fdsafsd'
-    },
-    {
-      data: 19,
-      date: 'fdsafsd'
-    },
-    {
-      data: 27,
-      date: 'fdsafsd'
-    },
-    {
-      data: 40,
-      date: 'fdsafsd'
-    },
-    {
-      data: 30,
-      date: 'fdsafsd'
-    },
-    {
-      data: 14,
-      date: 'fdsafsd'
-    },
-    {
-      data: 45,
-      date: 'fdsafsd'
-    },
-    {
-      data: 19,
-      date: 'fdsafsd'
-    },
-    {
-      data: 27,
-      date: 'fdsafsd'
-    },
-    {
-      data: 40,
-      date: 'fdsafsd'
-    }
-  ];
+const Statistics: FC<StatisticsProps> = ({ t, projectId }) => {
+  const { statistics } = useTypedSelector(({ projectPage }) => ({
+    statistics: projectPage.statistics
+  }));
 
-  const params = getStatisticsOption(data, t);
+  const { fetchStatistics } = useAction();
+
+  const [params, setParams] = useState(getStatisticsOption([], t));
+
+  const handleOnClick = () => {
+    fetchStatistics({ id: projectId, timeInterval: TimeInterval.AllTime });
+  }
+
+  useEffect(() => {
+    setParams(getStatisticsOption(statistics.donations, t));
+  }, [statistics]);
 
   return (
     <div className={classes['statistics-wrapper']}>
@@ -70,6 +37,7 @@ const Statistics: FC<StatisticsProps> = ({ t }) => {
         options={params.options}
         height="230px"
       />
+      <button onClick={handleOnClick}>day</button>
     </div>
   );
 };

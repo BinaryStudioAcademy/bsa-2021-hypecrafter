@@ -105,18 +105,6 @@ const projectPageReducer = createReducer<ProjectPageState>(projectPageState, {
       statistics: action.payload
     };
   },
-  [fetchStatistics.TRIGGER](state) {
-    return {
-      ...state,
-      isLoading: true
-    };
-  },
-  [fetchStatistics.FAILURE](state) {
-    return {
-      ...state,
-      isLoading: false
-    };
-  }
 });
 
 export default projectPageReducer;
