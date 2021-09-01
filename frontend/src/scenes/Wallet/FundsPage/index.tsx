@@ -5,8 +5,8 @@ import coinImg from '../../../assets/HypeCoin.png';
 import { Routes } from '../../../common/enums';
 import Seo from '../../../components/Seo';
 import { useLocalization } from '../../../providers/localization';
-import CustomFund from '../CustomFund';
-import Fund from '../Fund';
+import CustomFund from './components/CustomFund';
+import Fund from './components/Fund';
 import classes from './styles.module.scss';
 
 const FundsPage: FC = () => {

@@ -8,6 +8,11 @@
   background: transparent;
 }
 
+@mixin disable-button {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
 @mixin flex-center {
   display: flex;
   align-items: center;

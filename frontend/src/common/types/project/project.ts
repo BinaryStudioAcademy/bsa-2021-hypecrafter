@@ -8,6 +8,7 @@ export interface Project {
   description: string;
   category?: string;
   imageUrl?: string;
+  videoUrl?: string;
   tags: string[];
   goal: number;
   donated: number;

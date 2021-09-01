@@ -16,6 +16,7 @@ const initRoutes = (app: MicroMq, services: Services) => _.flow([
   topicRouter(services, Path.Topic),
   projectRouter(services, Path.Project),
   registerRouter(services, Path.Register),
+  registerRouter(services, Path.facebookAuth),
   registerRouter(services, Path.googleAuth),
   tagRouter(services, Path.Tag),
   categoryRouter(services, Path.Category),

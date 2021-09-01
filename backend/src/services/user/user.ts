@@ -40,6 +40,10 @@ export default class UserService {
     return this.#userRepository.createUser(data);
   }
 
+  public replenishment(id:string, amount: number) {
+    return this.#userRepository.replenishmentBalance(id, amount);
+  }
+
   public updateById({ id, data }:{ id: string, data: UserProfile }) {
     try {
       return this.#userRepository.updateUserById(id, data);
