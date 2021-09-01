@@ -4,8 +4,13 @@ import {
   blueColorsReverse,
   setBorderColorGradient
 } from '../../../../components/Chart/helpers';
+import { DonationItem } from '../../interfaces';
 
-const getDefaultOptions = (t: CallableFunction) => ({
+function getMaxOfArray(numArray: number[]) {
+  return Math.max.apply(null, numArray);
+}
+
+const getDefaultOptions = (data: DonationItem[], t: CallableFunction) => ({
   responsive: true,
   maintainAspectRatio: false,
   plugins: {
@@ -19,7 +24,7 @@ const getDefaultOptions = (t: CallableFunction) => ({
         display: false
       },
       ticks: {
-        color: 'white',
+        color: 'white'
       }
     },
     y: {
@@ -31,14 +36,14 @@ const getDefaultOptions = (t: CallableFunction) => ({
       ticks: {
         color: 'grey',
         callback: (value: string | number, _index: number, _ticks: Tick[]) => `${value} ${t('money')}`,
-        stepSize: 10
+        stepSize: Math.round(getMaxOfArray(data.map(el => el.donated)) / 7)
       }
     }
   }
 });
 
-const getDefaultData = (data: any[], t: CallableFunction) => ({
-  labels: data.map((item) => item.donated),
+const getDefaultData = (data: DonationItem[], t: CallableFunction) => ({
+  labels: data.map((item) => item.donationCreatedAt.toLocaleString()),
   datasets: [
     {
       label: t('projects'),
@@ -53,9 +58,9 @@ const getDefaultData = (data: any[], t: CallableFunction) => ({
 
 const type: ChartType = 'line';
 
-const defaultParams = (items: any[], t: CallableFunction) => {
+const defaultParams = (items: DonationItem[], t: CallableFunction) => {
   const data = getDefaultData(items, t);
-  const options = getDefaultOptions(t);
+  const options = getDefaultOptions(items, t);
 
   return {
     type,

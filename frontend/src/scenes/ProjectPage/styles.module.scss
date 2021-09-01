@@ -92,7 +92,14 @@
 }
 
 .statistics-wrapper {
-  color: red;
+  .statistics-button-wrapper {
+    display: flex;
+  }
+
+  .statistics-chart-wrapper {
+    padding: 20px;
+    background-color: $color-root-block-background;
+  }
 }
 
 hr.horizontal-line {
