@@ -1,0 +1,29 @@
+@import '../../../../styles/vars';
+.footer{
+    display: flex;
+    justify-content: space-between;
+    .back{
+        background: none;
+        border: 1px solid $color-root-text;
+    }
+}
+.pointControl{
+    display: flex;
+    align-items: center;
+    .addPoint{
+        margin-left: 20px;
+    }
+}
+.listPoints{
+    li{
+        display: flex;
+        align-items: center;
+        .circle{
+            font-size: 5px;
+            margin-right: 8px;
+        }
+        .deletePoint{
+            background: none;
+        }
+    }
+}
