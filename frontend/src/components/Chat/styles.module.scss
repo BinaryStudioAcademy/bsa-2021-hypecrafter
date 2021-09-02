@@ -11,9 +11,11 @@
   border: 1px solid $color-root-turquoise;
   border-radius: 3px;
 }
+
 .input {
   display: flex;
 }
+
 .send {
   width: 70px;
   height: 70px;
@@ -24,8 +26,8 @@
 
   &:hover {
     transition: 0.5s;
-    color: white;
-    background: rgba(white, 0.1);
+    color: $color-root-turquoise;
+    background: rgba(greenyellow, 0.2);
     border: 1px solid rgba($color-root-turquoise, 0.91);
   }
 }
@@ -48,6 +50,7 @@
     background: rgba(white, 0.1);
   }
 }
+
 .content {
   background: $color-root-table-even-background;
   border-radius: 3px;
@@ -68,6 +71,7 @@
 
   .messageTime {
     color: $color-root-text-grey;
+    padding: 4px 8px;
   }
 }
 
@@ -75,7 +79,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-
+  padding: 4px 8px;
   .name {
     color: $color-root-turquoise;
   }

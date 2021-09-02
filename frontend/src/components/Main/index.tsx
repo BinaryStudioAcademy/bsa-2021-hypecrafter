@@ -22,7 +22,7 @@ function Main() {
   return (
     <div>
       <div style={{ width: '100%', height: '600px' }}>...</div>
-      <Chat />
+      <Chat nickName="dgorkavyi" />
       <ProjectPrivilege
         value={20}
         title="I am a title!"
