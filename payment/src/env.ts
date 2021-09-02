@@ -9,6 +9,9 @@ export const env = {
     environment: getEnv('NODE_ENV'),
     rabbit: {
       url: getEnv('RABBIT_URL') || 'amqp://localhost'
+    },
+    mongoDB: {
+      url: getEnv('MONGODB_URL')
     }
   }
 };

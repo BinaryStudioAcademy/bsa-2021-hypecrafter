@@ -1,9 +1,9 @@
 import { Project } from 'hypecrafter-shared/enums';
 import MicroMq from 'micromq';
-import { createConnection } from 'typeorm';
 import initRoutes from './api/routes';
+import { createConnection } from './data/db/createConnection';
 import { env } from './env';
-import { log } from './helpers/logger';
+import { log } from './helpers';
 
 const { rabbit } = env.app;
 

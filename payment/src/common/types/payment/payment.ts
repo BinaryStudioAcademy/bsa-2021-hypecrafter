@@ -1,9 +1,13 @@
+import { Schema } from 'mongoose';
+
 export interface Payment {
-  id: string;
+  _id: string;
   item: string;
-  total: number;
+  total: Schema.Types.Decimal128;
+  balance: Schema.Types.Decimal128;
   userId: string;
-  balance: number;
+  type: string;
+  createdAt: Schema.Types.Date;
 }
 
 export const paginationStep = 5;

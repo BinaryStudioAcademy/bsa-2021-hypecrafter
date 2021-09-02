@@ -8,11 +8,7 @@
     "start-prod": "ts-node --transpile-only ./src/server.ts",
     "lint": "eslint . --ext .ts",
     "lint:write": "eslint . --ext .ts --fix",
-    "add-migration": "ts-node node_modules/typeorm/cli.js migration:generate -n",
-    "migrate": "ts-node node_modules/typeorm/cli.js migration:run",
-    "migration-revert": "ts-node node_modules/typeorm/cli.js migration:revert",
-    "seed": "ts-node ./src/data/seeders",
-    "typeorm": "ts-node node_modules/typeorm/cli.js"
+    "seed": "ts-node ./src/data/seeders"
   },
   "author": "",
   "license": "ISC",
@@ -35,8 +31,8 @@
     "hypecrafter-shared": "file:../shared/build",
     "lodash": "^4.17.21",
     "micromq": "^3.0.2",
-    "pg": "^8.7.1",
-    "tslib": "^2.3.0",
-    "typeorm": "^0.2.34"
+    "mongodb": "^3.6.12",
+    "mongoose": "^6.0.3",
+    "tslib": "^2.3.0"
   }
 }

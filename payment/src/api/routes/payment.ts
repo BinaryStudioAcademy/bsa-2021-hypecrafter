@@ -1,3 +1,4 @@
+/* eslint-disable */
 import MicroMq from 'micromq';
 import { Page } from '../../common/types';
 import { wrap } from '../../helpers';
