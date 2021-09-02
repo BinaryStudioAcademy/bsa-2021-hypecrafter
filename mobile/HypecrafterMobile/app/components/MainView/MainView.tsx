@@ -1,10 +1,34 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { useTypedSelector } from '../../hooks/store';
+import { useAction } from '../../hooks/useAction';
 
 const MainView = ({navigation} : {navigation: any}) => {
+  const { fetchPopularAndRecommendedProjectsAction, fetchTopics } = useAction();
+
+  const {
+    popular: popularStartups,
+    recommended: recommendedStartups,
+    isLoading: isStartupsLoading,
+    topics,
+  } = useTypedSelector(({ mainPage }) => ({
+    popular: mainPage.popular,
+    recommended: mainPage.recommended,
+    isLoading: mainPage.isLoading,
+    topics: mainPage.topics,
+  }));
+
   const onLogOut = async () => {
     navigation.navigate('Auth');
   };
+
+  useEffect(() => {
+    fetchPopularAndRecommendedProjectsAction();
+    fetchTopics();
+  }, []);
+
+  console.log(popularStartups, topics);
+  
   return (
     <View style={styles.wrapper}>
        <TouchableOpacity style={styles.button} onPress={onLogOut}>
@@ -35,4 +59,5 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
 });
+
 export default MainView;
