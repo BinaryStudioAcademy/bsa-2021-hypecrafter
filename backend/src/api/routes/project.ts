@@ -1,6 +1,10 @@
 import { ProjectsCategories, ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
 import MicroMq from 'micromq';
-import { Project, ProjectItem } from '../../common/types';
+import {
+  Project,
+  ProjectItem,
+  UpdateViewsAndInteractionTime as ViewsAndInteraction
+} from '../../common/types';
 import { Project as CreateProject } from '../../data/entities';
 import { wrap } from '../../helpers';
 import { Services } from '../../services';
@@ -40,6 +44,9 @@ const init = ({ projectService }: Services, path: string) => (app: MicroMq) => a
   )
   .get(`${path}/:id`, wrap<Empty, Project, { id: string, userId: string | undefined }, Empty>(
     (req) => projectService.getById(req.params.id, req.query.userId)
-  ));
+  ))
+  .put(`${path}/views-interaction/:id`, wrap<Empty, ViewsAndInteraction, number, Empty>(req => (
+    projectService.updateViewsAndInteractionTime({ id: req.params.id, interactionTime: req.body })
+  )));
 
 export default init;
