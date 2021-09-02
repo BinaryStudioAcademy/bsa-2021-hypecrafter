@@ -1,5 +1,6 @@
 import { FC } from 'react';
-import { Col, Row } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
+import { getCardText } from '../helper';
 import classes from './style.module.scss';
 
 interface CardProps {
@@ -8,9 +9,9 @@ interface CardProps {
 }
 
 const Card: FC<CardProps> = ({ title, value }) => (
-  <Col className={classes['statistics-card']}>
-    <Row className={classes['statistics-card-title']}>{title}</Row>
-    <Row className={classes['statistics-card-value']}>{value}</Row>
+  <Col xs={4} md={3} lg={2} className={classes['statistics-card']}>
+    <div className={classes['statistics-card-title']}>{getCardText(title)}</div>
+    <div className={classes['statistics-card-value']}>{value}</div>
   </Col>
 );
 

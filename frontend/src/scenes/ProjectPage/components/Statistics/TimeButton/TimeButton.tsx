@@ -2,6 +2,7 @@ import classnames from 'classnames';
 import { TimeInterval } from 'hypecrafter-shared/enums';
 import { FC } from 'react';
 import Button from '../../../../../components/Button';
+import { getTimeText } from '../helper';
 import classes from './style.module.scss';
 
 interface TimeButtonProps {
@@ -17,21 +18,6 @@ const TimeButton: FC<TimeButtonProps> = ({
   timeInterval,
   key
 }) => {
-  const getTimeText = (interval: TimeInterval) => {
-    switch (interval) {
-      case TimeInterval.AllTime:
-        return 'All Time';
-      case TimeInterval.Day:
-        return 'Day';
-      case TimeInterval.Month:
-        return 'Month';
-      case TimeInterval.Year:
-        return 'Year';
-      default:
-        return '';
-    }
-  };
-
   const handleClick = () => {
     onHandleClick(timeInterval);
   };

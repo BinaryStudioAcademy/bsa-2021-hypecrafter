@@ -3,10 +3,9 @@
 @import '../../../../../styles/mixins';
 
 .statistics-card {
-  color: red;
-
   .statistics-card-title {
     @include heading-sm;
+    margin-bottom: 3px;
   }
 
   .statistics-card-value {

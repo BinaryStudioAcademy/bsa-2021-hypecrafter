@@ -96,6 +96,13 @@
 
   .statistics-topic {
     @include heading-xl;
+    margin: 10px 0px 15px 0px;
+  }
+
+  .statistics-card-wrapper {
+    padding: 30px;
+    margin-bottom: 30px;
+    background-color: $color-body-accordion;
   }
 
   .statistics-button-wrapper {
@@ -105,6 +112,19 @@
   .statistics-chart-wrapper {
     padding: 20px;
     background-color: $color-root-block-background;
+    position: relative;
+
+    @media (max-width: $breakpoint-lg) {
+      padding: 10px;
+    }
+  }
+
+  .statistics-chart-text {
+    @include heading-md;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 

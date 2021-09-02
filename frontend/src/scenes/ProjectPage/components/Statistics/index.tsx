@@ -37,14 +37,19 @@ const Statistics: FC<StatisticsProps> = ({ t, projectId }) => {
 
   return (
     <Col className={classes['statistics-wrapper']}>
-      <Row className={classes['statistics-card-wrapper']}>
-        <header className={classes['statistics-topic']}>
-          Global Statistics
-        </header>
-        {Object.entries(statistics.statistics).map(([key, val]) => (
-          <Card key={key} title={key} value={val.toString()} />
-        ))}
-      </Row>
+      <div className={classes['statistics-card-wrapper']}>
+        <Row>
+          <header className={classes['statistics-topic']}>
+            Global Statistics
+          </header>
+          {Object.entries(statistics.statistics).map(([key, val]) => (
+            <Card key={key} title={key} value={val.toString()} />
+          ))}
+        </Row>
+      </div>
+      <header className={classes['statistics-topic']}>
+        Donation Statistics
+      </header>
       <div className={classes['statistics-button-wrapper']}>
         {Object.values(TimeInterval).map((el) => (
           <TimeButton
@@ -56,6 +61,9 @@ const Statistics: FC<StatisticsProps> = ({ t, projectId }) => {
         ))}
       </div>
       <div className={classes['statistics-chart-wrapper']}>
+        {statistics.donations.length <= 0 && (
+          <p className={classes['statistics-chart-text']}>No data</p>
+        )}
         <Chart
           type={params.type}
           labels={params.labels}
