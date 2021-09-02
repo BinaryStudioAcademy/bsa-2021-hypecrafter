@@ -469,7 +469,7 @@ export class ProjectRepository extends Repository<Project> {
     }
   }
 
-  public getProjectStatistics(id: string) {
+  public async getProjectStatistics(id: string) {
     const query = this.createQueryBuilder('project')
       .select(
         `
@@ -480,11 +480,11 @@ export class ProjectRepository extends Repository<Project> {
       )
       .where({ id });
 
-    const res = query.execute();
+    const res = await query.getRawOne();
     return res;
   }
 
-  private getDonationInformation(id: string, startDate: Date | null) {
+  private async getDonationInformation(id: string, startDate: Date | null) {
     const query = this.createQueryBuilder('project')
       .select(
         `

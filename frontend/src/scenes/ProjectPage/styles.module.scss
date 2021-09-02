@@ -92,6 +92,12 @@
 }
 
 .statistics-wrapper {
+  margin: 20px 0px 40px 0px;
+
+  .statistics-topic {
+    @include heading-xl;
+  }
+
   .statistics-button-wrapper {
     display: flex;
   }

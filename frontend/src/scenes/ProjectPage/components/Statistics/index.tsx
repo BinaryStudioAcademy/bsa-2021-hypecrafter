@@ -1,8 +1,10 @@
 import { TimeInterval } from 'hypecrafter-shared/enums';
 import { FC, useEffect, useState } from 'react';
+import { Col, Row } from 'react-bootstrap';
 import Chart from '../../../../components/Chart';
 import { useAction, useTypedSelector } from '../../../../hooks';
 import classes from '../../styles.module.scss';
+import Card from './Card';
 import getStatisticsOption from './options';
 import TimeButton from './TimeButton/TimeButton';
 
@@ -16,12 +18,16 @@ const Statistics: FC<StatisticsProps> = ({ t, projectId }) => {
     statistics: projectPage.statistics
   }));
 
+  const [selectedInterval, setSelectedInterval] = useState(
+    TimeInterval.AllTime
+  );
+
   const { fetchStatistics } = useAction();
 
   const [params, setParams] = useState(getStatisticsOption([], t));
 
   const handleOnClick = (timeInterval: TimeInterval) => {
-    console.log('TIME', timeInterval);
+    setSelectedInterval(timeInterval);
     fetchStatistics({ id: projectId, timeInterval });
   };
 
@@ -30,14 +36,22 @@ const Statistics: FC<StatisticsProps> = ({ t, projectId }) => {
   }, [statistics]);
 
   return (
-    <div className={classes['statistics-wrapper']}>
+    <Col className={classes['statistics-wrapper']}>
+      <Row className={classes['statistics-card-wrapper']}>
+        <header className={classes['statistics-topic']}>
+          Global Statistics
+        </header>
+        {Object.entries(statistics.statistics).map(([key, val]) => (
+          <Card key={key} title={key} value={val.toString()} />
+        ))}
+      </Row>
       <div className={classes['statistics-button-wrapper']}>
-        {Object.values(TimeInterval).map((el, i) => (
+        {Object.values(TimeInterval).map((el) => (
           <TimeButton
             key={el}
             timeInterval={el}
             onHandleClick={handleOnClick}
-            isSelected={i === 3}
+            isSelected={el === selectedInterval}
           />
         ))}
       </div>
@@ -50,7 +64,7 @@ const Statistics: FC<StatisticsProps> = ({ t, projectId }) => {
           height="300px"
         />
       </div>
-    </div>
+    </Col>
   );
 };
 

@@ -1,0 +1,16 @@
+@import '../../../../../styles/vars';
+@import '../../../../../styles/fonts';
+@import '../../../../../styles/mixins';
+
+.statistics-card {
+  color: red;
+
+  .statistics-card-title {
+    @include heading-sm;
+  }
+
+  .statistics-card-value {
+    @include heading-xl;
+    font-size: $font-size-title;
+  }
+}
