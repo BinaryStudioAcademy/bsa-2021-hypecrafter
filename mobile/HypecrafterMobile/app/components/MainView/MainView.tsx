@@ -26,8 +26,6 @@ const MainView = ({navigation} : {navigation: any}) => {
     fetchPopularAndRecommendedProjectsAction();
     fetchTopics();
   }, []);
-
-  console.log(popularStartups, topics);
   
   return (
     <View style={styles.wrapper}>
