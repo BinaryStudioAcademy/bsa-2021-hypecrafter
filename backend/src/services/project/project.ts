@@ -83,6 +83,12 @@ export default class ProjectService {
     return project; // rewrite when error handling middleware works
   }
 
+  public async getForEdit(id: string) {
+    const project: CreateProject = await this.#projectRepository.getForEdit(id);
+    console.log(project);
+    return project;
+  }
+
   public async setReaction({ isLiked, projectId }: { isLiked: boolean, projectId: string }, userId: string) {
     const project = await this.#projectRepository.findOne({ id: projectId });
     const user = await this.#userRepository.findOne({ id: userId });

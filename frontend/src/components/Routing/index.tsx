@@ -103,10 +103,14 @@ const Routing = () => {
           <PrivateRoute exact path={Routes.TRANSACTIONS} component={Transactions} />
           <PrivateRoute exact path={Routes.PAYMENT} component={Payment} />
           <PrivateRoute exact path={Routes.PAYMENT_SUCCESS} component={SuccessPage} />
-          <PublicRoute
-            restricted={false}
+          <PrivateRoute
             exact
             path={Routes.PROJECTS_CREATE}
+            component={CreateProject}
+          />
+          <PrivateRoute
+            exact
+            path={Routes.PROJECTS_EDIT + Routes.ID}
             component={CreateProject}
           />
           <PublicRoute

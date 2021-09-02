@@ -1,10 +1,10 @@
-import { useState } from 'react';
-import { Redirect } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Redirect, useParams } from 'react-router-dom';
 import { Routes } from '../../common/enums';
 import { CreateProject as Project } from '../../common/types';
 import LoaderWrapper from '../../components/LoaderWrapper';
 import Seo from '../../components/Seo';
-import { useAction, useTypedSelector } from '../../hooks';
+import { useAction, useAuth, useTypedSelector } from '../../hooks';
 import { useLocalization } from '../../providers/localization';
 import Basic from './components/Basic';
 import BeforeStart from './components/BeforeStart';
@@ -31,15 +31,18 @@ const CreateProject = () => {
     projectTags: [],
     donatorsPrivileges: []
   };
-  const [currentPage, setCurrentPage] = useState(CurrentPage.BEFORE_START);
-  const [newProject, setNewProject] = useState(initProject);
-  const { createProjectAction } = useAction();
-  const { t } = useLocalization();
+  const { id: userId } = useAuth();
+  const { id } = useParams<{ id: string }>();
   const store = useTypedSelector(({ project: { project, isLoading } }) => ({
     project,
-    isLoading
+    isLoading,
   }));
+  const { createProjectAction, getForEditProjectAction } = useAction();
   const { project, isLoading } = store;
+  const [newProject, setNewProject] = useState(initProject);
+  const [currentPage, setCurrentPage] = useState(id ? CurrentPage.BASIC : CurrentPage.BEFORE_START);
+  const { t } = useLocalization();
+
   const end = (page: CurrentPage) => {
     if (page === CurrentPage.END) {
       createProjectAction(newProject);
@@ -48,7 +51,18 @@ const CreateProject = () => {
   };
   const handleChangeValue = (name: ProjectKeys, value: any) => {
     setNewProject({ ...newProject, [name]: value });
+    console.log(newProject);
   };
+  useEffect(() => {
+    if (id) getForEditProjectAction(id, userId);
+  }, []);
+  useEffect(() => {
+    if (id) {
+      project.startDate = new Date(project.startDate || '');
+      project.finishDate = new Date(project.finishDate || '');
+      setNewProject(project);
+    }
+  }, [project]);
   const getView = () => {
     switch (currentPage) {
       case CurrentPage.BEFORE_START:
@@ -133,6 +147,7 @@ const CreateProject = () => {
         return <BeforeStart changePage={setCurrentPage} currentPage={currentPage} />;
     }
   };
+
   return (
     <LoaderWrapper isLoading={isLoading}>
       <Seo

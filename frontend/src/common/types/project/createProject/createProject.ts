@@ -3,6 +3,7 @@ import { CreateProjectTeam } from './team';
 import { CreateProjectPrivilege } from './privilege';
 
 export interface CreateProject{
+  id?: string;
   name: string;
   description: string;
   category: string;
