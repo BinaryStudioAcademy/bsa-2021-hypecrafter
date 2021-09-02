@@ -267,6 +267,7 @@ export class ProjectRepository extends Repository<Project> {
       project."facebookUrl",
       project."dribbleUrl",
       project.content,
+      project.region,
       "FAQ",
       description,
       category.name AS "category",
@@ -274,7 +275,7 @@ export class ProjectRepository extends Repository<Project> {
       project."finishDate",
       project."startDate",
       goal,
-      projectTags,
+      "projectTags",
       "donatorsPrivileges"
     `;
     const projectQuery = this.createQueryBuilder('project')
@@ -317,15 +318,15 @@ export class ProjectRepository extends Repository<Project> {
       .leftJoin(subQuery => subQuery
         .select(`
           jsonb_agg(
-              DISTINCT jsonb_build_object(
+              jsonb_build_object(
                 'id', "projectTags".id,
                 'tag', jsonb_build_object(
-                  'id', 'tag'.id,
-                  'name', 'tag'.name
+                  'id', tag.id,
+                  'name', tag.name
                 )
               )
             )
-           AS projectTags,
+           AS "projectTags",
           "projectId"
         `)
         .from(Project, 'project')
