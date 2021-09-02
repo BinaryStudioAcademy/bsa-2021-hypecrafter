@@ -92,7 +92,7 @@
 }
 
 .statistics-wrapper {
-  margin: 20px 0px 40px 0px;
+  margin: 30px 0px 40px 0px;
 
   .statistics-topic {
     @include heading-xl;
@@ -101,7 +101,7 @@
 
   .statistics-card-wrapper {
     padding: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     background-color: $color-body-accordion;
   }
 
@@ -125,6 +125,20 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+  
+  .statistics-topic-wrapper {
+	display: flex;
+  }
+  
+  .export-button {
+	height: 30px !important;
+	padding: 18px;
+	margin: auto 0px auto auto;
+  }
+  
+  .export-button-text {
+    @include heading-sm;
   }
 }
 

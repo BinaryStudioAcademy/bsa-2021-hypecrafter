@@ -1,6 +1,11 @@
+import {
+  ExcelExport,
+  ExcelExportColumn
+} from '@progress/kendo-react-excel-export';
 import { TimeInterval } from 'hypecrafter-shared/enums';
-import { FC, useEffect, useState } from 'react';
+import { FC, useEffect, useRef, useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
+import Button from '../../../../components/Button';
 import Chart from '../../../../components/Chart';
 import { useAction, useTypedSelector } from '../../../../hooks';
 import classes from '../../styles.module.scss';
@@ -26,14 +31,22 @@ const Statistics: FC<StatisticsProps> = ({ t, projectId }) => {
 
   const [params, setParams] = useState(getStatisticsOption([], t));
 
+  const exportFile = useRef<any>();
+
+  useEffect(() => {
+    setParams(getStatisticsOption(statistics.donations, t));
+  }, [statistics]);
+
   const handleOnClick = (timeInterval: TimeInterval) => {
     setSelectedInterval(timeInterval);
     fetchStatistics({ id: projectId, timeInterval });
   };
 
-  useEffect(() => {
-    setParams(getStatisticsOption(statistics.donations, t));
-  }, [statistics]);
+  const handleExcelExport = () => {
+    if (exportFile.current !== null) {
+      exportFile.current.save();
+    }
+  };
 
   return (
     <Col className={classes['statistics-wrapper']}>
@@ -47,9 +60,22 @@ const Statistics: FC<StatisticsProps> = ({ t, projectId }) => {
           ))}
         </Row>
       </div>
-      <header className={classes['statistics-topic']}>
-        Donation Statistics
-      </header>
+      <div className={classes['statistics-topic-wrapper']}>
+        <header className={classes['statistics-topic']}>
+          Donation Statistics
+        </header>
+        <Button
+          className={classes['export-button']}
+          variant="secondary"
+          onClick={handleExcelExport}
+        >
+          <p className={classes['export-button-text']}>Export</p>
+        </Button>
+      </div>
+      <ExcelExport data={statistics.donations} ref={exportFile}>
+        <ExcelExportColumn field="donated" title="Donated" locked width={200} />
+        <ExcelExportColumn field="donationCreatedAt" title="Date" width={400} />
+      </ExcelExport>
       <div className={classes['statistics-button-wrapper']}>
         {Object.values(TimeInterval).map((el) => (
           <TimeButton
@@ -69,7 +95,7 @@ const Statistics: FC<StatisticsProps> = ({ t, projectId }) => {
           labels={params.labels}
           dataSets={params.dataSets}
           options={params.options}
-          height="300px"
+          height="350px"
         />
       </div>
     </Col>
