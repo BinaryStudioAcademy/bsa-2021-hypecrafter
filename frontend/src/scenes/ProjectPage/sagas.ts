@@ -1,12 +1,24 @@
 import { Action } from 'redux';
 import { all, call, put, takeEvery } from 'redux-saga/effects';
-import { Comment, CreateComment, ProjectPage } from '../../common/types';
+import {
+  Comment,
+  CreateComment,
+  ProjectPage,
+  ViewsAndInteractionTimeQuery,
+  ViewsAndInteractionTimeResponse
+} from '../../common/types';
 import { addComment } from '../../services/comment';
-import { getProject, setReaction, setWatch } from '../../services/project';
+import {
+  getProject,
+  setReaction,
+  setWatch,
+  updateViewsAndInteraction
+} from '../../services/project';
 import {
   addComment as addCommentAction, fetchProject as fetchProjectAction,
   setReaction as setReactionAction,
-  setWatch as setWatchAction
+  setWatch as setWatchAction,
+  updateViewsAndInteractionTimeAction
 } from './actions';
 
 interface AddCommentAction extends Action {
@@ -32,6 +44,10 @@ interface ProjectWatch extends Action {
     isWatched: boolean,
     projectId: string
   }
+}
+
+interface UpdateViewsAndInteractionTime extends Action {
+  payload: ViewsAndInteractionTimeQuery
 }
 
 interface ProjectReactionResponse { likes: number, dislikes: number }
@@ -88,11 +104,25 @@ function* watchCreateComment() {
   yield takeEvery(addCommentAction.TRIGGER, createComment);
 }
 
+function* updateViewsAndInteractionTime(action: UpdateViewsAndInteractionTime) {
+  try {
+    const response: ViewsAndInteractionTimeResponse = yield call(updateViewsAndInteraction, action.payload);
+    yield put(updateViewsAndInteractionTimeAction.success(response));
+  } catch (error) {
+    yield put(updateViewsAndInteractionTimeAction.failure('Failed to update user data'));
+  }
+}
+
+function* watchUpdateViewsAndInteractionTime() {
+  yield takeEvery(updateViewsAndInteractionTimeAction.trigger, updateViewsAndInteractionTime);
+}
+
 export default function* projectPageSaga() {
   yield all([
     watchFetchTopics(),
     watchSetReaction(),
     watchSetWatch(),
-    watchCreateComment()
+    watchCreateComment(),
+    watchUpdateViewsAndInteractionTime()
   ]);
 }
