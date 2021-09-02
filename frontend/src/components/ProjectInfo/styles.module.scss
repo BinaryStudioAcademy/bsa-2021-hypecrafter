@@ -27,6 +27,15 @@
       font-size: 20px;
     }
 
+    .info-goal{
+      display: flex;
+      grid-gap: 5px;
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
     .info-goal-amount {
       font-family: $font-roboto700;
       font-size: 36px;

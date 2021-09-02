@@ -3,6 +3,7 @@ import { faThumbsDown as faThumbsDownFilled, faThumbsUp as faThumbsUpFilled } fr
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FunctionComponent } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import hypeCoin from '../../assets/HypeCoin.png';
 import { Mark } from '../../common/enums';
 import { calcDaysToGo, calcDonationProgress } from '../../helpers/project';
 import { useAction } from '../../hooks';
@@ -59,7 +60,7 @@ const ProjectInfo: FunctionComponent<ProjectInfoProps> = ({
         <Col xs={4}>
           <div className={classes['info-block-entity']}>
             <p className={classes['info-goal-amount']}>{donated}</p>
-            <p className={classes['info-goal']}>{t('Donated')}</p>
+            <p className={classes['info-goal']}>{t('Donated')}<img src={hypeCoin} alt="HypeCoin" /></p>
           </div>
         </Col>
         <Col xs={4}>
