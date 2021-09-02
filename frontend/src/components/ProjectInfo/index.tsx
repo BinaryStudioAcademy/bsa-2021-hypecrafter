@@ -59,8 +59,8 @@ const ProjectInfo: FunctionComponent<ProjectInfoProps> = ({
         </Col>
         <Col xs={4}>
           <div className={classes['info-block-entity']}>
-            <p className={classes['info-goal-amount']}>{donated}</p>
-            <p className={classes['info-goal']}>{t('Donated')}<img src={hypeCoin} alt="HypeCoin" /></p>
+            <p className={classes['info-goal-amount']}>{donated}<img src={hypeCoin} alt="HypeCoin" /></p>
+            <p className={classes['info-goal']}>{t('Donated')}</p>
           </div>
         </Col>
         <Col xs={4}>
