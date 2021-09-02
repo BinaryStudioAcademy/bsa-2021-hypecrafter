@@ -1,5 +1,5 @@
 /* eslint-disable class-methods-use-this */
-import { paginationStep } from '../../common/types';
+import { NewPayment, paginationStep } from '../../common/types';
 import { Payment } from '../models/payment';
 
 export class PaymentRepository {
@@ -15,12 +15,16 @@ export class PaymentRepository {
     return Payment.findOne({ id }).exec();
   }
 
+  public setPayment(payment: NewPayment) {
+    return Object.assign(new Payment(), payment).save();
+  }
+
   public async getByUserId(userId: string, pageNum: number) {
     const skipNum = (pageNum - 1) * paginationStep;
     const count = await this.getCountByUserId(userId);
     const page = await Payment.find()
-      .select(['"createdAt"', 'item', 'type', 'total', 'balance'])
-      .where({ userId })
+      .select(['"createdAt"', 'item', 'type', 'total'])
+      .sort({ createdAt: 'asc' })
       .skip(skipNum)
       .limit(paginationStep)
       .lean();
@@ -30,7 +34,6 @@ export class PaymentRepository {
       isLast,
       page: page.map((payment) => ({
         ...payment,
-        balance: Number(payment.balance) / 100,
         total: Number(payment.total) / 100,
       })),
     };

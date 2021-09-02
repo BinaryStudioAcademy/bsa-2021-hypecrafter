@@ -1,0 +1,42 @@
+@import '../../../../../styles/vars';
+@import '../../../../../styles/fonts';
+
+.root-payment-success{
+  overflow: hidden;
+  padding-top: 120px;
+  padding-bottom: 150px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  min-width: 100%;
+  .payment-success-title{
+    font-size: $font-size-hyper-text;
+    background-image: $color-root-turquoise-gradient;
+    background-size: 100%;
+    font-family: $font-roboto500;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+  }
+  .payment-success-about{
+    font-size: $font-size-title;
+    font-family: $font-roboto400;
+    margin-bottom: 25px;
+  }
+  .btn-return-success-payment{
+    font-size: $font-size-large;
+    margin-top: 60px;
+  }
+  .confetti{
+    width: 50%;
+    position:relative;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+  }
+}

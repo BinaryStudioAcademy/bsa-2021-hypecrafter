@@ -19,6 +19,10 @@ declare module 'micromq' {
 
     delete: IRouterMatcher<any>;
 
+    action(name: string, handler: (meta: object,res: any)=>void):void;
+
+    ask(name: string, query: object): Promise<object>;
+
     start(): void;
   }
   export default MicroMq;
@@ -33,6 +37,16 @@ declare namespace Express {
   export interface Request {
     user: {
       userId?: string;
+      id?: string;
+      facebookId?: string;
+      firstName?: string;
+      lastName?: string;
+      email?: string;
+      googleId?: string;
+      password?: string;
+      region?: string;
+      phoneNumber?: string;
+      gender?: string;
     }
   }
 }

@@ -103,6 +103,7 @@ export class ProjectRepository extends Repository<Project> {
     let selectQuery = `
       project."id",
       project."imageUrl",
+      project."videoUrl",
       project."instagramUrl",
       project."facebookUrl",
       project."dribbleUrl",
