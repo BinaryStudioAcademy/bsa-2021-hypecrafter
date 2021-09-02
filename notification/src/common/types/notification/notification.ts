@@ -1,7 +1,7 @@
-// TODO ...
-// Just example
-
 export interface Notification {
-  title: string;
-  body: string;
+  id: string;
+  type: string;
+  amount: number;
+  userId: string;
+  projectId: string;
 }
