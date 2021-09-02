@@ -270,13 +270,14 @@ export class ProjectRepository extends Repository<Project> {
       project.region,
       "FAQ",
       description,
-      category.name AS "category",
+      category.id AS "category",
       project.name,
       project."finishDate",
       project."startDate",
       goal,
       "projectTags",
-      "donatorsPrivileges"
+      "donatorsPrivileges",
+      "team"
     `;
     const projectQuery = this.createQueryBuilder('project')
       .select(selectQuery)
@@ -333,6 +334,29 @@ export class ProjectRepository extends Repository<Project> {
         .leftJoin('project.projectTags', 'projectTags')
         .leftJoin('projectTags.tag', 'tag')
         .groupBy('"projectId"'), 'tg', 'tg."projectId" = project.id')
+      .leftJoin(subQuery => subQuery
+        .select(`
+          jsonb_build_object(
+            'id', team.id,
+            'name', team.name,
+            'chats', jsonb_agg(
+               jsonb_build_object(
+                 'id', chats.id,
+                 'donator', jsonb_build_object(
+                   'id', donator.id,
+                   'firstName', donator.firstName,
+                   'lastName', donator.lastName,
+                   'email', donator.email
+                 )
+               )
+             )
+          ) AS "team",
+          "projectId"
+        `)
+        .from('team', 'team')
+        .leftJoin('team.chats', 'chats')
+        .leftJoin('chats.donator', 'donator')
+        .groupBy('"projectId", team.id'), 'te', 'te."projectId" = project.id')
       .where(`project."id" = '${id}'`);
     const project = await projectQuery.getRawOne();
 
