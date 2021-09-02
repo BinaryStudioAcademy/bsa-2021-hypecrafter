@@ -3,8 +3,8 @@ import { Schema } from 'mongoose';
 export interface Payment {
   _id: string;
   item: string;
-  total: Schema.Types.Decimal128;
-  balance: Schema.Types.Decimal128;
+  total: number;
+  balance: number;
   userId: string;
   type: string;
   createdAt: Schema.Types.Date;

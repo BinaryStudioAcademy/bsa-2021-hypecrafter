@@ -1,7 +1,7 @@
 import { model, Schema } from 'mongoose';
 import { Payment as PaymentType } from '../../common/types';
 
-export const PaymentSchema = new Schema<PaymentType>({
+export const PaymentSchema = new Schema({
   total: Schema.Types.Decimal128,
   balance: Schema.Types.Decimal128,
   userId: Schema.Types.String,

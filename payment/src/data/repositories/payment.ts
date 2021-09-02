@@ -19,16 +19,20 @@ export class PaymentRepository {
     const skipNum = (pageNum - 1) * paginationStep;
     const count = await this.getCountByUserId(userId);
     const page = await Payment.find()
-      .select(['"createdAt"', 'item', 'type', 'total', 'balance']) // * 100
+      .select(['"createdAt"', 'item', 'type', 'total', 'balance'])
       .where({ userId })
       .skip(skipNum)
       .limit(paginationStep)
-      .exec();
+      .lean();
     const isLast: boolean = count <= pageNum * paginationStep;
 
     return {
       isLast,
-      page
+      page: page.map((payment) => ({
+        ...payment,
+        balance: Number(payment.balance) / 100,
+        total: Number(payment.total) / 100,
+      })),
     };
   }
 }
