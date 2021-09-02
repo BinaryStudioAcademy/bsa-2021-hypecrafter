@@ -6,7 +6,8 @@ import { isNull } from 'lodash';
 import { EntityRepository, getRepository, Repository } from 'typeorm';
 import { Mark } from '../../common/enums';
 import {
-  Project as MyProject
+  Project as MyProject,
+  UpdateViewsAndInteractionTime
 } from '../../common/types';
 import { Project, UserProfile, UserProject } from '../entities';
 
@@ -191,8 +192,8 @@ export class ProjectRepository extends Repository<Project> {
           .groupBy('dua."projectId"'), 'ud', 'ud."projectId" = project.id')
         .leftJoin('donators_privilege', 'donatorsPrivilege', 'project.id = "donatorsPrivilege"."projectId"')
         .where(`
-          title IS NOT NULL AND 
-          "donatorsPrivilege".content IS NOT NULL AND 
+          title IS NOT NULL AND
+          "donatorsPrivilege".content IS NOT NULL AND
           includes IS NOT NULL AND amount IS NOT NULL
         `)
         .groupBy('project.id,"bakersDonation"'), 'dp', 'dp."projectId" = project.id')
@@ -446,5 +447,22 @@ export class ProjectRepository extends Repository<Project> {
       default:
         return `category.name = '${category}'`;
     }
+  }
+
+  public getViewsAndInteractionTimeById(id: string) {
+    return this.findOne({ id });
+  }
+
+  public async updateViewsAndInteractionTimeById(id: string, data: UpdateViewsAndInteractionTime) {
+    await this.update(id, data);
+
+    // eslint-disable-next-line consistent-return
+    return this.createQueryBuilder('project')
+      .select('"totalViews", "totalInteractionTime"')
+      .innerJoin(subQuery => subQuery
+        .select(' COUNT ( DISTINCT "userId" ) AS "bakersAmount"')
+        .from('donate', 'donate')
+        .groupBy('"projectId"'), 'dn', 'dn."projectId" = project.id')
+      .where(`project."id" = '${id}'`);
   }
 }
