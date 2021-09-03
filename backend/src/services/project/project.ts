@@ -59,6 +59,7 @@ export default class ProjectService {
     const team = await this.#teamRepository.save({ ...new Team(), ...body.team, project });
     this.#chatRepository.save(body.team.chats.map(chat => ({ ...new Chat(), ...chat, team })));
     const listTags = await this.#tagService.save(body.projectTags.map(projectTag => projectTag.tag));
+    await this.#projectTagService.remove(project.projectTags.map(projectTag => projectTag.id));
     await this.#projectTagService.save(listTags.map(tag => ({ tag, project })));
     await this.#donatorsPrivilegeServise.save(body.donatorsPrivileges.map(privilege => ({ ...privilege, project })));
     return project;

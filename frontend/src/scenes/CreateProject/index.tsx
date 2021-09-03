@@ -60,6 +60,8 @@ const CreateProject = () => {
     if (id) {
       project.startDate = new Date(project.startDate || '');
       project.finishDate = new Date(project.finishDate || '');
+      project.projectTags = project.projectTags || [];
+      project.donatorsPrivileges = project.donatorsPrivileges || [];
       setNewProject(project);
     }
   }, [project]);
