@@ -21,6 +21,7 @@ interface ProjectInfoProps {
   finishDate: string;
   mark: string | null | undefined;
   isAuthorized: boolean;
+  totalViews: number;
 }
 
 const ProjectInfo: FunctionComponent<ProjectInfoProps> = ({
@@ -32,7 +33,8 @@ const ProjectInfo: FunctionComponent<ProjectInfoProps> = ({
   dislikes,
   finishDate,
   mark,
-  isAuthorized
+  isAuthorized,
+  totalViews
 }) => {
   const { setReaction } = useAction();
   const { t } = useLocalization();
@@ -47,25 +49,36 @@ const ProjectInfo: FunctionComponent<ProjectInfoProps> = ({
 
   const daysToGo = calcDaysToGo(finishDate);
 
+  const involvementIndex = () => (
+    !totalViews
+      ? 0
+      : Math.round((100 * bakersAmount) / totalViews));
+
   return (
     <Container className={classes['info-block-container']}>
       <Row>
-        <Col xs={4}>
+        <Col xs={3}>
           <div className={classes['info-block-entity']}>
             <p className={classes['info-backers-amount']}>{bakersAmount}</p>
             <p className={classes['info-backers']}>{t('Backers')}</p>
           </div>
         </Col>
-        <Col xs={4}>
+        <Col xs={3}>
           <div className={classes['info-block-entity']}>
             <p className={classes['info-goal-amount']}>{donated}</p>
             <p className={classes['info-goal']}>{t('Donated')}</p>
           </div>
         </Col>
-        <Col xs={4}>
+        <Col xs={3}>
           <div className={classes['info-block-entity']}>
             <p className={classes['info-days-amount']}>{daysToGo < 0 ? t('Ended') : daysToGo}</p>
             <p className={classes['info-days']}>{t('Days to go')}</p>
+          </div>
+        </Col>
+        <Col xs={3}>
+          <div className={classes['info-block-entity']}>
+            <p className={classes['info-backers-amount']}>{involvementIndex()}</p>
+            <p className={classes['info-backers']}>{t('Involvement index')}</p>
           </div>
         </Col>
       </Row>

@@ -15,7 +15,7 @@ export const createProject = async (body: any) => {
 
 export const getProject = (
   params: GetProjectProps
-): Promise<Project> => api.get({ url: `projects/${params.id}`, params });
+): Promise<Project> => api.get({ url: params.id, params });
 
 export const setReaction = (params : SetReactionProps) => api.post({ url: 'projects/reaction', params });
 
@@ -24,7 +24,7 @@ export const setWatch = (params: SetWatchProps) => api.post({ url: 'projects/wat
 export const updateViewsAndInteraction = ({ id = '', ...params }) => {
   if (!id || typeof params === 'undefined') throw Error();
   return api.put({
-    url: `projects/views-interaction/${id}`,
+    url: `views-interaction/${id}`,
     params
   });
 };

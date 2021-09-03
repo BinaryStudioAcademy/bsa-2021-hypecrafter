@@ -3,7 +3,11 @@ import { Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import LoaderWrapper from '../../components/LoaderWrapper';
 import { Tab, Tabs } from '../../components/Tabs';
-import { useAction, useAuth, useTypedSelector } from '../../hooks';
+import {
+  useAction,
+  useAuth,
+  useTypedSelector
+} from '../../hooks';
 import { useLocalization } from '../../providers/localization';
 import Comments from './components/Comments';
 import FAQ from './components/FAQ';
@@ -15,7 +19,7 @@ import classes from './styles.module.scss';
 const ProjectPage: FC = () => {
   const { id } = useParams<{ id: string }>();
   const { t } = useLocalization();
-  const { fetchProject } = useAction();
+  const { fetchProject, updateViewsAndInteractionTimeAction } = useAction();
   const { id: userId, isAuthorized } = useAuth();
   const { project, isLoading } = useTypedSelector(
     (
@@ -26,8 +30,13 @@ const ProjectPage: FC = () => {
     })
   );
 
+  const handleUpdateViewsAndInteractionTime = (interactionTime: number) => (
+    updateViewsAndInteractionTimeAction({ id, interactionTime })
+  );
+
   useEffect(() => {
     fetchProject({ id, userId });
+    handleUpdateViewsAndInteractionTime(1000);
   }, []);
 
   return (

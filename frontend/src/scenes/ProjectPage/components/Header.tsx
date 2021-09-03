@@ -39,7 +39,8 @@ const Header: FunctionComponent<HeaderProps> = ({ project, isAuthorized }) => {
     dribbleUrl,
     finishDate,
     mark,
-    isWatched
+    isWatched,
+    totalViews
   } = project;
 
   const { setWatch } = useAction();
@@ -55,13 +56,13 @@ const Header: FunctionComponent<HeaderProps> = ({ project, isAuthorized }) => {
         <Col xs={12} lg={5}>
           {!videoUrl && <Image src={imageUrl} className={classes['project-image']} />}
           {videoUrl && (
-          <ReactPlayer
-            controls
-            width="100%"
-            url={videoUrl}
-            post
-            config={{ file: { attributes: { poster: imageUrl } } }}
-          />
+            <ReactPlayer
+              controls
+              width="100%"
+              url={videoUrl}
+              post
+              config={{ file: { attributes: { poster: imageUrl } } }}
+            />
           )}
         </Col>
         <Col xs={12} lg={7}>
@@ -139,6 +140,7 @@ const Header: FunctionComponent<HeaderProps> = ({ project, isAuthorized }) => {
               finishDate={finishDate}
               mark={mark}
               isAuthorized={isAuthorized}
+              totalViews={totalViews}
             />
           </Row>
         </Col>
