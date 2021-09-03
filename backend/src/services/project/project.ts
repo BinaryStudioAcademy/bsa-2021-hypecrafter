@@ -111,7 +111,6 @@ export default class ProjectService {
           totalInteractionTime: totalInteractionTime + interactionTime
         }
       ) as unknown as UpdateViewsAndInteractionTime;
-
       return response;
     } catch {
       throw new CustomError(

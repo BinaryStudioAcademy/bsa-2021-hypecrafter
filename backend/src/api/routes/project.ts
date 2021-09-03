@@ -45,8 +45,8 @@ const init = ({ projectService }: Services, path: string) => (app: MicroMq) => a
   .get(`${path}/:id`, wrap<Empty, Project, { id: string, userId: string | undefined }, Empty>(
     (req) => projectService.getById(req.params.id, req.query.userId)
   ))
-  .put(`${path}/views-interaction/:id`, wrap<Empty, ViewsAndInteraction, number, Empty>(req => (
-    projectService.updateViewsAndInteractionTime({ id: req.params.id, interactionTime: req.body })
+  .put(`${path}/views-interaction/:id`, wrap<Empty, ViewsAndInteraction, { interactionTime: number }, Empty>(req => (
+    projectService.updateViewsAndInteractionTime({ id: req.params.id, interactionTime: req.body.interactionTime })
   )));
 
 export default init;

@@ -9,7 +9,7 @@ import {
   Project as MyProject,
   UpdateViewsAndInteractionTime
 } from '../../common/types';
-import { Project, UserProfile, UserProject } from '../entities';
+import { Project, UserProfile, UserProject, Donate } from '../entities';
 
 @EntityRepository(Project)
 export class ProjectRepository extends Repository<Project> {
@@ -109,6 +109,7 @@ export class ProjectRepository extends Repository<Project> {
       project."facebookUrl",
       project."dribbleUrl",
       project.content AS story,
+      project.totalViews AS totalViews,
       "FAQ",
       donated,
       description,
@@ -450,19 +451,25 @@ export class ProjectRepository extends Repository<Project> {
   }
 
   public getViewsAndInteractionTimeById(id: string) {
-    return this.findOne({ id });
+    return this.createQueryBuilder('project')
+      .select('project.totalViews', 'totalViews')
+      .addSelect('project.totalInteractionTime', 'totalInteractionTime')
+      .where('project.id = :id', { id })
+      .getRawOne();
   }
 
   public async updateViewsAndInteractionTimeById(id: string, data: UpdateViewsAndInteractionTime) {
     await this.update(id, data);
 
-    // eslint-disable-next-line consistent-return
     return this.createQueryBuilder('project')
-      .select('"totalViews", "totalInteractionTime"')
-      .innerJoin(subQuery => subQuery
-        .select(' COUNT ( DISTINCT "userId" ) AS "bakersAmount"')
-        .from('donate', 'donate')
-        .groupBy('"projectId"'), 'dn', 'dn."projectId" = project.id')
-      .where(`project."id" = '${id}'`);
+      .select('project.totalViews', 'totalViews')
+      .addSelect(subQuery => (
+        subQuery
+          .select('COUNT(donate.userId)', 'bakersAmount')
+          .where('donate.projectId = :id', { id })
+          .from(Donate, 'donate')
+      ))
+      .where('project.id = :id', { id })
+      .getRawOne();
   }
 }
