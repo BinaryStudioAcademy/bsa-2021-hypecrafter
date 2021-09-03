@@ -3,6 +3,8 @@ export interface Statistics {
     id: string;
     donated: number;
     donationCreatedAt: Date;
+    firstName: string;
+    lastName: string;
   }[]
   statistics: {
     totalViews: number;

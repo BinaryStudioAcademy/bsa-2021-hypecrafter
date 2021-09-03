@@ -490,7 +490,9 @@ export class ProjectRepository extends Repository<Project> {
         `
           id,
           donated,
-          "donationCreatedAt"
+          "donationCreatedAt",
+          "firstName",
+          "lastName"
         `
       )
       .leftJoin(
@@ -499,10 +501,25 @@ export class ProjectRepository extends Repository<Project> {
             `
               amount AS donated,
               "createdAt" as "donationCreatedAt",
-              "projectId"
+              "projectId",
+              "firstName",
+              "lastName"
             `
           )
-          .from('donate', 'donate'),
+          .from('donate', 'donate')
+          .leftJoin(
+            (subQuery2) => subQuery2
+              .select(
+                `
+                  id as "userId",
+                  "firstName",
+                  "lastName"
+                `
+              )
+              .from('user_profile', 'user_profile'),
+            'test',
+            'test."userId" = donate.user.id'
+          ),
         'dn',
         'dn."projectId" = project.id'
       );

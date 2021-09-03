@@ -75,6 +75,8 @@ const Statistics: FC<StatisticsProps> = ({ t, projectId }) => {
       <ExcelExport data={statistics.donations} ref={exportFile}>
         <ExcelExportColumn field="donated" title="Donated" locked width={200} />
         <ExcelExportColumn field="donationCreatedAt" title="Date" width={400} />
+        <ExcelExportColumn field="firstName" title="Firstname" width={200} />
+        <ExcelExportColumn field="lastName" title="Lastname" width={200} />
       </ExcelExport>
       <div className={classes['statistics-button-wrapper']}>
         {Object.values(TimeInterval).map((el) => (

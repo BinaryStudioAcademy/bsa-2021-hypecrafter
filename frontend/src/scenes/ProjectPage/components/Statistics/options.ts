@@ -43,7 +43,10 @@ const getDefaultOptions = (data: DonationItem[], t: CallableFunction) => ({
 });
 
 const getDefaultData = (data: DonationItem[], t: CallableFunction) => ({
-  labels: data.map((item) => item.donationCreatedAt.toLocaleString()),
+  labels: data.map((item) => {
+    const date = new Date(item.donationCreatedAt);
+    return `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`;
+  }),
   datasets: [
     {
       label: t('projects'),
