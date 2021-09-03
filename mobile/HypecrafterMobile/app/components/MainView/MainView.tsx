@@ -1,13 +1,21 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Routes } from '../../common/enums';
+import { logout } from '../../helpers';
+import { useAction } from '../../hooks/useAction';
 
-const MainView = ({navigation} : {navigation: any}) => {
+const MainView = ({ navigation }: { navigation: any }) => {
+  const { logoutAction } = useAction();
+
   const onLogOut = async () => {
-    navigation.navigate('Auth');
+    logout().then(() => {
+      logoutAction();
+      navigation.navigate(Routes.AUTH);
+    })
   };
   return (
     <View style={styles.wrapper}>
-       <TouchableOpacity style={styles.button} onPress={onLogOut}>
+      <TouchableOpacity style={styles.button} onPress={onLogOut}>
         <Text style={styles.buttonText}>Back to login</Text>
       </TouchableOpacity>
       <Text>Main page</Text>
