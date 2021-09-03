@@ -128,6 +128,11 @@ const CreateProject = () => {
             imageUrl={newProject.imageUrl}
             newTags={newProject.projectTags}
             videoUrl={newProject.videoUrl}
+            instagramUrl={newProject.instagramUrl}
+            facebookUrl={newProject.facebookUrl}
+            dribbleUrl={newProject.dribbleUrl}
+            pinterestUrl={newProject.pinterestUrl}
+            behanceUrl={newProject.behanceUrl}
           />
         );
       case CurrentPage.END:

@@ -11,5 +11,10 @@ export enum ProjectKeys {
   IMAGE_URL = 'imageUrl',
   VIDEO_URL = 'videoUrl',
   PROJECT_TAGS = 'projectTags',
-  DONATORS_PRIVILEGES = 'donatorsPrivileges'
+  DONATORS_PRIVILEGES = 'donatorsPrivileges',
+  INSTAGRAM = 'instagramUrl',
+  FACEBOOK = 'facebookUrl',
+  DRIBBLE = 'dribbleUrl',
+  PINTEREST = 'pinterestUrl',
+  BEHANCE = 'behanceUrl'
 }

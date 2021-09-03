@@ -14,6 +14,11 @@ export interface CreateProject{
 
   imageUrl?: string;
   videoUrl?: string;
+  instagramUrl?: string;
+  facebookUrl?: string;
+  dribbleUrl?: string;
+  pinterestUrl?: string;
+  behanceUrl?: string;
   projectTags: CreateProjectTag[];
 
   startDate?: Date;
