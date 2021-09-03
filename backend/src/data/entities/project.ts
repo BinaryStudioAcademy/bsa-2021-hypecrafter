@@ -53,6 +53,9 @@ export class Project extends AbstractEntity {
   @Column({ type: 'text', nullable: true })
   imageUrl: string;
 
+  @Column()
+  authorId: string;
+
   @Column({ type: 'text', nullable: true })
   videoUrl: string;
 

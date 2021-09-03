@@ -1,11 +1,20 @@
+import { Project } from 'hypecrafter-shared/enums';
+import MicroMq from 'micromq';
+import { NotificationMessageTypes } from '../../common/enums/notificationTypes';
 import { Comment } from '../../data/entities';
-import { CommentRepository } from '../../data/repositories';
+import { CommentRepository, ProjectRepository } from '../../data/repositories';
 
 export default class CategoryService {
   readonly #commentRepository: CommentRepository;
 
-  constructor(commentRepository: CommentRepository) {
+  readonly #projectRepository: ProjectRepository;
+
+  readonly #app: MicroMq;
+
+  constructor(commentRepository: CommentRepository, projectRepository: ProjectRepository, app: MicroMq) {
     this.#commentRepository = commentRepository;
+    this.#app = app;
+    this.#projectRepository = projectRepository;
   }
 
   public async createComment(body: Comment) {
@@ -13,6 +22,23 @@ export default class CategoryService {
       ...new Comment(),
       ...body
     });
+
+    const { author: userId, project: projectId } = body;
+
+    const CommentedProject = await this.#projectRepository.getProjectById(projectId as any);
+    const { authorId: recipient } = CommentedProject;
+
+    await this.#app.ask(Project.NOTIFICATION, {
+      server: {
+        action: NotificationMessageTypes.COMMENT,
+        meta: {
+          userId,
+          projectId,
+          recipient
+        },
+      },
+    });
+
     const comment = await this.#commentRepository.getById(newComment.id);
     return comment;
   }

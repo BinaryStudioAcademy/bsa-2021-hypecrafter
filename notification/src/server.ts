@@ -1,10 +1,12 @@
-import { createConnection } from 'typeorm';
-import MicroMq from 'micromq';
 import { Project } from 'hypecrafter-shared/enums';
+import MicroMq from 'micromq';
 import * as cron from 'node-cron';
-import { log } from './helpers/logger';
+import { createConnection } from 'typeorm';
+import { initActions } from './actions';
 import initRoutes from './api/routes';
 import { env } from './env';
+import { log } from './helpers/logger';
+import { initServices } from './services';
 
 const { rabbit } = env.app;
 
@@ -27,6 +29,8 @@ cron.schedule(
 
 createConnection()
   .then(() => {
-    initRoutes(app).start();
+    const services = initServices();
+    initRoutes(app, services).start();
+    initActions(app, services);
   })
   .catch((e) => log(e));

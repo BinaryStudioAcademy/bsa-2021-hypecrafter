@@ -258,6 +258,10 @@ export class ProjectRepository extends Repository<Project> {
     return project;
   }
 
+  public async getProjectById(id: string) {
+    return this.findOne({ id });
+  }
+
   public async setReaction(isLiked: boolean, user: UserProfile, project: Project) {
     const userProject = await getRepository(UserProject)
       .createQueryBuilder('userProject')

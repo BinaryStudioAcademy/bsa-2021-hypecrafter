@@ -1,4 +1,6 @@
-import { ProjectsCategories, ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
+import { Project as Application, ProjectsCategories, ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
+import MicroMq from 'micromq';
+import { NotificationMessageTypes } from '../../common/enums/notificationTypes';
 import { Project } from '../../common/types';
 import { Chat, Project as CreateProject, Team } from '../../data/entities';
 import { mapPrivileges, mapProjects } from '../../data/mappers';
@@ -23,15 +25,18 @@ export default class ProjectService {
 
   readonly #projectTagService: ProjectTagService;
 
+  readonly #app: MicroMq;
+
   constructor(projectRepository: ProjectRepository, teamRepository: TeamRepository,
     chatRepository: ChatRepository, userRepository: UserRepository,
-    tagService: TagService, projectTagService: ProjectTagService) {
+    tagService: TagService, projectTagService: ProjectTagService, app: MicroMq) {
     this.#projectRepository = projectRepository;
     this.#teamRepository = teamRepository;
     this.#chatRepository = chatRepository;
     this.#userRepository = userRepository;
     this.#tagService = tagService;
     this.#projectTagService = projectTagService;
+    this.#app = app;
   }
 
   public async getPopularProjectsByCategory(category: string) {
@@ -83,6 +88,20 @@ export default class ProjectService {
     await this.#projectRepository.setReaction(isLiked, user, project);
     const likesAndDislikes:
     { likes: string, dislikes: string } = await this.#projectRepository.getLikesAndDislikesAmount(project.id);
+
+    const CommentedProject = await this.#projectRepository.getProjectById(projectId);
+    const { authorId: recipient } = CommentedProject;
+
+    await this.#app.ask(Application.NOTIFICATION, {
+      server: {
+        action: NotificationMessageTypes.LIKE,
+        meta: {
+          userId,
+          projectId,
+          recipient
+        },
+      },
+    });
 
     return mapLikesAndDislikes(likesAndDislikes);
   }

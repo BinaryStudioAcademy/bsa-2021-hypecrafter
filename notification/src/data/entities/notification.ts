@@ -14,4 +14,7 @@ export class Notification extends AbstractEntity {
 
   @Column()
   projectId: string;
+
+  @Column()
+  recipient: string;
 }

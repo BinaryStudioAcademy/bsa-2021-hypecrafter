@@ -20,7 +20,8 @@ export default class UserService {
     return this.#userRepository.getById(id);
   }
 
-  public getCurrentUser(id: string) {
+  public async getCurrentUser(id: string) {
+    console.log(await this.#userRepository.getCurrentUser(id));
     return this.#userRepository.getCurrentUser(id);
   }
 

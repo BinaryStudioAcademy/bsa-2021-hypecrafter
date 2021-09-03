@@ -11,11 +11,12 @@ const { rabbit } = env.app;
 
 const app = new MicroMq({
   name: Project.BACKEND,
-  rabbit
+  rabbit,
+  microservices: [Project.NOTIFICATION],
 });
 
 createConnection().then(() => {
   const repositories = initRepositories();
-  const services = initServices(repositories);
+  const services = initServices(repositories, app);
   initRoutes(app, services).start();
 }).catch(log);

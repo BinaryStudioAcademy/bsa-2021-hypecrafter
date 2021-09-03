@@ -1,6 +1,6 @@
 import { asyncForEach } from 'hypecrafter-shared/helpers/arrayHelper';
 import { Notification } from '../entities/notification';
-import { notificationData } from '../seed-data/usersData';
+import { notificationData } from '../seed-data/notificationsData';
 
 export default class NotificationSeeder {
   public static async execute() {

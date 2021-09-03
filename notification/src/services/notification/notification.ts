@@ -1,3 +1,4 @@
+import { Notification } from '../../common/types';
 import { NotificationRepository } from '../../data/repositories';
 
 export default class NotificationService {
@@ -13,5 +14,9 @@ export default class NotificationService {
 
   public getById(id: string) {
     return this.#notificationRepository.getById(id);
+  }
+
+  public createNotification(data: Notification) {
+    return this.#notificationRepository.createNotification(data);
   }
 }
