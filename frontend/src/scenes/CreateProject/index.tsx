@@ -62,6 +62,7 @@ const CreateProject = () => {
       project.finishDate = new Date(project.finishDate || '');
       project.projectTags = project.projectTags || [];
       project.donatorsPrivileges = project.donatorsPrivileges || [];
+      project.team = project.team || { name: '', chats: [] };
       setNewProject(project);
     }
   }, [project]);
