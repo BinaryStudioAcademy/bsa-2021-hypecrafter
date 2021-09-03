@@ -9,7 +9,7 @@ services:
       - gateway
     image: "mihailts/hypecrafter-backend"
     env_file:
-      - .enva
+      - .env
   notification:
     depends_on:
       - gateway
