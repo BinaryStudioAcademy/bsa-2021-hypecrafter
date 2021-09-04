@@ -1,6 +1,7 @@
 import { Project } from 'hypecrafter-shared/enums';
 import MicroMq from 'micromq';
 import { createConnection } from 'typeorm';
+import { initActions } from './actions';
 import initRoutes from './api/routes';
 import { initRepositories } from './data/repositories';
 import { env } from './env';
@@ -19,4 +20,5 @@ createConnection().then(() => {
   const repositories = initRepositories();
   const services = initServices(repositories, app);
   initRoutes(app, services).start();
+  initActions(app, services);
 }).catch(log);

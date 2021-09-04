@@ -1,6 +1,7 @@
 export interface ProjectItem {
   id: string;
   name: string;
+  authorId: string;
   description: string;
   category: string;
   imageUrl?: string;

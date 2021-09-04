@@ -60,6 +60,18 @@ export default class ProjectService {
     this.#chatRepository.save(body.team.chats.map(chat => ({ ...new Chat(), ...chat, team })));
     const listTags = await this.#tagService.save(body.projectTags.map(projectTag => projectTag.tag));
     await this.#projectTagService.save(listTags.map(tag => ({ tag, project })));
+
+    const { finishDate, id } = project;
+
+    await this.#app.ask('notification', {
+      server: {
+        action: 'new_project',
+        meta: {
+          finishDate,
+          projectId: id
+        },
+      },
+    });
     return project;
   }
 
@@ -104,6 +116,10 @@ export default class ProjectService {
     });
 
     return mapLikesAndDislikes(likesAndDislikes);
+  }
+
+  getUsersWatchingProject(projectId: string) {
+    return this.#projectRepository.getUsersByWatсhedProject(projectId);
   }
 
   public async setWatch({ isWatched, projectId }: { isWatched: boolean, projectId: string }, userId: string) {

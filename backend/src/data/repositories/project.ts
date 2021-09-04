@@ -262,6 +262,16 @@ export class ProjectRepository extends Repository<Project> {
     return this.findOne({ id });
   }
 
+  public async getUsersByWatсhedProject(projectId: string) {
+    const userProjects = await getRepository(UserProject)
+      .createQueryBuilder('userProject')
+      .select('"userId"')
+      .where(`"projectId" = '${projectId}' AND "isWatched" = 'true'`)
+      .getRawMany();
+
+    return userProjects;
+  }
+
   public async setReaction(isLiked: boolean, user: UserProfile, project: Project) {
     const userProject = await getRepository(UserProject)
       .createQueryBuilder('userProject')

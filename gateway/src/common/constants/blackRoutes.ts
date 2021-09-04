@@ -7,6 +7,7 @@ const BLACK_ROUTES = [
   '/payment/create-payment-intent',
   '/reset-password',
   '/projects/create',
+  '/projects',
   '/profile',
   '/auth/current-user',
   '/projects/reaction',

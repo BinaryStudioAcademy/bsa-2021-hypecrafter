@@ -50,6 +50,7 @@
     "passport-local": "^1.0.0",
     "pg": "^8.7.1",
     "rand-token": "^1.0.1",
+    "socket.io": "^4.2.0",
     "swagger-ui-express": "^4.1.6",
     "ts-node": "^10.1.0",
     "tslib": "^2.3.0",

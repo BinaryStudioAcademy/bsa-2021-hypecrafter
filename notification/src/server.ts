@@ -6,13 +6,15 @@ import { initActions } from './actions';
 import initRoutes from './api/routes';
 import { env } from './env';
 import { log } from './helpers/logger';
+import { initSchedule } from './schedule';
 import { initServices } from './services';
 
 const { rabbit } = env.app;
 
 const app = new MicroMq({
   name: Project.NOTIFICATION,
-  rabbit
+  rabbit,
+  microservices: ['backend']
 });
 
 cron.schedule(
@@ -28,9 +30,10 @@ cron.schedule(
 );
 
 createConnection()
-  .then(() => {
+  .then(async () => {
     const services = initServices();
     initRoutes(app, services).start();
     initActions(app, services);
+    initSchedule(app, services);
   })
   .catch((e) => log(e));
