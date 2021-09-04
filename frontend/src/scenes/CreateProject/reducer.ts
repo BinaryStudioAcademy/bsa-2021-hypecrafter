@@ -26,7 +26,8 @@ const newProject: Project = {
   content: '',
   team: { name: '', chats: [] },
   projectTags: [],
-  donatorsPrivileges: []
+  donatorsPrivileges: [],
+  faqs: []
 };
 
 export const initialState: ProjectState = {

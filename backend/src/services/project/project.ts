@@ -7,6 +7,7 @@ import {
   ChatRepository, ProjectRepository,
   TeamRepository, UserRepository
 } from '../../data/repositories';
+import FAQServise from '../faq';
 import DonatorsPrivilegeServise from '../projectPrivilege';
 import ProjectTagService from '../projectTag';
 import TagService from '../tag';
@@ -26,10 +27,12 @@ export default class ProjectService {
 
   readonly #donatorsPrivilegeServise: DonatorsPrivilegeServise;
 
+  readonly #faqServise: FAQServise;
+
   constructor(projectRepository: ProjectRepository, teamRepository: TeamRepository,
     chatRepository: ChatRepository, userRepository: UserRepository,
     tagService: TagService, projectTagService: ProjectTagService,
-    donatorsPrivilegeServise:DonatorsPrivilegeServise) {
+    donatorsPrivilegeServise:DonatorsPrivilegeServise, faqServise:FAQServise) {
     this.#projectRepository = projectRepository;
     this.#teamRepository = teamRepository;
     this.#chatRepository = chatRepository;
@@ -37,6 +40,7 @@ export default class ProjectService {
     this.#tagService = tagService;
     this.#projectTagService = projectTagService;
     this.#donatorsPrivilegeServise = donatorsPrivilegeServise;
+    this.#faqServise = faqServise;
   }
 
   public async getPopularProjectsByCategory(category: string) {
@@ -62,6 +66,7 @@ export default class ProjectService {
     await this.#projectTagService.remove(project.projectTags.map(projectTag => projectTag.id));
     await this.#projectTagService.save(listTags.map(tag => ({ tag, project })));
     await this.#donatorsPrivilegeServise.save(body.donatorsPrivileges.map(privilege => ({ ...privilege, project })));
+    await this.#faqServise.save(body.faqs.map(faq => ({ ...faq, project })));
     return project;
   }
 

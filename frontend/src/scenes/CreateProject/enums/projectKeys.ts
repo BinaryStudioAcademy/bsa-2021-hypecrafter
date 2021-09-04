@@ -16,5 +16,6 @@ export enum ProjectKeys {
   FACEBOOK = 'facebookUrl',
   DRIBBLE = 'dribbleUrl',
   PINTEREST = 'pinterestUrl',
-  BEHANCE = 'behanceUrl'
+  BEHANCE = 'behanceUrl',
+  FAQS = 'faqs'
 }

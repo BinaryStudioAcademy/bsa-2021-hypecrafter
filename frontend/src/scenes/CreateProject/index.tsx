@@ -8,6 +8,7 @@ import { useAction, useAuth, useTypedSelector } from '../../hooks';
 import { useLocalization } from '../../providers/localization';
 import Basic from './components/Basic';
 import BeforeStart from './components/BeforeStart';
+import FAQS from './components/FAQ';
 import Funding from './components/Funding';
 import Privileges from './components/Privileges';
 import Settings from './components/Settings';
@@ -29,7 +30,8 @@ const CreateProject = () => {
     imageUrl: '',
     videoUrl: '',
     projectTags: [],
-    donatorsPrivileges: []
+    donatorsPrivileges: [],
+    faqs: []
   };
   const { id: userId } = useAuth();
   const { id } = useParams<{ id: string }>();
@@ -63,6 +65,7 @@ const CreateProject = () => {
       project.projectTags = project.projectTags || [];
       project.donatorsPrivileges = project.donatorsPrivileges || [];
       project.team = project.team || { name: '', chats: [] };
+      project.faqs = project.faqs || [];
       setNewProject(project);
     }
   }, [project]);
@@ -115,6 +118,15 @@ const CreateProject = () => {
           <Privileges
             changePage={setCurrentPage}
             donatorsPrivileges={newProject.donatorsPrivileges}
+            currentPage={currentPage}
+            onChangeValue={handleChangeValue}
+          />
+        );
+      case CurrentPage.FAQ:
+        return (
+          <FAQS
+            changePage={setCurrentPage}
+            faqs={newProject.faqs}
             currentPage={currentPage}
             onChangeValue={handleChangeValue}
           />
