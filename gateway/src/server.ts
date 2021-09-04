@@ -1,5 +1,7 @@
 import cors from 'cors';
 import express from 'express';
+import { createServer } from 'http';
+import socketio, { Socket } from 'socket.io';
 import { createConnection } from 'typeorm';
 import { initMiddlewares } from './api/middlewares';
 import { initPassport } from './api/passport';
@@ -11,6 +13,7 @@ import { initServices } from './services';
 
 const { port, environment } = env.app;
 const app = express();
+
 app.use(cors());
 app.use(express.json({ limit: '15mb' }));
 app.use(express.urlencoded({ limit: '15mb' }));
@@ -21,7 +24,19 @@ createConnection().then(() => {
     initPassport(app, repositories);
     initMiddlewares(app, services);
     app.use(initRoutes(services));
-    app.listen(port, () => {
+    const server = createServer(app);
+    const io = (socketio as any)(server, {
+      cors: {
+        origin: 'http://localhost:3000',
+        methods: ['GET', 'POST']
+      }
+    });
+
+    io.on('connection', (socket: Socket) => {
+      console.log('socket Gateway');
+      console.log(socket);
+    });
+    server.listen(port, () => {
       log(`Server is running at port: ${port}. Environment: "${environment}"`);
     });
   } catch (e) {

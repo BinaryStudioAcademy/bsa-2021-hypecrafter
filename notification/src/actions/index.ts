@@ -1,11 +1,10 @@
 import MicroMq from 'micromq';
-import * as cron from 'node-cron';
 import { NotificationMessageTypes } from '../common/enums';
 import { Job, Notification } from '../common/types';
-import { dataToScheduleForm } from '../helpers/dataToScheduleForm';
+import { JobController } from '../schedule';
 import { Services } from '../services';
 
-export const initActions = (app: MicroMq, services: Services) => {
+export const initActions = (app: MicroMq, services: Services, jobController: JobController) => {
   app.action(NotificationMessageTypes.COMMENT, async (meta, res) => {
     services.notificationService.createNotification({
       ...meta,
@@ -22,28 +21,8 @@ export const initActions = (app: MicroMq, services: Services) => {
   });
 
   app.action('new_project', async (meta, res) => {
-    services.jobService.createJob(meta as Job);
-    const { finishDate, projectId } = meta as Job;
-    const finishDateToScheduleForm = dataToScheduleForm(new Date(finishDate));
-
-    cron.schedule(
-      finishDateToScheduleForm,
-      async () => {
-        // const projectId = 'a9ea4107-10de-44f0-93da-3c24c1932e56';
-        const { response } = (await app.ask('backend', {
-          server: {
-            action: 'getWatchingUsers',
-            meta: {
-              projectId
-            },
-          },
-        })) as { response: { users: string } };
-
-        services.jobService.deleteByProjectId(projectId);
-        console.log(response.users);
-      },
-      { scheduled: true }
-    );
+    const job = await services.jobService.createJob(meta as Job);
+    jobController.startJob(job);
 
     res.json({ ok: true });
   });

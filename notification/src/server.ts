@@ -6,7 +6,7 @@ import { initActions } from './actions';
 import initRoutes from './api/routes';
 import { env } from './env';
 import { log } from './helpers/logger';
-import { initSchedule } from './schedule';
+import { JobController } from './schedule';
 import { initServices } from './services';
 
 const { rabbit } = env.app;
@@ -33,7 +33,7 @@ createConnection()
   .then(async () => {
     const services = initServices();
     initRoutes(app, services).start();
-    initActions(app, services);
-    initSchedule(app, services);
+    const jobController = new JobController(app, services);
+    initActions(app, services, jobController);
   })
   .catch((e) => log(e));
