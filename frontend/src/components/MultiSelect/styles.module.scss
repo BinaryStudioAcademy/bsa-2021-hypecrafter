@@ -1,0 +1,10 @@
+@import '../../styles/vars';
+
+.multiselect-container {
+  flex-direction: column;
+  width: 100%;
+}
+
+.multiselect-label {
+  font-weight: $font-weight-medium;
+}
