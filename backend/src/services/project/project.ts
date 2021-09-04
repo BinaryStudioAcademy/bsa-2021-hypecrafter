@@ -96,24 +96,29 @@ export default class ProjectService {
 
   public async setReaction({ isLiked, projectId }: { isLiked: boolean, projectId: string }, userId: string) {
     const project = await this.#projectRepository.findOne({ id: projectId });
+    const { likes: oldLikes } = await this.#projectRepository.getLikesAndDislikesAmount(project.id);
+
     const user = await this.#userRepository.findOne({ id: userId });
     await this.#projectRepository.setReaction(isLiked, user, project);
     const likesAndDislikes:
     { likes: string, dislikes: string } = await this.#projectRepository.getLikesAndDislikesAmount(project.id);
+    const { likes } = likesAndDislikes;
 
-    const CommentedProject = await this.#projectRepository.getProjectById(projectId);
-    const { authorId: recipient } = CommentedProject;
+    if (oldLikes < likes) {
+      const LikedProject = await this.#projectRepository.getProjectById(projectId);
+      const { authorId: recipient } = LikedProject;
 
-    await this.#app.ask(Application.NOTIFICATION, {
-      server: {
-        action: NotificationMessageTypes.LIKE,
-        meta: {
-          userId,
-          projectId,
-          recipient
+      await this.#app.ask(Application.NOTIFICATION, {
+        server: {
+          action: NotificationMessageTypes.LIKE,
+          meta: {
+            userId,
+            projectId,
+            recipient
+          },
         },
-      },
-    });
+      });
+    }
 
     return mapLikesAndDislikes(likesAndDislikes);
   }
