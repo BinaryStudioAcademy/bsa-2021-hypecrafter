@@ -177,4 +177,14 @@ declare type LocaleKeys =
  | 'Basic fund'
  | 'Amount'
  | 'Return to Main Page'
- | 'Pay';
+ | 'Pay'
+ | 'Notifications'
+ | 'Manage Preferences'
+ | 'No more notifications'
+ | 'liked your'
+ | 'commented your'
+ | 'donated'
+ | 'hypeCoins to'
+ | 'achieved goal'
+ | 'Fundraising time for'
+ | 'is over';

@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Routes } from '../../common/enums';
 import { NotificationType } from '../../common/types/notification';
+import { useLocalization } from '../../providers/localization';
 import Button from '../Button';
 import Notification from '../Notification';
 import Popover from '../Popover';
@@ -17,6 +18,8 @@ interface Props {
 const NotificationPopover = (props: Props) => {
   const { notifications } = props;
   const [unreadMessageCount, setUnreadMessageCount] = useState(notifications.length);
+
+  const { t } = useLocalization();
 
   return (
     <div>
@@ -35,7 +38,7 @@ const NotificationPopover = (props: Props) => {
         {() => (
           <div className={classes.popover}>
             <div className={classes['notification-popover-header']}>
-              <h3 className={classes['notifications-title']}>Notifications</h3>
+              <h3 className={classes['notifications-title']}>{t('Notifications')}</h3>
               <NavLink
                 className={classes['notifications-settings']}
                 to={Routes.HOME}
@@ -46,7 +49,7 @@ const NotificationPopover = (props: Props) => {
                 />
                 <span
                   className={classes['menage-title']}
-                >Manage Preferences
+                >{t('Manage Preferences')}
                 </span>
               </NavLink>
             </div>
@@ -64,13 +67,13 @@ const NotificationPopover = (props: Props) => {
             {!notifications.length
               && (
               <div className={classes['no-notifications']}>
-                <span>No more notifications</span>
+                <span>{t('No more notifications')}</span>
               </div>
               )}
             {true
               && (
               <Button className={classes['load-more']}>
-                Load more
+                {t('Load more')}
               </Button>
               )}
           </div>

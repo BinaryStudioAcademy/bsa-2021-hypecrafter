@@ -9,6 +9,7 @@ import { Button as ButtonRB } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { NotificationMessageTypes } from '../../common/enums/notifications';
 import { NotificationData, NotificationLink, NotificationType } from '../../common/types/notification';
+import { useLocalization } from '../../providers/localization';
 import { date } from '../../services/date';
 import classes from './styles.module.scss';
 
@@ -20,6 +21,8 @@ interface NotificationProps extends NotificationType {
 const Notification = (props: NotificationProps) => {
   const { data, type, unreadMessageCount, setUnreadMessageCount } = props;
   const [isWatched, setWatched] = useState(false);
+
+  const { t } = useLocalization();
 
   const notificationCardClass = classnames({
     [classes['notification-card']]: true,
@@ -40,7 +43,7 @@ const Notification = (props: NotificationProps) => {
       image: faThumbsUp,
       message: (
         <span>
-          <Link to={(user as NotificationLink).link}>{(user as NotificationLink).name}</Link> liked your{' '}
+          <Link to={(user as NotificationLink).link}>{(user as NotificationLink).name}</Link> {t('liked your')}{' '}
           <Link to={project.link}>{project.name}</Link>
         </span>
       ),
@@ -52,7 +55,7 @@ const Notification = (props: NotificationProps) => {
       image: faComments,
       message: (
         <span>
-          <Link to={(user as NotificationLink).link}>{(user as NotificationLink).name}</Link> commented your{' '}
+          <Link to={(user as NotificationLink).link}>{(user as NotificationLink).name}</Link> {t('commented your')}{' '}
           <Link to={project.link}>{project.name}</Link>
         </span>
       ),
@@ -65,7 +68,7 @@ const Notification = (props: NotificationProps) => {
       message: (
         <span>
           <Link to={(user as NotificationLink).link}>{(user as NotificationLink).name}</Link>{' '}
-          donated <span className={classes.amount}>{donation}</span> hypeCoins to{' '}
+          {t('donated')} <span className={classes.amount}>{donation}</span> {t('hypeCoins to')}{' '}
           <Link to={project.link}>{project.name}</Link>
         </span>
       ),
@@ -77,7 +80,7 @@ const Notification = (props: NotificationProps) => {
       image: faCheckSquare,
       message: (
         <span>
-          <Link to={project.link}>{project.name}</Link> achieved goal 🎉
+          <Link to={project.link}>{project.name}</Link> {t('achieved goal')} 🎉
         </span>
       ),
       messageDate: date.getDate(messageDate),
@@ -88,7 +91,7 @@ const Notification = (props: NotificationProps) => {
       image: faClock,
       message: (
         <span>
-          fundraising time for <Link to={project.link}>{project.name}</Link> is over
+          {t('Fundraising time for')} <Link to={project.link}>{project.name}</Link> {t('is over')}
         </span>
       ),
       messageDate: date.getDate(messageDate),

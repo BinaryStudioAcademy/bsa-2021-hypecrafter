@@ -180,6 +180,16 @@
     "Basic fund":"Базовий",
     "Amount":"Кількість",
     "Return to Main Page":"Повернутися до Головної Сторінки",
-    "Pay":"Сплатити"
+    "Pay":"Сплатити",
+    "Notifications": "Сповіщення",
+    "Manage Preferences": "Керування налаштуваннями",
+    "No more notifications": "Немає сповіщень",
+    "liked your": "вподобав(ла)",
+    "commented your": "прокоментував(ла) ваш",
+    "donated": "пожертвував(ла)",
+    "hypeCoins to": "hypeCoins для",
+    "achieved goal": "досяг цілі",
+    "Fundraising time for": "Термін збору коштів для",
+    "is over": "завершено"
   }
 }
