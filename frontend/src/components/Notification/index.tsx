@@ -19,18 +19,18 @@ interface NotificationProps extends NotificationType {
 
 const Notification = (props: NotificationProps) => {
   const { data, type, unreadMessageCount, setUnreadMessageCount } = props;
-  const [isLiked, setLiked] = useState(false);
+  const [isWatched, setWatched] = useState(false);
 
   const notificationCardClass = classnames({
     [classes['notification-card']]: true,
-    [classes.liked]: isLiked
+    [classes.watched]: isWatched
   });
 
   const handleCardClick = () => {
-    if (!isLiked) {
+    if (!isWatched) {
       setUnreadMessageCount(unreadMessageCount - 1);
     }
-    setLiked(true);
+    setWatched(true);
   };
 
   const getNotificationInfo = {
@@ -65,7 +65,7 @@ const Notification = (props: NotificationProps) => {
       message: (
         <span>
           <Link to={(user as NotificationLink).link}>{(user as NotificationLink).name}</Link>{' '}
-          donated {donation} hypeCoins to{' '}
+          donated <span className={classes.amount}>{donation}</span> hypeCoins to{' '}
           <Link to={project.link}>{project.name}</Link>
         </span>
       ),
