@@ -28,7 +28,7 @@ export class PaymentRepository {
       .skip(skipNum)
       .limit(paginationStep)
       .lean();
-    const isLast: boolean = count <= pageNum * paginationStep;
+    const isLast = count <= pageNum * paginationStep;
 
     return {
       isLast,
