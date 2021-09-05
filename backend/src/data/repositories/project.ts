@@ -13,7 +13,7 @@ import { Project, UserProfile, UserProject, Donate } from '../entities';
 
 @EntityRepository(Project)
 export class ProjectRepository extends Repository<Project> {
-  #projectLimit = 3;
+#projectLimit = 3;
 
   #chartProjectLimit = 13;
 
@@ -118,7 +118,6 @@ export class ProjectRepository extends Repository<Project> {
       project."finishDate",
       goal,
       tags,
-      "bakersAmount",
       likes,
       dislikes,
       privileges,
@@ -130,10 +129,27 @@ export class ProjectRepository extends Repository<Project> {
     }
     const projectQuery = this.createQueryBuilder('project')
       .select(selectQuery)
+      .addSelect(subQuery => (
+        subQuery
+          .select(
+            `CASE project.totalViews
+              WHEN 0 THEN 0
+              ELSE (100 * COUNT(donate.userId)) / project.totalViews
+            END`,
+            'involvementIndex'
+          )
+          .where('donate.projectId = :id', { id })
+          .from(Donate, 'donate')
+      ))
+      .addSelect(subQuery => (
+        subQuery
+          .select('COUNT(donate.userId)', 'bakersAmount')
+          .where('donate.projectId = :id', { id })
+          .from(Donate, 'donate')
+      ))
       .leftJoin(subQuery => subQuery
         .select(`
           SUM(amount) AS donated,
-          COUNT(DISTINCT "userId") AS "bakersAmount",
           "projectId"
         `)
         .from('donate', 'donate')
@@ -345,6 +361,11 @@ export class ProjectRepository extends Repository<Project> {
       .select(`
         donated,
         description,
+        project.totalViews AS totalViews,
+        CASE project.totalViews
+          WHEN 0 THEN 0
+          ELSE (100 * "bakersAmount") / project.totalViews
+        END AS "involvementIndex",
         project.name AS "name",
         project."id",
         project."imageUrl",
@@ -356,14 +377,15 @@ export class ProjectRepository extends Repository<Project> {
         CASE WHEN dnu."projectId" IS NULL THEN false ELSE true END AS "isDonated"
         ` : ''}
       `)
+      .leftJoin('project.category', 'category')
       .leftJoin(subQuery => subQuery
         .select(`
           SUM(amount) AS donated,
+          COUNT("userId") AS "bakersAmount",
           "projectId"
         `)
         .from('donate', 'donate')
         .groupBy('"projectId"'), 'dn', 'dn."projectId" = project.id')
-      .leftJoin('project.category', 'category')
       .leftJoin(
         (subQuery) => subQuery
           .select(`
@@ -466,6 +488,18 @@ export class ProjectRepository extends Repository<Project> {
       .addSelect(subQuery => (
         subQuery
           .select('COUNT(donate.userId)', 'bakersAmount')
+          .where('donate.projectId = :id', { id })
+          .from(Donate, 'donate')
+      ))
+      .addSelect(subQuery => (
+        subQuery
+          .select(
+            `CASE project.totalViews
+              WHEN 0 THEN 0
+              ELSE (100 * COUNT(donate.userId)) / project.totalViews
+            END`,
+            'involvementIndex'
+          )
           .where('donate.projectId = :id', { id })
           .from(Donate, 'donate')
       ))

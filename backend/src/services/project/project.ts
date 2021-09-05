@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { ProjectsCategories, ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
 import {
   Project,
@@ -5,7 +6,7 @@ import {
   UpdateInteractionTimeQuery
 } from '../../common/types';
 import { Chat, Project as CreateProject, Team } from '../../data/entities';
-import { mapPrivileges, mapProjects } from '../../data/mappers';
+import { mapPrivileges, mapProjects, mapBoolean, nullToNumber } from '../../data/mappers';
 import { mapLikesAndDislikes } from '../../data/mappers/mapLikesAndDislikes';
 import {
   ChatRepository, ProjectRepository,
@@ -71,7 +72,8 @@ export default class ProjectService {
     userId?: string,
   }) {
     const projects: Project[] = await this.#projectRepository.getBySortAndFilter({ sort, filter, category, userId });
-    return projects;
+    // console.log(mapProjects(projects));
+    return mapProjects(projects);
   }
 
   public async getById(id: string, userId: string | undefined) {
@@ -80,7 +82,12 @@ export default class ProjectService {
     project.donated = Math.max(0, project.donated);
     project.privileges = mapPrivileges(project.privileges, project.bakersDonation);
 
-    return project; // rewrite when error handling middleware works
+    return {
+      ...project,
+      tags: mapBoolean(project.tags),
+      involvementIndex: nullToNumber(project.involvementIndex),
+      donated: nullToNumber(project.donated),
+    }; // rewrite when error handling middleware works
   }
 
   public async setReaction({ isLiked, projectId }: { isLiked: boolean, projectId: string }, userId: string) {
@@ -107,11 +114,14 @@ export default class ProjectService {
       const response = await this.#projectRepository.updateViewsAndInteractionTimeById(
         id,
         {
-          totalViews: totalViews + 1,
-          totalInteractionTime: totalInteractionTime + interactionTime
+          totalViews: !totalViews ? 1 : totalViews + 1,
+          totalInteractionTime: !totalInteractionTime ? interactionTime : totalInteractionTime + interactionTime
         }
       ) as unknown as UpdateViewsAndInteractionTime;
-      return response;
+      return {
+        ...response,
+        involvementIndex: nullToNumber(response.involvementIndex)
+      };
     } catch {
       throw new CustomError(
         HttpStatusCode.INTERNAL_SERVER_ERROR,
