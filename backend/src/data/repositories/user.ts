@@ -13,6 +13,15 @@ export class UserRepository extends Repository<UserProfile> {
     return this.findOne({ id });
   }
 
+  public async deductBalance(id: string, amount: number) {
+    const userProfile = await this.findOne({ id });
+    if (userProfile) {
+      userProfile.balance = amount - Number(userProfile.balance);
+      this.save(userProfile);
+    }
+    return userProfile;
+  }
+
   public async replenishmentBalance(id: string, amount: number) {
     const userProfile = await this.findOne({ id });
     if (userProfile) {
