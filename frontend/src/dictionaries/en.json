@@ -183,6 +183,16 @@
     "Basic fund":"Basic fund",
     "Amount":"Amount",
     "Return to Main Page":"Return to Main Page",
-    "Pay":"Pay"
+    "Pay":"Pay",
+    "Notifications": "Notifications",
+    "Manage Preferences": "Manage Preferences",
+    "No more notifications": "No more notifications",
+    "liked your": "liked your",
+    "commented your": "commented your",
+    "donated": "donated",
+    "hypeCoins to": "hypeCoins to",
+    "achieved goal": "achieved goal",
+    "Fundraising time for": "Fundraising time for",
+    "is over": "is over"
   }
 }
