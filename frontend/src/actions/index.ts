@@ -17,7 +17,6 @@ export {
 } from '../scenes/ProjectPage/actions';
 export {
   fetchProjectsAction,
-  filterCategoriesProjectsAction,
   filterProjectsAction,
   sortProjectsAction,
   updateViewsAndInteractionTimeAction
