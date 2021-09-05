@@ -8,10 +8,10 @@ export default class DonateService {
 
   readonly #projectRepository: ProjectRepository;
 
-  constructor(commentRepository: DonateRepository,
+  constructor(donateRepository: DonateRepository,
     projectRepository: ProjectRepository,
     userRepository: UserRepository) {
-    this.#donateRepository = commentRepository;
+    this.#donateRepository = donateRepository;
     this.#userRepository = userRepository;
     this.#projectRepository = projectRepository;
   }
