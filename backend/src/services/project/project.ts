@@ -1,9 +1,9 @@
 import { ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
+import { Project } from '../../common/types';
 import {
-  Project,
   UpdateViewsAndInteractionTime,
   UpdateInteractionTimeQuery
-} from '../../common/types';
+} from '../../common/types/project';
 import { Chat, Project as CreateProject, Team } from '../../data/entities';
 import { mapPrivileges, mapProjects, mapBoolean, nullToNumber } from '../../data/mappers';
 import { mapLikesAndDislikes } from '../../data/mappers/mapLikesAndDislikes';
