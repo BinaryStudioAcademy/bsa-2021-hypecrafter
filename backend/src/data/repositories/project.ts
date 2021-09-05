@@ -99,7 +99,7 @@ export class ProjectRepository extends Repository<Project> {
     return this.getProjectsByOrder('project."updatedAt"');
   }
 
-  public async getById(id: string, userId: string | undefined): Promise<MyProject> {
+  public async getById(id: string, userId: string | undefined = undefined): Promise<MyProject> {
     let selectQuery = `
       project."id",
       project."imageUrl",

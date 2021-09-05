@@ -2,6 +2,7 @@ import { getCustomRepository } from 'typeorm';
 import { CategoryRepository } from './category';
 import { ChatRepository } from './chat';
 import { CommentRepository } from './comment';
+import { DonateRepository } from './donate';
 import { ProjectRepository } from './project';
 import { ProjectTagRepository } from './projectTag';
 import { TagRepository } from './tag';
@@ -18,7 +19,8 @@ export const initRepositories = (): Repositories => ({
   chatRepository: getCustomRepository(ChatRepository),
   tagRepository: getCustomRepository(TagRepository),
   projectTagRepository: getCustomRepository(ProjectTagRepository),
-  commentRepository: getCustomRepository(CommentRepository)
+  commentRepository: getCustomRepository(CommentRepository),
+  donateRepository: getCustomRepository(DonateRepository)
 });
 
 export type Repositories = {
@@ -31,6 +33,7 @@ export type Repositories = {
   categoryRepository: CategoryRepository;
   projectTagRepository: ProjectTagRepository;
   commentRepository: CommentRepository;
+  donateRepository: DonateRepository;
 };
 
 export {
@@ -42,5 +45,6 @@ export {
   TagRepository,
   CategoryRepository,
   ProjectTagRepository,
-  CommentRepository
+  CommentRepository,
+  DonateRepository
 };
