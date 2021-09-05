@@ -3,21 +3,21 @@ import { littleDateFormate } from './helpers';
 import { Message } from './MessageInterface';
 import classes from './styles.module.scss';
 
-const messageMapper = (mess: Message) => (
-  <div className={classes.message} key={mess.id}>
+const messageMapper = (message: Message) => (
+  <div className={classes.message} key={message.id}>
     <div className={classes.messageContent}>
-      <span className={classes.name}>{mess.name}</span>
-      <span className={classes.text}>{mess.text}</span>
+      <span className={classes.name}>{message.name}</span>
+      <span className={classes.text}>{message.text}</span>
     </div>
     <span className={classes.messageTime}>
-      {`at ${littleDateFormate(mess.date)}`}
+      {littleDateFormate(message.date)}
     </span>
   </div>
 );
 
 const ChatContentMemo = React.memo(({ messages }: { messages: Message[] }) => (
   <div className={classes.content}>
-    {messages.map((mess: Message) => messageMapper(mess))}
+    {messages.map((message: Message) => messageMapper(message))}
   </div>
 ));
 
