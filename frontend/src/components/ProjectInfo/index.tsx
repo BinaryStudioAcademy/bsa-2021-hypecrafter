@@ -21,7 +21,7 @@ interface ProjectInfoProps {
   finishDate: string;
   mark: string | null | undefined;
   isAuthorized: boolean;
-  totalViews: number;
+  involvementIndex: number;
 }
 
 const ProjectInfo: FunctionComponent<ProjectInfoProps> = ({
@@ -34,7 +34,7 @@ const ProjectInfo: FunctionComponent<ProjectInfoProps> = ({
   finishDate,
   mark,
   isAuthorized,
-  totalViews
+  involvementIndex
 }) => {
   const { setReaction } = useAction();
   const { t } = useLocalization();
@@ -48,11 +48,6 @@ const ProjectInfo: FunctionComponent<ProjectInfoProps> = ({
   };
 
   const daysToGo = calcDaysToGo(finishDate);
-
-  const involvementIndex = () => (
-    !totalViews
-      ? 0
-      : Math.round((100 * bakersAmount) / totalViews));
 
   return (
     <Container className={classes['info-block-container']}>
@@ -77,7 +72,7 @@ const ProjectInfo: FunctionComponent<ProjectInfoProps> = ({
         </Col>
         <Col xs={3}>
           <div className={classes['info-block-entity']}>
-            <p className={classes['info-backers-amount']}>{involvementIndex()}</p>
+            <p className={classes['info-backers-amount']}>{involvementIndex}</p>
             <p className={classes['info-backers']}>{t('Involvement index')}</p>
           </div>
         </Col>

@@ -20,11 +20,3 @@ export const getProject = (
 export const setReaction = (params : SetReactionProps) => api.post({ url: 'projects/reaction', params });
 
 export const setWatch = (params: SetWatchProps) => api.post({ url: 'projects/watch', params });
-
-export const updateViewsAndInteraction = ({ id = '', ...params }) => {
-  if (!id || typeof params === 'undefined') throw Error();
-  return api.put({
-    url: `views-interaction/${id}`,
-    params
-  });
-};

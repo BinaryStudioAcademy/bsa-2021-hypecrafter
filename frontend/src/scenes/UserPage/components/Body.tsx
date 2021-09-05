@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 import { FunctionComponent } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import Card from '../../../components/Card';

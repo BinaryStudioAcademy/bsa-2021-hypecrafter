@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 import cn from 'classnames';
 import { FC, ReactNode } from 'react';
 import classes from './styles.module.scss';

@@ -13,14 +13,14 @@ export {
   addComment,
   fetchProject,
   setReaction,
-  setWatch,
-  updateViewsAndInteractionTimeAction,
+  setWatch
 } from '../scenes/ProjectPage/actions';
 export {
   fetchProjectsAction,
   filterCategoryProjectsAction,
   filterProjectsAction,
   sortProjectsAction,
+  updateViewsAndInteractionTimeAction
 } from '../scenes/Projects/actions';
 export {
   fetchCategories,

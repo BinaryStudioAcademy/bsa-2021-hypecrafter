@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 import { Chart as Chartjs, ChartOptions, defaults } from 'chart.js';
 import React from 'react';
 import ChartComponent from 'react-chartjs-2';

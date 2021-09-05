@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 import { faClipboard } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FC, useState } from 'react';
@@ -19,7 +20,7 @@ interface ShareProjectModalProps {
   title: string;
 }
 
-const ShareProjectModal:FC<ShareProjectModalProps> = ({ url = 'https://google.com', imageUrl, title }) => {
+const ShareProjectModal: FC<ShareProjectModalProps> = ({ url = 'https://google.com', imageUrl, title }) => {
   const [copied, setCopied] = useState(false);
 
   return (

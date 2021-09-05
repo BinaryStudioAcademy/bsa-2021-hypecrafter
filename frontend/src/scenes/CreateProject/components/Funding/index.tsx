@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 import { FC } from 'react';
 import Button from '../../../../components/Button';
 import DatePickerInput from '../../../../components/DatePicker';
@@ -13,7 +14,7 @@ interface Props {
   onChangeValue: (name: ProjectKeys, value: any) => void,
   goal: number,
   startDate?: Date,
-  finishDate?:Date,
+  finishDate?: Date,
 }
 
 const Funding: FC<Props> = ({ changePage, currentPage, onChangeValue, goal, startDate, finishDate }) => {

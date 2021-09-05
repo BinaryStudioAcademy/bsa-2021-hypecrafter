@@ -4,17 +4,14 @@ import { createRoutine } from 'redux-saga-routines';
 import {
   Comment,
   CreateComment,
-  ProjectPage,
-  ViewsAndInteractionTimeQuery,
-  ViewsAndInteractionTimeResponse
+  ProjectPage
 } from '../../common/types';
 
 export enum ProjectsActions {
   FETCH_PROJECT = 'PROJECTS/GET_PROJECT',
   ADD_COMMENT = 'COMMENTS/ADD_COMMENT',
   SET_REACTION = 'PROJECTS/SET_REACTION',
-  SET_WATCH = 'PROJECTS/SET_WATCH',
-  UPDATE_VIEWS_AND_INTERACTION_TIME = 'PROJECTS/UPDATE_VIEWS_AND_INTERACTION_TIME'
+  SET_WATCH = 'PROJECTS/SET_WATCH'
 }
 
 interface SetReactionTriggerActionPropsType {
@@ -84,14 +81,3 @@ export type SetReactionSuccessActionType =
 
 export type SetWatchSuccessActionType =
   ReturnType<typeof setWatch.success>;
-
-export const updateViewsAndInteractionTimeAction = createRoutine(ProjectsActions.UPDATE_VIEWS_AND_INTERACTION_TIME, {
-  trigger: (interactionTimeQuery: ViewsAndInteractionTimeQuery) => interactionTimeQuery,
-  success: (donatesViewsAndInteractionTime: ViewsAndInteractionTimeResponse) => donatesViewsAndInteractionTime,
-  failure: (error: string) => error
-});
-
-export type UpdateViewsAndInteractionTimeTriggerActionType = ReturnType<typeof updateViewsAndInteractionTimeAction.trigger>;
-export type UpdateViewsAndInteractionTimeSuccessActionType = ReturnType<typeof updateViewsAndInteractionTimeAction.success>;
-export type UpdateViewsAndInteractionTimeFailureActionType = ReturnType<typeof updateViewsAndInteractionTimeAction.failure>;
-

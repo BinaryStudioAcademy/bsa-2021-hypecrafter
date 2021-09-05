@@ -6,7 +6,8 @@ import { Tab, Tabs } from '../../components/Tabs';
 import {
   useAction,
   useAuth,
-  useTypedSelector
+  useTypedSelector,
+  useCountTimeOnPage
 } from '../../hooks';
 import { useLocalization } from '../../providers/localization';
 import Comments from './components/Comments';
@@ -34,9 +35,10 @@ const ProjectPage: FC = () => {
     updateViewsAndInteractionTimeAction({ id, interactionTime })
   );
 
+  useCountTimeOnPage(handleUpdateViewsAndInteractionTime);
+
   useEffect(() => {
     fetchProject({ id, userId });
-    handleUpdateViewsAndInteractionTime(1000);
   }, []);
 
   return (

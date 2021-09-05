@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 import { FC, useEffect } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import LoaderWrapper from '../../components/LoaderWrapper';

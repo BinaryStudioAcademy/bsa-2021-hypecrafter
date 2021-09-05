@@ -40,7 +40,7 @@ const Header: FunctionComponent<HeaderProps> = ({ project, isAuthorized }) => {
     finishDate,
     mark,
     isWatched,
-    totalViews
+    involvementIndex
   } = project;
 
   const { setWatch } = useAction();
@@ -140,7 +140,7 @@ const Header: FunctionComponent<HeaderProps> = ({ project, isAuthorized }) => {
               finishDate={finishDate}
               mark={mark}
               isAuthorized={isAuthorized}
-              totalViews={totalViews}
+              involvementIndex={involvementIndex}
             />
           </Row>
         </Col>

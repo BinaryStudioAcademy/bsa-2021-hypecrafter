@@ -14,7 +14,10 @@ import {
   filterProjectsAction,
   FilterProjectsActionType,
   sortProjectsAction,
-  SortProjectsActionType
+  SortProjectsActionType,
+  updateViewsAndInteractionTimeAction,
+  UpdateViewsAndInteractionTimeSuccessActionType,
+  UpdateViewsAndInteractionTimeFailureActionType
 } from './actions';
 
 export interface ProjectsState {
@@ -87,6 +90,30 @@ export const projectsReducer = createReducer<ProjectsState>(initialState, {
       },
     };
   },
+  [updateViewsAndInteractionTimeAction.TRIGGER](state) {
+    return {
+      ...state
+    };
+  },
+  [updateViewsAndInteractionTimeAction.SUCCESS](state, action: UpdateViewsAndInteractionTimeSuccessActionType) {
+    return {
+      ...state,
+      projects: state.projects.map(project => (
+        project.id !== action.payload.id
+          ? project
+          : {
+            ...project,
+            ...action.payload
+          }
+      ))
+    };
+  },
+  [updateViewsAndInteractionTimeAction.FAILURE](state, action: UpdateViewsAndInteractionTimeFailureActionType) {
+    return {
+      ...state,
+      error: action.payload
+    };
+  }
 });
 
 export default projectsReducer;

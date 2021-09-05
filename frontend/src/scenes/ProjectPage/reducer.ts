@@ -4,16 +4,13 @@ import { createReducer } from '../../helpers';
 import type {
   AddCommentSuccessActionType, FetchProjectSuccessActionType,
   SetReactionSuccessActionType,
-  SetWatchSuccessActionType,
-  UpdateViewsAndInteractionTimeSuccessActionType,
-  UpdateViewsAndInteractionTimeFailureActionType
+  SetWatchSuccessActionType
 } from './actions';
 import {
   addComment,
   fetchProject,
   setReaction,
-  setWatch,
-  updateViewsAndInteractionTimeAction
+  setWatch
 } from './actions';
 
 export interface ProjectPageState {
@@ -94,26 +91,6 @@ const projectPageReducer = createReducer<ProjectPageState>(projectPageState, {
     return {
       ...state,
       isInputLoading: false,
-    };
-  },
-  [updateViewsAndInteractionTimeAction.TRIGGER](state) {
-    return {
-      ...state
-    };
-  },
-  [updateViewsAndInteractionTimeAction.SUCCESS](state, action: UpdateViewsAndInteractionTimeSuccessActionType) {
-    return {
-      ...state,
-      project: {
-        ...state.project,
-        ...action.payload
-      }
-    };
-  },
-  [updateViewsAndInteractionTimeAction.FAILURE](state, action: UpdateViewsAndInteractionTimeFailureActionType) {
-    return {
-      ...state,
-      error: action.payload
     };
   }
 });

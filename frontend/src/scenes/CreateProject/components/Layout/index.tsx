@@ -1,17 +1,18 @@
+/* eslint-disable react/require-default-props */
 import { FC, ReactNode } from 'react';
 import Button from '../../../../components/Button';
 import { useLocalization } from '../../../../providers/localization';
 import { CurrentPage } from '../../enums';
 import classes from './styles.module.scss';
 
-interface Props{
+interface Props {
   header: string,
   body?: ReactNode,
   footer?: ReactNode,
   currentPage?: CurrentPage
-  setCurrentPage:(page:CurrentPage)=>void
+  setCurrentPage: (page: CurrentPage) => void
 }
-interface OptionsMenu{
+interface OptionsMenu {
   page: CurrentPage,
   label: LocaleKeys
 }

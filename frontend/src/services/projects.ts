@@ -39,3 +39,11 @@ export const getPopularAndRecommendedProjects = async () => {
   } = await api.get({ url: 'projects/popular-and-recommended' });
   return projects;
 };
+
+export const updateViewsAndInteraction = ({ id = '', ...params }) => {
+  if (!id || typeof params === 'undefined') throw Error();
+  return api.put({
+    url: `views-interaction/${id}`,
+    params
+  });
+};

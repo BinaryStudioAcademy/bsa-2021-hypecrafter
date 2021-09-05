@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FC, useEffect, useState } from 'react';
@@ -25,7 +26,7 @@ interface Props {
 
 const Settings: FC<Props> = ({ currentPage, region, imageUrl, videoUrl, newTags, changePage, onChangeValue }) => {
   const [tag, setTag] = useState('');
-  const [options, setOptions] = useState<Array<{ text:string, value:string }>>([]);
+  const [options, setOptions] = useState<Array<{ text: string, value: string }>>([]);
   const { getTagsAction } = useAction();
   useEffect(() => {
     getTagsAction();
@@ -45,7 +46,7 @@ const Settings: FC<Props> = ({ currentPage, region, imageUrl, videoUrl, newTags,
       setTag('');
     }
   };
-  const deleteTag = (tagToDelete:string) => {
+  const deleteTag = (tagToDelete: string) => {
     const listTags = newTags.filter(_tag => _tag.tag.name !== tagToDelete);
     onChangeValue(ProjectKeys.PROJECT_TAGS, listTags);
   };

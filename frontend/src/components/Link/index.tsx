@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 import { FC, MouseEventHandler } from 'react';
 import { Link } from 'react-router-dom';
 import classes from './styles.module.scss';
@@ -7,7 +8,7 @@ type Props = {
   onClick?: MouseEventHandler<HTMLAnchorElement>;
 };
 
-const LinkComponent: FC<Props> = ({ to, children, onClick = () => {} }) => (
+const LinkComponent: FC<Props> = ({ to, children, onClick = () => { } }) => (
   <Link
     className={classes.link}
     to={to}
