@@ -77,15 +77,14 @@ export default class ProjectService {
 
   public async getById(id: string, userId: string | undefined) {
     const project = await this.#projectRepository.getById(id, userId);
-    project.bakersAmount = Math.max(0, project.bakersAmount);
-    project.donated = Math.max(0, project.donated);
-    project.privileges = mapPrivileges(project.privileges, project.bakersDonation);
 
     return {
       ...project,
       tags: mapBoolean(project.tags),
       involvementIndex: nullToNumber(project.involvementIndex),
       donated: nullToNumber(project.donated),
+      privileges: mapPrivileges(project.privileges, project.bakersDonation),
+      bakersAmount: nullToNumber(project.bakersAmount)
     }; // rewrite when error handling middleware works
   }
 
