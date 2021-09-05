@@ -3,7 +3,17 @@ import ChatContentMemo from './ChatContent';
 import { Message } from './MessageInterface';
 import classes from './styles.module.scss';
 
-const Chat = ({ nickName }: { nickName: string }) => {
+interface ChatProps {
+  nickName: string;
+  backer?: boolean;
+  owner?: boolean;
+}
+
+const Chat: React.FC<ChatProps> = ({
+  nickName,
+  backer = false,
+  owner = false
+}) => {
   const messageDefault: Message[] = [];
   const [messages, setMessages] = useState(messageDefault);
   const [value, setValue] = useState('');
@@ -13,6 +23,8 @@ const Chat = ({ nickName }: { nickName: string }) => {
       id: Number(new Date()),
       text: value,
       name: nickName,
+      backer,
+      owner,
       date: new Date()
     };
 

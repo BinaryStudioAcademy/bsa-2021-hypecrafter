@@ -88,3 +88,20 @@
 .message + .message {
   margin-top: 10px;
 }
+
+.backer,
+.owner {
+  margin-left: 3px;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+.backer {
+  background-color: $color-badge-backer-background;
+  color: $color-root-block-background;
+}
+
+.owner {
+  background-color: $color-badge-owner-background;
+  color: white;
+}
