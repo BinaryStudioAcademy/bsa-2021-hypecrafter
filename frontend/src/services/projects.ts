@@ -44,6 +44,6 @@ export const getPopularAndRecommendedProjects = async () => {
 
 export const updateViewsAndInteraction = ({ id = '', ...params }) => (
   api.put({
-    url: `views-interaction/${id}`,
+    url: `projects/views-interaction/${id}`,
     params
   }));
