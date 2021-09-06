@@ -191,8 +191,8 @@ export class ProjectRepository extends Repository<Project> {
           .groupBy('dua."projectId"'), 'ud', 'ud."projectId" = project.id')
         .leftJoin('donators_privilege', 'donatorsPrivilege', 'project.id = "donatorsPrivilege"."projectId"')
         .where(`
-          title IS NOT NULL AND 
-          "donatorsPrivilege".content IS NOT NULL AND 
+          title IS NOT NULL AND
+          "donatorsPrivilege".content IS NOT NULL AND
           includes IS NOT NULL AND amount IS NOT NULL
         `)
         .groupBy('project.id,"bakersDonation"'), 'dp', 'dp."projectId" = project.id')
@@ -438,10 +438,10 @@ export class ProjectRepository extends Repository<Project> {
       .getRawOne();
   }
 
-  public getBySortAndFilter({ sort, filter, category, userId }: {
+  public getBySortAndFilter({ sort, filter, categories, userId }: {
     sort: ProjectsSort;
     filter: ProjectsFilter;
-    category: ProjectsCategories;
+    categories: ProjectsCategories[];
     userId?: string;
   }) {
     const query = this.createQueryBuilder('project')
@@ -501,8 +501,8 @@ export class ProjectRepository extends Repository<Project> {
         'dnu."projectId" = project.id');
     }
 
-    const categoryCondition = this.getCategoryFilterCondition(category);
-    query.where(categoryCondition);
+    const categoriesCondition = this.getCategoryFilterCondition(categories);
+    query.where(categoriesCondition);
 
     if (userId) {
       const filterCondition = this.getFilterCondition(filter, userId);
@@ -544,12 +544,10 @@ export class ProjectRepository extends Repository<Project> {
   }
 
   // eslint-disable-next-line consistent-return
-  private getCategoryFilterCondition(category: ProjectsCategories) {
-    switch (category) {
-      case ProjectsCategories.ALL:
-        return 'project."id" IS NOT NULL';
-      default:
-        return `category.name = '${category}'`;
+  private getCategoryFilterCondition(categories: ProjectsCategories[]): string {
+    if (categories.length === 0) {
+      return 'project."id" IS NOT NULL';
     }
+    return categories.map(category => `category.name = '${category}'`).join(' OR ');
   }
 }

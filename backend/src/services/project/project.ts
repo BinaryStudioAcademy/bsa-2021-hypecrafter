@@ -1,4 +1,4 @@
-import { ProjectsCategories, ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
+import { ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
 import { Project } from '../../common/types';
 import { Chat, Project as CreateProject, Team } from '../../data/entities';
 import { mapPrivileges, mapProjects } from '../../data/mappers';
@@ -70,13 +70,14 @@ export default class ProjectService {
     return project;
   }
 
-  public async getBySortAndFilter({ sort, filter, category, userId }: {
+  public async getBySortAndFilter({ sort, filter, stringifiedCategories, userId }: {
     sort: ProjectsSort,
     filter: ProjectsFilter,
-    category: ProjectsCategories,
+    stringifiedCategories: string,
     userId?: string,
   }) {
-    const projects: Project[] = await this.#projectRepository.getBySortAndFilter({ sort, filter, category, userId });
+    const categories = JSON.parse(stringifiedCategories);
+    const projects: Project[] = await this.#projectRepository.getBySortAndFilter({ sort, filter, categories, userId });
     return projects;
   }
 
