@@ -1,4 +1,4 @@
-export declare enum ProjectsSort {
+export enum ProjectsSort {
   NAME = "name",
   DATE = "date",
   RECOMMENDED = "recommended",

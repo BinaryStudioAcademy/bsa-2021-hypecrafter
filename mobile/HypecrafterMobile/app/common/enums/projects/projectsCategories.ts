@@ -23,4 +23,4 @@ export declare const ProjectsCategories: {
   Theater: CategoryType.Theater;
 };
 
-export declare type ProjectsCategories = CategoryType | Common;
+export type ProjectsCategories = CategoryType | Common;
