@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Project } from '../../common/types';
 import Tag from './Tag';
+import commonStyles from '../../styles/common';
 
 interface Props {
   project: Project;
@@ -35,7 +36,7 @@ const ProjectCard:FC<Props> = ({ project }) => {
 const styles = StyleSheet.create({
   container: {
     width: 360,
-    backgroundColor: '#2e333a',
+    backgroundColor: commonStyles.color.blockBackground,
     borderRadius: 4,
     marginVertical: 6,
     marginLeft: 'auto',
@@ -51,20 +52,20 @@ const styles = StyleSheet.create({
     width: 'auto',
   },
   category: {
-    color: '#0aecec',
+    color: commonStyles.color.turquoise,
     marginHorizontal: 8,
     marginTop: 5,
   },
   name: {
-    color: '#fafbff',
-    fontSize: 18,
+    color: commonStyles.color.text,
+    fontSize: commonStyles.font.size.title,
     fontWeight: '600',
     marginVertical: 5,
     marginHorizontal: 8,
   },
   description: {
-    color: '#fafbff',
-    fontSize: 14,
+    color: commonStyles.color.text,
+    fontSize: commonStyles.font.size.text,
     fontWeight: '400',
     marginHorizontal: 8,
   },
@@ -73,7 +74,6 @@ const styles = StyleSheet.create({
     marginVertical: 8,
     display: 'flex',
     flexDirection: 'row',
-    zIndex: 488
   }
 });
 

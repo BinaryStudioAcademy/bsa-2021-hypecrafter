@@ -1,7 +1,8 @@
 import React, { FC } from 'react';
 import { FlatList, ListRenderItem, SafeAreaView, StyleSheet } from 'react-native';
-import { Project } from '../../../common/types';
 import ProjectCard from '../../common/ProjectCard';
+import { Project } from '../../../common/types';
+import commonStyles from '../../../styles/common'
 
 interface Props {
   popularStartups: Project[];
@@ -39,7 +40,7 @@ const ProjectsScreen:FC<Props> = ({ popularStartups, recommendedStartups, target
 
 const styles = StyleSheet.create({
   wrapper: {
-    backgroundColor: '#191b1f',
+    backgroundColor: commonStyles.color.background,
   },
 });
 

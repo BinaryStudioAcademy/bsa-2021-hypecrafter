@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import commonStyles from '../../styles/common';
 
 interface Props {
   name: string;
@@ -16,14 +17,14 @@ const Tag:FC<Props> = ({ name }) => {
 const styles = StyleSheet.create({
   container: {
     alignSelf: 'center',
-    backgroundColor: '#474a4f',
+    backgroundColor: commonStyles.color.grey,
     paddingVertical: 5,
     paddingHorizontal: 8,
     marginRight: 6,
     borderRadius: 4
   },
   tag: {
-    color: '#fafbff',
+    color: commonStyles.color.text,
   }
 });
 
