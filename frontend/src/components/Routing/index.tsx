@@ -17,7 +17,6 @@ import SuccessPage from '../../scenes/Wallet/Payment/components/SuccessPage';
 import Transactions from '../../scenes/Wallet/Transactions';
 import Header from '../Header';
 import LoaderWrapper from '../LoaderWrapper';
-import Main from '../Main';
 import MetaData from '../MetaData';
 import ModalWindow from '../ModalWindow';
 import PageNotFound from '../PageNotFound';
@@ -29,7 +28,8 @@ const routesWitoutHeader = [Routes.LOGIN, Routes.SIGNUP];
 
 const Routing = () => {
   const { authFetchUserAction, closeModalAction } = useAction();
-  const { id, isLoading } = useTypedSelector(({ auth }) => auth);
+  const { id } = useTypedSelector(({ userProfile }) => userProfile);
+  const { isLoading } = useTypedSelector(({ auth }) => auth);
   const tokens = getAccessToken();
   const { pathname } = useLocation();
   const { isAuthorized } = useAuth();
@@ -92,10 +92,14 @@ const Routing = () => {
           <PrivateRoute exact path={Routes.TRANSACTIONS} component={Transactions} />
           <PrivateRoute exact path={Routes.PAYMENT} component={Payment} />
           <PrivateRoute exact path={Routes.PAYMENT_SUCCESS} component={SuccessPage} />
-          <PublicRoute
-            restricted={false}
+          <PrivateRoute
             exact
             path={Routes.PROJECTS_CREATE}
+            component={CreateProject}
+          />
+          <PrivateRoute
+            exact
+            path={Routes.PROJECTS_EDIT + Routes.ID}
             component={CreateProject}
           />
           <PublicRoute
@@ -115,12 +119,6 @@ const Routing = () => {
             path={Routes.NOTFOUND}
             exact
             component={PageNotFound}
-          />
-          <PublicRoute
-            restricted={false}
-            path={Routes.EXAMPLES}
-            exact
-            component={Main}
           />
           <Redirect from="*" to={Routes.NOTFOUND} />
         </Switch>

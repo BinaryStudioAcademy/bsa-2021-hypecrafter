@@ -1,5 +1,4 @@
 /* eslint-disable import/no-self-import */
-
 import { Express } from 'express';
 import passport from 'passport';
 import FacebookTokenStrategy from 'passport-facebook-token';
