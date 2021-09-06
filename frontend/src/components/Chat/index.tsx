@@ -25,7 +25,7 @@ const Chat: React.FC<ChatProps> = ({
       date: new Date()
     };
 
-    if (value.trim().length > 0) {
+    if (value.trim().length) {
       setMessages((prev) => [...prev, newMessage]);
       setValue('');
     }
