@@ -1,7 +1,8 @@
 import { useLocalization } from '../../providers/localization';
+import { date as visualDate } from '../../services/date';
 
 export const littleDateFormate = (date: Date) => {
-  const { selectedLanguage: locale } = useLocalization();
+  const { t, selectedLanguage: locale } = useLocalization();
 
   const options = {
     year: '2-digit',
@@ -12,12 +13,15 @@ export const littleDateFormate = (date: Date) => {
     timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone
   } as const;
 
-  const currDateStr = new Date()
+  const [currDate] = new Date()
     .toLocaleTimeString([locale], options)
     .split(',');
-  const argDateArr = date.toLocaleTimeString([locale], options).split(',');
+  const [argDate, argTime] = date
+    .toLocaleTimeString([locale], options)
+    .split(',');
 
-  return currDateStr[0] === argDateArr[0]
-    ? 'today at '.concat(argDateArr[1])
-    : `${argDateArr[0]} at ${argDateArr[1]}`;
+  const todayDate = `${t('today')} ${t('at')} ${argTime}`;
+  const otherDate = `${visualDate.getDate(argDate)} ${t('at')} ${argTime}`;
+
+  return currDate === argDate ? todayDate : otherDate;
 };

@@ -171,4 +171,6 @@ declare type LocaleKeys =
  | 'Basic fund'
  | 'Amount'
  | 'Return to Main Page'
- | 'Pay';
+ | 'Pay'
+ | 'today'
+ | 'at';

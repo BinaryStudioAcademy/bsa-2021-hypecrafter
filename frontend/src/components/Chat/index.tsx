@@ -5,14 +5,12 @@ import classes from './styles.module.scss';
 
 interface ChatProps {
   nickName: string;
-  backer?: boolean;
-  owner?: boolean;
+  role?: 'backer' | 'owner' | undefined;
 }
 
 const Chat: React.FC<ChatProps> = ({
   nickName,
-  backer = false,
-  owner = false
+  role = undefined
 }) => {
   const messageDefault: Message[] = [];
   const [messages, setMessages] = useState(messageDefault);
@@ -23,8 +21,7 @@ const Chat: React.FC<ChatProps> = ({
       id: Number(new Date()),
       text: value,
       name: nickName,
-      backer,
-      owner,
+      role,
       date: new Date()
     };
 
