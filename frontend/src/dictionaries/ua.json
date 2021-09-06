@@ -139,7 +139,7 @@
     "views": "переглядів",
     "projects": "проектів",
     "Page not found": "Сторінку не знайдено",
-    "Category": "Категорія",
+    "Categories": "Категорії",
     "Art": "Мистецтво",
     "Comics": "Комікси",
     "Crafts": "Ремесла",
@@ -157,6 +157,9 @@
     "Theater": "Театр",
     "Popular": "Популярне",
     "Recommended": "Рекомендоване",
+    "No options": "Немає опцій",
+    "All categories": "Всі категорії",
+    "Select categories": "Виберіть категорії",
     "The page you were looking for doesn’t exist (404)": "Сторінка, яку ви шукали, не існує (404)",
     "Tags help when searching to give the user exactly those projects that interest him":"Теги допомагають при пошуку видавати користувачеві саме ті проекти які його цікавлять",
     "Atach image":"Додайте забраження",
@@ -188,6 +191,16 @@
     "Basic fund":"Базовий",
     "Amount":"Кількість",
     "Return to Main Page":"Повернутися до Головної Сторінки",
-    "Pay":"Сплатити"
+    "Pay":"Сплатити",
+    "Notifications": "Сповіщення",
+    "Manage Preferences": "Керування налаштуваннями",
+    "No more notifications": "Немає сповіщень",
+    "liked your": "вподобав(ла)",
+    "commented your": "прокоментував(ла) ваш",
+    "donated": "пожертвував(ла)",
+    "hypeCoins to": "hypeCoins для",
+    "achieved goal": "досяг цілі",
+    "Fundraising time for": "Термін збору коштів для",
+    "is over": "завершено"
   }
 }
