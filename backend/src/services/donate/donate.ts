@@ -22,17 +22,21 @@ export default class DonateService {
       const user = await this.#userRepository.getById(userId);
       const project = await this.#projectRepository.getById(projectId);
       if (!user || !project) {
-        return;
+        throw Error("User or Project doesn't exist");
       }
       const currentProject = Object.assign(new Project(), project);
 
       if (currentProject.finishDate.getTime() < Date.now()
-      || currentProject.startDate.getTime() > Date.now()) { return; }
-      if (user.balance < amount) { return; }
+      || currentProject.startDate.getTime() > Date.now()) { 
+        throw Error("Time for donate is not started or already finished"); }
+      if (user.balance < amount) { throw Error("User doesn't have enough money"); }
       await this.#userRepository.deductBalance(userId, amount);
       return await this.#donateRepository.createDonate({ amount, user, project: currentProject });
     } catch (err) {
       console.log(err);
+    }finally{
+      // @ts-ignore
+      return;
     }
   }
 }
