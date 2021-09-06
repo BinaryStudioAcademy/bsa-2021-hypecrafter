@@ -1,9 +1,11 @@
-import { useLocalization } from '../../providers/localization';
+import { TranslatorType } from '../../providers/localization';
 import { date as visualDate } from '../../services/date';
 
-export const littleDateFormate = (date: Date) => {
-  const { t, selectedLanguage: locale } = useLocalization();
-
+export const littleDateFormate = (
+  date: Date,
+  t: TranslatorType,
+  locale: string
+) => {
   const options = {
     year: '2-digit',
     month: '2-digit',
