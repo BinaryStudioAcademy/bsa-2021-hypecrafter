@@ -1,4 +1,3 @@
-/* eslint-disable react/require-default-props */
 import classnames from 'classnames';
 import { FC, MouseEvent, ReactNode, useRef, useState } from 'react';
 import { Overlay, Popover as PopoverRB } from 'react-bootstrap';

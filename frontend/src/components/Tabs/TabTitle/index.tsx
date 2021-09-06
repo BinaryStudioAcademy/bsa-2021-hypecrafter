@@ -1,4 +1,3 @@
-/* eslint-disable react/require-default-props */
 import { FC, useCallback } from 'react';
 import classes from '../styles.module.scss';
 

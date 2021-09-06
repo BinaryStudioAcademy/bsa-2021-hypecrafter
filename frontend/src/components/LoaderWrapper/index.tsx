@@ -1,4 +1,3 @@
-/* eslint-disable react/require-default-props */
 import classnames from 'classnames';
 import { FC } from 'react';
 import Logo from '../Logo';

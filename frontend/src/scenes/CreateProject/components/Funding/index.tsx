@@ -1,4 +1,3 @@
-/* eslint-disable react/require-default-props */
 import { FC } from 'react';
 import Button from '../../../../components/Button';
 import DatePickerInput from '../../../../components/DatePicker';

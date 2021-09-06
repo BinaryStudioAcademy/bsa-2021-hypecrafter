@@ -1,4 +1,3 @@
-/* eslint-disable react/require-default-props */
 import { FC, MouseEventHandler } from 'react';
 import { Link } from 'react-router-dom';
 import classes from './styles.module.scss';

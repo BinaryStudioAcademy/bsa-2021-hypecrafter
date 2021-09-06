@@ -1,4 +1,3 @@
-/* eslint-disable react/require-default-props */
 import { faClipboard } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FC, useState } from 'react';

@@ -1,4 +1,3 @@
-/* eslint-disable react/require-default-props */
 import { FC, ReactNode } from 'react';
 import Button from '../../../../components/Button';
 import { useLocalization } from '../../../../providers/localization';

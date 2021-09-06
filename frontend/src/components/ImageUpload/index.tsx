@@ -1,4 +1,3 @@
-/* eslint-disable react/require-default-props */
 import { FC } from 'react';
 import S3FileUpload from 'react-s3';
 import { env } from '../../env';

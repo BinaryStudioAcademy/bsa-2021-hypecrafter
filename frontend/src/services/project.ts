@@ -15,7 +15,7 @@ export const createProject = async (body: any) => {
 
 export const getProject = (
   params: GetProjectProps
-): Promise<Project> => api.get({ url: params.id, params });
+): Promise<Project> => api.get({ url: `projects/${params.id}`, params });
 
 export const setReaction = (params : SetReactionProps) => api.post({ url: 'projects/reaction', params });
 

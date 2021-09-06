@@ -1,7 +1,6 @@
 import { ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
 import { Project } from '../../common/types';
 import {
-  UpdateViewsAndInteractionTime,
   UpdateInteractionTimeQuery
 } from '../../common/types/project';
 import { Chat, Project as CreateProject, Team } from '../../data/entities';
@@ -115,7 +114,7 @@ export default class ProjectService {
           totalViews: !totalViews ? 1 : totalViews + 1,
           totalInteractionTime: !totalInteractionTime ? interactionTime : totalInteractionTime + interactionTime
         }
-      ) as unknown as UpdateViewsAndInteractionTime;
+      );
       return {
         ...response,
         involvementIndex: nullToNumber(response.involvementIndex)

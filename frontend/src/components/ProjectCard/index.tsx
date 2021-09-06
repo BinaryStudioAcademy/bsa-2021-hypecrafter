@@ -1,4 +1,3 @@
-/* eslint-disable react/require-default-props */
 import { FC } from 'react';
 import CardWithLink from '../Card/CardWithLink';
 import ProgressBar from '../ProgressBar';

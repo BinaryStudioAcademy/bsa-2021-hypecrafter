@@ -2,6 +2,7 @@ import { decode } from 'jsonwebtoken';
 import queryString from 'query-string';
 import { HttpHeader, HttpMethod, HttpStatusCode } from '../common/enums';
 import { RequestArgs } from '../common/types';
+import { env } from '../env';
 import { removeUser } from '../reducers/removeUser';
 import {
   getAccessToken,
@@ -56,7 +57,7 @@ const getUrl = (
     return url;
   }
 
-  const fullUrl = url;
+  const fullUrl = `${env.server.url}/${url}`;
 
   if (params && method === HttpMethod.GET) {
     return getUrlWithQuery(fullUrl, params);

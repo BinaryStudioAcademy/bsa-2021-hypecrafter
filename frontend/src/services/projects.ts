@@ -42,10 +42,8 @@ export const getPopularAndRecommendedProjects = async () => {
   return projects;
 };
 
-export const updateViewsAndInteraction = ({ id = '', ...params }) => {
-  if (!id || typeof params === 'undefined') throw Error();
-  return api.put({
+export const updateViewsAndInteraction = ({ id = '', ...params }) => (
+  api.put({
     url: `views-interaction/${id}`,
     params
-  });
-};
+  }));
