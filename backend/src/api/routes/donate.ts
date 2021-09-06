@@ -4,7 +4,7 @@ import { Services } from '../../services';
 
 const init = ({ donateService }: Services, path: string) => (app: MicroMq) => app
   .post(
-    `${path}`,
+    path,
     wrap<Empty, { success: boolean }, { amount: number, projectId: string }, Empty>(
       async (req) => {
         const donate = await donateService
