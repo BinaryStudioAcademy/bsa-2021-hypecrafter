@@ -42,6 +42,9 @@ const init = ({ projectService }: Services, path: string) => (app: MicroMq) => a
   )
   .get(`${path}/:id`, wrap<Empty, Project, { id: string, userId: string | undefined }, Empty>(
     (req) => projectService.getById(req.params.id, req.query.userId)
+  ))
+  .get(`${path}/getForEdit/:id`, wrap<Empty, CreateProject, { id: string, userId: string | undefined }, Empty>(
+    (req) => projectService.getForEdit(req.params.id)
   ));
 
 export default init;

@@ -20,7 +20,18 @@ export default class UserService {
     return this.#userRepository.getById(id);
   }
 
-  public async getCurrentUser(id: string) {
+  public getByEmail(email: string) {
+    try {
+      return this.#userRepository.getByEmail(email);
+    } catch {
+      throw new CustomError(
+        HttpStatusCode.INTERNAL_SERVER_ERROR,
+        'User is not found'
+      );
+    }
+  }
+
+  public getCurrentUser(id: string) {
     return this.#userRepository.getCurrentUser(id);
   }
 
