@@ -23,10 +23,11 @@
     "migrate:backend": "cd backend && npm run migrate",
     "migrate:gateway": "cd gateway && npm run migrate",
     "migrate:payment": "cd payment && npm run migrate",
-    "migrate:all": "npm run migrate:backend && npm run migrate:gateway && npm run migrate:payment",
+    "migrate:all": "npm run migrate:backend && npm run migrate:gateway",
     "seed:backend": "cd backend && npm run seed",
     "seed:gateway": "cd gateway && npm run seed",
-    "seed:all": "npm run seed:backend && npm run seed:gateway"
+    "seed:payment": "cd payment && npm run seed",
+    "seed:all": "npm run seed:backend && npm run seed:gateway && npm run seed:payment"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "4.28.2",

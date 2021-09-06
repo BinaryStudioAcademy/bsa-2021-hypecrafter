@@ -37,6 +37,16 @@ declare namespace Express {
   export interface Request {
     user: {
       userId?: string;
+      id?: string;
+      facebookId?: string;
+      firstName?: string;
+      lastName?: string;
+      email?: string;
+      googleId?: string;
+      password?: string;
+      region?: string;
+      phoneNumber?: string;
+      gender?: string;
     }
   }
 }

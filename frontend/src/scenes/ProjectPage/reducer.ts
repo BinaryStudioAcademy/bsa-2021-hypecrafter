@@ -1,5 +1,5 @@
-import { ProjectPage } from '../../common/types';
-import { Mark as MarkType } from '../../common/types/project/mark';
+import { Mark } from '../../common/enums';
+import { Mark as MarkType, ProjectPage } from '../../common/types';
 import { createReducer } from '../../helpers';
 import type {
   AddCommentSuccessActionType, FetchProjectSuccessActionType,
@@ -51,7 +51,7 @@ const projectPageReducer = createReducer<ProjectPageState>(projectPageState, {
     if (mark === null) {
       projectMark = mark;
     } else {
-      projectMark = mark ? 'like' : 'dislike';
+      projectMark = mark ? Mark.LIKE : Mark.DISLIKE;
     }
 
     return {

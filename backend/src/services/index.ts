@@ -5,17 +5,17 @@ import ProjectService from './project';
 import TagService from './tag';
 import TopicService from './topic';
 import UserService from './user';
+import ProjectTagService from './projectTag';
 
 export function initServices(repositories: Repositories): Services {
   return {
     userService: new UserService(repositories.userRepository),
     topicService: new TopicService(repositories.topicRepository),
-    projectService: new ProjectService(
-      repositories.projectRepository,
-      repositories.teamRepository,
-      repositories.chatRepository,
-      repositories.userRepository
-    ),
+    projectService: new ProjectService(repositories.projectRepository,
+      repositories.teamRepository, repositories.chatRepository,
+      repositories.userRepository,
+      new TagService(repositories.tagRepository),
+      new ProjectTagService(repositories.projectTagRepository)),
     tagService: new TagService(repositories.tagRepository),
     categoryService: new CategoryService(repositories.categoryRepository),
     commentService: new CommentService(repositories.commentRepository),

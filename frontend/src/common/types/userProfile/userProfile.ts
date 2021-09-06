@@ -11,6 +11,8 @@ export interface UserProfile {
   instagramUrl?: string;
   facebookUrl?: string;
   dribbleUrl?: string;
+  pinterestUrl?: string;
+  behanceUrl?: string;
   lastLoginDate: string;
   createdAt: string;
   updatedAt?: string | null;

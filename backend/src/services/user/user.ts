@@ -37,7 +37,6 @@ export default class UserService {
 
   public async registerUser({ data, tokens }: RegisterReqBody) {
     try {
-      console.log(9);
       await this.#userRepository.createUser(data);
       return tokens;
     } catch {
