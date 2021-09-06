@@ -1,4 +1,3 @@
-// import { DonatorsPrivilege } from '../../data/entities';
 import { Project } from '../../data/entities';
 import { DonatorsPrivilegeRepository } from '../../data/repositories';
 

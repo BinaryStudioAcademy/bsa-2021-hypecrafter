@@ -2,7 +2,7 @@ import { Privilege, PrivilegeWithBakersAmount } from '../../common/types/project
 
 const mapPrivileges = (
   privileges: Privilege[],
-  bakersDonation: number[]
+  bakersDonation: number[] | null
 ): PrivilegeWithBakersAmount[] => {
   if (privileges) {
     return privileges.map(privilege => ({

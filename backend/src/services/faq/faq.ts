@@ -12,8 +12,7 @@ export default class FAQServise {
     this.#faqRepository = faqRepository;
   }
 
-  public async save(faqs:FAQ[]) {
-    const tags = await this.#faqRepository.save(faqs);
-    return tags;
+  public save(faqs:FAQ[]) {
+    return this.#faqRepository.save(faqs);
   }
 }

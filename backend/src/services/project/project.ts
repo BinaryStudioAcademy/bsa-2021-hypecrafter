@@ -91,7 +91,6 @@ export default class ProjectService {
 
   public async getForEdit(id: string) {
     const project: CreateProject = await this.#projectRepository.getForEdit(id);
-    console.log(project);
     return project;
   }
 
