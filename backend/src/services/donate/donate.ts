@@ -27,6 +27,8 @@ export default class DonateService {
 
       if (currentProject.finishDate.getTime() < Date.now()
       || currentProject.startDate.getTime() > Date.now()) { return undefined; }
+      if (user.balance < amount) { return undefined; }
+      await this.#userRepository.deductBalance(userId, amount);
       return await this.#donateRepository.createDonate({ amount, user, project: currentProject });
     } catch (err) {
       return undefined;
