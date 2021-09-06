@@ -1,6 +1,6 @@
 import { CategoryType } from "..";
 
-declare enum Common {
+enum Common {
   ALL = "all"
 }
 
