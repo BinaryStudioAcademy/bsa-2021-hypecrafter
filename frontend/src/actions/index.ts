@@ -4,7 +4,7 @@ export { fetchPopularAndRecommendedProjectsAction, fetchTopics } from '../scenes
 export { addComment, fetchProject, setReaction, setWatch } from '../scenes/ProjectPage/actions';
 export {
   fetchProjectsAction,
-  filterCategoryProjectsAction,
+  filterCategoriesProjectsAction,
   filterProjectsAction,
   sortProjectsAction
 } from '../scenes/Projects/actions';

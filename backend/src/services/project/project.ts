@@ -1,7 +1,5 @@
 import {
-  Project as Application,
-  ProjectsCategories,
-  ProjectsFilter,
+  Project as Application, ProjectsFilter,
   ProjectsSort
 } from 'hypecrafter-shared/enums';
 import MicroMq from 'micromq';
@@ -81,13 +79,14 @@ export default class ProjectService {
     return project;
   }
 
-  public async getBySortAndFilter({ sort, filter, category, userId }: {
+  public async getBySortAndFilter({ sort, filter, stringifiedCategories, userId }: {
     sort: ProjectsSort,
     filter: ProjectsFilter,
-    category: ProjectsCategories,
+    stringifiedCategories: string,
     userId?: string,
   }) {
-    const projects: Project[] = await this.#projectRepository.getBySortAndFilter({ sort, filter, category, userId });
+    const categories = JSON.parse(stringifiedCategories);
+    const projects: Project[] = await this.#projectRepository.getBySortAndFilter({ sort, filter, categories, userId });
     return projects;
   }
 

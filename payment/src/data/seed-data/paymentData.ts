@@ -1,5 +1,4 @@
-/* eslint-disable max-len */
-export const transactionHistoryData = [
+export const paymentData = [
   {
     id: '1bd47ef0-fb12-11eb-9a03-0242ac130003',
     item: 'The Crooked Cat Tarot Deck',
