@@ -2,8 +2,7 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 import React, { useEffect } from 'react';
 import { useTypedSelector } from '../../hooks/store';
 import { useAction } from '../../hooks/useAction';
-import PopularScreen from './screens/PopularScreen';
-import RecommendedScreen from './screens/RecommendedScreen';
+import ProjectsScreen from './screens/ProjectsScreen';
 
 const MainView = ({navigation} : {navigation: any}) => {
   const { fetchPopularAndRecommendedProjectsAction, fetchTopics } = useAction();
@@ -36,11 +35,23 @@ const MainView = ({navigation} : {navigation: any}) => {
     >
       <Tab.Screen
         name="Popular"
-        children={() => (<PopularScreen popularStartups={popularStartups}/>)}
+        children={() => (
+          <ProjectsScreen 
+            popularStartups={popularStartups}
+            recommendedStartups={recommendedStartups}
+            target="popular"
+          />
+        )}
       />
       <Tab.Screen
         name="Recommended"
-        children={() => (<RecommendedScreen recommendedStartups={recommendedStartups}/>)}
+        children={() => (
+          <ProjectsScreen
+            popularStartups={popularStartups}
+            recommendedStartups={recommendedStartups}
+            target="recommended"
+          />
+        )}
       />
     </Tab.Navigator>
   );
