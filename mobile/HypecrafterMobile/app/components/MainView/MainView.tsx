@@ -1,46 +1,60 @@
-import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { Routes } from '../../common/enums';
-import { logout } from '../../helpers';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import React, { useEffect } from 'react';
+import { useTypedSelector } from '../../hooks/store';
 import { useAction } from '../../hooks/useAction';
+import ProjectsScreen from './screens/ProjectsScreen';
 
 const MainView = ({ navigation }: { navigation: any }) => {
-  const { logoutAction } = useAction();
+  const { fetchPopularAndRecommendedProjectsAction, fetchTopics } = useAction();
 
-  const onLogOut = async () => {
-    logout().then(() => {
-      logoutAction();
-      navigation.navigate(Routes.AUTH);
-    })
-  };
+  const {
+    popular: popularStartups,
+    recommended: recommendedStartups,
+    isLoading: isStartupsLoading,
+    topics,
+  } = useTypedSelector(({ mainPage }) => ({
+    popular: mainPage.popular,
+    recommended: mainPage.recommended,
+    isLoading: mainPage.isLoading,
+    topics: mainPage.topics,
+  }));
+
+  const Tab = createMaterialTopTabNavigator();
+
+  useEffect(() => {
+    fetchPopularAndRecommendedProjectsAction();
+    fetchTopics();
+  }, []);
+
   return (
-    <View style={styles.wrapper}>
-      <TouchableOpacity style={styles.button} onPress={onLogOut}>
-        <Text style={styles.buttonText}>Back to login</Text>
-      </TouchableOpacity>
-      <Text>Main page</Text>
-    </View>
+    <Tab.Navigator
+      screenOptions={{
+        tabBarStyle: { backgroundColor: '#474a4f' },
+        tabBarLabelStyle: { fontWeight: '500', color: 'white' },
+      }}
+    >
+      <Tab.Screen
+        name="Popular"
+        children={() => (
+          <ProjectsScreen
+            popularStartups={popularStartups}
+            recommendedStartups={recommendedStartups}
+            target="popular"
+          />
+        )}
+      />
+      <Tab.Screen
+        name="Recommended"
+        children={() => (
+          <ProjectsScreen
+            popularStartups={popularStartups}
+            recommendedStartups={recommendedStartups}
+            target="recommended"
+          />
+        )}
+      />
+    </Tab.Navigator>
   );
 };
 
-const styles = StyleSheet.create({
-  wrapper: {
-    flex: 1,
-    alignItems: 'center',
-  },
-  button: {
-    backgroundColor: 'blue',
-    borderColor: 'white',
-    alignItems: 'center',
-    padding: 10,
-    borderBottomWidth: 0,
-    borderRadius: 5,
-    width: '30%',
-    marginBottom: 15,
-  },
-  buttonText: {
-    color: 'white',
-    fontWeight: '700',
-  },
-});
 export default MainView;

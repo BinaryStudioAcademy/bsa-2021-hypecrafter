@@ -1,10 +1,10 @@
 export { facebookAuthAction, googleAuthAction, loginAction, registerUserAction } from '../scenes/Auth/actions';
-export { createProjectAction } from '../scenes/CreateProject/actions';
+export { createProjectAction, getForEditProjectAction } from '../scenes/CreateProject/actions';
 export { fetchPopularAndRecommendedProjectsAction, fetchTopics } from '../scenes/MainPage/actions';
 export { addComment, fetchProject, setReaction, setWatch } from '../scenes/ProjectPage/actions';
 export {
   fetchProjectsAction,
-  filterCategoryProjectsAction,
+  filterCategoriesProjectsAction,
   filterProjectsAction,
   sortProjectsAction
 } from '../scenes/Projects/actions';

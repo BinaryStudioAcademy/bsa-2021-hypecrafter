@@ -1,3 +1,4 @@
+import { NavigationContainer } from '@react-navigation/native';
 import React, { useEffect } from 'react';
 import { Provider } from 'react-redux';
 import { Routes } from './common/enums';
@@ -19,11 +20,13 @@ const App = () => {
   });
   return (
     <Provider store={store}>
-      <MainNavigator
-        ref={(navigatorRef: any) => {
-          NavigationService.setTopLevelNavigator(navigatorRef);
-        }}
-      />
+      <NavigationContainer>
+        <MainNavigator
+          ref={(navigatorRef: any) => {
+            NavigationService.setTopLevelNavigator(navigatorRef);
+          }}
+        />
+      </NavigationContainer>
     </Provider>
   );
 };
