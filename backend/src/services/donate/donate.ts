@@ -17,9 +17,19 @@ export default class DonateService {
   }
 
   public async createDonate(amount: number, userId: string, projectId: string) {
-    const user = await this.#userRepository.getById(userId);
-    const project = await this.#projectRepository.getById(projectId);
+    try {
+      const user = await this.#userRepository.getById(userId);
+      const project = await this.#projectRepository.getById(projectId);
+      if (!user || !project) {
+        return undefined;
+      }
+      const currentProject = Object.assign(new Project(), project);
 
-    return this.#donateRepository.createDonate({ amount, user, project: Object.assign(new Project(), project) });
+      if (currentProject.finishDate.getTime() < Date.now()
+      || currentProject.startDate.getTime() > Date.now()) { return undefined; }
+      return await this.#donateRepository.createDonate({ amount, user, project: currentProject });
+    } catch (err) {
+      return undefined;
+    }
   }
 }
