@@ -258,6 +258,111 @@ export class ProjectRepository extends Repository<Project> {
     return project;
   }
 
+  public async getForEdit(id: string): Promise<Project> {
+    const selectQuery = `
+      project."id",
+      project."imageUrl",
+      project."videoUrl",
+      project."instagramUrl",
+      project."facebookUrl",
+      project."dribbleUrl",
+      project.content,
+      project.region,
+      "FAQ",
+      description,
+      category.id AS "category",
+      project.name,
+      project."finishDate",
+      project."startDate",
+      goal,
+      "projectTags",
+      "donatorsPrivileges",
+      "team"
+    `;
+    const projectQuery = this.createQueryBuilder('project')
+      .select(selectQuery)
+      .leftJoin('project.category', 'category')
+      .leftJoin(subQuery => subQuery
+        .select(`
+          jsonb_agg(
+            jsonb_build_object(
+              'id', faq.id,
+              'question', question,
+              'answer', answer
+            )
+          ) AS "FAQ",
+          "projectId"
+        `)
+        .from('faq', 'faq')
+        .groupBy('"projectId"'), 'fq', 'fq."projectId" = project.id')
+      .leftJoin(subQuery => subQuery
+        .select(`
+            jsonb_agg(
+              DISTINCT jsonb_build_object(
+                'id', "donatorsPrivilege".id,
+                'title', title,
+                'content', "donatorsPrivilege".content,
+                'includes', includes,
+                'amount', amount
+              )
+            ) AS "donatorsPrivileges",
+            project.id AS "projectId"
+          `)
+        .from(Project, 'project')
+        .leftJoin('donators_privilege', 'donatorsPrivilege', 'project.id = "donatorsPrivilege"."projectId"')
+        .where(`
+          title IS NOT NULL AND 
+          "donatorsPrivilege".content IS NOT NULL AND 
+          includes IS NOT NULL AND amount IS NOT NULL
+        `)
+        .groupBy('project.id'), 'dp', 'dp."projectId" = project.id')
+      .leftJoin(subQuery => subQuery
+        .select(`
+          jsonb_agg(
+              jsonb_build_object(
+                'id', "projectTags".id,
+                'tag', jsonb_build_object(
+                  'id', tag.id,
+                  'name', tag.name
+                )
+              )
+            )
+           AS "projectTags",
+          "projectId"
+        `)
+        .from(Project, 'project')
+        .leftJoin('project.projectTags', 'projectTags')
+        .leftJoin('projectTags.tag', 'tag')
+        .groupBy('"projectId"'), 'tg', 'tg."projectId" = project.id')
+      .leftJoin(subQuery => subQuery
+        .select(`
+          jsonb_build_object(
+            'id', team.id,
+            'name', team.name,
+            'chats', jsonb_agg(
+               jsonb_build_object(
+                 'id', chats.id,
+                 'donator', jsonb_build_object(
+                   'id', donator.id,
+                   'firstName', donator.firstName,
+                   'lastName', donator.lastName,
+                   'email', donator.email
+                 )
+               )
+             )
+          ) AS "team",
+          "projectId"
+        `)
+        .from('team', 'team')
+        .leftJoin('team.chats', 'chats')
+        .leftJoin('chats.donator', 'donator')
+        .groupBy('"projectId", team.id'), 'te', 'te."projectId" = project.id')
+      .where(`project."id" = '${id}'`);
+    const project = await projectQuery.getRawOne();
+
+    return project;
+  }
+
   public async setReaction(isLiked: boolean, user: UserProfile, project: Project) {
     const userProject = await getRepository(UserProject)
       .createQueryBuilder('userProject')
