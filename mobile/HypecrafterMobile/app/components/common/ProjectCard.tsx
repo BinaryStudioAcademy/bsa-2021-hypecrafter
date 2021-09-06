@@ -19,7 +19,7 @@ const ProjectCard:FC<Props> = ({ project }) => {
     <View style={styles.container}>
       <TouchableOpacity onPress={() => console.log('project')} >
         <View style={styles.imageContainer}>
-        <Image style={styles.image} source={{uri: project.imageUrl || 'https://source.unsplash.com/random'}} />
+          <Image style={styles.image} source={{uri: project.imageUrl || 'https://source.unsplash.com/random'}} />
         </View>
         <Text style={styles.category}>{project.category}</Text>
         <Text style={styles.name}>{project.name}</Text>
