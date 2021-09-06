@@ -9,6 +9,7 @@ import { useLocalization } from '../../providers/localization';
 import Basic from './components/Basic';
 import BeforeStart from './components/BeforeStart';
 import Funding from './components/Funding';
+import Recommendations from './components/Recommendations';
 import Settings from './components/Settings';
 import Story from './components/Story';
 import Team from './components/Team';
@@ -94,13 +95,21 @@ const CreateProject = () => {
       case CurrentPage.SETTINGS:
         return (
           <Settings
-            changePage={end}
+            changePage={setCurrentPage}
             region={newProject.region}
             currentPage={currentPage}
             onChangeValue={handleChangeValue}
             imageUrl={newProject.imageUrl}
             newTags={newProject.projectTags}
             videoUrl={newProject.videoUrl}
+          />
+        );
+      case CurrentPage.RECOMMENDATIONS:
+        return (
+          <Recommendations
+            changePage={end}
+            currentPage={currentPage}
+            project={newProject}
           />
         );
       case CurrentPage.END:
