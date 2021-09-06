@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Image, ImageBackground, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Routes } from '../../common/enums';
 import { UserAuthorizationKey } from '../../common/enums/user/user-authorization-key';
+import { colors } from '../../common/styles/colors';
 import { useTypedSelector } from '../../hooks/store';
 import { useAction } from '../../hooks/useAction';
 
@@ -59,54 +61,56 @@ const LoginView = ({ navigation }: { navigation: any }) => {
 
 
   return (
-    <View style={styles.wrapper}>
-      <ImageBackground source={require('./../../assets/images/login_bg.jpg')} resizeMode="cover" style={styles.imageBg}>
-        <Image
-          source={require('./../../assets/images/HypeCrafter.png')}
-          style={styles.img}
-          resizeMode="stretch"
-        />
-      </ImageBackground>
-      <View style={styles.container}>
-        <Text style={[styles.text, styles.loginText]}>Log In</Text>
-        <Text style={styles.text}>Don't have an account? Sign Up</Text>
-        <Text style={styles.text}>Email</Text>
-        <TextInput
-          placeholder="Email"
-          style={styles.input}
-          onChangeText={onEmailChange}
-          value={userData.email}
-        />
-        <Text style={styles.text}>Password</Text>
-        <View style={styles.passwordContainer}>
+    <KeyboardAwareScrollView style={styles.wrapper}>
+      <View style={styles.wrapper}>
+        <ImageBackground source={require('./../../assets/images/login_bg.jpg')} resizeMode="cover" style={styles.imageBg}>
+          <Image
+            source={require('./../../assets/images/HypeCrafter.png')}
+            style={styles.img}
+            resizeMode="stretch"
+          />
+        </ImageBackground>
+        <View style={styles.container}>
+          <Text style={[styles.text, styles.loginText]}>Log In</Text>
+          <Text style={[styles.text, styles.subloginText]}>Don't have an account? <Text style={styles.signUp}>Sign Up</Text></Text>
+          <Text style={[styles.text, styles.inputName]}>Email</Text>
           <TextInput
-            placeholder="Password"
-            style={[styles.input, styles.passwordInput]}
-            onChangeText={onPasswordChange}
-            value={userData.password}
-            secureTextEntry={hidePass ? true : false}
+            placeholder="Email"
+            style={styles.input}
+            onChangeText={onEmailChange}
+            value={userData.email}
           />
-          <Icon
-            name={hidePass ? 'eye' : 'eye-slash'}
-            size={25}
-            style={styles.passwordIcon}
-            color='white'
-            onPress={onEyePressed}
-          />
+          <Text style={[styles.text, styles.inputName]}>Password</Text>
+          <View style={styles.passwordContainer}>
+            <TextInput
+              placeholder="Password"
+              style={[styles.input, styles.passwordInput]}
+              onChangeText={onPasswordChange}
+              value={userData.password}
+              secureTextEntry={hidePass ? true : false}
+            />
+            <Icon
+              name={hidePass ? 'eye' : 'eye-slash'}
+              size={25}
+              style={styles.passwordIcon}
+              color='white'
+              onPress={onEyePressed}
+            />
+          </View>
+          {errMess ? <Text style={styles.error}>{errMess}</Text> : null}
+          <TouchableOpacity style={styles.button} onPress={onLogin}>
+            <Text style={styles.buttonText}>Login</Text>
+          </TouchableOpacity>
         </View>
-        {errMess ? <Text style={styles.error}>{errMess}</Text> : null}
-        <TouchableOpacity style={styles.button} onPress={onLogin}>
-          <Text style={styles.buttonText}>Login</Text>
-        </TouchableOpacity>
       </View>
-    </View>
+    </KeyboardAwareScrollView>
   );
 };
 
 const styles = StyleSheet.create({
   wrapper: {
     flex: 1,
-    backgroundColor: '#191b1f'
+    backgroundColor: colors.color_root_background
   },
   container: {
     flex: 1,
@@ -120,12 +124,22 @@ const styles = StyleSheet.create({
   text: {
     color: 'white'
   },
+  inputName: {
+    fontSize: 16
+  },
   loginText: {
     fontSize: 35,
-    color: '#0aecec'
+    color: colors.color_root_turquoise
+  },
+  signUp: {
+    color: colors.color_root_turquoise
+  },
+  subloginText: {
+    fontSize: 20,
+    marginBottom: 10
   },
   button: {
-    backgroundColor: '#0aecec',
+    backgroundColor: colors.color_root_turquoise,
     borderColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
