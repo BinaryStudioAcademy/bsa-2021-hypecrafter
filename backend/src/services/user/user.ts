@@ -21,7 +21,6 @@ export default class UserService {
   }
 
   public async getCurrentUser(id: string) {
-    console.log(await this.#userRepository.getCurrentUser(id));
     return this.#userRepository.getCurrentUser(id);
   }
 

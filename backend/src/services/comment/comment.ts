@@ -1,6 +1,6 @@
 import { Project } from 'hypecrafter-shared/enums';
 import MicroMq from 'micromq';
-import { NotificationMessageTypes } from '../../common/enums/notificationTypes';
+import { ActionType } from '../../common/enums';
 import { Comment } from '../../data/entities';
 import { CommentRepository, ProjectRepository } from '../../data/repositories';
 
@@ -30,7 +30,7 @@ export default class CategoryService {
 
     await this.#app.ask(Project.NOTIFICATION, {
       server: {
-        action: NotificationMessageTypes.COMMENT,
+        action: ActionType.COMMENT,
         meta: {
           userId,
           projectId,

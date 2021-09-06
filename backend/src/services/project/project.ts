@@ -1,5 +1,11 @@
-import { Project as Application, ProjectsCategories, ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
+import {
+  Project as Application,
+  ProjectsCategories,
+  ProjectsFilter,
+  ProjectsSort
+} from 'hypecrafter-shared/enums';
 import MicroMq from 'micromq';
+import { ActionType } from '../../common/enums';
 import { NotificationMessageTypes } from '../../common/enums/notificationTypes';
 import { Project } from '../../common/types';
 import { Chat, Project as CreateProject, Team } from '../../data/entities';
@@ -63,9 +69,9 @@ export default class ProjectService {
 
     const { finishDate, id } = project;
 
-    await this.#app.ask('notification', {
+    await this.#app.ask(Application.NOTIFICATION, {
       server: {
-        action: 'new_project',
+        action: ActionType.NEW_PROJECT,
         meta: {
           finishDate,
           projectId: id

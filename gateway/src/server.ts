@@ -1,7 +1,7 @@
 import cors from 'cors';
 import express from 'express';
 import { createServer } from 'http';
-import socketio, { Socket } from 'socket.io';
+// import socketio, { Socket } from 'socket.io';
 import { createConnection } from 'typeorm';
 import { initMiddlewares } from './api/middlewares';
 import { initPassport } from './api/passport';
@@ -10,6 +10,7 @@ import { initRepositories } from './data/repositories';
 import { env } from './env';
 import { log } from './helpers';
 import { initServices } from './services';
+import { SocketController } from './services/socketController';
 
 const { port, environment } = env.app;
 const app = express();
@@ -25,17 +26,8 @@ createConnection().then(() => {
     initMiddlewares(app, services);
     app.use(initRoutes(services));
     const server = createServer(app);
-    const io = (socketio as any)(server, {
-      cors: {
-        origin: 'http://localhost:3000',
-        methods: ['GET', 'POST']
-      }
-    });
-
-    io.on('connection', (socket: Socket) => {
-      console.log('socket Gateway');
-      console.log(socket);
-    });
+    const socketController = new SocketController(server);
+    console.log(socketController);
     server.listen(port, () => {
       log(`Server is running at port: ${port}. Environment: "${environment}"`);
     });

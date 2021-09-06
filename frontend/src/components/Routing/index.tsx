@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { Redirect, Switch, useLocation } from 'react-router-dom';
-import io from 'socket.io-client';
 import { Routes } from '../../common/enums';
 import { getAccessToken } from '../../helpers/localStorage';
 import { useAction, useTypedSelector } from '../../hooks';
@@ -47,13 +46,6 @@ const Routing = () => {
     setShowModal(false);
     closeModalAction();
   };
-
-  useEffect(() => {
-    const socket = io('http://localhost:3001');
-    socket.on('GetData', (data) => {
-      console.log(data);
-    });
-  }, []);
 
   useEffect(() => {
     if (hasToken) {

@@ -1,5 +1,7 @@
+import { Project } from 'hypecrafter-shared/enums';
 import MicroMq from 'micromq';
 import * as cron from 'node-cron';
+import { ActionType } from '../common/enums';
 import { Job } from '../common/types';
 import { dataToScheduleForm } from '../helpers/dataToScheduleForm';
 import { Services } from '../services/index';
@@ -27,10 +29,9 @@ export class JobController {
     const task = cron.schedule(
       finishDateToScheduleForm,
       async () => {
-        // const projectId = 'a9ea4107-10de-44f0-93da-3c24c1932e56';
-        const { response } = (await this.#app.ask('backend', {
+        const { response } = (await this.#app.ask(Project.BACKEND, {
           server: {
-            action: 'getWatchingUsers',
+            action: ActionType.GET_WATCHING_USERS,
             meta: {
               projectId
             },
@@ -39,7 +40,6 @@ export class JobController {
 
         this.stopJobByProjectId(projectId);
 
-        // розіслати екшини юзерам (окремий сервіс)
         console.log(response.users);
       },
       { scheduled: true }
