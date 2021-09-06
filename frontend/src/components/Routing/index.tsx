@@ -3,6 +3,7 @@ import { Redirect, Switch, useLocation } from 'react-router-dom';
 import { Routes } from '../../common/enums';
 import { getAccessToken } from '../../helpers/localStorage';
 import { useAction, useTypedSelector } from '../../hooks';
+import { useSockets } from '../../providers/sockets';
 import LoginPage from '../../scenes/Auth/LoginPage';
 import SignupPage from '../../scenes/Auth/SignupPage';
 import CreateProject from '../../scenes/CreateProject';
@@ -46,6 +47,14 @@ const Routing = () => {
     setShowModal(false);
     closeModalAction();
   };
+
+  const { addSocketHandler, socket } = useSockets();
+
+  useEffect(() => {
+    if (socket) {
+      addSocketHandler('eventExample', () => console.log('eventExample'));
+    }
+  }, [socket]);
 
   useEffect(() => {
     if (hasToken) {

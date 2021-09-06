@@ -7,13 +7,13 @@ import SocketProvider from './sockets';
 
 const AppProvider: FunctionComponent = ({ children }) => (
   <LocalizationProvider>
-    <SocketProvider>
-      <Provider store={store}>
+    <Provider store={store}>
+      <SocketProvider>
         <Router>
           {children}
         </Router>
-      </Provider>
-    </SocketProvider>
+      </SocketProvider>
+    </Provider>
   </LocalizationProvider>
 );
 

@@ -4,7 +4,7 @@ import { HttpMethod } from '../common/enums/http-method';
 import { env } from '../env';
 
 export class SocketController {
-  #connection = new Map<string, Array<Socket>>();
+  #connections = new Map<string, Array<Socket>>();
 
   constructor(server: Server) {
     const io = (socketio as any)(server, {
@@ -19,6 +19,8 @@ export class SocketController {
       const { userId } = socket.handshake.query;
       this.addConnection(userId as string, socket);
 
+      socket.emit('eventExample');
+
       socket.on('disconnect', () => {
         console.log('Socket disconnected');
         this.deleteConnection(userId as string, socket);
@@ -27,16 +29,16 @@ export class SocketController {
   }
 
   addConnection(userId: string, socket: Socket) {
-    const userSockets = this.#connection.get(userId);
+    const userSockets = this.#connections.get(userId);
     if (userSockets) {
       userSockets.push(socket);
     } else {
-      this.#connection.set(userId, [socket]);
+      this.#connections.set(userId, [socket]);
     }
   }
 
   send(userId: string, event: string, data: any) {
-    const userSockets = this.#connection.get(userId);
+    const userSockets = this.#connections.get(userId);
     userSockets.forEach(socket => {
       socket.emit(event, data);
     });
@@ -47,7 +49,7 @@ export class SocketController {
   }
 
   deleteConnection(userId: string, socket: Socket) {
-    const userSockets = this.#connection.get(userId);
+    const userSockets = this.#connections.get(userId);
     const i = userSockets.indexOf(socket);
     userSockets.splice(i, 1);
   }
