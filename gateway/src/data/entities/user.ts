@@ -13,6 +13,9 @@ export class User extends AbstractEntity {
   @Column({ nullable: true })
   googleId: string;
 
+  @Column({ nullable: true })
+  facebookId: string;
+
   @OneToMany(() => RefreshToken, refreshToken => refreshToken.user)
   refreshTokens: RefreshToken[];
 }

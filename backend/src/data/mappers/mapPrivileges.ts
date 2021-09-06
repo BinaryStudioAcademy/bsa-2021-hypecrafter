@@ -1,20 +1,19 @@
-import { Privilege, PrivilegeWithBakersAmount } from './../../common/types/project';
+import { Privilege, PrivilegeWithBakersAmount } from '../../common/types/project';
+
 const mapPrivileges = (
   privileges: Privilege[],
-  bakersDonation: number[]
+  bakersDonation: number[] | null
 ): PrivilegeWithBakersAmount[] => {
   if (privileges) {
-    return privileges.map(privilege => {
-      return {
-        ...privilege,
-        bakersAmount: bakersDonation ?
-          bakersDonation.filter(x => x >= privilege.amount).length :
-          0
-      }
-    })
+    return privileges.map(privilege => ({
+      ...privilege,
+      bakersAmount: bakersDonation
+        ? bakersDonation.filter(x => x >= privilege.amount).length
+        : 0
+    }));
   }
   return [];
-}
+};
 
 export { mapPrivileges };
 

@@ -1,12 +1,18 @@
 import { faDribbble, faFacebookSquare, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faBookmark as faBookmarkEmpty } from '@fortawesome/free-regular-svg-icons';
-import { faBookmark as faBookmarkFilled } from '@fortawesome/free-solid-svg-icons';
+import { faBookmark as faBookmarkFilled, faCog, faShare } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { FunctionComponent } from 'react';
+import { FunctionComponent, useState } from 'react';
 import { Col, Container, Image, Row } from 'react-bootstrap';
+import ReactPlayer from 'react-player';
 import { projectPageColors } from '../../../common/constans';
+import { Routes } from '../../../common/enums';
 import { ProjectPage } from '../../../common/types';
+import Button from '../../../components/Button';
+import Link from '../../../components/Link';
+import ModalWindow from '../../../components/ModalWindow';
 import ProjectInfo from '../../../components/ProjectInfo';
+import ShareProjectModal from '../../../components/ShareProjectModal';
 import { useAction } from '../../../hooks';
 import classes from '../styles.module.scss';
 
@@ -22,6 +28,7 @@ const Header: FunctionComponent<HeaderProps> = ({ project, isAuthorized }) => {
     description,
     category,
     imageUrl,
+    videoUrl,
     // tags,
     goal,
     donated,
@@ -38,6 +45,7 @@ const Header: FunctionComponent<HeaderProps> = ({ project, isAuthorized }) => {
   } = project;
 
   const { setWatch } = useAction();
+  const [showShareModal, setShowShareModal] = useState(false);
 
   const handleWatch = () => {
     setWatch({ isWatched: !isWatched, projectId: id });
@@ -47,19 +55,36 @@ const Header: FunctionComponent<HeaderProps> = ({ project, isAuthorized }) => {
     <Container className={classes['project-header']}>
       <Row>
         <Col xs={12} lg={5}>
-          <Image src={imageUrl} className={classes['project-image']} />
+          {!videoUrl && <Image src={imageUrl} className={classes['project-image']} />}
+          {videoUrl && (
+          <ReactPlayer
+            controls
+            width="100%"
+            url={videoUrl}
+            post
+            config={{ file: { attributes: { poster: imageUrl } } }}
+          />
+          )}
         </Col>
         <Col xs={12} lg={7}>
           <Row>
             <p className={classes['project-category']}>{category}</p>
           </Row>
           <Row>
-            <Col xs={10} lg={11}>
+            <Col xs={10} lg={10}>
               <h3 className={classes['project-name']}>{name}</h3>
             </Col>
-            <Col xs={1} lg={1}>
+            <Col xs={2} lg={2}>
               <div className={classes['watch-container']}>
-                <button type='button' onClick={handleWatch} disabled={!isAuthorized}>
+                <Link to={`${Routes.PROJECTS_EDIT}/${id}`}>
+                  <FontAwesomeIcon icon={faCog} size="2x" color={projectPageColors.bookmark} />
+                </Link>
+                <button
+                  type='button'
+                  onClick={handleWatch}
+                  disabled={!isAuthorized}
+                  className={classes[`${!isAuthorized && 'disabled'}`]}
+                >
                   {isWatched
                     ? <FontAwesomeIcon icon={faBookmarkFilled} size="2x" color={projectPageColors.bookmark} />
                     : <FontAwesomeIcon icon={faBookmarkEmpty} size="2x" color={projectPageColors.bookmark} />}
@@ -91,6 +116,22 @@ const Header: FunctionComponent<HeaderProps> = ({ project, isAuthorized }) => {
                   <FontAwesomeIcon icon={faDribbble} size="2x" />
                 </a>
               )}
+            <Button
+              type="button"
+              onClick={() => setShowShareModal(true)}
+              icon={<FontAwesomeIcon icon={faShare} />}
+              iconPosition="right"
+            >
+              <span>Share</span>
+            </Button>
+            <ModalWindow
+              show={showShareModal}
+              title="Share"
+              body={<ShareProjectModal imageUrl={imageUrl} title={name} />}
+              size="small"
+              centered={false}
+              onHide={() => setShowShareModal(false)}
+            />
           </Row>
           <Row>
             <ProjectInfo

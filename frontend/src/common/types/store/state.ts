@@ -1,5 +1,6 @@
 import { AuthState } from '../../../reducers/auth';
 import { CategoriesState } from '../../../reducers/categies';
+import { TagsState } from '../../../reducers/tags';
 import { UsersState } from '../../../reducers/users';
 import { AuthenticationState } from '../../../scenes/Auth/reducer';
 import { ProjectState } from '../../../scenes/CreateProject/reducer';
@@ -19,6 +20,7 @@ export interface StoreState {
   project: ProjectState;
   users: UsersState;
   categories: CategoriesState;
+  tags: TagsState;
   projects: ProjectsState;
   projectPage: ProjectPageState;
   transactions: TransactionsState

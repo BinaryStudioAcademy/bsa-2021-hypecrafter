@@ -3,6 +3,7 @@ import { faThumbsDown as faThumbsDownFilled, faThumbsUp as faThumbsUpFilled } fr
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FunctionComponent } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import hypeCoin from '../../assets/HypeCoin.png';
 import { Mark } from '../../common/enums';
 import { calcDaysToGo, calcDonationProgress } from '../../helpers/project';
 import { useAction } from '../../hooks';
@@ -58,7 +59,7 @@ const ProjectInfo: FunctionComponent<ProjectInfoProps> = ({
         </Col>
         <Col xs={4}>
           <div className={classes['info-block-entity']}>
-            <p className={classes['info-goal-amount']}>{donated}</p>
+            <p className={classes['info-goal-amount']}>{donated}<img src={hypeCoin} alt="HypeCoin" /></p>
             <p className={classes['info-goal']}>{t('Donated')}</p>
           </div>
         </Col>
@@ -74,7 +75,12 @@ const ProjectInfo: FunctionComponent<ProjectInfoProps> = ({
       </Row>
       <Row className={classes['info-block-footer']}>
         <div className={classes['likes-container']}>
-          <button type='button' onClick={handleLike} disabled={!isAuthorized}>
+          <button
+            type='button'
+            onClick={handleLike}
+            disabled={!isAuthorized}
+            className={classes[`${!isAuthorized && 'disabled'}`]}
+          >
             {mark === Mark.LIKE
               ? (<FontAwesomeIcon icon={faThumbsUpFilled} size='2x' />)
               : (<FontAwesomeIcon icon={faThumbsUp} size='2x' />)}
@@ -82,7 +88,12 @@ const ProjectInfo: FunctionComponent<ProjectInfoProps> = ({
           <span className={classes['likes-amount']}>{likes}</span>
         </div>
         <div className={classes['dislikes-container']}>
-          <button type='button' onClick={handleDislike} disabled={!isAuthorized}>
+          <button
+            type='button'
+            onClick={handleDislike}
+            disabled={!isAuthorized}
+            className={classes[`${!isAuthorized && 'disabled'}`]}
+          >
             {mark === Mark.DISLIKE
               ? (<FontAwesomeIcon icon={faThumbsDownFilled} size='2x' />)
               : (<FontAwesomeIcon icon={faThumbsDown} size='2x' />)}

@@ -2,8 +2,6 @@ const BLACK_ROUTES = [
   '/logout',
   '/add-funds',
   '/transactions',
-  '/auth/token',
-  '/auth/token/reject',
   '/payment',
   '/payment/:page',
   '/payment/create-payment-intent',
@@ -12,7 +10,8 @@ const BLACK_ROUTES = [
   '/profile',
   '/auth/current-user',
   '/projects/reaction',
-  '/projects/watch'
+  '/projects/watch',
+  '/current-user'
 ];
 
 export { BLACK_ROUTES };

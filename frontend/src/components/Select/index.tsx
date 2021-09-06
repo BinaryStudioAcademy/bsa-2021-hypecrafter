@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { ChangeEvent, forwardRef } from 'react';
 import { Form, FormGroupProps } from 'react-bootstrap';
 import classes from './styles.module.scss';
