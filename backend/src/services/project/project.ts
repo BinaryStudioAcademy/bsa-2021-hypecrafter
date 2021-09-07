@@ -94,4 +94,13 @@ export default class ProjectService {
 
     return { mess: 'Projected was wached or unwached' };
   }
+
+  public async getRecommendation({ category, region, projectTags }: {
+    category: string,
+    region: string,
+    projectTags: string[]
+  }) {
+    const projects = await this.#projectRepository.getRecommendation(region, projectTags, category);
+    return projects;
+  }
 }

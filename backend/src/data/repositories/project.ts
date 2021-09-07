@@ -1,13 +1,16 @@
 /* eslint-disable @typescript-eslint/no-shadow */
 /* eslint-disable class-methods-use-this */
 /* eslint-disable default-case */
-import { ProjectsCategories, ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
+import {
+  ProjectsCategories,
+  ProjectsFilter,
+  ProjectsSort
+} from 'hypecrafter-shared/enums';
 import { isNull } from 'lodash';
 import { EntityRepository, getRepository, Repository } from 'typeorm';
+import { timeIntervalForRecommendationSystem } from '../../common/constans';
 import { Mark } from '../../common/enums';
-import {
-  Project as MyProject
-} from '../../common/types';
+import { Project as MyProject } from '../../common/types';
 import { Project, UserProfile, UserProject } from '../entities';
 
 @EntityRepository(Project)
@@ -18,7 +21,8 @@ export class ProjectRepository extends Repository<Project> {
 
   private getProjectsByOrder(order: string) {
     return this.createQueryBuilder('project')
-      .select(`
+      .select(
+        `
         donated,
         description,
         project.name AS "name",
@@ -27,18 +31,26 @@ export class ProjectRepository extends Repository<Project> {
         project.imageUrl,
         category.name AS "category",
         array_agg(tag.name) AS "tags"
-      `)
-      .leftJoin(subQuery => subQuery
-        .select(`
+      `
+      )
+      .leftJoin(
+        (subQuery) => subQuery
+          .select(
+            `
           SUM(amount) AS donated,
           "projectId"
-        `)
-        .from('donate', 'donate')
-        .groupBy('"projectId"'), 'dn', 'dn."projectId" = project.id')
+        `
+          )
+          .from('donate', 'donate')
+          .groupBy('"projectId"'),
+        'dn',
+        'dn."projectId" = project.id'
+      )
       .leftJoin('project.category', 'category')
       .leftJoin('project.projectTags', 'projectTags')
       .leftJoin('projectTags.tag', 'tag')
-      .groupBy(`
+      .groupBy(
+        `
         donated,
         description,
         project.name,
@@ -46,7 +58,8 @@ export class ProjectRepository extends Repository<Project> {
         goal,
         project.imageUrl,
         category.name
-      `)
+      `
+      )
       .orderBy(order, 'DESC')
       .limit(this.#projectLimit)
       .execute();
@@ -54,7 +67,8 @@ export class ProjectRepository extends Repository<Project> {
 
   public getPopularProjectsByCategory(category: string) {
     return this.createQueryBuilder('project')
-      .select(`
+      .select(
+        `
         donated,
         description,
         project.name AS "name",
@@ -63,18 +77,26 @@ export class ProjectRepository extends Repository<Project> {
         category.name AS "category",
         array_to_string(array_agg(tag.name),', ') AS "tags",
         project."totalViews" AS "views"
-      `)
-      .leftJoin(subQuery => subQuery
-        .select(`
+      `
+      )
+      .leftJoin(
+        (subQuery) => subQuery
+          .select(
+            `
           SUM(amount) AS donated,
           "projectId"
-        `)
-        .from('donate', 'donate')
-        .groupBy('"projectId"'), 'dn', 'dn."projectId" = project.id')
+        `
+          )
+          .from('donate', 'donate')
+          .groupBy('"projectId"'),
+        'dn',
+        'dn."projectId" = project.id'
+      )
       .leftJoin('project.category', 'category')
       .leftJoin('project.projectTags', 'projectTags')
       .leftJoin('projectTags.tag', 'tag')
-      .groupBy(`
+      .groupBy(
+        `
         donated,
         description,
         project.name,
@@ -82,7 +104,8 @@ export class ProjectRepository extends Repository<Project> {
         goal,
         category.name,
         views
-      `)
+      `
+      )
       .where(`"category"."name"='${category}'`)
       .orderBy('"views"', 'DESC')
       .limit(this.#chartProjectLimit)
@@ -99,7 +122,10 @@ export class ProjectRepository extends Repository<Project> {
     return this.getProjectsByOrder('project."updatedAt"');
   }
 
-  public async getById(id: string, userId: string | undefined): Promise<MyProject> {
+  public async getById(
+    id: string,
+    userId: string | undefined
+  ): Promise<MyProject> {
     let selectQuery = `
       project."id",
       project."imageUrl",
@@ -128,25 +154,39 @@ export class ProjectRepository extends Repository<Project> {
     }
     const projectQuery = this.createQueryBuilder('project')
       .select(selectQuery)
-      .leftJoin(subQuery => subQuery
-        .select(`
+      .leftJoin(
+        (subQuery) => subQuery
+          .select(
+            `
           SUM(amount) AS donated,
           COUNT(DISTINCT "userId") AS "bakersAmount",
           "projectId"
-        `)
-        .from('donate', 'donate')
-        .groupBy('"projectId"'), 'dn', 'dn."projectId" = project.id')
-      .leftJoin(subQuery => subQuery
-        .select(`
+        `
+          )
+          .from('donate', 'donate')
+          .groupBy('"projectId"'),
+        'dn',
+        'dn."projectId" = project.id'
+      )
+      .leftJoin(
+        (subQuery) => subQuery
+          .select(
+            `
           SUM(CASE user_project.mark WHEN 'like' THEN 1 ELSE 0 END) AS likes,
           SUM(CASE user_project.mark WHEN 'dislike' THEN 1 ELSE 0 END) AS dislikes,
           "projectId"
-        `)
-        .from('user_project', 'user_project')
-        .groupBy('"projectId"'), 'up', 'up."projectId" = project.id')
+        `
+          )
+          .from('user_project', 'user_project')
+          .groupBy('"projectId"'),
+        'up',
+        'up."projectId" = project.id'
+      )
       .leftJoin('project.category', 'category')
-      .leftJoin(subQuery => subQuery
-        .select(`
+      .leftJoin(
+        (subQuery) => subQuery
+          .select(
+            `
           jsonb_agg(
             jsonb_build_object(
               'id', faq.id,
@@ -155,11 +195,17 @@ export class ProjectRepository extends Repository<Project> {
             )
           ) AS "FAQ",
           "projectId"
-        `)
-        .from('faq', 'faq')
-        .groupBy('"projectId"'), 'fq', 'fq."projectId" = project.id')
-      .leftJoin(subQuery => subQuery
-        .select(`
+        `
+          )
+          .from('faq', 'faq')
+          .groupBy('"projectId"'),
+        'fq',
+        'fq."projectId" = project.id'
+      )
+      .leftJoin(
+        (subQuery) => subQuery
+          .select(
+            `
             jsonb_agg(
               DISTINCT jsonb_build_object(
                 'title', title,
@@ -170,34 +216,56 @@ export class ProjectRepository extends Repository<Project> {
             ) AS "privileges",
             "bakersDonation",
             project.id AS "projectId"
-          `)
-        .from(Project, 'project')
-        .leftJoin(subQuery1 => subQuery1
-          .select(`
+          `
+          )
+          .from(Project, 'project')
+          .leftJoin(
+            (subQuery1) => subQuery1
+              .select(
+                `
             array_agg(dua."userAmount") AS "bakersDonation",
             dua."projectId"
-          `)
-          .from(subQuery2 => subQuery2
-            .select(`
+          `
+              )
+              .from(
+                (subQuery2) => subQuery2
+                  .select(
+                    `
               SUM(amount) AS "userAmount",
               "userId",
               "projectId"
-            `)
-            .from('donate', 'donate')
-            .groupBy(`
+            `
+                  )
+                  .from('donate', 'donate').groupBy(`
               "userId",
               "projectId"
-            `), 'dua')
-          .groupBy('dua."projectId"'), 'ud', 'ud."projectId" = project.id')
-        .leftJoin('donators_privilege', 'donatorsPrivilege', 'project.id = "donatorsPrivilege"."projectId"')
-        .where(`
+            `),
+                'dua'
+              )
+              .groupBy('dua."projectId"'),
+            'ud',
+            'ud."projectId" = project.id'
+          )
+          .leftJoin(
+            'donators_privilege',
+            'donatorsPrivilege',
+            'project.id = "donatorsPrivilege"."projectId"'
+          )
+          .where(
+            `
           title IS NOT NULL AND 
           "donatorsPrivilege".content IS NOT NULL AND 
           includes IS NOT NULL AND amount IS NOT NULL
-        `)
-        .groupBy('project.id,"bakersDonation"'), 'dp', 'dp."projectId" = project.id')
-      .leftJoin(subQuery => subQuery
-        .select(`
+        `
+          )
+          .groupBy('project.id,"bakersDonation"'),
+        'dp',
+        'dp."projectId" = project.id'
+      )
+      .leftJoin(
+        (subQuery) => subQuery
+          .select(
+            `
               jsonb_agg(
                 jsonb_build_object(
                   'author', jsonb_build_object(
@@ -216,49 +284,76 @@ export class ProjectRepository extends Repository<Project> {
                 )
               ) AS "projectComments",
               project.id AS "projectId"
-            `)
-        .from(Project, 'project')
-        .leftJoin('project.comments', 'comments')
-        .leftJoin('comments.author', 'commentAuthor')
-        .leftJoin(subQuery1 => subQuery1
-          .select(`
+            `
+          )
+          .from(Project, 'project')
+          .leftJoin('project.comments', 'comments')
+          .leftJoin('comments.author', 'commentAuthor')
+          .leftJoin(
+            (subQuery1) => subQuery1
+              .select(
+                `
             DISTINCT "userId",
             "projectId"
-          `)
-          .from('donate', 'donate'),
-        'userDonates',
-        '"userDonates"."projectId"=project."id" AND "userDonates"."userId"="commentAuthor"."id"')
-        .leftJoin('project.team', 'team')
-        .leftJoin('team_users', 'tu', 'tu."teamId" = team."id" AND tu."userId" = "commentAuthor".id')
-        .groupBy('project.id'), 'cp', 'cp."projectId" = project.id')
-      .leftJoin(subQuery => subQuery
-        .select(`
+          `
+              )
+              .from('donate', 'donate'),
+            'userDonates',
+            '"userDonates"."projectId"=project."id" AND "userDonates"."userId"="commentAuthor"."id"'
+          )
+          .leftJoin('project.team', 'team')
+          .leftJoin(
+            'team_users',
+            'tu',
+            'tu."teamId" = team."id" AND tu."userId" = "commentAuthor".id'
+          )
+          .groupBy('project.id'),
+        'cp',
+        'cp."projectId" = project.id'
+      )
+      .leftJoin(
+        (subQuery) => subQuery
+          .select(
+            `
           array_agg(tag.name) AS tags,
           "projectId"
-        `)
-        .from(Project, 'project')
-        .leftJoin('project.projectTags', 'projectTags')
-        .leftJoin('projectTags.tag', 'tag')
-        .groupBy('"projectId"'), 'tg', 'tg."projectId" = project.id')
+        `
+          )
+          .from(Project, 'project')
+          .leftJoin('project.projectTags', 'projectTags')
+          .leftJoin('projectTags.tag', 'tag')
+          .groupBy('"projectId"'),
+        'tg',
+        'tg."projectId" = project.id'
+      )
       .where(`project."id" = '${id}'`);
 
     if (userId) {
-      projectQuery
-        .leftJoin(subQuery => subQuery
-          .select(`
+      projectQuery.leftJoin(
+        (subQuery) => subQuery
+          .select(
+            `
             mark,
             "isWatched",
             "projectId"
-          `)
+          `
+          )
           .from('user_project', 'user_project')
-          .where(`"projectId" = '${id}' AND "userId" = '${userId}'`), 'upm', 'upm."projectId" = project.id');
+          .where(`"projectId" = '${id}' AND "userId" = '${userId}'`),
+        'upm',
+        'upm."projectId" = project.id'
+      );
     }
     const project = await projectQuery.getRawOne();
 
     return project;
   }
 
-  public async setReaction(isLiked: boolean, user: UserProfile, project: Project) {
+  public async setReaction(
+    isLiked: boolean,
+    user: UserProfile,
+    project: Project
+  ) {
     const userProject = await getRepository(UserProject)
       .createQueryBuilder('userProject')
       .select('id')
@@ -291,7 +386,11 @@ export class ProjectRepository extends Repository<Project> {
     return Object.assign(new UserProject(), newUserProject).save();
   }
 
-  public async setWatch(isWatched: boolean, user: UserProfile, project: Project) {
+  public async setWatch(
+    isWatched: boolean,
+    user: UserProfile,
+    project: Project
+  ) {
     const userProject = await getRepository(UserProject)
       .createQueryBuilder('userProject')
       .select('id')
@@ -321,26 +420,38 @@ export class ProjectRepository extends Repository<Project> {
   public getLikesAndDislikesAmount(projectId: string) {
     return this.createQueryBuilder('project')
       .select('likes,dislikes')
-      .leftJoin(subQuery => subQuery
-        .select(`
+      .leftJoin(
+        (subQuery) => subQuery
+          .select(
+            `
           SUM(CASE user_project.mark WHEN 'like' THEN 1 ELSE 0 END) AS likes,
           SUM(CASE user_project.mark WHEN 'dislike' THEN 1 ELSE 0 END) AS dislikes,
           "projectId"
-        `)
-        .from('user_project', 'user_project')
-        .groupBy('"projectId"'), 'up', 'up."projectId" = project.id')
+        `
+          )
+          .from('user_project', 'user_project')
+          .groupBy('"projectId"'),
+        'up',
+        'up."projectId" = project.id'
+      )
       .where(`project."id" = '${projectId}'`)
       .getRawOne();
   }
 
-  public getBySortAndFilter({ sort, filter, category, userId }: {
+  public getBySortAndFilter({
+    sort,
+    filter,
+    category,
+    userId
+  }: {
     sort: ProjectsSort;
     filter: ProjectsFilter;
     category: ProjectsCategories;
     userId?: string;
   }) {
     const query = this.createQueryBuilder('project')
-      .select(`
+      .select(
+        `
         donated,
         description,
         project.name AS "name",
@@ -349,25 +460,38 @@ export class ProjectRepository extends Repository<Project> {
         goal,
         category.name AS "category",
         tags
-        ${userId ? `,
+        ${
+  userId
+    ? `,
         CASE WHEN up."isFavorite" IS NULL THEN false ELSE true END AS "isFavorite",
         CASE WHEN dnu."projectId" IS NULL THEN false ELSE true END AS "isDonated"
-        ` : ''}
-      `)
-      .leftJoin(subQuery => subQuery
-        .select(`
+        `
+    : ''
+}
+      `
+      )
+      .leftJoin(
+        (subQuery) => subQuery
+          .select(
+            `
           SUM(amount) AS donated,
           "projectId"
-        `)
-        .from('donate', 'donate')
-        .groupBy('"projectId"'), 'dn', 'dn."projectId" = project.id')
+        `
+          )
+          .from('donate', 'donate')
+          .groupBy('"projectId"'),
+        'dn',
+        'dn."projectId" = project.id'
+      )
       .leftJoin('project.category', 'category')
       .leftJoin(
         (subQuery) => subQuery
-          .select(`
+          .select(
+            `
             array_agg(tag.name) AS "tags",
             "projectId"
-          `)
+          `
+          )
           .from(Project, 'project')
           .leftJoin('project.projectTags', 'projectTags')
           .leftJoin('projectTags.tag', 'tag')
@@ -377,23 +501,30 @@ export class ProjectRepository extends Repository<Project> {
       );
 
     if (userId) {
-      query.leftJoin(subQuery => subQuery
-        .select(`
+      query
+        .leftJoin(
+          (subQuery) => subQuery
+            .select(
+              `
           project.id AS "projectId",
           "userId",
           "isFavorite"
-        `)
-        .from(Project, 'project')
-        .leftJoin('project.userProjects', 'userProject')
-        .where(`"userProject"."userId" = '${userId}'`),
-      'up',
-      'up."projectId" = project.id')
-        .leftJoin(subQuery => subQuery
-          .select('DISTINCT "projectId"')
-          .from('donate', 'donate')
-          .where(`donate."userId" = '${userId}'`),
-        'dnu',
-        'dnu."projectId" = project.id');
+        `
+            )
+            .from(Project, 'project')
+            .leftJoin('project.userProjects', 'userProject')
+            .where(`"userProject"."userId" = '${userId}'`),
+          'up',
+          'up."projectId" = project.id'
+        )
+        .leftJoin(
+          (subQuery) => subQuery
+            .select('DISTINCT "projectId"')
+            .from('donate', 'donate')
+            .where(`donate."userId" = '${userId}'`),
+          'dnu',
+          'dnu."projectId" = project.id'
+        );
     }
 
     const categoryCondition = this.getCategoryFilterCondition(category);
@@ -446,5 +577,90 @@ export class ProjectRepository extends Repository<Project> {
       default:
         return `category.name = '${category}'`;
     }
+  }
+
+  public getRecommendation(
+    region: string,
+    projectTags: string[],
+    category: string
+  ) {
+    const date = new Date();
+    date.setFullYear(date.getFullYear() - timeIntervalForRecommendationSystem);
+    const stringValue = projectTags.join(',');
+
+    const query = this.createQueryBuilder('project')
+      .select(
+        `
+          project."id" AS id,
+          project.name as name,
+          "totalInteractionTime",
+          "totalViews",
+          donated,
+          category.name AS "categoryName",
+          region,
+          goal,
+          project."createdAt",
+          tags,
+          likes,
+          dislikes,
+          project."imageUrl"
+        `
+      )
+      .leftJoin(
+        (subQuery) => subQuery
+          .select(
+            `
+              SUM(amount) AS donated,
+              "projectId"
+            `
+          )
+          .from('donate', 'donate')
+          .groupBy('"projectId"'),
+        'dn',
+        'dn."projectId" = project.id'
+      )
+      .leftJoin('project.category', 'category')
+      .leftJoin(
+        (subQuery) => subQuery
+          .select(
+            `
+              array_agg(tag.name) AS tags,
+              "projectId"
+            `
+          )
+          .from(Project, 'project')
+          .leftJoin('project.projectTags', 'projectTags')
+          .leftJoin('projectTags.tag', 'tag')
+          .groupBy('"projectId"'),
+        'tg',
+        'tg."projectId" = project.id'
+      )
+      .leftJoin(
+        (subQuery) => subQuery
+          .select(
+            `
+              SUM(CASE user_project.mark WHEN 'like' THEN 1 ELSE 0 END) AS likes,
+              SUM(CASE user_project.mark WHEN 'dislike' THEN 1 ELSE 0 END) AS dislikes,
+              "projectId"
+            `
+          )
+          .from('user_project', 'user_project')
+          .groupBy('"projectId"'),
+        'userpr',
+        'userpr."projectId" = project.id'
+      )
+      .where(
+        `
+          ARRAY[${stringValue}] && tags AND
+          category.name=${category} AND 
+          project.region=${region} AND
+          project."createdAt" > :start_at
+        `,
+        {
+          start_at: date
+        }
+      );
+
+    return query.execute();
   }
 }

@@ -1,6 +1,6 @@
 import { ProjectsCategories, ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
 import MicroMq from 'micromq';
-import { Project, ProjectItem } from '../../common/types';
+import { Project, ProjectItem, RecommendedProjects } from '../../common/types';
 import { Project as CreateProject } from '../../data/entities';
 import { wrap } from '../../helpers';
 import { Services } from '../../services';
@@ -36,6 +36,16 @@ const init = ({ projectService }: Services, path: string) => (app: MicroMq) => a
     `${path}/watch`,
     wrap<Empty, { mess: string }, { isWatched: boolean, projectId: string }, Empty>(
       (req) => projectService.setWatch(req.body, req.headers.userId as string)
+    )
+  )
+  .get(
+    `${path}/recommendation`,
+    wrap<Empty, RecommendedProjects, { projectTags: string[] }, Empty>(
+      (req) => projectService.getRecommendation({
+        projectTags: req.query.projectTags,
+        region: req.query.region,
+        category: req.query.category
+      })
     )
   )
   .get(`${path}/:id`, wrap<Empty, Project, { id: string, userId: string | undefined }, Empty>(
