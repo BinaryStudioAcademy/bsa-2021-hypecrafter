@@ -39,7 +39,7 @@ export class SocketController {
 
   send(userId: string, event: string, data: any) {
     const userSockets = this.#connections.get(userId);
-    userSockets.forEach(socket => {
+    userSockets?.forEach(socket => {
       socket.emit(event, data);
     });
   }

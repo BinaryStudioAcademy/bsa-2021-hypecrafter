@@ -5,7 +5,6 @@ import { Nav, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import hypeCoin from '../../assets/HypeCoin.png';
 import { Routes } from '../../common/enums';
-import { NotificationMessageTypes } from '../../common/enums/notifications';
 import { logout } from '../../helpers/http';
 import { useAuth, useScroll, useWindowResize } from '../../hooks';
 import { useLocalization } from '../../providers/localization';
@@ -18,85 +17,6 @@ import NotificationPopover from '../NotificationsPopover';
 import OpenUserModal from '../OpenUserModalOption';
 import LanguageSwitcher from '../SwitchLanguageOption/LanguageSwitcher';
 import classes from './styles.module.scss';
-
-const notificationsExample = [
-  {
-    type: NotificationMessageTypes.COMMENT,
-    data: {
-      user: {
-        name: 'Anna',
-        link: '#'
-      },
-      project: {
-        name: 'Project1',
-        link: '#'
-      },
-      messageDate: '2021-08-29 23:18:33.974526',
-      donation: 200
-    },
-    id: '1'
-  }, {
-    type: NotificationMessageTypes.LIKE,
-    data: {
-      user: {
-        name: 'Anna',
-        link: '#'
-      },
-      project: {
-        name: 'Project1',
-        link: '#'
-      },
-      messageDate: '2021-08-29 23:18:33.974526',
-      donation: 200
-    },
-    id: '1'
-  }, {
-    type: NotificationMessageTypes.DONATE,
-    data: {
-      user: {
-        name: 'Anna',
-        link: '#'
-      },
-      project: {
-        name: 'Project1',
-        link: '#'
-      },
-      messageDate: '2021-08-29 23:18:33.974526',
-      donation: 200
-    },
-    id: '1'
-  }, {
-    type: NotificationMessageTypes.PROJECT_GOAL_ACHIEVED,
-    data: {
-      user: {
-        name: 'Anna',
-        link: '#'
-      },
-      project: {
-        name: 'Project1',
-        link: '#'
-      },
-      messageDate: '2021-08-29 23:18:33.974526',
-      donation: 200
-    },
-    id: '1'
-  }, {
-    type: NotificationMessageTypes.PROJECT_TIME_OUT,
-    data: {
-      user: {
-        name: 'Anna',
-        link: '#'
-      },
-      project: {
-        name: 'Project1',
-        link: '#'
-      },
-      messageDate: '2021-08-29 23:18:33.974526',
-      donation: 200
-    },
-    id: '1'
-  }
-];
 
 const Header = () => {
   const { t } = useLocalization();
@@ -192,7 +112,7 @@ const Header = () => {
                   <Link to={Routes.ADDFUNDS}><img src={hypeCoin} alt="HypeCoin" /></Link>
                   <Link to={Routes.ADDFUNDS}>1500</Link>
                 </div>
-                <NotificationPopover notifications={notificationsExample} />
+                <NotificationPopover />
                 <div className={classes.desktop_profile}>
                   <Nav.Link
                     onClick={handleProfileMenu}
@@ -329,7 +249,7 @@ const Header = () => {
           <span>1500</span>
         </div>
         <div className={classes.mobile_notification}>
-          <NotificationPopover notifications={notificationsExample} />
+          <NotificationPopover />
         </div>
         <div className={classes.mobile_profile}>
           <Nav.Link

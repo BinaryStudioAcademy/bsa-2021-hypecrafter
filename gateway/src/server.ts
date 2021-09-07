@@ -1,7 +1,6 @@
 import cors from 'cors';
 import express from 'express';
 import { createServer } from 'http';
-// import socketio, { Socket } from 'socket.io';
 import { createConnection } from 'typeorm';
 import { initMiddlewares } from './api/middlewares';
 import { initPassport } from './api/passport';
@@ -20,15 +19,17 @@ app.use(express.json({ limit: '15mb' }));
 app.use(express.urlencoded({ limit: '15mb' }));
 createConnection().then(() => {
   try {
+    const server = createServer();
+    const socketController = new SocketController(server);
+    server.listen(3003);
+
     const repositories = initRepositories();
     const services = initServices(repositories);
     initPassport(app, repositories);
-    initMiddlewares(app, services);
+    initMiddlewares(app, services, socketController);
     app.use(initRoutes(services));
-    const server = createServer(app);
-    const socketController = new SocketController(server);
-    console.log(socketController);
-    server.listen(port, () => {
+
+    app.listen(port, () => {
       log(`Server is running at port: ${port}. Environment: "${environment}"`);
     });
   } catch (e) {

@@ -1,23 +1,110 @@
 import { faBell } from '@fortawesome/free-regular-svg-icons';
 import { faCircle, faSlidersH } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Routes } from '../../common/enums';
-import { NotificationType } from '../../common/types/notification';
+import { NotificationMessageTypes } from '../../common/enums/notifications';
 import { useLocalization } from '../../providers/localization';
+import { useSockets } from '../../providers/sockets';
 import Button from '../Button';
 import Notification from '../Notification';
 import Popover from '../Popover';
 import classes from './styles.module.scss';
 
-interface Props {
-  notifications: Array<NotificationType>;
-}
+const notificationsExample = [
+  {
+    type: NotificationMessageTypes.COMMENT,
+    data: {
+      user: {
+        name: 'Anna',
+        link: '#'
+      },
+      project: {
+        name: 'Project1',
+        link: '#'
+      },
+      messageDate: '2021-08-29 23:18:33.974526',
+      donation: 200
+    },
+    id: '1'
+  }, {
+    type: NotificationMessageTypes.LIKE,
+    data: {
+      user: {
+        name: 'Anna',
+        link: '#'
+      },
+      project: {
+        name: 'Project1',
+        link: '#'
+      },
+      messageDate: '2021-08-29 23:18:33.974526',
+      donation: 200
+    },
+    id: '1'
+  }, {
+    type: NotificationMessageTypes.DONATE,
+    data: {
+      user: {
+        name: 'Anna',
+        link: '#'
+      },
+      project: {
+        name: 'Project1',
+        link: '#'
+      },
+      messageDate: '2021-08-29 23:18:33.974526',
+      donation: 200
+    },
+    id: '1'
+  }, {
+    type: NotificationMessageTypes.PROJECT_GOAL_ACHIEVED,
+    data: {
+      user: {
+        name: 'Anna',
+        link: '#'
+      },
+      project: {
+        name: 'Project1',
+        link: '#'
+      },
+      messageDate: '2021-08-29 23:18:33.974526',
+      donation: 200
+    },
+    id: '1'
+  }, {
+    type: NotificationMessageTypes.PROJECT_TIME_OUT,
+    data: {
+      user: {
+        name: 'Anna',
+        link: '#'
+      },
+      project: {
+        name: 'Project1',
+        link: '#'
+      },
+      messageDate: '2021-08-29 23:18:33.974526',
+      donation: 200
+    },
+    id: '1'
+  }
+];
 
-const NotificationPopover = (props: Props) => {
-  const { notifications } = props;
+const NotificationPopover = () => {
+  const [notifications, setNotifications] = useState(notificationsExample);
   const [unreadMessageCount, setUnreadMessageCount] = useState(notifications.length);
+
+  const { addSocketHandler, socket } = useSockets();
+
+  useEffect(() => {
+    if (socket) {
+      addSocketHandler('notification', (notification) => {
+        notifications.push(notification);
+        setNotifications(notifications);
+      });
+    }
+  }, [socket]);
 
   const { t } = useLocalization();
 

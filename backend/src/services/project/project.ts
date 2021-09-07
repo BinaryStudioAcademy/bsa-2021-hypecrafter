@@ -3,8 +3,8 @@ import {
   ProjectsSort
 } from 'hypecrafter-shared/enums';
 import MicroMq from 'micromq';
-import { ActionType } from '../../common/enums';
-import { NotificationMessageTypes } from '../../common/enums/notificationTypes';
+import { HttpMethod } from '../../common/enums';
+import { ActionPath } from '../../common/enums/actionsPath';
 import { Project } from '../../common/types';
 import { Chat, Project as CreateProject, Team } from '../../data/entities';
 import { mapPrivileges, mapProjects } from '../../data/mappers';
@@ -74,18 +74,17 @@ export default class ProjectService {
     const listTags = await this.#tagService.save(body.projectTags.map(projectTag => projectTag.tag));
     await this.#projectTagService.remove(project.projectTags.map(projectTag => projectTag.id));
     await this.#projectTagService.save(listTags.map(tag => ({ tag, project })));
-
     const { finishDate, id } = project;
 
     await this.#app.ask(Application.NOTIFICATION, {
-      server: {
-        action: ActionType.NEW_PROJECT,
-        meta: {
-          finishDate,
-          projectId: id
-        },
-      },
+      path: ActionPath.NewProject,
+      method: HttpMethod.POST,
+      body: {
+        finishDate,
+        projectId: id
+      }
     });
+
     await this.#donatorsPrivilegeServise.save(body.donatorsPrivileges.map(privilege => ({ ...privilege, project })));
     await this.#faqServise.save(body.faqs.map(faq => ({ ...faq, project })));
     return project;
@@ -102,7 +101,7 @@ export default class ProjectService {
     return projects;
   }
 
-  public async getById(id: string, userId: string | undefined) {
+  public async getById(id: string, userId: string | undefined = undefined) {
     const project = await this.#projectRepository.getById(id, userId);
     project.bakersAmount = Math.max(0, project.bakersAmount);
     project.donated = Math.max(0, project.donated);
@@ -125,24 +124,29 @@ export default class ProjectService {
     const likesAndDislikes:
     { likes: string, dislikes: string } = await this.#projectRepository.getLikesAndDislikesAmount(project.id);
     const { likes } = likesAndDislikes;
+    const mappedLikesAndDislikes = mapLikesAndDislikes(likesAndDislikes);
 
     if (oldLikes < likes) {
       const LikedProject = await this.#projectRepository.getProjectById(projectId);
       const { authorId: recipient } = LikedProject;
 
-      await this.#app.ask(Application.NOTIFICATION, {
-        server: {
-          action: NotificationMessageTypes.LIKE,
-          meta: {
+      const { response } = await this.#app.ask(Application.NOTIFICATION, {
+        path: ActionPath.LikeNotifications,
+        method: HttpMethod.POST,
+        body: {
+          data: {
             userId,
             projectId,
             recipient
           },
-        },
-      });
+          likesAndDislikes: mappedLikesAndDislikes
+        }
+      }) as { response: { likes: number, dislikes: number } };
+
+      return response;
     }
 
-    return mapLikesAndDislikes(likesAndDislikes);
+    return mappedLikesAndDislikes;
   }
 
   getUsersWatchingProject(projectId: string) {

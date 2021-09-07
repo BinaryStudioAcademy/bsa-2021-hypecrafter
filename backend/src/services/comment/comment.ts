@@ -1,6 +1,7 @@
 import { Project } from 'hypecrafter-shared/enums';
 import MicroMq from 'micromq';
-import { ActionType } from '../../common/enums';
+import { HttpMethod } from '../../common/enums';
+import { ActionPath } from '../../common/enums/actionsPath';
 import { Comment } from '../../data/entities';
 import { CommentRepository, ProjectRepository } from '../../data/repositories';
 
@@ -28,18 +29,21 @@ export default class CategoryService {
     const CommentedProject = await this.#projectRepository.getProjectById(projectId as any);
     const { authorId: recipient } = CommentedProject;
 
-    await this.#app.ask(Project.NOTIFICATION, {
-      server: {
-        action: ActionType.COMMENT,
-        meta: {
+    const comment = await this.#commentRepository.getById(newComment.id);
+
+    const { response } = (await this.#app.ask(Project.NOTIFICATION, {
+      path: ActionPath.CommentNotification,
+      method: HttpMethod.POST,
+      body: {
+        comment,
+        data: {
           userId,
           projectId,
           recipient
-        },
-      },
-    });
+        }
+      }
+    })) as { response: Comment };
 
-    const comment = await this.#commentRepository.getById(newComment.id);
-    return comment;
+    return response;
   }
 }

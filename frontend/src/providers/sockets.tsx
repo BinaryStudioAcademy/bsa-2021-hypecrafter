@@ -17,7 +17,7 @@ const SocketProvider: FC = ({ children }) => {
 
   useEffect(() => {
     if (isAuthorized) {
-      setSocket(io(env.server.url, { query: { userId: id as string } }) as Socket);
+      setSocket(io(env.server.sockets as string, { query: { userId: id as string } }) as Socket);
     }
   }, [isAuthorized]);
 
