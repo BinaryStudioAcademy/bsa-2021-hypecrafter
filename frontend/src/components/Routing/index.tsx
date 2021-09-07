@@ -28,8 +28,7 @@ const routesWitoutHeader = [Routes.LOGIN, Routes.SIGNUP];
 
 const Routing = () => {
   const { authFetchUserAction, closeModalAction } = useAction();
-  const { id } = useTypedSelector(({ userProfile }) => userProfile);
-  const { isLoading } = useTypedSelector(({ auth }) => auth);
+  const { isLoading, id } = useTypedSelector(({ auth }) => auth);
   const tokens = getAccessToken();
   const { pathname } = useLocation();
   const { isAuthorized } = useAuth();

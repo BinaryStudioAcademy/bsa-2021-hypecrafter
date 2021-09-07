@@ -75,11 +75,8 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile, isEditing, setEdi
     updateUser(updatedUserProfile);
   };
 
-  const editNameHandler = (e: ChangeEvent<HTMLInputElement>) => {
-    const fullName = e.currentTarget.value.split(' ');
-    setEditFirstName(fullName[0]);
-    setEditLastName(fullName[1]);
-  };
+  const editFirstNameHandler = (e: ChangeEvent<HTMLInputElement>) => setEditFirstName(e.currentTarget.value);
+  const editLastNameHandler = (e: ChangeEvent<HTMLInputElement>) => setEditLastName(e.currentTarget.value);
   const editRegionHandler = (e: ChangeEvent<HTMLInputElement>) => setEditRegion(e.currentTarget.value);
   const editDescriptionHandler = (e: ChangeEvent<HTMLInputElement>) => setEditDescription(e.currentTarget.value);
   const editInstagramUrlHandler = (e: ChangeEvent<HTMLInputElement>) => setEditInstagramUrl(e.currentTarget.value);
@@ -103,12 +100,20 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile, isEditing, setEdi
             <div className={classes['user-name']}>
               {isEditing
                 ? (
-                  <Input
-                    id='name'
-                    label='Your Name'
-                    value={`${editFirstName} ${editLastName}`}
-                    onChange={editNameHandler}
-                  />
+                  <>
+                    <Input
+                      id='name'
+                      label='Your First Name'
+                      value={`${editFirstName}`}
+                      onChange={editFirstNameHandler}
+                    />
+                    <Input
+                      id='name'
+                      label='Your Last Name'
+                      value={`${editLastName}`}
+                      onChange={editLastNameHandler}
+                    />
+                  </>
                 )
                 : (
                   <div>
