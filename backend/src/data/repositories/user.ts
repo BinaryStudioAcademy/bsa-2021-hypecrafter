@@ -22,6 +22,10 @@ export class UserRepository extends Repository<UserProfile> {
     return userProfile;
   }
 
+  public getByEmail(email: string) {
+    return this.findOne({ email });
+  }
+
   public async replenishmentBalance(id: string, amount: number) {
     const userProfile = await this.findOne({ id });
     if (userProfile) {
