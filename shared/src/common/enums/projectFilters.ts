@@ -8,7 +8,7 @@ export enum ProjectsSort {
   NAME = 'name',
   DATE = 'date',
   RECOMMENDED = 'recommended',
-  POPULAR = 'popular',
+  POPULAR = 'popular'
 }
 
 export enum ProjectsFilter {
@@ -16,6 +16,7 @@ export enum ProjectsFilter {
   FAVORITE = 'favorite',
   INVESTED = 'invested',
   OWN = 'own',
+  UPCOMING = 'upcoming'
 }
 
 export const ProjectsCategories = { ...CategoryType, ...Common };
