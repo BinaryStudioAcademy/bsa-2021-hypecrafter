@@ -53,7 +53,7 @@ const Statistics: FC<StatisticsProps> = ({ t, projectId }) => {
       <div className={classes['statistics-card-wrapper']}>
         <Row>
           <header className={classes['statistics-topic']}>
-            Global Statistics
+            {t('Global Statistics')}
           </header>
           {Object.entries(statistics.statistics).map(([key, val]) => (
             <Card key={key} title={key} value={val.toString()} />
@@ -62,14 +62,14 @@ const Statistics: FC<StatisticsProps> = ({ t, projectId }) => {
       </div>
       <div className={classes['statistics-topic-wrapper']}>
         <header className={classes['statistics-topic']}>
-          Donation Statistics
+          {t('Donation Statistics')}
         </header>
         <Button
           className={classes['export-button']}
           variant="secondary"
           onClick={handleExcelExport}
         >
-          <p className={classes['export-button-text']}>Export</p>
+          <p className={classes['export-button-text']}>{t('Export')}</p>
         </Button>
       </div>
       <ExcelExport data={statistics.donations} ref={exportFile}>
@@ -90,7 +90,7 @@ const Statistics: FC<StatisticsProps> = ({ t, projectId }) => {
       </div>
       <div className={classes['statistics-chart-wrapper']}>
         {statistics.donations.length <= 0 && (
-          <p className={classes['statistics-chart-text']}>No data</p>
+          <p className={classes['statistics-chart-text']}>{t('No data')}</p>
         )}
         <Chart
           type={params.type}

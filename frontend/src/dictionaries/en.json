@@ -163,6 +163,10 @@
     "Edit": "Edit",
     "Rating": "Rating",
     "Site locale": "en_US",
-    "Update": "Update"
+    "Update": "Update",
+    "Global Statistics": "Global Statistics",
+    "Donation Statistics": "Donation Statistics",
+    "Export": "Export",
+    "No data": "No data"
   }
 }

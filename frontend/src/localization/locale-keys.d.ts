@@ -162,4 +162,8 @@ declare type LocaleKeys =
  | 'Edit'
  | 'Rating'
  | 'Site locale'
- | 'Update';
+ | 'Update'
+ | 'Global Statistics'
+ | 'Donation Statistics'
+ | 'Export'
+ | 'No data';
