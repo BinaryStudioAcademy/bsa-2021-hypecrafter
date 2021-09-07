@@ -37,13 +37,10 @@ export const setReaction = (params: SetReactionProps) => api.post({ url: 'projec
 
 export const setWatch = (params: SetWatchProps) => api.post({ url: 'projects/watch', params });
 
-export const getProjectsStatistics = async ({
-  id,
-  timeInterval
-}: FetchStatistics) => {
+export const getProjectsStatistics = async (params: FetchStatistics) => {
   const statistics: Statistics = await api.get({
-    url: `projects/${id}/statistics`,
-    params: { id, timeInterval }
+    url: `projects/${params.id}/statistics`,
+    params
   });
   return statistics;
 };
