@@ -65,21 +65,22 @@ const Filters = () => {
             { value: ProjectsSort.NAME, text: t('Name') },
             { value: ProjectsSort.DATE, text: t('Date') },
             { value: ProjectsSort.POPULAR, text: t('Popular') },
-            { value: ProjectsSort.RECOMMENDED, text: t('Recommended') },
+            { value: ProjectsSort.RECOMMENDED, text: t('Recommended') }
           ]}
           {...register('sort', { required: true })}
         />
         {!!userId && (
-        <Select
-          label={t('Filter by')}
-          options={[
-            { value: ProjectsFilter.ALL, text: t('All') },
-            { value: ProjectsFilter.FAVORITE, text: t('Favorite') },
-            { value: ProjectsFilter.INVESTED, text: t('Invested') },
-            { value: ProjectsFilter.OWN, text: t('Own') },
-          ]}
-          {...register('filter', { required: true })}
-        />
+          <Select
+            label={t('Filter by')}
+            options={[
+              { value: ProjectsFilter.ALL, text: t('All') },
+              { value: ProjectsFilter.FAVORITE, text: t('Favorite') },
+              { value: ProjectsFilter.INVESTED, text: t('Invested') },
+              { value: ProjectsFilter.OWN, text: t('Own') },
+              { value: ProjectsFilter.UPCOMING, text: t('Upcoming') }
+            ]}
+            {...register('filter', { required: true })}
+          />
         )}
         <Select
           label={t('Category')}
