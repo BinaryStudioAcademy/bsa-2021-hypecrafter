@@ -19,6 +19,12 @@ const init = (
     `${path}/:id`,
     wrap<Empty, Notification, { id: string }, Empty>((req) => notificationService.getById(req.params.id))
   )
+  .post(
+    `${path}/get-unread`, async (req: Request, res: Response) => {
+      console.log(req.body);
+      res.json({ ok: true });
+    }
+  )
   .post(ActionPath.CommentNotification, async (req: Request, res: Response) => {
     console.log('/notifications/comment');
     const data = await notificationService.createNotification({

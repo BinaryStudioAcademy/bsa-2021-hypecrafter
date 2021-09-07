@@ -17,4 +17,7 @@ export class Notification extends AbstractEntity {
 
   @Column()
   recipient: string;
+
+  @Column({ default: false })
+  isRead: boolean;
 }
