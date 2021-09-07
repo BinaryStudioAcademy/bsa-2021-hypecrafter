@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import { Image, ImageBackground, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -7,8 +7,9 @@ import { UserAuthorizationKey } from '../../common/enums/user/user-authorization
 import { colors } from '../../common/styles/colors';
 import { useTypedSelector } from '../../hooks/store';
 import { useAction } from '../../hooks/useAction';
+import NavigationService from '../../navigation';
 
-const LoginView = ({ navigation }: { navigation: any }) => {
+const LoginView: FC = () => {
 
   const [hidePass, setHidePass] = useState(true);
   const [userData, setUserData] = useState({ email: '', password: '' });
@@ -28,7 +29,7 @@ const LoginView = ({ navigation }: { navigation: any }) => {
 
   useEffect(() => {
     if (refreshToken) {
-      navigation.navigate(Routes.APP);
+      NavigationService.navigate(Routes.APP);
     }
   }, [refreshToken]);
 
@@ -61,7 +62,7 @@ const LoginView = ({ navigation }: { navigation: any }) => {
 
 
   return (
-    <KeyboardAwareScrollView style={styles.wrapper}>
+    <KeyboardAwareScrollView contentContainerStyle={{ flexGrow: 1 }} style={styles.wrapper}>
       <View style={styles.wrapper}>
         <ImageBackground source={require('./../../assets/images/login_bg.jpg')} resizeMode="cover" style={styles.imageBg}>
           <Image
@@ -116,7 +117,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     paddingHorizontal: 20
-
   },
   error: {
     color: 'red'
@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
   imageBg: {
     justifyContent: "center",
     alignItems: 'center',
-    height: 250,
+    flex: 1,
     width: '100%'
   },
   img: {
