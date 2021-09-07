@@ -6,5 +6,6 @@ export enum CurrentPage{
   FUNDING,
   BENEFITS,
   SETTINGS,
+  RECOMMENDATIONS,
   END
 }

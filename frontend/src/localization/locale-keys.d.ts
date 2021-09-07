@@ -177,4 +177,6 @@ declare type LocaleKeys =
  | 'Basic fund'
  | 'Amount'
  | 'Return to Main Page'
+ | 'Recommendations'
+ | 'Let’s look at similar projects'
  | 'Pay';
