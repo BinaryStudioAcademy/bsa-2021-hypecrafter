@@ -1,19 +1,18 @@
-/* eslint-disable class-methods-use-this */
 import Stripe from 'stripe';
-import { NewPayment } from '../../common/types';
-import { PaymentRepository } from '../../data/repositories';
+import { Transaction } from '../../common/types';
+import { TransactionHistoryRepository } from '../../data/repositories';
 
-export default class PaymentService {
-  readonly #paymentRepository: PaymentRepository;
+export default class TransactionService {
+  readonly #transactionHistoryRepository: TransactionHistoryRepository;
 
-  constructor(paymentRepository: PaymentRepository) {
-    this.#paymentRepository = paymentRepository;
+  constructor(transactionHistoryRepository: TransactionHistoryRepository) {
+    this.#transactionHistoryRepository = transactionHistoryRepository;
   }
 
   public getAll() {
-    return this.#paymentRepository.getAll();
+    return this.#transactionHistoryRepository.getAll();
   }
-
+  /* eslint-disable */ 
   public async getClientSecret(stripe: Stripe, amount: number, userId: string) {
     const paymentIntent = await stripe.paymentIntents.create({
       amount: amount * 100,
@@ -27,14 +26,14 @@ export default class PaymentService {
   }
 
   public getById(id: string) {
-    return this.#paymentRepository.getById(id);
+    return this.#transactionHistoryRepository.getById(id);
   }
 
-  public setPayment(payment: NewPayment) {
-    return this.#paymentRepository.setPayment(payment);
+  public setTransaction(transaction: Transaction) {
+    return this.#transactionHistoryRepository.setTransaction(transaction);
   }
 
   public getByUserId(userId: string, pageNum: number) {
-    return this.#paymentRepository.getByUserId(userId, pageNum);
+    return this.#transactionHistoryRepository.getByUserId(userId, pageNum);
   }
 }

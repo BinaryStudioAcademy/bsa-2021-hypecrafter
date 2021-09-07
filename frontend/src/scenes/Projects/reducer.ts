@@ -9,8 +9,8 @@ import {
   fetchProjectsAction,
   FetchProjectsFailureActionType,
   FetchProjectsSuccessActionType,
-  filterCategoriesProjectsAction,
-  FilterCategoriesProjectsActionType,
+  filterCategoryProjectsAction,
+  FilterCategoryProjectsActionType,
   filterProjectsAction,
   FilterProjectsActionType,
   sortProjectsAction,
@@ -25,7 +25,7 @@ export interface ProjectsState {
   modificators: {
     sort: ProjectsSort;
     filter: ProjectsFilter;
-    categories: ProjectsCategories[];
+    category: ProjectsCategories;
   };
   isLoading: boolean;
   error: string;
@@ -36,7 +36,7 @@ export const initialState: ProjectsState = {
   modificators: {
     sort: ProjectsSort.NAME,
     filter: ProjectsFilter.ALL,
-    categories: [],
+    category: ProjectsCategories.ALL,
   },
   isLoading: false,
   error: '',
@@ -81,12 +81,12 @@ export const projectsReducer = createReducer<ProjectsState>(initialState, {
       },
     };
   },
-  [filterCategoriesProjectsAction.TRIGGER](state, action: FilterCategoriesProjectsActionType) {
+  [filterCategoryProjectsAction.TRIGGER](state, action: FilterCategoryProjectsActionType) {
     return {
       ...state,
       modificators: {
         ...state.modificators,
-        categories: action.payload,
+        category: action.payload,
       },
     };
   },

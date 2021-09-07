@@ -8,14 +8,12 @@ export const env = {
     port: getEnv('PORT') || 3003,
     environment: getEnv('NODE_ENV'),
     rabbit: {
-      url: getEnv('RABBIT_URL') || 'amqp://localhost',
+      url: getEnv('RABBIT_URL') || 'amqp://localhost'
     },
-    mongoDB: {
-      url: getEnv('MONGODB_URL'),
-    },
-    payment: {
+    payment:
+    {
       private_key: getEnv('PAYMENT_PRIVATE_KEY'),
-      webhook_key: getEnv('PAYMENT_WEBHOOK_KEY'),
-    },
-  },
+      webhook_key: getEnv('PAYMENT_WEBHOOK_KEY')
+    }
+  }
 };

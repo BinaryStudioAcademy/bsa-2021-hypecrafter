@@ -5,6 +5,9 @@ import { env } from '../../env';
 import { wrap } from '../../helpers';
 import { Services } from '../../services';
 
+interface Success {
+  success: boolean;
+}
 const key = env.app.payment.private_key;
 const stripe = new Stripe(key, {
   apiVersion: '2020-08-27',
@@ -40,7 +43,7 @@ const init = ({ userService }: Services, path: string) => (app: MicroMq) => app
     }
     return { status: 200 };
   }))
-  .put(`${path}/:id`, wrap<Empty, UserProfile, UserProfile, Empty>(req => (
+  .put(`${path}/:id`, wrap<Empty, Success, UserProfile, Empty>(req => (
     userService.updateById({ id: req.params.id, data: req.body })
   )));
 

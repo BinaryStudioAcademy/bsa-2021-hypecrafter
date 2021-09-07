@@ -1,1 +1,1 @@
-export * from './payment';
+export * from './transactionHistory';

@@ -1,6 +1,5 @@
-/* eslint-disable @typescript-eslint/naming-convention */
+/* eslint-disable import/no-self-import */
 import { Express } from 'express';
-// eslint-disable-next-line import/no-self-import
 import passport from 'passport';
 import FacebookTokenStrategy from 'passport-facebook-token';
 import { ExtractJwt, Strategy as JwtStrategy } from 'passport-jwt';

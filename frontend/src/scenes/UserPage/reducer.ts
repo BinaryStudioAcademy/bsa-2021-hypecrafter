@@ -2,15 +2,10 @@ import { UserProfile } from '../../common/types';
 import { createReducer } from '../../helpers';
 import type {
   FetchUserProfileFailureActionType,
-  FetchUserProfileSuccessActionType,
-  OpenModalTriggerActionType,
-  SetEditingTriggerActionType
+  FetchUserProfileSuccessActionType
 } from './actions';
 import {
-  closeModalAction,
-  fetchUserProfileAction,
-  openModalAction,
-  setEditingAction
+  fetchUserProfileAction
 } from './actions';
 
 export interface UserProfileState {
@@ -48,24 +43,6 @@ export const userProfileReducer = createReducer<UserProfileState>(initialState, 
       ...state,
       isLoading: false,
       error: action.payload
-    };
-  },
-  [openModalAction.TRIGGER](state, action: OpenModalTriggerActionType) {
-    return {
-      ...state,
-      id: action.payload
-    };
-  },
-  [closeModalAction.TRIGGER](state) {
-    return {
-      ...state,
-      id: ''
-    };
-  },
-  [setEditingAction.TRIGGER](state, action: SetEditingTriggerActionType) {
-    return {
-      ...state,
-      isEditing: action.payload
     };
   }
 });

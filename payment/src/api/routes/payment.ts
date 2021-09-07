@@ -1,4 +1,3 @@
-/* eslint-disable */
 import MicroMq from 'micromq';
 import Stripe from 'stripe';
 import { Page } from '../../common/types';
@@ -37,7 +36,7 @@ const init = ({ paymentService }: Services, path: string) => (app: MicroMq) => a
       const payload = event.data.object as Stripe.PaymentIntent;
       switch (event.type) {
         case 'payment_intent.succeeded': {
-          await paymentService.setPayment({
+          await paymentService.setTransaction({
             item: 'Balance replenishment',
             type: 'Custom Fund',
             total: payload.amount / 100,

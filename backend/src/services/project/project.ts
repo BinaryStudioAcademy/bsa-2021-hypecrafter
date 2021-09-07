@@ -1,4 +1,4 @@
-import { ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
+import { ProjectsCategories, ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
 import { Project } from '../../common/types';
 import {
   UpdateInteractionTimeQuery
@@ -63,15 +63,14 @@ export default class ProjectService {
     return project;
   }
 
-  public async getBySortAndFilter({ sort, filter, stringifiedCategories, userId }: {
+  public async getBySortAndFilter({ sort, filter, category, userId }: {
     sort: ProjectsSort,
     filter: ProjectsFilter,
-    stringifiedCategories: string,
+    category: ProjectsCategories,
     userId?: string,
   }) {
-    const categories = JSON.parse(stringifiedCategories);
-    const projects: Project[] = await this.#projectRepository.getBySortAndFilter({ sort, filter, categories, userId });
-    return mapProjects(projects);
+    const projects: Project[] = await this.#projectRepository.getBySortAndFilter({ sort, filter, category, userId });
+    return projects;
   }
 
   public async getById(id: string, userId: string | undefined) {

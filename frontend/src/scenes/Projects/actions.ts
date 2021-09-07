@@ -18,13 +18,13 @@ export enum ProjectActions {
 interface FetchProjectsTriggerActionPropsType {
   sort: ProjectsSort;
   filter: ProjectsFilter;
-  categories: ProjectsCategories[];
+  category: ProjectsCategories;
   userId?: string;
 }
 
 export const fetchProjectsAction = createRoutine(ProjectActions.FETCH_PROJECTS, {
-  trigger: ({ sort, filter, categories, userId }: FetchProjectsTriggerActionPropsType) => (
-    { sort, filter, categories, userId }
+  trigger: ({ sort, filter, category, userId }: FetchProjectsTriggerActionPropsType) => (
+    { sort, filter, category, userId }
   ),
   success: (projects: Project[]) => projects,
   failure: (error: string) => error,
@@ -34,8 +34,8 @@ export const filterProjectsAction = createRoutine(ProjectActions.FILTER_PROJECTS
   trigger: (filterValue: ProjectsFilter) => filterValue,
 });
 
-export const filterCategoriesProjectsAction = createRoutine(ProjectActions.FILTER_CATEGORY_PROJECTS, {
-  trigger: (categories: ProjectsCategories[]) => categories,
+export const filterCategoryProjectsAction = createRoutine(ProjectActions.FILTER_CATEGORY_PROJECTS, {
+  trigger: (categoryValue: ProjectsCategories) => categoryValue,
 });
 
 export const sortProjectsAction = createRoutine(ProjectActions.SORT_PROJECTS, {
@@ -52,7 +52,7 @@ export type FetchProjectsTriggerActionType = ReturnType<typeof fetchProjectsActi
 export type FetchProjectsSuccessActionType = ReturnType<typeof fetchProjectsAction.success>;
 export type FetchProjectsFailureActionType = ReturnType<typeof fetchProjectsAction.failure>;
 export type FilterProjectsActionType = ReturnType<typeof filterProjectsAction>;
-export type FilterCategoriesProjectsActionType = ReturnType<typeof filterCategoriesProjectsAction>;
+export type FilterCategoryProjectsActionType = ReturnType<typeof filterCategoryProjectsAction>;
 export type SortProjectsActionType = ReturnType<typeof sortProjectsAction>;
 export type UpdateViewsAndInteractionTimeTriggerActionType = ReturnType<typeof updateViewsAndInteractionTimeAction.trigger>;
 export type UpdateViewsAndInteractionTimeSuccessActionType = ReturnType<typeof updateViewsAndInteractionTimeAction.success>;
