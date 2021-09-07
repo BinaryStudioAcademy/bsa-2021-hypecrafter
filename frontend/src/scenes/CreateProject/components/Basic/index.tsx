@@ -42,7 +42,7 @@ const Basic: FC<Props> = ({ changePage, currentPage, onChangeValue, name, descri
       <Select
         options={categories.map(cat => ({ text: cat.name, value: cat.id }))}
         label={t('Pick a project category to connect with a specific community.')}
-        defaultText={category || '-'}
+        defaultText="-"
         onChange={e => onChangeValue(ProjectKeys.CATEGORY, e.target.value)}
         defaultValue={category}
       />

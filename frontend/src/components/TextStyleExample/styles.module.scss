@@ -1,0 +1,57 @@
+@import '../../styles/mixins';
+
+.wrapper {
+  display: flex;
+}
+
+.item {
+  margin-right: 100px;
+}
+
+.heading-s {
+  @include heading-s;
+}
+
+.heading-sm {
+  @include heading-sm;
+}
+
+.heading-md {
+  @include heading-md;
+}
+
+.heading-lg {
+  @include heading-lg;
+}
+
+.heading-xl {
+  @include heading-xl;
+}
+
+.heading-xxl {
+  @include heading-xxl;
+}
+
+.text-s {
+  @include text-s;
+}
+
+.text-sm {
+  @include text-sm;
+}
+
+.text-sm-bold {
+  @include text-sm-bold;
+}
+
+.text-md {
+  @include text-md;
+}
+
+.text-md-bold {
+  @include text-md-bold;
+}
+
+.text-xl {
+  @include text-xl;
+}

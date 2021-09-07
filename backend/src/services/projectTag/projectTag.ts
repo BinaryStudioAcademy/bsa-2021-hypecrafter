@@ -12,9 +12,4 @@ export default class ProjectTagService {
     const tags = this.#projectTagRepository.save(listTags);
     return tags;
   }
-
-  public async remove(listTags:string[]) {
-    const tags = this.#projectTagRepository.delete(listTags);
-    return tags;
-  }
 }

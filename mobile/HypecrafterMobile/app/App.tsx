@@ -1,4 +1,3 @@
-import { NavigationContainer } from '@react-navigation/native';
 import React, { useEffect } from 'react';
 import { Provider } from 'react-redux';
 import { StorageKey } from './common/constants';
@@ -20,13 +19,11 @@ const App = () => {
   });
   return (
     <Provider store={store}>
-      <NavigationContainer>
-        <MainNavigator
-          ref={(navigatorRef: any) => {
-            NavigationService.setTopLevelNavigator(navigatorRef);
-          }}
-        />
-      </NavigationContainer>
+      <MainNavigator
+        ref={(navigatorRef: any) => {
+          NavigationService.setTopLevelNavigator(navigatorRef);
+        }}
+      />
     </Provider>
   );
 };

@@ -19,7 +19,7 @@ interface Props {
 const Funding: FC<Props> = ({ changePage, currentPage, onChangeValue, goal, startDate, finishDate }) => {
   const { t } = useLocalization();
   const handleBack = () => changePage(currentPage - 1);
-  const handleNext = () => changePage(currentPage + 1);
+  const handleNext = () => changePage(CurrentPage.END);
   const body = (
     <div>
       <Input

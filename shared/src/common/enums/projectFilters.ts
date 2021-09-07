@@ -18,4 +18,5 @@ export enum ProjectsFilter {
   OWN = 'own',
 }
 
-export { CategoryType as ProjectsCategories };
+export const ProjectsCategories = { ...CategoryType, ...Common };
+export type ProjectsCategories = CategoryType | Common;
