@@ -87,7 +87,7 @@ export class Project extends AbstractEntity {
   @ManyToOne(() => Category, category => category.projects)
   category: Category;
 
-  @OneToMany(() => DonatorsPrivilege, projectDonatorsPrivilege => projectDonatorsPrivilege.project)
+  @OneToOne(() => DonatorsPrivilege, projectDonatorsPrivilege => projectDonatorsPrivilege.project)
   @JoinColumn()
   donatorsPrivileges: DonatorsPrivilege[];
 

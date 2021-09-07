@@ -9,7 +9,6 @@ export enum Routes {
   TRANSACTIONS = '/transactions',
   TRENDS = '/trends',
   PROJECTS_CREATE = '/projects/create',
-  PROJECTS_EDIT = '/projects/edit',
   PROFILE = '/profile',
   NOTFOUND = '/page-not-found',
   EXAMPLES = '/examples',

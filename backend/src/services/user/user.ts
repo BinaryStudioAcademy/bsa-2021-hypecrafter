@@ -32,7 +32,14 @@ export default class UserService {
   }
 
   public getCurrentUser(id: string) {
-    return this.#userRepository.getCurrentUser(id);
+    try {
+      return this.#userRepository.getById(id);
+    } catch {
+      throw new CustomError(
+        HttpStatusCode.INTERNAL_SERVER_ERROR,
+        'User not created'
+      );
+    }
   }
 
   public async registerUser({ data, tokens }: RegisterReqBody) {

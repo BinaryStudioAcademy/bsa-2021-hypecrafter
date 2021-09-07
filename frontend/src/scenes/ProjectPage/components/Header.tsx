@@ -1,15 +1,13 @@
 import { faDribbble, faFacebookSquare, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faBookmark as faBookmarkEmpty } from '@fortawesome/free-regular-svg-icons';
-import { faBookmark as faBookmarkFilled, faCog, faShare } from '@fortawesome/free-solid-svg-icons';
+import { faBookmark as faBookmarkFilled, faShare } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FunctionComponent, useState } from 'react';
 import { Col, Container, Image, Row } from 'react-bootstrap';
 import ReactPlayer from 'react-player';
 import { projectPageColors } from '../../../common/constans';
-import { Routes } from '../../../common/enums';
 import { ProjectPage } from '../../../common/types';
 import Button from '../../../components/Button';
-import Link from '../../../components/Link';
 import ModalWindow from '../../../components/ModalWindow';
 import ProjectInfo from '../../../components/ProjectInfo';
 import ShareProjectModal from '../../../components/ShareProjectModal';
@@ -71,14 +69,11 @@ const Header: FunctionComponent<HeaderProps> = ({ project, isAuthorized }) => {
             <p className={classes['project-category']}>{category}</p>
           </Row>
           <Row>
-            <Col xs={10} lg={10}>
+            <Col xs={10} lg={11}>
               <h3 className={classes['project-name']}>{name}</h3>
             </Col>
-            <Col xs={2} lg={2}>
+            <Col xs={1} lg={1}>
               <div className={classes['watch-container']}>
-                <Link to={`${Routes.PROJECTS_EDIT}/${id}`}>
-                  <FontAwesomeIcon icon={faCog} size="2x" color={projectPageColors.bookmark} />
-                </Link>
                 <button
                   type='button'
                   onClick={handleWatch}
