@@ -45,6 +45,5 @@ export const getProjectsStatistics = async ({
     url: `projects/${id}/statistics`,
     params: { id, timeInterval }
   });
-  console.log(statistics);
   return statistics;
 };
