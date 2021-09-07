@@ -6,7 +6,7 @@ import path from 'path';
 import swaggerUI, { JsonObject } from 'swagger-ui-express';
 import YAML from 'yamljs';
 import { BLACK_ROUTES } from '../../common/constants/blackRoutes';
-import { ActionPath } from '../../common/enums';
+import { ActionPath, SocketActions } from '../../common/enums';
 import { env } from '../../env';
 import { Services } from '../../services';
 import { SocketController } from '../../services/socketController';
@@ -58,7 +58,7 @@ export const initMiddlewares = (app: Express, _services: Services, socketControl
       id
     };
 
-    socketController.send(data.recipient, 'notification', dataToSend);
+    socketController.send(data.recipient, SocketActions.NOTIFICATION, dataToSend);
 
     res.json(comment);
   });
