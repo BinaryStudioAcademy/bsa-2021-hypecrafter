@@ -19,7 +19,7 @@ const SocketProvider: FC = ({ children }) => {
     if (isAuthorized) {
       setSocket(io(env.server.url, { query: { userId: id as string } }) as Socket);
     }
-  }, []);
+  }, [isAuthorized]);
 
   const addSocketHandler = (event: string, handler: (...args: any[]) => void) => {
     (socket as Socket)?.on(event, handler);
