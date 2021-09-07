@@ -12,4 +12,6 @@ export interface RecommendedProjects {
   likes: number;
   dislikes: number;
   imageUrl?: string;
+  isActive: boolean;
+  isSuccess: boolean | null;
 }

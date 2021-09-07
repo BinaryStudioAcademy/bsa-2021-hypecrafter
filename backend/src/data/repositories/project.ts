@@ -603,7 +603,16 @@ export class ProjectRepository extends Repository<Project> {
           tags,
           likes,
           dislikes,
-          project."imageUrl"
+          project."imageUrl",
+          project."isActive",
+          CASE 
+            WHEN project."isActive" IS FALSE AND donated - goal <= 0
+              THEN true
+            WHEN project."isActive" IS FALSE AND donated - goal > 0
+              THEN false
+            ELSE
+              null
+            END AS "isSuccess"
         `
       )
       .leftJoin(
