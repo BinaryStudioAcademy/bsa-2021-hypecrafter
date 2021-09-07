@@ -191,8 +191,8 @@ export class ProjectRepository extends Repository<Project> {
           .groupBy('dua."projectId"'), 'ud', 'ud."projectId" = project.id')
         .leftJoin('donators_privilege', 'donatorsPrivilege', 'project.id = "donatorsPrivilege"."projectId"')
         .where(`
-          title IS NOT NULL AND 
-          "donatorsPrivilege".content IS NOT NULL AND 
+          title IS NOT NULL AND
+          "donatorsPrivilege".content IS NOT NULL AND
           includes IS NOT NULL AND amount IS NOT NULL
         `)
         .groupBy('project.id,"bakersDonation"'), 'dp', 'dp."projectId" = project.id')
@@ -435,6 +435,8 @@ export class ProjectRepository extends Repository<Project> {
         return 'dnu."projectId" IS NOT NULL';
       case ProjectsFilter.OWN:
         return `up."userId" = '${userId}'`;
+      case ProjectsFilter.UPCOMING:
+        return 'project."finishDate" BETWEEN current_date AND current_date + 7';
     }
   }
 
