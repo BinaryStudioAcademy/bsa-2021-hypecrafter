@@ -7,7 +7,7 @@ import hypeCoin from '../../assets/HypeCoin.png';
 import { Routes } from '../../common/enums';
 import { NotificationMessageTypes } from '../../common/enums/notifications';
 import { logout } from '../../helpers/http';
-import { useAuth, useScroll, useWindowResize } from '../../hooks';
+import { useAction, useAuth, useScroll, useTypedSelector, useWindowResize } from '../../hooks';
 import { useLocalization } from '../../providers/localization';
 import Avatar from '../Avatar';
 import Button from '../Button';
@@ -16,6 +16,7 @@ import Link from '../Link';
 import Logo from '../Logo';
 import NotificationPopover from '../NotificationsPopover';
 import OpenUserModal from '../OpenUserModalOption';
+import Popover from '../Popover';
 import LanguageSwitcher from '../SwitchLanguageOption/LanguageSwitcher';
 import classes from './styles.module.scss';
 
@@ -107,6 +108,15 @@ const Header = () => {
   const [isVisibleOnScroll, setVisibleOnScroll] = useState(false);
   const { isMobile } = useWindowResize();
 
+  const store = useTypedSelector(({ search: { searchResult, isLoading } }) => ({
+    searchResult,
+    isLoading,
+  }));
+  const { searchAction } = useAction();
+  const { searchResult, isLoading } = store;
+  console.log(searchResult);
+  console.log(isLoading);
+
   const handleProfileMenu = () => {
     if (!isProfileMenu) {
       setMobileMenu(false);
@@ -130,6 +140,7 @@ const Header = () => {
 
   const handleSearch = (e: ChangeEvent<HTMLInputElement>) => {
     setText(e.target.value);
+    searchAction(e.target.value);
   };
 
   const scrollOverLimitCallback = () => setVisibleOnScroll(false);
@@ -181,7 +192,15 @@ const Header = () => {
         <div className={classes.header_right}>
           <div className={classes.header_search}>
             <FontAwesomeIcon icon={faSearch} className={classes.header_search_icon} />
-            <Input type="search" value={text} placeholder={t('Search...')} onChange={handleSearch} />
+            <Popover
+              trigger={(
+                <Input type="search" value={text} placeholder={t('Search...')} onChange={handleSearch} />
+                )}
+              placement="bottom-end"
+              id="id"
+              rootClose
+            >{() => (<p>ghjgvjb</p>)}
+            </Popover>
           </div>
           {useAuth().isAuthorized
             ? (

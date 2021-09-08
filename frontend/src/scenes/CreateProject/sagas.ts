@@ -18,7 +18,7 @@ function* createProjectRequest(action:ProjectAction) {
     const response: CreateProject = yield call(createProject, action.payload);
     yield put(createProjectAction.success(response));
   } catch (error) {
-    yield put(createProjectAction.failure(error));
+    yield put(createProjectAction.failure(error as string));
   }
 }
 
@@ -27,7 +27,7 @@ function* getForEditProjectRequest(action:ProjectForEditAction) {
     const response: CreateProject = yield call(getForEditProject, action.payload);
     yield put(getForEditProjectAction.success(response));
   } catch (error) {
-    yield put(getForEditProjectAction.failure(error));
+    yield put(getForEditProjectAction.failure(error as string));
   }
 }
 

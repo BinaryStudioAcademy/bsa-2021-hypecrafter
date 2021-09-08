@@ -9,4 +9,5 @@ export * from './topic';
 export * from './transactions';
 export * from './user';
 export * from './userProfile';
+export * from './search';
 

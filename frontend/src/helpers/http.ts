@@ -8,6 +8,7 @@ import { getAccessToken, getRefreshToken, removeTokens, setAccessToken } from '.
 
 const getInitHeaders = (
   hasContent = false,
+  _headers:Record<string, string>,
   contentType = 'application/json'
 ) => {
   const headers: HeadersInit = new Headers();
@@ -19,15 +20,30 @@ const getInitHeaders = (
   if (token) {
     headers.set(HttpHeader.AUTHORIZATION, `Bearer ${token}`);
   }
+  if (_headers) {
+    Object.entries(_headers).forEach(([key, value]) => {
+      headers.set(key, value);
+    });
+  }
 
   return headers;
+};
+const deleteHeaders = (body:Record<string, string>) => {
+  const newBody = JSON.parse(JSON.stringify(body));
+  if (newBody && newBody.headers) {
+    delete newBody.headers;
+  }
+  return newBody;
 };
 
 const getOptions = (method: HttpMethod, { params }: RequestArgs) => {
   const isBodyExist = params && method !== HttpMethod.GET;
 
-  const headers = getInitHeaders(isBodyExist);
-  const body = isBodyExist ? { body: JSON.stringify(params) } : {};
+  const headers = getInitHeaders(isBodyExist, params?.headers);
+  const body = isBodyExist ? {
+    body:
+      JSON.stringify(params ? deleteHeaders(params) : {})
+  } : {};
 
   return {
     method,

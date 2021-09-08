@@ -27,4 +27,5 @@ export { authFetchUserAction } from './auth';
 export { getCategoriesAction } from './categories';
 export { getTagsAction } from './tags';
 export { getUsersAction } from './users';
+export { searchAction } from './search';
 
