@@ -41,6 +41,7 @@ const ProjectsScreen: FC<Props> = ({ popularStartups, recommendedStartups, targe
 const styles = StyleSheet.create({
   wrapper: {
     backgroundColor: commonStyles.color.background,
+    alignItems: 'center',
   },
 });
 
