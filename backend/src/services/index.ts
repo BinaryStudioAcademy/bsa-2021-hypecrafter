@@ -2,6 +2,7 @@ import MicroMq from 'micromq';
 import { Repositories } from '../data/repositories';
 import CategoryService from './category';
 import CommentService from './comment';
+import DonateService from './donate';
 import FAQServise from './faq';
 import ProjectService from './project';
 import DonatorsPrivilegeServise from './projectPrivilege';
@@ -24,6 +25,8 @@ export function initServices(repositories: Repositories, app: MicroMq): Services
     tagService: new TagService(repositories.tagRepository),
     categoryService: new CategoryService(repositories.categoryRepository),
     commentService: new CommentService(repositories.commentRepository, repositories.projectRepository, app),
+    donateService: new DonateService(repositories.donateRepository,
+      repositories.projectRepository, repositories.userRepository,)
   };
 }
 
@@ -33,5 +36,6 @@ export type Services = {
   projectService: ProjectService,
   tagService: TagService,
   categoryService: CategoryService,
-  commentService: CommentService,
+  donateService: DonateService,
+  commentService: CommentService
 };

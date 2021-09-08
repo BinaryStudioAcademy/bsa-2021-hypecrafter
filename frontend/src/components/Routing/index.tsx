@@ -17,7 +17,6 @@ import SuccessPage from '../../scenes/Wallet/Payment/components/SuccessPage';
 import Transactions from '../../scenes/Wallet/Transactions';
 import Header from '../Header';
 import LoaderWrapper from '../LoaderWrapper';
-import Main from '../Main';
 import MetaData from '../MetaData';
 import ModalWindow from '../ModalWindow';
 import PageNotFound from '../PageNotFound';
@@ -126,12 +125,6 @@ const Routing = () => {
             path={Routes.NOTFOUND}
             exact
             component={PageNotFound}
-          />
-          <PublicRoute
-            restricted={false}
-            path={Routes.EXAMPLES}
-            exact
-            component={Main}
           />
           <Redirect from="*" to={Routes.NOTFOUND} />
         </Switch>

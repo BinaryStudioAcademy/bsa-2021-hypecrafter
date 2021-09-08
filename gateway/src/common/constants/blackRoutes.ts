@@ -12,6 +12,7 @@ const BLACK_ROUTES = [
   '/auth/current-user',
   '/projects/reaction',
   '/projects/watch',
+  '/donate',
   '/current-user'
 ];
 

@@ -1,6 +1,7 @@
 import {
   Project as Application, ProjectsFilter,
-  ProjectsSort
+  ProjectsSort,
+  TimeInterval
 } from 'hypecrafter-shared/enums';
 import MicroMq from 'micromq';
 import { HttpMethod } from '../../common/enums';
@@ -40,7 +41,7 @@ export default class ProjectService {
   constructor(app: MicroMq, projectRepository: ProjectRepository, teamRepository: TeamRepository,
     chatRepository: ChatRepository, userRepository: UserRepository,
     tagService: TagService, projectTagService: ProjectTagService,
-    donatorsPrivilegeServise:DonatorsPrivilegeServise, faqServise:FAQServise) {
+    donatorsPrivilegeServise: DonatorsPrivilegeServise, faqServise: FAQServise) {
     this.#projectRepository = projectRepository;
     this.#teamRepository = teamRepository;
     this.#chatRepository = chatRepository;
@@ -159,5 +160,17 @@ export default class ProjectService {
     await this.#projectRepository.setWatch(isWatched, user, project);
 
     return { mess: 'Projected was wached or unwached' };
+  }
+
+  public async getDonationInformation(id: string, startDate: TimeInterval) {
+    const donationInformation = await this.#projectRepository.getDonationInformationDuringTime(
+      id,
+      startDate
+    );
+    const statisticsInformation = await this.#projectRepository.getProjectStatistics(id);
+    return {
+      donations: donationInformation,
+      statistics: statisticsInformation
+    };
   }
 }
