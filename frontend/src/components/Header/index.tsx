@@ -200,7 +200,12 @@ const Header = () => {
               <Nav
                 className={classes.desktop_header_user_menu}
               >
-                <div className={classes.header_hypeCoin}>
+                <div
+                  className={`
+                    ${classes.header_hypeCoin}
+                    ${isBalance ? '' : classes.hide}
+                  `}
+                >
                   <Link to={Routes.ADDFUNDS}><img src={hypeCoin} alt="HypeCoin" /></Link>
                   <Link to={Routes.ADDFUNDS}>{balance}</Link>
                 </div>
@@ -343,7 +348,7 @@ const Header = () => {
         </NavLink>
         <div
           className={`
-            ${classes.header_hypeCoin} 
+            ${classes.header_hypeCoin}
             ${classes.mobile_hypeCoin}
             ${isBalance ? '' : classes.hide}
           `}
@@ -408,7 +413,7 @@ const Header = () => {
           </div>
         </div>
       </Navbar>
-    </div>
+    </div >
   );
 };
 
