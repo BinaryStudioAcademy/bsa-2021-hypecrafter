@@ -1,0 +1,22 @@
+export const colors = {
+  color_root_text: '#fafbff',
+  color_root_text_grey: 'rgba(250, 251, 255, 0.5)',
+  color_error: 'red',
+  color_base_border: '#3a3a3a',
+  color_glitch_red: 'rgba(255, 0, 0, 0.44)',
+  color_glitch_green: 'rgba(0, 255, 0, 0.44)',
+  color_glitch_blue: 'rgba(0, 0, 255, 0.44)',
+  color_menu_finish_background: 'rgb(12 12 14 / 71 %)',
+  color_menu_start_background: 'rgb(12 12 14 / 0)',
+  color_badge_backer_background: '#a859c0',
+  color_badge_owner_background: '#0062ff',
+  color_body_accordion: 'rgba(11, 209, 210, 0.5)',
+  color_root_background: '#191b1f',
+  color_root_block_background: '#2e333a',
+  color_root_modal_background: '#21292d',
+  color_root_grey: '#474a4f',
+  color_root_table_odd_background: '#2e333a',
+  color_root_table_even_background: '#23272c',
+  color_root_table_header_background: '#222933',
+  color_root_turquoise: '#0aecec'
+}

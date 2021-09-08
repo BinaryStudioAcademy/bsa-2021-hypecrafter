@@ -3,7 +3,7 @@ import { HttpHeader, HttpMethod, HttpStatusCode } from '../common/enums';
 import { RequestArgs } from '../common/types';
 import { env } from '../env';
 import Storage from '../storage';
-import { StorageKey } from './../common/constants/storageKey';
+import { StorageKeys } from './../common/enums/storage-keys';
 
 type HeadersInit = Headers | string[][] | Record<string, string>;
 
@@ -13,10 +13,15 @@ const refreshToken = async () => {
   return data;
 };
 
-const logout = async () => {
-  // TODO...
-  const data = 'Some data';
-  return data;
+export const logout = async () => {
+  const refreshToken = await Storage.get(StorageKeys.REFRESH_TOKEN);
+  if (refreshToken) {
+    const url = getUrl(HttpMethod.POST, { url: 'auth/token/reject' });
+    const options = getOptions(HttpMethod.POST, { url, params: { refreshToken } });
+    await fetch(url, options);
+  }
+  await Storage.remove(StorageKeys.REFRESH_TOKEN);
+  await Storage.remove(StorageKeys.ACCESS_TOKEN);
 };
 
 const getInitHeaders = (
@@ -28,7 +33,7 @@ const getInitHeaders = (
     headers.set(HttpHeader.CONTENT_TYPE, contentType);
   }
 
-  const token = Storage.get(StorageKey);
+  const token = Storage.get(StorageKeys.ACCESS_TOKEN);
   if (token) {
     headers.set(HttpHeader.AUTHORIZATION, `Bearer ${token}`);
   }
@@ -40,7 +45,7 @@ const getOptions = (method: HttpMethod, { params }: RequestArgs) => {
   const isBodyExist = params && method !== HttpMethod.GET;
 
   const headers = getInitHeaders(isBodyExist);
-  const body = isBodyExist ? { body: JSON.stringify(params) } : {};
+  const body = isBodyExist ? { body: JSON.stringify(params) } : { };
 
   return {
     method,
