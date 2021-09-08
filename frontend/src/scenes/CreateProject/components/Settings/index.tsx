@@ -18,12 +18,29 @@ interface Props {
   region: string,
   imageUrl?: string,
   videoUrl?: string,
+  instagramUrl?: string,
+  facebookUrl?: string,
+  dribbleUrl?: string,
+  pinterestUrl?: string,
+  behanceUrl?: string,
   newTags: CreateProjectTag[],
   changePage: (currentPage: CurrentPage) => void,
   onChangeValue: (name: ProjectKeys, value: string | CreateProjectTag[]) => void,
 }
 
-const Settings: FC<Props> = ({ currentPage, region, imageUrl, videoUrl, newTags, changePage, onChangeValue }) => {
+const Settings: FC<Props> = ({
+  currentPage,
+  region,
+  imageUrl,
+  videoUrl,
+  newTags,
+  instagramUrl,
+  facebookUrl,
+  dribbleUrl,
+  pinterestUrl,
+  behanceUrl,
+  changePage,
+  onChangeValue }) => {
   const [tag, setTag] = useState('');
   const [options, setOptions] = useState<Array<{ text:string, value:string }>>([]);
   const { getTagsAction } = useAction();
@@ -72,6 +89,36 @@ const Settings: FC<Props> = ({ currentPage, region, imageUrl, videoUrl, newTags,
         label={t('Your location can be a key factor for the investor in your favor.')}
         onChange={e => onChangeValue(ProjectKeys.REGION, e.target.value)}
         value={region}
+      />
+      <Input
+        type="text"
+        label={t('Instagram link')}
+        onChange={e => onChangeValue(ProjectKeys.INSTAGRAM, e.target.value)}
+        value={instagramUrl}
+      />
+      <Input
+        type="text"
+        label={t('Facebook link')}
+        onChange={e => onChangeValue(ProjectKeys.FACEBOOK, e.target.value)}
+        value={facebookUrl}
+      />
+      <Input
+        type="text"
+        label={t('Drible link')}
+        onChange={e => onChangeValue(ProjectKeys.DRIBBLE, e.target.value)}
+        value={dribbleUrl}
+      />
+      <Input
+        type="text"
+        label={t('Pinterest link')}
+        onChange={e => onChangeValue(ProjectKeys.PINTEREST, e.target.value)}
+        value={pinterestUrl}
+      />
+      <Input
+        type="text"
+        label={t('Behance link')}
+        onChange={e => onChangeValue(ProjectKeys.BEHANCE, e.target.value)}
+        value={behanceUrl}
       />
       {imageUrl && <img src={imageUrl} alt="Project" className={classes.projectImage} />}
       <ImageUpload

@@ -181,12 +181,13 @@
   }
 }
 
-// Remove default styles
-p {
-  margin: 0;
-}
+.achievements-grid, .header-container, .projects-grid{
+  p {
+    margin: 0;
+  }
 
-label {
-  font-size: $font-size-large;
-  font-weight: 300;
+  label {
+    font-size: $font-size-large;
+    font-weight: 300;
+  }
 }

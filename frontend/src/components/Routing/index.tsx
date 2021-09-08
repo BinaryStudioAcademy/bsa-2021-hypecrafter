@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Redirect, Switch, useLocation } from 'react-router-dom';
-import { getAccessToken } from '../../helpers/localStorage';
 import { Routes } from '../../common/enums';
-import { useAction, useTypedSelector, useAuth } from '../../hooks';
+import { getAccessToken } from '../../helpers/localStorage';
+import { useAction, useAuth, useTypedSelector } from '../../hooks';
 import LoginPage from '../../scenes/Auth/LoginPage';
 import SignupPage from '../../scenes/Auth/SignupPage';
 import CreateProject from '../../scenes/CreateProject';
