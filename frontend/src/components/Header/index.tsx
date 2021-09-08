@@ -17,6 +17,7 @@ import Logo from '../Logo';
 import NotificationPopover from '../NotificationsPopover';
 import OpenUserModal from '../OpenUserModalOption';
 import Popover from '../Popover';
+import SearchResult from '../SearchResult';
 import LanguageSwitcher from '../SwitchLanguageOption/LanguageSwitcher';
 import classes from './styles.module.scss';
 
@@ -114,8 +115,6 @@ const Header = () => {
   }));
   const { searchAction } = useAction();
   const { searchResult, isLoading } = store;
-  console.log(searchResult);
-  console.log(isLoading);
 
   const handleProfileMenu = () => {
     if (!isProfileMenu) {
@@ -199,7 +198,11 @@ const Header = () => {
               placement="bottom-end"
               id="id"
               rootClose
-            >{() => (<p>ghjgvjb</p>)}
+            >{() => (
+              <div className={classes.searchResult}>
+                {searchResult.map(result => (<SearchResult key={result.id} project={result} />))}
+              </div>
+            )}
             </Popover>
           </div>
           {useAuth().isAuthorized

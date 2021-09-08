@@ -54,7 +54,6 @@ const CreateProject = () => {
   };
   const handleChangeValue = (name: ProjectKeys, value: any) => {
     setNewProject({ ...newProject, [name]: value });
-    console.log(newProject);
   };
   useEffect(() => {
     if (id) getForEditProjectAction(id, userId);
