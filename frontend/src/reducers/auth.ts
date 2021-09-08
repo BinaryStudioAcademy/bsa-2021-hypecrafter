@@ -1,33 +1,18 @@
 import type {
-  AuthFetchUserSuccessActionType,
-  OpenModalTriggerActionType,
-  SetEditingTriggerActionType,
-  UpdateUserProfileSuccessActionType,
-  UpdateUserProfileFailureActionType
+  AuthFetchUserSuccessActionType
 } from '../actions/auth';
-import {
-  authFetchUserAction,
-  authRemoveUserAction,
-  openModalAction,
-  closeModalAction,
-  setEditingAction,
-  updateUserProfileAction
-} from '../actions/auth';
+import { authFetchUserAction, authRemoveUserAction } from '../actions/auth';
 import { User } from '../common/types';
 import { createReducer } from '../helpers';
 
 export interface AuthState {
   isLoading: boolean;
-  isEditing: boolean;
   user: User | null;
-  id: string;
 }
 
 export const authState: AuthState = {
   isLoading: false,
-  isEditing: false,
-  user: null,
-  id: ''
+  user: null
 };
 
 export const authReducer = createReducer<AuthState>(authState, {
@@ -54,42 +39,6 @@ export const authReducer = createReducer<AuthState>(authState, {
     return {
       ...state,
       user: null
-    };
-  },
-  [openModalAction.TRIGGER](state, action: OpenModalTriggerActionType) {
-    return {
-      ...state,
-      id: action.payload
-    };
-  },
-  [closeModalAction.TRIGGER](state) {
-    return {
-      ...state,
-      id: ''
-    };
-  },
-  [setEditingAction.TRIGGER](state, action: SetEditingTriggerActionType) {
-    return {
-      ...state,
-      isEditing: action.payload
-    };
-  },
-  [updateUserProfileAction.TRIGGER](state) {
-    return {
-      ...state,
-      isEditing: false
-    };
-  },
-  [updateUserProfileAction.SUCCESS](state, action: UpdateUserProfileSuccessActionType) {
-    return {
-      ...state,
-      user: action.payload
-    };
-  },
-  [updateUserProfileAction.FAILURE](state, action: UpdateUserProfileFailureActionType) {
-    return {
-      ...state,
-      error: action.payload
     };
   }
 });

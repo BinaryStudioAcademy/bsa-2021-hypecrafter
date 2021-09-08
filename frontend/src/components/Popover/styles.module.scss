@@ -5,6 +5,7 @@
 }
 
 .popover-container {
+  max-width: 100%;
   border-radius: 0;
   border: none;
   background: $color-root-block-background;
@@ -14,6 +15,7 @@
 }
 
 .popover-body {
-  padding: 18px 24px;
+  max-width: 100%;
+  padding: 0;
   color: $color-root-text;
 }
