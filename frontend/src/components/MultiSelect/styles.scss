@@ -1,0 +1,77 @@
+@import '../../styles/vars';
+
+div {
+  .react-select-container {
+    background: none;
+    margin-bottom: 1.5rem;
+
+    &:focus {
+      background: none;
+      color: $color-root-text;
+    }
+  }
+
+  .react-select__control {
+    border: 1px solid $color-root-text;
+    color: $color-root-text;
+    background: none;
+    border-radius: 1px;
+  }
+
+  .react-select__clear-indicator {
+    padding: 4px;
+  }
+
+  .react-select__dropdown-indicator {
+    display: none;
+  }
+
+  .react-select__indicator-separator {
+    display: none;
+  }
+
+  .react-select__option {
+    &:hover {
+      background: $color-body-accordion;
+    }
+  }
+
+  .react-select__option--is-focused {
+    background: $color-body-accordion;
+  }
+
+  .react-select__menu {
+    border: 1px solid $color-root-text;
+    border-radius: 1px;
+    background-color: $color-root-background;
+  }
+
+  .react-select__multi-value {
+    background: $color-root-text;
+  }
+
+  .react-select__multi-value__remove {
+    padding-inline: 1px;
+    color: $color-root-background;
+  }
+
+  .react-select__input {
+    padding-left: 10px;
+    caret-color: $color-root-text;
+    color: $color-root-text;
+  }
+
+  .react-select__value-container--has-value {
+    .react-select__input {
+      padding-left: 0;
+    }
+  }
+
+  .react-select__placeholder {
+    padding-left: 10px;
+  }
+
+  .react-select__value-container {
+    padding: 3px;
+  }
+}

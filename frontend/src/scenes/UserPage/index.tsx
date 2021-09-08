@@ -10,8 +10,8 @@ interface Props {
 }
 
 const UserPage: FC<Props> = ({ userId: id }) => {
-  const store = useTypedSelector(({ auth: { user, isLoading, isEditing } }) => ({
-    userProfile: user,
+  const store = useTypedSelector(({ userProfile: { item, isLoading, isEditing } }) => ({
+    userProfile: item,
     isLoading,
     isEditing
   }));
@@ -19,9 +19,9 @@ const UserPage: FC<Props> = ({ userId: id }) => {
 
   const { userProfile, isLoading, isEditing } = store;
 
-  const userId = id || userProfile?.id || 'ac7a5b8f-7fc4-4d1e-81c9-1a9c49c9b529';
+  const userId = id || 'ac7a5b8f-7fc4-4d1e-81c9-1a9c49c9b529';
   useEffect(() => {
-    if (userId === userProfile?.id) return;
+    console.log(userId);
     fetchUserProfileAction(userId);
   }, [fetchUserProfileAction, userId]);
 

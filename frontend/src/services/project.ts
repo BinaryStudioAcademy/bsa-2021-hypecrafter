@@ -1,5 +1,5 @@
 import { TimeInterval } from 'hypecrafter-shared/enums';
-import { Project } from '../common/types';
+import { CreateProject, Project } from '../common/types';
 import { Statistics } from '../common/types/project/statistics';
 import { api } from '../helpers/http';
 
@@ -24,10 +24,14 @@ interface FetchStatistics {
 }
 
 export const createProject = async (body: any) => {
-  const project: Project = await api.post({ url: 'projects', params: body });
+  const project: CreateProject = await api.post({ url: 'projects', params: body });
 
   return project;
 };
+
+export const getForEditProject = (
+  params: GetProjectProps
+): Promise<CreateProject> => api.get({ url: `projects/getForEdit/${params.id}`, params });
 
 export const getProject = (
   params: GetProjectProps

@@ -1,13 +1,17 @@
-export interface Transaction {
+export interface Payment {
+  _id: string;
   item: string;
   total: number;
-  type: string;
   userId: string;
+  type: string;
+  createdAt: Date;
 }
+
+export type NewPayment = Omit<Payment, '_id' | 'createdAt'>;
 
 export const paginationStep = 5;
 
 export interface Page {
   isLast: boolean;
-  page: Transaction[];
+  page: Payment[];
 }
