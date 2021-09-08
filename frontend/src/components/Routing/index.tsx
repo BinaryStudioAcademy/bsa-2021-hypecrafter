@@ -6,6 +6,7 @@ import { useAction, useAuth, useTypedSelector } from '../../hooks';
 import LoginPage from '../../scenes/Auth/LoginPage';
 import SignupPage from '../../scenes/Auth/SignupPage';
 import CreateProject from '../../scenes/CreateProject';
+import Donate from '../../scenes/Donate';
 import MainPage from '../../scenes/MainPage';
 import ProjectPage from '../../scenes/ProjectPage';
 import Projects from '../../scenes/Projects';
@@ -55,6 +56,14 @@ const Routing = () => {
           title="User Page"
           body={<UserPage />}
           size="extra-wide"
+          centered={false}
+          onHide={closeModalHandler}
+        />
+        <ModalWindow
+          show
+          title="Donate"
+          body={<Donate />}
+          size="medium"
           centered={false}
           onHide={closeModalHandler}
         />

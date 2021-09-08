@@ -214,4 +214,5 @@ declare type LocaleKeys =
  | 'hypeCoins to'
  | 'achieved goal'
  | 'Fundraising time for'
- | 'is over';
+ | 'is over'
+ | 'Donate';

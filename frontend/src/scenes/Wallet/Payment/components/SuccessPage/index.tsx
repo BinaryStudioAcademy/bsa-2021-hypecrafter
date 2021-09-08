@@ -3,9 +3,9 @@ import { FC } from 'react';
 import { Button } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 import { Routes } from '../../../../../common/enums';
+import SelectedFund from '../../../../../components/SelectedFund';
 import { useTypedSelector } from '../../../../../hooks';
 import { useLocalization } from '../../../../../providers/localization';
-import SelectedFund from '../SelectedFund';
 import classes from './styles.module.scss';
 
 const SuccessPage: FC = () => {
@@ -16,6 +16,7 @@ const SuccessPage: FC = () => {
     ) => payment
   );
   const { t } = useLocalization();
+  const cardType = isCustom ? 'custom-fund' : 'basic-fund';
   return (
     <div className={classes['root-payment-success']}>
       <div className={classes.confetti}>
@@ -26,7 +27,7 @@ const SuccessPage: FC = () => {
       <h2 className={classes['payment-success-about']}>
         <span>{t('Payment transaction was successful')}</span>
       </h2>
-      <SelectedFund isCustom={isCustom} amount={amount} />
+      <SelectedFund type={cardType} amount={amount} />
       <Button className={classes['btn-return-success-payment']} onClick={() => history.push(Routes.HOME)}>
         {t('Return to Main Page')}
       </Button>
