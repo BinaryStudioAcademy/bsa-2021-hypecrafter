@@ -6,4 +6,3 @@ export * from './usePrevious';
 export * from './useQuery';
 export * from './useScroll';
 export * from './useWindowResize';
-export * from './useBalance';

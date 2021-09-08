@@ -1,5 +1,6 @@
+import { parse } from 'query-string';
 import { useLocation } from 'react-router-dom';
 
 export function useQuery() {
-  return new URLSearchParams(useLocation().search);
+  return parse(useLocation().search, { arrayFormat: 'comma' });
 }
