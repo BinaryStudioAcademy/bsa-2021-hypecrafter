@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react';
-import { Button, Image, StyleSheet, Text, View } from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
+import React, { FC, useEffect, useState } from 'react';
+import { Button, Image, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { useNavigation } from 'react-navigation-hooks';
 import { Mark } from '../../common/enums';
@@ -9,9 +8,13 @@ import { calcDaysToGo, calcDonationProgress } from '../../helpers/project';
 import { useTypedSelector } from '../../hooks/store';
 import { useAction } from '../../hooks/useAction';
 import ProgressBar from '../common/ProgressBar';
+import CommentsView from './screens/Comments';
+import FAQView from './screens/FAQ';
+import StoryView from './screens/Story';
 
-const ProjectView = () => {
+const ProjectView: FC = () => {
   const navigation = useNavigation();
+  const [screenNum, setScreenNum] = useState(1)
   const { fetchProject, setWatch, setReaction } = useAction();
   const { project, isLoading } = useTypedSelector(
     (
@@ -40,8 +43,8 @@ const ProjectView = () => {
     fetchProject({ id: navigation.getParam('id'), userId: undefined });
   }, []);
   return (
-    <ScrollView style={{ flex: 1, backgroundColor: colors.color_root_background }}>
-      <View style={{ flex: 1 }}>
+    <View style={{ flexGrow: 1 }}>
+      <ScrollView style={{ flex: 1, backgroundColor: colors.color_root_background }} contentContainerStyle={{ flexGrow: 1 }}>
         <Button title="Back" onPress={() => navigation.goBack()} />
         <Image
           source={{
@@ -124,8 +127,30 @@ const ProjectView = () => {
             <Text style={styles.marksAmount}>{project.dislikes ? project.dislikes : 0}</Text>
           </View>
         </View>
-      </View>
-    </ScrollView>
+        <View style={{ flexDirection: 'row', width: '100%', marginTop: 10 }}>
+          <View style={styles.tab}>
+            <Pressable onPress={() => setScreenNum(1)}>
+              <Text style={styles.tabText}>{"Story"}</Text>
+            </Pressable>
+          </View>
+          <View style={styles.tab}>
+            <Pressable onPress={() => setScreenNum(2)}>
+              <Text style={styles.tabText}>{"FAQ"}</Text>
+            </Pressable>
+          </View>
+          <View style={styles.tab}>
+            <Pressable onPress={() => setScreenNum(3)}>
+              <Text style={styles.tabText}>{"Comments"}</Text>
+            </Pressable>
+          </View>
+        </View>
+        <View style={styles.tabCont}>
+          {screenNum === 1 && <StoryView />}
+          {screenNum === 2 && <FAQView />}
+          {screenNum === 3 && <CommentsView />}
+        </View>
+      </ScrollView>
+    </View>
   );
 }
 
@@ -138,6 +163,16 @@ const styles = StyleSheet.create({
     height: 30,
     marginLeft: 5,
     aspectRatio: 1,
+  },
+  tab: {
+    marginLeft: 10,
+  },
+  tabCont: {
+    marginHorizontal: 10
+  },
+  tabText: {
+    fontSize: 25,
+    color: 'white',
   },
   marks: {
     flexDirection: 'row',
