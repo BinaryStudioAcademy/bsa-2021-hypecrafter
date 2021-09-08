@@ -25,6 +25,7 @@ const AppNavigator = createStackNavigator(
           headerStyle: {
             backgroundColor: commonStyles.color.grey,
           },
+          headerTintColor: commonStyles.color.text,
           headerTitle: () => <Header navigation={navigation} />
         }
       }
