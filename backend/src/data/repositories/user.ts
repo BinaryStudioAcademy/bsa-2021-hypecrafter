@@ -1,7 +1,7 @@
 import { EntityRepository, Repository } from 'typeorm';
+import { UserProfile as InterfaceUserProfile } from '../../common/types';
 import { RegisterData } from '../../common/types/registration';
 import { UserProfile } from '../entities/userProfile';
-import { UserProfile as InterfaceUserProfile } from '../../common/types';
 
 @EntityRepository(UserProfile)
 export class UserRepository extends Repository<UserProfile> {
@@ -11,6 +11,19 @@ export class UserRepository extends Repository<UserProfile> {
 
   public getById(id: string) {
     return this.findOne({ id });
+  }
+
+  public getByEmail(email: string) {
+    return this.findOne({ email });
+  }
+
+  public async replenishmentBalance(id: string, amount: number) {
+    const userProfile = await this.findOne({ id });
+    if (userProfile) {
+      userProfile.balance = amount + Number(userProfile.balance);
+      this.save(userProfile);
+    }
+    return userProfile;
   }
 
   public getCurrentUser(id: string) {
@@ -27,6 +40,6 @@ export class UserRepository extends Repository<UserProfile> {
 
   public async updateUserById(id: string, data: InterfaceUserProfile) {
     await this.update(id, data);
-    return this.getById(id);
+    return { success: true };
   }
 }

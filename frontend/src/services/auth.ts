@@ -5,3 +5,11 @@ export const auth = async () => {
 
   return user;
 };
+
+export const updateUser = ({ id = '', ...params }) => {
+  if (!id || typeof params === 'undefined') throw Error();
+  return api.put({
+    url: `users/${id}`,
+    params
+  });
+};

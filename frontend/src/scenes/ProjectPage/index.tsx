@@ -45,10 +45,10 @@ const ProjectPage: FC = () => {
                 tags={project.tags}
               />
             </Tab>
-            <Tab title="FAQ">
+            <Tab title="FAQ" counter={project.FAQ?.length}>
               <FAQ faqs={project.FAQ} />
             </Tab>
-            <Tab title="Comments">
+            <Tab title="Comments" counter={project.projectComments?.length}>
               <Comments comments={project.projectComments} projectId={id} />
             </Tab>
             <Tab title="Statistics">

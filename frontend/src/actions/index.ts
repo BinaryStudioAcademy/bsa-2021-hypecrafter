@@ -1,4 +1,4 @@
-export { googleAuthAction, loginAction, registerUserAction } from '../scenes/Auth/actions';
+export { facebookAuthAction, googleAuthAction, loginAction, registerUserAction } from '../scenes/Auth/actions';
 export { createProjectAction } from '../scenes/CreateProject/actions';
 export { fetchPopularAndRecommendedProjectsAction, fetchTopics } from '../scenes/MainPage/actions';
 export { addComment, fetchProject, fetchStatistics, setReaction, setWatch } from '../scenes/ProjectPage/actions';
@@ -8,21 +8,26 @@ export {
   filterProjectsAction,
   sortProjectsAction
 } from '../scenes/Projects/actions';
+
 export {
   fetchCategories,
   fetchPopularProjectsByCategory,
   fetchPopularTagsAction,
   setSelectedCategoryAction
 } from '../scenes/TrendsPage/actions';
+export { fetchUserProfileAction } from '../scenes/UserPage/actions';
+
 export {
-  closeModalAction,
-  fetchUserProfileAction,
+  authFetchUserAction,
   openModalAction,
+  closeModalAction,
   setEditingAction,
   updateUserProfileAction
-} from '../scenes/UserPage/actions';
-export { fetchTransactionsPageAction } from '../scenes/Wallet/Transactions/actions';
-export { authFetchUserAction } from './auth';
+} from './auth';
+
+export { setFundAction } from '../scenes/Wallet/Payment/actions';
+export { clearTransactionsStateAction, fetchTransactionsPageAction } from '../scenes/Wallet/Transactions/actions';
 export { getCategoriesAction } from './categories';
+export { getTagsAction } from './tags';
 export { getUsersAction } from './users';
 

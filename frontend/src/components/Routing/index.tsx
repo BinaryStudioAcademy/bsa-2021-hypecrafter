@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Redirect, Switch, useLocation } from 'react-router-dom';
 import { Routes } from '../../common/enums';
 import { getAccessToken } from '../../helpers/localStorage';
-import { useAction, useTypedSelector } from '../../hooks';
+import { useAction, useAuth, useTypedSelector } from '../../hooks';
 import LoginPage from '../../scenes/Auth/LoginPage';
 import SignupPage from '../../scenes/Auth/SignupPage';
 import CreateProject from '../../scenes/CreateProject';
@@ -12,10 +12,11 @@ import Projects from '../../scenes/Projects';
 import TrendsPage from '../../scenes/TrendsPage';
 import UserPage from '../../scenes/UserPage';
 import FundsPage from '../../scenes/Wallet/FundsPage';
+import Payment from '../../scenes/Wallet/Payment';
+import SuccessPage from '../../scenes/Wallet/Payment/components/SuccessPage';
 import Transactions from '../../scenes/Wallet/Transactions';
 import Header from '../Header';
 import LoaderWrapper from '../LoaderWrapper';
-import Main from '../Main';
 import MetaData from '../MetaData';
 import ModalWindow from '../ModalWindow';
 import PageNotFound from '../PageNotFound';
@@ -27,17 +28,11 @@ const routesWitoutHeader = [Routes.LOGIN, Routes.SIGNUP];
 
 const Routing = () => {
   const { authFetchUserAction, closeModalAction } = useAction();
-  const authStore = useTypedSelector(({ auth: { user, isLoading } }) => ({
-    user,
-    isLoading
-  }));
-  const userProfileStore = useTypedSelector(({ userProfile: { id } }) => ({
-    id
-  }));
+  const { id } = useTypedSelector(({ userProfile }) => userProfile);
+  const { isLoading } = useTypedSelector(({ auth }) => auth);
+  const tokens = getAccessToken();
   const { pathname } = useLocation();
-  const { user, isLoading } = authStore;
-  const { id } = userProfileStore;
-  const hasToken = Boolean(getAccessToken());
+  const { isAuthorized } = useAuth();
   const [showModal, setShowModal] = useState(false);
 
   const closeModalHandler = () => {
@@ -46,18 +41,14 @@ const Routing = () => {
   };
 
   useEffect(() => {
-    if (hasToken) {
-      authFetchUserAction();
-      if (id !== '') {
-        setShowModal(true);
-      }
-    }
-  }, [authFetchUserAction, id]);
+    if (!isAuthorized && tokens) authFetchUserAction();
+    if (id) setShowModal(true);
+  }, [authFetchUserAction, id, isAuthorized, tokens]);
 
   return (
     <>
       <MetaData />
-      <LoaderWrapper isLoading={isLoading || (!!user && hasToken)} variant="page">
+      <LoaderWrapper isLoading={isLoading} variant="page">
         {!routesWitoutHeader.includes(pathname as Routes) && <Header />}
         <ModalWindow
           show={showModal}
@@ -99,10 +90,16 @@ const Routing = () => {
           />
           <PrivateRoute exact path={Routes.ADDFUNDS} component={FundsPage} />
           <PrivateRoute exact path={Routes.TRANSACTIONS} component={Transactions} />
-          <PublicRoute
-            restricted={false}
+          <PrivateRoute exact path={Routes.PAYMENT} component={Payment} />
+          <PrivateRoute exact path={Routes.PAYMENT_SUCCESS} component={SuccessPage} />
+          <PrivateRoute
             exact
             path={Routes.PROJECTS_CREATE}
+            component={CreateProject}
+          />
+          <PrivateRoute
+            exact
+            path={Routes.PROJECTS_EDIT + Routes.ID}
             component={CreateProject}
           />
           <PublicRoute
@@ -122,12 +119,6 @@ const Routing = () => {
             path={Routes.NOTFOUND}
             exact
             component={PageNotFound}
-          />
-          <PublicRoute
-            restricted={false}
-            path={Routes.EXAMPLES}
-            exact
-            component={Main}
           />
           <Redirect from="*" to={Routes.NOTFOUND} />
         </Switch>

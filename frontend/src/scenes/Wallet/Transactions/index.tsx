@@ -1,4 +1,4 @@
-import { FC, useCallback, useEffect, useMemo } from 'react';
+import { FC, useCallback, useEffect, useMemo, useState } from 'react';
 import { Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { Column, useTable } from 'react-table';
@@ -13,18 +13,22 @@ import classes from './styles.module.scss';
 import { getColumns } from './utils';
 
 const Transactions: FC = () => {
-  const { lastPage, page, isLast, isLoading } = useTypedSelector(
+  const { fetchTransactionsPageAction, clearTransactionsStateAction } = useAction();
+  const [lastPage, setLastPage] = useState(0);
+  const { page, isLast, isLoading } = useTypedSelector(
     (
       { transactions }
     ) => transactions
   );
-  const { fetchTransactionsPageAction } = useAction();
-  const { t, selectedLanguage } = useLocalization();
   const updatePage = useCallback(
-    () => fetchTransactionsPageAction('ac7a5b8f-7fc4-4d1e-81c9-1a9c49c9b529', lastPage),
-    [lastPage]
+    () => {
+      if (lastPage === 0) { clearTransactionsStateAction(); }
+      fetchTransactionsPageAction('ac7a5b8f-7fc4-4d1e-81c9-1a9c49c9b529', lastPage + 1);
+      setLastPage(lastPage + 1);
+    }, [lastPage]
   );
-  useEffect(() => { if (lastPage === 0) updatePage(); }, []);
+  useEffect(() => { updatePage(); }, []);
+  const { t, selectedLanguage } = useLocalization();
   const pagination = useMemo(() => {
     if (isLast) return false;
     if (isLoading) {

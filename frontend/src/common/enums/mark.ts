@@ -1,4 +1,4 @@
-export const Mark = {
-  LIKE: 'like',
-  DISLIKE: 'dislike'
-};
+export enum Mark {
+  LIKE = 'like',
+  DISLIKE = 'dislike'
+}
