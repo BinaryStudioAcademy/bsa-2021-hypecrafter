@@ -56,7 +56,8 @@ const MainPage: FC = () => {
   };
 
   const CreateHelpBtns = () => {
-    const createProjectLink = useAuth().isAuthorized
+    const { isAuthorized } = useAuth();
+    const createProjectLink = isAuthorized
       ? Routes.PROJECTS_CREATE
       : Routes.LOGIN;
     const HelpProjectLink = Routes.PROJECTS;
