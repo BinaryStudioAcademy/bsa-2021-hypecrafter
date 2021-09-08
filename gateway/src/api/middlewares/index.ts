@@ -46,11 +46,11 @@ export const initMiddlewares = (app: Express, _services: Services, socketControl
       data: {
         user: {
           name: userName,
-          link: `${env.app.origin}/${projectId}`
+          link: userIdData
         },
         project: {
           name: projectName,
-          link: `${env.app.origin}/projects/${userIdData}`
+          link: projectId
         },
         messageDate,
         donation
@@ -81,11 +81,11 @@ export const initMiddlewares = (app: Express, _services: Services, socketControl
       data: {
         user: {
           name: userName,
-          link: `${env.app.origin}/${projectId}`
+          link: userIdData
         },
         project: {
           name: projectName,
-          link: `${env.app.origin}/projects/${userIdData}`
+          link: projectId
         },
         messageDate,
         donation
@@ -93,7 +93,7 @@ export const initMiddlewares = (app: Express, _services: Services, socketControl
       id
     };
 
-    socketController.send(data.recipient, 'notification', dataToSend);
+    socketController.send(data.recipient, SocketActions.NOTIFICATION, dataToSend);
 
     res.json(likesAndDislikes);
   });

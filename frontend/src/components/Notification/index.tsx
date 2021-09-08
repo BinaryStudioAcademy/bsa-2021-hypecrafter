@@ -4,36 +4,29 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classnames from 'classnames';
-import { useState } from 'react';
 import { Button as ButtonRB } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { NotificationMessageTypes } from '../../common/enums/notifications';
 import { NotificationData, NotificationLink, NotificationType } from '../../common/types/notification';
+import { useAction } from '../../hooks';
 import { useLocalization } from '../../providers/localization';
 import { date } from '../../services/date';
 import classes from './styles.module.scss';
 
-interface NotificationProps extends NotificationType {
-  unreadMessageCount: number;
-  setUnreadMessageCount: React.Dispatch<React.SetStateAction<number>>;
-}
+const Notification = (props: NotificationType) => {
+  const { data, type, isRead, id } = props;
 
-const Notification = (props: NotificationProps) => {
-  const { data, type, unreadMessageCount, setUnreadMessageCount } = props;
-  const [isWatched, setWatched] = useState(false);
+  const { setNotificationIsReadAction } = useAction();
 
   const { t } = useLocalization();
 
   const notificationCardClass = classnames({
     [classes['notification-card']]: true,
-    [classes.watched]: isWatched
+    [classes.watched]: isRead
   });
 
   const handleCardClick = () => {
-    if (!isWatched) {
-      setUnreadMessageCount(unreadMessageCount - 1);
-    }
-    setWatched(true);
+    setNotificationIsReadAction(id as string);
   };
 
   const getNotificationInfo = {
@@ -43,8 +36,13 @@ const Notification = (props: NotificationProps) => {
       image: faThumbsUp,
       message: (
         <span>
-          <Link to={(user as NotificationLink).link}>{(user as NotificationLink).name}</Link> {t('liked your')}{' '}
-          <Link to={project.link}>{project.name}</Link>
+          <Link
+            to={`/${(user as NotificationLink).link}`}
+          >
+            {(user as NotificationLink).name}
+          </Link>
+          {' '}{t('liked your')}{' '}
+          <Link to={`/projects/${project.link}`}>{project.name}</Link>
         </span>
       ),
       messageDate: date.getDate(messageDate),
@@ -55,8 +53,11 @@ const Notification = (props: NotificationProps) => {
       image: faComments,
       message: (
         <span>
-          <Link to={(user as NotificationLink).link}>{(user as NotificationLink).name}</Link> {t('commented your')}{' '}
-          <Link to={project.link}>{project.name}</Link>
+          <Link to={`/${(user as NotificationLink).link}`}>
+            {(user as NotificationLink).name}
+          </Link>
+          {' '}{t('commented your')}{' '}
+          <Link to={`/projects/${project.link}`}>{project.name}</Link>
         </span>
       ),
       messageDate: date.getDate(messageDate),
@@ -67,9 +68,9 @@ const Notification = (props: NotificationProps) => {
       image: faCoins,
       message: (
         <span>
-          <Link to={(user as NotificationLink).link}>{(user as NotificationLink).name}</Link>{' '}
+          <Link to={`/${(user as NotificationLink).link}`}>{(user as NotificationLink).name}</Link>{' '}
           {t('donated')} <span className={classes.amount}>{donation}</span> {t('hypeCoins to')}{' '}
-          <Link to={project.link}>{project.name}</Link>
+          <Link to={`/projects/${project.link}`}>{project.name}</Link>
         </span>
       ),
       messageDate: date.getDate(messageDate),
@@ -80,7 +81,7 @@ const Notification = (props: NotificationProps) => {
       image: faCheckSquare,
       message: (
         <span>
-          <Link to={project.link}>{project.name}</Link> {t('achieved goal')} 🎉
+          <Link to={`/projects/${project.link}`}>{project.name}</Link> {t('achieved goal')} 🎉
         </span>
       ),
       messageDate: date.getDate(messageDate),
@@ -91,7 +92,7 @@ const Notification = (props: NotificationProps) => {
       image: faClock,
       message: (
         <span>
-          {t('Fundraising time for')} <Link to={project.link}>{project.name}</Link> {t('is over')}
+          {t('Fundraising time for')} <Link to={`/projects/${project.link}`}>{project.name}</Link> {t('is over')}
         </span>
       ),
       messageDate: date.getDate(messageDate),

@@ -13,11 +13,21 @@ const init = (
 ) => (app: MicroMq) => app
   .get(
     `${path}`,
-    wrap(() => notificationService.getAll())
+    wrap<Empty, any, { id: string }, Empty>((req) => {
+      const { id } = req.query;
+      return notificationService.getNotificationsByUser(id);
+    })
   )
   .get(
     `${path}/:id`,
-    wrap<Empty, Notification, { id: string }, Empty>((req) => notificationService.getById(req.params.id))
+    wrap<Empty, any, { id: string }, Empty>((req) => notificationService.getById(req.params.id))
+  )
+  .put(
+    `${path}/:id`,
+    wrap<Empty, any, Notification, Empty>(async (req) => {
+      await notificationService.updateNotification(req.params.id, req.body);
+      return { ok: true };
+    })
   )
   .post(
     `${path}/get-unread`, async (req: Request, res: Response) => {
@@ -26,7 +36,6 @@ const init = (
     }
   )
   .post(ActionPath.CommentNotification, async (req: Request, res: Response) => {
-    console.log('/notifications/comment');
     const data = await notificationService.createNotification({
       ...req.body.data,
       type: NotificationMessageTypes.COMMENT,

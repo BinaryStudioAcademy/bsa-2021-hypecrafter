@@ -3,7 +3,6 @@ import { Redirect, Switch, useLocation } from 'react-router-dom';
 import { Routes } from '../../common/enums';
 import { getAccessToken } from '../../helpers/localStorage';
 import { useAction, useAuth, useTypedSelector } from '../../hooks';
-import { useSockets } from '../../providers/sockets';
 import LoginPage from '../../scenes/Auth/LoginPage';
 import SignupPage from '../../scenes/Auth/SignupPage';
 import CreateProject from '../../scenes/CreateProject';
@@ -29,12 +28,12 @@ import UserModal from '../UserModal';
 const routesWitoutHeader = [Routes.LOGIN, Routes.SIGNUP];
 
 const Routing = () => {
-  const { authFetchUserAction, closeModalAction } = useAction();
+  const { authFetchUserAction, closeModalAction, getNotificationsAction } = useAction();
   const { id } = useTypedSelector(({ userProfile }) => userProfile);
   const { isLoading } = useTypedSelector(({ auth }) => auth);
   const tokens = getAccessToken();
   const { pathname } = useLocation();
-  const { isAuthorized } = useAuth();
+  const { isAuthorized, id: currentUserId } = useAuth();
   const [showModal, setShowModal] = useState(false);
 
   const closeModalHandler = () => {
@@ -42,18 +41,16 @@ const Routing = () => {
     closeModalAction();
   };
 
-  const { addSocketHandler, socket } = useSockets();
-
-  useEffect(() => {
-    if (socket) {
-      addSocketHandler('eventExample', () => console.log('eventExample'));
-    }
-  }, [socket]);
-
   useEffect(() => {
     if (!isAuthorized && tokens) authFetchUserAction();
     if (id) setShowModal(true);
   }, [authFetchUserAction, id, isAuthorized, tokens]);
+
+  useEffect(() => {
+    if (isAuthorized) {
+      getNotificationsAction(currentUserId as string);
+    }
+  }, [isAuthorized]);
 
   return (
     <>

@@ -5,9 +5,8 @@ import { Nav, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import hypeCoin from '../../assets/HypeCoin.png';
 import { Routes, SocketActions } from '../../common/enums';
-import { NotificationMessageTypes } from '../../common/enums/notifications';
 import { logout } from '../../helpers/http';
-import { useAuth, useScroll, useWindowResize } from '../../hooks';
+import { useAction, useAuth, useScroll, useTypedSelector, useWindowResize } from '../../hooks';
 import { useLocalization } from '../../providers/localization';
 import { useSockets } from '../../providers/sockets';
 import Avatar from '../Avatar';
@@ -20,85 +19,6 @@ import OpenUserModal from '../OpenUserModalOption';
 import LanguageSwitcher from '../SwitchLanguageOption/LanguageSwitcher';
 import classes from './styles.module.scss';
 
-const notificationsExample = [
-  {
-    type: NotificationMessageTypes.COMMENT,
-    data: {
-      user: {
-        name: 'Anna',
-        link: '#'
-      },
-      project: {
-        name: 'Project1',
-        link: '#'
-      },
-      messageDate: '2021-08-29 23:18:33.974526',
-      donation: 200
-    },
-    id: '1'
-  }, {
-    type: NotificationMessageTypes.LIKE,
-    data: {
-      user: {
-        name: 'Anna',
-        link: '#'
-      },
-      project: {
-        name: 'Project1',
-        link: '#'
-      },
-      messageDate: '2021-08-29 23:18:33.974526',
-      donation: 200
-    },
-    id: '1'
-  }, {
-    type: NotificationMessageTypes.DONATE,
-    data: {
-      user: {
-        name: 'Anna',
-        link: '#'
-      },
-      project: {
-        name: 'Project1',
-        link: '#'
-      },
-      messageDate: '2021-08-29 23:18:33.974526',
-      donation: 200
-    },
-    id: '1'
-  }, {
-    type: NotificationMessageTypes.PROJECT_GOAL_ACHIEVED,
-    data: {
-      user: {
-        name: 'Anna',
-        link: '#'
-      },
-      project: {
-        name: 'Project1',
-        link: '#'
-      },
-      messageDate: '2021-08-29 23:18:33.974526',
-      donation: 200
-    },
-    id: '1'
-  }, {
-    type: NotificationMessageTypes.PROJECT_TIME_OUT,
-    data: {
-      user: {
-        name: 'Anna',
-        link: '#'
-      },
-      project: {
-        name: 'Project1',
-        link: '#'
-      },
-      messageDate: '2021-08-29 23:18:33.974526',
-      donation: 200
-    },
-    id: '1'
-  }
-];
-
 const Header = () => {
   const { t } = useLocalization();
   const [text, setText] = useState('');
@@ -106,15 +26,21 @@ const Header = () => {
   const [isProjectsMenu, setProjectsMenu] = useState(false);
   const [isProfileMenu, setProfileMenu] = useState(false);
   const [isVisibleOnScroll, setVisibleOnScroll] = useState(false);
-  const [notifications, setNotifications] = useState(notificationsExample);
 
   const { addSocketHandler, socket } = useSockets();
+  const { setNewNotificationsAction } = useAction();
+
+  const store = useTypedSelector(
+    ({ notifications: { notifications } }) => ({
+      notifications
+    })
+  );
+  const { notifications } = store;
 
   useEffect(() => {
     if (socket) {
       addSocketHandler(SocketActions.NOTIFICATION, (notification) => {
-        notifications.push(notification);
-        setNotifications(notifications);
+        setNewNotificationsAction(notification);
       });
     }
   }, [socket]);
