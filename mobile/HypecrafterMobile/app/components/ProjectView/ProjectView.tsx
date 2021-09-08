@@ -44,7 +44,7 @@ const ProjectView: FC = () => {
   }, []);
   return (
     <View style={{ flexGrow: 1 }}>
-      <ScrollView style={{ flex: 1, backgroundColor: colors.color_root_background }} contentContainerStyle={{ flexGrow: 1 }}>
+      <ScrollView style={{ flex: 1, backgroundColor: colors.root_background }} contentContainerStyle={{ flexGrow: 1 }}>
         <Button title="Back" onPress={() => navigation.goBack()} />
         <Image
           source={{
@@ -209,10 +209,10 @@ const styles = StyleSheet.create({
   },
   donated: {
     fontSize: 35,
-    color: colors.color_root_turquoise
+    color: colors.root_turquoise
   },
   category: {
-    color: colors.color_root_turquoise,
+    color: colors.root_turquoise,
     marginBottom: 15
   },
   donatedContainer: {
@@ -221,7 +221,7 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   projectInfo: {
-    backgroundColor: colors.color_root_block_background,
+    backgroundColor: colors.root_block_background,
     padding: 5,
     marginHorizontal: 10,
     borderRadius: 10

@@ -79,9 +79,9 @@ const getUrl = (method: HttpMethod, { url, params, config }: RequestArgs): strin
 const makeRequest = (method: HttpMethod) => async <T>(args: RequestArgs) => {
   const url = getUrl(method, args);
   const options = getOptions(method, args);
-  console.log(url, options)
+
   let result = await fetch(url, options);
-  console.log(result)
+
   if (result.status === HttpStatusCode.UNAUTHORIZED) {
     const refreshTokenResponse = await refreshToken();
 

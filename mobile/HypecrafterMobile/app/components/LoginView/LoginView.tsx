@@ -111,7 +111,7 @@ const LoginView: FC = () => {
 const styles = StyleSheet.create({
   wrapper: {
     flex: 1,
-    backgroundColor: colors.color_root_background
+    backgroundColor: colors.root_background
   },
   container: {
     flex: 1,
@@ -129,17 +129,17 @@ const styles = StyleSheet.create({
   },
   loginText: {
     fontSize: 35,
-    color: colors.color_root_turquoise
+    color: colors.root_turquoise
   },
   signUp: {
-    color: colors.color_root_turquoise
+    color: colors.root_turquoise
   },
   subloginText: {
     fontSize: 20,
     marginBottom: 10
   },
   button: {
-    backgroundColor: colors.color_root_turquoise,
+    backgroundColor: colors.root_turquoise,
     borderColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',

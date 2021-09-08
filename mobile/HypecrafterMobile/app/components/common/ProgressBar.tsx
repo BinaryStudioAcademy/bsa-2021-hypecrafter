@@ -19,7 +19,7 @@ const ProgressBar: FC<Props> = ({ goal, percent }) => (
     <Progress.Bar
       progress={percent / 100 <= 1 ? percent / 100 : 1}
       width={null}
-      color={colors.color_root_turquoise}
+      color={colors.root_turquoise}
     />
   </View>
 )
