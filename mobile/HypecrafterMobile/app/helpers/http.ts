@@ -45,7 +45,7 @@ const getOptions = (method: HttpMethod, { params }: RequestArgs) => {
   const isBodyExist = params && method !== HttpMethod.GET;
 
   const headers = getInitHeaders(isBodyExist);
-  const body = isBodyExist ? { body: JSON.stringify(params) } : { };
+  const body = isBodyExist ? { body: JSON.stringify(params) } : {};
 
   return {
     method,
