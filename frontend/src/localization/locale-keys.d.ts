@@ -221,4 +221,8 @@ declare type LocaleKeys =
  | 'hypeCoins to'
  | 'achieved goal'
  | 'Fundraising time for'
- | 'is over';
+ | 'is over'
+ | 'Global Statistics'
+ | 'Donation Statistics'
+ | 'Export'
+ | 'No data';
