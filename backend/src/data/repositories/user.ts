@@ -49,6 +49,6 @@ export class UserRepository extends Repository<UserProfile> {
 
   public async updateUserById(id: string, data: InterfaceUserProfile) {
     await this.update(id, data);
-    return { success: true };
+    return this.getById(id);
   }
 }

@@ -1,11 +1,11 @@
-import { ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
+import { ProjectsCategories, ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
 import { useEffect } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Routes } from '../../common/enums';
 import { Project } from '../../common/types';
 import ProjectCard from '../../components/ProjectCard';
 import Seo from '../../components/Seo';
-import { runActionWithValueOfEnum } from '../../helpers';
+import { runActionWithArrayOfEnumValues, runActionWithEnumValue } from '../../helpers';
 import { useAction, useAuth, useQuery, useTypedSelector } from '../../hooks';
 import { useLocalization } from '../../providers/localization';
 import Filters from './components/Filters';
@@ -14,8 +14,8 @@ import classes from './styles.module.scss';
 const Projects = () => {
   const { id: userId } = useAuth();
   const { projects, modificators } = useTypedSelector((state) => state.projects);
-  const { fetchProjectsAction, sortProjectsAction, filterProjectsAction } = useAction();
-  const query = useQuery();
+  const { fetchProjectsAction, sortProjectsAction, filterProjectsAction, filterCategoriesProjectsAction } = useAction();
+  const { sort: sortQuery, filter: filterQuery, categories: categoriesQuery } = useQuery();
   const { t } = useLocalization();
 
   useEffect(() => {
@@ -23,10 +23,9 @@ const Projects = () => {
   }, [modificators]);
 
   useEffect(() => {
-    const sortParam = query.get('sort');
-    const filterParam = query.get('filter');
-    runActionWithValueOfEnum(sortParam, ProjectsSort, sortProjectsAction);
-    runActionWithValueOfEnum(filterParam, ProjectsFilter, filterProjectsAction);
+    runActionWithEnumValue(sortQuery, ProjectsSort, sortProjectsAction);
+    runActionWithEnumValue(filterQuery, ProjectsFilter, filterProjectsAction);
+    runActionWithArrayOfEnumValues(categoriesQuery, ProjectsCategories, filterCategoriesProjectsAction);
   }, []);
 
   return (

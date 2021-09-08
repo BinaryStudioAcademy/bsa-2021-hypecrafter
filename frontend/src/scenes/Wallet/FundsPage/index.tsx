@@ -7,12 +7,10 @@ import Seo from '../../../components/Seo';
 import { useLocalization } from '../../../providers/localization';
 import CustomFund from './components/CustomFund';
 import Fund from './components/Fund';
-import { useBalance } from '../../../hooks';
 import classes from './styles.module.scss';
 
 const FundsPage: FC = () => {
   const { t } = useLocalization();
-  const { isBalance, balance } = useBalance();
   return (
     <Container fluid="sm">
       <Seo
@@ -60,8 +58,8 @@ const FundsPage: FC = () => {
             <div className={classes['wallet-balance-block']}>
               <h3>{t('Current Wallet balance')}</h3>
               <div className={classes['wallet-balance']}>
-                <span className={isBalance ? '' : classes.hide}>
-                  {balance} <img src={coinImg} alt="Coin" />
+                <span>
+                  0.18 <img src={coinImg} alt="Coin" />
                 </span>
               </div>
             </div>
