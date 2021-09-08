@@ -1,11 +1,19 @@
-import { ProjectsCategories, ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
+import {
+  ProjectsCategories,
+  ProjectsFilter,
+  ProjectsSort
+} from 'hypecrafter-shared/enums';
 import { Project } from '../../common/types';
 import { Chat, Project as CreateProject, Team } from '../../data/entities';
 import { mapPrivileges, mapProjects } from '../../data/mappers';
 import { mapLikesAndDislikes } from '../../data/mappers/mapLikesAndDislikes';
 import {
-  ChatRepository, ProjectRepository,
-  TeamRepository, UserRepository
+  CategoryRepository,
+  ChatRepository,
+  ProjectRepository,
+  TagRepository,
+  TeamRepository,
+  UserRepository
 } from '../../data/repositories';
 import ProjectTagService from '../projectTag';
 import TagService from '../tag';
@@ -19,17 +27,30 @@ export default class ProjectService {
 
   readonly #userRepository: UserRepository;
 
+  readonly #categoryRepository: CategoryRepository;
+
+  readonly #tagRepository: TagRepository;
+
   readonly #tagService: TagService;
 
   readonly #projectTagService: ProjectTagService;
 
-  constructor(projectRepository: ProjectRepository, teamRepository: TeamRepository,
-    chatRepository: ChatRepository, userRepository: UserRepository,
-    tagService: TagService, projectTagService: ProjectTagService) {
+  constructor(
+    projectRepository: ProjectRepository,
+    teamRepository: TeamRepository,
+    chatRepository: ChatRepository,
+    userRepository: UserRepository,
+    categoryRepository: CategoryRepository,
+    tagRepository: TagRepository,
+    tagService: TagService,
+    projectTagService: ProjectTagService
+  ) {
     this.#projectRepository = projectRepository;
     this.#teamRepository = teamRepository;
     this.#chatRepository = chatRepository;
     this.#userRepository = userRepository;
+    this.#categoryRepository = categoryRepository;
+    this.#tagRepository = tagRepository;
     this.#tagService = tagService;
     this.#projectTagService = projectTagService;
   }
@@ -95,12 +116,38 @@ export default class ProjectService {
     return { mess: 'Projected was wached or unwached' };
   }
 
-  public async getRecommendation({ category, region, projectTags }: {
-    category: string,
-    region: string,
-    projectTags: string[]
+  public async getRecommendation({
+    projectTagsId,
+    categoryId,
+    region
+  }: {
+    projectTagsId?: string[];
+    categoryId?: string;
+    region?: string;
   }) {
-    const projects = await this.#projectRepository.getRecommendation(region, projectTags, category);
-    return projects;
+    const projectTags = projectTagsId
+      ? await Promise.all(
+        projectTagsId.map(
+          async (item): Promise<{ name: string }> => this.#tagRepository.getById(item)
+        )
+      )
+      : null;
+
+    let tagArray: string[] = [];
+    if (projectTags) {
+      projectTags.forEach((el: { name: string }) => el && tagArray.push(el.name));
+    } else {
+      tagArray = null;
+    }
+
+    const category = categoryId
+      ? await this.#categoryRepository.getById(categoryId)
+      : null;
+
+    return await this.#projectRepository.getRecommendation(
+      region,
+      tagArray,
+      category.name
+    );
   }
 }

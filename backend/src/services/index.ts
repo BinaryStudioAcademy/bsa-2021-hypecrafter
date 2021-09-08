@@ -2,10 +2,10 @@ import { Repositories } from '../data/repositories';
 import CategoryService from './category';
 import CommentService from './comment';
 import ProjectService from './project';
+import ProjectTagService from './projectTag';
 import TagService from './tag';
 import TopicService from './topic';
 import UserService from './user';
-import ProjectTagService from './projectTag';
 
 export function initServices(repositories: Repositories): Services {
   return {
@@ -13,7 +13,8 @@ export function initServices(repositories: Repositories): Services {
     topicService: new TopicService(repositories.topicRepository),
     projectService: new ProjectService(repositories.projectRepository,
       repositories.teamRepository, repositories.chatRepository,
-      repositories.userRepository,
+      repositories.userRepository, repositories.categoryRepository,
+      repositories.tagRepository,
       new TagService(repositories.tagRepository),
       new ProjectTagService(repositories.projectTagRepository)),
     tagService: new TagService(repositories.tagRepository),

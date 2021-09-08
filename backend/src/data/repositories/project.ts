@@ -580,13 +580,13 @@ export class ProjectRepository extends Repository<Project> {
   }
 
   public getRecommendation(
-    region: string,
-    projectTags: string[],
-    category: string
+    region?: string,
+    projectTags?: string[],
+    category?: string
   ) {
     const date = new Date();
     date.setFullYear(date.getFullYear() - timeIntervalForRecommendationSystem);
-    const stringValue = projectTags.join(',');
+    const stringValue = projectTags ? projectTags.join(',') : null;
 
     const query = this.createQueryBuilder('project')
       .select(
@@ -660,10 +660,10 @@ export class ProjectRepository extends Repository<Project> {
       )
       .where(
         `
-          ARRAY[${stringValue}] && tags AND
-          category.name=${category} AND 
-          project.region=${region} AND
           project."createdAt" > :start_at
+          ${stringValue ? `AND ARRAY['${stringValue}'] && tags` : ''} 
+          ${category ? `AND category.name='${category}'` : ''} 
+          ${region ? `AND project.region='${region}'` : ''}
         `,
         {
           start_at: date
