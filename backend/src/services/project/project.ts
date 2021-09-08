@@ -32,7 +32,7 @@ export default class ProjectService {
   constructor(projectRepository: ProjectRepository, teamRepository: TeamRepository,
     chatRepository: ChatRepository, userRepository: UserRepository,
     tagService: TagService, projectTagService: ProjectTagService,
-    donatorsPrivilegeServise:DonatorsPrivilegeServise, faqServise:FAQServise) {
+    donatorsPrivilegeServise: DonatorsPrivilegeServise, faqServise: FAQServise) {
     this.#projectRepository = projectRepository;
     this.#teamRepository = teamRepository;
     this.#chatRepository = chatRepository;
@@ -99,8 +99,8 @@ export default class ProjectService {
     const project = await this.#projectRepository.findOne({ id: projectId });
     const user = await this.#userRepository.findOne({ id: userId });
     await this.#projectRepository.setReaction(isLiked, user, project);
-    const likesAndDislikes:
-    { likes: string, dislikes: string } = await this.#projectRepository.getLikesAndDislikesAmount(project.id);
+    const likesAndDislikes: { likes: string, dislikes: string } = await this
+      .#projectRepository.getLikesAndDislikesAmount(project.id);
 
     return mapLikesAndDislikes(likesAndDislikes);
   }

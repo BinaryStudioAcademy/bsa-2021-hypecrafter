@@ -3,4 +3,5 @@ export enum Routes {
   AUTH = 'Auth',
   USER = 'User',
   MAIN = 'Main',
+  PROJECT = 'Project'
 }
