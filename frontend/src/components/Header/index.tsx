@@ -114,7 +114,7 @@ const Header = () => {
     isLoading,
   }));
   const { searchAction } = useAction();
-  const { searchResult, isLoading } = store;
+  const { searchResult } = store;
 
   const handleProfileMenu = () => {
     if (!isProfileMenu) {
