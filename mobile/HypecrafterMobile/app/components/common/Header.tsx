@@ -13,6 +13,7 @@ interface Props {
 const Header:FC<Props> = ({ navigation }) => {
   const [displayBalance, setDisplayBalance] = useState(true);
   
+  const avatarUrl = 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80';
   const handleUserProfile = () => NavigationService.navigate(Routes.USER);
 
   useEffect(() => {
@@ -32,7 +33,7 @@ const Header:FC<Props> = ({ navigation }) => {
       </View>
       <View style={styles.user}>
         <TouchableOpacity onPress={handleUserProfile}>
-          <Image style={styles.userAvatar} source={{ uri: 'https://source.unsplash.com/random' }} />
+          <Image style={styles.userAvatar} source={{ uri: avatarUrl }} />
         </TouchableOpacity>
       </View>
     </View>
