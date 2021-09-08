@@ -24,6 +24,7 @@ const Layout: FC<Props> = ({ header, body, footer, currentPage, setCurrentPage }
     { page: CurrentPage.TEAM, label: 'Team' },
     { page: CurrentPage.FUNDING, label: 'Funding' },
     { page: CurrentPage.PRIVILEGES, label: 'Privileges' },
+    { page: CurrentPage.FAQ, label: 'FAQ' },
     { page: CurrentPage.SETTINGS, label: 'Settings' }
   ];
   return (

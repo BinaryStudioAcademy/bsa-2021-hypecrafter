@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Redirect, Switch, useLocation } from 'react-router-dom';
 import { Routes } from '../../common/enums';
 import { getAccessToken } from '../../helpers/localStorage';
-import { useAction, useTypedSelector, useAuth } from '../../hooks';
+import { useAction, useAuth, useTypedSelector } from '../../hooks';
 import LoginPage from '../../scenes/Auth/LoginPage';
 import SignupPage from '../../scenes/Auth/SignupPage';
 import CreateProject from '../../scenes/CreateProject';
@@ -17,7 +17,6 @@ import SuccessPage from '../../scenes/Wallet/Payment/components/SuccessPage';
 import Transactions from '../../scenes/Wallet/Transactions';
 import Header from '../Header';
 import LoaderWrapper from '../LoaderWrapper';
-import Main from '../Main';
 import MetaData from '../MetaData';
 import ModalWindow from '../ModalWindow';
 import PageNotFound from '../PageNotFound';
@@ -93,10 +92,14 @@ const Routing = () => {
           <PrivateRoute exact path={Routes.TRANSACTIONS} component={Transactions} />
           <PrivateRoute exact path={Routes.PAYMENT} component={Payment} />
           <PrivateRoute exact path={Routes.PAYMENT_SUCCESS} component={SuccessPage} />
-          <PublicRoute
-            restricted={false}
+          <PrivateRoute
             exact
             path={Routes.PROJECTS_CREATE}
+            component={CreateProject}
+          />
+          <PrivateRoute
+            exact
+            path={Routes.PROJECTS_EDIT + Routes.ID}
             component={CreateProject}
           />
           <PublicRoute
@@ -116,12 +119,6 @@ const Routing = () => {
             path={Routes.NOTFOUND}
             exact
             component={PageNotFound}
-          />
-          <PublicRoute
-            restricted={false}
-            path={Routes.EXAMPLES}
-            exact
-            component={Main}
           />
           <Redirect from="*" to={Routes.NOTFOUND} />
         </Switch>
