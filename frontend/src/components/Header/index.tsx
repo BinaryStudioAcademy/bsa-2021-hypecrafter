@@ -413,7 +413,7 @@ const Header = () => {
           </div>
         </div>
       </Navbar>
-    </div >
+    </div>
   );
 };
 
