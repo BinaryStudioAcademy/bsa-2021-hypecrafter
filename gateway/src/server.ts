@@ -11,7 +11,7 @@ import { log } from './helpers';
 import { initServices } from './services';
 import { SocketController } from './services/socketController';
 
-const { port, environment } = env.app;
+const { port, environment, socketPort } = env.app;
 const app = express();
 
 app.use(cors());
@@ -21,7 +21,7 @@ createConnection().then(() => {
   try {
     const server = createServer();
     const socketController = new SocketController(server);
-    server.listen(3003);
+    server.listen(socketPort);
 
     const repositories = initRepositories();
     const services = initServices(repositories);
