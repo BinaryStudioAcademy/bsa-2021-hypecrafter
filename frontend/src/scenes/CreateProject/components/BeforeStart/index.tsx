@@ -28,7 +28,7 @@ const BeforeStart: FC<Props> = ({ changePage, currentPage }) => {
   );
   const footer = (
     <div className={classes.footer}>
-      <Button onClick={handleChangePage} disable={!checked}>{t('Create Project')}</Button>
+      <Button onClick={handleChangePage} disable={!checked}>{t('Create project')}</Button>
     </div>
   );
 

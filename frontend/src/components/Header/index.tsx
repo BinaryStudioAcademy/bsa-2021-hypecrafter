@@ -136,7 +136,7 @@ const Header = () => {
                 key={it.to}
                 to={it.to}
                 className={classNames(it.className, {
-                  [classes.header_menu_item_active]: pathname === it.to
+                  [classes.header_menu_item_active]: `/${pathname.split('/')[1]}` === it.to
                 })}
                 onClick={handleHideProfileMenu}
               >
