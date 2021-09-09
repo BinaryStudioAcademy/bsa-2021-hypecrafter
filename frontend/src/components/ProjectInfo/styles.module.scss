@@ -13,6 +13,16 @@
   background-color: $color-root-block-background;
   border-radius: 6px;
 
+  .info-block {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+
+    @media screen and (max-width: $breakpoint-xxl) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
   .info-block-entity {
     text-align: center;
 
@@ -27,12 +37,12 @@
     .info-goal-amount {
       display: flex;
       margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
       gap: 5px;
       align-items: center;
       justify-content: center;
       font-family: $font-roboto700;
       font-size: 24px;
-      margin-bottom: 0.4rem;
       background: $color-root-turquoise-gradient;
       background-clip: text;
       -webkit-background-clip: text;

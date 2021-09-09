@@ -2,7 +2,7 @@ import { faThumbsDown, faThumbsUp } from '@fortawesome/free-regular-svg-icons';
 import { faThumbsDown as faThumbsDownFilled, faThumbsUp as faThumbsUpFilled } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FunctionComponent } from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import hypeCoin from '../../assets/HypeCoin.png';
 import { Mark } from '../../common/enums';
 import { calcDaysToGo, calcDonationProgress } from '../../helpers/project';
@@ -52,32 +52,24 @@ const ProjectInfo: FunctionComponent<ProjectInfoProps> = ({
 
   return (
     <Container className={classes['info-block-container']}>
-      <Row>
-        <Col xs={3}>
-          <div className={classes['info-block-entity']}>
-            <p className={classes['info-backers-amount']}>{bakersAmount}</p>
-            <p className={classes['info-backers']}>{t('Backers')}</p>
-          </div>
-        </Col>
-        <Col xs={3}>
-          <div className={classes['info-block-entity']}>
-            <p className={classes['info-goal-amount']}>{donated}<img src={hypeCoin} alt="HypeCoin" /></p>
-            <p className={classes['info-goal']}>{t('Donated')}</p>
-          </div>
-        </Col>
-        <Col xs={3}>
-          <div className={classes['info-block-entity']}>
-            <p className={classes['info-days-amount']}>{daysToGo < 0 ? t('Ended') : daysToGo}</p>
-            <p className={classes['info-days']}>{t('Days to go')}</p>
-          </div>
-        </Col>
-        <Col xs={3}>
-          <div className={classes['info-block-entity']}>
-            <p className={classes['info-backers-amount']}>{involvementIndex}</p>
-            <p className={classes['info-backers']}>{t('Involvement index')}</p>
-          </div>
-        </Col>
-      </Row>
+      <div className={classes['info-block']}>
+        <div className={classes['info-block-entity']}>
+          <p className={classes['info-backers-amount']}>{bakersAmount}</p>
+          <p className={classes['info-backers']}>{t('Backers')}</p>
+        </div>
+        <div className={classes['info-block-entity']}>
+          <p className={classes['info-goal-amount']}>{donated}<img src={hypeCoin} alt="HypeCoin" /></p>
+          <p className={classes['info-goal']}>{t('Donated')}</p>
+        </div>
+        <div className={classes['info-block-entity']}>
+          <p className={classes['info-days-amount']}>{daysToGo < 0 ? t('Ended') : daysToGo}</p>
+          <p className={classes['info-days']}>{t('Days to go')}</p>
+        </div>
+        <div className={classes['info-block-entity']}>
+          <p className={classes['info-backers-amount']}>{involvementIndex}</p>
+          <p className={classes['info-backers']}>{t('Involvement index')}</p>
+        </div>
+      </div>
       <Row>
         <ProgressBarComponent goal={goal} percent={calcDonationProgress(donated, goal)} />
       </Row>
