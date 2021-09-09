@@ -2,6 +2,7 @@ import { combineReducers } from 'redux';
 import { StoreState } from '../common/types';
 import authenticationReducer, { initialState as authenticationInitialState } from '../scenes/Auth/reducer';
 import projectReduser, { initialState as projectInitialState } from '../scenes/CreateProject/reducer';
+import donateReducer, { initialState as donateInitialState } from '../scenes/Donate/reducer';
 import mainPageReducer, { mainPageState } from '../scenes/MainPage/reducer';
 import projectPageReducer, { projectPageState } from '../scenes/ProjectPage/reducer';
 import projectsReducer, { initialState as projectsInitialState } from '../scenes/Projects/reducer';
@@ -29,7 +30,8 @@ const initialState: StoreState = {
   projectPage: projectPageState,
   authentication: authenticationInitialState,
   tags: tagsInitialState,
-  payment: paymentInitialState
+  payment: paymentInitialState,
+  donate: donateInitialState
 };
 
 const rootReducer = combineReducers({
@@ -45,7 +47,8 @@ const rootReducer = combineReducers({
   transactions: transactionsReducer,
   authentication: authenticationReducer,
   tags: tagsReduser,
-  payment: paymentReducer
+  payment: paymentReducer,
+  donate: donateReducer
 });
 
 export { initialState, rootReducer };

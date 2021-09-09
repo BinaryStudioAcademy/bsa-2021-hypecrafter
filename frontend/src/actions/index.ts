@@ -1,5 +1,9 @@
+
 export { facebookAuthAction, googleAuthAction, loginAction, registerUserAction } from '../scenes/Auth/actions';
 export { createProjectAction, getForEditProjectAction } from '../scenes/CreateProject/actions';
+export {
+  executeDonateAction, hideDonateModalAction, showDonateModalAction
+} from '../scenes/Donate/actions';
 export { fetchPopularAndRecommendedProjectsAction, fetchTopics } from '../scenes/MainPage/actions';
 export { addComment, fetchProject, setReaction, setWatch } from '../scenes/ProjectPage/actions';
 export {

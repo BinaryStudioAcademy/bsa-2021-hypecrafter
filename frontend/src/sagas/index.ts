@@ -1,6 +1,7 @@
 import { all } from 'redux-saga/effects';
 import authenticationSaga from '../scenes/Auth/sagas';
 import projectSaga from '../scenes/CreateProject/sagas';
+import donateSaga from '../scenes/Donate/sagas';
 import mainPageSaga from '../scenes/MainPage/sagas';
 import projectPageSaga from '../scenes/ProjectPage/sagas';
 import projectsSaga from '../scenes/Projects/sagas';
@@ -25,6 +26,7 @@ export default function* rootSaga() {
     projectPageSaga(),
     transactionsPageSaga(),
     authenticationSaga(),
-    tagsSaga()
+    tagsSaga(),
+    donateSaga()
   ]);
 }

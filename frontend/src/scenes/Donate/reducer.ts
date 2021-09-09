@@ -11,7 +11,7 @@ export const initialState: DonateState = {
   donateState: 'hide'
 };
 
-export const transactionsReducer = createReducer<DonateState>(initialState, {
+export const donateReducer = createReducer<DonateState>(initialState, {
   [showDonateModalAction.TRIGGER](state: DonateState, action: ShowDonateModalActionTrigger) {
     return {
       ...state,
@@ -45,4 +45,4 @@ export const transactionsReducer = createReducer<DonateState>(initialState, {
   }
 });
 
-export default transactionsReducer;
+export default donateReducer;
