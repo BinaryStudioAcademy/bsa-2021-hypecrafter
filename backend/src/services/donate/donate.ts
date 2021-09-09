@@ -26,12 +26,11 @@ export default class DonateService {
       }
       const currentProject = Object.assign(new Project(), project);
       if (new Date(currentProject.finishDate).getTime() < Date.now()
-      || new Date(currentProject.startDate).getTime() > Date.now()) { 
+      || new Date(currentProject.startDate).getTime() > Date.now()) {
         throw Error("Time for donate is not started or already finished"); }
       if (user.balance < amount) { throw Error("User doesn't have enough money"); }
       await this.#userRepository.deductBalance(userId, amount);
       const donate = this.#donateRepository.createDonate({ amount, user, project: currentProject });
-      console.log(4242, !!donate);
       return !!donate;
     } catch (err) {
       console.log(err);

@@ -9,7 +9,6 @@ const init = ({ donateService }: Services, path: string) => (app: MicroMq) => ap
       async (req) => {
         const success = await donateService
           .createDonate(req.body.amount, req.headers.userId as string, req.body.projectId);
-        console.log(50, success);
         return { success: !!success };
       }
     )
