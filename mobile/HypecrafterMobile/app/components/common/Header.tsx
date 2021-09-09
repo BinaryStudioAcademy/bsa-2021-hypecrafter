@@ -12,12 +12,14 @@ interface Props {
 
 const Header:FC<Props> = ({ navigation }) => {
   const [displayBalance, setDisplayBalance] = useState(true);
+  const [displayAvatar, setDisplayAvatar] = useState(true);
   
   const avatarUrl = 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80';
   const handleUserProfile = () => NavigationService.navigate(Routes.USER);
 
   useEffect(() => {
     if (navigation.state.routeName != Routes.MAIN) setDisplayBalance(false);
+    if (navigation.state.routeName === Routes.USER) setDisplayAvatar(false);
   }, [navigation.state.routeName])
 
 
@@ -31,11 +33,12 @@ const Header:FC<Props> = ({ navigation }) => {
       <View style={displayBalance ? styles.logo : styles.logoAlt}>
         <Image style={styles.logoImg} source={require('../../assets/images/HypeCrafter.png')} />
       </View>
-      <View style={styles.user}>
+      {displayAvatar &&
+      (<View style={styles.user}>
         <TouchableOpacity onPress={handleUserProfile}>
           <Image style={styles.userAvatar} source={{ uri: avatarUrl }} />
         </TouchableOpacity>
-      </View>
+      </View>)}
     </View>
   )
 }
@@ -47,6 +50,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: commonStyles.color.grey,
     position: 'relative',
+    height: 40,
   },
   containerAlt: {
     flexDirection: 'row',
@@ -54,6 +58,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: commonStyles.color.grey,
     position: 'relative',
+    height: 40,
   },
   balance: {
     flex: 1,
