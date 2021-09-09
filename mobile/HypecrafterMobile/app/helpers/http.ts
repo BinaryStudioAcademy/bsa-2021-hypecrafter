@@ -17,14 +17,14 @@ export const logout = async () => {
   const refreshToken = await Storage.get(StorageKeys.REFRESH_TOKEN);
   if (refreshToken) {
     const url = getUrl(HttpMethod.POST, { url: 'auth/token/reject' });
-    const options = getOptions(HttpMethod.POST, { url, params: { refreshToken } });
+    const options = await getOptions(HttpMethod.POST, { url, params: { refreshToken } });
     await fetch(url, options);
   }
   await Storage.remove(StorageKeys.REFRESH_TOKEN);
   await Storage.remove(StorageKeys.ACCESS_TOKEN);
 };
 
-const getInitHeaders = (
+const getInitHeaders = async (
   hasContent = false,
   contentType = 'application/json'
 ) => {
@@ -33,7 +33,7 @@ const getInitHeaders = (
     headers.set(HttpHeader.CONTENT_TYPE, contentType);
   }
 
-  const token = Storage.get(StorageKeys.ACCESS_TOKEN);
+  const token = await Storage.get(StorageKeys.ACCESS_TOKEN);
   if (token) {
     headers.set(HttpHeader.AUTHORIZATION, `Bearer ${token}`);
   }
@@ -41,10 +41,10 @@ const getInitHeaders = (
   return headers;
 };
 
-const getOptions = (method: HttpMethod, { params }: RequestArgs) => {
+const getOptions = async (method: HttpMethod, { params }: RequestArgs) => {
   const isBodyExist = params && method !== HttpMethod.GET;
 
-  const headers = getInitHeaders(isBodyExist);
+  const headers = await getInitHeaders(isBodyExist);
   const body = isBodyExist ? { body: JSON.stringify(params) } : {};
 
   return {
@@ -78,7 +78,7 @@ const getUrl = (method: HttpMethod, { url, params, config }: RequestArgs): strin
 
 const makeRequest = (method: HttpMethod) => async <T>(args: RequestArgs) => {
   const url = getUrl(method, args);
-  const options = getOptions(method, args);
+  const options = await getOptions(method, args);
 
   let result = await fetch(url, options);
 
