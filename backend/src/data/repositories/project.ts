@@ -351,6 +351,20 @@ export class ProjectRepository extends Repository<Project> {
     return project;
   }
 
+  public async getProjectById(id: string) {
+    return this.findOne({ id });
+  }
+
+  public async getUsersByWatсhedProject(projectId: string) {
+    const userProjects = await getRepository(UserProject)
+      .createQueryBuilder('userProject')
+      .select('"userId"')
+      .where(`"projectId" = '${projectId}' AND "isWatched" = 'true'`)
+      .getRawMany();
+
+    return userProjects;
+  }
+
   public async getForEdit(id: string): Promise<Project> {
     const selectQuery = `
       project."id",

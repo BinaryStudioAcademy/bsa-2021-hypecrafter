@@ -38,6 +38,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
     color: 'white',
+    width: '95%'
   },
   answer: {
     fontSize: 14,

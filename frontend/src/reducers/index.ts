@@ -13,10 +13,12 @@ import paymentReducer, { initialState as paymentInitialState } from '../scenes/W
 import transactionsReducer, { initialState as transactionsInitialState } from '../scenes/Wallet/Transactions/reducer';
 import authReducer, { authState } from './auth';
 import categoriesReducer, { initialState as categoriesInitialState } from './categies';
+import notificationsReducer, { initialState as notificationsState } from './notifications';
 import { initialState as tagsInitialState, tagsReduser } from './tags';
 import usersReducer, { initialState as usersInitialState } from './users';
 
 const initialState: StoreState = {
+  notifications: notificationsState,
   transactions: transactionsInitialState,
   mainPage: mainPageState,
   userProfile: userProfileInitialState,
@@ -45,7 +47,8 @@ const rootReducer = combineReducers({
   transactions: transactionsReducer,
   authentication: authenticationReducer,
   tags: tagsReduser,
-  payment: paymentReducer
+  payment: paymentReducer,
+  notifications: notificationsReducer
 });
 
 export { initialState, rootReducer };

@@ -12,7 +12,9 @@ import { wrap } from '../../helpers';
 import { Services } from '../../services';
 
 const init = ({ projectService }: Services, path: string) => (app: MicroMq) => app
-  .post(path, wrap<Empty, CreateProject, CreateProject, Empty>((req) => projectService.createProject(req.body)))
+  .post(path, wrap<Empty, CreateProject, CreateProject, Empty>((req) => projectService.createProject({
+    ...req.body, authorId: req.headers.userId
+  } as CreateProject)))
   .get(path, wrap<Empty, Project[], {
     sort: ProjectsSort;
     filter: ProjectsFilter;

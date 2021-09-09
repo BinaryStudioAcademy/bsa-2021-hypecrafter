@@ -27,12 +27,12 @@ import UserModal from '../UserModal';
 const routesWitoutHeader = [Routes.LOGIN, Routes.SIGNUP];
 
 const Routing = () => {
-  const { authFetchUserAction, closeModalAction } = useAction();
+  const { authFetchUserAction, closeModalAction, getNotificationsAction } = useAction();
   const { id } = useTypedSelector(({ userProfile }) => userProfile);
   const { isLoading } = useTypedSelector(({ auth }) => auth);
   const tokens = getAccessToken();
   const { pathname } = useLocation();
-  const { isAuthorized } = useAuth();
+  const { isAuthorized, id: currentUserId } = useAuth();
   const [showModal, setShowModal] = useState(false);
 
   const closeModalHandler = () => {
@@ -44,6 +44,12 @@ const Routing = () => {
     if (!isAuthorized && tokens) authFetchUserAction();
     if (id) setShowModal(true);
   }, [authFetchUserAction, id, isAuthorized, tokens]);
+
+  useEffect(() => {
+    if (isAuthorized) {
+      getNotificationsAction(currentUserId as string);
+    }
+  }, [isAuthorized]);
 
   return (
     <>

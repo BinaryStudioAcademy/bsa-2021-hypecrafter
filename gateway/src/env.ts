@@ -5,6 +5,7 @@ dotenv.config();
 
 export const env = {
   app: {
+    origin: getEnv('ORIGIN'),
     port: getEnv('PORT') || 3001,
     environment: getEnv('NODE_ENV'),
     rabbit: {
