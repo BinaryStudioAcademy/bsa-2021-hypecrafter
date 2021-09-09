@@ -23,10 +23,10 @@ const Layout: FC<Props> = ({ header, body, footer, currentPage, setCurrentPage }
     { page: CurrentPage.STORY, label: 'Story' },
     { page: CurrentPage.TEAM, label: 'Team' },
     { page: CurrentPage.FUNDING, label: 'Funding' },
-    { page: CurrentPage.RECOMMENDATIONS, label: 'Recommendations' },
     { page: CurrentPage.PRIVILEGES, label: 'Privileges' },
     { page: CurrentPage.FAQ, label: 'FAQ' },
-    { page: CurrentPage.SETTINGS, label: 'Settings' }
+    { page: CurrentPage.SETTINGS, label: 'Settings' },
+    { page: CurrentPage.RECOMMENDATIONS, label: 'Recommendations' },
   ];
   return (
     <div className={classes.root}>
@@ -46,9 +46,9 @@ const Layout: FC<Props> = ({ header, body, footer, currentPage, setCurrentPage }
             </div>
           )}
           </aside>
-          <article>
+          <article className={classes.content}>
             {body}
-            <footer>{footer}</footer>
+            <div className={classes.footer}>{footer}</div>
           </article>
         </section>
       </div>

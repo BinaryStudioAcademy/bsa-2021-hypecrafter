@@ -12,8 +12,8 @@ declare type LocaleKeys =
  | 'Sign In with Google'
  | 'Password is too short (minimum is 6 characters)'
  | 'Do you have a good ...'
- | 'Create Project'
- | 'Help Project'
+ | 'Create project'
+ | 'Help project'
  | 'Popular startups'
  | 'Recommended for you'
  | 'Interesting topics'
@@ -135,7 +135,7 @@ declare type LocaleKeys =
  | 'Search...'
  | 'View account'
  | 'Edit profile'
- | 'Create project'
+ | 'Save'
  | 'Log out'
  | 'Backers'
  | 'Donated'
@@ -229,4 +229,6 @@ declare type LocaleKeys =
  | 'Perhaps you do not have enough money on your balance or the donation time is over'
  | 'Donate was failed'
  | 'Donate was successful'
- | 'Return to Project Page';
+ | 'Return to Project Page'
+ | 'Frequently asked questions'
+ | 'Comment can not be empty';

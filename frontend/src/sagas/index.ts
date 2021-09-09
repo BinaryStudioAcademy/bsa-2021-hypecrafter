@@ -10,6 +10,7 @@ import userProfileSaga from '../scenes/UserPage/sagas';
 import transactionsPageSaga from '../scenes/Wallet/Transactions/sagas';
 import authSaga from './auth';
 import categoriesSaga from './categories';
+import searchSaga from './search';
 import notificationSaga from './notifications';
 import tagsSaga from './tags';
 import usersSaga from './users';
@@ -24,6 +25,7 @@ export default function* rootSaga() {
     usersSaga(),
     categoriesSaga(),
     projectsSaga(),
+    searchSaga(),
     trendsPageSaga(),
     projectPageSaga(),
     transactionsPageSaga(),

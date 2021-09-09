@@ -20,8 +20,10 @@ export default class UserService {
     return this.#userRepository.getById(id);
   }
 
-  public getCurrentUser(id: string) {
-    return this.#userRepository.getCurrentUser(id);
+  public async getCurrentUser(id: string) {
+    const { email } = await this.#userRepository.getEmailById(id);
+    const user = await this.#userRepository.getByEmail(email);
+    return user;
   }
 
   public async registerUser({ data, tokens }: RegisterReqBody) {

@@ -66,11 +66,11 @@ const MainPage: FC = () => {
     return (
       <>
         <NavLink to={createProjectLink} style={style}>
-          <Button type="button">{t('Create Project')}</Button>
+          <Button type="button">{t('Create project')}</Button>
         </NavLink>
         <NavLink to={HelpProjectLink} style={style}>
           <Button type="button" variant="primary" outline>
-            {t('Help Project')}
+            {t('Help project')}
           </Button>
         </NavLink>
       </>

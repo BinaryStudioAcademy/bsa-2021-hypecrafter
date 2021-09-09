@@ -12,7 +12,7 @@ export const initActions = (app: MicroMq, services: Services) => {
   app.action(ActionType.GET_USERNAME_BY_ID, async (meta, res) => {
     const { userId } = meta as { userId: string };
     const user = await services.userService.getById(userId);
-    const userName = `${user.firstName} ${user.lastName}`;
+    const userName = `${user?.firstName} ${user?.lastName}`;
     res.json({ userName });
   });
 

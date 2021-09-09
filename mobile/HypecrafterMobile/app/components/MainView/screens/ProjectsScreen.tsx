@@ -42,6 +42,7 @@ const styles = StyleSheet.create({
   wrapper: {
     backgroundColor: commonStyles.color.background,
     alignItems: 'center',
+    paddingVertical: 6,
   },
 });
 

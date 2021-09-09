@@ -32,6 +32,7 @@ export { clearTransactionsStateAction, fetchTransactionsPageAction } from '../sc
 export { authFetchUserAction } from './auth';
 export { getCategoriesAction } from './categories';
 export { getNotificationsAction, setNewNotificationsAction, setNotificationIsReadAction } from './notifications';
+export { searchAction } from './search';
 export { getTagsAction } from './tags';
 export { getUsersAction } from './users';
 

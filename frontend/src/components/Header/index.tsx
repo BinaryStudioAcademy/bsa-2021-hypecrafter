@@ -1,12 +1,13 @@
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { ChangeEvent, useEffect, useState } from 'react';
+import classNames from 'classnames';
+import { ChangeEvent, useEffect, useMemo, useState } from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import hypeCoin from '../../assets/HypeCoin.png';
 import { Routes, SocketActions } from '../../common/enums';
 import { logout } from '../../helpers/http';
-import { useAction, useAuth, useBalance, useScroll, useTypedSelector, useWindowResize } from '../../hooks';
+import { useAction, useAuth, useBalance, useDebounce, useScroll, useTypedSelector, useWindowResize } from '../../hooks';
 import { useLocalization } from '../../providers/localization';
 import { useSockets } from '../../providers/sockets';
 import Avatar from '../Avatar';
@@ -16,37 +17,57 @@ import Link from '../Link';
 import Logo from '../Logo';
 import NotificationPopover from '../NotificationsPopover';
 import OpenUserModal from '../OpenUserModalOption';
+import Popover from '../Popover';
+import SearchResult from '../SearchResult';
 import LanguageSwitcher from '../SwitchLanguageOption/LanguageSwitcher';
 import classes from './styles.module.scss';
+import { getLinks } from './utils';
+
+const SEARCHBAR_DEBOUNCE_TIMEOUT = 500;
+const OFFSET = 30;
 
 const Header = () => {
-  const { t } = useLocalization();
   const [text, setText] = useState('');
   const [isMobileMenu, setMobileMenu] = useState(false);
   const [isProjectsMenu, setProjectsMenu] = useState(false);
   const [isProfileMenu, setProfileMenu] = useState(false);
   const [isVisibleOnScroll, setVisibleOnScroll] = useState(false);
+  const { pathname } = useLocation();
 
+  const { t } = useLocalization();
   const { addSocketHandler, socket } = useSockets();
-  const { setNewNotificationsAction } = useAction();
-
-  const store = useTypedSelector(
-    ({ notifications: { notifications } }) => ({
-      notifications
-    })
-  );
-  const { notifications } = store;
-
-  useEffect(() => {
-    if (socket) {
-      addSocketHandler(SocketActions.NOTIFICATION, (notification) => {
-        setNewNotificationsAction(notification);
-      });
-    }
-  }, [socket]);
-
+  const { setNewNotificationsAction, searchAction } = useAction();
+  const { isAuthorized } = useAuth();
   const { isMobile } = useWindowResize();
+  const store = useTypedSelector(({ search: { searchResult, isLoading }, notifications: { notifications } }) => ({
+    searchResult,
+    isLoading,
+    notifications
+  }));
+  const { firstName, lastName } = useTypedSelector(({ auth }) => (
+    !auth?.user
+      ? {
+        firstName: '',
+        lastName: ''
+      }
+      : auth.user
+  ));
+  const { searchResult, notifications } = store;
   const { isBalance, balance } = useBalance();
+
+  const navLinks = useMemo(() => getLinks(t), [t]);
+
+  const debouncedSearchTerm = useDebounce(text, SEARCHBAR_DEBOUNCE_TIMEOUT);
+
+  const scrollOverLimitCallback = () => setVisibleOnScroll(false);
+  const scrollUnderLimitCallback = () => setVisibleOnScroll(true);
+
+  useScroll(OFFSET, { scrollOverLimitCallback, scrollUnderLimitCallback });
+
+  const handleHideProfileMenu = () => {
+    setProfileMenu(false);
+    setMobileMenu(false);
+  };
 
   const handleProfileMenu = () => {
     if (!isProfileMenu) {
@@ -73,15 +94,22 @@ const Header = () => {
     setText(e.target.value);
   };
 
-  const scrollOverLimitCallback = () => setVisibleOnScroll(false);
-  const scrollUnderLimitCallback = () => setVisibleOnScroll(true);
+  useEffect(
+    () => {
+      if (debouncedSearchTerm) {
+        searchAction(text);
+      }
+    },
+    [debouncedSearchTerm]
+  );
 
-  useScroll(30, { scrollOverLimitCallback, scrollUnderLimitCallback });
-
-  const handleHideProfileMenu = () => {
-    setProfileMenu(false);
-    setMobileMenu(false);
-  };
+  useEffect(() => {
+    if (socket) {
+      addSocketHandler(SocketActions.NOTIFICATION, (notification) => {
+        setNewNotificationsAction(notification);
+      });
+    }
+  }, [socket]);
 
   return (
     <div
@@ -103,39 +131,38 @@ const Header = () => {
           <Nav
             className={classes.desktop_header_menu}
           >
-            <NavLink
-              to={Routes.HOME}
-              className={classes.header_menu_item}
-              activeClassName={classes.header_menu_item_active}
-              onClick={handleHideProfileMenu}
-            >
-              {t('Home')}
-            </NavLink>
-            <NavLink
-              to={Routes.PROJECTS}
-              className={classes.header_menu_item}
-              onClick={handleHideProfileMenu}
-            >
-              {t('Projects')}
-            </NavLink>
-            <NavLink
-              className={`
-                ${classes.header_menu_item}
-                ${classes.desktop_trends}
-              `}
-              to={Routes.TRENDS}
-              onClick={handleHideProfileMenu}
-            >
-              {t('Trends')}
-            </NavLink>
+            {navLinks.map(it => (
+              <NavLink
+                key={it.to}
+                to={it.to}
+                className={classNames(it.className, {
+                  [classes.header_menu_item_active]: `/${pathname.split('/')[1]}` === it.to
+                })}
+                onClick={handleHideProfileMenu}
+              >
+                {it.label}
+              </NavLink>
+            ))}
           </Nav>
         </div>
         <div className={classes.header_right}>
           <div className={classes.header_search}>
             <FontAwesomeIcon icon={faSearch} className={classes.header_search_icon} />
-            <Input type="search" value={text} placeholder={t('Search...')} onChange={handleSearch} />
+            <Popover
+              trigger={(
+                <Input type="search" value={text} placeholder={t('Search...')} onChange={handleSearch} />
+              )}
+              placement="bottom-end"
+              id="id"
+              rootClose
+            >{() => (
+              <div className={classes.searchResult}>
+                {searchResult.map(result => (<SearchResult key={result.id} project={result} />))}
+              </div>
+            )}
+            </Popover>
           </div>
-          {useAuth().isAuthorized
+          {isAuthorized
             ? (
               <Nav
                 className={classes.desktop_header_user_menu}
@@ -156,7 +183,7 @@ const Header = () => {
                   >
                     <Avatar
                       width={35}
-                      userName="Hype Coin"
+                      userName={`${firstName} ${lastName}`}
                       className={classes.header_profile_avatar}
                     />
                   </Nav.Link>
@@ -299,7 +326,7 @@ const Header = () => {
           >
             <Avatar
               width={35}
-              userName="Hype Coin"
+              userName={`${firstName} ${lastName}`}
               className={classes.header_profile_avatar}
             />
           </Nav.Link>

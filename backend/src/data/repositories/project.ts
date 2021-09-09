@@ -27,7 +27,7 @@ export class ProjectRepository extends Repository<Project> {
         project."id",
         goal,
         project.imageUrl,
-        category.name AS "category",
+        category.name AS "categoryname",
         array_agg(tag.name) AS "tags"
       `
       )
@@ -171,13 +171,11 @@ export class ProjectRepository extends Repository<Project> {
         .select(`
           SUM(amount) AS donated,
           "projectId"
-        `
-          )
-          .from('donate', 'donate')
-          .groupBy('"projectId"'),
-        'dn',
-        'dn."projectId" = project.id'
-      )
+        `)
+        .from('donate', 'donate')
+        .groupBy('"projectId"'),
+      'dn',
+      'dn."projectId" = project.id')
       .leftJoin(
         (subQuery) => subQuery
           .select(
@@ -375,7 +373,7 @@ export class ProjectRepository extends Repository<Project> {
       project."dribbleUrl",
       project.content,
       project.region,
-      "FAQ",
+      "faqs",
       description,
       category.id AS "category",
       project.name,
@@ -397,7 +395,7 @@ export class ProjectRepository extends Repository<Project> {
               'question', question,
               'answer', answer
             )
-          ) AS "FAQ",
+          ) AS "faqs",
           "projectId"
         `)
         .from('faq', 'faq')
@@ -444,26 +442,32 @@ export class ProjectRepository extends Repository<Project> {
       .leftJoin(subQuery => subQuery
         .select(`
           jsonb_build_object(
-            'id', team.id,
-            'name', team.name,
-            'chats', jsonb_agg(
-               jsonb_build_object(
-                 'id', chats.id,
-                 'donator', jsonb_build_object(
-                   'id', donator.id,
-                   'firstName', donator.firstName,
-                   'lastName', donator.lastName,
-                   'email', donator.email
-                 )
-               )
-             )
+            'id', "team".id,
+            'name', "team".name,
+            'teamUsers', "teamUsers"
           ) AS "team",
           "projectId"
         `)
         .from('team', 'team')
-        .leftJoin('team.chats', 'chats')
-        .leftJoin('chats.donator', 'donator')
-        .groupBy('"projectId", team.id'), 'te', 'te."projectId" = project.id')
+        .leftJoin(subQuery => subQuery
+          .select(`
+            jsonb_agg(
+              jsonb_build_object(
+                'id', "team_users".id,
+                 'user', jsonb_build_object(
+                   'id', user.id,
+                   'firstName', user.firstName,
+                   'lastName', user.lastName,
+                   'email', user.email
+                 )
+              )
+            ) AS "teamUsers",
+            "teamId"
+          `)
+          .from('team_users', 'team_users')
+          .leftJoin('team_users.user', 'user')
+          .groupBy('"teamId"'), 'fq', 'fq."teamId" = team.id')
+        .groupBy('"projectId", team.id, "teamUsers"'), 'te', 'te."projectId" = project.id')
       .where(`project."id" = '${id}'`);
     const project = await projectQuery.getRawOne();
 
@@ -584,21 +588,19 @@ export class ProjectRepository extends Repository<Project> {
         CASE WHEN up."isFavorite" IS NULL THEN false ELSE true END AS "isFavorite",
         CASE WHEN dnu."projectId" IS NULL THEN false ELSE true END AS "isDonated"
         ` : ''}
-      `)
+      `
+      )
       .leftJoin('project.category', 'category')
       .leftJoin(subQuery => subQuery
         .select(`
           SUM(amount) AS donated,
           COUNT("userId") AS "bakersAmount",
           "projectId"
-        `
-          )
-          .from('donate', 'donate')
-          .groupBy('"projectId"'),
-        'dn',
-        'dn."projectId" = project.id'
-      )
-      .leftJoin('project.category', 'category')
+        `)
+        .from('donate', 'donate')
+        .groupBy('"projectId"'),
+      'dn',
+      'dn."projectId" = project.id')
       .leftJoin(
         (subQuery) => subQuery
           .select(
@@ -730,7 +732,7 @@ export class ProjectRepository extends Repository<Project> {
       .where('project.id = :id', { id })
       .getRawOne();
   }
-      
+
   // eslint-disable-next-line consistent-return
   public getDonationInformationDuringTime(id: string, timeInterval: TimeInterval) {
     const date = new Date();
@@ -849,7 +851,7 @@ export class ProjectRepository extends Repository<Project> {
           dislikes,
           project."imageUrl",
           project."isActive",
-          CASE 
+          CASE
             WHEN project."isActive" IS FALSE AND donated - goal <= 0
               THEN true
             WHEN project."isActive" IS FALSE AND donated - goal > 0
@@ -905,14 +907,15 @@ export class ProjectRepository extends Repository<Project> {
       .where(
         `
           project."createdAt" > :start_at
-          ${stringValue ? `AND ARRAY['${stringValue}'] && tags` : ''} 
-          ${category ? `AND category.name='${category}'` : ''} 
+          ${stringValue ? `AND ARRAY['${stringValue}'] && tags` : ''}
+          ${category ? `AND category.name='${category}'` : ''}
           ${region ? `AND project.region='${region}'` : ''}
         `,
         {
           start_at: date
         }
-      );
+      )
+      .limit(3);
 
     return query.execute();
   }

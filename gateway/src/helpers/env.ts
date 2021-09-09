@@ -6,6 +6,7 @@ type ProcessEnvKey =
   | 'FACEBOOK_APP_ID'
   | 'FACEBOOK_APP_SECRET'
   | 'GOOGLE_CLIENT_ID'
-  | 'ORIGIN';
+  | 'ORIGIN'
+  | 'SOCKET_PORT';
 
 export const getEnv = (key: ProcessEnvKey) => process.env[key];

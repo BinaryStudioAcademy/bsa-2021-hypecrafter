@@ -1,6 +1,7 @@
 import { AuthState } from '../../../reducers/auth';
 import { CategoriesState } from '../../../reducers/categies';
 import { NotificationsState } from '../../../reducers/notifications';
+import { SearchState } from '../../../reducers/search';
 import { TagsState } from '../../../reducers/tags';
 import { UsersState } from '../../../reducers/users';
 import { AuthenticationState } from '../../../scenes/Auth/reducer';
@@ -28,6 +29,7 @@ export interface StoreState {
   projectPage: ProjectPageState;
   transactions: TransactionsState
   authentication: AuthenticationState;
-  payment: PaymentState,
-  donate: DonateState
+  donate: DonateState,
+  payment: PaymentState;
+  search:SearchState
 }

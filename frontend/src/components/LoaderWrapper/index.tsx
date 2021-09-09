@@ -7,11 +7,18 @@ interface Props {
   isLoading: boolean;
   variant?: 'default' | 'page';
   type?: 'logo' | 'spinner';
+  isTransparent?: boolean;
 }
 
 const Spinner = () => <div className={classes.spinner} />;
 
-const LoaderWrapper: FC<Props> = ({ isLoading, variant = 'default', children, type = 'logo' }) => (
+const LoaderWrapper: FC<Props> = ({
+  isLoading,
+  variant = 'default',
+  children,
+  type = 'logo',
+  isTransparent = false,
+}) => (
   <>
     {isLoading && (
       <div
@@ -23,7 +30,7 @@ const LoaderWrapper: FC<Props> = ({ isLoading, variant = 'default', children, ty
         {type === 'logo' ? <Logo /> : <Spinner />}
       </div>
     )}
-    {!isLoading && children}
+    {(!isLoading || isTransparent) && children}
   </>
 );
 

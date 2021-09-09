@@ -27,12 +27,12 @@ const CreateProject = () => {
     content: '',
     goal: 0,
     region: '',
-    team: { name: '', chats: [] },
+    team: { name: '', teamUsers: [] },
     imageUrl: '',
     videoUrl: '',
     projectTags: [],
     donatorsPrivileges: [],
-    faqs: []
+    faqs: [],
   };
   const { id: userId } = useAuth();
   const { id } = useParams<{ id: string }>();
@@ -54,7 +54,6 @@ const CreateProject = () => {
   };
   const handleChangeValue = (name: ProjectKeys, value: any) => {
     setNewProject({ ...newProject, [name]: value });
-    console.log(newProject);
   };
   useEffect(() => {
     if (id) getForEditProjectAction(id, userId);
@@ -65,7 +64,8 @@ const CreateProject = () => {
       project.finishDate = new Date(project.finishDate || '');
       project.projectTags = project.projectTags || [];
       project.donatorsPrivileges = project.donatorsPrivileges || [];
-      project.team = project.team || { name: '', chats: [] };
+      project.team = project.team || { name: '', teamUsers: [] };
+      project.team.teamUsers = project.team.teamUsers || [];
       project.faqs = project.faqs || [];
       setNewProject(project);
     }
