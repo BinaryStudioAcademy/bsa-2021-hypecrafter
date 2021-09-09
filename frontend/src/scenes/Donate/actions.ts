@@ -17,7 +17,6 @@ export const executeDonateAction = createRoutine(WalletActions.EXECUTE_DONATE, {
   success: (success: boolean) => ({ success })
 });
 
-export type HideDonateModalActionTrigger = ReturnType<typeof hideDonateModalAction.trigger>;
 export type ShowDonateModalActionTrigger = ReturnType<typeof showDonateModalAction.trigger>;
 export type ExecuteDonateActionTrigger = ReturnType<typeof executeDonateAction.trigger>;
 export type ExecuteDonateActionSuccess = ReturnType<typeof executeDonateAction.success>;
