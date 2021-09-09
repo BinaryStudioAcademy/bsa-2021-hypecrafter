@@ -7,6 +7,7 @@ import { colors } from '../../common/styles/colors';
 import { calcDaysToGo, calcDonationProgress } from '../../helpers/project';
 import { useTypedSelector } from '../../hooks/store';
 import { useAction } from '../../hooks/useAction';
+import { useAuth } from '../../hooks/useAuth';
 import ProgressBar from '../common/ProgressBar';
 import CommentsView from './screens/Comments';
 import FAQView from './screens/FAQ';
@@ -14,6 +15,7 @@ import StoryView from './screens/Story';
 
 const ProjectView: FC = () => {
   const navigation = useNavigation();
+  const { id: userId } = useAuth();
   const [screenNum, setScreenNum] = useState(1)
   const { fetchProject, setWatch, setReaction } = useAction();
   const { project, isLoading } = useTypedSelector(
@@ -38,9 +40,9 @@ const ProjectView: FC = () => {
   const handleWatch = () => {
     setWatch({ isWatched: !project.isWatched, projectId: project.id });
   };
-
+  console.log(userId)
   useEffect(() => {
-    fetchProject({ id: navigation.getParam('id'), userId: undefined });
+    fetchProject({ id: navigation.getParam('id'), userId });
   }, []);
   return (
     <View style={{ flexGrow: 1 }}>
