@@ -15,6 +15,5 @@ export enum Routes {
   EXAMPLES = '/examples',
   PAYMENT = '/payment',
   PAYMENT_SUCCESS = '/payment-success',
-  ID = '/:id',
-  PROJECTS_EDIT = 'projects/edit'
+  ID = '/:id'
 }

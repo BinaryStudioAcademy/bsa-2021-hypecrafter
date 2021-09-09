@@ -205,7 +205,7 @@ declare type LocaleKeys =
  | 'Amount'
  | 'Return to Main Page'
  | 'Pay'
- | 'Upcoming'
+ | 'Upcoming projects'
  | 'Notifications'
  | 'Manage Preferences'
  | 'No more notifications'

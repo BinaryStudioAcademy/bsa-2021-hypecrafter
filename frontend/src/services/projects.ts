@@ -7,6 +7,7 @@ interface GetProjectsProps {
   filter: ProjectsFilter;
   categories: ProjectsCategories[];
   userId?: string;
+  upcoming: boolean;
 }
 
 export const getPopularProjectsByCategory = async (category: string) => {
@@ -20,15 +21,26 @@ export const getPopularProjectsByCategory = async (category: string) => {
   return projects;
 };
 
-export const getProjects = async ({ sort, filter, categories, userId }: GetProjectsProps): Promise<Project[]> => {
+export const getProjects = async ({
+  sort,
+  filter,
+  categories,
+  userId,
+  upcoming
+}: GetProjectsProps): Promise<Project[]> => {
   let projects: Project[];
 
   const stringifiedCategories = JSON.stringify(categories);
 
   if (userId) {
-    projects = await api.get({ url: 'projects', params: { sort, filter, categories: stringifiedCategories, userId } });
+    projects = await api.get({
+      url: 'projects',
+      params: { sort, filter, categories: stringifiedCategories, upcoming, userId } });
   } else {
-    projects = await api.get({ url: 'projects', params: { sort, filter, categories: stringifiedCategories } });
+    projects = await api.get({
+      url: 'projects',
+      params: { sort, filter, upcoming, categories: stringifiedCategories }
+    });
   }
 
   return projects;

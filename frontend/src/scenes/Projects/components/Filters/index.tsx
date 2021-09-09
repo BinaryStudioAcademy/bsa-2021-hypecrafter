@@ -3,11 +3,12 @@ import {
   ProjectsFilter,
   ProjectsSort
 } from 'hypecrafter-shared/enums';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Container, Form } from 'react-bootstrap';
 import { Controller, useForm } from 'react-hook-form';
 import MultiSelect from '../../../../components/MultiSelect';
 import Select from '../../../../components/Select';
+import Checkbox from '../../../../components/Checkbox';
 import { useAction, useAuth, useTypedSelector } from '../../../../hooks';
 import { useLocalization } from '../../../../providers/localization';
 import Statistic from '../Statistic';
@@ -22,6 +23,7 @@ interface FilterFormData {
   sort: ProjectsSort;
   filter: ProjectsFilter;
   categories: CategoriesType[];
+  upcoming: boolean;
 }
 
 const Filters = () => {
@@ -31,17 +33,20 @@ const Filters = () => {
     filterCategoriesProjectsAction,
     filterProjectsAction,
     sortProjectsAction,
+    upcomingProjectsAction
   } = useAction();
   const {
     sort: sortValue,
     filter: filterValue,
-    categories: categoriesValue,
+    categories: categoriesValue
   } = useTypedSelector((state) => state.projects.modificators);
+  const [getUpcomingProjects, setUpcomingProjects] = useState(false);
   const { register, getValues, setValue, control } = useForm<FilterFormData>({
     defaultValues: {
       filter: filterValue,
       sort: sortValue,
       categories: [],
+      upcoming: false
     },
   });
 
@@ -56,8 +61,7 @@ const Filters = () => {
     { value: ProjectsFilter.ALL, text: t('All') },
     { value: ProjectsFilter.FAVORITE, text: t('Favorite') },
     { value: ProjectsFilter.INVESTED, text: t('Invested') },
-    { value: ProjectsFilter.OWN, text: t('Own') },
-    { value: ProjectsFilter.UPCOMING, text: t('Upcoming') }
+    { value: ProjectsFilter.OWN, text: t('Own') }
   ];
 
   const categoriesOptions = [
@@ -82,6 +86,7 @@ const Filters = () => {
     setValue('sort', sortValue);
     setValue('filter', filterValue);
     setValue('categories', categoriesOptions.filter((category) => categoriesValue.includes(category.value)));
+    setValue('upcoming', getUpcomingProjects);
   }, [sortValue, filterValue, JSON.stringify(categoriesValue)]);
 
   const onChange = () => {
@@ -133,6 +138,17 @@ const Filters = () => {
             />
           )}
         />
+        <div className={classes.upcoming}>
+          <Checkbox
+            id="upcomingProjects"
+            label={t('Upcoming projects')}
+            value={getUpcomingProjects}
+            onChange={() => {
+              setUpcomingProjects(!getUpcomingProjects);
+              upcomingProjectsAction(!getUpcomingProjects);
+            }}
+          />
+        </div>
       </Form>
       <Statistic />
     </Container>

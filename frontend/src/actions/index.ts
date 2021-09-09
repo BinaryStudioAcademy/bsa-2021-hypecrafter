@@ -6,7 +6,8 @@ export {
   fetchProjectsAction,
   filterCategoriesProjectsAction,
   filterProjectsAction,
-  sortProjectsAction
+  sortProjectsAction,
+  upcomingProjectsAction
 } from '../scenes/Projects/actions';
 export {
   fetchCategories,
