@@ -7,6 +7,7 @@ export const env = {
   app: {
     origin: getEnv('ORIGIN'),
     port: getEnv('PORT') || 3001,
+    socketPort: getEnv('SOCKET_PORT'),
     environment: getEnv('NODE_ENV'),
     rabbit: {
       url: getEnv('RABBIT_URL') || 'amqp://localhost'
