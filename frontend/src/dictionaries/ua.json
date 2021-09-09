@@ -210,6 +210,10 @@
     "hypeCoins to": "hypeCoins для",
     "achieved goal": "досяг цілі",
     "Fundraising time for": "Термін збору коштів для",
-    "is over": "завершено"
+    "is over": "завершено",
+    "Global Statistics": "Загальна статистика",
+    "Donation Statistics": "Статистика донатів",
+    "Export": "Експортувати",
+    "No data": "Немає даних"
   }
 }
