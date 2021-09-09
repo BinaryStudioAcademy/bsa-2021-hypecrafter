@@ -46,9 +46,9 @@ const Layout: FC<Props> = ({ header, body, footer, currentPage, setCurrentPage }
             </div>
           )}
           </aside>
-          <article>
+          <article className={classes.content}>
             {body}
-            <footer>{footer}</footer>
+            <div className={classes.footer}>{footer}</div>
           </article>
         </section>
       </div>
