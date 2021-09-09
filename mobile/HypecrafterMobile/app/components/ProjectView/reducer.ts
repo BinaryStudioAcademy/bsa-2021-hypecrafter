@@ -2,11 +2,17 @@ import { Mark } from '../../common/enums';
 import { Mark as MarkType, ProjectPage } from '../../common/types';
 import { createReducer } from '../../helpers';
 import type {
+  AddCommentSuccessActionType,
   FetchProjectSuccessActionType,
   SetReactionSuccessActionType,
   SetWatchSuccessActionType
 } from './actions';
-import { fetchProject, setReaction, setWatch } from './actions';
+import {
+  addComment,
+  fetchProject,
+  setReaction,
+  setWatch
+} from './actions';
 
 export interface ProjectPageState {
   isLoading: boolean;
@@ -17,7 +23,7 @@ export interface ProjectPageState {
 export const projectPageState: ProjectPageState = {
   isLoading: false,
   project: {} as ProjectPage,
-  isInputLoading: false
+  isInputLoading: false,
 };
 
 const projectPageReducer = createReducer<ProjectPageState>(projectPageState, {
@@ -64,6 +70,28 @@ const projectPageReducer = createReducer<ProjectPageState>(projectPageState, {
     return {
       ...state,
       isLoading: false
+    };
+  },
+  [addComment.TRIGGER](state) {
+    return {
+      ...state,
+      isInputLoading: true
+    };
+  },
+  [addComment.SUCCESS](state, action: AddCommentSuccessActionType) {
+    return {
+      ...state,
+      isInputLoading: false,
+      project: {
+        ...state.project,
+        projectComments: [...state.project.projectComments, action.payload]
+      }
+    };
+  },
+  [addComment.FAILURE](state) {
+    return {
+      ...state,
+      isInputLoading: false
     };
   },
 });

@@ -1,6 +1,7 @@
 import { faBell } from '@fortawesome/free-regular-svg-icons';
 import { faCircle, faSlidersH } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FC } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Routes } from '../../common/enums';
 import { NotificationType } from '../../common/types/notification';
@@ -14,10 +15,10 @@ interface Props {
   notifications: Array<NotificationType>;
 }
 
-const NotificationPopover = (props: Props) => {
-  const { notifications } = props;
-
+const NotificationPopover: FC<Props> = ({ notifications = [] }) => {
   const { t } = useLocalization();
+
+  console.log('>>>>>>>>>>>>>>', notifications);
 
   return (
     <div>

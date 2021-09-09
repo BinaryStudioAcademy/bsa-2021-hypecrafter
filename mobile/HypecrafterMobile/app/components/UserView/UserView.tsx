@@ -1,20 +1,21 @@
 import React, { useEffect } from 'react';
-import { FlatList, Image, ListRenderItem, Pressable, SafeAreaView, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { FlatList, Image, ListRenderItem, SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/FontAwesome5';
-import { Project } from '../../common/types';
-import { useAction, useTypedSelector } from '../../hooks';
-import commonStyles from '../../styles/common';
-import NavigationService from '../../navigation';
-import ProjectCard from '../common/ProjectCard';
 import { Routes } from '../../common/enums';
+import { Project } from '../../common/types';
+import { logout } from '../../helpers';
+import { useAction, useTypedSelector } from '../../hooks';
+import NavigationService from '../../navigation';
+import commonStyles from '../../styles/common';
+import ProjectCard from '../common/ProjectCard';
 
 const renderItem: ListRenderItem<Project> = ({ item }) => (
   <ProjectCard project={item} userPage={true} />
 );
 
 const UserView = () => {
-  const store = useTypedSelector(({ userPage: { item, isLoading }, mainPage: {popular} }) => ({
+  const store = useTypedSelector(({ userPage: { item, isLoading }, mainPage: { popular } }) => ({
     userPage: item,
     popularStartups: popular,
     isLoading,
@@ -24,9 +25,10 @@ const UserView = () => {
   const avatarUrl = 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80';
 
   const { userPage, isLoading, popularStartups } = store;
-  
+
   const handleLogout = () => {
     logoutAction();
+    logout();
     NavigationService.navigate(Routes.AUTH);
   }
 
@@ -38,7 +40,7 @@ const UserView = () => {
     <View style={styles.container}>
       <ScrollView contentContainerStyle={styles.containerScroll}>
         <View style={styles.avatarContainer}>
-          <Image style={styles.avatar} source={{ uri: avatarUrl}} />
+          <Image style={styles.avatar} source={{ uri: avatarUrl }} />
         </View>
         <Text style={styles.name}>
           {`${userPage?.firstName} ${userPage?.lastName}`}

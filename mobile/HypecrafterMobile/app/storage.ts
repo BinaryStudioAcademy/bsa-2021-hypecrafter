@@ -9,7 +9,7 @@ const set = async (key: string, value: string) => {
   }
 };
 
-const get = async (key: string )=> {
+const get = async (key: string) => {
   try {
     const value = await AsyncStorage.getItem(`${APP_NAME_SPACE}@${key}`);
     return value;
@@ -27,6 +27,6 @@ const remove = async (key: string) => {
   }
 };
 
-const Storage = {set, get, remove};
+const Storage = { set, get, remove };
 
 export default Storage;

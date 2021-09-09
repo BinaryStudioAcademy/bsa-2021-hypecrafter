@@ -46,12 +46,14 @@
   .project-social-links-container {
     margin-left: 3px;
     display: flex;
+    gap: 10px;
 
     a {
-      padding: 5px 10px;
-      width: 43px;
+      @include flex-center;
+      display: flex;
+      height: 40px;
+      width: 40px;
       border-radius: 2px;
-      margin-right: 10px;
       background-color: $color-root-grey;
       color: $color-root-text;
       &:hover {
@@ -138,17 +140,17 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  
+
   .statistics-topic-wrapper {
 	display: flex;
   }
-  
+
   .export-button {
 	height: 30px !important;
 	padding: 18px;
 	margin: auto 0px auto auto;
   }
-  
+
   .export-button-text {
     @include heading-sm;
   }
