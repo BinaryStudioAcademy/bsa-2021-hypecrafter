@@ -111,17 +111,23 @@ const ProjectView: FC = () => {
         <View style={styles.tabContainer}>
           <View style={styles.tab}>
             <Pressable onPress={() => setScreenNum(1)}>
-              <Text style={styles.tabText}>{"Story"}</Text>
+              <Text style={screenNum === 1 ? styles.tabTextChosen : styles.tabText}>
+                Story
+              </Text>
             </Pressable>
           </View>
           <View style={styles.tab}>
             <Pressable onPress={() => setScreenNum(2)}>
-              <Text style={styles.tabText}>{"FAQ"}</Text>
+            <Text style={screenNum === 2 ? styles.tabTextChosen : styles.tabText}>
+                FAQ
+              </Text>
             </Pressable>
           </View>
           <View style={styles.tab}>
             <Pressable onPress={() => setScreenNum(3)}>
-              <Text style={styles.tabText}>{"Comments"}</Text>
+            <Text style={screenNum === 3 ? styles.tabTextChosen : styles.tabText}>
+                Comments
+              </Text>
             </Pressable>
           </View>
         </View>
@@ -155,6 +161,10 @@ const styles = StyleSheet.create({
   tabText: {
     fontSize: 22,
     color: 'white',
+  },
+  tabTextChosen: {
+    fontSize: 22,
+    color: colors.root_turquoise,
   },
   tabContainer: { 
     flexDirection: 'row', 
