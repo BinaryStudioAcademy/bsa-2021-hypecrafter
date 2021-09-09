@@ -1,6 +1,6 @@
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, useEffect, useState } from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import hypeCoin from '../../assets/HypeCoin.png';
@@ -136,12 +136,34 @@ const Header = () => {
 
     setMobileMenu(!isMobileMenu);
   };
+  const useDebounce = (value:string, delay:number) => {
+    const [debouncedValue, setDebouncedValue] = useState(value);
+    useEffect(
+      () => {
+        const handler = setTimeout(() => {
+          setDebouncedValue(value);
+        }, delay);
 
+        return () => {
+          clearTimeout(handler);
+        };
+      },
+      [value]
+    );
+    return debouncedValue;
+  };
   const handleSearch = (e: ChangeEvent<HTMLInputElement>) => {
     setText(e.target.value);
-    searchAction(e.target.value);
   };
-
+  const debouncedSearchTerm = useDebounce(text, 500);
+  useEffect(
+    () => {
+      if (debouncedSearchTerm) {
+        searchAction(text);
+      }
+    },
+    [debouncedSearchTerm]
+  );
   const scrollOverLimitCallback = () => setVisibleOnScroll(false);
   const scrollUnderLimitCallback = () => setVisibleOnScroll(true);
 
