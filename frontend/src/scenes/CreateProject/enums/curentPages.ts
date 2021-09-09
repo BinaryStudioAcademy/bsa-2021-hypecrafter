@@ -7,5 +7,6 @@ export enum CurrentPage{
   PRIVILEGES,
   FAQ,
   SETTINGS,
+  RECOMMENDATIONS,
   END
 }

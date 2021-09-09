@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unused-prop-types */
 import { FC } from 'react';
 
 type TabProps = {

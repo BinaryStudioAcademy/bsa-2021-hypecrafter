@@ -12,4 +12,5 @@ export interface Project {
   imageUrl: string;
   privileges: Privilege[] | PrivilegeWithBakersAmount[];
   bakersDonation: number[];
+  involvementIndex: number
 }

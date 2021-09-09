@@ -14,6 +14,8 @@ target 'HypecrafterMobile' do
 
   pod 'react-native-config', :path => '../node_modules/react-native-config'
 
+  pod 'react-native-webview', :path => '../node_modules/react-native-webview'
+
   target 'HypecrafterMobileTests' do
     inherit! :complete
     # Pods for testing

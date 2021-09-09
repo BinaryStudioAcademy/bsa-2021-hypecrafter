@@ -1,9 +1,9 @@
 import React from 'react';
 import { createStackNavigator } from 'react-navigation-stack';
+import Header from '../../components/common/Header';
 import MainView from '../../components/MainView/MainView';
-import UserView from '../../components/UserView/UserView';
 import ProjectView from '../../components/ProjectView/ProjectView';
-import Header from '../../components/common/Header'
+import UserView from '../../components/UserView/UserView';
 import commonStyles from '../../styles/common';
 
 const AppNavigator = createStackNavigator(
@@ -33,9 +33,15 @@ const AppNavigator = createStackNavigator(
     },
     Project: {
       screen: ProjectView,
-      navigationOptions: {
-        headerShown: false,
-      },
+      navigationOptions: ({ navigation }) => {
+        return {
+          headerStyle: {
+            backgroundColor: commonStyles.color.grey,
+          },
+          headerTintColor: commonStyles.color.text,
+          headerTitle: () => <Header navigation={navigation} />
+        }
+      }
     },
   },
   {

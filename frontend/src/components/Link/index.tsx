@@ -7,7 +7,7 @@ type Props = {
   onClick?: MouseEventHandler<HTMLAnchorElement>;
 };
 
-const LinkComponent: FC<Props> = ({ to, children, onClick = () => {} }) => (
+const LinkComponent: FC<Props> = ({ to, children, onClick = () => { } }) => (
   <Link
     className={classes.link}
     to={to}

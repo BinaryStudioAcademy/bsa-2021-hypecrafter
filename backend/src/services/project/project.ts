@@ -1,12 +1,28 @@
-import { ProjectsFilter, ProjectsSort, TimeInterval } from 'hypecrafter-shared/enums';
+import {
+  Project as Application, ProjectsFilter,
+  ProjectsSort,
+  TimeInterval
+} from 'hypecrafter-shared/enums';
+import MicroMq from 'micromq';
+import { HttpStatusCode } from '../../../../shared/build/enums';
+import { HttpMethod } from '../../common/enums';
+import { ActionPath } from '../../common/enums/actionsPath';
 import { Project } from '../../common/types';
+import {
+  UpdateInteractionTimeQuery
+} from '../../common/types/project';
 import { Chat, Project as CreateProject, Team } from '../../data/entities';
-import { mapPrivileges, mapProjects } from '../../data/mappers';
+import { mapBoolean, mapPrivileges, mapProjects, nullToNumber } from '../../data/mappers';
 import { mapLikesAndDislikes } from '../../data/mappers/mapLikesAndDislikes';
 import {
-  ChatRepository, ProjectRepository,
-  TeamRepository, UserRepository
+  CategoryRepository,
+  ChatRepository,
+  ProjectRepository,
+  TagRepository,
+  TeamRepository,
+  UserRepository
 } from '../../data/repositories';
+import { CustomError } from '../../helpers/customError';
 import FAQServise from '../faq';
 import DonatorsPrivilegeServise from '../projectPrivilege';
 import ProjectTagService from '../projectTag';
@@ -21,24 +37,42 @@ export default class ProjectService {
 
   readonly #userRepository: UserRepository;
 
+  readonly #categoryRepository: CategoryRepository;
+
+  readonly #tagRepository: TagRepository;
+
   readonly #tagService: TagService;
 
   readonly #projectTagService: ProjectTagService;
+
+  readonly #app: MicroMq;
 
   readonly #donatorsPrivilegeServise: DonatorsPrivilegeServise;
 
   readonly #faqServise: FAQServise;
 
-  constructor(projectRepository: ProjectRepository, teamRepository: TeamRepository,
-    chatRepository: ChatRepository, userRepository: UserRepository,
-    tagService: TagService, projectTagService: ProjectTagService,
-    donatorsPrivilegeServise: DonatorsPrivilegeServise, faqServise: FAQServise) {
+  constructor(
+    app: MicroMq,
+    projectRepository: ProjectRepository,
+    teamRepository: TeamRepository,
+    chatRepository: ChatRepository,
+    userRepository: UserRepository,
+    tagService: TagService,
+    projectTagService: ProjectTagService,
+    categoryRepository: CategoryRepository,
+    tagRepository: TagRepository,
+    donatorsPrivilegeServise: DonatorsPrivilegeServise,
+    faqServise: FAQServise
+  ) {
     this.#projectRepository = projectRepository;
     this.#teamRepository = teamRepository;
     this.#chatRepository = chatRepository;
     this.#userRepository = userRepository;
+    this.#categoryRepository = categoryRepository;
+    this.#tagRepository = tagRepository;
     this.#tagService = tagService;
     this.#projectTagService = projectTagService;
+    this.#app = app;
     this.#donatorsPrivilegeServise = donatorsPrivilegeServise;
     this.#faqServise = faqServise;
   }
@@ -65,29 +99,51 @@ export default class ProjectService {
     const listTags = await this.#tagService.save(body.projectTags.map(projectTag => projectTag.tag));
     await this.#projectTagService.remove(project.projectTags.map(projectTag => projectTag.id));
     await this.#projectTagService.save(listTags.map(tag => ({ tag, project })));
+    const { finishDate, id } = project;
+
+    await this.#app.ask(Application.NOTIFICATION, {
+      path: ActionPath.NewProject,
+      method: HttpMethod.POST,
+      body: {
+        finishDate,
+        projectId: id
+      }
+    });
+
     await this.#donatorsPrivilegeServise.save(body.donatorsPrivileges.map(privilege => ({ ...privilege, project })));
     await this.#faqServise.save(body.faqs.map(faq => ({ ...faq, project })));
     return project;
   }
 
-  public async getBySortAndFilter({ sort, filter, stringifiedCategories, userId }: {
+  public async getBySortAndFilter({ sort, filter, stringifiedCategories, userId, upcoming }: {
     sort: ProjectsSort,
     filter: ProjectsFilter,
     stringifiedCategories: string,
+    upcoming: boolean,
     userId?: string,
   }) {
     const categories = JSON.parse(stringifiedCategories);
-    const projects: Project[] = await this.#projectRepository.getBySortAndFilter({ sort, filter, categories, userId });
+    const projects: Project[] = await this.#projectRepository.getBySortAndFilter({
+      sort,
+      filter,
+      categories,
+      userId,
+      upcoming
+    });
     return projects;
   }
 
-  public async getById(id: string, userId: string | undefined) {
+  public async getById(id: string, userId: string | undefined = undefined) {
     const project = await this.#projectRepository.getById(id, userId);
-    project.bakersAmount = Math.max(0, project.bakersAmount);
-    project.donated = Math.max(0, project.donated);
-    project.privileges = mapPrivileges(project.privileges, project.bakersDonation);
 
-    return project; // rewrite when error handling middleware works
+    return {
+      ...project,
+      tags: mapBoolean(project.tags),
+      involvementIndex: nullToNumber(project.involvementIndex),
+      donated: nullToNumber(project.donated),
+      privileges: mapPrivileges(project.privileges, project.bakersDonation),
+      bakersAmount: nullToNumber(project.bakersAmount)
+    }; // rewrite when error handling middleware works
   }
 
   public async getForEdit(id: string) {
@@ -97,12 +153,40 @@ export default class ProjectService {
 
   public async setReaction({ isLiked, projectId }: { isLiked: boolean, projectId: string }, userId: string) {
     const project = await this.#projectRepository.findOne({ id: projectId });
+    const { likes: oldLikes } = await this.#projectRepository.getLikesAndDislikesAmount(project.id);
+
     const user = await this.#userRepository.findOne({ id: userId });
     await this.#projectRepository.setReaction(isLiked, user, project);
-    const likesAndDislikes: { likes: string, dislikes: string } = await this
-      .#projectRepository.getLikesAndDislikesAmount(project.id);
+    const likesAndDislikes:
+    { likes: string, dislikes: string } = await this.#projectRepository.getLikesAndDislikesAmount(project.id);
+    const { likes } = likesAndDislikes;
+    const mappedLikesAndDislikes = mapLikesAndDislikes(likesAndDislikes);
 
-    return mapLikesAndDislikes(likesAndDislikes);
+    if (oldLikes < likes) {
+      const LikedProject = await this.#projectRepository.getProjectById(projectId);
+      const { authorId: recipient } = LikedProject;
+
+      const { response } = await this.#app.ask(Application.NOTIFICATION, {
+        path: ActionPath.LikeNotifications,
+        method: HttpMethod.POST,
+        body: {
+          data: {
+            userId,
+            projectId,
+            recipient
+          },
+          likesAndDislikes: mappedLikesAndDislikes
+        }
+      }) as { response: { likes: number, dislikes: number } };
+
+      return response;
+    }
+
+    return mappedLikesAndDislikes;
+  }
+
+  getUsersWatchingProject(projectId: string) {
+    return this.#projectRepository.getUsersByWatсhedProject(projectId);
   }
 
   public async setWatch({ isWatched, projectId }: { isWatched: boolean, projectId: string }, userId: string) {
@@ -111,6 +195,65 @@ export default class ProjectService {
     await this.#projectRepository.setWatch(isWatched, user, project);
 
     return { mess: 'Projected was wached or unwached' };
+  }
+
+  public async updateViewsAndInteractionTime({ id, interactionTime }:UpdateInteractionTimeQuery) {
+    try {
+      const { totalInteractionTime, totalViews } = await this.#projectRepository.getViewsAndInteractionTimeById(id);
+      const response = await this.#projectRepository.updateViewsAndInteractionTimeById(
+        id,
+        {
+          totalViews: !totalViews ? 1 : totalViews + 1,
+          totalInteractionTime: !totalInteractionTime ? interactionTime : totalInteractionTime + interactionTime
+        }
+      );
+      return {
+        ...response,
+        involvementIndex: nullToNumber(response.involvementIndex)
+      };
+    } catch {
+      throw new CustomError(
+        HttpStatusCode.INTERNAL_SERVER_ERROR,
+        'Views and interaction time not updated'
+      );
+    }
+  }
+
+  public async getRecommendation({
+    stringifiedProjectTags,
+    categoryId,
+    region
+  }: {
+    stringifiedProjectTags?: string;
+    categoryId?: string;
+    region?: string;
+  }) {
+    const projectTagsId: string[] = JSON.parse(stringifiedProjectTags);
+
+    const projectTags = projectTagsId.length > 0
+      ? await Promise.all(
+        projectTagsId.map(
+          async (item): Promise<{ name: string }> => this.#tagRepository.getById(item)
+        )
+      )
+      : null;
+
+    let tagArray: string[] = [];
+    if (projectTags) {
+      projectTags.forEach((el: { name: string }) => el && tagArray.push(el.name));
+    } else {
+      tagArray = null;
+    }
+
+    const category = categoryId
+      ? await this.#categoryRepository.getById(categoryId)
+      : null;
+
+    return await this.#projectRepository.getRecommendation(
+      region,
+      tagArray,
+      category ? category.name : null
+    );
   }
 
   public async getDonationInformation(id: string, startDate: TimeInterval) {

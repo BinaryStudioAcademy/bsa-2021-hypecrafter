@@ -1,22 +1,32 @@
 import { ProjectsFilter, ProjectsSort, TimeInterval } from 'hypecrafter-shared/enums';
 import MicroMq from 'micromq';
-import { Project, ProjectItem, Statistics } from '../../common/types';
+import {
+  Project,
+  ProjectItem,
+  RecommendedProjects,
+  Statistics,
+  UpdateViewsAndInteractionTime as ViewsAndInteraction
+} from '../../common/types';
 import { Project as CreateProject } from '../../data/entities';
 import { wrap } from '../../helpers';
 import { Services } from '../../services';
 
 const init = ({ projectService }: Services, path: string) => (app: MicroMq) => app
-  .post(path, wrap<Empty, CreateProject, CreateProject, Empty>((req) => projectService.createProject(req.body)))
+  .post(path, wrap<Empty, CreateProject, CreateProject, Empty>((req) => projectService.createProject({
+    ...req.body, authorId: req.headers.userId
+  } as CreateProject)))
   .get(path, wrap<Empty, Project[], {
     sort: ProjectsSort;
     filter: ProjectsFilter;
     categories: string;
+    upcoming: boolean;
     userId?: string;
   }, Empty>(
     (req) => projectService.getBySortAndFilter({
       sort: req.query.sort,
       filter: req.query.filter,
       stringifiedCategories: req.query.categories,
+      upcoming: req.query.upcoming === 'true',
       userId: req.query.userId,
     })
   ))
@@ -38,9 +48,22 @@ const init = ({ projectService }: Services, path: string) => (app: MicroMq) => a
       (req) => projectService.setWatch(req.body, req.headers.userId as string)
     )
   )
+  .get(
+    `${path}/recommendation`,
+    wrap<Empty, RecommendedProjects, { projectTagsId?: string, categoryId?: string, region?:string }, Empty>(
+      (req) => projectService.getRecommendation({
+        stringifiedProjectTags: req.query.projectTagsId,
+        region: req.query.region,
+        categoryId: req.query.categoryId
+      })
+    )
+  )
   .get(`${path}/:id`, wrap<Empty, Project, { id: string, userId: string | undefined }, Empty>(
     (req) => projectService.getById(req.params.id, req.query.userId)
   ))
+  .put(`${path}/views-interaction/:id`, wrap<Empty, ViewsAndInteraction, { interactionTime: number }, Empty>(req => (
+    projectService.updateViewsAndInteractionTime({ id: req.params.id, interactionTime: req.body.interactionTime })
+  )))
   .get(`${path}/:id/statistics`, wrap<Empty, Statistics,
   { id: string, timeInterval: TimeInterval }, Empty>(
     (req) => projectService.getDonationInformation(req.params.id, req.query.timeInterval)

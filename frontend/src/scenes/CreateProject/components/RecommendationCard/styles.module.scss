@@ -1,0 +1,59 @@
+@import '../../../../styles/vars';
+
+.category {
+  font-weight: $font-weight-light;
+  font-size: $font-size-small;
+  line-height: 14px;
+  color: $color-root-turquoise;
+}
+
+.title {
+  margin-top: 5px;
+  margin-bottom: auto;
+  max-height: 38px;
+  font-weight: $font-weight-medium;
+  font-size: $font-size-aсcent;
+  line-height: 19px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: $color-root-text;
+}
+
+.tags {
+  margin-top: 10px;
+  margin-bottom: 6px;
+  display: flex;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.views {
+  color: $color-root-text;
+  margin-bottom: 6px;
+}
+
+.status {
+  color: $color-root-text;
+}
+
+.status-value {
+  padding-inline: 4px;
+  padding-block: 2px;
+  border-radius: 5px;
+  color: $color-root-text;
+}
+
+.status-in-progress {
+  background: $color-glitch-yellow;
+}
+
+.status-successful {
+  background: $color-glitch-green;
+}
+
+.status-unsuccessful {
+  background: $color-glitch-red;
+}

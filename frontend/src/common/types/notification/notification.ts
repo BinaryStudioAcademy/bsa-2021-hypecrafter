@@ -11,6 +11,7 @@ export interface NotificationType {
   data: NotificationData;
   type: NotificationMessageTypes;
   id?: string;
+  isRead?: boolean;
 }
 
 export interface NotificationLink {
