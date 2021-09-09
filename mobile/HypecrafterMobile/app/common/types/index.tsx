@@ -7,4 +7,5 @@ export * from './signup';
 export * from './store';
 export * from './topic';
 export * from './user';
+export * from './userProfile';
 

@@ -1,4 +1,8 @@
-import { ProjectsCategories, ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
+import {
+  ProjectsCategories,
+  ProjectsFilter,
+  ProjectsSort
+} from 'hypecrafter-shared/enums';
 import { Project } from '../common/types';
 import { api } from '../helpers/http';
 
@@ -51,5 +55,23 @@ export const getPopularAndRecommendedProjects = async () => {
     recommended: Project[];
     popular: Project[]
   } = await api.get({ url: 'projects/popular-and-recommended' });
+  return projects;
+};
+
+export const getRecommendation = async ({ category, region, projectTags }: {
+  category: string;
+  region: string;
+  projectTags: string[];
+}) => {
+  const stringifiedProjectTags = JSON.stringify(projectTags);
+
+  const projects = await api.get({
+    url: 'projects/recommendation',
+    params: {
+      categoryId: category,
+      projectTagsId: stringifiedProjectTags,
+      region,
+    },
+  });
   return projects;
 };

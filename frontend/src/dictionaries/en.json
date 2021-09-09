@@ -198,6 +198,8 @@
     "Amount": "Amount",
     "Return to Main Page": "Return to Main Page",
     "Pay": "Pay",
+    "today":"today",
+    "at": "at",
     "Notifications": "Notifications",
     "Manage Preferences": "Manage Preferences",
     "No more notifications": "No more notifications",
@@ -212,6 +214,13 @@
     "Global Statistics": "Global Statistics",
     "Donation Statistics": "Donation Statistics",
     "Export": "Export",
-    "No data": "No data"
+    "No data": "No data",
+    "Recommendations": "Recommendations",
+    "Let’s look at similar projects": "Let’s look at similar projects",
+    "Status": "Status",
+    "Total views": "Total views",
+    "in progress": "in progress",
+    "successful": "successful",
+    "unsuccessful": "unsuccessful"
   }
 }
