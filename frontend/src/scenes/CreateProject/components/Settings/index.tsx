@@ -55,7 +55,7 @@ const Settings: FC<Props> = ({
   const { t } = useLocalization();
 
   const handleBack = () => changePage(currentPage - 1);
-  const handleNext = () => changePage(CurrentPage.END);
+  const handleNext = () => changePage(currentPage + 1);
   const addTag = () => {
     if (!newTags.find(newTag => newTag.tag.name === tag)) {
       onChangeValue(ProjectKeys.PROJECT_TAGS, [...newTags, { tag: { name: tag } }]);
@@ -164,7 +164,7 @@ const Settings: FC<Props> = ({
   const footer = (
     <div className={classes.footer}>
       <Button onClick={handleBack} className={classes.back}>{t('Go back')}</Button>
-      <Button onClick={handleNext}>{t('Create Project')}</Button>
+      <Button onClick={handleNext}>{t('Continue')}</Button>
     </div>
   );
   return (
