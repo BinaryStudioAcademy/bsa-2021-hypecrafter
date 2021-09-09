@@ -223,6 +223,7 @@
     "in progress": "in progress",
     "successful": "successful",
     "unsuccessful": "unsuccessful",
-    "Site locale": "en"
+    "Site locale": "en",
+    "Comment can not be empty": "Comment can not be empty"
   }
 }
