@@ -1,7 +1,6 @@
 import { faBell } from '@fortawesome/free-regular-svg-icons';
 import { faCircle, faSlidersH } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Routes } from '../../common/enums';
 import { NotificationType } from '../../common/types/notification';
@@ -17,7 +16,6 @@ interface Props {
 
 const NotificationPopover = (props: Props) => {
   const { notifications } = props;
-  const [unreadMessageCount, setUnreadMessageCount] = useState(notifications.length);
 
   const { t } = useLocalization();
 
@@ -27,7 +25,7 @@ const NotificationPopover = (props: Props) => {
         trigger={(
           <div className={classes.header_natification}>
             <FontAwesomeIcon icon={faBell} className={classes.header_natification_bell} />
-            { !!unreadMessageCount
+            { !!notifications.filter(notification => !notification.isRead).length
             && <FontAwesomeIcon icon={faCircle} className={classes.header_natification_new} />}
           </div>
         )}
@@ -56,11 +54,11 @@ const NotificationPopover = (props: Props) => {
             <div className={classes['notification-popover-main']}>
               {notifications.map((notification) => (
                 <Notification
+                  isRead={notification.isRead}
                   data={notification.data}
                   type={notification.type}
                   key={notification.id}
-                  setUnreadMessageCount={setUnreadMessageCount}
-                  unreadMessageCount={unreadMessageCount}
+                  id={notification.id}
                 />
               ))}
             </div>
@@ -70,7 +68,7 @@ const NotificationPopover = (props: Props) => {
                 <span>{t('No more notifications')}</span>
               </div>
               )}
-            {true
+            {false
               && (
               <Button className={classes['load-more']}>
                 {t('Load more')}

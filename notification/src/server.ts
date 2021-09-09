@@ -1,32 +1,24 @@
-import { createConnection } from 'typeorm';
-import MicroMq from 'micromq';
 import { Project } from 'hypecrafter-shared/enums';
-import * as cron from 'node-cron';
-import { log } from './helpers/logger';
+import MicroMq from 'micromq';
+import { createConnection } from 'typeorm';
 import initRoutes from './api/routes';
 import { env } from './env';
+import { log } from './helpers/logger';
+import { JobController } from './schedule';
+import { initServices } from './services';
 
 const { rabbit } = env.app;
 
 const app = new MicroMq({
   name: Project.NOTIFICATION,
-  rabbit
+  rabbit,
+  microservices: ['backend']
 });
 
-cron.schedule(
-  '*/1 * * * *',
-  () => {
-    const hh = new Date().getHours();
-    const mm = new Date().getMinutes();
-    console.log(
-      `this message must shows every minute(current time is ${hh}:${mm})`
-    );
-  },
-  { scheduled: true }
-);
-
 createConnection()
-  .then(() => {
-    initRoutes(app).start();
+  .then(async () => {
+    const services = initServices(app);
+    const jobController = new JobController(app, services);
+    initRoutes(app, jobController, services).start();
   })
   .catch((e) => log(e));

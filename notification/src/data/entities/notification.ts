@@ -1,13 +1,23 @@
-import { Entity, Column } from 'typeorm';
+import { Column, Entity } from 'typeorm';
 import { AbstractEntity } from './abstract';
 
 @Entity()
 export class Notification extends AbstractEntity {
-  // TODO ...
-  // Just example
   @Column()
-  title: string;
+  type: string;
+
+  @Column({ type: 'money', nullable: true })
+  amount: number;
+
+  @Column({ nullable: true })
+  userId: string;
 
   @Column()
-  body: string;
+  projectId: string;
+
+  @Column()
+  recipient: string;
+
+  @Column({ default: false })
+  isRead: boolean;
 }
