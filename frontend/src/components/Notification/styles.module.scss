@@ -1,0 +1,57 @@
+@import './../../styles/mixins', './../../styles/vars';
+
+.notification-card {
+  display: flex;
+  padding: 20px 15px;
+  border-radius: 0;
+  font-size: $font-size-text;
+  width: 100%;
+  background-color: $color-root-block-background;
+  border: none;
+  border-top: 1px solid $color-root-text-grey;
+}
+
+.notification-card:hover,
+.notification-card:active,
+.notification-card:focus,
+.notification-card:visited
+{
+  background-color: $color-root-block-background;
+  border: none;
+  border-top: 1px solid $color-root-text-grey;
+  box-shadow: none !important;
+}
+
+.notification-card.watched {
+  background-color: $color-root-grey;
+}
+
+.image {
+  font-size: $font-size-title;
+  color: $color-root-turquoise;
+  margin-right: 25px;
+}
+
+.text {
+  text-align: start;
+}
+
+.text a {
+  color: $color-root-text;
+  font-weight: $font-weight-medium;
+}
+
+.date {
+  margin-top: 5px;
+  font-size: $font-size-mini;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.amount {
+  font-weight: $font-weight-medium;
+}

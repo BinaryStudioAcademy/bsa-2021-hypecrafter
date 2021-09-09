@@ -5,6 +5,7 @@ import Buttom from '../../../components/Button';
 import CommentComponent from '../../../components/Comment';
 import Input from '../../../components/Input';
 import { useAction, useAuth } from '../../../hooks';
+import { useLocalization } from '../../../providers/localization';
 import classes from '../styles.module.scss';
 
 interface CommentsProps {
@@ -13,19 +14,27 @@ interface CommentsProps {
 }
 
 const Comments: FC<CommentsProps> = ({ comments, projectId }) => {
+  const { t } = useLocalization();
+
   const { addComment } = useAction();
   const { id, isAuthorized } = useAuth();
 
   const [text, setText] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleClick = () => {
     if (id) {
-      addComment({
-        message: text,
-        project: projectId,
-        author: id.toString()
-      });
-      setText('');
+      if (text) {
+        addComment({
+          message: text,
+          project: projectId,
+          author: id.toString()
+        });
+        setText('');
+        setErrorMessage('');
+      } else {
+        setErrorMessage(`${t('Comment can not be empty')}`);
+      }
     }
   };
 
@@ -43,6 +52,7 @@ const Comments: FC<CommentsProps> = ({ comments, projectId }) => {
               value={text}
               onChange={(ev) => setText(ev.target.value)}
               placeholder="Write your comment..."
+              errorMessage={errorMessage}
             />
           </Col>
           <Col xs={1} sm={1}>

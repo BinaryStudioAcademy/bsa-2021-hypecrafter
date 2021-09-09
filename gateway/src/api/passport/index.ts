@@ -1,6 +1,8 @@
+/* eslint-disable import/no-self-import */
+/* eslint-disable @typescript-eslint/naming-convention */
 import { Express } from 'express';
-// eslint-disable-next-line import/no-self-import
 import passport from 'passport';
+import FacebookTokenStrategy from 'passport-facebook-token';
 import { ExtractJwt, Strategy as JwtStrategy } from 'passport-jwt';
 import { Strategy as LocalStrategy } from 'passport-local';
 import { Repositories } from '../../data/repositories';
@@ -50,11 +52,25 @@ export function initPassport(app: Express, repositories: Repositories) {
     )
   );
 
-  passport.use(
-    new JwtStrategy(options, async (jwtPayload, done) => {
-      done(null, jwtPayload);
-    })
-  );
+  passport.use(new JwtStrategy(options, async ({ userId }: { userId: string }, done) => {
+    try {
+      const { email } = await repositories.userRepository.getById(userId);
+      return email ? done(null, { email, userId }) : done({ status: 401, message: 'Token is invalid.' }, null);
+    } catch (err) {
+      return done(err);
+    }
+  }));
+
+  passport.use(new FacebookTokenStrategy({
+    clientID: env.auth.facebook.appId,
+    clientSecret: env.auth.facebook.secret,
+    fbGraphVersion: 'v3.0'
+  }, ((_accessToken, _refreshToken, profile, done) => {
+    const { id: facebookId, name, emails } = profile;
+    const { givenName: firstName, familyName: lastName } = name;
+    const email = emails[0].value;
+    done(null, { facebookId, firstName, lastName, email });
+  })));
 
   app.use(passport.initialize());
 }

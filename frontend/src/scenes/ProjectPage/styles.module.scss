@@ -27,9 +27,14 @@
   }
 
   .watch-container {
+    display: flex;
+    justify-content: end;
     button {
       background: none;
       border: none;
+    }
+    .disabled{
+      @include disable-button;
     }
   }
 
@@ -40,6 +45,7 @@
 
   .project-social-links-container {
     margin-left: 3px;
+    display: flex;
 
     a {
       padding: 5px 10px;
@@ -51,6 +57,13 @@
       &:hover {
       color: $color-root-turquoise;
       }
+    }
+
+    Button {
+      width: 100px;
+      margin-left: auto;
+      margin-right: 18px;
+      background: $color-root-grey;
     }
   }
 }
@@ -91,7 +104,54 @@
 }
 
 .statistics-wrapper {
-  color: red;
+  margin: 30px 0px 40px 0px;
+
+  .statistics-topic {
+    @include heading-xl;
+    margin: 10px 0px 15px 0px;
+  }
+
+  .statistics-card-wrapper {
+    padding: 30px;
+    margin-bottom: 40px;
+    background-color: $color-body-accordion;
+  }
+
+  .statistics-button-wrapper {
+    display: flex;
+  }
+
+  .statistics-chart-wrapper {
+    padding: 20px;
+    background-color: $color-root-block-background;
+    position: relative;
+
+    @media (max-width: $breakpoint-lg) {
+      padding: 10px;
+    }
+  }
+
+  .statistics-chart-text {
+    @include heading-md;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .statistics-topic-wrapper {
+	display: flex;
+  }
+  
+  .export-button {
+	height: 30px !important;
+	padding: 18px;
+	margin: auto 0px auto auto;
+  }
+  
+  .export-button-text {
+    @include heading-sm;
+  }
 }
 
 hr.horizontal-line {

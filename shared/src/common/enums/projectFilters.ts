@@ -8,15 +8,14 @@ export enum ProjectsSort {
   NAME = 'name',
   DATE = 'date',
   RECOMMENDED = 'recommended',
-  POPULAR = 'popular',
+  POPULAR = 'popular'
 }
 
 export enum ProjectsFilter {
   ALL = 'all',
   FAVORITE = 'favorite',
   INVESTED = 'invested',
-  OWN = 'own',
+  OWN = 'own'
 }
 
-export const ProjectsCategories = { ...CategoryType, ...Common };
-export type ProjectsCategories = CategoryType | Common;
+export { CategoryType as ProjectsCategories };

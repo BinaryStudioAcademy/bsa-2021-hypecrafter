@@ -3,6 +3,7 @@ import { faThumbsDown as faThumbsDownFilled, faThumbsUp as faThumbsUpFilled } fr
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FunctionComponent } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import hypeCoin from '../../assets/HypeCoin.png';
 import { Mark } from '../../common/enums';
 import { calcDaysToGo, calcDonationProgress } from '../../helpers/project';
 import { useAction } from '../../hooks';
@@ -21,6 +22,7 @@ interface ProjectInfoProps {
   finishDate: string;
   mark: string | null | undefined;
   isAuthorized: boolean;
+  involvementIndex: number;
 }
 
 const ProjectInfo: FunctionComponent<ProjectInfoProps> = ({
@@ -32,7 +34,8 @@ const ProjectInfo: FunctionComponent<ProjectInfoProps> = ({
   dislikes,
   finishDate,
   mark,
-  isAuthorized
+  isAuthorized,
+  involvementIndex
 }) => {
   const { setReaction } = useAction();
   const { t } = useLocalization();
@@ -50,22 +53,28 @@ const ProjectInfo: FunctionComponent<ProjectInfoProps> = ({
   return (
     <Container className={classes['info-block-container']}>
       <Row>
-        <Col xs={4}>
+        <Col xs={3}>
           <div className={classes['info-block-entity']}>
             <p className={classes['info-backers-amount']}>{bakersAmount}</p>
             <p className={classes['info-backers']}>{t('Backers')}</p>
           </div>
         </Col>
-        <Col xs={4}>
+        <Col xs={3}>
           <div className={classes['info-block-entity']}>
-            <p className={classes['info-goal-amount']}>{donated}</p>
+            <p className={classes['info-goal-amount']}>{donated}<img src={hypeCoin} alt="HypeCoin" /></p>
             <p className={classes['info-goal']}>{t('Donated')}</p>
           </div>
         </Col>
-        <Col xs={4}>
+        <Col xs={3}>
           <div className={classes['info-block-entity']}>
             <p className={classes['info-days-amount']}>{daysToGo < 0 ? t('Ended') : daysToGo}</p>
             <p className={classes['info-days']}>{t('Days to go')}</p>
+          </div>
+        </Col>
+        <Col xs={3}>
+          <div className={classes['info-block-entity']}>
+            <p className={classes['info-backers-amount']}>{involvementIndex}</p>
+            <p className={classes['info-backers']}>{t('Involvement index')}</p>
           </div>
         </Col>
       </Row>
@@ -74,7 +83,12 @@ const ProjectInfo: FunctionComponent<ProjectInfoProps> = ({
       </Row>
       <Row className={classes['info-block-footer']}>
         <div className={classes['likes-container']}>
-          <button type='button' onClick={handleLike} disabled={!isAuthorized}>
+          <button
+            type='button'
+            onClick={handleLike}
+            disabled={!isAuthorized}
+            className={classes[`${!isAuthorized && 'disabled'}`]}
+          >
             {mark === Mark.LIKE
               ? (<FontAwesomeIcon icon={faThumbsUpFilled} size='2x' />)
               : (<FontAwesomeIcon icon={faThumbsUp} size='2x' />)}
@@ -82,7 +96,12 @@ const ProjectInfo: FunctionComponent<ProjectInfoProps> = ({
           <span className={classes['likes-amount']}>{likes}</span>
         </div>
         <div className={classes['dislikes-container']}>
-          <button type='button' onClick={handleDislike} disabled={!isAuthorized}>
+          <button
+            type='button'
+            onClick={handleDislike}
+            disabled={!isAuthorized}
+            className={classes[`${!isAuthorized && 'disabled'}`]}
+          >
             {mark === Mark.DISLIKE
               ? (<FontAwesomeIcon icon={faThumbsDownFilled} size='2x' />)
               : (<FontAwesomeIcon icon={faThumbsDown} size='2x' />)}

@@ -1,23 +1,36 @@
-import { ProjectPage } from '../../common/types';
-import { Mark as MarkType } from '../../common/types/project/mark';
+import { Mark } from '../../common/enums';
+import { Mark as MarkType, ProjectPage } from '../../common/types';
+import { Statistics } from '../../common/types/project/statistics';
 import { createReducer } from '../../helpers';
 import type {
-  AddCommentSuccessActionType, FetchProjectSuccessActionType,
+  AddCommentSuccessActionType,
+  FetchProjectSuccessActionType,
+  FetchStatisticsSuccessActionType,
   SetReactionSuccessActionType,
   SetWatchSuccessActionType
 } from './actions';
-import { addComment, fetchProject, setReaction, setWatch } from './actions';
+import {
+  addComment,
+  fetchProject,
+  fetchStatistics,
+  setReaction,
+  setWatch
+} from './actions';
 
 export interface ProjectPageState {
   isLoading: boolean;
   project: ProjectPage;
   isInputLoading: boolean;
+  error: string;
+  statistics: Statistics;
 }
 
 export const projectPageState: ProjectPageState = {
   isLoading: false,
   project: {} as ProjectPage,
-  isInputLoading: false
+  isInputLoading: false,
+  error: '',
+  statistics: {} as Statistics
 };
 
 const projectPageReducer = createReducer<ProjectPageState>(projectPageState, {
@@ -51,7 +64,7 @@ const projectPageReducer = createReducer<ProjectPageState>(projectPageState, {
     if (mark === null) {
       projectMark = mark;
     } else {
-      projectMark = mark ? 'like' : 'dislike';
+      projectMark = mark ? Mark.LIKE : Mark.DISLIKE;
     }
 
     return {
@@ -68,14 +81,12 @@ const projectPageReducer = createReducer<ProjectPageState>(projectPageState, {
   },
   [addComment.TRIGGER](state) {
     return {
-      ...state,
-      isInputLoading: true
+      ...state
     };
   },
   [addComment.SUCCESS](state, action: AddCommentSuccessActionType) {
     return {
       ...state,
-      isInputLoading: false,
       project: {
         ...state.project,
         projectComments: [...state.project.projectComments, action.payload]
@@ -85,9 +96,15 @@ const projectPageReducer = createReducer<ProjectPageState>(projectPageState, {
   [addComment.FAILURE](state) {
     return {
       ...state,
-      isInputLoading: false,
+      isInputLoading: false
     };
-  }
+  },
+  [fetchStatistics.SUCCESS](state, action: FetchStatisticsSuccessActionType) {
+    return {
+      ...state,
+      statistics: action.payload
+    };
+  },
 });
 
 export default projectPageReducer;

@@ -5,6 +5,7 @@ dotenv.config();
 
 export const env = {
   app: {
+    origin: getEnv('ORIGIN'),
     port: getEnv('PORT') || 3001,
     environment: getEnv('NODE_ENV'),
     rabbit: {
@@ -16,6 +17,10 @@ export const env = {
     expiresIn: '24h'
   },
   auth: {
+    facebook: {
+      appId: getEnv('FACEBOOK_APP_ID'),
+      secret: getEnv('FACEBOOK_APP_SECRET')
+    },
     googleClientId: getEnv('GOOGLE_CLIENT_ID')
   }
 };

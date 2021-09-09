@@ -9,12 +9,14 @@ import {
   fetchProjectsAction,
   FetchProjectsFailureActionType,
   FetchProjectsSuccessActionType,
-  filterCategoryProjectsAction,
-  FilterCategoryProjectsActionType,
+  filterCategoriesProjectsAction,
+  FilterCategoriesProjectsActionType,
   filterProjectsAction,
   FilterProjectsActionType,
   sortProjectsAction,
-  SortProjectsActionType
+  SortProjectsActionType, upcomingProjectsAction,
+  UpcomingProjectsActionType, updateViewsAndInteractionTimeAction,
+  UpdateViewsAndInteractionTimeFailureActionType, UpdateViewsAndInteractionTimeSuccessActionType
 } from './actions';
 
 export interface ProjectsState {
@@ -22,7 +24,8 @@ export interface ProjectsState {
   modificators: {
     sort: ProjectsSort;
     filter: ProjectsFilter;
-    category: ProjectsCategories;
+    categories: ProjectsCategories[];
+    upcoming: boolean;
   };
   isLoading: boolean;
   error: string;
@@ -33,7 +36,8 @@ export const initialState: ProjectsState = {
   modificators: {
     sort: ProjectsSort.NAME,
     filter: ProjectsFilter.ALL,
-    category: ProjectsCategories.ALL,
+    categories: [],
+    upcoming: false
   },
   isLoading: false,
   error: '',
@@ -78,12 +82,45 @@ export const projectsReducer = createReducer<ProjectsState>(initialState, {
       },
     };
   },
-  [filterCategoryProjectsAction.TRIGGER](state, action: FilterCategoryProjectsActionType) {
+  [filterCategoriesProjectsAction.TRIGGER](state, action: FilterCategoriesProjectsActionType) {
     return {
       ...state,
       modificators: {
         ...state.modificators,
-        category: action.payload,
+        categories: action.payload,
+      },
+    };
+  },
+  [updateViewsAndInteractionTimeAction.TRIGGER](state) {
+    return {
+      ...state
+    };
+  },
+  [updateViewsAndInteractionTimeAction.SUCCESS](state, action: UpdateViewsAndInteractionTimeSuccessActionType) {
+    return {
+      ...state,
+      projects: state.projects.map(project => (
+        project.id !== action.payload.id
+          ? project
+          : {
+            ...project,
+            ...action.payload
+          }
+      ))
+    };
+  },
+  [updateViewsAndInteractionTimeAction.FAILURE](state, action: UpdateViewsAndInteractionTimeFailureActionType) {
+    return {
+      ...state,
+      error: action.payload
+    };
+  },
+  [upcomingProjectsAction.TRIGGER](state, action: UpcomingProjectsActionType) {
+    return {
+      ...state,
+      modificators: {
+        ...state.modificators,
+        upcoming: action.payload
       },
     };
   },

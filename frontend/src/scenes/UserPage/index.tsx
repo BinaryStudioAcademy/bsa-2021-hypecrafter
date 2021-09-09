@@ -10,18 +10,19 @@ interface Props {
 }
 
 const UserPage: FC<Props> = ({ userId: id }) => {
-  const store = useTypedSelector(({ userProfile: { item, isLoading, isEditing } }) => ({
+  const store = useTypedSelector(({ userProfile: { id: userProfileId, item, isLoading, isEditing } }) => ({
     userProfile: item,
     isLoading,
-    isEditing
+    isEditing,
+    userProfileId
   }));
+
   const { fetchUserProfileAction, setEditingAction, updateUserProfileAction } = useAction();
 
-  const { userProfile, isLoading, isEditing } = store;
+  const { userProfile, isLoading, isEditing, userProfileId } = store;
+  const userId = id || userProfileId;
 
-  const userId = id || 'ac7a5b8f-7fc4-4d1e-81c9-1a9c49c9b529';
   useEffect(() => {
-    console.log(userId);
     fetchUserProfileAction(userId);
   }, [fetchUserProfileAction, userId]);
 

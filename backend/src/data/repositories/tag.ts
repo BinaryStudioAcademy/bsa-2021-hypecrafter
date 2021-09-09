@@ -21,7 +21,18 @@ export class TagRepository extends Repository<Tag> {
       .execute();
   }
 
+  public getById(id: string) {
+    return this.createQueryBuilder('tag')
+      .select('name')
+      .where({ id })
+      .getRawOne();
+  }
+
   public getPopular() {
     return this.getTagByOrder('quantity');
+  }
+
+  public getAll() {
+    return this.find();
   }
 }

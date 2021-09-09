@@ -8,5 +8,14 @@ export enum ProjectKeys {
   START_DATE = 'startDate',
   FINISH_DATE = 'finishDate',
   TEAM = 'team',
-  IMAGE_URL = 'imageUrl'
+  IMAGE_URL = 'imageUrl',
+  VIDEO_URL = 'videoUrl',
+  PROJECT_TAGS = 'projectTags',
+  DONATORS_PRIVILEGES = 'donatorsPrivileges',
+  INSTAGRAM = 'instagramUrl',
+  FACEBOOK = 'facebookUrl',
+  DRIBBLE = 'dribbleUrl',
+  PINTEREST = 'pinterestUrl',
+  BEHANCE = 'behanceUrl',
+  FAQS = 'faqs'
 }

@@ -3,6 +3,9 @@ type ProcessEnvKey =
   | 'PORT'
   | 'RABBIT_URL'
   | 'SECRET_KEY'
-  | 'GOOGLE_CLIENT_ID';
+  | 'FACEBOOK_APP_ID'
+  | 'FACEBOOK_APP_SECRET'
+  | 'GOOGLE_CLIENT_ID'
+  | 'ORIGIN';
 
 export const getEnv = (key: ProcessEnvKey) => process.env[key];

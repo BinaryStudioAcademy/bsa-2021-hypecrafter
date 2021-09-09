@@ -1,39 +1,45 @@
 import { Routes } from '../../common/enums';
-import { Project } from '../../common/types';
+import { CreateProject as Project } from '../../common/types';
 import { createReducer } from '../../helpers';
-import type {
+import {
+  createProjectAction,
   CreateProjectFailureActionType,
-  CreateProjectSuccessActionType
+  CreateProjectSuccessActionType,
+  fetchRecommendedProjectsAction,
+  FetchRecommendedProjectsFailureActionType,
+  FetchRecommendedProjectsSuccessActionType, getForEditProjectAction, GetForEditProjectFailureActionType,
+  GetForEditProjectSuccessActionType
 } from './actions';
-import { createProjectAction } from './actions';
+import { RecommendedProject } from './types';
 
 export interface ProjectState{
   isLoading: boolean;
   project: Project;
   error: string;
   currentPage: Routes;
+  recommendedProjects: RecommendedProject[];
 }
 
 const newProject: Project = {
-  id: '',
   category: '',
   description: '',
   goal: 0,
   imageUrl: '',
   name: '',
-  tags: [],
-  donated: 0,
-  totalViews: 0,
-  minutesToRead: 0,
   region: '',
-  totalInteractionTime: 0
+  content: '',
+  team: { name: '', chats: [] },
+  projectTags: [],
+  donatorsPrivileges: [],
+  faqs: []
 };
 
 export const initialState: ProjectState = {
   isLoading: false,
   project: newProject,
   error: '',
-  currentPage: Routes.HOME
+  currentPage: Routes.HOME,
+  recommendedProjects: [],
 };
 
 export const projectReduser = createReducer<ProjectState>(initialState, {
@@ -51,6 +57,40 @@ export const projectReduser = createReducer<ProjectState>(initialState, {
     };
   },
   [createProjectAction.FAILURE](state, action: CreateProjectFailureActionType) {
+    return {
+      ...state,
+      isLoading: false,
+      error: action.payload
+    };
+  },
+  [fetchRecommendedProjectsAction.SUCCESS](state, action: FetchRecommendedProjectsSuccessActionType) {
+    return {
+      ...state,
+      isLoading: false,
+      recommendedProjects: action.payload,
+    };
+  },
+  [fetchRecommendedProjectsAction.FAILURE](state, action: FetchRecommendedProjectsFailureActionType) {
+    return {
+      ...state,
+      isLoading: false,
+      error: action.payload
+    };
+  },
+  [getForEditProjectAction.TRIGGER](state) {
+    return {
+      ...state,
+      isLoading: true
+    };
+  },
+  [getForEditProjectAction.SUCCESS](state, action: GetForEditProjectSuccessActionType) {
+    return {
+      ...state,
+      isLoading: false,
+      project: action.payload
+    };
+  },
+  [getForEditProjectAction.FAILURE](state, action: GetForEditProjectFailureActionType) {
     return {
       ...state,
       isLoading: false,

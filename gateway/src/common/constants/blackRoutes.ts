@@ -2,17 +2,18 @@ const BLACK_ROUTES = [
   '/logout',
   '/add-funds',
   '/transactions',
-  '/auth/token',
-  '/auth/token/reject',
   '/payment',
   '/payment/:page',
   '/payment/create-payment-intent',
   '/reset-password',
   '/projects/create',
+  '/projects',
   '/profile',
   '/auth/current-user',
   '/projects/reaction',
-  '/projects/watch'
+  '/projects/watch',
+  '/donate',
+  '/current-user'
 ];
 
 export { BLACK_ROUTES };

@@ -1,4 +1,4 @@
-import { faDribbble, faFacebookSquare, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faDribbble, faFacebookSquare, faInstagram, faPinterest, faBehance } from '@fortawesome/free-brands-svg-icons';
 import { faMapMarkerAlt, faUserEdit } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ChangeEvent, FunctionComponent, useState } from 'react';
@@ -27,7 +27,9 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile, isEditing, setEdi
     rating,
     instagramUrl,
     facebookUrl,
-    dribbleUrl
+    dribbleUrl,
+    pinterestUrl,
+    behanceUrl
   } = userProfile;
   const { t } = useLocalization();
 
@@ -38,6 +40,8 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile, isEditing, setEdi
   const [editInstagramUrl, setEditInstagramUrl] = useState(instagramUrl);
   const [editFacebookUrl, setEditFacebookUrl] = useState(facebookUrl);
   const [editDribbleUrl, setEditDribbleUrl] = useState(dribbleUrl);
+  const [editPinterestUrl, setEditPinterestUrl] = useState(pinterestUrl);
+  const [editBehanceUrl, setEditBehanceUrl] = useState(behanceUrl);
 
   const updatedUserProfile = {
     ...userProfile,
@@ -47,7 +51,9 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile, isEditing, setEdi
     description: editDescription,
     instagramUrl: editInstagramUrl,
     facebookUrl: editFacebookUrl,
-    dribbleUrl: editDribbleUrl
+    dribbleUrl: editDribbleUrl,
+    pinterestUrl: editPinterestUrl,
+    behanceUrl: editBehanceUrl
   };
 
   const enableEditHandler = () => setEditing(true);
@@ -60,22 +66,23 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile, isEditing, setEdi
     setEditInstagramUrl(instagramUrl);
     setEditFacebookUrl(facebookUrl);
     setEditDribbleUrl(dribbleUrl);
+    setEditPinterestUrl(pinterestUrl);
+    setEditBehanceUrl(behanceUrl);
   };
   const submitEditHandler = () => {
     setEditing(false);
     updateUser(updatedUserProfile);
   };
 
-  const editNameHandler = (e: ChangeEvent<HTMLInputElement>) => {
-    const fullName = e.currentTarget.value.split(' ');
-    setEditFirstName(fullName[0]);
-    setEditLastName(fullName[1]);
-  };
+  const editFirstNameHandler = (e: ChangeEvent<HTMLInputElement>) => setEditFirstName(e.currentTarget.value);
+  const editLastNameHandler = (e: ChangeEvent<HTMLInputElement>) => setEditLastName(e.currentTarget.value);
   const editRegionHandler = (e: ChangeEvent<HTMLInputElement>) => setEditRegion(e.currentTarget.value);
   const editDescriptionHandler = (e: ChangeEvent<HTMLInputElement>) => setEditDescription(e.currentTarget.value);
   const editInstagramUrlHandler = (e: ChangeEvent<HTMLInputElement>) => setEditInstagramUrl(e.currentTarget.value);
   const editFacebookUrlHandler = (e: ChangeEvent<HTMLInputElement>) => setEditFacebookUrl(e.currentTarget.value);
   const editDribbleUrlHandler = (e: ChangeEvent<HTMLInputElement>) => setEditDribbleUrl(e.currentTarget.value);
+  const editPinterestUrlHandler = (e: ChangeEvent<HTMLInputElement>) => setEditPinterestUrl(e.currentTarget.value);
+  const editBehanceUrlHandler = (e: ChangeEvent<HTMLInputElement>) => setEditBehanceUrl(e.currentTarget.value);
 
   return (
     <Container className={classes['header-container']}>
@@ -88,12 +95,20 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile, isEditing, setEdi
             <div className={classes['user-name']}>
               {isEditing
                 ? (
-                  <Input
-                    id='name'
-                    label='Your Name'
-                    value={`${editFirstName} ${editLastName}`}
-                    onChange={editNameHandler}
-                  />
+                  <>
+                    <Input
+                      id='name'
+                      label='Your First Name'
+                      value={`${editFirstName}`}
+                      onChange={editFirstNameHandler}
+                    />
+                    <Input
+                      id='name'
+                      label='Your Last Name'
+                      value={`${editLastName}`}
+                      onChange={editLastNameHandler}
+                    />
+                  </>
                 )
                 : (
                   <div>
@@ -125,23 +140,32 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile, isEditing, setEdi
                   <Input
                     id='instagram'
                     label='Instagram'
-                    placeholder='Instagram'
                     value={editInstagramUrl}
                     onChange={editInstagramUrlHandler}
                   />
                   <Input
                     id='facebook'
                     label='Facebook'
-                    placeholder='Facebook'
                     value={editFacebookUrl}
                     onChange={editFacebookUrlHandler}
                   />
                   <Input
                     id='dribble'
                     label='Dribble'
-                    placeholder='Dribble'
                     value={editDribbleUrl}
                     onChange={editDribbleUrlHandler}
+                  />
+                  <Input
+                    id='pinterest'
+                    label='Pinterest'
+                    value={editPinterestUrl}
+                    onChange={editPinterestUrlHandler}
+                  />
+                  <Input
+                    id='behance'
+                    label='Behance'
+                    value={editBehanceUrl}
+                    onChange={editBehanceUrlHandler}
                   />
                 </>
               )
@@ -165,6 +189,18 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile, isEditing, setEdi
                         <FontAwesomeIcon icon={faDribbble} size="2x" />
                       </a>
                     )}
+                  {pinterestUrl
+                    && (
+                      <a href={dribbleUrl} target="_blank" rel="noreferrer">
+                        <FontAwesomeIcon icon={faPinterest} size="2x" />
+                      </a>
+                    )}
+                  {behanceUrl
+                  && (
+                    <a href={dribbleUrl} target="_blank" rel="noreferrer">
+                      <FontAwesomeIcon icon={faBehance} size="2x" />
+                    </a>
+                  )}
                 </div>
               )}
 

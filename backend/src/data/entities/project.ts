@@ -53,6 +53,12 @@ export class Project extends AbstractEntity {
   @Column({ type: 'text', nullable: true })
   imageUrl: string;
 
+  @Column()
+  authorId: string;
+
+  @Column({ type: 'text', nullable: true })
+  videoUrl: string;
+
   @Column({ type: 'text', nullable: true })
   instagramUrl: string;
 
@@ -84,7 +90,7 @@ export class Project extends AbstractEntity {
   @ManyToOne(() => Category, category => category.projects)
   category: Category;
 
-  @OneToOne(() => DonatorsPrivilege, projectDonatorsPrivilege => projectDonatorsPrivilege.project)
+  @OneToMany(() => DonatorsPrivilege, projectDonatorsPrivilege => projectDonatorsPrivilege.project)
   @JoinColumn()
   donatorsPrivileges: DonatorsPrivilege[];
 

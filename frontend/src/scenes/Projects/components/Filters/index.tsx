@@ -3,44 +3,93 @@ import {
   ProjectsFilter,
   ProjectsSort
 } from 'hypecrafter-shared/enums';
-import { ChangeEventHandler, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Container, Form } from 'react-bootstrap';
-import { useForm } from 'react-hook-form';
+import { Controller, useForm } from 'react-hook-form';
+import MultiSelect from '../../../../components/MultiSelect';
 import Select from '../../../../components/Select';
+import Checkbox from '../../../../components/Checkbox';
 import { useAction, useAuth, useTypedSelector } from '../../../../hooks';
 import { useLocalization } from '../../../../providers/localization';
 import Statistic from '../Statistic';
 import classes from './styles.module.scss';
 
+interface CategoriesType {
+  value: ProjectsCategories;
+  label: string;
+}
+
 interface FilterFormData {
   sort: ProjectsSort;
   filter: ProjectsFilter;
-  category: ProjectsCategories;
+  categories: CategoriesType[];
+  upcoming: boolean;
 }
 
 const Filters = () => {
   const { id: userId } = useAuth();
   const { t } = useLocalization();
-  const { filterCategoryProjectsAction, filterProjectsAction, sortProjectsAction } = useAction();
+  const {
+    filterCategoriesProjectsAction,
+    filterProjectsAction,
+    sortProjectsAction,
+    upcomingProjectsAction
+  } = useAction();
   const {
     sort: sortValue,
     filter: filterValue,
-    category: categoryValue,
+    categories: categoriesValue
   } = useTypedSelector((state) => state.projects.modificators);
-  const { register, getValues, setValue } = useForm<FilterFormData>({
+  const [getUpcomingProjects, setUpcomingProjects] = useState(false);
+  const { register, getValues, setValue, control } = useForm<FilterFormData>({
     defaultValues: {
       filter: filterValue,
       sort: sortValue,
-      category: categoryValue,
+      categories: [],
+      upcoming: false
     },
   });
+
+  const sortOptions = [
+    { value: ProjectsSort.NAME, text: t('Name') },
+    { value: ProjectsSort.DATE, text: t('Date') },
+    { value: ProjectsSort.POPULAR, text: t('Popular') },
+    { value: ProjectsSort.RECOMMENDED, text: t('Recommended') },
+  ];
+
+  const filterOptions = [
+    { value: ProjectsFilter.ALL, text: t('All') },
+    { value: ProjectsFilter.FAVORITE, text: t('Favorite') },
+    { value: ProjectsFilter.INVESTED, text: t('Invested') },
+    { value: ProjectsFilter.OWN, text: t('Own') }
+  ];
+
+  const categoriesOptions = [
+    { value: ProjectsCategories.Art, label: t('Art') },
+    { value: ProjectsCategories.Comics, label: t('Comics') },
+    { value: ProjectsCategories.Crafts, label: t('Crafts') },
+    { value: ProjectsCategories.Dance, label: t('Dance') },
+    { value: ProjectsCategories.Design, label: t('Design') },
+    { value: ProjectsCategories.Fashion, label: t('Fashion') },
+    { value: ProjectsCategories.FilmAndVideo, label: t('Film and Video') },
+    { value: ProjectsCategories.Food, label: t('Food') },
+    { value: ProjectsCategories.Games, label: t('Games') },
+    { value: ProjectsCategories.Journalism, label: t('Journalism') },
+    { value: ProjectsCategories.Music, label: t('Music') },
+    { value: ProjectsCategories.Photography, label: t('Photography') },
+    { value: ProjectsCategories.Publishing, label: t('Publishing') },
+    { value: ProjectsCategories.Technology, label: t('Technology') },
+    { value: ProjectsCategories.Theater, label: t('Theater') },
+  ];
 
   useEffect(() => {
     setValue('sort', sortValue);
     setValue('filter', filterValue);
-  }, [sortValue, filterValue]);
+    setValue('categories', categoriesOptions.filter((category) => categoriesValue.includes(category.value)));
+    setValue('upcoming', getUpcomingProjects);
+  }, [sortValue, filterValue, JSON.stringify(categoriesValue)]);
 
-  const onChange: ChangeEventHandler<HTMLFormElement> = () => {
+  const onChange = () => {
     const formState = getValues();
 
     if (sortValue !== formState.sort) {
@@ -51,9 +100,7 @@ const Filters = () => {
       filterProjectsAction(formState.filter);
     }
 
-    if (categoryValue !== formState.category) {
-      filterCategoryProjectsAction(formState.category);
-    }
+    filterCategoriesProjectsAction(formState.categories.map(category => category.value));
   };
 
   return (
@@ -61,48 +108,47 @@ const Filters = () => {
       <Form onChange={onChange}>
         <Select
           label={t('Sort by')}
-          options={[
-            { value: ProjectsSort.NAME, text: t('Name') },
-            { value: ProjectsSort.DATE, text: t('Date') },
-            { value: ProjectsSort.POPULAR, text: t('Popular') },
-            { value: ProjectsSort.RECOMMENDED, text: t('Recommended') },
-          ]}
+          options={sortOptions}
           {...register('sort', { required: true })}
         />
+
         {!!userId && (
-        <Select
-          label={t('Filter by')}
-          options={[
-            { value: ProjectsFilter.ALL, text: t('All') },
-            { value: ProjectsFilter.FAVORITE, text: t('Favorite') },
-            { value: ProjectsFilter.INVESTED, text: t('Invested') },
-            { value: ProjectsFilter.OWN, text: t('Own') },
-          ]}
-          {...register('filter', { required: true })}
-        />
+          <Select
+            label={t('Filter by')}
+            options={filterOptions}
+            {...register('filter', { required: true })}
+          />
         )}
-        <Select
-          label={t('Category')}
-          options={[
-            { value: ProjectsCategories.ALL, text: t('All') },
-            { value: ProjectsCategories.Art, text: t('Art') },
-            { value: ProjectsCategories.Comics, text: t('Comics') },
-            { value: ProjectsCategories.Crafts, text: t('Crafts') },
-            { value: ProjectsCategories.Dance, text: t('Dance') },
-            { value: ProjectsCategories.Design, text: t('Design') },
-            { value: ProjectsCategories.Fashion, text: t('Fashion') },
-            { value: ProjectsCategories.FilmAndVideo, text: t('Film and Video'), },
-            { value: ProjectsCategories.Food, text: t('Food') },
-            { value: ProjectsCategories.Games, text: t('Games') },
-            { value: ProjectsCategories.Journalism, text: t('Journalism') },
-            { value: ProjectsCategories.Music, text: t('Music') },
-            { value: ProjectsCategories.Photography, text: t('Photography') },
-            { value: ProjectsCategories.Publishing, text: t('Publishing') },
-            { value: ProjectsCategories.Technology, text: t('Technology') },
-            { value: ProjectsCategories.Theater, text: t('Theater') },
-          ]}
-          {...register('category', { required: true })}
+
+        <Controller
+          name="categories"
+          rules={{ required: true }}
+          control={control}
+          render={({ field }) => (
+            <MultiSelect
+              {...field}
+              label={t('Categories')}
+              placeholder={t('All categories')}
+              noOptionsMessage={() => t('No options')}
+              options={categoriesOptions}
+              onChange={(value: CategoriesType[]) => {
+                field.onChange(value);
+                onChange();
+              }}
+            />
+          )}
         />
+        <div className={classes.upcoming}>
+          <Checkbox
+            id="upcomingProjects"
+            label={t('Upcoming projects')}
+            value={getUpcomingProjects}
+            onChange={() => {
+              setUpcomingProjects(!getUpcomingProjects);
+              upcomingProjectsAction(!getUpcomingProjects);
+            }}
+          />
+        </div>
       </Form>
       <Statistic />
     </Container>

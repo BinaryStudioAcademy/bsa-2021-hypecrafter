@@ -1,19 +1,20 @@
-import { faBell } from '@fortawesome/free-regular-svg-icons';
-import { faCircle, faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, useEffect, useState } from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import hypeCoin from '../../assets/HypeCoin.png';
-import { Routes } from '../../common/enums';
-import { useAuth, useScroll, useWindowResize } from '../../hooks';
+import { Routes, SocketActions } from '../../common/enums';
+import { logout } from '../../helpers/http';
+import { useAction, useAuth, useBalance, useScroll, useTypedSelector, useWindowResize } from '../../hooks';
 import { useLocalization } from '../../providers/localization';
-import { logout } from '../../services/logout';
+import { useSockets } from '../../providers/sockets';
 import Avatar from '../Avatar';
 import Button from '../Button';
 import Input from '../Input';
 import Link from '../Link';
 import Logo from '../Logo';
+import NotificationPopover from '../NotificationsPopover';
 import OpenUserModal from '../OpenUserModalOption';
 import LanguageSwitcher from '../SwitchLanguageOption/LanguageSwitcher';
 import classes from './styles.module.scss';
@@ -25,7 +26,27 @@ const Header = () => {
   const [isProjectsMenu, setProjectsMenu] = useState(false);
   const [isProfileMenu, setProfileMenu] = useState(false);
   const [isVisibleOnScroll, setVisibleOnScroll] = useState(false);
+
+  const { addSocketHandler, socket } = useSockets();
+  const { setNewNotificationsAction } = useAction();
+
+  const store = useTypedSelector(
+    ({ notifications: { notifications } }) => ({
+      notifications
+    })
+  );
+  const { notifications } = store;
+
+  useEffect(() => {
+    if (socket) {
+      addSocketHandler(SocketActions.NOTIFICATION, (notification) => {
+        setNewNotificationsAction(notification);
+      });
+    }
+  }, [socket]);
+
   const { isMobile } = useWindowResize();
+  const { isBalance, balance } = useBalance();
 
   const handleProfileMenu = () => {
     if (!isProfileMenu) {
@@ -57,6 +78,11 @@ const Header = () => {
 
   useScroll(30, { scrollOverLimitCallback, scrollUnderLimitCallback });
 
+  const handleHideProfileMenu = () => {
+    setProfileMenu(false);
+    setMobileMenu(false);
+  };
+
   return (
     <div
       className={isVisibleOnScroll ? classes.visible_on_scroll : ''}
@@ -68,7 +94,10 @@ const Header = () => {
         `}
       >
         <div className={classes.header_left}>
-          <Link to={Routes.HOME}>
+          <Link
+            to={Routes.HOME}
+            onClick={handleHideProfileMenu}
+          >
             <Logo />
           </Link>
           <Nav
@@ -78,12 +107,14 @@ const Header = () => {
               to={Routes.HOME}
               className={classes.header_menu_item}
               activeClassName={classes.header_menu_item_active}
+              onClick={handleHideProfileMenu}
             >
               {t('Home')}
             </NavLink>
             <NavLink
               to={Routes.PROJECTS}
               className={classes.header_menu_item}
+              onClick={handleHideProfileMenu}
             >
               {t('Projects')}
             </NavLink>
@@ -93,6 +124,7 @@ const Header = () => {
                 ${classes.desktop_trends}
               `}
               to={Routes.TRENDS}
+              onClick={handleHideProfileMenu}
             >
               {t('Trends')}
             </NavLink>
@@ -108,14 +140,16 @@ const Header = () => {
               <Nav
                 className={classes.desktop_header_user_menu}
               >
-                <div className={classes.header_hypeCoin}>
+                <div
+                  className={`
+                    ${classes.header_hypeCoin}
+                    ${isBalance ? '' : classes.hide}
+                  `}
+                >
                   <Link to={Routes.ADDFUNDS}><img src={hypeCoin} alt="HypeCoin" /></Link>
-                  <Link to={Routes.ADDFUNDS}>1500</Link>
+                  <Link to={Routes.ADDFUNDS}>{balance}</Link>
                 </div>
-                <div className={classes.header_natification}>
-                  <FontAwesomeIcon icon={faBell} className={classes.header_natification_bell} />
-                  {true && <FontAwesomeIcon icon={faCircle} className={classes.header_natification_new} />}
-                </div>
+                <NotificationPopover notifications={notifications} />
                 <div className={classes.desktop_profile}>
                   <Nav.Link
                     onClick={handleProfileMenu}
@@ -139,12 +173,6 @@ const Header = () => {
                     >
                       <OpenUserModal />
                     </div>
-                    <NavLink
-                      to={Routes.PROFILE}
-                      className={classes.desktop_menu_item}
-                    >
-                      {t('Edit profile')}
-                    </NavLink>
                     <div
                       className={`
                           ${classes.desktop_menu_item}
@@ -222,6 +250,7 @@ const Header = () => {
             <NavLink
               to={Routes.HOME}
               className={classes.mobile_menu_item}
+              onClick={handleHideProfileMenu}
             >
               {t('Home')}
             </NavLink>
@@ -231,35 +260,38 @@ const Header = () => {
                   ${classes.mobile_menu_item}
               `}
               to={Routes.PROJECTS}
+              onClick={handleHideProfileMenu}
             >
               {t('Projects')}
             </NavLink>
             <NavLink
               to={Routes.TRENDS}
               className={classes.mobile_menu_item}
+              onClick={handleHideProfileMenu}
             >
               {t('Trends')}
             </NavLink>
           </Nav>
         </div>
-        <NavLink to={Routes.HOME} className={classes.mobile_logo}>
+        <NavLink
+          to={Routes.HOME}
+          className={classes.mobile_logo}
+
+        >
           <Logo />
         </NavLink>
         <div
-          className={`${classes.header_hypeCoin} ${classes.mobile_hypeCoin}`}
+          className={`
+            ${classes.header_hypeCoin}
+            ${classes.mobile_hypeCoin}
+            ${isBalance ? '' : classes.hide}
+          `}
         >
           <img src={hypeCoin} alt="HypeCoin" />
-          <span>1500</span>
+          <span>{balance}</span>
         </div>
         <div className={classes.mobile_notification}>
-          <FontAwesomeIcon
-            icon={faBell}
-            className={classes.mobile_notification_bell}
-          />
-          <FontAwesomeIcon
-            icon={faCircle}
-            className={classes.mobile_notification_new}
-          />
+          <NotificationPopover notifications={notifications} />
         </div>
         <div className={classes.mobile_profile}>
           <Nav.Link
@@ -282,12 +314,6 @@ const Header = () => {
             >
               <OpenUserModal />
             </div>
-            <NavLink
-              to={Routes.PROFILE}
-              className={classes.mobile_menu_item}
-            >
-              {t('Edit profile')}
-            </NavLink>
             <div
               className={`
                   ${classes.mobile_menu_item}
