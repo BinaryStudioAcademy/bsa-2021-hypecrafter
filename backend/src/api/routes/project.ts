@@ -11,12 +11,14 @@ const init = ({ projectService }: Services, path: string) => (app: MicroMq) => a
     sort: ProjectsSort;
     filter: ProjectsFilter;
     categories: string;
+    upcoming: boolean;
     userId?: string;
   }, Empty>(
     (req) => projectService.getBySortAndFilter({
       sort: req.query.sort,
       filter: req.query.filter,
       stringifiedCategories: req.query.categories,
+      upcoming: req.query.upcoming === 'true',
       userId: req.query.userId,
     })
   ))

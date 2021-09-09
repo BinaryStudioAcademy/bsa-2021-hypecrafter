@@ -233,12 +233,6 @@ const Header = () => {
                     >
                       <OpenUserModal />
                     </div>
-                    <NavLink
-                      to={Routes.PROFILE}
-                      className={classes.desktop_menu_item}
-                    >
-                      {t('Edit profile')}
-                    </NavLink>
                     <div
                       className={`
                           ${classes.desktop_menu_item}
@@ -380,12 +374,6 @@ const Header = () => {
             >
               <OpenUserModal />
             </div>
-            <NavLink
-              to={Routes.PROFILE}
-              className={classes.mobile_menu_item}
-            >
-              {t('Edit profile')}
-            </NavLink>
             <div
               className={`
                   ${classes.mobile_menu_item}

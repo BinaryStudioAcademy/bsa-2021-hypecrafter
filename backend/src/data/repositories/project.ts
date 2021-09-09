@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-shadow */
 /* eslint-disable class-methods-use-this */
 /* eslint-disable default-case */
 import { ProjectsCategories, ProjectsFilter, ProjectsSort, TimeInterval } from 'hypecrafter-shared/enums';
@@ -387,8 +386,8 @@ export class ProjectRepository extends Repository<Project> {
         .from(Project, 'project')
         .leftJoin('donators_privilege', 'donatorsPrivilege', 'project.id = "donatorsPrivilege"."projectId"')
         .where(`
-          title IS NOT NULL AND 
-          "donatorsPrivilege".content IS NOT NULL AND 
+          title IS NOT NULL AND
+          "donatorsPrivilege".content IS NOT NULL AND
           includes IS NOT NULL AND amount IS NOT NULL
         `)
         .groupBy('project.id'), 'dp', 'dp."projectId" = project.id')
@@ -524,11 +523,12 @@ export class ProjectRepository extends Repository<Project> {
       .getRawOne();
   }
 
-  public getBySortAndFilter({ sort, filter, categories, userId }: {
+  public getBySortAndFilter({ sort, filter, categories, userId, upcoming }: {
     sort: ProjectsSort;
     filter: ProjectsFilter;
     categories: ProjectsCategories[];
     userId?: string;
+    upcoming: boolean;
   }) {
     const query = this.createQueryBuilder('project')
       .select(
@@ -614,6 +614,10 @@ export class ProjectRepository extends Repository<Project> {
     if (userId) {
       const filterCondition = this.getFilterCondition(filter, userId);
       query.andWhere(filterCondition);
+    }
+
+    if (upcoming) {
+      query.andWhere('project."finishDate" BETWEEN current_date AND current_date + 7');
     }
 
     const orderBy = this.getOrderBy(sort);
