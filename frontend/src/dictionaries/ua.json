@@ -201,6 +201,8 @@
     "Amount":"Кількість",
     "Return to Main Page":"Повернутися до Головної Сторінки",
     "Pay":"Сплатити",
+    "today":"сьогодні",
+    "at": "о",
     "Notifications": "Сповіщення",
     "Manage Preferences": "Керування налаштуваннями",
     "No more notifications": "Немає сповіщень",
@@ -211,7 +213,10 @@
     "achieved goal": "досяг цілі",
     "Fundraising time for": "Термін збору коштів для",
     "is over": "завершено",
-
+    "Global Statistics": "Загальна статистика",
+    "Donation Statistics": "Статистика донатів",
+    "Export": "Експортувати",
+    "No data": "Немає даних",
     "Donate": "Пожертва"
   }
 }

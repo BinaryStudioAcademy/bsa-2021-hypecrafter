@@ -1,14 +1,18 @@
 import React, { FC } from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Routes } from '../../common/enums';
 import { Project } from '../../common/types';
-import Tag from './Tag';
+import NavigationService from '../../navigation';
 import commonStyles from '../../styles/common';
+import Tag from './Tag';
 
 interface Props {
   project: Project;
+  userPage?: boolean;
 }
 
-const ProjectCard:FC<Props> = ({ project }) => {
+const ProjectCard: FC<Props> = ({ project, userPage }) => {
+
   const renderTags = (tag: string, index: number, arr: string[]) => {
     const key = `${project.id}${index}`
     if (index > 3) return
@@ -16,11 +20,15 @@ const ProjectCard:FC<Props> = ({ project }) => {
     return <Tag name={tag} key={key} />
   };
 
+  const onProjectTouch = () => {
+    NavigationService.navigate(Routes.PROJECT, { id: project.id });
+  }
+
   return (
-    <View style={styles.container}>
-      <TouchableOpacity onPress={() => console.log('project')} >
+    <View style={userPage ? styles.containerAlt : styles.container}>
+      <TouchableOpacity onPress={onProjectTouch} >
         <View style={styles.imageContainer}>
-          <Image style={styles.image} source={{uri: project.imageUrl || 'https://source.unsplash.com/random'}} />
+          <Image style={styles.image} source={{ uri: project.imageUrl || 'https://source.unsplash.com/random' }} />
         </View>
         <Text style={styles.category}>{project.category}</Text>
         <Text style={styles.name}>{project.name}</Text>
@@ -39,8 +47,13 @@ const styles = StyleSheet.create({
     backgroundColor: commonStyles.color.blockBackground,
     borderRadius: 4,
     marginVertical: 6,
-    marginLeft: 'auto',
-    marginRight: 'auto',
+  },
+  containerAlt : {
+    width: 360,
+    backgroundColor: commonStyles.color.blockBackground,
+    borderRadius: 4,
+    marginVertical: 6,
+    marginLeft: 12,
   },
   imageContainer: {
     borderTopLeftRadius: 4,

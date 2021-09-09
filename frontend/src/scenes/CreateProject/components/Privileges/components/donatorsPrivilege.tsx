@@ -64,7 +64,6 @@ const DonatorsPrivilege: FC<Props> = ({ donatorsPrivilege, onChange, onDelete })
         )}
         value={content}
       />
-      {/* <p>{t('Subparagraphs')}</p> */}
       <div className={classes.pointControl}>
         <Input
           type="text"

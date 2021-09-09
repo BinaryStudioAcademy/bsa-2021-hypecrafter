@@ -1,9 +1,9 @@
-FROM node:alpine as builder
+FROM node:14.17.1-alpine3.13 as builder
 WORKDIR "/app/shared"
 COPY --from=mihailts/hypecrafter-shared /app .
 WORKDIR "/app/frontend"
 COPY ./package.json ./
-RUN npm install
+RUN npm install --force
 COPY . .
 RUN npm run build
 

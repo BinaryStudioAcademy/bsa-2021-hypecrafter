@@ -180,7 +180,6 @@
     "Cancel": "Cancel",
     "Edit": "Edit",
     "Rating": "Rating",
-    "Site locale": "en_US",
     "Update": "Update",
     "How much the user must pay to get this option":"How much the user must pay to get this option",
     "Privilege header":"Privilege header",
@@ -201,6 +200,8 @@
     "Amount":"Amount",
     "Return to Main Page":"Return to Main Page",
     "Pay":"Pay",
+    "today":"today",
+    "at": "at",
     "Notifications": "Notifications",
     "Manage Preferences": "Manage Preferences",
     "No more notifications": "No more notifications",
@@ -211,7 +212,10 @@
     "achieved goal": "achieved goal",
     "Fundraising time for": "Fundraising time for",
     "is over": "is over",
-
+    "Global Statistics": "Global Statistics",
+    "Donation Statistics": "Donation Statistics",
+    "Export": "Export",
+    "No data": "No data",
     "Donate": "Donate"
   }
 }
