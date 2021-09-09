@@ -9,7 +9,7 @@ import {
   Project as MyProject,
   UpdateViewsAndInteractionTime
 } from '../../common/types';
-import { Project, UserProfile, UserProject, Donate } from '../entities';
+import { Donate, Project, UserProfile, UserProject } from '../entities';
 
 @EntityRepository(Project)
 export class ProjectRepository extends Repository<Project> {
@@ -715,6 +715,7 @@ export class ProjectRepository extends Repository<Project> {
       ))
       .where('project.id = :id', { id })
       .getRawOne();
+  }
       
   // eslint-disable-next-line consistent-return
   public getDonationInformationDuringTime(id: string, timeInterval: TimeInterval) {

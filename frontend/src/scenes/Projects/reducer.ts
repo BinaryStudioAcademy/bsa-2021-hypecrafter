@@ -14,12 +14,9 @@ import {
   filterProjectsAction,
   FilterProjectsActionType,
   sortProjectsAction,
-  SortProjectsActionType,
-  updateViewsAndInteractionTimeAction,
-  UpdateViewsAndInteractionTimeSuccessActionType,
-  UpdateViewsAndInteractionTimeFailureActionType,
-  upcomingProjectsAction,
-  UpcomingProjectsActionType
+  SortProjectsActionType, upcomingProjectsAction,
+  UpcomingProjectsActionType, updateViewsAndInteractionTimeAction,
+  UpdateViewsAndInteractionTimeFailureActionType, UpdateViewsAndInteractionTimeSuccessActionType
 } from './actions';
 
 export interface ProjectsState {
@@ -117,7 +114,7 @@ export const projectsReducer = createReducer<ProjectsState>(initialState, {
       ...state,
       error: action.payload
     };
-  }
+  },
   [upcomingProjectsAction.TRIGGER](state, action: UpcomingProjectsActionType) {
     return {
       ...state,

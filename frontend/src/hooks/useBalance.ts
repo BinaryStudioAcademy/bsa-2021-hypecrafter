@@ -1,5 +1,5 @@
-import { useAuth } from './useAuth';
 import { useTypedSelector } from './store';
+import { useAuth } from './useAuth';
 
 export const useBalance = () => {
   const { isAuthorized } = useAuth();
