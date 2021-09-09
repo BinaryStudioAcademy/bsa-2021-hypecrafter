@@ -13,8 +13,8 @@ type Props = {
 const ProgressBar: FC<Props> = ({ goal, percent }) => (
   <View style={styles.wrapper}>
     <View style={styles.amounts}>
-      <Text style={styles.text}>{`${goal}`}</Text>
       <Text style={styles.text}>{`${percent}%`}</Text>
+      <Text style={styles.text}>{`${goal}`}</Text>
     </View>
     <Progress.Bar
       progress={percent / 100 <= 1 ? percent / 100 : 1}

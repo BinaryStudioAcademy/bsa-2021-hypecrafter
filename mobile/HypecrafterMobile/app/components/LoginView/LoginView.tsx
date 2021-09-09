@@ -77,6 +77,7 @@ const LoginView: FC = () => {
           <Text style={[styles.text, styles.inputName]}>Email</Text>
           <TextInput
             placeholder="Email"
+            placeholderTextColor="#D8DBE0"
             style={styles.input}
             onChangeText={onEmailChange}
             value={userData.email}
@@ -85,6 +86,7 @@ const LoginView: FC = () => {
           <View style={styles.passwordContainer}>
             <TextInput
               placeholder="Password"
+              placeholderTextColor="#D8DBE0"
               style={[styles.input, styles.passwordInput]}
               onChangeText={onPasswordChange}
               value={userData.password}
