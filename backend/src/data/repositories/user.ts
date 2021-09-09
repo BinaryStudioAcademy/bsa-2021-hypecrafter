@@ -35,11 +35,24 @@ export class UserRepository extends Repository<UserProfile> {
     return userProfile;
   }
 
-  public getCurrentUser(id: string) {
-    return this.createQueryBuilder('user')
+  public async getCurrentUser(id: string) {
+    const user = await this.createQueryBuilder('user')
       .select('"firstName", "lastName", id, "imageUrl"')
       .where({ id })
       .getRawOne();
+    return user;
+  }
+
+  public async getEmailById(id: string) {
+    const query = await this.query(
+      `
+        SELECT 
+          email
+        FROM public.user
+        WHERE id='${id}'
+      `
+    );
+    return query[0];
   }
 
   public createUser(data: RegisterData) {
