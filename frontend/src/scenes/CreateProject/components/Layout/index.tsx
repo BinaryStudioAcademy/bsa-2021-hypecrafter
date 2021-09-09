@@ -23,9 +23,10 @@ const Layout: FC<Props> = ({ header, body, footer, currentPage, setCurrentPage }
     { page: CurrentPage.STORY, label: 'Story' },
     { page: CurrentPage.TEAM, label: 'Team' },
     { page: CurrentPage.FUNDING, label: 'Funding' },
-    // { page: CurrentPage.BENEFITS, label: 'Benefits' },
-    { page: CurrentPage.SETTINGS, label: 'Settings' },
-    { page: CurrentPage.RECOMMENDATIONS, label: 'Recommendations' }
+    { page: CurrentPage.RECOMMENDATIONS, label: 'Recommendations' },
+    { page: CurrentPage.PRIVILEGES, label: 'Privileges' },
+    { page: CurrentPage.FAQ, label: 'FAQ' },
+    { page: CurrentPage.SETTINGS, label: 'Settings' }
   ];
   return (
     <div className={classes.root}>

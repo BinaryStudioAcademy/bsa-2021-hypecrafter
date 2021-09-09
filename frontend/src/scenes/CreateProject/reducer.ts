@@ -1,5 +1,5 @@
 import { Routes } from '../../common/enums';
-import { Project } from '../../common/types';
+import { CreateProject as Project } from '../../common/types';
 import { createReducer } from '../../helpers';
 import {
   createProjectAction,
@@ -7,7 +7,8 @@ import {
   CreateProjectSuccessActionType,
   fetchRecommendedProjectsAction,
   FetchRecommendedProjectsFailureActionType,
-  FetchRecommendedProjectsSuccessActionType
+  FetchRecommendedProjectsSuccessActionType, getForEditProjectAction, GetForEditProjectFailureActionType,
+  GetForEditProjectSuccessActionType
 } from './actions';
 import { RecommendedProject } from './types';
 
@@ -20,18 +21,17 @@ export interface ProjectState{
 }
 
 const newProject: Project = {
-  id: '',
   category: '',
   description: '',
   goal: 0,
   imageUrl: '',
   name: '',
-  tags: [],
-  donated: 0,
-  totalViews: 0,
-  minutesToRead: 0,
   region: '',
-  totalInteractionTime: 0
+  content: '',
+  team: { name: '', chats: [] },
+  projectTags: [],
+  donatorsPrivileges: [],
+  faqs: []
 };
 
 export const initialState: ProjectState = {
@@ -77,6 +77,26 @@ export const projectReduser = createReducer<ProjectState>(initialState, {
       error: action.payload
     };
   },
+  [getForEditProjectAction.TRIGGER](state) {
+    return {
+      ...state,
+      isLoading: true
+    };
+  },
+  [getForEditProjectAction.SUCCESS](state, action: GetForEditProjectSuccessActionType) {
+    return {
+      ...state,
+      isLoading: false,
+      project: action.payload
+    };
+  },
+  [getForEditProjectAction.FAILURE](state, action: GetForEditProjectFailureActionType) {
+    return {
+      ...state,
+      isLoading: false,
+      error: action.payload
+    };
+  }
 });
 
 export default projectReduser;

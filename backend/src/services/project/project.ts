@@ -1,8 +1,4 @@
-import {
-  ProjectsCategories,
-  ProjectsFilter,
-  ProjectsSort
-} from 'hypecrafter-shared/enums';
+import { ProjectsFilter, ProjectsSort, TimeInterval } from 'hypecrafter-shared/enums';
 import { Project } from '../../common/types';
 import { Chat, Project as CreateProject, Team } from '../../data/entities';
 import { mapPrivileges, mapProjects } from '../../data/mappers';
@@ -15,6 +11,8 @@ import {
   TeamRepository,
   UserRepository
 } from '../../data/repositories';
+import FAQServise from '../faq';
+import DonatorsPrivilegeServise from '../projectPrivilege';
 import ProjectTagService from '../projectTag';
 import TagService from '../tag';
 
@@ -35,15 +33,21 @@ export default class ProjectService {
 
   readonly #projectTagService: ProjectTagService;
 
+  readonly #donatorsPrivilegeServise: DonatorsPrivilegeServise;
+
+  readonly #faqServise: FAQServise;
+
   constructor(
     projectRepository: ProjectRepository,
     teamRepository: TeamRepository,
     chatRepository: ChatRepository,
     userRepository: UserRepository,
+    tagService: TagService,
+    projectTagService: ProjectTagService,
     categoryRepository: CategoryRepository,
     tagRepository: TagRepository,
-    tagService: TagService,
-    projectTagService: ProjectTagService
+    donatorsPrivilegeServise: DonatorsPrivilegeServise,
+    faqServise: FAQServise
   ) {
     this.#projectRepository = projectRepository;
     this.#teamRepository = teamRepository;
@@ -53,6 +57,8 @@ export default class ProjectService {
     this.#tagRepository = tagRepository;
     this.#tagService = tagService;
     this.#projectTagService = projectTagService;
+    this.#donatorsPrivilegeServise = donatorsPrivilegeServise;
+    this.#faqServise = faqServise;
   }
 
   public async getPopularProjectsByCategory(category: string) {
@@ -71,21 +77,25 @@ export default class ProjectService {
   }
 
   public async createProject(body: CreateProject) {
-    const project: CreateProject = await this.#projectRepository.save({ ...body });
+    const project: CreateProject = await this.#projectRepository.save(body);
     const team = await this.#teamRepository.save({ ...new Team(), ...body.team, project });
     this.#chatRepository.save(body.team.chats.map(chat => ({ ...new Chat(), ...chat, team })));
     const listTags = await this.#tagService.save(body.projectTags.map(projectTag => projectTag.tag));
+    await this.#projectTagService.remove(project.projectTags.map(projectTag => projectTag.id));
     await this.#projectTagService.save(listTags.map(tag => ({ tag, project })));
+    await this.#donatorsPrivilegeServise.save(body.donatorsPrivileges.map(privilege => ({ ...privilege, project })));
+    await this.#faqServise.save(body.faqs.map(faq => ({ ...faq, project })));
     return project;
   }
 
-  public async getBySortAndFilter({ sort, filter, category, userId }: {
+  public async getBySortAndFilter({ sort, filter, stringifiedCategories, userId }: {
     sort: ProjectsSort,
     filter: ProjectsFilter,
-    category: ProjectsCategories,
+    stringifiedCategories: string,
     userId?: string,
   }) {
-    const projects: Project[] = await this.#projectRepository.getBySortAndFilter({ sort, filter, category, userId });
+    const categories = JSON.parse(stringifiedCategories);
+    const projects: Project[] = await this.#projectRepository.getBySortAndFilter({ sort, filter, categories, userId });
     return projects;
   }
 
@@ -98,12 +108,17 @@ export default class ProjectService {
     return project; // rewrite when error handling middleware works
   }
 
+  public async getForEdit(id: string) {
+    const project: CreateProject = await this.#projectRepository.getForEdit(id);
+    return project;
+  }
+
   public async setReaction({ isLiked, projectId }: { isLiked: boolean, projectId: string }, userId: string) {
     const project = await this.#projectRepository.findOne({ id: projectId });
     const user = await this.#userRepository.findOne({ id: userId });
     await this.#projectRepository.setReaction(isLiked, user, project);
-    const likesAndDislikes:
-    { likes: string, dislikes: string } = await this.#projectRepository.getLikesAndDislikesAmount(project.id);
+    const likesAndDislikes: { likes: string, dislikes: string } = await this
+      .#projectRepository.getLikesAndDislikesAmount(project.id);
 
     return mapLikesAndDislikes(likesAndDislikes);
   }
@@ -152,5 +167,17 @@ export default class ProjectService {
       tagArray,
       category ? category.name : null
     );
+  }
+
+  public async getDonationInformation(id: string, startDate: TimeInterval) {
+    const donationInformation = await this.#projectRepository.getDonationInformationDuringTime(
+      id,
+      startDate
+    );
+    const statisticsInformation = await this.#projectRepository.getProjectStatistics(id);
+    return {
+      donations: donationInformation,
+      statistics: statisticsInformation
+    };
   }
 }

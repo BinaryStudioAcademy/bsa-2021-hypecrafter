@@ -1,6 +1,6 @@
-import { ProjectsCategories, ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
+import { ProjectsFilter, ProjectsSort, TimeInterval } from 'hypecrafter-shared/enums';
 import MicroMq from 'micromq';
-import { Project, ProjectItem, RecommendedProjects } from '../../common/types';
+import { Project, ProjectItem, RecommendedProjects, Statistics } from '../../common/types';
 import { Project as CreateProject } from '../../data/entities';
 import { wrap } from '../../helpers';
 import { Services } from '../../services';
@@ -10,13 +10,13 @@ const init = ({ projectService }: Services, path: string) => (app: MicroMq) => a
   .get(path, wrap<Empty, Project[], {
     sort: ProjectsSort;
     filter: ProjectsFilter;
-    category: ProjectsCategories;
+    categories: string;
     userId?: string;
   }, Empty>(
     (req) => projectService.getBySortAndFilter({
       sort: req.query.sort,
       filter: req.query.filter,
-      category: req.query.category,
+      stringifiedCategories: req.query.categories,
       userId: req.query.userId,
     })
   ))
@@ -50,6 +50,13 @@ const init = ({ projectService }: Services, path: string) => (app: MicroMq) => a
   )
   .get(`${path}/:id`, wrap<Empty, Project, { id: string, userId: string | undefined }, Empty>(
     (req) => projectService.getById(req.params.id, req.query.userId)
+  ))
+  .get(`${path}/:id/statistics`, wrap<Empty, Statistics,
+  { id: string, timeInterval: TimeInterval }, Empty>(
+    (req) => projectService.getDonationInformation(req.params.id, req.query.timeInterval)
+  ))
+  .get(`${path}/getForEdit/:id`, wrap<Empty, CreateProject, { id: string, userId: string | undefined }, Empty>(
+    (req) => projectService.getForEdit(req.params.id)
   ));
 
 export default init;
