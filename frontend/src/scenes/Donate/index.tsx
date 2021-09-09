@@ -2,7 +2,7 @@ import { ChangeEvent, FC, FormEvent, useState } from 'react';
 import Button from '../../components/Button';
 import Input from '../../components/Input';
 import SelectedFund from '../../components/SelectedFund';
-import { useAction } from '../../hooks';
+import { useAction, useTypedSelector } from '../../hooks';
 import { useLocalization } from '../../providers/localization';
 import classes from './styles.module.scss';
 
@@ -13,6 +13,9 @@ const Donate: FC<Param> = ({ type }) => {
   console.log(type);
   const [price, setPrice] = useState('5');
   const { t } = useLocalization();
+  const {
+    projectId
+  } = useTypedSelector(({ donate }) => donate);
   const { hideDonateModalAction } = useAction();
   const { executeDonateAction } = useAction();
   const start = (
@@ -46,7 +49,7 @@ const Donate: FC<Param> = ({ type }) => {
             type="button"
             variant='secondary'
             className={classes['donate-confirm-btn']}
-            onClick={() => executeDonateAction('asdfsadfsadf', 100)}
+            onClick={() => executeDonateAction(projectId, Number(price))}
           >
             {t('Confirm')}
           </Button>
