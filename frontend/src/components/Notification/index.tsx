@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import {
   faCheckSquare, faClock, faCoins, faComments,
   faThumbsUp
@@ -16,7 +17,7 @@ import classes from './styles.module.scss';
 const Notification = (props: NotificationType) => {
   const { data, type, isRead, id } = props;
 
-  const { setNotificationIsReadAction } = useAction();
+  const { setNotificationIsReadAction, openModalAction } = useAction();
 
   const { t } = useLocalization();
 
@@ -37,7 +38,8 @@ const Notification = (props: NotificationType) => {
       message: (
         <span>
           <Link
-            to={`/${(user as NotificationLink).link}`}
+            onClick={() => openModalAction((user as NotificationLink).link)}
+            to="#"
           >
             {(user as NotificationLink).name}
           </Link>
@@ -53,7 +55,10 @@ const Notification = (props: NotificationType) => {
       image: faComments,
       message: (
         <span>
-          <Link to={`/${(user as NotificationLink).link}`}>
+          <Link
+            onClick={() => openModalAction((user as NotificationLink).link)}
+            to="#"
+          >
             {(user as NotificationLink).name}
           </Link>
           {' '}{t('commented your')}{' '}
@@ -68,7 +73,12 @@ const Notification = (props: NotificationType) => {
       image: faCoins,
       message: (
         <span>
-          <Link to={`/${(user as NotificationLink).link}`}>{(user as NotificationLink).name}</Link>{' '}
+          <Link
+            onClick={() => openModalAction((user as NotificationLink).link)}
+            to="#"
+          >
+            {(user as NotificationLink).name}
+          </Link>{' '}
           {t('donated')} <span className={classes.amount}>{donation}</span> {t('hypeCoins to')}{' '}
           <Link to={`/projects/${project.link}`}>{project.name}</Link>
         </span>
