@@ -4,7 +4,7 @@ import { useTypedSelector } from '../../hooks/store';
 import { useAction } from '../../hooks/useAction';
 import ProjectsScreen from './screens/ProjectsScreen';
 
-const MainView = ({navigation} : {navigation: any}) => {
+const MainView = ({ navigation }: { navigation: any }) => {
   const { fetchPopularAndRecommendedProjectsAction, fetchTopics } = useAction();
 
   const {
@@ -25,7 +25,7 @@ const MainView = ({navigation} : {navigation: any}) => {
     fetchPopularAndRecommendedProjectsAction();
     fetchTopics();
   }, []);
-  
+
   return (
     <Tab.Navigator
       screenOptions={{
@@ -36,7 +36,7 @@ const MainView = ({navigation} : {navigation: any}) => {
       <Tab.Screen
         name="Popular"
         children={() => (
-          <ProjectsScreen 
+          <ProjectsScreen
             popularStartups={popularStartups}
             recommendedStartups={recommendedStartups}
             target="popular"

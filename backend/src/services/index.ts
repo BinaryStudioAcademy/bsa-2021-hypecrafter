@@ -1,8 +1,9 @@
 import { Repositories } from '../data/repositories';
 import CategoryService from './category';
 import CommentService from './comment';
-import FAQServise from './faq';
+import DonateService from './donate';
 import ProjectService from './project';
+import FAQServise from './faq';
 import DonatorsPrivilegeServise from './projectPrivilege';
 import ProjectTagService from './projectTag';
 import TagService from './tag';
@@ -23,6 +24,8 @@ export function initServices(repositories: Repositories): Services {
     tagService: new TagService(repositories.tagRepository),
     categoryService: new CategoryService(repositories.categoryRepository),
     commentService: new CommentService(repositories.commentRepository),
+    donateService: new DonateService(repositories.donateRepository,
+      repositories.projectRepository, repositories.userRepository,)
   };
 }
 
@@ -32,5 +35,6 @@ export type Services = {
   projectService: ProjectService,
   tagService: TagService,
   categoryService: CategoryService,
-  commentService: CommentService,
+  donateService: DonateService,
+  commentService: CommentService
 };

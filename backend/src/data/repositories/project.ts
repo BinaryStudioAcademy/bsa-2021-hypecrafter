@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-shadow */
 /* eslint-disable class-methods-use-this */
 /* eslint-disable default-case */
-import { ProjectsCategories, ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
+import { ProjectsCategories, ProjectsFilter, ProjectsSort, TimeInterval } from 'hypecrafter-shared/enums';
 import { isNull } from 'lodash';
 import { EntityRepository, getRepository, Repository } from 'typeorm';
 import { Mark } from '../../common/enums';
@@ -99,7 +99,7 @@ export class ProjectRepository extends Repository<Project> {
     return this.getProjectsByOrder('project."updatedAt"');
   }
 
-  public async getById(id: string, userId: string | undefined): Promise<MyProject> {
+  public async getById(id: string, userId?: string): Promise<MyProject> {
     let selectQuery = `
       project."id",
       project."imageUrl",
@@ -549,5 +549,97 @@ export class ProjectRepository extends Repository<Project> {
       return 'project."id" IS NOT NULL';
     }
     return categories.map(category => `category.name = '${category}'`).join(' OR ');
+  }
+
+  // eslint-disable-next-line consistent-return
+  public getDonationInformationDuringTime(id: string, timeInterval: TimeInterval) {
+    const date = new Date();
+    switch (timeInterval) {
+      case TimeInterval.Day: {
+        date.setDate(date.getDate() - 1);
+        return this.getDonationInformation(id, date);
+      }
+      case TimeInterval.Month: {
+        date.setMonth(date.getMonth() - 1);
+        return this.getDonationInformation(id, date);
+      }
+      case TimeInterval.Year: {
+        date.setFullYear(date.getFullYear() - 1);
+        return this.getDonationInformation(id, date);
+      }
+      case TimeInterval.AllTime: {
+        return this.getDonationInformation(id, null);
+      }
+    }
+  }
+
+  public async getProjectStatistics(id: string) {
+    const query = this.createQueryBuilder('project')
+      .select(
+        `
+          "totalViews",
+          "minutesToRead",
+          "totalInteractionTime"
+        `
+      )
+      .where({ id });
+
+    const res = await query.getRawOne();
+    return res;
+  }
+
+  private async getDonationInformation(id: string, startDate: Date | null) {
+    const query = this.createQueryBuilder('project')
+      .select(
+        `
+          id,
+          donated,
+          "donationCreatedAt",
+          "firstName",
+          "lastName"
+        `
+      )
+      .leftJoin(
+        (subQuery) => subQuery
+          .select(
+            `
+              amount AS donated,
+              "createdAt" as "donationCreatedAt",
+              "projectId",
+              "firstName",
+              "lastName"
+            `
+          )
+          .from('donate', 'donate')
+          .leftJoin(
+            (subQuery2) => subQuery2
+              .select(
+                `
+                  id as "userId",
+                  "firstName",
+                  "lastName"
+                `
+              )
+              .from('user_profile', 'user_profile'),
+            'test',
+            'test."userId" = donate.user.id'
+          ),
+        'dn',
+        'dn."projectId" = project.id'
+      );
+
+    let fullQuery;
+
+    if (startDate) {
+      fullQuery = query.where('"donationCreatedAt" > :start_at AND id=:id', {
+        id,
+        start_at: startDate
+      });
+    } else {
+      fullQuery = query.where({ id });
+    }
+
+    const res = fullQuery.execute();
+    return res;
   }
 }
