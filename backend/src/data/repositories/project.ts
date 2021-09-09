@@ -27,7 +27,7 @@ export class ProjectRepository extends Repository<Project> {
         project."id",
         goal,
         project.imageUrl,
-        category.name AS "category",
+        category.name AS "categoryname",
         array_agg(tag.name) AS "tags"
       `
       )
@@ -171,13 +171,11 @@ export class ProjectRepository extends Repository<Project> {
         .select(`
           SUM(amount) AS donated,
           "projectId"
-        `
-          )
-          .from('donate', 'donate')
-          .groupBy('"projectId"'),
-        'dn',
-        'dn."projectId" = project.id'
-      )
+        `)
+        .from('donate', 'donate')
+        .groupBy('"projectId"'),
+      'dn',
+      'dn."projectId" = project.id')
       .leftJoin(
         (subQuery) => subQuery
           .select(
@@ -570,21 +568,19 @@ export class ProjectRepository extends Repository<Project> {
         CASE WHEN up."isFavorite" IS NULL THEN false ELSE true END AS "isFavorite",
         CASE WHEN dnu."projectId" IS NULL THEN false ELSE true END AS "isDonated"
         ` : ''}
-      `)
+      `
+      )
       .leftJoin('project.category', 'category')
       .leftJoin(subQuery => subQuery
         .select(`
           SUM(amount) AS donated,
           COUNT("userId") AS "bakersAmount",
           "projectId"
-        `
-          )
-          .from('donate', 'donate')
-          .groupBy('"projectId"'),
-        'dn',
-        'dn."projectId" = project.id'
-      )
-      .leftJoin('project.category', 'category')
+        `)
+        .from('donate', 'donate')
+        .groupBy('"projectId"'),
+      'dn',
+      'dn."projectId" = project.id')
       .leftJoin(
         (subQuery) => subQuery
           .select(
@@ -716,7 +712,7 @@ export class ProjectRepository extends Repository<Project> {
       .where('project.id = :id', { id })
       .getRawOne();
   }
-      
+
   // eslint-disable-next-line consistent-return
   public getDonationInformationDuringTime(id: string, timeInterval: TimeInterval) {
     const date = new Date();
