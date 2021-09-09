@@ -15,8 +15,7 @@ export enum ProjectsFilter {
   ALL = 'all',
   FAVORITE = 'favorite',
   INVESTED = 'invested',
-  OWN = 'own',
-  UPCOMING = 'upcoming'
+  OWN = 'own'
 }
 
 export { CategoryType as ProjectsCategories };
