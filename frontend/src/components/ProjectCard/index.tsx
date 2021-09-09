@@ -30,7 +30,7 @@ const ProjectCard: FC<Props> = ({
   const hide = () => {
     if (!tags) return true;
     if (Array.isArray(tags) && !tags.length) return true;
-    if (typeof tags === 'string' && tags.trim()) return true;
+    if (typeof tags === 'string' && (!tags.trim() || tags.trim() === 'null')) return true;
     return false;
   };
 
@@ -48,7 +48,7 @@ const ProjectCard: FC<Props> = ({
       >
         {
           Array.isArray(tags)
-            ? tags.map(tag => <Tag key={tag} text={tag} />)
+            ? tags.map(tag => tag !== null && <Tag key={tag} text={tag} />)
             : <Tag text={tags} />
         }
       </div>
