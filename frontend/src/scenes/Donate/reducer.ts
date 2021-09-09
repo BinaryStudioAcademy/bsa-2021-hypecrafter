@@ -8,7 +8,7 @@ export interface DonateState {
 
 export const initialState: DonateState = {
   projectId: '',
-  donateState: 'hide'
+  donateState: 'show'
 };
 
 export const donateReducer = createReducer<DonateState>(initialState, {
@@ -40,7 +40,8 @@ export const donateReducer = createReducer<DonateState>(initialState, {
   [hideDonateModalAction.TRIGGER](state: DonateState) {
     return {
       ...state,
-      ...initialState
+      donateState: 'hide',
+      projectId: ''
     };
   }
 });

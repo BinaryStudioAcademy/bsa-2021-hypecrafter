@@ -28,8 +28,9 @@ import UserModal from '../UserModal';
 const routesWitoutHeader = [Routes.LOGIN, Routes.SIGNUP];
 
 const Routing = () => {
-  const { authFetchUserAction, closeModalAction } = useAction();
+  const { authFetchUserAction, closeModalAction, hideDonateModalAction } = useAction();
   const { id } = useTypedSelector(({ userProfile }) => userProfile);
+  const { donateState } = useTypedSelector(({ donate }) => donate);
   const { isLoading } = useTypedSelector(({ auth }) => auth);
   const tokens = getAccessToken();
   const { pathname } = useLocation();
@@ -41,6 +42,9 @@ const Routing = () => {
     closeModalAction();
   };
 
+  const closeDonateModalHandler = () => {
+    hideDonateModalAction();
+  };
   useEffect(() => {
     if (!isAuthorized && tokens) authFetchUserAction();
     if (id) setShowModal(true);
@@ -60,12 +64,12 @@ const Routing = () => {
           onHide={closeModalHandler}
         />
         <ModalWindow
-          show
+          show={donateState !== 'hide'}
           title="Donate"
-          body={<Donate />}
+          body={<Donate type={donateState} />}
           size="medium"
           centered={false}
-          onHide={closeModalHandler}
+          onHide={closeDonateModalHandler}
         />
         <PublicRoute
           restricted={false}

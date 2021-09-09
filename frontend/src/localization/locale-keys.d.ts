@@ -214,4 +214,6 @@ declare type LocaleKeys =
  | 'Donation Statistics'
  | 'Export'
  | 'No data'
- | 'Donate';
+ | 'Donate'
+ | 'Confirm'
+ | 'Choose the donation amount';
