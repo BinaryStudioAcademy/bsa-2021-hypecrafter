@@ -53,13 +53,10 @@
   &:hover,
   &:active,
   &:visited {
-    color: $color-root-text !important;
-  }
-
-  &:active {
-    color: $color-root-turquoise !important;
+    color: $color-root-text;
   }
 }
+
 .header_menu_item_active {
   color: $color-root-turquoise !important;
 }

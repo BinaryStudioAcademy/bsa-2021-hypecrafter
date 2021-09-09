@@ -1,8 +1,9 @@
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { ChangeEvent, useEffect, useState } from 'react';
+import classNames from 'classnames';
+import { ChangeEvent, useEffect, useMemo, useState } from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import hypeCoin from '../../assets/HypeCoin.png';
 import { Routes, SocketActions } from '../../common/enums';
 import { logout } from '../../helpers/http';
@@ -20,28 +21,24 @@ import Popover from '../Popover';
 import SearchResult from '../SearchResult';
 import LanguageSwitcher from '../SwitchLanguageOption/LanguageSwitcher';
 import classes from './styles.module.scss';
+import { getLinks } from './utils';
+
+const SEARCHBAR_DEBOUNCE_TIMEOUT = 500;
+const OFFSET = 30;
 
 const Header = () => {
-  const { t } = useLocalization();
   const [text, setText] = useState('');
   const [isMobileMenu, setMobileMenu] = useState(false);
   const [isProjectsMenu, setProjectsMenu] = useState(false);
   const [isProfileMenu, setProfileMenu] = useState(false);
   const [isVisibleOnScroll, setVisibleOnScroll] = useState(false);
+  const { pathname } = useLocation();
 
+  const { t } = useLocalization();
   const { addSocketHandler, socket } = useSockets();
-  const { setNewNotificationsAction } = useAction();
-
-  useEffect(() => {
-    if (socket) {
-      addSocketHandler(SocketActions.NOTIFICATION, (notification) => {
-        setNewNotificationsAction(notification);
-      });
-    }
-  }, [socket]);
-
+  const { setNewNotificationsAction, searchAction } = useAction();
+  const { isAuthorized } = useAuth();
   const { isMobile } = useWindowResize();
-  const timeToEnterSearch = 500;
   const store = useTypedSelector(({ search: { searchResult, isLoading }, notifications: { notifications } }) => ({
     searchResult,
     isLoading,
@@ -55,9 +52,22 @@ const Header = () => {
       }
       : auth.user
   ));
-  const { searchAction } = useAction();
   const { searchResult, notifications } = store;
   const { isBalance, balance } = useBalance();
+
+  const navLinks = useMemo(() => getLinks(t), [t]);
+
+  const debouncedSearchTerm = useDebounce(text, SEARCHBAR_DEBOUNCE_TIMEOUT);
+
+  const scrollOverLimitCallback = () => setVisibleOnScroll(false);
+  const scrollUnderLimitCallback = () => setVisibleOnScroll(true);
+
+  useScroll(OFFSET, { scrollOverLimitCallback, scrollUnderLimitCallback });
+
+  const handleHideProfileMenu = () => {
+    setProfileMenu(false);
+    setMobileMenu(false);
+  };
 
   const handleProfileMenu = () => {
     if (!isProfileMenu) {
@@ -79,10 +89,11 @@ const Header = () => {
 
     setMobileMenu(!isMobileMenu);
   };
+
   const handleSearch = (e: ChangeEvent<HTMLInputElement>) => {
     setText(e.target.value);
   };
-  const debouncedSearchTerm = useDebounce(text, timeToEnterSearch);
+
   useEffect(
     () => {
       if (debouncedSearchTerm) {
@@ -91,15 +102,14 @@ const Header = () => {
     },
     [debouncedSearchTerm]
   );
-  const scrollOverLimitCallback = () => setVisibleOnScroll(false);
-  const scrollUnderLimitCallback = () => setVisibleOnScroll(true);
 
-  useScroll(30, { scrollOverLimitCallback, scrollUnderLimitCallback });
-
-  const handleHideProfileMenu = () => {
-    setProfileMenu(false);
-    setMobileMenu(false);
-  };
+  useEffect(() => {
+    if (socket) {
+      addSocketHandler(SocketActions.NOTIFICATION, (notification) => {
+        setNewNotificationsAction(notification);
+      });
+    }
+  }, [socket]);
 
   return (
     <div
@@ -121,31 +131,18 @@ const Header = () => {
           <Nav
             className={classes.desktop_header_menu}
           >
-            <NavLink
-              to={Routes.HOME}
-              className={classes.header_menu_item}
-              activeClassName={classes.header_menu_item_active}
-              onClick={handleHideProfileMenu}
-            >
-              {t('Home')}
-            </NavLink>
-            <NavLink
-              to={Routes.PROJECTS}
-              className={classes.header_menu_item}
-              onClick={handleHideProfileMenu}
-            >
-              {t('Projects')}
-            </NavLink>
-            <NavLink
-              className={`
-                ${classes.header_menu_item}
-                ${classes.desktop_trends}
-              `}
-              to={Routes.TRENDS}
-              onClick={handleHideProfileMenu}
-            >
-              {t('Trends')}
-            </NavLink>
+            {navLinks.map(it => (
+              <NavLink
+                key={it.to}
+                to={it.to}
+                className={classNames(it.className, {
+                  [classes.header_menu_item_active]: pathname === it.to
+                })}
+                onClick={handleHideProfileMenu}
+              >
+                {it.label}
+              </NavLink>
+            ))}
           </Nav>
         </div>
         <div className={classes.header_right}>
@@ -165,7 +162,7 @@ const Header = () => {
             )}
             </Popover>
           </div>
-          {useAuth().isAuthorized
+          {isAuthorized
             ? (
               <Nav
                 className={classes.desktop_header_user_menu}
