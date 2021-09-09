@@ -36,7 +36,7 @@ const TrendsPage: FC = () => {
       />
 
       <Container className={classes['trends-container']}>
-        <LoaderWrapper isLoading={isLoading} variant="page">
+        <LoaderWrapper isLoading={isLoading} variant="page" isTransparent>
           <TagsChart defaultParams={defaultParams} t={t} />
           <ProjectsChart categories={categories} t={t} />
         </LoaderWrapper>
