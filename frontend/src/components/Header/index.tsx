@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 import hypeCoin from '../../assets/HypeCoin.png';
 import { Routes, SocketActions } from '../../common/enums';
 import { logout } from '../../helpers/http';
-import { useAction, useAuth, useBalance, useScroll, useTypedSelector, useWindowResize } from '../../hooks';
+import { useAction, useAuth, useBalance, useDebounce, useScroll, useTypedSelector, useWindowResize } from '../../hooks';
 import { useLocalization } from '../../providers/localization';
 import { useSockets } from '../../providers/sockets';
 import Avatar from '../Avatar';
@@ -16,6 +16,8 @@ import Link from '../Link';
 import Logo from '../Logo';
 import NotificationPopover from '../NotificationsPopover';
 import OpenUserModal from '../OpenUserModalOption';
+import Popover from '../Popover';
+import SearchResult from '../SearchResult';
 import LanguageSwitcher from '../SwitchLanguageOption/LanguageSwitcher';
 import classes from './styles.module.scss';
 
@@ -30,13 +32,6 @@ const Header = () => {
   const { addSocketHandler, socket } = useSockets();
   const { setNewNotificationsAction } = useAction();
 
-  const store = useTypedSelector(
-    ({ notifications: { notifications } }) => ({
-      notifications
-    })
-  );
-  const { notifications } = store;
-
   useEffect(() => {
     if (socket) {
       addSocketHandler(SocketActions.NOTIFICATION, (notification) => {
@@ -46,6 +41,14 @@ const Header = () => {
   }, [socket]);
 
   const { isMobile } = useWindowResize();
+  const timeToEnterSearch = 500;
+  const store = useTypedSelector(({ search: { searchResult, isLoading }, notifications: { notifications } }) => ({
+    searchResult,
+    isLoading,
+    notifications
+  }));
+  const { searchAction } = useAction();
+  const { searchResult, notifications } = store;
   const { isBalance, balance } = useBalance();
 
   const handleProfileMenu = () => {
@@ -68,11 +71,18 @@ const Header = () => {
 
     setMobileMenu(!isMobileMenu);
   };
-
   const handleSearch = (e: ChangeEvent<HTMLInputElement>) => {
     setText(e.target.value);
   };
-
+  const debouncedSearchTerm = useDebounce(text, timeToEnterSearch);
+  useEffect(
+    () => {
+      if (debouncedSearchTerm) {
+        searchAction(text);
+      }
+    },
+    [debouncedSearchTerm]
+  );
   const scrollOverLimitCallback = () => setVisibleOnScroll(false);
   const scrollUnderLimitCallback = () => setVisibleOnScroll(true);
 
@@ -133,7 +143,19 @@ const Header = () => {
         <div className={classes.header_right}>
           <div className={classes.header_search}>
             <FontAwesomeIcon icon={faSearch} className={classes.header_search_icon} />
-            <Input type="search" value={text} placeholder={t('Search...')} onChange={handleSearch} />
+            <Popover
+              trigger={(
+                <Input type="search" value={text} placeholder={t('Search...')} onChange={handleSearch} />
+                )}
+              placement="bottom-end"
+              id="id"
+              rootClose
+            >{() => (
+              <div className={classes.searchResult}>
+                {searchResult.map(result => (<SearchResult key={result.id} project={result} />))}
+              </div>
+            )}
+            </Popover>
           </div>
           {useAuth().isAuthorized
             ? (

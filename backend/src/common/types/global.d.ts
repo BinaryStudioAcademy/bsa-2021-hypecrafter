@@ -4,3 +4,4 @@ declare namespace NodeJS {
     PORT: string;
   }
 }
+declare module 'node-fetch';

@@ -20,6 +20,10 @@ export const env = {
     accessKeyId: getEnv('REACT_APP_AWS_ACCESS_KEY_ID'),
     secretAccessKey: getEnv('REACT_APP_AWS_SECRET_ACCESS_KEY')
   },
+  search: {
+    url: getEnv('REACT_APP_SEARCH_URL'),
+    searchKey: getEnv('REACT_APP_SEARCH_KEY')
+  },
   payment: {
     key: getEnv('REACT_APP_PAYMENT_KEY')
   },

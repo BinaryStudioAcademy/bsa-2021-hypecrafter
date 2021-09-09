@@ -13,6 +13,7 @@ declare type LocaleKeys =
  | 'Password is too short (minimum is 6 characters)'
  | 'Do you have a good ...'
  | 'Create Project'
+ | 'Save'
  | 'Help Project'
  | 'Popular startups'
  | 'Recommended for you'
