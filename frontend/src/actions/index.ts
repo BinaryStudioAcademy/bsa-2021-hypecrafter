@@ -1,18 +1,22 @@
 export { facebookAuthAction, googleAuthAction, loginAction, registerUserAction } from '../scenes/Auth/actions';
-export { createProjectAction, getForEditProjectAction } from '../scenes/CreateProject/actions';
+export {
+  createProjectAction, fetchRecommendedProjectsAction, getForEditProjectAction
+} from '../scenes/CreateProject/actions';
 export { fetchPopularAndRecommendedProjectsAction, fetchTopics } from '../scenes/MainPage/actions';
 export { addComment, fetchProject, fetchStatistics, setReaction, setWatch } from '../scenes/ProjectPage/actions';
 export {
   fetchProjectsAction,
   filterCategoriesProjectsAction,
   filterProjectsAction,
-  sortProjectsAction
+  sortProjectsAction,
+  updateViewsAndInteractionTimeAction,
+  upcomingProjectsAction
 } from '../scenes/Projects/actions';
 export {
   fetchCategories,
   fetchPopularProjectsByCategory,
   fetchPopularTagsAction,
-  setSelectedCategoryAction
+  setSelectedCategoryAction,
 } from '../scenes/TrendsPage/actions';
 export {
   closeModalAction,
@@ -28,4 +32,3 @@ export { getCategoriesAction } from './categories';
 export { getNotificationsAction, setNewNotificationsAction, setNotificationIsReadAction } from './notifications';
 export { getTagsAction } from './tags';
 export { getUsersAction } from './users';
-

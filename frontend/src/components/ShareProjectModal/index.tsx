@@ -19,7 +19,7 @@ interface ShareProjectModalProps {
   title: string;
 }
 
-const ShareProjectModal:FC<ShareProjectModalProps> = ({ url = 'https://google.com', imageUrl, title }) => {
+const ShareProjectModal: FC<ShareProjectModalProps> = ({ url = 'https://google.com', imageUrl, title }) => {
   const [copied, setCopied] = useState(false);
 
   return (

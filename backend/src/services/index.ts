@@ -15,13 +15,19 @@ export function initServices(repositories: Repositories, app: MicroMq): Services
   return {
     userService: new UserService(repositories.userRepository),
     topicService: new TopicService(repositories.topicRepository),
-    projectService: new ProjectService(app, repositories.projectRepository,
-      repositories.teamRepository, repositories.chatRepository,
+    projectService: new ProjectService(
+      app,
+      repositories.projectRepository,
+      repositories.teamRepository,
+      repositories.chatRepository,
       repositories.userRepository,
       new TagService(repositories.tagRepository),
       new ProjectTagService(repositories.projectTagRepository),
+      repositories.categoryRepository,
+      repositories.tagRepository,
       new DonatorsPrivilegeServise(repositories.donatorsPrivilegeRepository),
-      new FAQServise(repositories.faqRepository)),
+      new FAQServise(repositories.faqRepository)
+    ),
     tagService: new TagService(repositories.tagRepository),
     categoryService: new CategoryService(repositories.categoryRepository),
     commentService: new CommentService(repositories.commentRepository, repositories.projectRepository, app),

@@ -17,6 +17,7 @@ export interface Project {
   minutesToRead: number;
   region: string;
   totalInteractionTime: number;
+  involvementIndex: number;
 }
 
 export interface ProjectPage extends Project {

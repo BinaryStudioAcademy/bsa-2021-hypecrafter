@@ -3,6 +3,7 @@ export interface User {
   name: string,
   username: string,
   email: string,
+  balance: number,
   address: {
     street: string,
     suite: string,
@@ -19,12 +20,5 @@ export interface User {
     name: string,
     catchPhrase: string,
     bs: string
-  },
-  balance: number;
-  firstName: string;
-  lastName: string;
-  rating: number;
-  lastLoginDate: string;
-  createdAt: string;
-  imageUrl: string;
+  }
 }

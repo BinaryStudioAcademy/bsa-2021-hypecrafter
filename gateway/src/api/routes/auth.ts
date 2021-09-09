@@ -10,13 +10,12 @@ import { Services } from '../../services/index';
 import { authentication as authenticationMiddleware } from '../middlewares/authentication';
 import { facebookAuth } from '../middlewares/authFacebook';
 import { registration as registrationMiddleware } from '../middlewares/registration';
-import { saveReqBodyUserEmail } from '../middlewares/saveReqBodyUserEmail';
 
 const init = (services: Services) => {
   const router = Router();
 
   return router
-    .get([AuthApiPath.CurrentUser], saveReqBodyUserEmail, (_, res: Response) => res.delegate(Project.BACKEND))
+    .get([AuthApiPath.CurrentUser], (_, res: Response) => res.delegate(Project.BACKEND))
     .post(AuthApiPath.Google, async (req, res) => {
       const { token } = req.body;
       const data = await getGoogleInfo(token);

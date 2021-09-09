@@ -1,23 +1,14 @@
 import { useEffect, useRef } from 'react';
-import { delay } from '../common/constans';
+import { useHistory } from 'react-router-dom';
 
-const timers: NodeJS.Timeout[] = [];
 const useCountTimeOnPage = (callback: (time: number) => void) => {
+  const history = useHistory();
   const timeRef = useRef(0);
-  const timer = setInterval(() => {
-    timeRef.current += 1;
-  }, delay);
-
-  timers.push(timer);
-
-  if (+`${timer}` !== +`${timers[0]}`) clearInterval(timer);
 
   useEffect(() => () => {
-    callback(timeRef.current);
-    clearInterval(timer);
+    timeRef.current = Date.now();
+    history.block(() => { callback(Date.now() - timeRef.current); });
   });
-
-  return timeRef.current;
 };
 
 export { useCountTimeOnPage };
