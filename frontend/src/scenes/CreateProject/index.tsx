@@ -27,7 +27,7 @@ const CreateProject = () => {
     content: '',
     goal: 0,
     region: '',
-    team: { name: '', chats: [] },
+    team: { name: '', teamUsers: [] },
     imageUrl: '',
     videoUrl: '',
     projectTags: [],
@@ -64,7 +64,8 @@ const CreateProject = () => {
       project.finishDate = new Date(project.finishDate || '');
       project.projectTags = project.projectTags || [];
       project.donatorsPrivileges = project.donatorsPrivileges || [];
-      project.team = project.team || { name: '', chats: [] };
+      project.team = project.team || { name: '', teamUsers: [] };
+      project.team.teamUsers = project.team.teamUsers || [];
       project.faqs = project.faqs || [];
       setNewProject(project);
     }

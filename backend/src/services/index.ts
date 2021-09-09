@@ -14,7 +14,7 @@ export function initServices(repositories: Repositories): Services {
     userService: new UserService(repositories.userRepository),
     topicService: new TopicService(repositories.topicRepository),
     projectService: new ProjectService(repositories.projectRepository,
-      repositories.teamRepository, repositories.chatRepository,
+      repositories.teamRepository, repositories.teamUserRepository,
       repositories.userRepository,
       new TagService(repositories.tagRepository),
       new ProjectTagService(repositories.projectTagRepository),
