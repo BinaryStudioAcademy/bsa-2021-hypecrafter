@@ -3,7 +3,7 @@ import { hideDonateModalAction, showDonateModalAction, ShowDonateModalActionTrig
 
 export interface DonateState {
   projectId: string;
-  donateState: 'success' | 'failure' | 'show' | 'hide';
+  donateState: 'success' | 'failure' | 'show' | 'hide' | 'loading';
 }
 
 export const initialState: DonateState = {
@@ -17,6 +17,12 @@ export const transactionsReducer = createReducer<DonateState>(initialState, {
       ...state,
       projectId: action.payload.projectId,
       donateState: 'show'
+    };
+  },
+  [showDonateModalAction.REQUEST](state: DonateState) {
+    return {
+      ...state,
+      donateState: 'loading'
     };
   },
   [showDonateModalAction.SUCCESS](state: DonateState) {
