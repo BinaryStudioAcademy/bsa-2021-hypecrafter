@@ -6,13 +6,11 @@ export async function sendRequest(url: string,
   body?: Record<string, string>,
   headers?: Record<string, string>) {
   try {
-    const params = {
-      method
-    };
-    const response = await fetch(url, method !== HttpMethod.GET ? {
-      ...params,
-      body: JSON.stringify(body),
-      headers: { 'Content-Type': 'application/json', ...headers } } : params);
+    const response = await fetch(url, {
+      method,
+      body: method !== HttpMethod.GET ? JSON.stringify(body) : undefined,
+      headers: { 'Content-Type': 'application/json', ...headers }
+    });
     const result = await response.json();
     return result;
   } catch (er) {
