@@ -21,9 +21,7 @@ export const env = {
   },
   search: {
     url: getEnv('REACT_APP_SEARCH_URL'),
-    urlDocuments: getEnv('REACT_APP_SEARCH_URL_DOCUMENTS'),
-    searchKey: getEnv('REACT_APP_SEARCH_KEY'),
-    privateKey: getEnv('REACT_APP_PRIVATE_KEY')
+    searchKey: getEnv('REACT_APP_SEARCH_KEY')
   },
   payment: {
     key: getEnv('REACT_APP_PAYMENT_KEY')

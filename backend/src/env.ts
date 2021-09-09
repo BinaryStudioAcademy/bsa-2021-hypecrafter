@@ -10,6 +10,10 @@ export const env = {
     rabbit: {
       url: getEnv('RABBIT_URL') || 'amqp://localhost'
     },
+    search: {
+      urlDocuments: getEnv('SEARCH_DOCUMENTS_URL'),
+      privateKey: getEnv('SEARCH_PRIVATE_KEY')
+    },
     payment:
     {
       private_key: getEnv('PAYMENT_PRIVATE_KEY'),

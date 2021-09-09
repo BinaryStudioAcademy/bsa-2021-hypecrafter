@@ -6,7 +6,6 @@ import LoaderWrapper from '../../components/LoaderWrapper';
 import Seo from '../../components/Seo';
 import { useAction, useAuth, useTypedSelector } from '../../hooks';
 import { useLocalization } from '../../providers/localization';
-import { addIndex } from '../../services/search';
 import Basic from './components/Basic';
 import BeforeStart from './components/BeforeStart';
 import FAQS from './components/FAQ';
@@ -68,9 +67,6 @@ const CreateProject = () => {
       project.team.teamUsers = project.team.teamUsers || [];
       project.faqs = project.faqs || [];
       setNewProject(project);
-    }
-    if (project.id) {
-      addIndex(project);
     }
   }, [project]);
   const getView = () => {
