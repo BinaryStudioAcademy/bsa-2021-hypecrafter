@@ -19,7 +19,7 @@ export function initServices(repositories: Repositories, app: MicroMq): Services
       app,
       repositories.projectRepository,
       repositories.teamRepository,
-      repositories.chatRepository,
+      repositories.teamUserRepository,
       repositories.userRepository,
       new TagService(repositories.tagRepository),
       new ProjectTagService(repositories.projectTagRepository),

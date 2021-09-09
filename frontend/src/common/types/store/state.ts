@@ -1,5 +1,6 @@
 import { AuthState } from '../../../reducers/auth';
 import { CategoriesState } from '../../../reducers/categies';
+import { SearchState } from '../../../reducers/search';
 import { NotificationsState } from '../../../reducers/notifications';
 import { TagsState } from '../../../reducers/tags';
 import { UsersState } from '../../../reducers/users';
@@ -27,5 +28,6 @@ export interface StoreState {
   projectPage: ProjectPageState;
   transactions: TransactionsState
   authentication: AuthenticationState;
-  payment: PaymentState
+  payment: PaymentState;
+  search:SearchState
 }

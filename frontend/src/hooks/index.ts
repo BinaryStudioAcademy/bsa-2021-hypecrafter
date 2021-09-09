@@ -7,3 +7,4 @@ export * from './useQuery';
 export * from './useScroll';
 export * from './useWindowResize';
 export * from './useBalance';
+export * from './useDebounce';

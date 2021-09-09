@@ -1,4 +1,4 @@
-export * from './chat';
+export * from './teamUsers';
 export * from './createProject';
 export * from './faq';
 export * from './privilege';

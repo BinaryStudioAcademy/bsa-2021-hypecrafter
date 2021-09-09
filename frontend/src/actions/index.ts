@@ -32,3 +32,5 @@ export { getCategoriesAction } from './categories';
 export { getNotificationsAction, setNewNotificationsAction, setNotificationIsReadAction } from './notifications';
 export { getTagsAction } from './tags';
 export { getUsersAction } from './users';
+export { searchAction } from './search';
+

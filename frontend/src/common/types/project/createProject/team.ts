@@ -1,7 +1,7 @@
-import { CreateProjectChat } from './chat';
+import { CreateProjectTeamUsers } from './teamUsers';
 
 export interface CreateProjectTeam{
   id?: string;
   name: string;
-  chats: CreateProjectChat[];
+  teamUsers: CreateProjectTeamUsers[];
 }
