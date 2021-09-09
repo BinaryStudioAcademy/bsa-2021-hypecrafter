@@ -222,4 +222,5 @@ declare type LocaleKeys =
  | 'in progress'
  | 'successful'
  | 'unsuccessful'
- | 'Site locale';
+ | 'Site locale'
+ | 'Comment can not be empty';

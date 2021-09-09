@@ -1,6 +1,7 @@
 export * from './category';
 export * from './comment';
 export * from './http';
+export * from './notification';
 export * from './params';
 export * from './project';
 export * from './store';

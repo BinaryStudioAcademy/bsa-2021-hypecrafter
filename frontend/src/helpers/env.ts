@@ -12,6 +12,7 @@ type ProcessEnvKey =
   | 'REACT_APP_AWS_SECRET_ACCESS_KEY'
   | 'REACT_APP_PAYMENT_KEY'
   | 'REACT_APP_SENTRY_DSN'
-  | 'REACT_APP_GOOGLE_CLIENT_ID';
+  | 'REACT_APP_GOOGLE_CLIENT_ID'
+  | 'REACT_APP_SOCKET_SERVER_URL';
 
 export const getEnv = (key: ProcessEnvKey) => process.env[key];
