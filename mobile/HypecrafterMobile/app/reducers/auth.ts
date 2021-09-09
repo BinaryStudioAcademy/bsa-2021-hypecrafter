@@ -23,7 +23,6 @@ export const authReducer = createReducer<AuthState>(authState, {
     };
   },
   [authFetchUserAction.SUCCESS](state, action: AuthFetchUserSuccessActionType) {
-    console.log(action.payload)
     return {
       ...state,
       isLoading: false,

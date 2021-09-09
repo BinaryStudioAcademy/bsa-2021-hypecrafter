@@ -40,7 +40,7 @@ const ProjectView: FC = () => {
   const handleWatch = () => {
     setWatch({ isWatched: !project.isWatched, projectId: project.id });
   };
-  console.log(userId)
+
   useEffect(() => {
     fetchProject({ id: navigation.getParam('id'), userId });
   }, []);
