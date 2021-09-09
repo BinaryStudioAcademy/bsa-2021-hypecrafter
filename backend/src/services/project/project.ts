@@ -125,9 +125,10 @@ export default class ProjectService {
     categoryId?: string;
     region?: string;
   }) {
+    console.log('here');
     const projectTagsId: string[] = JSON.parse(stringifiedProjectTags);
 
-    const projectTags = projectTagsId
+    const projectTags = projectTagsId.length > 0
       ? await Promise.all(
         projectTagsId.map(
           async (item): Promise<{ name: string }> => this.#tagRepository.getById(item)
@@ -149,7 +150,7 @@ export default class ProjectService {
     return await this.#projectRepository.getRecommendation(
       region,
       tagArray,
-      category.name
+      category ? category.name : null
     );
   }
 }
