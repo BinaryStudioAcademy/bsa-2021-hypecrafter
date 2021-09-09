@@ -65,7 +65,7 @@ const Recommendations: FC<Props> = ({ changePage, currentPage, region, category,
 
   return (
     <Layout
-      header={t('Campaign Goal')}
+      header={t('Recommendations')}
       setCurrentPage={changePage}
       body={body}
       footer={footer}
