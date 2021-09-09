@@ -10,7 +10,6 @@ import { mapBoolean, mapPrivileges, mapProjects, nullToNumber } from '../../data
 import { mapLikesAndDislikes } from '../../data/mappers/mapLikesAndDislikes';
 import {
   CategoryRepository,
-  ChatRepository,
   ProjectRepository,
   TagRepository,
   TeamRepository, TeamUserRepository, UserRepository
@@ -48,7 +47,6 @@ export default class ProjectService {
     projectRepository: ProjectRepository,
     teamRepository: TeamRepository,
     teamUserRepository: TeamUserRepository,
-    chatRepository: ChatRepository,
     userRepository: UserRepository,
     tagService: TagService,
     projectTagService: ProjectTagService,

@@ -18,7 +18,6 @@ export function initServices(repositories: Repositories): Services {
       repositories.projectRepository,
       repositories.teamRepository,
       repositories.teamUserRepository,
-      repositories.chatRepository,
       repositories.userRepository,
       new TagService(repositories.tagRepository),
       new ProjectTagService(repositories.projectTagRepository),
