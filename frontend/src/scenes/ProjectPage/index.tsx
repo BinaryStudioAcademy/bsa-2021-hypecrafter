@@ -63,7 +63,7 @@ const ProjectPage: FC = () => {
               <Comments comments={project.projectComments} projectId={id} />
             </Tab>
             <Tab title="Statistics">
-              <Statistics t={t} />
+              <Statistics t={t} projectId={project.id} />
             </Tab>
           </Tabs>
         </Row>

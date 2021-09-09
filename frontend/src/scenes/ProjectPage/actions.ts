@@ -1,14 +1,11 @@
-/* eslint-disable max-len */
-
+import { TimeInterval } from 'hypecrafter-shared/enums';
 import { createRoutine } from 'redux-saga-routines';
-import {
-  Comment,
-  CreateComment,
-  ProjectPage
-} from '../../common/types';
+import { Comment, CreateComment, ProjectPage } from '../../common/types';
+import { Statistics } from '../../common/types/project/statistics';
 
 export enum ProjectsActions {
   FETCH_PROJECT = 'PROJECTS/GET_PROJECT',
+  FETCH_STATISTICS = 'PROJECTS/FETCH_STATISTICS',
   ADD_COMMENT = 'COMMENTS/ADD_COMMENT',
   SET_REACTION = 'PROJECTS/SET_REACTION',
   SET_WATCH = 'PROJECTS/SET_WATCH'
@@ -29,6 +26,11 @@ interface FetchProjectTriggerActionPropsType {
   userId: string | undefined;
 }
 
+interface FetchProjectStatisticsTriggerActionPropsType {
+  id: string;
+  timeInterval: TimeInterval;
+}
+
 export const fetchProject = createRoutine(ProjectsActions
   .FETCH_PROJECT, {
   trigger: ({ id, userId }: FetchProjectTriggerActionPropsType) => ({ id, userId }),
@@ -41,6 +43,21 @@ export const addComment = createRoutine(ProjectsActions.ADD_COMMENT, {
   success: (comment: Comment) => comment,
   failure: (error: string) => error
 });
+
+export const fetchStatistics = createRoutine(ProjectsActions.FETCH_STATISTICS, {
+  trigger: ({
+    id,
+    timeInterval
+  }: FetchProjectStatisticsTriggerActionPropsType) => ({ id, timeInterval }),
+  success: (statistics: Statistics) => statistics,
+  failure: (error: string) => error
+});
+
+export type FetchStatisticsTriggerActionType = ReturnType<typeof fetchStatistics.trigger>;
+
+export type FetchStatisticsSuccessActionType = ReturnType<typeof fetchStatistics.success>;
+
+export type FetchStatisticsFailureActionType = ReturnType<typeof fetchStatistics.failure>;
 
 export type AddCommentTriggerActionType = ReturnType<typeof addComment.trigger>;
 

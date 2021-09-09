@@ -1,4 +1,4 @@
-import { ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
+import { ProjectsFilter, ProjectsSort, TimeInterval } from 'hypecrafter-shared/enums';
 import { Project } from '../../common/types';
 import {
   UpdateInteractionTimeQuery
@@ -142,5 +142,15 @@ export default class ProjectService {
         'Views and interaction time not updated'
       );
     }
+  public async getDonationInformation(id: string, startDate: TimeInterval) {
+    const donationInformation = await this.#projectRepository.getDonationInformationDuringTime(
+      id,
+      startDate
+    );
+    const statisticsInformation = await this.#projectRepository.getProjectStatistics(id);
+    return {
+      donations: donationInformation,
+      statistics: statisticsInformation
+    };
   }
 }

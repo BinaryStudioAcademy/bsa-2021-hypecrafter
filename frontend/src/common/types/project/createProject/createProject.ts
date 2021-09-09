@@ -2,6 +2,7 @@ import { CreateProjectFAQ } from './faq';
 import { CreateProjectPrivilege } from './privilege';
 import { CreateProjectTag } from './projectTag';
 import { CreateProjectTeam } from './team';
+import { CreateProjectPrivilege } from './privilege';
 
 export interface CreateProject{
   id?: string;

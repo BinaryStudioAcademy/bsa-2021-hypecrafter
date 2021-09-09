@@ -1,14 +1,18 @@
 import { Mark } from '../../common/enums';
 import { Mark as MarkType, ProjectPage } from '../../common/types';
+import { Statistics } from '../../common/types/project/statistics';
 import { createReducer } from '../../helpers';
 import type {
-  AddCommentSuccessActionType, FetchProjectSuccessActionType,
+  AddCommentSuccessActionType,
+  FetchProjectSuccessActionType,
+  FetchStatisticsSuccessActionType,
   SetReactionSuccessActionType,
   SetWatchSuccessActionType
 } from './actions';
 import {
   addComment,
   fetchProject,
+  fetchStatistics,
   setReaction,
   setWatch
 } from './actions';
@@ -18,13 +22,15 @@ export interface ProjectPageState {
   project: ProjectPage;
   isInputLoading: boolean;
   error: string;
+  statistics: Statistics;
 }
 
 export const projectPageState: ProjectPageState = {
   isLoading: false,
   project: {} as ProjectPage,
   isInputLoading: false,
-  error: ''
+  error: '',
+  statistics: {} as Statistics
 };
 
 const projectPageReducer = createReducer<ProjectPageState>(projectPageState, {
@@ -90,9 +96,15 @@ const projectPageReducer = createReducer<ProjectPageState>(projectPageState, {
   [addComment.FAILURE](state) {
     return {
       ...state,
-      isInputLoading: false,
+      isInputLoading: false
     };
-  }
+  },
+  [fetchStatistics.SUCCESS](state, action: FetchStatisticsSuccessActionType) {
+    return {
+      ...state,
+      statistics: action.payload
+    };
+  },
 });
 
 export default projectPageReducer;
