@@ -6,6 +6,7 @@ const StoryView = ({ story }: { story: string }) => {
   return (
     <View style={{ flex: 1, flexDirection: 'column' }}>
       <AutoHeightWebView
+        style={{ opacity: 0.99, minHeight: 1 }}
         customStyle={`
           .container {
             padding-right: 20px;
