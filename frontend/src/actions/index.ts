@@ -1,5 +1,5 @@
 export { facebookAuthAction, googleAuthAction, loginAction, registerUserAction } from '../scenes/Auth/actions';
-export { createProjectAction } from '../scenes/CreateProject/actions';
+export { createProjectAction, fetchRecommendedProjectsAction } from '../scenes/CreateProject/actions';
 export { fetchPopularAndRecommendedProjectsAction, fetchTopics } from '../scenes/MainPage/actions';
 export { addComment, fetchProject, setReaction, setWatch } from '../scenes/ProjectPage/actions';
 export {
@@ -27,4 +27,3 @@ export { authFetchUserAction } from './auth';
 export { getCategoriesAction } from './categories';
 export { getTagsAction } from './tags';
 export { getUsersAction } from './users';
-

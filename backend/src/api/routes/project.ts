@@ -40,9 +40,9 @@ const init = ({ projectService }: Services, path: string) => (app: MicroMq) => a
   )
   .get(
     `${path}/recommendation`,
-    wrap<Empty, RecommendedProjects, { projectTagsId?: string[], categoryId?: string, region?:string }, Empty>(
+    wrap<Empty, RecommendedProjects, { projectTagsId?: string, categoryId?: string, region?:string }, Empty>(
       (req) => projectService.getRecommendation({
-        projectTagsId: req.query.projectTagsId,
+        stringifiedProjectTags: req.query.projectTagsId,
         region: req.query.region,
         categoryId: req.query.categoryId
       })

@@ -1,52 +1,55 @@
-import { FC, useEffect, useState } from 'react';
+import { FC, useEffect } from 'react';
 import Button from 'react-bootstrap/esm/Button';
 import { Routes } from '../../../../common/enums';
-import { CreateProject, Project } from '../../../../common/types';
-import ProjectCard from '../../../../components/ProjectCard';
+import { CreateProjectTag } from '../../../../common/types';
+import { useAction, useTypedSelector } from '../../../../hooks';
 import { useLocalization } from '../../../../providers/localization';
-import { getPopularAndRecommendedProjects } from '../../../../services/projects';
 import { CurrentPage } from '../../enums';
+import { RecommendedProject } from '../../types';
 import Layout from '../Layout';
+import RecommendationCard from '../RecommendationCard';
 import classes from './styles.module.scss';
 
 interface Props {
   changePage: (currentPage: CurrentPage) => void
   currentPage: CurrentPage,
-  project: CreateProject,
+  region: string,
+  category: string,
+  projectTags: CreateProjectTag[],
 }
 
-const Recommendations: FC<Props> = ({ changePage, currentPage, project }) => {
+const Recommendations: FC<Props> = ({ changePage, currentPage, region, category, projectTags }) => {
   const { t } = useLocalization();
+  const { fetchRecommendedProjectsAction } = useAction();
+  const recommendedProjects = useTypedSelector(state => state.project.recommendedProjects);
   const handleBack = () => changePage(currentPage - 1);
   const handleNext = () => changePage(CurrentPage.END);
 
-  const [projects, setProjects] = useState<Project[]>([]);
-
   useEffect(() => {
-    getPopularAndRecommendedProjects().then(({ recommended }) => setProjects(recommended));
+    fetchRecommendedProjectsAction({
+      category,
+      region,
+      projectTags: projectTags.reduce<string[]>((res, item) => (item.tag.id ? [...res, item.tag.id] : res), [])
+    });
   }, []);
-
-  // tags
-  // categories
-  // country
-  // period
-  console.log(project); // remove
 
   const body = (
     <div>
-      <p>{t('Let’s look at similar projects')}</p>
+      <p className={classes.title}>{t('Let’s look at similar projects')}</p>
       <div className={classes.projects}>
-        {projects.map((proj: Project) => (
-          <ProjectCard
+        {recommendedProjects.map((proj: RecommendedProject) => (
+          <RecommendationCard
             key={proj.id}
             to={`${Routes.PROJECTS}/${proj.id}`}
-            category={proj.category}
+            category={proj.categoryName}
             tags={proj.tags}
             name={proj.name}
-            description={proj.description}
             goal={proj.goal}
             percent={(proj.donated * 100) / proj.goal}
             image={proj.imageUrl}
+            totalViews={proj.totalViews}
+            isSuccess={proj.isSuccess}
+            isActive={proj.isActive}
           />
         ))}
       </div>

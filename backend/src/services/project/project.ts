@@ -117,14 +117,16 @@ export default class ProjectService {
   }
 
   public async getRecommendation({
-    projectTagsId,
+    stringifiedProjectTags,
     categoryId,
     region
   }: {
-    projectTagsId?: string[];
+    stringifiedProjectTags?: string;
     categoryId?: string;
     region?: string;
   }) {
+    const projectTagsId: string[] = JSON.parse(stringifiedProjectTags);
+
     const projectTags = projectTagsId
       ? await Promise.all(
         projectTagsId.map(

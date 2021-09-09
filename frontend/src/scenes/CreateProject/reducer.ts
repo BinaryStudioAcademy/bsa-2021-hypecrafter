@@ -1,17 +1,22 @@
 import { Routes } from '../../common/enums';
 import { Project } from '../../common/types';
 import { createReducer } from '../../helpers';
-import type {
+import {
+  createProjectAction,
   CreateProjectFailureActionType,
-  CreateProjectSuccessActionType
+  CreateProjectSuccessActionType,
+  fetchRecommendedProjectsAction,
+  FetchRecommendedProjectsFailureActionType,
+  FetchRecommendedProjectsSuccessActionType
 } from './actions';
-import { createProjectAction } from './actions';
+import { RecommendedProject } from './types';
 
 export interface ProjectState{
   isLoading: boolean;
   project: Project;
   error: string;
   currentPage: Routes;
+  recommendedProjects: RecommendedProject[];
 }
 
 const newProject: Project = {
@@ -33,7 +38,8 @@ export const initialState: ProjectState = {
   isLoading: false,
   project: newProject,
   error: '',
-  currentPage: Routes.HOME
+  currentPage: Routes.HOME,
+  recommendedProjects: [],
 };
 
 export const projectReduser = createReducer<ProjectState>(initialState, {
@@ -56,7 +62,21 @@ export const projectReduser = createReducer<ProjectState>(initialState, {
       isLoading: false,
       error: action.payload
     };
-  }
+  },
+  [fetchRecommendedProjectsAction.SUCCESS](state, action: FetchRecommendedProjectsSuccessActionType) {
+    return {
+      ...state,
+      isLoading: false,
+      recommendedProjects: action.payload,
+    };
+  },
+  [fetchRecommendedProjectsAction.FAILURE](state, action: FetchRecommendedProjectsFailureActionType) {
+    return {
+      ...state,
+      isLoading: false,
+      error: action.payload
+    };
+  },
 });
 
 export default projectReduser;

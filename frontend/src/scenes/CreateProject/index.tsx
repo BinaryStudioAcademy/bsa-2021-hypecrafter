@@ -109,7 +109,9 @@ const CreateProject = () => {
           <Recommendations
             changePage={end}
             currentPage={currentPage}
-            project={newProject}
+            region={newProject.region}
+            category={newProject.category}
+            projectTags={newProject.projectTags}
           />
         );
       case CurrentPage.END:

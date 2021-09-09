@@ -179,4 +179,9 @@ declare type LocaleKeys =
  | 'Return to Main Page'
  | 'Recommendations'
  | 'Let’s look at similar projects'
+ | 'Status'
+ | 'Total views'
+ | 'in progress'
+ | 'successful'
+ | 'unsuccessful'
  | 'Pay';

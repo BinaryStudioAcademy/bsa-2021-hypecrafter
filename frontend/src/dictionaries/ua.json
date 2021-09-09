@@ -182,6 +182,11 @@
     "Return to Main Page":"Повернутися до Головної Сторінки",
     "Recommendations": "Рекомендації",
     "Let’s look at similar projects": "Давайте розглянемо подібні проекти",
+    "Status": "Статус",
+    "Total views": "Кількість переглядів",
+    "in progress": "триває",
+    "successful": "успішний",
+    "unsuccessful": "неуспішний",
     "Pay":"Сплатити"
   }
 }
