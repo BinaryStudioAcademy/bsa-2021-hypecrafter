@@ -8,7 +8,7 @@ export const env = {
     environment: getEnv('NODE_ENV')
   },
   server: {
-    url: getEnv('REACT_APP_SERVER_URL') || 'https://hypecrafter.com/api'
+    url: getEnv('REACT_APP_SERVER_URL') || 'https://www.hypecrafter.com/api'
   },
   sentry: {
     dsn: getEnv('REACT_APP_SENTRY_DSN')
