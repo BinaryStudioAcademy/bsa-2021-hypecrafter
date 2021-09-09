@@ -1,6 +1,8 @@
-import React, { FC } from 'react';
-import { Image, StyleSheet, Text, View } from "react-native";
+import React, { FC, useState } from 'react';
+import { Image, StyleSheet, Text, TextInput, TouchableWithoutFeedback, View } from "react-native";
 import { colors } from '../../../common/styles/colors';
+import { useAction } from '../../../hooks';
+import { useAuth } from '../../../hooks/useAuth';
 
 
 interface CommentProps {
@@ -35,11 +37,45 @@ export interface Comment {
 
 interface CommentsProps {
   comments: Comment[];
+  projectId: string;
 }
 
-const CommentsView: FC<CommentsProps> = ({ comments }) => {
+const CommentsView: FC<CommentsProps> = ({ comments, projectId }) => {
+  const [comment, setComment] = useState('');
+  const { addComment } = useAction();
+  const { id, isAuthorized } = useAuth();
+
+  const onCommentChange = (value: string) => {
+    setComment(value)
+  }
+
+  const onSend = () => {
+    if (id) {
+      addComment({
+        message: comment,
+        project: projectId,
+        author: id.toString()
+      });
+      setComment('');
+    }
+  }
   return (
     <View>
+      <View style={styles.containerCommentInput}>
+        <TextInput
+          placeholder="Write a comment!"
+          style={styles.input}
+          onChangeText={onCommentChange}
+          value={comment}
+        />
+        <View>
+          <TouchableWithoutFeedback onPress={onSend}>
+            <View style={{ backgroundColor: colors.root_turquoise, padding: 12, borderRadius: 5, marginLeft: 5 }}>
+              <Text style={{ color: 'black', fontSize: 20 }}>Send</Text>
+            </View>
+          </TouchableWithoutFeedback>
+        </View>
+      </View>
       {
         comments.map((el) => (
           <Comment key={el.id} comment={el} />
@@ -89,8 +125,22 @@ const Comment: FC<CommentProps> = ({
 }
 
 const styles = StyleSheet.create({
+  containerCommentInput: {
+    flexDirection: 'row',
+    justifyContent: 'center'
+  },
   container: {
     marginBottom: 10
+  },
+  input: {
+    borderWidth: 2,
+    borderColor: '#ccc',
+    marginBottom: 20,
+    padding: 10,
+    width: '80%',
+    fontSize: 16,
+    alignItems: 'center',
+    color: 'white'
   },
   avatarContainer: {
     flexDirection: 'row',
