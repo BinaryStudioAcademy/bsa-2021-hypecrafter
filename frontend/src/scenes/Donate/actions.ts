@@ -13,10 +13,8 @@ export const showDonateModalAction = createRoutine(DonateActions.SHOW_DONATE_MOD
 export const hideDonateModalAction = createRoutine(DonateActions.HIDE_DONATE_MODAL);
 
 export const executeDonateAction = createRoutine(DonateActions.EXECUTE_DONATE, {
-  trigger: (projectId: string, amount: number) => ({ projectId, amount }),
-  success: (success: boolean) => ({ success })
+  trigger: (projectId: string, amount: number) => ({ projectId, amount })
 });
 
 export type ShowDonateModalActionTrigger = ReturnType<typeof showDonateModalAction.trigger>;
 export type ExecuteDonateActionTrigger = ReturnType<typeof executeDonateAction.trigger>;
-export type ExecuteDonateActionSuccess = ReturnType<typeof executeDonateAction.success>;
