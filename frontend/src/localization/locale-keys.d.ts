@@ -40,7 +40,7 @@ declare type LocaleKeys =
  | 'Current Wallet balance'
  | 'Account details'
  | 'Add question'
- | 'Foresee popular questions and give answers to them'
+ | 'Frequently asked questions'
  | 'Question'
  | 'Answer'
  | 'FAQ'
