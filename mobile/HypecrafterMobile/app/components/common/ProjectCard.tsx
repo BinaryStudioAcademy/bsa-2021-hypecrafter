@@ -8,9 +8,10 @@ import Tag from './Tag';
 
 interface Props {
   project: Project;
+  userPage?: boolean;
 }
 
-const ProjectCard: FC<Props> = ({ project }) => {
+const ProjectCard: FC<Props> = ({ project, userPage }) => {
 
   const renderTags = (tag: string, index: number, arr: string[]) => {
     const key = `${project.id}${index}`
@@ -24,7 +25,7 @@ const ProjectCard: FC<Props> = ({ project }) => {
   }
 
   return (
-    <View style={styles.container}>
+    <View style={userPage ? styles.containerAlt : styles.container}>
       <TouchableOpacity onPress={onProjectTouch} >
         <View style={styles.imageContainer}>
           <Image style={styles.image} source={{ uri: project.imageUrl || 'https://source.unsplash.com/random' }} />
@@ -46,8 +47,13 @@ const styles = StyleSheet.create({
     backgroundColor: commonStyles.color.blockBackground,
     borderRadius: 4,
     marginVertical: 6,
-    marginLeft: 'auto',
-    marginRight: 'auto',
+  },
+  containerAlt : {
+    width: 360,
+    backgroundColor: commonStyles.color.blockBackground,
+    borderRadius: 4,
+    marginVertical: 6,
+    marginLeft: 12,
   },
   imageContainer: {
     borderTopLeftRadius: 4,

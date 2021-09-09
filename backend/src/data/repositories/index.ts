@@ -11,7 +11,6 @@ import { TagRepository } from './tag';
 import { TeamRepository } from './team';
 import { TopicRepository } from './topic';
 import { UserRepository } from './user';
-import { DonatorsPrivilegeRepository } from './donatorsPrivilege';
 
 export const initRepositories = (): Repositories => ({
   userRepository: getCustomRepository(UserRepository),
