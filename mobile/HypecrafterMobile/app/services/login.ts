@@ -1,4 +1,4 @@
-import { LoginData } from '../common/types/login';
+import { LoginData } from '../common/types';
 import { api } from '../helpers';
 
 export const login = async (params: LoginData) => {

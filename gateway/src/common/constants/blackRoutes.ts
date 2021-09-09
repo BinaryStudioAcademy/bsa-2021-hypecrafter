@@ -10,7 +10,9 @@ const BLACK_ROUTES = [
   '/profile',
   '/auth/current-user',
   '/projects/reaction',
-  '/projects/watch'
+  '/projects/watch',
+  '/donate',
+  '/current-user'
 ];
 
 export { BLACK_ROUTES };

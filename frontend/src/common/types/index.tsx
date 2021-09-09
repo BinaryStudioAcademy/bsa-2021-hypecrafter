@@ -10,4 +10,4 @@ export * from './transactions';
 export * from './user';
 export * from './userProfile';
 export * from './search';
-
+export * from './viewsAndInteractionTime';

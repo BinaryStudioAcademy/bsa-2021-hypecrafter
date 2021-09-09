@@ -14,7 +14,9 @@ import {
   filterProjectsAction,
   FilterProjectsActionType,
   sortProjectsAction,
-  SortProjectsActionType
+  SortProjectsActionType, upcomingProjectsAction,
+  UpcomingProjectsActionType, updateViewsAndInteractionTimeAction,
+  UpdateViewsAndInteractionTimeFailureActionType, UpdateViewsAndInteractionTimeSuccessActionType
 } from './actions';
 
 export interface ProjectsState {
@@ -23,6 +25,7 @@ export interface ProjectsState {
     sort: ProjectsSort;
     filter: ProjectsFilter;
     categories: ProjectsCategories[];
+    upcoming: boolean;
   };
   isLoading: boolean;
   error: string;
@@ -34,6 +37,7 @@ export const initialState: ProjectsState = {
     sort: ProjectsSort.NAME,
     filter: ProjectsFilter.ALL,
     categories: [],
+    upcoming: false
   },
   isLoading: false,
   error: '',
@@ -84,6 +88,39 @@ export const projectsReducer = createReducer<ProjectsState>(initialState, {
       modificators: {
         ...state.modificators,
         categories: action.payload,
+      },
+    };
+  },
+  [updateViewsAndInteractionTimeAction.TRIGGER](state) {
+    return {
+      ...state
+    };
+  },
+  [updateViewsAndInteractionTimeAction.SUCCESS](state, action: UpdateViewsAndInteractionTimeSuccessActionType) {
+    return {
+      ...state,
+      projects: state.projects.map(project => (
+        project.id !== action.payload.id
+          ? project
+          : {
+            ...project,
+            ...action.payload
+          }
+      ))
+    };
+  },
+  [updateViewsAndInteractionTimeAction.FAILURE](state, action: UpdateViewsAndInteractionTimeFailureActionType) {
+    return {
+      ...state,
+      error: action.payload
+    };
+  },
+  [upcomingProjectsAction.TRIGGER](state, action: UpcomingProjectsActionType) {
+    return {
+      ...state,
+      modificators: {
+        ...state.modificators,
+        upcoming: action.payload
       },
     };
   },

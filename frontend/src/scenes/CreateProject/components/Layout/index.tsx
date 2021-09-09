@@ -4,14 +4,14 @@ import { useLocalization } from '../../../../providers/localization';
 import { CurrentPage } from '../../enums';
 import classes from './styles.module.scss';
 
-interface Props{
+interface Props {
   header: string,
   body?: ReactNode,
   footer?: ReactNode,
   currentPage?: CurrentPage
-  setCurrentPage:(page:CurrentPage)=>void
+  setCurrentPage: (page: CurrentPage) => void
 }
-interface OptionsMenu{
+interface OptionsMenu {
   page: CurrentPage,
   label: LocaleKeys
 }
@@ -23,6 +23,7 @@ const Layout: FC<Props> = ({ header, body, footer, currentPage, setCurrentPage }
     { page: CurrentPage.STORY, label: 'Story' },
     { page: CurrentPage.TEAM, label: 'Team' },
     { page: CurrentPage.FUNDING, label: 'Funding' },
+    { page: CurrentPage.RECOMMENDATIONS, label: 'Recommendations' },
     { page: CurrentPage.PRIVILEGES, label: 'Privileges' },
     { page: CurrentPage.FAQ, label: 'FAQ' },
     { page: CurrentPage.SETTINGS, label: 'Settings' }

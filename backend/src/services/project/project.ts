@@ -1,14 +1,22 @@
-import { ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
+import { ProjectsFilter, ProjectsSort, TimeInterval } from 'hypecrafter-shared/enums';
+import { HttpStatusCode } from '../../../../shared/build/enums';
 import { HttpMethod } from '../../common/enums';
 import { Project } from '../../common/types';
+import {
+  UpdateInteractionTimeQuery
+} from '../../common/types/project';
 import { Project as CreateProject, Team, TeamUsers } from '../../data/entities';
-import { mapPrivileges, mapProjects } from '../../data/mappers';
+import { mapBoolean, mapPrivileges, mapProjects, nullToNumber } from '../../data/mappers';
 import { mapLikesAndDislikes } from '../../data/mappers/mapLikesAndDislikes';
 import {
+  CategoryRepository,
+  ChatRepository,
   ProjectRepository,
+  TagRepository,
   TeamRepository, TeamUserRepository, UserRepository
 } from '../../data/repositories';
 import { env } from '../../env';
+import { CustomError } from '../../helpers/customError';
 import { sendRequest } from '../../helpers/http';
 import FAQServise from '../faq';
 import DonatorsPrivilegeServise from '../projectPrivilege';
@@ -24,6 +32,10 @@ export default class ProjectService {
 
   readonly #userRepository: UserRepository;
 
+  readonly #categoryRepository: CategoryRepository;
+
+  readonly #tagRepository: TagRepository;
+
   readonly #tagService: TagService;
 
   readonly #projectTagService: ProjectTagService;
@@ -32,14 +44,25 @@ export default class ProjectService {
 
   readonly #faqServise: FAQServise;
 
-  constructor(projectRepository: ProjectRepository, teamRepository: TeamRepository,
-    teamUserRepository: TeamUserRepository, userRepository: UserRepository,
-    tagService: TagService, projectTagService: ProjectTagService,
-    donatorsPrivilegeServise:DonatorsPrivilegeServise, faqServise:FAQServise) {
+  constructor(
+    projectRepository: ProjectRepository,
+    teamRepository: TeamRepository,
+    teamUserRepository: TeamUserRepository,
+    chatRepository: ChatRepository,
+    userRepository: UserRepository,
+    tagService: TagService,
+    projectTagService: ProjectTagService,
+    categoryRepository: CategoryRepository,
+    tagRepository: TagRepository,
+    donatorsPrivilegeServise: DonatorsPrivilegeServise,
+    faqServise: FAQServise
+  ) {
     this.#projectRepository = projectRepository;
     this.#teamRepository = teamRepository;
     this.#teamUserRepository = teamUserRepository;
     this.#userRepository = userRepository;
+    this.#categoryRepository = categoryRepository;
+    this.#tagRepository = tagRepository;
     this.#tagService = tagService;
     this.#projectTagService = projectTagService;
     this.#donatorsPrivilegeServise = donatorsPrivilegeServise;
@@ -78,24 +101,35 @@ export default class ProjectService {
     return project;
   }
 
-  public async getBySortAndFilter({ sort, filter, stringifiedCategories, userId }: {
+  public async getBySortAndFilter({ sort, filter, stringifiedCategories, userId, upcoming }: {
     sort: ProjectsSort,
     filter: ProjectsFilter,
     stringifiedCategories: string,
+    upcoming: boolean,
     userId?: string,
   }) {
     const categories = JSON.parse(stringifiedCategories);
-    const projects: Project[] = await this.#projectRepository.getBySortAndFilter({ sort, filter, categories, userId });
+    const projects: Project[] = await this.#projectRepository.getBySortAndFilter({
+      sort,
+      filter,
+      categories,
+      userId,
+      upcoming
+    });
     return projects;
   }
 
   public async getById(id: string, userId: string | undefined) {
     const project = await this.#projectRepository.getById(id, userId);
-    project.bakersAmount = Math.max(0, project.bakersAmount);
-    project.donated = Math.max(0, project.donated);
-    project.privileges = mapPrivileges(project.privileges, project.bakersDonation);
 
-    return project; // rewrite when error handling middleware works
+    return {
+      ...project,
+      tags: mapBoolean(project.tags),
+      involvementIndex: nullToNumber(project.involvementIndex),
+      donated: nullToNumber(project.donated),
+      privileges: mapPrivileges(project.privileges, project.bakersDonation),
+      bakersAmount: nullToNumber(project.bakersAmount)
+    }; // rewrite when error handling middleware works
   }
 
   public async getForEdit(id: string) {
@@ -107,8 +141,8 @@ export default class ProjectService {
     const project = await this.#projectRepository.findOne({ id: projectId });
     const user = await this.#userRepository.findOne({ id: userId });
     await this.#projectRepository.setReaction(isLiked, user, project);
-    const likesAndDislikes:
-    { likes: string, dislikes: string } = await this.#projectRepository.getLikesAndDislikesAmount(project.id);
+    const likesAndDislikes: { likes: string, dislikes: string } = await this
+      .#projectRepository.getLikesAndDislikesAmount(project.id);
 
     return mapLikesAndDislikes(likesAndDislikes);
   }
@@ -131,4 +165,75 @@ export default class ProjectService {
     result,
     { Authorization: `Bearer ${env.app.search.privateKey}` });
   };
+
+  public async updateViewsAndInteractionTime({ id, interactionTime }:UpdateInteractionTimeQuery) {
+    try {
+      const { totalInteractionTime, totalViews } = await this.#projectRepository.getViewsAndInteractionTimeById(id);
+      const response = await this.#projectRepository.updateViewsAndInteractionTimeById(
+        id,
+        {
+          totalViews: !totalViews ? 1 : totalViews + 1,
+          totalInteractionTime: !totalInteractionTime ? interactionTime : totalInteractionTime + interactionTime
+        }
+      );
+      return {
+        ...response,
+        involvementIndex: nullToNumber(response.involvementIndex)
+      };
+    } catch {
+      throw new CustomError(
+        HttpStatusCode.INTERNAL_SERVER_ERROR,
+        'Views and interaction time not updated'
+      );
+    }
+  }
+
+  public async getRecommendation({
+    stringifiedProjectTags,
+    categoryId,
+    region
+  }: {
+    stringifiedProjectTags?: string;
+    categoryId?: string;
+    region?: string;
+  }) {
+    const projectTagsId: string[] = JSON.parse(stringifiedProjectTags);
+
+    const projectTags = projectTagsId.length > 0
+      ? await Promise.all(
+        projectTagsId.map(
+          async (item): Promise<{ name: string }> => this.#tagRepository.getById(item)
+        )
+      )
+      : null;
+
+    let tagArray: string[] = [];
+    if (projectTags) {
+      projectTags.forEach((el: { name: string }) => el && tagArray.push(el.name));
+    } else {
+      tagArray = null;
+    }
+
+    const category = categoryId
+      ? await this.#categoryRepository.getById(categoryId)
+      : null;
+
+    return await this.#projectRepository.getRecommendation(
+      region,
+      tagArray,
+      category ? category.name : null
+    );
+  }
+
+  public async getDonationInformation(id: string, startDate: TimeInterval) {
+    const donationInformation = await this.#projectRepository.getDonationInformationDuringTime(
+      id,
+      startDate
+    );
+    const statisticsInformation = await this.#projectRepository.getProjectStatistics(id);
+    return {
+      donations: donationInformation,
+      statistics: statisticsInformation
+    };
+  }
 }

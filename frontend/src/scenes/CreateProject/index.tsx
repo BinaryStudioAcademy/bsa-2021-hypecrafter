@@ -11,6 +11,7 @@ import BeforeStart from './components/BeforeStart';
 import FAQS from './components/FAQ';
 import Funding from './components/Funding';
 import Privileges from './components/Privileges';
+import Recommendations from './components/Recommendations';
 import Settings from './components/Settings';
 import Story from './components/Story';
 import Team from './components/Team';
@@ -134,7 +135,7 @@ const CreateProject = () => {
       case CurrentPage.SETTINGS:
         return (
           <Settings
-            changePage={end}
+            changePage={setCurrentPage}
             region={newProject.region}
             currentPage={currentPage}
             onChangeValue={handleChangeValue}
@@ -146,6 +147,16 @@ const CreateProject = () => {
             dribbleUrl={newProject.dribbleUrl}
             pinterestUrl={newProject.pinterestUrl}
             behanceUrl={newProject.behanceUrl}
+          />
+        );
+      case CurrentPage.RECOMMENDATIONS:
+        return (
+          <Recommendations
+            changePage={end}
+            currentPage={currentPage}
+            region={newProject.region}
+            category={newProject.category}
+            projectTags={newProject.projectTags}
           />
         );
       case CurrentPage.END:

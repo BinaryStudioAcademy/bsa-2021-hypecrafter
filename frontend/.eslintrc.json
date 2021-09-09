@@ -2,7 +2,11 @@
   "env": {
     "browser": true
   },
-  "extends": ["airbnb-typescript", "plugin:react/recommended", "../shared/.eslintrc.base.json"],
+  "extends": [
+    "airbnb-typescript",
+    "plugin:react/recommended",
+    "../shared/.eslintrc.base.json"
+  ],
   "parserOptions": {
     "sourceType": "module",
     "ecmaVersion": "latest",
@@ -11,15 +15,30 @@
       "jsx": true
     }
   },
-  "plugins": ["react"],
+  "plugins": [
+    "react"
+  ],
   "rules": {
     "react/display-name": "off",
     "no-underscore-dangle": "off",
     "import/no-named-as-default": "off",
     "import/no-named-as-default-member": "off",
     "react/react-in-jsx-scope": "off",
-    "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
-    "no-multiple-empty-lines": ["error", { "max": 1 }],
+    "react/require-default-props": "off",
+    "react/jsx-filename-extension": [
+      "warn",
+      {
+        "extensions": [
+          ".tsx"
+        ]
+      }
+    ],
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1
+      }
+    ],
     "react/jsx-one-expression-per-line": "off",
     "react/prop-types": "off",
     "react/jsx-props-no-spreading": "off",
@@ -28,7 +47,9 @@
       "error",
       {
         "required": {
-          "some": ["htmlFor"]
+          "some": [
+            "htmlFor"
+          ]
         }
       }
     ]
