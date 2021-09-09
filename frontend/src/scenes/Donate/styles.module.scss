@@ -1,0 +1,52 @@
+@import '../../styles/vars';
+@import '../../styles/fonts';
+
+.donate-page{
+  min-height: 470px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .donate-description-fail{
+    font-size: $font-size-large;
+    margin-bottom: 20px;
+  }
+  .donate-title-start{
+    margin-bottom: 25px;
+    margin-top: 10px;
+  }
+  .donate-sadface-fail{
+    font-size: 250px;
+  }  
+  .donate-gladface-fail{
+    font-size: 250px;
+  }  
+  .donate-title-success{
+    font-size: $font-size-title;
+  }
+  .donate-close-btn{
+    margin-bottom: 20px;
+  }
+  .donate-price{
+    .donate-form {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      margin-top: 70px;
+      margin-bottom: 20px;
+      .donate-submit-btn-price{
+        margin-top: 2px;
+        margin-left: 10px;
+      }
+      .donate-input-wrp{
+        width: 100px;
+      }
+      .donate-submit-price{
+        padding-left: 10px;
+      }
+      .donate-confirm-btn{
+        margin: 2px 10px;
+      }
+    }
+  }
+
+}

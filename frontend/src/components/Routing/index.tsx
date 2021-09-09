@@ -6,6 +6,7 @@ import { useAction, useAuth, useTypedSelector } from '../../hooks';
 import LoginPage from '../../scenes/Auth/LoginPage';
 import SignupPage from '../../scenes/Auth/SignupPage';
 import CreateProject from '../../scenes/CreateProject';
+import Donate from '../../scenes/Donate';
 import MainPage from '../../scenes/MainPage';
 import ProjectPage from '../../scenes/ProjectPage';
 import Projects from '../../scenes/Projects';
@@ -27,8 +28,9 @@ import UserModal from '../UserModal';
 const routesWitoutHeader = [Routes.LOGIN, Routes.SIGNUP];
 
 const Routing = () => {
-  const { authFetchUserAction, closeModalAction, getNotificationsAction } = useAction();
+  const { authFetchUserAction, closeModalAction, getNotificationsAction, hideDonateModalAction } = useAction();
   const { id } = useTypedSelector(({ userProfile }) => userProfile);
+  const { donateState } = useTypedSelector(({ donate }) => donate);
   const { isLoading } = useTypedSelector(({ auth }) => auth);
   const tokens = getAccessToken();
   const { pathname } = useLocation();
@@ -40,6 +42,9 @@ const Routing = () => {
     closeModalAction();
   };
 
+  const closeDonateModalHandler = () => {
+    hideDonateModalAction();
+  };
   useEffect(() => {
     if (!isAuthorized && tokens) authFetchUserAction();
     if (id) setShowModal(true);
@@ -63,6 +68,14 @@ const Routing = () => {
           size="extra-wide"
           centered={false}
           onHide={closeModalHandler}
+        />
+        <ModalWindow
+          show={donateState !== 'hide'}
+          title="Donate"
+          body={<Donate type={donateState} />}
+          size="medium"
+          centered={false}
+          onHide={closeDonateModalHandler}
         />
         <PublicRoute
           restricted={false}

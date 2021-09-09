@@ -216,6 +216,9 @@
     "Donation Statistics": "Статистика донатів",
     "Export": "Експортувати",
     "No data": "Немає даних",
+    "Donate": "Пожертва",
+    "Confirm": "Підтвердити",
+    "Choose the donation amount": "Налаштуйте сумму пожертви",
     "Recommendations": "Рекомендації",
     "Let’s look at similar projects": "Давайте розглянемо подібні проекти",
     "Status": "Статус",
@@ -224,6 +227,10 @@
     "successful": "успішний",
     "unsuccessful": "неуспішний",
     "Site locale": "ua",
+    "Perhaps you do not have enough money on your balance or the donation time is over":"Можливо, вам не вистачає коштів на вашому балансі або час пожертв закінчився",
+    "Donate was failed":"Пожертва не вдалась",
+    "Donate was successful":"Пожертва пройшла успішно",
+    "Return to Project Page": "Повернутися до Сторінки Проекту",
     "Frequently asked questions": "Питання що часто задаються",
     "Comment can not be empty": "Коментар не може бути порожнім"
   }

@@ -3,14 +3,15 @@ import { Container } from 'react-bootstrap';
 import { Link, useHistory } from 'react-router-dom';
 import { MIN_AMOUNT_FUND } from '../../../common/constans/payment';
 import { Routes } from '../../../common/enums';
+import SelectedFund from '../../../components/SelectedFund';
 import { useTypedSelector } from '../../../hooks';
 import { useLocalization } from '../../../providers/localization';
 import PaymentForm from './components/PaymentMenu/paymentMenu';
-import SelectedFund from './components/SelectedFund';
 import classes from './styles.module.scss';
 
 const Payment: FC = () => {
   const { isCustom, amount } = useTypedSelector(({ payment }) => payment);
+  const cardType = isCustom ? 'custom-fund' : 'basic-fund';
   const { t } = useLocalization();
   const history = useHistory();
   useEffect(() => {
@@ -31,7 +32,7 @@ const Payment: FC = () => {
       <h2 className={classes['selected-fund-title']}>{t('Selected fund')}:</h2>
       <div className={classes['payment-main-content']}>
         <div className={classes['selected-fund-wrp']}>
-          <SelectedFund amount={amount} isCustom={isCustom} />
+          <SelectedFund amount={amount} type={cardType} />
         </div>
         <div className={classes['payment-form-wrp']}>
           <PaymentForm />

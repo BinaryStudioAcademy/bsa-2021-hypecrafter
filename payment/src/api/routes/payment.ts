@@ -16,11 +16,11 @@ const endpointSecret = env.app.payment.webhook_key;
 const init = ({ paymentService }: Services, path: string) => (app: MicroMq) => app.get(
   `${path}/:page`,
   wrap<Empty, Page, { page: string }, Empty>((req) => paymentService
-    .getByUserId(req.headers.userId?.toString(), req.params.page))
+    .getByUserId(req.headers.userId as string, req.params.page))
 ).post(`${path}/create-payment-intent`,
   wrap< Empty, { clientSecret: string }, { amount: number }, Empty>(async (req) => {
     const { amount } = req.body;
-    const clientSecret = await paymentService.getClientSecret(stripe, amount, req.headers.userId.toString());
+    const clientSecret = await paymentService.getClientSecret(stripe, amount, req.headers.userId as string);
 
     return ({
       clientSecret
@@ -41,7 +41,7 @@ const init = ({ paymentService }: Services, path: string) => (app: MicroMq) => a
             item: 'Balance replenishment',
             type: 'Custom Fund',
             total: payload.amount / 100,
-            userId: payload.metadata.userId
+            userId: req.headers.userId as string
           });
           break;
         }

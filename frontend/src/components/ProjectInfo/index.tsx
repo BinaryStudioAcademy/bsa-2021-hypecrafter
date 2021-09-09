@@ -6,7 +6,7 @@ import { Container, Row } from 'react-bootstrap';
 import hypeCoin from '../../assets/HypeCoin.png';
 import { Mark } from '../../common/enums';
 import { calcDaysToGo, calcDonationProgress } from '../../helpers/project';
-import { useAction } from '../../hooks';
+import { useAction, useTypedSelector } from '../../hooks';
 import { useLocalization } from '../../providers/localization';
 import Button from '../Button';
 import ProgressBarComponent from '../ProgressBar';
@@ -49,6 +49,8 @@ const ProjectInfo: FunctionComponent<ProjectInfoProps> = ({
   };
 
   const daysToGo = calcDaysToGo(finishDate);
+  const projectId = useTypedSelector(({ projectPage }) => projectPage.project.id);
+  const { showDonateModalAction } = useAction();
 
   return (
     <Container className={classes['info-block-container']}>
@@ -102,7 +104,7 @@ const ProjectInfo: FunctionComponent<ProjectInfoProps> = ({
         </div>
         <div className={classes['buttons-container']}>
           <Button>Chat</Button>
-          <Button>Donate</Button>
+          <Button onClick={() => { showDonateModalAction(projectId); }}>Donate</Button>
         </div>
       </Row>
     </Container>
