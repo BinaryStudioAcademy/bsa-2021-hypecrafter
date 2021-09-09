@@ -4,5 +4,4 @@ export * from './frequency';
 export * from './httpMethod';
 export * from './mark';
 export * from './path';
-export * from './http';
 

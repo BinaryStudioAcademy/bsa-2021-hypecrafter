@@ -11,7 +11,7 @@ import { Project } from '../../common/types';
 import {
   UpdateInteractionTimeQuery
 } from '../../common/types/project';
-import { Project as CreateProject, Team, TeamUsers, Chat } from '../../data/entities';
+import { Project as CreateProject, Team, TeamUsers } from '../../data/entities';
 import { mapBoolean, mapPrivileges, mapProjects, nullToNumber } from '../../data/mappers';
 import { mapLikesAndDislikes } from '../../data/mappers/mapLikesAndDislikes';
 import {

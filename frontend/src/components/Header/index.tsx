@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 import hypeCoin from '../../assets/HypeCoin.png';
 import { Routes, SocketActions } from '../../common/enums';
 import { logout } from '../../helpers/http';
-import { useAction, useAuth, useScroll, useTypedSelector, useWindowResize, useBalance } from '../../hooks';
+import { useAction, useAuth, useBalance, useScroll, useTypedSelector, useWindowResize } from '../../hooks';
 import { useLocalization } from '../../providers/localization';
 import { useSockets } from '../../providers/sockets';
 import Avatar from '../Avatar';
@@ -32,13 +32,6 @@ const Header = () => {
   const { addSocketHandler, socket } = useSockets();
   const { setNewNotificationsAction } = useAction();
 
-  const store = useTypedSelector(
-    ({ notifications: { notifications } }) => ({
-      notifications
-    })
-  );
-  const { notifications } = store;
-
   useEffect(() => {
     if (socket) {
       addSocketHandler(SocketActions.NOTIFICATION, (notification) => {
@@ -49,13 +42,13 @@ const Header = () => {
 
   const { isMobile } = useWindowResize();
   const timeToEnterSearch = 500;
-
-  const store = useTypedSelector(({ search: { searchResult, isLoading } }) => ({
+  const store = useTypedSelector(({ search: { searchResult, isLoading }, notifications: { notifications } }) => ({
     searchResult,
     isLoading,
+    notifications
   }));
   const { searchAction } = useAction();
-  const { searchResult } = store;
+  const { searchResult, notifications } = store;
   const { isBalance, balance } = useBalance();
 
   const handleProfileMenu = () => {
