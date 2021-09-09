@@ -8,7 +8,7 @@ export interface DonateState {
 
 export const initialState: DonateState = {
   projectId: '',
-  donateState: 'show'
+  donateState: 'hide'
 };
 
 export const donateReducer = createReducer<DonateState>(initialState, {

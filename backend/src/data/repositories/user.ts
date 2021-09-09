@@ -16,7 +16,7 @@ export class UserRepository extends Repository<UserProfile> {
   public async deductBalance(id: string, amount: number) {
     const userProfile = await this.findOne({ id });
     if (userProfile) {
-      userProfile.balance = amount - Number(userProfile.balance);
+      userProfile.balance = Number(userProfile.balance) - amount;
       this.save(userProfile);
     }
     return userProfile;

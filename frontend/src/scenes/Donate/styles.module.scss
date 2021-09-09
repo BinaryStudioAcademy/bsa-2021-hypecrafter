@@ -1,8 +1,12 @@
 @import '../../styles/vars';
 .donate-page{
+  min-height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  .donate-title-start{
+    margin-bottom: 20px;
+  }
   .donate-sadface-fail{
     font-size: 250px;
   }  
@@ -17,7 +21,7 @@
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      margin-top: 20px;
+      margin-top: 26px;
       .donate-submit-btn-price{
         margin-top: 2px;
         margin-left: 10px;

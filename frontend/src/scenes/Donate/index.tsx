@@ -1,6 +1,7 @@
 import { ChangeEvent, FC, FormEvent, useState } from 'react';
 import Button from '../../components/Button';
 import Input from '../../components/Input';
+import LoaderWrapper from '../../components/LoaderWrapper';
 import SelectedFund from '../../components/SelectedFund';
 import { useAction, useTypedSelector } from '../../hooks';
 import { useLocalization } from '../../providers/localization';
@@ -20,7 +21,7 @@ const Donate: FC<Param> = ({ type }) => {
   const { executeDonateAction } = useAction();
   const start = (
     <>
-      <h2>{t('Choose the donation amount')}</h2>
+      <h2 className={classes['donate-title-start']}>{t('Choose the donation amount')}</h2>
       <div className={classes['donate-price']}>
         <SelectedFund type="donate" amount={Number(price)} />
         <form
@@ -93,6 +94,7 @@ const Donate: FC<Param> = ({ type }) => {
   const content = type === 'show' ? start : (type === 'failure' ? failure : type==='success'?success:false);
   return (
     <div className={classes['donate-page']}>
+    <LoaderWrapper isLoading={type==='loading'} type="spinner"/>
       {content}
     </div>
   );
