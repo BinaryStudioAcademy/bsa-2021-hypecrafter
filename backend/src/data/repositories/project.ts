@@ -851,7 +851,7 @@ export class ProjectRepository extends Repository<Project> {
           dislikes,
           project."imageUrl",
           project."isActive",
-          CASE 
+          CASE
             WHEN project."isActive" IS FALSE AND donated - goal <= 0
               THEN true
             WHEN project."isActive" IS FALSE AND donated - goal > 0
@@ -907,14 +907,15 @@ export class ProjectRepository extends Repository<Project> {
       .where(
         `
           project."createdAt" > :start_at
-          ${stringValue ? `AND ARRAY['${stringValue}'] && tags` : ''} 
-          ${category ? `AND category.name='${category}'` : ''} 
+          ${stringValue ? `AND ARRAY['${stringValue}'] && tags` : ''}
+          ${category ? `AND category.name='${category}'` : ''}
           ${region ? `AND project.region='${region}'` : ''}
         `,
         {
           start_at: date
         }
-      );
+      )
+      .limit(3);
 
     return query.execute();
   }
