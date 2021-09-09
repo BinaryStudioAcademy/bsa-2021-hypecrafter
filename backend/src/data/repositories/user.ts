@@ -37,7 +37,7 @@ export class UserRepository extends Repository<UserProfile> {
 
   public getCurrentUser(id: string) {
     return this.createQueryBuilder('user')
-      .select('"firstName", "lastName", id, "imageUrl"')
+      .select('"firstName", "lastName", id, "imageUrl", "balance"')
       .where({ id })
       .getRawOne();
   }
