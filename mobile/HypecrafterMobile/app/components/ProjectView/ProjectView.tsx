@@ -146,7 +146,7 @@ const ProjectView: FC = () => {
         <View style={styles.tabCont}>
           {screenNum === 1 && <StoryView />}
           {screenNum === 2 && <FAQView faq={project.FAQ} />}
-          {screenNum === 3 && <CommentsView />}
+          {screenNum === 3 && <CommentsView comments={project.projectComments} />}
         </View>
       </ScrollView>
     </View>
