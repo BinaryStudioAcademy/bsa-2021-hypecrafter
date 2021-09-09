@@ -1,7 +1,10 @@
 import { ProjectsFilter, ProjectsSort, TimeInterval } from 'hypecrafter-shared/enums';
 import { Project } from '../../common/types';
+import {
+  UpdateInteractionTimeQuery
+} from '../../common/types/project';
 import { Chat, Project as CreateProject, Team } from '../../data/entities';
-import { mapPrivileges, mapProjects } from '../../data/mappers';
+import { mapPrivileges, mapProjects, mapBoolean, nullToNumber } from '../../data/mappers';
 import { mapLikesAndDislikes } from '../../data/mappers/mapLikesAndDislikes';
 import {
   CategoryRepository,
@@ -15,6 +18,8 @@ import FAQServise from '../faq';
 import DonatorsPrivilegeServise from '../projectPrivilege';
 import ProjectTagService from '../projectTag';
 import TagService from '../tag';
+import { CustomError } from '../../helpers/customError';
+import { HttpStatusCode } from '../../../../shared/build/enums';
 
 export default class ProjectService {
   readonly #projectRepository: ProjectRepository;
@@ -108,11 +113,15 @@ export default class ProjectService {
 
   public async getById(id: string, userId: string | undefined) {
     const project = await this.#projectRepository.getById(id, userId);
-    project.bakersAmount = Math.max(0, project.bakersAmount);
-    project.donated = Math.max(0, project.donated);
-    project.privileges = mapPrivileges(project.privileges, project.bakersDonation);
 
-    return project; // rewrite when error handling middleware works
+    return {
+      ...project,
+      tags: mapBoolean(project.tags),
+      involvementIndex: nullToNumber(project.involvementIndex),
+      donated: nullToNumber(project.donated),
+      privileges: mapPrivileges(project.privileges, project.bakersDonation),
+      bakersAmount: nullToNumber(project.bakersAmount)
+    }; // rewrite when error handling middleware works
   }
 
   public async getForEdit(id: string) {
@@ -138,6 +147,28 @@ export default class ProjectService {
     return { mess: 'Projected was wached or unwached' };
   }
 
+  public async updateViewsAndInteractionTime({ id, interactionTime }:UpdateInteractionTimeQuery) {
+    try {
+      const { totalInteractionTime, totalViews } = await this.#projectRepository.getViewsAndInteractionTimeById(id);
+      const response = await this.#projectRepository.updateViewsAndInteractionTimeById(
+        id,
+        {
+          totalViews: !totalViews ? 1 : totalViews + 1,
+          totalInteractionTime: !totalInteractionTime ? interactionTime : totalInteractionTime + interactionTime
+        }
+      );
+      return {
+        ...response,
+        involvementIndex: nullToNumber(response.involvementIndex)
+      };
+    } catch {
+      throw new CustomError(
+        HttpStatusCode.INTERNAL_SERVER_ERROR,
+        'Views and interaction time not updated'
+      );
+    }
+  }
+
   public async getRecommendation({
     stringifiedProjectTags,
     categoryId,
@@ -147,7 +178,6 @@ export default class ProjectService {
     categoryId?: string;
     region?: string;
   }) {
-    console.log('here');
     const projectTagsId: string[] = JSON.parse(stringifiedProjectTags);
 
     const projectTags = projectTagsId.length > 0

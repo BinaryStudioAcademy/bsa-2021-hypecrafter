@@ -205,6 +205,7 @@ declare type LocaleKeys =
  | 'successful'
  | 'unsuccessful'
  | 'Pay'
+ | 'Involvement index'
  | 'Upcoming projects'
  | 'Sign In with Facebook'
  | 'Sign Up with Facebook'

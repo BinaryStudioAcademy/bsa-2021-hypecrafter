@@ -21,6 +21,7 @@ export interface ProjectPageState {
   isLoading: boolean;
   project: ProjectPage;
   isInputLoading: boolean;
+  error: string;
   statistics: Statistics;
 }
 
@@ -28,6 +29,7 @@ export const projectPageState: ProjectPageState = {
   isLoading: false,
   project: {} as ProjectPage,
   isInputLoading: false,
+  error: '',
   statistics: {} as Statistics
 };
 
@@ -79,14 +81,12 @@ const projectPageReducer = createReducer<ProjectPageState>(projectPageState, {
   },
   [addComment.TRIGGER](state) {
     return {
-      ...state,
-      isInputLoading: true
+      ...state
     };
   },
   [addComment.SUCCESS](state, action: AddCommentSuccessActionType) {
     return {
       ...state,
-      isInputLoading: false,
       project: {
         ...state.project,
         projectComments: [...state.project.projectComments, action.payload]

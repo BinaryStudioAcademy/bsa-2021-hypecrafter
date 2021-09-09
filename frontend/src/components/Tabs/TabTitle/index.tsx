@@ -25,7 +25,7 @@ const TabTitle: FC<TabTitleProps> = ({ title, counter, index, selectedTab, setSe
       >
         <div className={classes['tab-info']}>
           <div className={classes.title}>{title}</div>
-          { counter !== 0 && <div className={classes.counter}>{counter}</div> }
+          {counter !== 0 && <div className={classes.counter}>{counter}</div>}
         </div>
       </button>
     </li>

@@ -5,12 +5,15 @@ import { isNull } from 'lodash';
 import { EntityRepository, getRepository, Repository } from 'typeorm';
 import { timeIntervalForRecommendationSystem } from '../../common/constans';
 import { Mark } from '../../common/enums';
-import { Project as MyProject } from '../../common/types';
-import { Project, UserProfile, UserProject } from '../entities';
+import {
+  Project as MyProject,
+  UpdateViewsAndInteractionTime
+} from '../../common/types';
+import { Project, UserProfile, UserProject, Donate } from '../entities';
 
 @EntityRepository(Project)
 export class ProjectRepository extends Repository<Project> {
-  #projectLimit = 3;
+#projectLimit = 3;
 
   #chartProjectLimit = 13;
 
@@ -126,6 +129,7 @@ export class ProjectRepository extends Repository<Project> {
       project."facebookUrl",
       project."dribbleUrl",
       project.content AS story,
+      project.totalViews AS totalViews,
       "FAQ",
       donated,
       description,
@@ -134,7 +138,6 @@ export class ProjectRepository extends Repository<Project> {
       project."finishDate",
       goal,
       tags,
-      "bakersAmount",
       likes,
       dislikes,
       privileges,
@@ -146,12 +149,27 @@ export class ProjectRepository extends Repository<Project> {
     }
     const projectQuery = this.createQueryBuilder('project')
       .select(selectQuery)
-      .leftJoin(
-        (subQuery) => subQuery
+      .addSelect(subQuery => (
+        subQuery
           .select(
-            `
+            `CASE project.totalViews
+              WHEN 0 THEN 0
+              ELSE (100 * COUNT(donate.userId)) / project.totalViews
+            END`,
+            'involvementIndex'
+          )
+          .where('donate.projectId = :id', { id })
+          .from(Donate, 'donate')
+      ))
+      .addSelect(subQuery => (
+        subQuery
+          .select('COUNT(donate.userId)', 'bakersAmount')
+          .where('donate.projectId = :id', { id })
+          .from(Donate, 'donate')
+      ))
+      .leftJoin(subQuery => subQuery
+        .select(`
           SUM(amount) AS donated,
-          COUNT(DISTINCT "userId") AS "bakersAmount",
           "projectId"
         `
           )
@@ -535,6 +553,11 @@ export class ProjectRepository extends Repository<Project> {
         `
         donated,
         description,
+        project.totalViews AS totalViews,
+        CASE project.totalViews
+          WHEN 0 THEN 0
+          ELSE (100 * "bakersAmount") / project.totalViews
+        END AS "involvementIndex",
         project.name AS "name",
         project."id",
         project."imageUrl",
@@ -546,16 +569,13 @@ export class ProjectRepository extends Repository<Project> {
     ? `,
         CASE WHEN up."isFavorite" IS NULL THEN false ELSE true END AS "isFavorite",
         CASE WHEN dnu."projectId" IS NULL THEN false ELSE true END AS "isDonated"
-        `
-    : ''
-}
-      `
-      )
-      .leftJoin(
-        (subQuery) => subQuery
-          .select(
-            `
+        ` : ''}
+      `)
+      .leftJoin('project.category', 'category')
+      .leftJoin(subQuery => subQuery
+        .select(`
           SUM(amount) AS donated,
+          COUNT("userId") AS "bakersAmount",
           "projectId"
         `
           )
@@ -662,6 +682,40 @@ export class ProjectRepository extends Repository<Project> {
     return categories.map(category => `category.name = '${category}'`).join(' OR ');
   }
 
+  public getViewsAndInteractionTimeById(id: string) {
+    return this.createQueryBuilder('project')
+      .select('project.totalViews', 'totalViews')
+      .addSelect('project.totalInteractionTime', 'totalInteractionTime')
+      .where('project.id = :id', { id })
+      .getRawOne();
+  }
+
+  public async updateViewsAndInteractionTimeById(id: string, data: UpdateViewsAndInteractionTime) {
+    await this.update(id, data);
+
+    return this.createQueryBuilder('project')
+      .select('project.totalViews', 'totalViews')
+      .addSelect(subQuery => (
+        subQuery
+          .select('COUNT(donate.userId)', 'bakersAmount')
+          .where('donate.projectId = :id', { id })
+          .from(Donate, 'donate')
+      ))
+      .addSelect(subQuery => (
+        subQuery
+          .select(
+            `CASE project.totalViews
+              WHEN 0 THEN 0
+              ELSE (100 * COUNT(donate.userId)) / project.totalViews
+            END`,
+            'involvementIndex'
+          )
+          .where('donate.projectId = :id', { id })
+          .from(Donate, 'donate')
+      ))
+      .where('project.id = :id', { id })
+      .getRawOne();
+      
   // eslint-disable-next-line consistent-return
   public getDonationInformationDuringTime(id: string, timeInterval: TimeInterval) {
     const date = new Date();

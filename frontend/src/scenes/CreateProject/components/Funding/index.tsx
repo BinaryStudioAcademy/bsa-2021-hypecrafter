@@ -13,7 +13,7 @@ interface Props {
   onChangeValue: (name: ProjectKeys, value: any) => void,
   goal: number,
   startDate?: Date,
-  finishDate?:Date,
+  finishDate?: Date,
 }
 
 const Funding: FC<Props> = ({ changePage, currentPage, onChangeValue, goal, startDate, finishDate }) => {

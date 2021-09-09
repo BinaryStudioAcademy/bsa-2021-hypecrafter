@@ -9,13 +9,14 @@ export {
   filterCategoriesProjectsAction,
   filterProjectsAction,
   sortProjectsAction,
+  updateViewsAndInteractionTimeAction,
   upcomingProjectsAction
 } from '../scenes/Projects/actions';
 export {
   fetchCategories,
   fetchPopularProjectsByCategory,
   fetchPopularTagsAction,
-  setSelectedCategoryAction
+  setSelectedCategoryAction,
 } from '../scenes/TrendsPage/actions';
 export {
   closeModalAction,
@@ -30,4 +31,3 @@ export { authFetchUserAction } from './auth';
 export { getCategoriesAction } from './categories';
 export { getTagsAction } from './tags';
 export { getUsersAction } from './users';
-

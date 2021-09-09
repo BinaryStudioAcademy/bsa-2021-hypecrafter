@@ -58,6 +58,12 @@ export const getPopularAndRecommendedProjects = async () => {
   return projects;
 };
 
+export const updateViewsAndInteraction = ({ id = '', ...params }) => (
+  api.put({
+    url: `projects/views-interaction/${id}`,
+    params
+  }));
+
 export const getRecommendation = async ({ category, region, projectTags }: {
   category: string;
   region: string;

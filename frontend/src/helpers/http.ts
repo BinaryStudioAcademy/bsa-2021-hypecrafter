@@ -4,7 +4,12 @@ import { HttpHeader, HttpMethod, HttpStatusCode } from '../common/enums';
 import { RequestArgs } from '../common/types';
 import { env } from '../env';
 import { removeUser } from '../reducers/removeUser';
-import { getAccessToken, getRefreshToken, removeTokens, setAccessToken } from './localStorage';
+import {
+  getAccessToken,
+  getRefreshToken,
+  removeTokens,
+  setAccessToken,
+} from './localStorage';
 
 const getInitHeaders = (
   hasContent = false,
@@ -32,15 +37,18 @@ const getOptions = (method: HttpMethod, { params }: RequestArgs) => {
   return {
     method,
     headers,
-    ...body
+    ...body,
   };
 };
 
-const getUrlWithQuery = (
-  url: string, query?: Record<string, any>
-): string => `${url}${query ? `?${queryString.stringify(query)}` : ''}`;
+const getUrlWithQuery = (url: string, query?: Record<string, any>): string => (
+  `${url}${query ? `?${queryString.stringify(query)}` : ''}`
+);
 
-const getUrl = (method: HttpMethod, { url, params, config }: RequestArgs): string => {
+const getUrl = (
+  method: HttpMethod,
+  { url, params, config }: RequestArgs
+): string => {
   if (config?.isExternal) {
     if (params && method === HttpMethod.GET) {
       return getUrlWithQuery(url, params);
@@ -62,7 +70,10 @@ export const logout = async () => {
   const refreshToken = getRefreshToken();
   if (refreshToken) {
     const url = getUrl(HttpMethod.POST, { url: 'auth/token/reject' });
-    const options = getOptions(HttpMethod.POST, { url, params: { refreshToken } });
+    const options = getOptions(HttpMethod.POST, {
+      url,
+      params: { refreshToken },
+    });
     await fetch(url, options);
   }
   removeTokens();
@@ -78,7 +89,10 @@ const fetchAccessToken = async () => {
     const refreshToken = getRefreshToken();
     if (userId && refreshToken) {
       const url = getUrl(HttpMethod.POST, { url: 'auth/token' });
-      const options = getOptions(HttpMethod.POST, { url, params: { userId, refreshToken } });
+      const options = getOptions(HttpMethod.POST, {
+        url,
+        params: { userId, refreshToken },
+      });
       const response = await fetch(url, options);
       if (response.status !== HttpStatusCode.UNAUTHORIZED) {
         const result = await response.json();
@@ -115,5 +129,5 @@ export const api = {
   get: makeRequest(HttpMethod.GET),
   post: makeRequest(HttpMethod.POST),
   delete: makeRequest(HttpMethod.DELETE),
-  put: makeRequest(HttpMethod.PUT)
+  put: makeRequest(HttpMethod.PUT),
 };

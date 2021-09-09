@@ -4,11 +4,8 @@ import { wrap } from '../../helpers';
 import { Services } from '../../services';
 
 const init = ({ userService }: Services, path: string) => (app: MicroMq) => app
-  .get(
-    `${path}/current-user`,
-    wrap<Empty, UserProfile, Empty, Empty>(
-      req => userService.getByEmail(req.body.email)
-    )
-  );
+  .get(`${path}/current-user`, wrap<Empty, UserProfile, Empty, { accessToken: string }>(
+    (req) => userService.getCurrentUser(req.headers.userId as string)
+  ));
 
 export default init;

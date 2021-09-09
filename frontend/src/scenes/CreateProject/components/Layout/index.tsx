@@ -4,14 +4,14 @@ import { useLocalization } from '../../../../providers/localization';
 import { CurrentPage } from '../../enums';
 import classes from './styles.module.scss';
 
-interface Props{
+interface Props {
   header: string,
   body?: ReactNode,
   footer?: ReactNode,
   currentPage?: CurrentPage
-  setCurrentPage:(page:CurrentPage)=>void
+  setCurrentPage: (page: CurrentPage) => void
 }
-interface OptionsMenu{
+interface OptionsMenu {
   page: CurrentPage,
   label: LocaleKeys
 }
