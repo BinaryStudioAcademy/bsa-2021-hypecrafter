@@ -180,7 +180,6 @@
     "Cancel": "Cancel",
     "Edit": "Edit",
     "Rating": "Rating",
-    "Site locale": "en_US",
     "Update": "Update",
     "How much the user must pay to get this option":"How much the user must pay to get this option",
     "Privilege header":"Privilege header",
@@ -212,7 +211,10 @@
     "hypeCoins to": "hypeCoins to",
     "achieved goal": "achieved goal",
     "Fundraising time for": "Fundraising time for",
-    "is over": "is over"
-
+    "is over": "is over",
+    "Global Statistics": "Global Statistics",
+    "Donation Statistics": "Donation Statistics",
+    "Export": "Export",
+    "No data": "No data"
   }
 }

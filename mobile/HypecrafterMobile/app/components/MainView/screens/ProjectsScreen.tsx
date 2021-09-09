@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import { FlatList, ListRenderItem, SafeAreaView, StyleSheet } from 'react-native';
-import ProjectCard from '../../common/ProjectCard';
 import { Project } from '../../../common/types';
-import commonStyles from '../../../styles/common'
+import commonStyles from '../../../styles/common';
+import ProjectCard from '../../common/ProjectCard';
 
 interface Props {
   popularStartups: Project[];
@@ -14,7 +14,7 @@ const renderItem: ListRenderItem<Project> = ({ item }) => (
   <ProjectCard project={item} />
 );
 
-const ProjectsScreen:FC<Props> = ({ popularStartups, recommendedStartups, target }) => {
+const ProjectsScreen: FC<Props> = ({ popularStartups, recommendedStartups, target }) => {
   let renderData;
   switch (target) {
     case 'popular':
@@ -41,6 +41,7 @@ const ProjectsScreen:FC<Props> = ({ popularStartups, recommendedStartups, target
 const styles = StyleSheet.create({
   wrapper: {
     backgroundColor: commonStyles.color.background,
+    alignItems: 'center',
   },
 });
 

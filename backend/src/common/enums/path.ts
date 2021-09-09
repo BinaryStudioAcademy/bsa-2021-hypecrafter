@@ -8,5 +8,6 @@ export enum Path {
   facebookAuth = '/auth/facebook',
   Comment = '/comments',
   Auth = '/auth',
-  googleAuth = '/auth/google'
+  googleAuth = '/auth/google',
+  Donate = '/donate'
 }
