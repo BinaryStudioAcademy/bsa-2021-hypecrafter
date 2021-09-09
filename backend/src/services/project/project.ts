@@ -1,4 +1,5 @@
 import { ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
+import { HttpMethod } from '../../common/enums';
 import { Project } from '../../common/types';
 import { Project as CreateProject, Team, TeamUsers } from '../../data/entities';
 import { mapPrivileges, mapProjects } from '../../data/mappers';
@@ -7,6 +8,8 @@ import {
   ProjectRepository,
   TeamRepository, TeamUserRepository, UserRepository
 } from '../../data/repositories';
+import { env } from '../../env';
+import { sendRequest } from '../../helpers/http';
 import FAQServise from '../faq';
 import DonatorsPrivilegeServise from '../projectPrivilege';
 import ProjectTagService from '../projectTag';
@@ -71,6 +74,7 @@ export default class ProjectService {
     await this.#projectTagService.save(listTags.map(tag => ({ tag, project })));
     await this.#donatorsPrivilegeServise.save(body.donatorsPrivileges.map(privilege => ({ ...privilege, project })));
     await this.#faqServise.save(body.faqs.map(faq => ({ ...faq, project })));
+    this.addIndex(project);
     return project;
   }
 
@@ -116,4 +120,15 @@ export default class ProjectService {
 
     return { mess: 'Projected was wached or unwached' };
   }
+
+  private addIndex = (params: CreateProject):void => {
+    const body = JSON.parse(JSON.stringify(params));
+    const result = Object.keys(body)
+      .reduce((prev, current) => ({ ...prev, [current.toLowerCase()]: body[current] }), {});
+    sendRequest(env.app.search.urlDocuments
+      || 'https://hypecrafter.ent.us-central1.gcp.cloud.es.io/api/as/v1/engines/hypecrafter/documents',
+    HttpMethod.POST,
+    result,
+    { Authorization: `Bearer ${env.app.search.privateKey}` });
+  };
 }

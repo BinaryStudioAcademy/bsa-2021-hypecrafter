@@ -108,6 +108,7 @@ const Header = () => {
   const [isProfileMenu, setProfileMenu] = useState(false);
   const [isVisibleOnScroll, setVisibleOnScroll] = useState(false);
   const { isMobile } = useWindowResize();
+  const timeToEnterSearch = 500;
 
   const store = useTypedSelector(({ search: { searchResult, isLoading } }) => ({
     searchResult,
@@ -155,7 +156,7 @@ const Header = () => {
   const handleSearch = (e: ChangeEvent<HTMLInputElement>) => {
     setText(e.target.value);
   };
-  const debouncedSearchTerm = useDebounce(text, 500);
+  const debouncedSearchTerm = useDebounce(text, timeToEnterSearch);
   useEffect(
     () => {
       if (debouncedSearchTerm) {
