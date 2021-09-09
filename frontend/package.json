@@ -9,6 +9,8 @@
     "@fortawesome/free-regular-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
+    "@progress/kendo-licensing": "^1.2.0",
+    "@progress/kendo-react-excel-export": "^4.8.0",
     "@reonomy/react-confetti-explosion": "^1.0.3",
     "@sentry/react": "^6.10.0",
     "@sentry/tracing": "^6.10.0",

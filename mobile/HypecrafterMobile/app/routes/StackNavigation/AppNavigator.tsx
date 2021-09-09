@@ -1,6 +1,7 @@
 import React from 'react';
 import { createStackNavigator } from 'react-navigation-stack';
 import MainView from '../../components/MainView/MainView';
+import ProjectView from '../../components/ProjectView/ProjectView';
 import Header from '../../components/common/Header'
 import commonStyles from '../../styles/common';
 
@@ -14,7 +15,13 @@ const AppNavigator = createStackNavigator(
         },
         headerTitle: () => <Header />
       },
-    }
+    },
+    Project: {
+      screen: ProjectView,
+      navigationOptions: {
+        headerShown: false,
+      },
+    },
   },
   {
     initialRouteName: 'Main',

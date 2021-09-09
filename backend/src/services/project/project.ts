@@ -1,4 +1,4 @@
-import { ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
+import { ProjectsFilter, ProjectsSort, TimeInterval } from 'hypecrafter-shared/enums';
 import { Project } from '../../common/types';
 import { Chat, Project as CreateProject, Team } from '../../data/entities';
 import { mapPrivileges, mapProjects } from '../../data/mappers';
@@ -32,7 +32,7 @@ export default class ProjectService {
   constructor(projectRepository: ProjectRepository, teamRepository: TeamRepository,
     chatRepository: ChatRepository, userRepository: UserRepository,
     tagService: TagService, projectTagService: ProjectTagService,
-    donatorsPrivilegeServise:DonatorsPrivilegeServise, faqServise:FAQServise) {
+    donatorsPrivilegeServise: DonatorsPrivilegeServise, faqServise: FAQServise) {
     this.#projectRepository = projectRepository;
     this.#teamRepository = teamRepository;
     this.#chatRepository = chatRepository;
@@ -99,8 +99,8 @@ export default class ProjectService {
     const project = await this.#projectRepository.findOne({ id: projectId });
     const user = await this.#userRepository.findOne({ id: userId });
     await this.#projectRepository.setReaction(isLiked, user, project);
-    const likesAndDislikes:
-    { likes: string, dislikes: string } = await this.#projectRepository.getLikesAndDislikesAmount(project.id);
+    const likesAndDislikes: { likes: string, dislikes: string } = await this
+      .#projectRepository.getLikesAndDislikesAmount(project.id);
 
     return mapLikesAndDislikes(likesAndDislikes);
   }
@@ -111,5 +111,17 @@ export default class ProjectService {
     await this.#projectRepository.setWatch(isWatched, user, project);
 
     return { mess: 'Projected was wached or unwached' };
+  }
+
+  public async getDonationInformation(id: string, startDate: TimeInterval) {
+    const donationInformation = await this.#projectRepository.getDonationInformationDuringTime(
+      id,
+      startDate
+    );
+    const statisticsInformation = await this.#projectRepository.getProjectStatistics(id);
+    return {
+      donations: donationInformation,
+      statistics: statisticsInformation
+    };
   }
 }
