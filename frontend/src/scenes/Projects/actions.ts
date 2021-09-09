@@ -12,19 +12,21 @@ export enum ProjectActions {
   FILTER_PROJECTS = 'PROJECTS/FILTER',
   FILTER_CATEGORY_PROJECTS = 'PROJECTS/FILTER/CATEGORY',
   SORT_PROJECTS = 'PROJECTS/SORT',
-  UPDATE_VIEWS_AND_INTERACTION_TIME = 'PROJECTS/UPDATE_VIEWS_AND_INTERACTION_TIME'
+  UPDATE_VIEWS_AND_INTERACTION_TIME = 'PROJECTS/UPDATE_VIEWS_AND_INTERACTION_TIME',
+  UPCOMING_PROJECTS = 'PROJECTS/UPCOMING'
 }
 
 interface FetchProjectsTriggerActionPropsType {
   sort: ProjectsSort;
   filter: ProjectsFilter;
   categories: ProjectsCategories[];
+  upcoming: boolean;
   userId?: string;
 }
 
 export const fetchProjectsAction = createRoutine(ProjectActions.FETCH_PROJECTS, {
-  trigger: ({ sort, filter, categories, userId }: FetchProjectsTriggerActionPropsType) => (
-    { sort, filter, categories, userId }
+  trigger: ({ sort, filter, categories, userId, upcoming }: FetchProjectsTriggerActionPropsType) => (
+    { sort, filter, categories, upcoming, userId }
   ),
   success: (projects: Project[]) => projects,
   failure: (error: string) => error,
@@ -48,6 +50,10 @@ export const updateViewsAndInteractionTimeAction = createRoutine(ProjectActions.
   failure: (error: string) => error
 });
 
+export const upcomingProjectsAction = createRoutine(ProjectActions.UPCOMING_PROJECTS, {
+  trigger: (upcoming: boolean) => upcoming,
+});
+
 export type FetchProjectsTriggerActionType = ReturnType<typeof fetchProjectsAction.trigger>;
 export type FetchProjectsSuccessActionType = ReturnType<typeof fetchProjectsAction.success>;
 export type FetchProjectsFailureActionType = ReturnType<typeof fetchProjectsAction.failure>;
@@ -57,3 +63,4 @@ export type SortProjectsActionType = ReturnType<typeof sortProjectsAction>;
 export type UpdateViewsAndInteractionTimeTriggerActionType = ReturnType<typeof updateViewsAndInteractionTimeAction.trigger>;
 export type UpdateViewsAndInteractionTimeSuccessActionType = ReturnType<typeof updateViewsAndInteractionTimeAction.success>;
 export type UpdateViewsAndInteractionTimeFailureActionType = ReturnType<typeof updateViewsAndInteractionTimeAction.failure>;
+export type UpcomingProjectsActionType = ReturnType<typeof upcomingProjectsAction>;

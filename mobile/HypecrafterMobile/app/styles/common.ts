@@ -10,6 +10,7 @@ const commonStyles = {
     size: {
       text: 14,
       title: 18,
+      large: 24,
     }
   }
 }

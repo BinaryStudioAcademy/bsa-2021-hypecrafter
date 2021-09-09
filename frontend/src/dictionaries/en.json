@@ -199,6 +199,8 @@
     "Return to Main Page": "Return to Main Page",
     "Pay": "Pay",
     "Involvement index": "Involvement index",
+    "today":"today",
+    "at": "at",
     "Notifications": "Notifications",
     "Manage Preferences": "Manage Preferences",
     "No more notifications": "No more notifications",
@@ -209,9 +211,17 @@
     "achieved goal": "achieved goal",
     "Fundraising time for": "Fundraising time for",
     "is over": "is over",
+    "Upcoming projects": "Upcoming projects",
     "Global Statistics": "Global Statistics",
     "Donation Statistics": "Donation Statistics",
     "Export": "Export",
-    "No data": "No data"
+    "No data": "No data",
+    "Recommendations": "Recommendations",
+    "Let’s look at similar projects": "Let’s look at similar projects",
+    "Status": "Status",
+    "Total views": "Total views",
+    "in progress": "in progress",
+    "successful": "successful",
+    "unsuccessful": "unsuccessful"
   }
 }

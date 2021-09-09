@@ -1,4 +1,6 @@
-import { ProjectsCategories, ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
+import {
+  ProjectsCategories, ProjectsFilter, ProjectsSort
+} from 'hypecrafter-shared/enums';
 import { useEffect } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Routes } from '../../common/enums';
@@ -14,8 +16,19 @@ import classes from './styles.module.scss';
 const Projects = () => {
   const { id: userId } = useAuth();
   const { projects, modificators } = useTypedSelector((state) => state.projects);
-  const { fetchProjectsAction, sortProjectsAction, filterProjectsAction, filterCategoriesProjectsAction } = useAction();
-  const { sort: sortQuery, filter: filterQuery, categories: categoriesQuery } = useQuery();
+  const {
+    fetchProjectsAction,
+    sortProjectsAction,
+    filterProjectsAction,
+    filterCategoriesProjectsAction,
+    upcomingProjectsAction
+  } = useAction();
+  const {
+    sort: sortQuery,
+    filter: filterQuery,
+    categories: categoriesQuery,
+    upcoming: upcomingQuery
+  } = useQuery();
   const { t } = useLocalization();
 
   useEffect(() => {
@@ -26,6 +39,7 @@ const Projects = () => {
     runActionWithEnumValue(sortQuery, ProjectsSort, sortProjectsAction);
     runActionWithEnumValue(filterQuery, ProjectsFilter, filterProjectsAction);
     runActionWithArrayOfEnumValues(categoriesQuery, ProjectsCategories, filterCategoriesProjectsAction);
+    upcomingProjectsAction(upcomingQuery);
   }, []);
 
   return (

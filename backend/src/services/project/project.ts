@@ -7,8 +7,12 @@ import { Chat, Project as CreateProject, Team } from '../../data/entities';
 import { mapPrivileges, mapProjects, mapBoolean, nullToNumber } from '../../data/mappers';
 import { mapLikesAndDislikes } from '../../data/mappers/mapLikesAndDislikes';
 import {
-  ChatRepository, ProjectRepository,
-  TeamRepository, UserRepository
+  CategoryRepository,
+  ChatRepository,
+  ProjectRepository,
+  TagRepository,
+  TeamRepository,
+  UserRepository
 } from '../../data/repositories';
 import FAQServise from '../faq';
 import DonatorsPrivilegeServise from '../projectPrivilege';
@@ -26,6 +30,10 @@ export default class ProjectService {
 
   readonly #userRepository: UserRepository;
 
+  readonly #categoryRepository: CategoryRepository;
+
+  readonly #tagRepository: TagRepository;
+
   readonly #tagService: TagService;
 
   readonly #projectTagService: ProjectTagService;
@@ -34,14 +42,24 @@ export default class ProjectService {
 
   readonly #faqServise: FAQServise;
 
-  constructor(projectRepository: ProjectRepository, teamRepository: TeamRepository,
-    chatRepository: ChatRepository, userRepository: UserRepository,
-    tagService: TagService, projectTagService: ProjectTagService,
-    donatorsPrivilegeServise: DonatorsPrivilegeServise, faqServise: FAQServise) {
+  constructor(
+    projectRepository: ProjectRepository,
+    teamRepository: TeamRepository,
+    chatRepository: ChatRepository,
+    userRepository: UserRepository,
+    tagService: TagService,
+    projectTagService: ProjectTagService,
+    categoryRepository: CategoryRepository,
+    tagRepository: TagRepository,
+    donatorsPrivilegeServise: DonatorsPrivilegeServise,
+    faqServise: FAQServise
+  ) {
     this.#projectRepository = projectRepository;
     this.#teamRepository = teamRepository;
     this.#chatRepository = chatRepository;
     this.#userRepository = userRepository;
+    this.#categoryRepository = categoryRepository;
+    this.#tagRepository = tagRepository;
     this.#tagService = tagService;
     this.#projectTagService = projectTagService;
     this.#donatorsPrivilegeServise = donatorsPrivilegeServise;
@@ -75,14 +93,21 @@ export default class ProjectService {
     return project;
   }
 
-  public async getBySortAndFilter({ sort, filter, stringifiedCategories, userId }: {
+  public async getBySortAndFilter({ sort, filter, stringifiedCategories, userId, upcoming }: {
     sort: ProjectsSort,
     filter: ProjectsFilter,
     stringifiedCategories: string,
+    upcoming: boolean,
     userId?: string,
   }) {
     const categories = JSON.parse(stringifiedCategories);
-    const projects: Project[] = await this.#projectRepository.getBySortAndFilter({ sort, filter, categories, userId });
+    const projects: Project[] = await this.#projectRepository.getBySortAndFilter({
+      sort,
+      filter,
+      categories,
+      userId,
+      upcoming
+    });
     return projects;
   }
 
@@ -142,6 +167,45 @@ export default class ProjectService {
         'Views and interaction time not updated'
       );
     }
+  }
+
+  public async getRecommendation({
+    stringifiedProjectTags,
+    categoryId,
+    region
+  }: {
+    stringifiedProjectTags?: string;
+    categoryId?: string;
+    region?: string;
+  }) {
+    const projectTagsId: string[] = JSON.parse(stringifiedProjectTags);
+
+    const projectTags = projectTagsId.length > 0
+      ? await Promise.all(
+        projectTagsId.map(
+          async (item): Promise<{ name: string }> => this.#tagRepository.getById(item)
+        )
+      )
+      : null;
+
+    let tagArray: string[] = [];
+    if (projectTags) {
+      projectTags.forEach((el: { name: string }) => el && tagArray.push(el.name));
+    } else {
+      tagArray = null;
+    }
+
+    const category = categoryId
+      ? await this.#categoryRepository.getById(categoryId)
+      : null;
+
+    return await this.#projectRepository.getRecommendation(
+      region,
+      tagArray,
+      category ? category.name : null
+    );
+  }
+
   public async getDonationInformation(id: string, startDate: TimeInterval) {
     const donationInformation = await this.#projectRepository.getDonationInformationDuringTime(
       id,

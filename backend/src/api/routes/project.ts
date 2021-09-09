@@ -3,6 +3,7 @@ import MicroMq from 'micromq';
 import {
   Project,
   ProjectItem,
+  RecommendedProjects,
   Statistics,
   UpdateViewsAndInteractionTime as ViewsAndInteraction
 } from '../../common/types';
@@ -16,12 +17,14 @@ const init = ({ projectService }: Services, path: string) => (app: MicroMq) => a
     sort: ProjectsSort;
     filter: ProjectsFilter;
     categories: string;
+    upcoming: boolean;
     userId?: string;
   }, Empty>(
     (req) => projectService.getBySortAndFilter({
       sort: req.query.sort,
       filter: req.query.filter,
       stringifiedCategories: req.query.categories,
+      upcoming: req.query.upcoming === 'true',
       userId: req.query.userId,
     })
   ))
@@ -41,6 +44,16 @@ const init = ({ projectService }: Services, path: string) => (app: MicroMq) => a
     `${path}/watch`,
     wrap<Empty, { mess: string }, { isWatched: boolean, projectId: string }, Empty>(
       (req) => projectService.setWatch(req.body, req.headers.userId as string)
+    )
+  )
+  .get(
+    `${path}/recommendation`,
+    wrap<Empty, RecommendedProjects, { projectTagsId?: string, categoryId?: string, region?:string }, Empty>(
+      (req) => projectService.getRecommendation({
+        stringifiedProjectTags: req.query.projectTagsId,
+        region: req.query.region,
+        categoryId: req.query.categoryId
+      })
     )
   )
   .get(`${path}/:id`, wrap<Empty, Project, { id: string, userId: string | undefined }, Empty>(

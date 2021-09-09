@@ -52,11 +52,14 @@ export function initPassport(app: Express, repositories: Repositories) {
     )
   );
 
-  passport.use(
-    new JwtStrategy(options, async (jwtPayload, done) => {
-      done(null, jwtPayload);
-    })
-  );
+  passport.use(new JwtStrategy(options, async ({ userId }: { userId: string }, done) => {
+    try {
+      const { email } = await repositories.userRepository.getById(userId);
+      return email ? done(null, { email, userId }) : done({ status: 401, message: 'Token is invalid.' }, null);
+    } catch (err) {
+      return done(err);
+    }
+  }));
 
   passport.use(new FacebookTokenStrategy({
     clientID: env.auth.facebook.appId,

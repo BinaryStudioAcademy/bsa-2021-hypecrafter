@@ -1,0 +1,107 @@
+@import '../../styles/vars';
+@import '../../styles/fonts.scss';
+
+.chat {
+  width: 400px;
+  height: 600px;
+  padding: 5px;
+  background: $color-root-table-odd-background;
+  font-family: $font-roboto400;
+  margin: 10px;
+  border: 1px solid $color-root-turquoise;
+  border-radius: 3px;
+}
+
+.input {
+  display: flex;
+}
+
+.send {
+  width: 70px;
+  height: 70px;
+  background: rgba(black, 0.15);
+  border-radius: 3px;
+  border: 1px solid $color-root-text-grey;
+  color: $color-root-text-grey;
+
+  &:hover {
+    transition: 0.5s;
+    color: $color-root-turquoise;
+    background: rgba(greenyellow, 0.2);
+    border: 1px solid rgba($color-root-turquoise, 0.91);
+  }
+}
+
+.messageInput {
+  height: 70px;
+  width: 310px;
+  padding: 6px;
+  margin-right: 6px;
+  background: rgba(black, 0.15);
+  border-radius: 3px;
+  border: 1px solid $color-root-text-grey;
+  color: $color-root-text-grey;
+
+  &:focus {
+    transition: 0.5s;
+    border: 1px solid rgba($color-root-turquoise, 0.91);
+    outline: none;
+    color: white;
+    background: rgba(white, 0.1);
+  }
+}
+
+.content {
+  background: $color-root-table-even-background;
+  border-radius: 3px;
+  margin-bottom: 8px;
+  width: 100%;
+  height: 510px;
+  overflow: auto;
+}
+
+.message {
+  margin: 4px;
+  background: rgba(black, 0.15);
+  padding: 4px;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  .messageTime {
+    color: $color-root-text-grey;
+    padding: 4px 8px;
+  }
+}
+
+.messageContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 4px 8px;
+  .name {
+    color: $color-root-turquoise;
+  }
+}
+
+.message + .message {
+  margin-top: 10px;
+}
+
+.backer,
+.owner {
+  margin-left: 3px;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+.backer {
+  background-color: $color-badge-backer-background;
+  color: $color-root-block-background;
+}
+
+.owner {
+  background-color: $color-badge-owner-background;
+  color: white;
+}

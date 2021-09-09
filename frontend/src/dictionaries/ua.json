@@ -194,6 +194,12 @@
     "Load...": "Завантаження...",
     "Congratulation!": "Вітаємо!",
     "Payment transaction was successful": "Платіжна транзакція пройшла успішно",
+    "Basic fund": "Базовий",
+    "Amount": "Кількість",
+    "Return to Main Page": "Повернутися до Головної Сторінки",
+    "Pay": "Сплатити",
+    "today":"сьогодні",
+    "at": "о",
     "Notifications": "Сповіщення",
     "Involvement index": "Індекс залучення",
     "Manage Preferences": "Керування налаштуваннями",
@@ -209,9 +215,17 @@
     "Amount": "Кількість",
     "Return to Main Page": "Повернутися до Головної Сторінки",
     "Pay": "Сплатити",
+    "Upcoming projects": "Найближчі проекти",
     "Global Statistics": "Загальна статистика",
     "Donation Statistics": "Статистика донатів",
     "Export": "Експортувати",
-    "No data": "Немає даних"
+    "No data": "Немає даних",
+    "Recommendations": "Рекомендації",
+    "Let’s look at similar projects": "Давайте розглянемо подібні проекти",
+    "Status": "Статус",
+    "Total views": "Кількість переглядів",
+    "in progress": "триває",
+    "successful": "успішний",
+    "unsuccessful": "неуспішний"
   }
 }
