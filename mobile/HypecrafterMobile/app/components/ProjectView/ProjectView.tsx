@@ -53,7 +53,7 @@ const ProjectView: FC = () => {
           resizeMode="stretch"
         />
         <View style={styles.wrapper}>
-          <View>
+          <View style={styles.projectMainInfo}>
             <Text style={[styles.text, styles.category]}>{project.category}</Text>
             <Text style={[styles.text, styles.name]}>{project.name}</Text>
             <Text style={styles.text}>{project.description}</Text>
@@ -126,7 +126,7 @@ const ProjectView: FC = () => {
             <Text style={styles.marksAmount}>{project.dislikes ? project.dislikes : 0}</Text>
           </View>
         </View>
-        <View style={{ flexDirection: 'row', width: '100%', marginTop: 10 }}>
+        <View style={styles.tabContainer}>
           <View style={styles.tab}>
             <Pressable onPress={() => setScreenNum(1)}>
               <Text style={styles.tabText}>{"Story"}</Text>
@@ -144,7 +144,7 @@ const ProjectView: FC = () => {
           </View>
         </View>
         <View style={styles.tabCont}>
-          {screenNum === 1 && <StoryView />}
+          {screenNum === 1 && <StoryView story={project.story} />}
           {screenNum === 2 && <FAQView faq={project.FAQ} />}
           {screenNum === 3 && <CommentsView comments={project.projectComments} />}
         </View>
@@ -173,6 +173,7 @@ const styles = StyleSheet.create({
     fontSize: 25,
     color: 'white',
   },
+  tabContainer: { flexDirection: 'row', width: '100%', marginVertical: 10 },
   marks: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -238,6 +239,9 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 20,
     color: 'white'
+  },
+  projectMainInfo: {
+    width: '90%'
   }
 });
 
