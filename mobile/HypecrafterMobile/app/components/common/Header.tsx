@@ -1,30 +1,44 @@
-import { useNavigation } from '@react-navigation/core';
-import React from 'react';
+import React, { FC, useState, useEffect } from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import { StackNavigationProp } from 'react-navigation-stack/lib/typescript/src/vendor/types';
+import NavigationService from '../../navigation';
+import { Routes } from '../../common/enums';
 import commonStyles from '../../styles/common';
 
+interface Props {
+  navigation: StackNavigationProp;
+}
 
-const Header = () => {
-  const navigation = useNavigation();
+const Header:FC<Props> = ({ navigation }) => {
+  const [displayBalance, setDisplayBalance] = useState(true);
+  const [displayAvatar, setDisplayAvatar] = useState(true);
+  
+  const avatarUrl = 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80';
+  const handleUserProfile = () => NavigationService.navigate(Routes.USER);
+
+  useEffect(() => {
+    if (navigation.state.routeName != Routes.MAIN) setDisplayBalance(false);
+    if (navigation.state.routeName === Routes.USER) setDisplayAvatar(false);
+  }, [navigation.state.routeName])
+
 
   return (
-    <View style={styles.container}>
-      <View style={styles.balance}>
+    <View style={displayBalance ? styles.container : styles.containerAlt}>
+      {displayBalance && 
+      (<View style={styles.balance}>
         <Text style={styles.balanceText}>1500</Text>
         <Image style={styles.balanceImg} source={require('../../assets/images/HypeCoin.png')} />
-      </View>
-      <View style={styles.logo}>
+      </View>)}
+      <View style={displayBalance ? styles.logo : styles.logoAlt}>
         <Image style={styles.logoImg} source={require('../../assets/images/HypeCrafter.png')} />
       </View>
-      <View style={styles.user}>
-        <Image style={styles.userAvatar} source={{
-          uri: 'https://source.unsplash.com/random',
-          method: 'POST',
-          headers: {
-            Pragma: 'no-cache'
-          }
-        }} />
-      </View>
+      {displayAvatar &&
+      (<View style={styles.user}>
+        <TouchableOpacity onPress={handleUserProfile}>
+          <Image style={styles.userAvatar} source={{ uri: avatarUrl }} />
+        </TouchableOpacity>
+      </View>)}
     </View>
   )
 }
@@ -36,6 +50,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: commonStyles.color.grey,
     position: 'relative',
+    height: 40,
+  },
+  containerAlt: {
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    backgroundColor: commonStyles.color.grey,
+    position: 'relative',
+    height: 40,
   },
   balance: {
     flex: 1,
@@ -58,6 +81,13 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 12,
     left: '30%',
+  },
+  logoAlt: {
+    height: 20,
+    width: 150,
+    position: 'absolute',
+    top: 12,
+    left: '16%',
   },
   logoImg: {
     height: 20,
