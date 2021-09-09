@@ -32,7 +32,7 @@ const CreateProject = () => {
     videoUrl: '',
     projectTags: [],
     donatorsPrivileges: [],
-    faqs: []
+    faqs: [],
   };
   const { id: userId } = useAuth();
   const { id } = useParams<{ id: string }>();

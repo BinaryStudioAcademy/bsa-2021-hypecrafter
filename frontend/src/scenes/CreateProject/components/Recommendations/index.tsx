@@ -59,7 +59,7 @@ const Recommendations: FC<Props> = ({ changePage, currentPage, region, category,
   const footer = (
     <div className={classes.footer}>
       <Button onClick={handleBack} className={classes.back}>{t('Go back')}</Button>
-      <Button onClick={handleNext}>{t('Create Project')}</Button>
+      <Button onClick={handleNext}>{t('Save')}</Button>
     </div>
   );
 
