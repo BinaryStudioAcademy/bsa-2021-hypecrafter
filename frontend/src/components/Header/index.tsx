@@ -44,6 +44,14 @@ const Header = () => {
     isLoading,
     notifications
   }));
+  const { firstName, lastName } = useTypedSelector(({ auth }) => (
+    !auth?.user
+      ? {
+        firstName: '',
+        lastName: ''
+      }
+      : auth.user
+  ));
   const { searchResult, notifications } = store;
   const { isBalance, balance } = useBalance();
 
@@ -143,7 +151,7 @@ const Header = () => {
             <Popover
               trigger={(
                 <Input type="search" value={text} placeholder={t('Search...')} onChange={handleSearch} />
-                )}
+              )}
               placement="bottom-end"
               id="id"
               rootClose
@@ -175,7 +183,7 @@ const Header = () => {
                   >
                     <Avatar
                       width={35}
-                      userName="Hype Coin"
+                      userName={`${firstName} ${lastName}`}
                       className={classes.header_profile_avatar}
                     />
                   </Nav.Link>
@@ -318,7 +326,7 @@ const Header = () => {
           >
             <Avatar
               width={35}
-              userName="Hype Coin"
+              userName={`${firstName} ${lastName}`}
               className={classes.header_profile_avatar}
             />
           </Nav.Link>
