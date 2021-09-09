@@ -31,6 +31,12 @@ const AppNavigator = createStackNavigator(
         }
       }
     },
+    Project: {
+      screen: ProjectView,
+      navigationOptions: {
+        headerShown: false,
+      },
+    },
   },
   {
     initialRouteName: 'Main',
