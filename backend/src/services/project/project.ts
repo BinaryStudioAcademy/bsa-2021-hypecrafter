@@ -70,14 +70,21 @@ export default class ProjectService {
     return project;
   }
 
-  public async getBySortAndFilter({ sort, filter, stringifiedCategories, userId }: {
+  public async getBySortAndFilter({ sort, filter, stringifiedCategories, userId, upcoming }: {
     sort: ProjectsSort,
     filter: ProjectsFilter,
     stringifiedCategories: string,
+    upcoming: boolean,
     userId?: string,
   }) {
     const categories = JSON.parse(stringifiedCategories);
-    const projects: Project[] = await this.#projectRepository.getBySortAndFilter({ sort, filter, categories, userId });
+    const projects: Project[] = await this.#projectRepository.getBySortAndFilter({
+      sort,
+      filter,
+      categories,
+      userId,
+      upcoming
+    });
     return projects;
   }
 

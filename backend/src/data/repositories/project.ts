@@ -1,6 +1,5 @@
-/* eslint-disable @typescript-eslint/no-shadow */
-/* eslint-disable class-methods-use-this */
 /* eslint-disable default-case */
+/* eslint-disable class-methods-use-this */
 import { ProjectsCategories, ProjectsFilter, ProjectsSort } from 'hypecrafter-shared/enums';
 import { isNull } from 'lodash';
 import { EntityRepository, getRepository, Repository } from 'typeorm';
@@ -311,8 +310,8 @@ export class ProjectRepository extends Repository<Project> {
         .from(Project, 'project')
         .leftJoin('donators_privilege', 'donatorsPrivilege', 'project.id = "donatorsPrivilege"."projectId"')
         .where(`
-          title IS NOT NULL AND 
-          "donatorsPrivilege".content IS NOT NULL AND 
+          title IS NOT NULL AND
+          "donatorsPrivilege".content IS NOT NULL AND
           includes IS NOT NULL AND amount IS NOT NULL
         `)
         .groupBy('project.id'), 'dp', 'dp."projectId" = project.id')
@@ -438,11 +437,12 @@ export class ProjectRepository extends Repository<Project> {
       .getRawOne();
   }
 
-  public getBySortAndFilter({ sort, filter, categories, userId }: {
+  public getBySortAndFilter({ sort, filter, categories, userId, upcoming }: {
     sort: ProjectsSort;
     filter: ProjectsFilter;
     categories: ProjectsCategories[];
     userId?: string;
+    upcoming: boolean;
   }) {
     const query = this.createQueryBuilder('project')
       .select(`
@@ -509,6 +509,10 @@ export class ProjectRepository extends Repository<Project> {
       query.andWhere(filterCondition);
     }
 
+    if (upcoming) {
+      query.andWhere('project."finishDate" BETWEEN current_date AND current_date + 7');
+    }
+
     const orderBy = this.getOrderBy(sort);
     query.orderBy(orderBy);
 
@@ -532,16 +536,14 @@ export class ProjectRepository extends Repository<Project> {
   // eslint-disable-next-line consistent-return
   private getFilterCondition(filter: ProjectsFilter, userId: string) {
     switch (filter) {
-      case ProjectsFilter.ALL:
-        return 'project."id" IS NOT NULL';
       case ProjectsFilter.FAVORITE:
         return '"isFavorite" = true';
       case ProjectsFilter.INVESTED:
         return 'dnu."projectId" IS NOT NULL';
       case ProjectsFilter.OWN:
         return `up."userId" = '${userId}'`;
-      case ProjectsFilter.UPCOMING:
-        return 'project."finishDate" BETWEEN current_date AND current_date + 7';
+      default:
+        return 'project."id" IS NOT NULL';
     }
   }
 
