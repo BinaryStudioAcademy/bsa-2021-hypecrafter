@@ -1,5 +1,5 @@
 import React, { FC, useEffect, useState } from 'react';
-import { Button, Image, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Image, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { useNavigation } from 'react-navigation-hooks';
 import { Mark } from '../../common/enums';
@@ -45,7 +45,6 @@ const ProjectView: FC = () => {
   return (
     <View style={{ flexGrow: 1 }}>
       <ScrollView style={{ flex: 1, backgroundColor: colors.root_background }} contentContainerStyle={{ flexGrow: 1 }}>
-        <Button title="Back" onPress={() => navigation.goBack()} />
         <Image
           source={{
             uri: project.imageUrl || 'https://source.unsplash.com/random/800x600',
@@ -146,8 +145,8 @@ const ProjectView: FC = () => {
         </View>
         <View style={styles.tabCont}>
           {screenNum === 1 && <StoryView />}
-          {screenNum === 2 && <FAQView />}
-          {screenNum === 3 && <CommentsView />}
+          {screenNum === 2 && <FAQView faq={project.FAQ} />}
+          {screenNum === 3 && <CommentsView comments={project.projectComments} />}
         </View>
       </ScrollView>
     </View>

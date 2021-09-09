@@ -1,11 +1,15 @@
 import React from 'react';
-import { Text, View } from "react-native";
+import { View } from 'react-native';
+import Accordion from '../../common/Accordion';
 
-const FAQView = () => {
-
+const FAQView = ({ faq }: { faq: { id: string, question: string, answer: string }[] }) => {
   return (
     <View>
-      <Text style={{ color: 'white' }}>FAQ</Text>
+      {
+        faq.map(({ id, question, answer }) => (
+          <Accordion question={question} answer={answer} key={id} />
+        ))
+      }
     </View>
   )
 }
