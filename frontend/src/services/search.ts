@@ -8,7 +8,7 @@ const startResultPage = 1;
 export const search = (
   params: SearchProps
 ): Promise<SearchResult[]> => api.post({
-  url: env.search.url || 'https://hypecrafter.ent.us-central1.gcp.cloud.es.io/api/as/v1/engines/hypecrafter/search',
+  url: env.search.url || 'http://surl.li/affri',
   params: {
     ...params,
     page: { size: countResult, current: startResultPage },

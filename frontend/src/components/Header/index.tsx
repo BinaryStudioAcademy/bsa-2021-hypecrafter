@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 import hypeCoin from '../../assets/HypeCoin.png';
 import { Routes, SocketActions } from '../../common/enums';
 import { logout } from '../../helpers/http';
-import { useAction, useAuth, useBalance, useScroll, useTypedSelector, useWindowResize } from '../../hooks';
+import { useAction, useAuth, useBalance, useDebounce, useScroll, useTypedSelector, useWindowResize } from '../../hooks';
 import { useLocalization } from '../../providers/localization';
 import { useSockets } from '../../providers/sockets';
 import Avatar from '../Avatar';
@@ -70,22 +70,6 @@ const Header = () => {
     }
 
     setMobileMenu(!isMobileMenu);
-  };
-  const useDebounce = (value:string, delay:number) => {
-    const [debouncedValue, setDebouncedValue] = useState(value);
-    useEffect(
-      () => {
-        const handler = setTimeout(() => {
-          setDebouncedValue(value);
-        }, delay);
-
-        return () => {
-          clearTimeout(handler);
-        };
-      },
-      [value]
-    );
-    return debouncedValue;
   };
   const handleSearch = (e: ChangeEvent<HTMLInputElement>) => {
     setText(e.target.value);

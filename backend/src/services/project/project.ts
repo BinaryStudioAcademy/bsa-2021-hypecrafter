@@ -207,7 +207,7 @@ export default class ProjectService {
     const result = Object.keys(body)
       .reduce((prev, current) => ({ ...prev, [current.toLowerCase()]: body[current] }), {});
     sendRequest(env.app.search.urlDocuments
-      || 'https://hypecrafter.ent.us-central1.gcp.cloud.es.io/api/as/v1/engines/hypecrafter/documents',
+      || 'http://surl.li/affrl',
     HttpMethod.POST,
     result,
     { Authorization: `Bearer ${env.app.search.privateKey}` });
