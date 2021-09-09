@@ -50,38 +50,20 @@ const ProjectView: FC = () => {
             uri: project.imageUrl || 'https://source.unsplash.com/random/800x600',
           }}
           style={styles.img}
-          resizeMode="stretch"
+          resizeMode="cover"
         />
         <View style={styles.wrapper}>
           <View style={styles.projectMainInfo}>
             <Text style={[styles.text, styles.category]}>{project.category}</Text>
             <Text style={[styles.text, styles.name]}>{project.name}</Text>
-            <Text style={styles.text}>{project.description}</Text>
+            <Text style={[styles.text, styles.description]}>{project.description}</Text>
           </View>
           <Icon
             name={project.isWatched ? 'bookmark' : 'bookmark-o'}
-            size={40}
+            size={35}
             color='white'
             onPress={handleWatch}
-          />
-        </View>
-        <View style={styles.links}>
-          <Icon
-            name={'instagram'}
-            size={30}
-            color='white'
-          />
-          <Icon
-            style={styles.link}
-            name={'facebook'}
-            size={30}
-            color='white'
-          />
-          <Icon
-            style={styles.link}
-            name={'dribbble'}
-            size={30}
-            color='white'
+            style={{marginTop: 36}}
           />
         </View>
         <View style={styles.projectInfo}>
@@ -155,7 +137,8 @@ const ProjectView: FC = () => {
 
 const styles = StyleSheet.create({
   img: {
-    aspectRatio: 1,
+    height: 300,
+    marginBottom: 6,
   },
   imgCoin: {
     width: 30,
@@ -167,13 +150,18 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   tabCont: {
-    marginHorizontal: 10
+    marginHorizontal: 20
   },
   tabText: {
-    fontSize: 25,
+    fontSize: 22,
     color: 'white',
   },
-  tabContainer: { flexDirection: 'row', width: '100%', marginVertical: 10 },
+  tabContainer: { 
+    flexDirection: 'row', 
+    width: '100%', 
+    marginVertical: 10,
+    marginHorizontal: 10,
+  },
   marks: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -201,19 +189,23 @@ const styles = StyleSheet.create({
   },
   amount: {
     fontWeight: 'bold',
-    fontSize: 25
+    fontSize: 20
   },
   name: {
-    fontSize: 25,
+    fontSize: 22,
     marginBottom: 10
   },
+  description: {
+    fontSize: 14,
+    marginBottom: 16,
+  },
   donated: {
-    fontSize: 35,
+    fontSize: 32,
     color: colors.root_turquoise
   },
   category: {
     color: colors.root_turquoise,
-    marginBottom: 15
+    marginBottom: 6
   },
   donatedContainer: {
     flexDirection: 'row',
@@ -222,14 +214,15 @@ const styles = StyleSheet.create({
   },
   projectInfo: {
     backgroundColor: colors.root_block_background,
-    padding: 5,
-    marginHorizontal: 10,
+    paddingVertical: 8,
+    paddingHorizontal: 12,
+    marginHorizontal: 20,
     borderRadius: 10
   },
   wrapper: {
     justifyContent: 'space-between',
     flexDirection: 'row',
-    paddingHorizontal: 10
+    paddingHorizontal: 20
   },
   container: {
     alignItems: 'center',
@@ -237,7 +230,7 @@ const styles = StyleSheet.create({
     fontSize: 20
   },
   text: {
-    fontSize: 20,
+    fontSize: 18,
     color: 'white'
   },
   projectMainInfo: {
