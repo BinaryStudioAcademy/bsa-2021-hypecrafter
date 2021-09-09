@@ -18,7 +18,7 @@ type Props = {
 
 const ProjectCard: FC<Props> = ({
   to,
-  tags,
+  tags = '',
   name,
   description,
   goal,
@@ -26,20 +26,36 @@ const ProjectCard: FC<Props> = ({
   category,
   image = 'https://dummyimage.com/600x400/000/fff.jpg&text=+',
   rounded = false
-}) => (
-  <CardWithLink to={to} image={image} rounded={rounded}>
-    {category && <div className={classes.category}>{category}</div>}
-    <div className={classes.title}>{name}</div>
-    <div className={classes.description}>{description}</div>
+}) => {
+  const hide = () => {
+    if (!tags) return true;
+    if (Array.isArray(tags) && !tags.length) return true;
+    if (typeof tags === 'string' && (!tags.trim() || tags.trim() === 'null')) return true;
+    return false;
+  };
 
-    <div className={classes.tags}>
-      {(Array.isArray(tags))
-        ? tags.map(tag => <Tag key={tag} text={tag} />)
-        : <Tag text={tags} />}
-    </div>
+  return (
+    <CardWithLink to={to} image={image} rounded={rounded}>
+      {category && <div className={classes.category}>{category}</div>}
+      <div className={classes.title}>{name}</div>
+      <div className={classes.description}>{description}</div>
 
-    <ProgressBar goal={Math.floor(goal)} percent={Math.floor(percent)} />
-  </CardWithLink>
-);
+      <div
+        className={`
+        ${classes.tags}
+        ${hide() ? classes.hide : ''}
+      `}
+      >
+        {
+          Array.isArray(tags)
+            ? tags.map(tag => tag !== null && <Tag key={tag} text={tag} />)
+            : <Tag text={tags} />
+        }
+      </div>
+
+      <ProgressBar goal={Math.floor(goal)} percent={Math.floor(percent)} />
+    </CardWithLink>
+  );
+};
 
 export default ProjectCard;
