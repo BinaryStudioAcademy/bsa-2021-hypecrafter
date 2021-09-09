@@ -1,4 +1,6 @@
 @import '../../styles/vars';
+@import '../../styles/fonts';
+
 .donate-page{
   min-height: 400px;
   display: flex;
@@ -15,6 +17,9 @@
   }  
   .donate-title-success{
     font-size: $font-size-title;
+  }
+  .donate-close-btn{
+    margin-bottom: 20px;
   }
   .donate-price{
     .donate-form {
@@ -37,4 +42,5 @@
       }
     }
   }
+
 }

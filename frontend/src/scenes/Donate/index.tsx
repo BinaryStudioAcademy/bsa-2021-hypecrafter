@@ -1,9 +1,9 @@
-import { ChangeEvent, FC, FormEvent, useState } from 'react';
+import { ChangeEvent, FC, FormEvent, useEffect, useState } from 'react';
 import Button from '../../components/Button';
 import Input from '../../components/Input';
 import LoaderWrapper from '../../components/LoaderWrapper';
 import SelectedFund from '../../components/SelectedFund';
-import { useAction, useTypedSelector } from '../../hooks';
+import { useAction, useAuth, useTypedSelector } from '../../hooks';
 import { useLocalization } from '../../providers/localization';
 import classes from './styles.module.scss';
 
@@ -14,11 +14,11 @@ const Donate: FC<Param> = ({ type }) => {
   console.log(type);
   const [price, setPrice] = useState('5');
   const { t } = useLocalization();
+  const { id: userId } = useAuth();
   const {
     projectId
   } = useTypedSelector(({ donate }) => donate);
-  const { hideDonateModalAction } = useAction();
-  const { executeDonateAction } = useAction();
+  const { hideDonateModalAction, fetchProject, executeDonateAction } = useAction();
   const start = (
     <>
       <h2 className={classes['donate-title-start']}>{t('Choose the donation amount')}</h2>
@@ -67,7 +67,7 @@ const Donate: FC<Param> = ({ type }) => {
         type="button"
         variant='secondary'
         onClick={hideDonateModalAction}
-        className={classes['donate-confirm-btn']}
+        className={classes['donate-close-btn']}
       >
         {t('Confirm')}
       </Button>
@@ -81,7 +81,7 @@ const Donate: FC<Param> = ({ type }) => {
         disable={Number(price) < 1}
         type="button"
         variant='secondary'
-        className={classes['donate-confirm-btn']}
+        className={classes['donate-close-btn']}
         onClick={hideDonateModalAction}
       >
         {t('Confirm')}
@@ -91,6 +91,10 @@ const Donate: FC<Param> = ({ type }) => {
   console.log(start);
   console.log(failure);
   /* eslint-disable */
+  useEffect(()=>{
+    if(type==='success')
+      fetchProject({ id:projectId, userId });
+  },[type])
   const content = type === 'show' ? start : (type === 'failure' ? failure : type==='success'?success:false);
   return (
     <div className={classes['donate-page']}>
