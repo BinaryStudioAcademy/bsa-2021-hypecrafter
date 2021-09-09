@@ -1,3 +1,4 @@
+/* eslint-disable class-methods-use-this */
 /* eslint-disable default-case */
 import { ProjectsCategories, ProjectsFilter, ProjectsSort, TimeInterval } from 'hypecrafter-shared/enums';
 import { isNull } from 'lodash';
@@ -535,14 +536,14 @@ export class ProjectRepository extends Repository<Project> {
   // eslint-disable-next-line consistent-return
   private getFilterCondition(filter: ProjectsFilter, userId: string) {
     switch (filter) {
+      case ProjectsFilter.ALL:
+        return 'project."id" IS NOT NULL';
       case ProjectsFilter.FAVORITE:
         return '"isFavorite" = true';
       case ProjectsFilter.INVESTED:
         return 'dnu."projectId" IS NOT NULL';
       case ProjectsFilter.OWN:
         return `up."userId" = '${userId}'`;
-      default:
-        return 'project."id" IS NOT NULL';
     }
   }
 
