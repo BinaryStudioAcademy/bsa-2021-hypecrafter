@@ -211,10 +211,6 @@
     "achieved goal": "досяг цілі",
     "Fundraising time for": "Термін збору коштів для",
     "is over": "завершено",
-    "Basic fund": "Базовий",
-    "Amount": "Кількість",
-    "Return to Main Page": "Повернутися до Головної Сторінки",
-    "Pay": "Сплатити",
     "Upcoming projects": "Найближчі проекти",
     "Global Statistics": "Загальна статистика",
     "Donation Statistics": "Статистика донатів",
@@ -226,6 +222,7 @@
     "Total views": "Кількість переглядів",
     "in progress": "триває",
     "successful": "успішний",
-    "unsuccessful": "неуспішний"
+    "unsuccessful": "неуспішний",
+    "Site locale": "ua"
   }
 }
