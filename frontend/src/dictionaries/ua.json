@@ -226,6 +226,10 @@
     "in progress": "триває",
     "successful": "успішний",
     "unsuccessful": "неуспішний",
-    "Site locale": "ua"
+    "Site locale": "ua",
+    "Perhaps you do not have enough money on your balance or the donation time is over":"Можливо, вам не вистачає коштів на вашому балансі або час пожертв закінчився",
+    "Donate was failed":"Пожертва не вдалась",
+    "Donate was successful":"Пожертва пройшла успішно",
+    "Return to Project Page": "Повернутися до Сторінки Проекту"
   }
 }

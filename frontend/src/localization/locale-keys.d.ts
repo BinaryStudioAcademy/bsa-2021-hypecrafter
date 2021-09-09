@@ -225,4 +225,8 @@ declare type LocaleKeys =
  | 'in progress'
  | 'successful'
  | 'unsuccessful'
- | 'Site locale';
+ | 'Site locale'
+ | 'Perhaps you do not have enough money on your balance or the donation time is over'
+ | 'Donate was failed'
+ | 'Donate was successful'
+ | 'Return to Project Page';
