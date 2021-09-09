@@ -28,7 +28,7 @@ const newProject: Project = {
   name: '',
   region: '',
   content: '',
-  team: { name: '', chats: [] },
+  team: { name: '', teamUsers: [] },
   projectTags: [],
   donatorsPrivileges: [],
   faqs: []

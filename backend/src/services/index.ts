@@ -1,3 +1,4 @@
+import MicroMq from 'micromq';
 import { Repositories } from '../data/repositories';
 import CategoryService from './category';
 import CommentService from './comment';
@@ -10,14 +11,15 @@ import TagService from './tag';
 import TopicService from './topic';
 import UserService from './user';
 
-export function initServices(repositories: Repositories): Services {
+export function initServices(repositories: Repositories, app: MicroMq): Services {
   return {
     userService: new UserService(repositories.userRepository),
     topicService: new TopicService(repositories.topicRepository),
     projectService: new ProjectService(
+      app,
       repositories.projectRepository,
       repositories.teamRepository,
-      repositories.chatRepository,
+      repositories.teamUserRepository,
       repositories.userRepository,
       new TagService(repositories.tagRepository),
       new ProjectTagService(repositories.projectTagRepository),
@@ -28,7 +30,7 @@ export function initServices(repositories: Repositories): Services {
     ),
     tagService: new TagService(repositories.tagRepository),
     categoryService: new CategoryService(repositories.categoryRepository),
-    commentService: new CommentService(repositories.commentRepository),
+    commentService: new CommentService(repositories.commentRepository, repositories.projectRepository, app),
     donateService: new DonateService(repositories.donateRepository,
       repositories.projectRepository, repositories.userRepository,)
   };

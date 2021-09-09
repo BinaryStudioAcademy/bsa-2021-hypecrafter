@@ -42,15 +42,15 @@ const Team: FC<Props> = ({ changePage, currentPage, team, onChangeValue }) => {
 
   const addMember = () => {
     const member = users.find(user => user.id === selectedUser);
-    const isExist = team.chats.find(chat => chat.donator.id === selectedUser);
+    const isExist = team.teamUsers.find(teamUser => teamUser.user.id === selectedUser);
     if (selectedUser && member && !isExist) {
-      team.chats.push({ donator: { firstName: member.firstName, lastName: member.lastName, id: member?.id } });
+      team.teamUsers.push({ user: { firstName: member.firstName, lastName: member.lastName, id: member?.id } });
       onChangeValue(ProjectKeys.TEAM, team);
     }
   };
   const deleteMember = (idUser:string) => {
-    const chats = team.chats.filter(chat => chat.donator.id !== idUser);
-    onChangeValue(ProjectKeys.TEAM, { ...team, chats });
+    const teamUsers = team.teamUsers.filter(teamUser => teamUser.user.id !== idUser);
+    onChangeValue(ProjectKeys.TEAM, { ...team, teamUsers });
   };
   const body = (
     <div>
@@ -63,14 +63,14 @@ const Team: FC<Props> = ({ changePage, currentPage, team, onChangeValue }) => {
         />
         <Button onClick={addMember} className={classes.addMember}>{t('Add')}</Button>
       </div>
-      <div className={classes.listMembers}>{team.chats.map(chat => (
+      <div className={classes.listMembers}>{team.teamUsers.map(teamUser => (
         <Button
           className={classes.member}
-          key={chat.donator.id}
-          id={chat.donator.id}
-          onClick={() => deleteMember(chat.donator.id)}
+          key={teamUser.user.id}
+          id={teamUser.user.id}
+          onClick={() => deleteMember(teamUser.user.id)}
         >
-          {`${chat.donator.lastName} ${chat.donator.firstName}`}
+          {`${teamUser.user.lastName} ${teamUser.user.firstName}`}
           <FontAwesomeIcon icon={faTimes} />
         </Button>
       ))}

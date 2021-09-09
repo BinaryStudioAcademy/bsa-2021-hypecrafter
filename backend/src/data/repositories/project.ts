@@ -349,6 +349,20 @@ export class ProjectRepository extends Repository<Project> {
     return project;
   }
 
+  public async getProjectById(id: string) {
+    return this.findOne({ id });
+  }
+
+  public async getUsersByWatсhedProject(projectId: string) {
+    const userProjects = await getRepository(UserProject)
+      .createQueryBuilder('userProject')
+      .select('"userId"')
+      .where(`"projectId" = '${projectId}' AND "isWatched" = 'true'`)
+      .getRawMany();
+
+    return userProjects;
+  }
+
   public async getForEdit(id: string): Promise<Project> {
     const selectQuery = `
       project."id",
@@ -359,7 +373,7 @@ export class ProjectRepository extends Repository<Project> {
       project."dribbleUrl",
       project.content,
       project.region,
-      "FAQ",
+      "faqs",
       description,
       category.id AS "category",
       project.name,
@@ -381,7 +395,7 @@ export class ProjectRepository extends Repository<Project> {
               'question', question,
               'answer', answer
             )
-          ) AS "FAQ",
+          ) AS "faqs",
           "projectId"
         `)
         .from('faq', 'faq')
@@ -428,26 +442,32 @@ export class ProjectRepository extends Repository<Project> {
       .leftJoin(subQuery => subQuery
         .select(`
           jsonb_build_object(
-            'id', team.id,
-            'name', team.name,
-            'chats', jsonb_agg(
-               jsonb_build_object(
-                 'id', chats.id,
-                 'donator', jsonb_build_object(
-                   'id', donator.id,
-                   'firstName', donator.firstName,
-                   'lastName', donator.lastName,
-                   'email', donator.email
-                 )
-               )
-             )
+            'id', "team".id,
+            'name', "team".name,
+            'teamUsers', "teamUsers"
           ) AS "team",
           "projectId"
         `)
         .from('team', 'team')
-        .leftJoin('team.chats', 'chats')
-        .leftJoin('chats.donator', 'donator')
-        .groupBy('"projectId", team.id'), 'te', 'te."projectId" = project.id')
+        .leftJoin(subQuery => subQuery
+          .select(`
+            jsonb_agg(
+              jsonb_build_object(
+                'id', "team_users".id,
+                 'user', jsonb_build_object(
+                   'id', user.id,
+                   'firstName', user.firstName,
+                   'lastName', user.lastName,
+                   'email', user.email
+                 )
+              )
+            ) AS "teamUsers",
+            "teamId"
+          `)
+          .from('team_users', 'team_users')
+          .leftJoin('team_users.user', 'user')
+          .groupBy('"teamId"'), 'fq', 'fq."teamId" = team.id')
+        .groupBy('"projectId", team.id, "teamUsers"'), 'te', 'te."projectId" = project.id')
       .where(`project."id" = '${id}'`);
     const project = await projectQuery.getRawOne();
 

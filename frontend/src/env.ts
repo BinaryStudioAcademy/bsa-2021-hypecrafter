@@ -8,7 +8,8 @@ export const env = {
     environment: getEnv('NODE_ENV')
   },
   server: {
-    url: getEnv('REACT_APP_SERVER_URL') || 'https://www.hypecrafter.com/api'
+    url: getEnv('REACT_APP_SERVER_URL') || 'https://www.hypecrafter.com/api',
+    sockets: getEnv('REACT_APP_SOCKET_SERVER_URL')
   },
   sentry: {
     dsn: getEnv('REACT_APP_SENTRY_DSN')
@@ -18,6 +19,10 @@ export const env = {
     region: getEnv('REACT_APP_AWS_REGION'),
     accessKeyId: getEnv('REACT_APP_AWS_ACCESS_KEY_ID'),
     secretAccessKey: getEnv('REACT_APP_AWS_SECRET_ACCESS_KEY')
+  },
+  search: {
+    url: getEnv('REACT_APP_SEARCH_URL'),
+    searchKey: getEnv('REACT_APP_SEARCH_KEY')
   },
   payment: {
     key: getEnv('REACT_APP_PAYMENT_KEY')

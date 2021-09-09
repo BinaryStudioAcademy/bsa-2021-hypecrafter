@@ -13,10 +13,13 @@ import paymentReducer, { initialState as paymentInitialState } from '../scenes/W
 import transactionsReducer, { initialState as transactionsInitialState } from '../scenes/Wallet/Transactions/reducer';
 import authReducer, { authState } from './auth';
 import categoriesReducer, { initialState as categoriesInitialState } from './categies';
+import notificationsReducer, { initialState as notificationsState } from './notifications';
 import { initialState as tagsInitialState, tagsReduser } from './tags';
 import usersReducer, { initialState as usersInitialState } from './users';
+import searchReducer, { initialState as searchInitialState } from './search';
 
 const initialState: StoreState = {
+  notifications: notificationsState,
   transactions: transactionsInitialState,
   mainPage: mainPageState,
   userProfile: userProfileInitialState,
@@ -29,7 +32,8 @@ const initialState: StoreState = {
   projectPage: projectPageState,
   authentication: authenticationInitialState,
   tags: tagsInitialState,
-  payment: paymentInitialState
+  payment: paymentInitialState,
+  search: searchInitialState
 };
 
 const rootReducer = combineReducers({
@@ -45,7 +49,9 @@ const rootReducer = combineReducers({
   transactions: transactionsReducer,
   authentication: authenticationReducer,
   tags: tagsReduser,
-  payment: paymentReducer
+  payment: paymentReducer,
+  search: searchReducer,
+  notifications: notificationsReducer
 });
 
 export { initialState, rootReducer };
