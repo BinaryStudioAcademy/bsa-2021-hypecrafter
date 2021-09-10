@@ -10,16 +10,14 @@ import { logout } from '../../helpers/http';
 import { useAction, useAuth, useBalance, useDebounce, useScroll, useTypedSelector, useWindowResize } from '../../hooks';
 import { useLocalization } from '../../providers/localization';
 import { useSockets } from '../../providers/sockets';
-import Avatar from '../Avatar';
 import Button from '../Button';
 import Input from '../Input';
 import Link from '../Link';
 import Logo from '../Logo';
 import NotificationPopover from '../NotificationsPopover';
-import OpenUserModal from '../OpenUserModalOption';
 import Popover from '../Popover';
 import SearchResult from '../SearchResult';
-import LanguageSwitcher from '../SwitchLanguageOption/LanguageSwitcher';
+import ProfilePopover from './profile-popover';
 import classes from './styles.module.scss';
 import { getLinks } from './utils';
 
@@ -30,7 +28,7 @@ const Header = () => {
   const [text, setText] = useState('');
   const [isMobileMenu, setMobileMenu] = useState(false);
   const [isProjectsMenu, setProjectsMenu] = useState(false);
-  const [isProfileMenu, setProfileMenu] = useState(false);
+  // const [isProfileMenu, setProfileMenu] = useState(false);
   const [isVisibleOnScroll, setVisibleOnScroll] = useState(false);
   const { pathname } = useLocation();
 
@@ -44,14 +42,6 @@ const Header = () => {
     isLoading,
     notifications
   }));
-  const { firstName, lastName } = useTypedSelector(({ auth }) => (
-    !auth?.user
-      ? {
-        firstName: '',
-        lastName: ''
-      }
-      : auth.user
-  ));
   const { searchResult, notifications } = store;
   const { isBalance, balance } = useBalance();
 
@@ -65,26 +55,22 @@ const Header = () => {
   useScroll(OFFSET, { scrollOverLimitCallback, scrollUnderLimitCallback });
 
   const handleHideProfileMenu = () => {
-    setProfileMenu(false);
+    // setProfileMenu(false);
     setMobileMenu(false);
   };
 
-  const handleProfileMenu = () => {
-    if (!isProfileMenu) {
-      setMobileMenu(false);
-      setProjectsMenu(false);
-    }
+  // const toggleProfileMenu = () => {
+  //   if (!isProfileMenu) {
+  //     setMobileMenu(false);
+  //     setProjectsMenu(false);
+  //   }
 
-    setProfileMenu(!isProfileMenu);
-  };
+  //   setProfileMenu(!isProfileMenu);
+  // };
 
   const handleMenuForMobile = () => {
     if (isMobileMenu && isProjectsMenu) {
       setProjectsMenu(false);
-    }
-
-    if (!isMobileMenu) {
-      setProfileMenu(false);
     }
 
     setMobileMenu(!isMobileMenu);
@@ -111,6 +97,8 @@ const Header = () => {
     }
   }, [socket]);
 
+  console.log('pathname.slice', pathname.slice(0, pathname.lastIndexOf('/')));
+
   return (
     <div
       className={isVisibleOnScroll ? classes.visible_on_scroll : ''}
@@ -136,7 +124,7 @@ const Header = () => {
                 key={it.to}
                 to={it.to}
                 className={classNames(it.className, {
-                  [classes.header_menu_item_active]: pathname === it.to
+                  [classes.header_menu_item_active]: pathname.slice(0, pathname.indexOf('/')) === it.to
                 })}
                 onClick={handleHideProfileMenu}
               >
@@ -157,7 +145,7 @@ const Header = () => {
               rootClose
             >{() => (
               <div className={classes.searchResult}>
-                {searchResult.map(result => (<SearchResult key={result.id} project={result} />))}
+                {searchResult.map(result => <SearchResult key={result.id} project={result} />)}
               </div>
             )}
             </Popover>
@@ -177,55 +165,7 @@ const Header = () => {
                   <Link to={Routes.ADDFUNDS}>{balance}</Link>
                 </div>
                 <NotificationPopover notifications={notifications} />
-                <div className={classes.desktop_profile}>
-                  <Nav.Link
-                    onClick={handleProfileMenu}
-                  >
-                    <Avatar
-                      width={35}
-                      userName={`${firstName} ${lastName}`}
-                      className={classes.header_profile_avatar}
-                    />
-                  </Nav.Link>
-                  <div
-                    className={`
-                          ${classes.desktop_menu_profile}
-                          ${isProfileMenu ? classes.visible : classes.hide}
-                        `}
-                  >
-                    <div
-                      className={`
-                          ${classes.desktop_menu_item}
-                        `}
-                    >
-                      <OpenUserModal />
-                    </div>
-                    <div
-                      className={`
-                          ${classes.desktop_menu_item}
-                          ${classes.line_both_desktop}
-                        `}
-                    >
-                      <LanguageSwitcher />
-                    </div>
-                    <NavLink
-                      to={Routes.PROJECTS_CREATE}
-                      className={`
-                          ${classes.desktop_menu_item}
-                          ${classes.line_both_desktop}
-                        `}
-                    >
-                      {t('Create project')}
-                    </NavLink>
-                    <NavLink
-                      to={Routes.LOGIN}
-                      className={classes.desktop_menu_item}
-                      onClick={logout}
-                    >
-                      {t('Log out')}
-                    </NavLink>
-                  </div>
-                </div>
+                <ProfilePopover logout={logout} />
               </Nav>
             )
             : (
@@ -321,8 +261,9 @@ const Header = () => {
           <NotificationPopover notifications={notifications} />
         </div>
         <div className={classes.mobile_profile}>
-          <Nav.Link
-            onClick={handleProfileMenu}
+          <ProfilePopover logout={logout} />
+          {/* <Nav.Link
+            onClick={toggleProfileMenu}
           >
             <Avatar
               width={35}
@@ -365,7 +306,7 @@ const Header = () => {
             >
               {t('Log out')}
             </NavLink>
-          </div>
+          </div> */}
         </div>
       </Navbar>
     </div>
