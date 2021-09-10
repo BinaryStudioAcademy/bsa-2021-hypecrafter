@@ -25,6 +25,11 @@ export default class DonateService {
         throw Error("User or Project doesn't exist");
       }
       const currentProject = Object.assign(new Project(), project);
+      console.log('----------------------------------------------');
+      console.log('start',new Date(currentProject.startDate).getTime())
+      console.log('finish',new Date(currentProject.finishDate).getTime())
+      console.log('now',Date.now());
+      console.log('----------------------------------------------');
       if (new Date(currentProject.finishDate).getTime() < Date.now()
       || new Date(currentProject.startDate).getTime() > Date.now()) {
         throw Error("Time for donate is not started or already finished"); }

@@ -136,6 +136,7 @@ export class ProjectRepository extends Repository<Project> {
       category.name AS "category",
       project.name,
       project."finishDate",
+      project."startDate",
       goal,
       tags,
       likes,
