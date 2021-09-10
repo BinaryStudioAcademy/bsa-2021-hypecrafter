@@ -12,6 +12,7 @@
     "migrate": "ts-node node_modules/typeorm/cli.js migration:run",
     "migration-revert": "ts-node node_modules/typeorm/cli.js migration:revert",
     "seed": "ts-node ./src/data/seeders",
+    "seed-prod": "ts-node ./src/data/seeders-production",
     "typeorm": "ts-node node_modules/typeorm/cli.js"
   },
   "author": "",
