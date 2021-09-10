@@ -13,7 +13,7 @@ const { rabbit } = env.app;
 const app = new MicroMq({
   name: Project.BACKEND,
   rabbit,
-  microservices: [Project.NOTIFICATION],
+  microservices: [Project.NOTIFICATION, Project.PAYMENT],
 });
 
 createConnection().then(() => {

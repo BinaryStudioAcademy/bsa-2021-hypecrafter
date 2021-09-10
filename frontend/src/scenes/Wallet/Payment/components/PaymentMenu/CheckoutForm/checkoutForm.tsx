@@ -74,14 +74,14 @@ export default function CheckoutForm() {
         >
           <span id="button-text">
             {state.processing
-              ? t('Load...')
+              ? t('Loading...')
               : t('Pay')}
           </span>
         </Button>
       </div>
       {state.error && (
         <span className={classes['card-payment-error']} role="alert">
-          {state.error}
+          {t(state.error as LocaleKeys)}
         </span>
       )}
 

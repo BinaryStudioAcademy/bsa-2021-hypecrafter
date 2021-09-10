@@ -1,4 +1,4 @@
-import { Project } from '../../data/entities';
+import { Donate, Project } from '../../data/entities';
 import { DonateRepository, ProjectRepository, UserRepository } from '../../data/repositories';
 
 export default class DonateService {
@@ -17,7 +17,7 @@ export default class DonateService {
   }
 
   /* eslint-disable */
-  public async createDonate(amount: number, userId: string, projectId: string):Promise<boolean> {
+  public async createDonate(amount: number, userId: string, projectId: string):Promise<Donate> {
     try {
       const user = await this.#userRepository.getById(userId);
       const project = await this.#projectRepository.getById(projectId);
@@ -30,8 +30,7 @@ export default class DonateService {
         throw Error("Time for donate is not started or already finished"); }
       if (user.balance < amount) { throw Error("User doesn't have enough money"); }
       await this.#userRepository.deductBalance(userId, amount);
-      const donate = this.#donateRepository.createDonate({ amount, user, project: currentProject });
-      return !!donate;
+      return this.#donateRepository.createDonate({ amount, user, project: currentProject });
     } catch (err) {
       console.log(err);
       // @ts-ignore

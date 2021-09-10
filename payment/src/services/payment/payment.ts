@@ -31,6 +31,7 @@ export default class PaymentService {
   }
 
   public setPayment(payment: NewPayment) {
+    console.log(payment);
     return this.#paymentRepository.setPayment(payment);
   }
 

@@ -4,15 +4,17 @@ import { Link } from 'react-router-dom';
 import coinImg from '../../../assets/HypeCoin.png';
 import { Routes } from '../../../common/enums';
 import Seo from '../../../components/Seo';
+import { useAction, useAuth, useBalance } from '../../../hooks';
 import { useLocalization } from '../../../providers/localization';
 import CustomFund from './components/CustomFund';
 import Fund from './components/Fund';
-import { useBalance } from '../../../hooks';
 import classes from './styles.module.scss';
 
 const FundsPage: FC = () => {
   const { t } = useLocalization();
   const { isBalance, balance } = useBalance();
+  const { openModalAction } = useAction();
+  const { id: userId } = useAuth();
   return (
     <Container fluid="sm">
       <Seo
@@ -24,7 +26,7 @@ const FundsPage: FC = () => {
         <div className={classes.breadcrumbs}>
           <Link to={Routes.HOME}> {t('Home')}</Link>
           {' > '}
-          <Link to="/account">{t('Account')}</Link>
+          <Link to={Routes.ADDFUNDS} onClick={() => { openModalAction(userId as string); }}>{t('Account')}</Link>
           {' > '}
           <span>{t('Add funds to your Wallet')}</span>
         </div>
@@ -65,7 +67,7 @@ const FundsPage: FC = () => {
                 </span>
               </div>
             </div>
-            <Link to={Routes.HOME}>{t('Account details')}</Link>
+            <Link to={Routes.ADDFUNDS} onClick={() => openModalAction(userId as string)}>{t('Account details')}</Link>
             <Link to={Routes.TRANSACTIONS}>{t('Transactions list')}</Link>
           </div>
         </div>

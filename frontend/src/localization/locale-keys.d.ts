@@ -231,4 +231,10 @@ declare type LocaleKeys =
  | 'Donate was successful'
  | 'Return to Project Page'
  | 'Frequently asked questions'
- | 'Comment can not be empty';
+ | 'Comment can not be empty'
+ | 'Your card number is invalid.'
+ | 'Your card\'s expiration year is in the past.'
+ | 'Your card\'s expiration date is in the past.'
+ | 'Your card\'s security code is incomplete.'
+ | 'Payment failed Your card number is incorrect.'
+ | 'Payment failed Your card\'s expiration year is in the past';
