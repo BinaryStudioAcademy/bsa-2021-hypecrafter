@@ -27,8 +27,12 @@ const Funding: FC<Props> = ({ changePage, currentPage, onChangeValue, goal, star
         label={t('Set an achievable goal that covers what you need to complete your project.')}
         onChange={e => onChangeValue(ProjectKeys.GOAL, e.target.value)}
         value={goal}
+        isRequired
       />
-      <p>{t('Decide on the terms for which you want to collect the above amount')}</p>
+      <p>
+        {t('Decide on the terms for which you want to collect the above amount')}
+        <span className={classes['label-required-mark']}>*</span>
+      </p>
       <div className={classes.dateBlock}>
         <DatePickerInput daySetter={day => onChangeValue(ProjectKeys.START_DATE, day)} value={startDate} />
         <DatePickerInput daySetter={day => onChangeValue(ProjectKeys.FINISH_DATE, day)} value={finishDate} />

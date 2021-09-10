@@ -9,6 +9,10 @@
   font-weight: $font-weight-medium;
 }
 
+.input-label-required-mark {
+  color: rgb(224, 0, 0);
+}
+
 .input-field-container {
   display: flex;
   position: relative;

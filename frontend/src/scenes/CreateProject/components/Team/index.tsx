@@ -75,7 +75,10 @@ const Team: FC<Props> = ({ changePage, currentPage, team, onChangeValue }) => {
         </Button>
       ))}
       </div>
-      <p>{t('We will notify this person')}</p>
+      <p className='mb-1'>
+        {t('We will notify this person')}
+        <span className={classes['label-required-mark']}>*</span>
+      </p>
       <Checkbox value={checked} onChange={handleChange} label={t('I agree')} id="applyNotifyPerson" />
     </div>
   );
