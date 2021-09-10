@@ -232,6 +232,12 @@
     "Donate was successful":"Пожертва пройшла успішно",
     "Return to Project Page": "Повернутися до Сторінки Проекту",
     "Frequently asked questions": "Питання що часто задаються",
-    "Comment can not be empty": "Коментар не може бути порожнім"
+    "Comment can not be empty": "Коментар не може бути порожнім",
+    "Your card number is invalid.":"Номер вашої картки недійсний",
+    "Your card's expiration year is in the past.":"Рік закінчення вашої картки минув.",
+    "Your card's expiration date is in the past.":"Дата закінчення терміну дії вашої картки минула.",
+    "Your card's security code is incomplete.":"Код безпеки вашої картки неповний.",
+    "Payment failed Your card number is incorrect.":"Помилка оплати.\n Номер вашої картки неправильний.",
+    "Payment failed Your card's expiration year is in the past":"Помилка оплати.\n Термін дії картки минув"
   }
 }
