@@ -1,9 +1,10 @@
-import { faDribbble, faFacebookSquare, faInstagram, faPinterest, faBehance } from '@fortawesome/free-brands-svg-icons';
+import { faBehance, faDribbble, faFacebookSquare, faInstagram, faPinterest } from '@fortawesome/free-brands-svg-icons';
 import { faMapMarkerAlt, faUserEdit } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ChangeEvent, FunctionComponent, useState } from 'react';
-import { Col, Container, Image, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import { UserProfile } from '../../../common/types';
+import Avatar from '../../../components/Avatar';
 import Button from '../../../components/Button';
 import Counter from '../../../components/Counter';
 import Input from '../../../components/Input';
@@ -88,7 +89,7 @@ const Header: FunctionComponent<HeaderProps> = ({ userProfile, isEditing, setEdi
     <Container className={classes['header-container']}>
       <Row className="align-items-md-end">
         <Col md={12} lg={3} xl={2} className={`text-center ${classes['avatar-column']}`}>
-          <Image src="https://source.unsplash.com/800x600/?portrait" roundedCircle className={classes['user-avatar']} />
+          <Avatar userName={`${editFirstName} ${editLastName}`} width={190} />
         </Col>
         <Col md={12} lg={5} xl={4} className="text-md-left">
           <div className={classes['user-info']}>

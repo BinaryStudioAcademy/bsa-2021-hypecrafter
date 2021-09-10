@@ -62,52 +62,6 @@ const UserPage: FC<Props> = ({ userId: id }) => {
       goal: 12000
     }
   ];
-  const achievements = [
-    {
-      id: '1111',
-      name: 'Test Achievement',
-      description: 'TODO: Maybe Make separate Card component for achievements',
-      imageUrl: 'https://image.flaticon.com/icons/png/512/126/126455.png'
-    },
-    {
-      id: '2222',
-      name: 'Test Achievement',
-      description: 'TODO: Maybe Make separate Card component for achievements',
-      imageUrl: 'https://image.flaticon.com/icons/png/512/126/126455.png'
-    },
-    {
-      id: '3333',
-      name: 'Test Achievement',
-      description: 'TODO: Maybe Make separate Card component for achievements',
-      imageUrl: 'https://image.flaticon.com/icons/png/512/126/126455.png'
-    },
-    {
-      id: '4444',
-      name: 'Test Achievement',
-      description: 'TODO: Maybe Make separate Card component for achievements',
-      imageUrl: 'https://image.flaticon.com/icons/png/512/126/126455.png'
-    },
-    {
-      id: '5555',
-      name: 'Test Achievement',
-      description: 'TODO: Maybe Make separate Card component for achievements',
-      imageUrl: 'https://image.flaticon.com/icons/png/512/126/126455.png'
-    }
-  ];
-  const activities = [
-    {
-      id: '11',
-      name: 'Activity Example'
-    },
-    {
-      id: '12',
-      name: 'Activity Example'
-    },
-    {
-      id: '13',
-      name: 'Activity Example Activity Example Activity Example Activity Example'
-    }
-  ];
 
   return (
     <Container>
@@ -124,7 +78,7 @@ const UserPage: FC<Props> = ({ userId: id }) => {
             )}
         </Row>
         <Row>
-          {!isEditing && <Body projects={projects} achievements={achievements} activities={activities} />}
+          {!isEditing && <Body projects={projects} />}
         </Row>
       </LoaderWrapper>
     </Container>
