@@ -143,6 +143,7 @@ const Settings: FC<Props> = ({
           value={tag}
           options={options}
           onFocus={() => setOptions(createListTags())}
+          onBlur={() => setOptions([])}
           selectOption={addExistTag}
         />
         <Button onClick={addTag} className={classes.addTag}>{t('Add')}</Button>
