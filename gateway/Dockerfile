@@ -5,5 +5,5 @@ WORKDIR "/app/gateway"
 COPY . .
 RUN npm install
 
-EXPOSE 3001
+EXPOSE 3001 3009
 CMD ["npm", "run", "start-prod"]
