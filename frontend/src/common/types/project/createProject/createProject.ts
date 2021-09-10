@@ -12,7 +12,7 @@ export interface CreateProject{
   goal: number;
   region: string;
   team: CreateProjectTeam;
-
+  authorId?: string;
   imageUrl?: string;
   videoUrl?: string;
   instagramUrl?: string;

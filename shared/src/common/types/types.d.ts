@@ -7,6 +7,7 @@ declare module 'micromq' {
       name?: string;
       rabbit?: { url: string };
       microservices?: string[];
+      requests?:{timeout: number};
     });
 
     get: IRouterMatcher<any>;

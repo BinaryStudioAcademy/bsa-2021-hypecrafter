@@ -12,7 +12,10 @@ const { rabbit } = env.app;
 const app = new MicroMq({
   name: Project.NOTIFICATION,
   rabbit,
-  microservices: ['backend']
+  microservices: ['backend'],
+  requests: {
+    timeout: 3000,
+  }
 });
 
 createConnection()

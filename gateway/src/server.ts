@@ -21,7 +21,9 @@ createConnection().then(() => {
   try {
     const server = createServer();
     const socketController = new SocketController(server);
-    server.listen(socketPort);
+    server.listen(socketPort, () => {
+      log(`Sockets is running at port: ${socketPort}`);
+    })
 
     const repositories = initRepositories();
     const services = initServices(repositories);

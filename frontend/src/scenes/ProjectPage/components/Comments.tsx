@@ -41,7 +41,7 @@ const Comments: FC<CommentsProps> = ({ comments, projectId }) => {
   return (
     <Col>
       <Row className={classes['comment-wrapper']}>
-        {comments.map((el) => (
+        {comments.filter(comment => comment.id).map((el) => (
           <CommentComponent key={el.id} comment={el} />
         ))}
       </Row>

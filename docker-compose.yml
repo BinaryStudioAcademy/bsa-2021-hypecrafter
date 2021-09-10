@@ -4,24 +4,28 @@ services:
     image: "mihailts/hypecrafter-gateway"
     env_file:
       - .env
+    restart: on-failure:5
   backend:
     depends_on:
       - gateway
     image: "mihailts/hypecrafter-backend"
     env_file:
       - .env
+    restart: on-failure:5
   notification:
     depends_on:
       - gateway
     image: "mihailts/hypecrafter-notification"
     env_file:
       - .env
+    restart: on-failure:5
   payment:
     depends_on:
       - gateway
     image: "mihailts/hypecrafter-payment"
     env_file:
       - .env
+    restart: on-failure:5
   frontend:
     stdin_open: true
     image: "mihailts/hypecrafter-frontend"

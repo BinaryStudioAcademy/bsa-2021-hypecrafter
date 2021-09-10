@@ -14,6 +14,9 @@ const app = new MicroMq({
   name: Project.BACKEND,
   rabbit,
   microservices: [Project.NOTIFICATION, Project.PAYMENT],
+  requests: {
+    timeout: 3000,
+  }
 });
 
 createConnection().then(() => {

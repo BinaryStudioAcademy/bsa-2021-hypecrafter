@@ -12,7 +12,7 @@ interface Props {
 
 const Accordion: FC<Props> = ({ items }) => (
   <div>
-    {items.map(({ id, question, answer }) => (
+    {(items || []).map(({ id, question, answer }) => (
       <AccordionBS defaultActiveKey="0" className={classes.main} key={id}>
         <AccordionBS.Item eventKey="1" className={classes.item}>
           <AccordionBS.Header className={classes.header}>{question}</AccordionBS.Header>

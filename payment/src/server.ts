@@ -9,7 +9,10 @@ const { rabbit } = env.app;
 const app = new MicroMq({
   name: Project.PAYMENT,
   rabbit,
-  microservices: [Project.BACKEND]
+  microservices: [Project.BACKEND],
+  requests: {
+    timeout: 3000,
+  }
 });
 createConnection().then(() => {
   initRoutes(app)?.start();

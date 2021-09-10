@@ -48,7 +48,8 @@ const CreateProject = () => {
 
   const end = (page: CurrentPage) => {
     if (page === CurrentPage.END) {
-      createProjectAction(newProject);
+      console.log(newProject);
+      createProjectAction({ ...newProject, authorId: userId });
     }
     setCurrentPage(page);
   };

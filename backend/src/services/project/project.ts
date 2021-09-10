@@ -171,7 +171,7 @@ export default class ProjectService {
       const LikedProject = await this.#projectRepository.getProjectById(projectId);
       const { authorId: recipient } = LikedProject;
 
-      const { response } = await this.#app.ask(Application.NOTIFICATION, {
+      this.#app.ask(Application.NOTIFICATION, {
         path: ActionPath.LikeNotifications,
         method: HttpMethod.POST,
         body: {
@@ -182,9 +182,7 @@ export default class ProjectService {
           },
           likesAndDislikes: mappedLikesAndDislikes
         }
-      }) as { response: { likes: number, dislikes: number } };
-
-      return response;
+      });
     }
 
     return mappedLikesAndDislikes;
