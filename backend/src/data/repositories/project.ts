@@ -363,6 +363,15 @@ export class ProjectRepository extends Repository<Project> {
     return userProjects;
   }
 
+  public async getUserByProjectId(id : string) {
+    const user = await this.findOne({ id });
+    return [user.authorId];
+  }
+
+  public async getUsersForProjectTimeoutNotification(projectId: string) {
+    return (await this.getUsersByWatсhedProject(projectId)).concat(await this.getUserByProjectId(projectId));
+  }
+
   public async getForEdit(id: string): Promise<Project> {
     const selectQuery = `
       project."id",

@@ -21,6 +21,7 @@ const NotificationPopover: FC<Props> = ({ notifications = [] }) => {
 
   console.log('>>>>>>>>>>>>>>', notifications);
   if (!Array.isArray(notifications)) {
+    // eslint-disable-next-line no-param-reassign
     notifications = [];
   }
 

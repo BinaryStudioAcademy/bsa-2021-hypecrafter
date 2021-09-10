@@ -4,6 +4,7 @@ export interface Notification {
   amount: number;
   userId: string;
   projectId: string;
+  recipient: string;
   userName?: string;
   projectName?: string;
   createdAt?: string;
