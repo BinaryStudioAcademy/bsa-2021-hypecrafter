@@ -15,6 +15,7 @@ interface Props extends FormControlProps {
   selectOption?: (value: string) => void,
   min?: number;
   max?: number;
+  isAutoComplete?: boolean;
 }
 
 const Input = forwardRef<HTMLInputElement, Props>(({
@@ -28,6 +29,7 @@ const Input = forwardRef<HTMLInputElement, Props>(({
   selectOption,
   max,
   min,
+  isAutoComplete = false,
   ...restInputProps
 }, ref) => {
   const [showPassword, setShowPassword] = useState(false);
@@ -45,6 +47,7 @@ const Input = forwardRef<HTMLInputElement, Props>(({
           step={step}
           min={min}
           max={max}
+          autoComplete={isAutoComplete ? 'on' : 'off'}
           {...restInputProps}
         />
         {type === 'password'
