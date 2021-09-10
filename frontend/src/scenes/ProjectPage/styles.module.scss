@@ -15,7 +15,13 @@
   }
 
   .project-image {
-    object-fit: cover;
+    @media (max-width: $breakpoint-lg) {
+      height: 500px;
+      margin-bottom: 25px;
+    }
+
+    background-position: center center;
+    height: 100%;
     width: 100%;
   }
 
