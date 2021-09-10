@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import projectImg from '../../assets/project-placeholder.jpg';
 import CardWithLink from '../Card/CardWithLink';
 import ProgressBar from '../ProgressBar';
 import Tag from '../Tag';
@@ -6,7 +7,7 @@ import classes from './styles.module.scss';
 
 type Props = {
   to: string,
-  tags: string[] | string; // temp
+  tags: string[] | string;
   name: string;
   description: string;
   goal: number;
@@ -24,7 +25,7 @@ const ProjectCard: FC<Props> = ({
   goal,
   percent,
   category,
-  image = 'https://dummyimage.com/600x400/000/fff.jpg&text=+',
+  image = projectImg,
   rounded = false
 }) => {
   const hide = () => {
