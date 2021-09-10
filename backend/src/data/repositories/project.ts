@@ -129,6 +129,7 @@ export class ProjectRepository extends Repository<Project> {
       project."facebookUrl",
       project."dribbleUrl",
       project.content AS story,
+      project."authorId",
       project.totalViews AS totalViews,
       "FAQ",
       donated,

@@ -5,9 +5,7 @@ import LoaderWrapper from '../../components/LoaderWrapper';
 import { Tab, Tabs } from '../../components/Tabs';
 import {
   useAction,
-  useAuth,
-  useTypedSelector,
-  useCountTimeOnPage
+  useAuth, useCountTimeOnPage, useTypedSelector
 } from '../../hooks';
 import { useLocalization } from '../../providers/localization';
 import Comments from './components/Comments';
@@ -45,9 +43,9 @@ const ProjectPage: FC = () => {
     <LoaderWrapper isLoading={isLoading} variant="page">
       <Container className={classes.container}>
         <Row>
-          <Header project={project} isAuthorized={isAuthorized} />
+          <Header project={project} isAuthorized={isAuthorized} userId={userId} authorId={project.authorId} />
         </Row>
-        <Row>
+        <Row className={classes['block-wrapper']}>
           <Tabs>
             <Tab title="Story">
               <Story
