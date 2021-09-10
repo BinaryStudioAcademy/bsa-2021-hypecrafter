@@ -72,6 +72,29 @@ const init = (
     jobController.startJob(job);
 
     res.json({ ok: true });
+  })
+  .post(ActionPath.ProjectTimeOut, async (req: any, res: Response) => {
+    const { users, projectId } = req.body;
+    const notifications = users.map((userId: string) => {
+      const notification = notificationService.createNotification({
+        projectId,
+        recipient: userId,
+        type: NotificationMessageTypes.PROJECT_TIME_OUT,
+      } as Notification);
+
+      return notification;
+    });
+
+    const notificationsToSend = await Promise.all(notifications);
+
+    res.json({
+      server: {
+        action: ActionPath.ProjectTimeOut,
+        meta: {
+          data: notificationsToSend
+        },
+      },
+    });
   });
 
 export default init;

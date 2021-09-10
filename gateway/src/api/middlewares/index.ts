@@ -98,6 +98,43 @@ export const initMiddlewares = (app: Express, _services: Services, socketControl
     res.json(likesAndDislikes);
   });
 
+  gateway.action(ActionPath.ProjectTimeOut, async (meta: any, res: Response) => {
+    const { data } = meta;
+
+    data.forEach((notification: any) => {
+      const { type,
+        userName,
+        projectName,
+        createdAt: messageDate,
+        amount: donation,
+        id,
+        projectId,
+        userId: userIdData
+      } = notification;
+
+      const dataToSend = {
+        type,
+        data: {
+          user: {
+            name: userName,
+            link: userIdData
+          },
+          project: {
+            name: projectName,
+            link: projectId
+          },
+          messageDate,
+          donation
+        },
+        id
+      };
+
+      socketController.send(notification.recipient, SocketActions.NOTIFICATION, dataToSend);
+    });
+
+    res.json({ ok: true });
+  });
+
   app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
   app.use('/', authorization(BLACK_ROUTES));
   app.use('/', setUserInfo);
