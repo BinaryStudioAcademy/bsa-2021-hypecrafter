@@ -3,12 +3,25 @@
 @import '../../styles/mixins';
 
 .info-block-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 96%;
-  height: 221px;
+  min-height: 221px;
   margin-top: 20px;
   padding: 10px 12px;
   background-color: $color-root-block-background;
   border-radius: 6px;
+
+  .info-block {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+
+    @media screen and (max-width: $breakpoint-xxl) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 
   .info-block-entity {
     text-align: center;
@@ -17,7 +30,30 @@
     .info-days-amount {
       font-weight: $font-weight-bold;
       font-size: 24px;
+      margin-top: 0.5rem;
       margin-bottom: 0.5rem;
+    }
+
+    .info-goal-amount {
+      display: flex;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      gap: 5px;
+      align-items: center;
+      justify-content: center;
+      font-family: $font-roboto700;
+      font-size: 24px;
+      background: $color-root-turquoise-gradient;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+
+      img {
+        width: 30px;
+        height: 30px;
+      }
     }
 
     .info-backers,
@@ -25,29 +61,6 @@
     .info-days {
       font-family: $font-roboto300;
       font-size: 20px;
-    }
-
-    .info-goal-amount{
-      display: flex;
-      grid-gap: 5px;
-      align-items: center;
-      justify-content: center;
-      img {
-        width: 30px;
-        height: 30px;
-      }
-    }
-
-    .info-goal-amount {
-      font-family: $font-roboto700;
-      font-size: 36px;
-      margin-bottom: 0.4rem;
-      background: $color-root-turquoise-gradient;
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      -moz-background-clip: text;
-      -moz-text-fill-color: transparent;
     }
   }
 

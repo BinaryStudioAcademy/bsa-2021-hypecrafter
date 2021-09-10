@@ -2,6 +2,7 @@ import { combineReducers } from 'redux';
 import { StoreState } from '../common/types';
 import authenticationReducer, { initialState as authenticationInitialState } from '../scenes/Auth/reducer';
 import projectReduser, { initialState as projectInitialState } from '../scenes/CreateProject/reducer';
+import donateReducer, { initialState as donateInitialState } from '../scenes/Donate/reducer';
 import mainPageReducer, { mainPageState } from '../scenes/MainPage/reducer';
 import projectPageReducer, { projectPageState } from '../scenes/ProjectPage/reducer';
 import projectsReducer, { initialState as projectsInitialState } from '../scenes/Projects/reducer';
@@ -14,9 +15,9 @@ import transactionsReducer, { initialState as transactionsInitialState } from '.
 import authReducer, { authState } from './auth';
 import categoriesReducer, { initialState as categoriesInitialState } from './categies';
 import notificationsReducer, { initialState as notificationsState } from './notifications';
+import searchReducer, { initialState as searchInitialState } from './search';
 import { initialState as tagsInitialState, tagsReduser } from './tags';
 import usersReducer, { initialState as usersInitialState } from './users';
-import searchReducer, { initialState as searchInitialState } from './search';
 
 const initialState: StoreState = {
   notifications: notificationsState,
@@ -33,6 +34,7 @@ const initialState: StoreState = {
   authentication: authenticationInitialState,
   tags: tagsInitialState,
   payment: paymentInitialState,
+  donate: donateInitialState,
   search: searchInitialState
 };
 
@@ -50,6 +52,7 @@ const rootReducer = combineReducers({
   authentication: authenticationReducer,
   tags: tagsReduser,
   payment: paymentReducer,
+  donate: donateReducer,
   search: searchReducer,
   notifications: notificationsReducer
 });

@@ -13,7 +13,7 @@
     "Sign In with Google": "Увійти за допомогою Google",
     "Password is too short (minimum is 6 characters)": "Пароль занадто короткий (мінімум 6 символів)",
     "Do you have a good ...": "У вас є гарна і продумана ідея, ви готові підкорити вершини самостійно, щоб здійснити свою мрію? Але іноді складно подолати шлях від концепції до готового продукту самостійно. HypeCrafter простягне руку допомоги, і не одну!",
-    "Help Project": "Допомогти Проекту",
+    "Help project": "Допомогти проекту",
     "Popular startups": "Популярні стартапи",
     "Recommended for you": "Рекомендовані для вас",
     "Interesting topics": "Цікаві теми",
@@ -216,6 +216,9 @@
     "Donation Statistics": "Статистика донатів",
     "Export": "Експортувати",
     "No data": "Немає даних",
+    "Donate": "Пожертва",
+    "Confirm": "Підтвердити",
+    "Choose the donation amount": "Налаштуйте сумму пожертви",
     "Recommendations": "Рекомендації",
     "Let’s look at similar projects": "Давайте розглянемо подібні проекти",
     "Status": "Статус",
@@ -224,6 +227,11 @@
     "successful": "успішний",
     "unsuccessful": "неуспішний",
     "Site locale": "ua",
+    "Perhaps you do not have enough money on your balance or the donation time is over":"Можливо, вам не вистачає коштів на вашому балансі або час пожертв закінчився",
+    "Donate was failed":"Пожертва не вдалась",
+    "Donate was successful":"Пожертва пройшла успішно",
+    "Return to Project Page": "Повернутися до Сторінки Проекту",
+    "Frequently asked questions": "Питання що часто задаються",
     "Comment can not be empty": "Коментар не може бути порожнім"
   }
 }

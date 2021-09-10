@@ -52,7 +52,7 @@ const FAQS: FC<Props> = ({ faqs, currentPage, changePage, onChangeValue }) => {
   );
   return (
     <Layout
-      header={t('Foresee popular questions and give answers to them')}
+      header={t('Frequently asked questions')}
       setCurrentPage={changePage}
       body={body}
       footer={footer}

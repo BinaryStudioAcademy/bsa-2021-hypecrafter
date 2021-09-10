@@ -13,8 +13,8 @@
     "Sign In with Google": "Sign In with Google",
     "Password is too short (minimum is 6 characters)": "Password is too short (minimum is 6 characters)",
     "Do you have a good ...": "Do you have a good and well thought-out idea and are you ready to conquer the peaks on your own to make your dream come true? But sometimes, alone, the difficult path from concept to finished product is not easy at all. HypeCrafter will lend a helping hand, and more than one!",
-    "Create Project": "Create Project",
-    "Help Project": "Help Project",
+    "Create project": "Create project",
+    "Help project": "Help project",
     "Popular startups": "Popular startups",
     "Recommended for you": "Recommended for you",
     "Interesting topics": "Interesting topics",
@@ -216,6 +216,9 @@
     "Donation Statistics": "Donation Statistics",
     "Export": "Export",
     "No data": "No data",
+    "Donate": "Donate",
+    "Confirm": "Confirm",
+    "Choose the donation amount": "Choose the donation amount",
     "Recommendations": "Recommendations",
     "Let’s look at similar projects": "Let’s look at similar projects",
     "Status": "Status",
@@ -224,6 +227,11 @@
     "successful": "successful",
     "unsuccessful": "unsuccessful",
     "Site locale": "en",
+    "Perhaps you do not have enough money on your balance or the donation time is over":"Perhaps you do not have enough money on your balance or you missed time",
+    "Donate was failed":"Donate was failed",
+    "Donate was successful":"Donate was successful",
+    "Return to Project Page":"Return to Project Page",
+    "Frequently asked questions": "Frequently asked questions",
     "Comment can not be empty": "Comment can not be empty"
   }
 }
