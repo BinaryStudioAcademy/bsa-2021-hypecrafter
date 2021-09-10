@@ -1,3 +1,4 @@
 export const projectPageColors = {
-  bookmark: '#b7c6ff'
+  edit: 'rgba(250, 251, 255, 0.5)',
+  bookmark: '#0aecec'
 };

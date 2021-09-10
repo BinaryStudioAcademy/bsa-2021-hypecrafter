@@ -20,7 +20,7 @@ const NotificationPopover: FC<Props> = ({ notifications = [] }) => {
 
   console.log('>>>>>>>>>>>>>>', notifications);
   if (!Array.isArray(notifications)) {
-    notifications = [];
+    // notifications = [];
   }
 
   return (

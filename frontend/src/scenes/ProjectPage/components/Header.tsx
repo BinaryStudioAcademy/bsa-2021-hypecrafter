@@ -3,7 +3,7 @@ import { faBookmark as faBookmarkEmpty } from '@fortawesome/free-regular-svg-ico
 import { faBookmark as faBookmarkFilled, faCog, faShare } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FunctionComponent, useState } from 'react';
-import { Col, Container, Image, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import ReactPlayer from 'react-player';
 import { projectPageColors } from '../../../common/constans';
 import { Routes } from '../../../common/enums';
@@ -19,9 +19,11 @@ import classes from '../styles.module.scss';
 interface HeaderProps {
   project: ProjectPage;
   isAuthorized: boolean;
+  userId: string | undefined;
+  authorId: string;
 }
 
-const Header: FunctionComponent<HeaderProps> = ({ project, isAuthorized }) => {
+const Header: FunctionComponent<HeaderProps> = ({ project, isAuthorized, userId, authorId }) => {
   const {
     id,
     name,
@@ -52,13 +54,18 @@ const Header: FunctionComponent<HeaderProps> = ({ project, isAuthorized }) => {
     setWatch({ isWatched: !isWatched, projectId: id });
   };
 
+  const divStyle = {
+    backgroundImage: `url(${imageUrl})`
+  };
+
   return (
     <Container className={classes['project-header']}>
       <Row>
         <Col xs={12} lg={5}>
-          {!videoUrl && <Image src={imageUrl} className={classes['project-image']} />}
+          {!videoUrl && <div style={divStyle} className={classes['project-image']} />}
           {videoUrl && (
             <ReactPlayer
+              className={classes['project-video']}
               controls
               width="100%"
               url={videoUrl}
@@ -77,9 +84,11 @@ const Header: FunctionComponent<HeaderProps> = ({ project, isAuthorized }) => {
             </Col>
             <Col xs={2} lg={2}>
               <div className={classes['watch-container']}>
+                {isAuthorized && (userId === authorId) && (
                 <Link to={`${Routes.PROJECTS_EDIT}/${id}`}>
-                  <FontAwesomeIcon icon={faCog} size="2x" color={projectPageColors.bookmark} />
+                  <FontAwesomeIcon icon={faCog} size="2x" color={projectPageColors.edit} />
                 </Link>
+                )}
                 <button
                   type='button'
                   onClick={handleWatch}
