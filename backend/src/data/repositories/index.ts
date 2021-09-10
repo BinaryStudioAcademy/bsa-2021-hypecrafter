@@ -5,6 +5,7 @@ import { CommentRepository } from './comment';
 import { DonateRepository } from './donate';
 import { DonatorsPrivilegeRepository } from './donatorsPrivilege';
 import { FAQRepository } from './faq';
+import { MessageRepository } from './message';
 import { ProjectRepository } from './project';
 import { ProjectTagRepository } from './projectTag';
 import { TagRepository } from './tag';
@@ -26,7 +27,8 @@ export const initRepositories = (): Repositories => ({
   commentRepository: getCustomRepository(CommentRepository),
   donateRepository: getCustomRepository(DonateRepository),
   donatorsPrivilegeRepository: getCustomRepository(DonatorsPrivilegeRepository),
-  faqRepository: getCustomRepository(FAQRepository)
+  faqRepository: getCustomRepository(FAQRepository),
+  messageRepository: getCustomRepository(MessageRepository)
 });
 
 export type Repositories = {
@@ -43,6 +45,7 @@ export type Repositories = {
   donatorsPrivilegeRepository: DonatorsPrivilegeRepository;
   faqRepository: FAQRepository;
   teamUserRepository: TeamUserRepository;
+  messageRepository: MessageRepository;
 };
 
 export {
@@ -58,5 +61,6 @@ export {
   CommentRepository,
   DonateRepository,
   DonatorsPrivilegeRepository,
-  FAQRepository
+  FAQRepository,
+  MessageRepository
 };

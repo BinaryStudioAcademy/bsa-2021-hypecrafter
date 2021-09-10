@@ -5,6 +5,7 @@ import { Nav, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import hypeCoin from '../../assets/HypeCoin.png';
 import { Routes, SocketActions } from '../../common/enums';
+import { NotificationType } from '../../common/types';
 import { logout } from '../../helpers/http';
 import { useAction, useAuth, useBalance, useDebounce, useScroll, useTypedSelector, useWindowResize } from '../../hooks';
 import { useLocalization } from '../../providers/localization';
@@ -29,15 +30,25 @@ const Header = () => {
   const [isProfileMenu, setProfileMenu] = useState(false);
   const [isVisibleOnScroll, setVisibleOnScroll] = useState(false);
 
-  const { addSocketHandler, socket } = useSockets();
+  const { addSocketHandler, socket, emitEvent } = useSockets();
   const { setNewNotificationsAction } = useAction();
 
   useEffect(() => {
     if (socket) {
-      addSocketHandler(SocketActions.NOTIFICATION, (notification) => {
+      addSocketHandler(SocketActions.NOTIFICATION, (notification: NotificationType) => {
         setNewNotificationsAction(notification);
       });
     }
+
+    // example this must be on chat component
+
+    const teamId = '7370b5e1-6437-4333-b284-04e5dd25fb90';
+    const textMessage = 'mmmmmmmmkvkkkf';
+    console.log('emit event');
+
+    emitEvent(SocketActions.JOIN_CHAT, { teamId });
+    emitEvent(SocketActions.NEW_MESSAGE, { text: textMessage });
+    addSocketHandler(SocketActions.NEW_MESSAGE_CREATED, console.log);
   }, [socket]);
 
   const { isMobile } = useWindowResize();

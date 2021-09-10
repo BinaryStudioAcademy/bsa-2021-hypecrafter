@@ -1,6 +1,7 @@
 import MicroMq from 'micromq';
 import { Repositories } from '../data/repositories';
 import CategoryService from './category';
+import ChatService from './chat';
 import CommentService from './comment';
 import DonateService from './donate';
 import FAQServise from './faq';
@@ -32,7 +33,8 @@ export function initServices(repositories: Repositories, app: MicroMq): Services
     categoryService: new CategoryService(repositories.categoryRepository),
     commentService: new CommentService(repositories.commentRepository, repositories.projectRepository, app),
     donateService: new DonateService(repositories.donateRepository,
-      repositories.projectRepository, repositories.userRepository,)
+      repositories.projectRepository, repositories.userRepository,),
+    chatService: new ChatService(repositories.messageRepository)
   };
 }
 
@@ -43,5 +45,6 @@ export type Services = {
   tagService: TagService,
   categoryService: CategoryService,
   donateService: DonateService,
-  commentService: CommentService
+  commentService: CommentService,
+  chatService: ChatService
 };

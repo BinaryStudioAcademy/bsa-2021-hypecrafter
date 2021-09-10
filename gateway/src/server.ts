@@ -21,7 +21,7 @@ createConnection().then(() => {
   try {
     const server = createServer();
     const socketController = new SocketController(server);
-    server.listen(3003);
+    server.listen(3009);
 
     const repositories = initRepositories();
     const services = initServices(repositories);
