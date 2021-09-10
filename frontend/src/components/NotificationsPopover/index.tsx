@@ -26,7 +26,7 @@ const NotificationPopover: FC<Props> = ({ notifications = [] }) => {
         trigger={(
           <div className={classes.header_natification}>
             <FontAwesomeIcon icon={faBell} className={classes.header_natification_bell} />
-            { !!notifications.filter(notification => !notification.isRead).length
+            { !!notifications.filter && notifications.filter(notification => !notification.isRead).length
             && <FontAwesomeIcon icon={faCircle} className={classes.header_natification_new} />}
           </div>
         )}
