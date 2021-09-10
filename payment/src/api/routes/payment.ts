@@ -6,6 +6,12 @@ import { env } from '../../env';
 import { wrap } from '../../helpers';
 import { Services } from '../../services';
 
+interface MetaNewDonate{
+  userId: string,
+  total: number,
+  item: string
+}
+
 const key = env.app.payment.private_key;
 const stripe = new Stripe(key, {
   apiVersion: '2020-08-27',
@@ -13,10 +19,11 @@ const stripe = new Stripe(key, {
 
 const endpointSecret = env.app.payment.webhook_key;
 
-const init = ({ paymentService }: Services, path: string) => (app: MicroMq) => app.get(
+const init = ({ paymentService }: Services, path: string) => (app: MicroMq) => {app.get(
   `${path}/:page`,
-  wrap<Empty, Page, { page: string }, Empty>((req) => paymentService
-    .getByUserId(req.headers.userId as string, req.params.page))
+  wrap<Empty, Page, { page: string }, Empty>((req) =>{
+    return paymentService
+        .getByUserId(req.headers.userId as string, req.params.page)})
 ).post(`${path}/create-payment-intent`,
   wrap< Empty, { clientSecret: string }, { amount: number }, Empty>(async (req) => {
     const { amount } = req.body;
@@ -41,7 +48,7 @@ const init = ({ paymentService }: Services, path: string) => (app: MicroMq) => a
             item: 'Balance replenishment',
             type: 'Custom Fund',
             total: payload.amount / 100,
-            userId: req.headers.userId as string
+            userId: payload.metadata.userId
           });
           break;
         }
@@ -53,4 +60,17 @@ const init = ({ paymentService }: Services, path: string) => (app: MicroMq) => a
     }
     return { status: 200 };
   }));
+
+  app.action('new_donate', async (meta, res) => {
+    const {item, total, userId} = meta as MetaNewDonate;
+    await paymentService.setPayment({
+      item,
+      type: 'Pledge project',
+      total,
+      userId
+    });
+    res.json({ ok: true });
+  });
+  return app;
+}
 export default init;

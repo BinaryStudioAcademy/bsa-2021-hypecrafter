@@ -4,7 +4,7 @@ import { Link, useHistory } from 'react-router-dom';
 import { MIN_AMOUNT_FUND } from '../../../common/constans/payment';
 import { Routes } from '../../../common/enums';
 import SelectedFund from '../../../components/SelectedFund';
-import { useTypedSelector } from '../../../hooks';
+import { useAction, useAuth, useTypedSelector } from '../../../hooks';
 import { useLocalization } from '../../../providers/localization';
 import PaymentForm from './components/PaymentMenu/paymentMenu';
 import classes from './styles.module.scss';
@@ -19,12 +19,14 @@ const Payment: FC = () => {
       history.push(Routes.ADDFUNDS);
     }
   }, []);
+  const { openModalAction } = useAction();
+  const { id: userId } = useAuth();
   return (
     <Container fluid="sm">
       <div className={classes.breadcrumbs}>
         <Link to={Routes.HOME}> {t('Home')}</Link>
         {' > '}
-        <Link to="/account">{t('Account')}</Link>
+        <Link to={Routes.PAYMENT} onClick={() => { openModalAction(userId as string); }}>{t('Account')}</Link>
         {' > '}
         <span>{t('Payment')}</span>
       </div>

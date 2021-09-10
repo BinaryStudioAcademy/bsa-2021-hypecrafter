@@ -231,4 +231,5 @@ declare type LocaleKeys =
  | 'Donate was successful'
  | 'Return to Project Page'
  | 'Frequently asked questions'
- | 'Comment can not be empty';
+ | 'Comment can not be empty'
+ | 'Your card number is invalid.';
