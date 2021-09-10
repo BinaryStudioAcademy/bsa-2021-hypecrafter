@@ -19,6 +19,9 @@ const NotificationPopover: FC<Props> = ({ notifications = [] }) => {
   const { t } = useLocalization();
 
   console.log('>>>>>>>>>>>>>>', notifications);
+  if (!Array.isArray(notifications)) {
+    notifications = [];
+  }
 
   return (
     <div>
