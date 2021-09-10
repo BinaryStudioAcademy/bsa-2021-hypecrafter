@@ -1,4 +1,4 @@
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FC, useEffect, useState } from 'react';
 import { CreateProjectTeam } from '../../../../common/types';
@@ -61,7 +61,7 @@ const Team: FC<Props> = ({ changePage, currentPage, team, onChangeValue }) => {
           defaultText="-"
           onChange={e => setUser(e.target.value)}
         />
-        <Button onClick={addMember} className={classes.addMember}>{t('Add')}</Button>
+        <Button onClick={addMember} className={classes.addMember}><FontAwesomeIcon icon={faPlus} /></Button>
       </div>
       <div className={classes.listMembers}>{team.teamUsers.map(teamUser => (
         <Button

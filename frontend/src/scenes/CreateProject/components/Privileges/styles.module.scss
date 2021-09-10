@@ -11,10 +11,16 @@
 .pointControl {
   display: flex;
   align-items: center;
-  .addPoint {
-    margin-left: 20px;
-  }
 }
+
+.addPoint {
+  height: 38px;
+  width: 38px;
+  margin-left: 15px;
+  border-radius: 100%;
+  @include flex-center;
+}
+
 .listPoints {
   margin-bottom: 0;
 
