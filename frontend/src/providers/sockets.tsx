@@ -5,6 +5,7 @@ import { useAuth } from '../hooks';
 
 type ContextProps = {
   addSocketHandler: (event: string, handler: (...args: any[]) => void) => void,
+  emitEvent: (event: string, data: any) => void,
   socket: Socket
 };
 
@@ -25,7 +26,11 @@ const SocketProvider: FC = ({ children }) => {
     (socket as Socket)?.on(event, handler);
   };
 
-  const value: ContextProps = { addSocketHandler, socket: socket as Socket };
+  const emitEvent = (event: string, data: any) => {
+    (socket as Socket)?.emit(event, data);
+  };
+
+  const value: ContextProps = { emitEvent, addSocketHandler, socket: socket as Socket };
 
   return (
     <SocketsContext.Provider value={value}>

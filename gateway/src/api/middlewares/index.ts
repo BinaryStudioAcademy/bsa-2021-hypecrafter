@@ -6,7 +6,8 @@ import path from 'path';
 import swaggerUI, { JsonObject } from 'swagger-ui-express';
 import YAML from 'yamljs';
 import { BLACK_ROUTES } from '../../common/constants/blackRoutes';
-import { ActionPath, SocketActions } from '../../common/enums';
+import { ActionPath } from '../../common/enums';
+import { SocketActions } from '../../common/enums/socketActions';
 import { env } from '../../env';
 import { Services } from '../../services';
 import { SocketController } from '../../services/socketController';
@@ -26,6 +27,11 @@ export const initMiddlewares = (app: Express, _services: Services, socketControl
   const gateway = new Gateway({
     microservices: [Project.BACKEND, Project.PAYMENT, Project.NOTIFICATION],
     rabbit
+  });
+
+  gateway.action(ActionPath.NewMessage, async (meta: any, res: Response) => {
+    socketController.sendToRoom(meta.chatId, SocketActions.NEW_MESSAGE_CREATED, meta);
+    res.json({ ok: true });
   });
 
   gateway.action(ActionPath.CommentNotification, async (meta: any, res: Response) => {
