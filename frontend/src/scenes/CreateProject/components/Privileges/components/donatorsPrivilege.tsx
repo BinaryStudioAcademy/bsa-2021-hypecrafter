@@ -1,4 +1,4 @@
-import { faCircle, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faCircle, faPlus, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FC, useState } from 'react';
 import { CreateProjectPrivilege } from '../../../../../common/types/project/createProject/privilege';
@@ -71,7 +71,7 @@ const DonatorsPrivilege: FC<Props> = ({ donatorsPrivilege, onChange, onDelete })
           onChange={e => setPoint(e.target.value)}
           value={point}
         />
-        <Button onClick={addPoint} className={classes.addPoint}>{t('Add')}</Button>
+        <Button onClick={addPoint} className={classes.addPoint}><FontAwesomeIcon icon={faPlus} /></Button>
       </div>
       <ul className={classes.listPoints}>{donatorsPrivilege.includes.map(_point => (
         <li key={_point}>

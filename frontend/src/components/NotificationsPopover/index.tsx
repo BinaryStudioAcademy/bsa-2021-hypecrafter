@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import { faBell } from '@fortawesome/free-regular-svg-icons';
 import { faCircle, faSlidersH } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -20,7 +21,8 @@ const NotificationPopover: FC<Props> = ({ notifications = [] }) => {
 
   console.log('>>>>>>>>>>>>>>', notifications);
   if (!Array.isArray(notifications)) {
-    // notifications = [];
+    // eslint-disable-next-line no-param-reassign
+    notifications = [];
   }
 
   return (

@@ -7,6 +7,7 @@ interface Props extends FormGroupProps {
   defaultText?: string;
   options: Array<{ text: string; value: string }>;
   onChange?: (e: ChangeEvent<HTMLSelectElement>) => void
+  isRequired?: boolean;
 }
 
 const Select = forwardRef<HTMLSelectElement, Props>(({
@@ -14,10 +15,16 @@ const Select = forwardRef<HTMLSelectElement, Props>(({
   defaultText,
   options,
   onChange,
+  isRequired = false,
   ...restFormGroupProps
 }, ref) => (
   <Form.Group className={classes['select-container']}>
-    {label && <Form.Label className={classes['select-label']}>{label}</Form.Label>}
+    {label && (
+      <Form.Label className={classes['select-label']}>
+        {label}
+        {isRequired && <span className={classes['select-label-required-mark']}>*</span> }
+      </Form.Label>
+    )}
     <Form.Control
       ref={ref}
       {...restFormGroupProps}

@@ -1,9 +1,10 @@
+import moment from 'moment';
+import 'moment/locale/uk';
 import { useState } from 'react';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
+import 'react-day-picker/lib/style.css';
 import MomentLocaleUtils from 'react-day-picker/moment';
 import { useLocalization } from '../../providers/localization';
-import 'moment/locale/uk';
-import 'react-day-picker/lib/style.css';
 import styles from './style.scss';
 
 interface DatePickerProps {
@@ -20,7 +21,10 @@ const DatePickerInput: React.FC<DatePickerProps> = ({ daySetter, value }) => {
   const placeholder = formatDate(new Date(), format, locale);
   const dayPickerProps = {
     locale,
-    localeUtils: MomentLocaleUtils
+    localeUtils: MomentLocaleUtils,
+    disabledDays: {
+      before: moment().add(1, 'days').toDate(),
+    }
   };
 
   const handleDayChange = (selectedDay: Date): void => {

@@ -1,8 +1,10 @@
 import { Project } from 'hypecrafter-shared/enums';
 import MicroMq from 'micromq';
 import * as cron from 'node-cron';
+import fetch from 'node-fetch';
 import { ActionType } from '../common/enums';
 import { Job } from '../common/types';
+import { env } from '../env';
 import { dataToScheduleForm } from '../helpers/dataToScheduleForm';
 import { Services } from '../services/index';
 
@@ -22,7 +24,7 @@ export class JobController {
     });
   }
 
-  startJob(job: Job) {
+  async startJob(job: Job) {
     const { finishDate, projectId } = job;
     const finishDateToScheduleForm = dataToScheduleForm(new Date(finishDate));
 
@@ -38,9 +40,12 @@ export class JobController {
           },
         })) as { response: { users: string } };
 
-        this.stopJobByProjectId(projectId);
-
-        console.log(response.users);
+        fetch(`${env.app.server}/notifications/project-time-out`, {
+          method: 'post',
+          body: JSON.stringify({ users: response.users,
+            projectId }),
+          headers: { 'Content-Type': 'application/json' },
+        });
       },
       { scheduled: true }
     );
@@ -51,6 +56,6 @@ export class JobController {
   stopJobByProjectId(projectId: string) {
     this.#services.jobService.deleteByProjectId(projectId);
     const task = this.#jobCollection.get(projectId);
-    task.destroy();
+    task?.destroy();
   }
 }

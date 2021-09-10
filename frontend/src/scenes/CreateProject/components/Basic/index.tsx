@@ -38,6 +38,7 @@ const Basic: FC<Props> = ({ changePage, currentPage, onChangeValue, name, descri
         label={t('Write a clear, brief title that helps people quickly understand the gist of your project.')}
         onChange={e => onChangeValue(ProjectKeys.NAME, e.target.value)}
         value={name}
+        isRequired
       />
       <Select
         options={categories.map(cat => ({ text: cat.name, value: cat.id }))}
@@ -45,12 +46,14 @@ const Basic: FC<Props> = ({ changePage, currentPage, onChangeValue, name, descri
         defaultText={category || '-'}
         onChange={e => onChangeValue(ProjectKeys.CATEGORY, e.target.value)}
         defaultValue={category}
+        isRequired
       />
       <Input
         type="textarea"
         label={t('Describe what you’ll be creating.')}
         onChange={e => onChangeValue(ProjectKeys.DESCRIPTION, e.target.value)}
         value={description}
+        isRequired
       />
     </div>
   );

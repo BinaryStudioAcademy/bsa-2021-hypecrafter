@@ -191,7 +191,7 @@ export default class ProjectService {
   }
 
   getUsersWatchingProject(projectId: string) {
-    return this.#projectRepository.getUsersByWatсhedProject(projectId);
+    return this.#projectRepository.getUsersForProjectTimeoutNotification(projectId);
   }
 
   public async setWatch({ isWatched, projectId }: { isWatched: boolean, projectId: string }, userId: string) {

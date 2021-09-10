@@ -1,4 +1,4 @@
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FC, useEffect, useState } from 'react';
 import ReactPlayer from 'react-player';
@@ -143,9 +143,10 @@ const Settings: FC<Props> = ({
           value={tag}
           options={options}
           onFocus={() => setOptions(createListTags())}
+          onBlur={() => setOptions([])}
           selectOption={addExistTag}
         />
-        <Button onClick={addTag} className={classes.addTag}>{t('Add')}</Button>
+        <Button onClick={addTag} className={classes.addTag}><FontAwesomeIcon icon={faPlus} /></Button>
       </div>
       <div className={classes.listTags}>{newTags.map(projectTag => (
         <Button

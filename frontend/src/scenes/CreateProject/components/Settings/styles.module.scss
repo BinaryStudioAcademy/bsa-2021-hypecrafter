@@ -1,58 +1,62 @@
 @import '../../../../styles/vars';
-.footer{
-    display: flex;
-    justify-content: space-between;
-    .back{
-        background: none;
-        border: 1px solid $color-root-text;
-    }
-}
-.projectImage{
-    max-width: 100%;
-    max-height: 300px;
-    margin-bottom: 20px;
-}
-.projectVideo{
-    margin-top: 20px;
-    max-width: 100%;
-}
-.listTags{
-    display: flex;
-    margin-bottom: 15px;
-    flex-wrap: wrap;
-    .tag{
-        padding: 3px 7px;
-        margin-right: 5px;
-        margin-bottom: 5px;
-        background: $color-root-grey;
-        border-radius: 3px;
-        width: fit-content;
-        height: fit-content;
-        display: flex;
-        align-items: center;
-        font-size: 14px;
-        
-        >svg{
-            margin-left: 5px;
-        }
-    }
-}
-.tagControl{
-    display: flex;
-    align-items: center;
-    margin-top: 15px;
-}
-.addTag{
+@import '../../../../styles/mixins';
+.footer {
+  display: flex;
+  justify-content: space-between;
+  .back {
     background: none;
     border: 1px solid $color-root-text;
-    margin-left: auto;
-    height: fit-content;
-    margin-left: 20px;
-    margin-top: 5px;
-    &:hover{
-        background: $color-primary-button;
-    }
+  }
 }
-.addVideo{
-    margin-top: 15px;
+.projectImage {
+  max-width: 100%;
+  max-height: 300px;
+  margin-bottom: 20px;
+}
+.projectVideo {
+  margin-top: 20px;
+  max-width: 100%;
+}
+.listTags {
+  display: flex;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  .tag {
+    padding: 3px 7px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    background: $color-root-grey;
+    border-radius: 3px;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+
+    > svg {
+      margin-left: 5px;
+    }
+  }
+}
+.tagControl {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+.addTag {
+  background: none;
+  border: 1px solid $color-root-text;
+  margin-top: 5px;
+  height: 38px;
+  width: 38px;
+  margin-left: 15px;
+  border-radius: 100%;
+  @include flex-center;
+
+  &:hover {
+    background: $color-primary-button;
+  }
+}
+.addVideo {
+  margin-top: 15px;
 }

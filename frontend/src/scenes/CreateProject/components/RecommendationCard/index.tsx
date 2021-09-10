@@ -1,6 +1,7 @@
 /* eslint-disable no-else-return */
 import cn from 'classnames';
 import { FC } from 'react';
+import projectImg from '../../../../assets/project-placeholder.jpg';
 import CardWithLink from '../../../../components/Card/CardWithLink';
 import ProgressBar from '../../../../components/ProgressBar';
 import Tag from '../../../../components/Tag';
@@ -31,7 +32,7 @@ const RecommendationCard: FC<Props> = ({
   totalViews,
   isActive,
   isSuccess,
-  image = 'https://dummyimage.com/600x400/000/fff.jpg&text=+',
+  image = projectImg,
   rounded = true
 }) => {
   const { t } = useLocalization();

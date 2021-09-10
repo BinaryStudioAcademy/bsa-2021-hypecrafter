@@ -71,7 +71,10 @@ export default class NotificationService {
     const newNotification = await this.#notificationRepository.createNotification(data);
     const { userId, projectId } = newNotification;
 
-    const userName = await this.getUserNameById(userId);
+    let userName = null;
+    if (userId) {
+      userName = await this.getUserNameById(userId);
+    }
     const projectName = await this.getProjectNameById(projectId);
 
     return { ...newNotification, userName, projectName };

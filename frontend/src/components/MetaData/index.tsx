@@ -7,7 +7,7 @@ const MetaData = () => {
   const siteName = 'HypeCrafter';
   const title = t('Social title');
   const siteDescription = t('Agreement');
-  const link = 'http://hypecrafter2-env.eba-n3gbu5mb.us-west-2.elasticbeanstalk.com';
+  const link = 'https://www.hypecrafter.com';
   const logoLink = () => {
     switch (t('language')) {
       case 'uk':

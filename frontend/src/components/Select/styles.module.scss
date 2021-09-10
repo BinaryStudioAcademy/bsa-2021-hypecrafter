@@ -9,6 +9,10 @@
   font-weight: $font-weight-medium;
 }
 
+.select-label-required-mark {
+  color: rgb(224, 0, 0);
+}
+
 .select-field {
   border: 1px solid $color-root-text;
   border-radius: 1px;
