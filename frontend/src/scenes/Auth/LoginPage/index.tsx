@@ -96,6 +96,7 @@ const LoginPage: FC = () => {
             placeholder={t('Enter your email')}
             label={t('Email')}
             errorMessage={errors.email?.message}
+            isAutoComplete
             {...register('email', { required: true })}
           />
 
