@@ -3,8 +3,9 @@ import { Col, Row } from 'react-bootstrap';
 import ProjectCard from '../../../components/ProjectCard';
 import { Tab } from '../../../components/Tabs';
 import { calcDonationProgress } from '../../../helpers/project';
-import { Project } from '../interfaces';
+import { Project } from '../../../common/types';
 import classes from '../styles.module.scss';
+import { Routes } from '../../../common/enums';
 
 interface BodyProps {
   projects: Project[];
@@ -23,7 +24,7 @@ const CardsGrid: FunctionComponent<CardsGridProps> = ({
     const renderProjectsList = () => projects.map((project) => (
       <ProjectCard
         key={project.id}
-        to={project.url}
+        to={`${Routes.PROJECTS}/${project.id}`}
         name={project.name}
         description={project.description}
         category={project.category}
