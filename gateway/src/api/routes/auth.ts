@@ -31,7 +31,7 @@ const init = (services: Services) => {
         const newUserId = newUser.id;
         const newUserTokens = services.authService.loginUser(newUserId, userAgentInfo);
         req.body = {
-          data: { email, googleId, firstName, lastName, region },
+          data: { email, googleId, firstName, lastName, region, id: newUserId },
           tokens: newUserTokens
         };
         res.delegate(Project.BACKEND);
@@ -56,7 +56,7 @@ const init = (services: Services) => {
           const newUserId = newUser.id;
           const newUserTokens = services.authService.loginUser(newUserId, userAgentInfo);
           req.body = {
-            data: { email, facebookId, firstName, lastName },
+            data: { email, facebookId, firstName, lastName, id: newUserId },
             tokens: newUserTokens
           };
           res.delegate(Project.BACKEND);

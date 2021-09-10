@@ -24,14 +24,18 @@
 .transaction-table-wrp {
   margin: 0 auto;
   margin-top: 110px;
-  width: $breakpoint-lg !important;
+  width: $breakpoint-xl !important;
   table {
     thead {
       background-color: $color-root-table-header-background;
       th {
-        @include text-md;
-        height: 50px;
+        height: 65px;
         padding-left: 10px;
+        font-size: $font-size-aсcent;
+        font-family: $font-roboto300;
+      }    
+      th:first-child{
+        text-align: center !important;
       }
     }
     tbody {
@@ -43,14 +47,18 @@
           text-overflow: ellipsis;
           vertical-align:middle;
           padding-left: 10px;
+          font-size: $font-size-aсcent !important;
           img {
-            width: $font-size-text !important;
-            min-width: $font-size-text !important;
+            width: $font-size-aсcent !important;
+            min-width: $font-size-aсcent !important;
             margin-left: 3px;
             margin-bottom: 2px;
           }
           @include text-md;
-      }
+        }
+        td:first-child{
+          text-align: center !important;
+        }
       }
       tr:nth-child(odd) {
         background-color: $color-root-table-odd-background;

@@ -6,15 +6,16 @@ import { Routes } from '../../../common/enums';
 import { PageRow } from '../../../common/types';
 import Button from '../../../components/Button';
 import Seo from '../../../components/Seo';
-import { useAction, useTypedSelector } from '../../../hooks';
+import { useAction, useAuth, useTypedSelector } from '../../../hooks';
 import { useLocalization } from '../../../providers/localization';
 import RenderCell from './RenderCell';
 import classes from './styles.module.scss';
 import { getColumns } from './utils';
 
 const Transactions: FC = () => {
-  const { fetchTransactionsPageAction, clearTransactionsStateAction } = useAction();
+  const { fetchTransactionsPageAction, clearTransactionsStateAction, openModalAction } = useAction();
   const [lastPage, setLastPage] = useState(0);
+  const { id: userId } = useAuth();
   const { page, isLast, isLoading } = useTypedSelector(
     (
       { transactions }
@@ -57,7 +58,7 @@ const Transactions: FC = () => {
       <div className={classes.breadcrumbs}>
         <Link to={Routes.HOME}> {t('Home')}</Link>
         {' > '}
-        <Link to="/account">{t('Account')}</Link>
+        <Link to={Routes.TRANSACTIONS} onClick={() => { openModalAction(userId as string); }}>{t('Account')}</Link>
         {' > '}
         <span>{t('Transactions list')}</span>
       </div>

@@ -42,18 +42,19 @@ const RenderCell: FC<RenderCellProps> = (cellProps: RenderCellProps) => {
         </td>
       );
     case t('Date'): {
+      const date = new Date(cell.value);
       if (selectedLanguage === 'ua') {
         return (
           <td {...props}>
-            {new Date(cell.value).toLocaleDateString('uk-UA',
-              { year: 'numeric', month: 'short', day: 'numeric' })}
+            {date.toLocaleDateString('uk-UA',
+              { year: 'numeric', month: 'short', day: 'numeric' })}  {date.toLocaleTimeString()}
           </td>
         );
       }
       return (
         <td {...props}>
-          {new Date(cell.value).toLocaleDateString('en-EN',
-            { year: 'numeric', month: 'short', day: 'numeric' })}
+          {date.toLocaleDateString('en-EN',
+            { year: 'numeric', month: 'short', day: 'numeric' })}  {date.toLocaleTimeString()}
         </td>
       );
       break;

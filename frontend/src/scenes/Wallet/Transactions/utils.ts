@@ -3,11 +3,12 @@ import { PageRow } from '../../../common/types';
 import { TranslatorType } from '../../../providers/localization';
 
 export const getColumns = (t:TranslatorType):Column<PageRow>[] => {
-  const widthDate = 136;
-  const widthItems = 433;
-  const widthType = 235;
-  const widthTotal = 185;
+  const widthDate = 260;
+  const widthItems = 450;
+  const widthType = 300;
+  const widthTotal = 250;
   // const widthBalance = 148;
+  // 200 //274
   return ([
     {
       Header: t('Date'),

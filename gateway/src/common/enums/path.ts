@@ -8,7 +8,8 @@ export enum Path {
   Tag = '/tags',
   Category = '/categories',
   Comment = '/comments',
-  Donate = '/donate'
+  Donate = '/donate',
+  Chat = '/chat'
 }
 
 export enum AuthApiPath {

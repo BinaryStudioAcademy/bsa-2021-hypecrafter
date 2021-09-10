@@ -9,7 +9,7 @@ export interface Payment {
 
 export type NewPayment = Omit<Payment, '_id' | 'createdAt'>;
 
-export const paginationStep = 5;
+export const paginationStep = 9;
 
 export interface Page {
   isLast: boolean;

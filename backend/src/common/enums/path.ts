@@ -9,5 +9,6 @@ export enum Path {
   Comment = '/comments',
   Auth = '/auth',
   googleAuth = '/auth/google',
-  Donate = '/donate'
+  Donate = '/donate',
+  Chat = '/chat'
 }
