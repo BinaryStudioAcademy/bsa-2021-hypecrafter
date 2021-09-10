@@ -1,22 +1,26 @@
 @import '../../../../styles/vars';
-.footer{
-    display: flex;
-    justify-content: space-between;
-    .back{
-        background: none;
-        border: 1px solid $color-root-text;
-    }
-}
-.addMember{
+.footer {
+  display: flex;
+  justify-content: space-between;
+  .back {
     background: none;
     border: 1px solid $color-root-text;
-    margin-left: auto;
-    &:hover{
-        background: $color-primary-button;
-    }
+  }
 }
-.dateBlock{
-    display: flex;
-    justify-content: space-around;
-    margin: 10px 0;
+.addMember {
+  background: none;
+  border: 1px solid $color-root-text;
+  margin-left: auto;
+  &:hover {
+    background: $color-primary-button;
+  }
+}
+.dateBlock {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0;
+}
+
+.label-required-mark {
+  color: rgb(224, 0, 0);
 }

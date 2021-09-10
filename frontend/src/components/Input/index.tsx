@@ -15,6 +15,8 @@ interface Props extends FormControlProps {
   selectOption?: (value: string) => void,
   min?: number;
   max?: number;
+  isAutoComplete?: boolean;
+  isRequired?: boolean;
 }
 
 const Input = forwardRef<HTMLInputElement, Props>(({
@@ -28,12 +30,22 @@ const Input = forwardRef<HTMLInputElement, Props>(({
   selectOption,
   max,
   min,
+  isAutoComplete = false,
+  isRequired = false,
   ...restInputProps
 }, ref) => {
   const [showPassword, setShowPassword] = useState(false);
   return (
     <InputGroup className={classes['input-container']}>
-      {label && <FormLabel htmlFor="input" className={classes['input-label']}> {label} </FormLabel>}
+      {label && (
+        <FormLabel
+          htmlFor="input"
+          className={classes['input-label']}
+        >
+          {label}
+          {isRequired && <span className={classes['input-label-required-mark']}>*</span> }
+        </FormLabel>
+      )}
       <div className="input-field-container">
         <FormControl
           ref={ref}
@@ -45,6 +57,7 @@ const Input = forwardRef<HTMLInputElement, Props>(({
           step={step}
           min={min}
           max={max}
+          autoComplete={isAutoComplete ? 'on' : 'off'}
           {...restInputProps}
         />
         {type === 'password'

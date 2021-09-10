@@ -1,45 +1,63 @@
 @import '../../../../styles/vars';
-.footer{
-    display: flex;
-    justify-content: space-between;
-    .back{
-        background: none;
-        border: 1px solid $color-root-text;
-    }
+@import '../../../../styles/mixins';
+.footer {
+  display: flex;
+  justify-content: space-between;
+  .back {
+    background: none;
+    border: 1px solid $color-root-text;
+  }
 }
-.pointControl{
+.pointControl {
+  display: flex;
+  align-items: center;
+}
+
+.addPoint {
+  height: 38px;
+  width: 38px;
+  margin-left: 15px;
+  border-radius: 100%;
+  @include flex-center;
+}
+
+.listPoints {
+  margin-bottom: 0;
+
+  li {
     display: flex;
     align-items: center;
-    .addPoint{
-        margin-left: 20px;
+    .circle {
+      font-size: 5px;
+      margin-right: 8px;
     }
-}
-.listPoints{
-    li{
-        display: flex;
-        align-items: center;
-        .circle{
-            font-size: 5px;
-            margin-right: 8px;
-        }
-        .deletePoint{
-            background: none;
-        }
+    .deletePoint {
+      background: none;
     }
+  }
 }
-.addPrivilege{
-    margin-bottom: 20px;
+.addPrivilege {
+  margin-bottom: 20px;
 }
-.privilege{
-    position: relative;
-    background: $color-root-block-background;
-    padding: 20px;
-    border-radius: 5px;
-    margin-bottom: 15px;
+.privilege {
+  position: relative;
+  background: $color-root-block-background;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 15px;
 }
-.close{
-    background: none;
-    position: absolute;
-    right: 0;
-    top: 8px;
+
+.close {
+  z-index: 5;
+  background: none;
+  position: absolute;
+  @include flex-center;
+  top: 8px;
+  right: 8px;
+  height: 26px;
+  width: 26px;
+
+  &:hover {
+    background: $color-glitch-red;
+  }
 }

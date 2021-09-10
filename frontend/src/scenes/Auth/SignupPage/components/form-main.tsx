@@ -95,6 +95,7 @@ const MainForm: FunctionComponent<MainFormProps> = ({
           required: true
         })}
         onChange={(event) => handleChange('email', event.target.value)}
+        isAutoComplete
       />
       <Input
         type="password"

@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import { faBell } from '@fortawesome/free-regular-svg-icons';
 import { faCircle, faSlidersH } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

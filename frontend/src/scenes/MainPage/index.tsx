@@ -114,10 +114,7 @@ const MainPage: FC = () => {
                   description={project.description}
                   goal={project.goal}
                   percent={calcDonationProgress(project.donated, project.goal)}
-                  image={
-                    project.imageUrl
-                    || 'https://source.unsplash.com/random/800x600'
-                  }
+                  image={project.imageUrl}
                 />
               ))}
             </LoaderWrapper>
@@ -141,10 +138,7 @@ const MainPage: FC = () => {
                   description={project.description}
                   goal={project.goal}
                   percent={calcDonationProgress(project.donated, project.goal)}
-                  image={
-                    project.imageUrl
-                    || 'https://source.unsplash.com/random/800x600'
-                  }
+                  image={project.imageUrl}
                 />
               ))}
             </LoaderWrapper>
