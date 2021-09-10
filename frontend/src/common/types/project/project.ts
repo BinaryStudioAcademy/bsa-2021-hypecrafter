@@ -34,4 +34,5 @@ export interface ProjectPage extends Project {
   projectComments: Comment[];
   mark?: Mark | null;
   isWatched: boolean;
+  authorId: string;
 }

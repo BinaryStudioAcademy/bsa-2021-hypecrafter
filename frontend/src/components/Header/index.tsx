@@ -36,7 +36,7 @@ const Header = () => {
   const { pathname } = useLocation();
 
   const { t } = useLocalization();
-  const { addSocketHandler, socket, emitEvent } = useSockets();
+  const { addSocketHandler, socket } = useSockets();
   const { setNewNotificationsAction, searchAction } = useAction();
   const { isAuthorized } = useAuth();
 
@@ -46,16 +46,6 @@ const Header = () => {
         setNewNotificationsAction(notification);
       });
     }
-
-    // example this must be on chat component
-
-    const teamId = '7370b5e1-6437-4333-b284-04e5dd25fb90';
-    const textMessage = 'mmmmmmmmkvkkkf';
-    console.log('emit event');
-
-    emitEvent(SocketActions.JOIN_CHAT, { teamId });
-    emitEvent(SocketActions.NEW_MESSAGE, { text: textMessage });
-    addSocketHandler(SocketActions.NEW_MESSAGE_CREATED, console.log);
   }, [socket]);
 
   const { isMobile } = useWindowResize();

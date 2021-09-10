@@ -15,6 +15,17 @@
   }
 
   .project-image {
+    @media (max-width: $breakpoint-lg) {
+      height: 500px;
+      margin-bottom: 25px;
+    }
+
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .project-video {
     object-fit: cover;
     width: 100%;
   }
@@ -29,6 +40,9 @@
   .watch-container {
     display: flex;
     justify-content: end;
+	* {
+      margin-left: 5px;
+	}
     button {
       background: none;
       border: none;
@@ -68,6 +82,10 @@
       background: $color-root-grey;
     }
   }
+}
+
+.block-wrapper {
+  margin-top: 20px;
 }
 
 .project-story {

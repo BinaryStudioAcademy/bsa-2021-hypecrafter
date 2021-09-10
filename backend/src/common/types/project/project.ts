@@ -2,6 +2,7 @@ import { Privilege, PrivilegeWithBakersAmount } from '.';
 
 export interface Project {
   id: string;
+  authorId: string;
   name: string;
   description: string;
   category: string;
